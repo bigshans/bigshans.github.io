@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://bigshans.github.io').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="仅仅使用 Debian 源里的软件包并不是很够，所以不可避免的，我们会使用一些第三方的软件源，比如 Arch 下的 aur ， Ubuntu 的 PPA ，等等。由于 Ubuntu 是 Debian 系的发行版，两者的包管理是相通的，所以我们可以借用一下 Ubuntu 的 PPA 来扩充我们的软件库。然而，两者毕竟不是同一发行版，所以还是会有很多的差别，我们并不能保证两者的软件包一定能通用，毕竟打">
+<meta name="keywords" content="linux,debian,ppa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在 Debian 下使用 PPA">
+<meta property="og:url" content="https://bigshans.github.io/2019/06/26/linux-ppa-add/index.html">
+<meta property="og:site_name" content="Bigshans&#39; Blog">
+<meta property="og:description" content="仅仅使用 Debian 源里的软件包并不是很够，所以不可避免的，我们会使用一些第三方的软件源，比如 Arch 下的 aur ， Ubuntu 的 PPA ，等等。由于 Ubuntu 是 Debian 系的发行版，两者的包管理是相通的，所以我们可以借用一下 Ubuntu 的 PPA 来扩充我们的软件库。然而，两者毕竟不是同一发行版，所以还是会有很多的差别，我们并不能保证两者的软件包一定能通用，毕竟打">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-01-27T12:54:13.048Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在 Debian 下使用 PPA">
+<meta name="twitter:description" content="仅仅使用 Debian 源里的软件包并不是很够，所以不可避免的，我们会使用一些第三方的软件源，比如 Arch 下的 aur ， Ubuntu 的 PPA ，等等。由于 Ubuntu 是 Debian 系的发行版，两者的包管理是相通的，所以我们可以借用一下 Ubuntu 的 PPA 来扩充我们的软件库。然而，两者毕竟不是同一发行版，所以还是会有很多的差别，我们并不能保证两者的软件包一定能通用，毕竟打">
+
+<link rel="canonical" href="https://bigshans.github.io/2019/06/26/linux-ppa-add/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>在 Debian 下使用 PPA | Bigshans' Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Bigshans' Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://bigshans.github.io/2019/06/26/linux-ppa-add/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Bigshans">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bigshans' Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在 Debian 下使用 PPA
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-06-26 11:24:44" itemprop="dateCreated datePublished" datetime="2019-06-26T11:24:44+08:00">2019-06-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-27 20:54:13" itemprop="dateModified" datetime="2020-01-27T20:54:13+08:00">2020-01-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>仅仅使用 Debian 源里的软件包并不是很够，所以不可避免的，我们会使用一些第三方的软件源，比如 Arch 下的 aur ， Ubuntu 的 PPA ，等等。由于 Ubuntu 是 Debian 系的发行版，两者的包管理是相通的，所以我们可以借用一下 Ubuntu 的 PPA 来扩充我们的软件库。然而，两者毕竟不是同一发行版，所以还是会有很多的差别，我们并不能保证两者的软件包一定能通用，毕竟打包并不是针对 Debian 的，不过， Ubuntu 能用的， Debian 基本能用，所以，把 Ubuntu 的 ppa 拉过来还是很有意义的。</p>
+<a id="more"></a>
+<h2 id="如何加入-ppa-源">如何加入 PPA 源</h2>
+<p>可以使用 add-apt-repository 来加入源，不过，由于 ppa 主要是针对 Ubuntu ，所以往往会有版本不对的情况，导致 add-apt-repository 不能正常使用，这个该如何解决呢？</p>
+<h3 id="直接加入">直接加入</h3>
+<p>add-apt-repository 是个 python 脚本，它的主要作用是生成 deb 仓库地址，加入到 sources.list.d 里，然后添加密钥。我们可以直接将源加入到 sources.list 中。</p>
+<p>我们以 Chromium-beta 为例，正常是使用一下命令加入 PPA 。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:saiarcot895/chromium-beta</span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+<p>我们简单转换一下就得到地址， <code>deb http://ppa.launchpad.net/saiarcot895/chromium-beta/ubuntu cosmic main</code> 。其中的 <code>cosmic</code> 是 Ubuntu 的版本，任意选取一个能用的就行了。将该地址加入到 sources.list 中。</p>
+<p>然后我们加入密钥。</p>
+<p>我们进入 PPA 的页面，点开 <code>Technical details about this PPA</code> ，在 <code>Signing key</code> 下选取 <code>/</code> 后的部分，这部分就是密钥。</p>
+<p>我们可以运行命令添加密钥。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E6200BDA4A746F2A1F7FFD3FE6A17451DC058F40</span><br></pre></td></tr></table></figure>
+<p><code>E6200BDA4A746F2A1F7FFD3FE6A17451DC058F40</code> 就是我们选取的密钥。</p>
+<p>然后我们运行更新命令，我们的源就能使用了。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+<p>如果我们不进入 PPA 的页面，我们可以运行一下命令先获取公钥。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update | grep <span class="string">"NO_PUBKEY"</span> | awk <span class="string">'&#123;print $3&#125;'</span></span><br></pre></td></tr></table></figure>
+<p>最底下的那行就是公钥。</p>
+<p>然后我们运行以下命令即可，其中， <code>$KEY</code> 就是你的公钥。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-key --keyserver keyserver.ubuntu.com --recv-keys <span class="variable">$KEY</span></span><br></pre></td></tr></table></figure>
+<h3 id="脚本化">脚本化</h3>
+<p>我们可以将我们以上的步骤进行脚本化。所以我写了个小脚本去解决这个问题。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$#</span> -eq 1 ]</span><br><span class="line">    NM=$(uname -a &amp;&amp; date)</span><br><span class="line">    NAME=$(<span class="built_in">echo</span> <span class="variable">$NM</span> | md5sum | cut -f1 -d<span class="string">" "</span>)</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">    ppa_name=$(<span class="built_in">echo</span> <span class="string">"<span class="variable">$1</span>"</span> | cut -d<span class="string">":"</span> -f2 -s)</span><br><span class="line">    version_name=<span class="variable">$2</span></span><br><span class="line">    <span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$version_name</span>"</span> ]</span><br><span class="line">    <span class="keyword">then</span></span><br><span class="line">        version_name=<span class="string">"cosmic"</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">    <span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$ppa_name</span>"</span> ]</span><br><span class="line">    <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"PPA name not found"</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"Utility to add PPA repositories in your debian machine"</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"add_ppa ppa:user/ppa-name [version]"</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"<span class="variable">$ppa_name</span>"</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"deb http://ppa.launchpad.net/<span class="variable">$ppa_name</span>/ubuntu <span class="variable">$version_name</span> main"</span></span><br><span class="line">        sudo add-apt-repository <span class="string">"deb http://ppa.launchpad.net/<span class="variable">$ppa_name</span>/ubuntu <span class="variable">$version_name</span> main"</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"Get the public key from apt-get update"</span></span><br><span class="line">        sudo apt-get update | grep <span class="string">"NO_PUBKEY"</span> &gt; /tmp/<span class="variable">$&#123;NAME&#125;</span>_apt_add_key.txt</span><br><span class="line">        key=$(cat /tmp/<span class="variable">$&#123;NAME&#125;</span>_apt_add_key.txt | awk <span class="string">'&#123;print $3&#125;'</span>)</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"Get the public key <span class="variable">$key</span>"</span></span><br><span class="line">        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <span class="variable">$key</span></span><br><span class="line">        rm -rf /tmp/<span class="variable">$&#123;NAME&#125;</span>_apt_add_key.txt</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Utility to add PPA repositories in your debian machine"</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"add_ppa ppa:user/ppa-name [version]"</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<p>这个脚本是对 add-apt-responsitory 进行了简单的 wrapper ，像使用 add-apt-respository 一样使用该脚本即可。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/debian/" rel="tag"># debian</a>
+              <a href="/tags/ppa/" rel="tag"># ppa</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/03/22/algorithm-lic/" rel="prev" title="最长上升子序列模板">
+      <i class="fa fa-chevron-left"></i> 最长上升子序列模板
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/06/27/nodejs-express-1/" rel="next" title="Express 学习(一)">
+      Express 学习(一) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何加入-ppa-源"><span class="nav-number">1.</span> <span class="nav-text">如何加入 PPA 源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#直接加入"><span class="nav-number">1.1.</span> <span class="nav-text">直接加入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#脚本化"><span class="nav-number">1.2.</span> <span class="nav-text">脚本化</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Bigshans</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">56</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">66</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/bigshans" title="GitHub → https://github.com/bigshans" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bigshans</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

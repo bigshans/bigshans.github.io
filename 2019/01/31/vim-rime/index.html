@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://bigshans.github.io').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添加一些字，所以我决定换用别的输入法。 fcitx-sunpinyin 可以添加用户词典，但添加新的单词的时候会严重卡顿，而且打某些字的时候也会卡顿，体验极其糟糕，所以我决定尝试一下 fcitx-rime 。">
+<meta name="keywords" content="vim,rime,fcitx,正则表达式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在 vim 下修改自然码码表">
+<meta property="og:url" content="https://bigshans.github.io/2019/01/31/vim-rime/index.html">
+<meta property="og:site_name" content="Bigshans&#39; Blog">
+<meta property="og:description" content="最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添加一些字，所以我决定换用别的输入法。 fcitx-sunpinyin 可以添加用户词典，但添加新的单词的时候会严重卡顿，而且打某些字的时候也会卡顿，体验极其糟糕，所以我决定尝试一下 fcitx-rime 。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-01-27T12:54:13.048Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在 vim 下修改自然码码表">
+<meta name="twitter:description" content="最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添加一些字，所以我决定换用别的输入法。 fcitx-sunpinyin 可以添加用户词典，但添加新的单词的时候会严重卡顿，而且打某些字的时候也会卡顿，体验极其糟糕，所以我决定尝试一下 fcitx-rime 。">
+
+<link rel="canonical" href="https://bigshans.github.io/2019/01/31/vim-rime/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>在 vim 下修改自然码码表 | Bigshans' Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Bigshans' Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://bigshans.github.io/2019/01/31/vim-rime/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Bigshans">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bigshans' Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在 vim 下修改自然码码表
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-01-31 11:27:53" itemprop="dateCreated datePublished" datetime="2019-01-31T11:27:53+08:00">2019-01-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-27 20:54:13" itemprop="dateModified" datetime="2020-01-27T20:54:13+08:00">2020-01-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vim/" itemprop="url" rel="index">
+                    <span itemprop="name">vim</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添加一些字，所以我决定换用别的输入法。 fcitx-sunpinyin 可以添加用户词典，但添加新的单词的时候会严重卡顿，而且打某些字的时候也会卡顿，体验极其糟糕，所以我决定尝试一下 fcitx-rime 。</p>
+<a id="more"></a>
+<p>rime 是个高可配置的输入法，所以我决定搜寻一下配置。 rime 的配置方案还是很多的，我首先尝试了 double-pinyin 方案，因为我日常使用双拼。然后我往其中添加了大字库，词库丰富之后超级好用。不过 double-pinyin 只是 luna_pinyin 的一个修改，不能使用辅助码。我想，能不能自己配置一个呢？说干就干。</p>
+<p>我首先查了一下，看看有没有人配置好了自然码+辅助码的方案，不过，虽然有但链接往往又不能下载，搞得我很不高兴。然后，我就查到了一个自然码 2000 的方案，我喜不自胜地挂载到我的小狼毫里，发现竟然不能用！我又郁闷了会，参照网上某些人配置的方案修改了一下，终于能正常使用了！然后我就切换了一下发现，整个体验跟我想得不太一样。我更想要再双拼的基础上，需要时再添加辅助码，像 windows 下的搜狗那样。想了想既然这样，我还是自己修改得到一份自己的方案吧！</p>
+<h2 id="修改码表">修改码表</h2>
+<p>首先我搜寻了如何制作 rime 辅助码的相关信息，找到了佛振大佬的帖子。佛振大佬用的是 vim ，不过有很多替换命令不太能对应，所以我只能自己多思考一下。</p>
+<p>第一步是去除所有词组，针对 zrm2000.dict.yaml 修改，命令是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:,$s/.\&#123;2,&#125;\t.*\n//</span><br></pre></td></tr></table></figure>
+<p>第二步，去除非汉字的编码，这个手动修改，首先先<code>:,$sort</code>一下，然后就可以按照顺序删除了。这里我仍然保留了一点。</p>
+<p>第三步，将辅助码与双拼分离。自然码的特点是前两个是双拼，后两个是辅助码，所以可以用一下命令修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:,$s/\t(\w&#123;2&#125;)(\w*)/\t\1;\2/</span><br></pre></td></tr></table></figure>
+<p>第四步，去除所有的子码，就是大量的类似 yi;a 、yi;aa 这样的东西，合并为 yi;aa 。采用一下命令，需要多次执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:,$s/^\(.*\)\n\1/\1/</span><br></pre></td></tr></table></figure>
+<p>通过以上的步骤，就可以得到一个用 <code>;</code>区分双拼和辅助码的自然码表了。说实话，这么操作一通，我的正则水平上升了不少。</p>
+<h2 id="配置方案">配置方案</h2>
+<p>然后要修改一下方案，如果直接用的话，你必须自己把整个码打出来，体验极差。</p>
+<p>主要是修改 algebra 的正则。rime 的正则就是用的 perl 的，所以了解 perl 的正则语法就行了。</p>
+<p>最后的 speller 如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">speller:</span></span><br><span class="line"><span class="attr">  alphabet:</span> <span class="string">"zyxwvutsrqponmlkjihgfedcba;"</span></span><br><span class="line"><span class="attr">  delimiter:</span> <span class="string">" '"</span></span><br><span class="line"><span class="attr">  algebra:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">derive/^(\w*);(\w)(\w)$/$1;$2$3/</span>    <span class="string">＃</span> <span class="string">完全自然码</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">derive/^(\w*);(\w)(\w)$/$1;$2/</span>         <span class="string">＃</span> <span class="string">使用部分自然码</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">derive/^(\w*);(\w)(\w)$/$1/</span>               <span class="string">＃</span> <span class="string">使用纯双拼</span></span><br></pre></td></tr></table></figure>
+<p>rime 原来的自然双拼会把双拼展开成拼音，这个功能我也想要，这个要改一下 preedit_format 。只需要在原来自然双拼的基础上进行略微修改即可。</p>
+<p>最终的 translator 如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">translator:</span></span><br><span class="line"><span class="attr">  dictionary:</span> <span class="string">zrm_pinyin</span></span><br><span class="line"><span class="attr">  prism:</span> <span class="string">zrm_pinyin</span></span><br><span class="line"><span class="attr">  preedit_format:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)([bpmnljqxy])n/$1in/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)g/$1eng/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)q/$1iu/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)([gkhvuirzcs])w/$1ua/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)w/$1ia/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)([dtnlgkhjqxyvuirzcs])r/$1uan/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)t/$1ve/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)([gkhvuirzcs])y/$1uai/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)y/$1ing/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)([dtnlgkhvuirzcs])o/$1uo/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)p/$1un/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)([jqx])s/$1iong/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)s/$1ong/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)([jqxnl])d/$1iang/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)d/$1uang/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)f/$1en/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)h/$1ang/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)j/$1an/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)k/$1ao/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)l/$1ai/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)z/$1ei/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)x/$1ie/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)c/$1iao/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)([dtgkhvuirzcs])v/$1ui/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)b/$1ou/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)(\w)m/$1ian/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)([aoe])\1(\w)/$1$2/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">"xform/(?&lt;!;)(^|[ '])v/$1zh/"</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">"xform/(?&lt;!;)(^|[ '])i/$1ch/"</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">"xform/(?&lt;!;)(^|[ '])u/$1sh/"</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)([jqxy])v/$1u/</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">xform/(?&lt;!;)([nl])v/$1ü/</span></span><br></pre></td></tr></table></figure>
+<p>这样我们就可以不影响辅助码了。</p>
+<h2 id="感受">感受</h2>
+<p>这次修改过程，就像一次大型的正则表达式应用案例一样，我还顺便看了一下 perl 的语法，总体来说受益匪浅，得到的成功也较为满意，可以使用辅码，可以使用外挂词库，使得部署时内存占用减小，去除卡顿，比搜狗还要好用。</p>
+<p>最后附上我方案的 github 地址：https://github.com/bigshans/rime-zrm</p>
+<p>引用： 1. [佛振大佬的帖子]: http://tieba.baidu.com/p/2094178562</p>
+<ol start="2" type="1">
+<li></li>
+<li></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/vim/" rel="tag"># vim</a>
+              <a href="/tags/rime/" rel="tag"># rime</a>
+              <a href="/tags/fcitx/" rel="tag"># fcitx</a>
+              <a href="/tags/正则表达式/" rel="tag"># 正则表达式</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/01/17/vimscript-windowscmd/" rel="prev" title="写一个 vim 窗口跳转">
+      <i class="fa fa-chevron-left"></i> 写一个 vim 窗口跳转
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/03/08/algorithm-segtree/" rel="next" title="线段树算法">
+      线段树算法 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改码表"><span class="nav-number">1.</span> <span class="nav-text">修改码表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置方案"><span class="nav-number">2.</span> <span class="nav-text">配置方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感受"><span class="nav-number">3.</span> <span class="nav-text">感受</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Bigshans</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">56</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">66</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/bigshans" title="GitHub → https://github.com/bigshans" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bigshans</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
