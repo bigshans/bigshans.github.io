@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nodejs on Bigshans&#39; Blog</title>
+    <link>http://localhost:1313/tags/nodejs/</link>
+    <description>Recent content in nodejs on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 27 Jan 2020 21:58:14 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>写个简单的 QOS</title>
+      <link>http://localhost:1313/post/qosnodejs/</link>
+      <pubDate>Mon, 27 Jan 2020 21:58:14 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/qosnodejs/</guid>
+      <description>&lt;p&gt;最近客户端发生了 bug ，导致我们的服务被疯狂请求， QPS 高达 1000 ！数据压力很大，tjt 让我写个 qos ，就是限制接口访问次数，我粗略写了个，还可以。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>服务器故障日志</title>
+      <link>http://localhost:1313/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Sun, 15 Dec 2019 21:12:21 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97/</guid>
+      <description>&lt;p&gt;小公司的后端有时候就不得不兼任多职，既是后端又是运维。现在又差不多是全栈了，这样下去说不定会怎么样呢！说回正题，这回我负责的客服系统出了故障，虽然对用户影响不大，但对客服影响很大（亲爱的客服小姐姐，对不起），客服无法正常工作了。全靠 CTO 调试数据库发现问题所在。虽然在公司的 wiki 上小记一笔，但公司上写得还是严肃许多的。这里我就说话随意多了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Express 学习(一)</title>
+      <link>http://localhost:1313/post/nodejs-express-1/</link>
+      <pubDate>Thu, 27 Jun 2019 13:48:27 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/nodejs-express-1/</guid>
+      <description>&lt;p&gt;公司后端采用了 nodejs + express 环境，最近在看，现在记录一点笔记。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>nodejs 的 import</title>
+      <link>http://localhost:1313/post/nodejs-es6-import/</link>
+      <pubDate>Sun, 26 Aug 2018 20:29:41 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/nodejs-es6-import/</guid>
+      <description>&lt;p&gt;nodejs 对 es 6 的支持目前并不完全，直接使用 import 不行，exports 也不行，可以用 babel 之类的编译， nodejs 10 可以尝试加上 flag ： &amp;ndash;experimental-modules。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;node --experimental-modules my-app.mjs
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

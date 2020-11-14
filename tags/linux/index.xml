@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Bigshans&#39; Blog</title>
+    <link>http://localhost:1313/tags/linux/</link>
+    <description>Recent content in linux on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 15 Feb 2020 12:49:19 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>rinted 做端口转发</title>
+      <link>http://localhost:1313/post/rinted/</link>
+      <pubDate>Sat, 15 Feb 2020 12:49:19 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/rinted/</guid>
+      <description>&lt;p&gt;因为腾讯云的 Mongo 和 Redis 都是内网的地址，不能访问，官方说内网进行内网转发就行，于是就用 rinted 做了一个内网转发。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>systemd-nspawn 的简单使用</title>
+      <link>http://localhost:1313/post/linux-systemdnspawn/</link>
+      <pubDate>Sun, 24 Nov 2019 23:23:03 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/linux-systemdnspawn/</guid>
+      <description>&lt;p&gt;systemd-nspawn 是 docker 与一样的 container 应用，只不过 docker 相比，跟类似于 chroot 。个人还是比较喜欢 chroot 这样的，这样有种子系统的感觉，与 docker 的 container 相比， chroot 下的操作是会被保留下来的， docker 和 chroot 还是两种不同情况，不可同语。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在 linux 下备份系统</title>
+      <link>http://localhost:1313/post/linux-backup/</link>
+      <pubDate>Sun, 17 Nov 2019 22:13:03 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/linux-backup/</guid>
+      <description>&lt;p&gt;新买的移动硬盘到了，着手做新的启动盘。在硬盘上分了一个 G ，然后用 Deepin 的启动盘制作工具做了一个启动盘。然后重启，启动 Deepin live cd ，然后还备份还是失败了。没办法，只能另寻他路。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在 Debian 下使用 PPA</title>
+      <link>http://localhost:1313/post/linux-ppa-add/</link>
+      <pubDate>Wed, 26 Jun 2019 11:24:44 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/linux-ppa-add/</guid>
+      <description>&lt;p&gt;仅仅使用 Debian 源里的软件包并不是很够，所以不可避免的，我们会使用一些第三方的软件源，比如 Arch 下的 aur ， Ubuntu 的 PPA ，等等。由于 Ubuntu 是 Debian 系的发行版，两者的包管理是相通的，所以我们可以借用一下 Ubuntu 的 PPA 来扩充我们的软件库。然而，两者毕竟不是同一发行版，所以还是会有很多的差别，我们并不能保证两者的软件包一定能通用，毕竟打包并不是针对 Debian 的，不过， Ubuntu 能用的， Debian 基本能用，所以，把 Ubuntu 的 ppa 拉过来还是很有意义的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>nginx 反向代理上 Pixiv（二）</title>
+      <link>http://localhost:1313/post/nginx-pixiv-2/</link>
+      <pubDate>Fri, 12 Oct 2018 19:02:22 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/nginx-pixiv-2/</guid>
+      <description>&lt;p&gt;这篇文章我发在 B 站了，地址是 &lt;a href=&#34;https://www.bilibili.com/read/cv1317348&#34;&gt;https://www.bilibili.com/read/cv1317348&lt;/a&gt; 。当然，这里我要讲细一点。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>nginx 反向代理上 Pixiv</title>
+      <link>http://localhost:1313/post/nginx-pixiv/</link>
+      <pubDate>Mon, 24 Sep 2018 15:40:34 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/nginx-pixiv/</guid>
+      <description>&lt;p&gt;Pixiv 被墙了，上不了。我上了 Pixiv 的贴吧，刚好发现有人发帖说如何再上 P 站（ &lt;a href=&#34;https://tieba.baidu.com/p/5882385726&#34;&gt;https://tieba.baidu.com/p/5882385726&lt;/a&gt; ） 。使用 nginx 做反向代理，看着比较简单，于是自己试了试，由于 nginx 自己不太熟，所以是尽量完成。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>deb 打包指北</title>
+      <link>http://localhost:1313/post/linux-deb-package/</link>
+      <pubDate>Sun, 09 Sep 2018 19:18:52 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/linux-deb-package/</guid>
+      <description>&lt;p&gt;最近几天在给我的一些软件打包，原本打算建立一个私人仓库，不过没有云还是算了。本地打包的话貌似空间不太够，不过首先还是要学习一下 debian 的相关知识的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在 linux 下搞定 nvidia 双显卡</title>
+      <link>http://localhost:1313/post/linux-nvidia-bumblebee/</link>
+      <pubDate>Sat, 08 Sep 2018 09:22:39 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/linux-nvidia-bumblebee/</guid>
+      <description>&lt;p&gt;终于终于把双显卡整好了，该死的 NVIDIA 。为了双显卡我的桌面崩溃了几次，不过终于整好了。下面讲讲我处理这些的一些过程。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>hostname 也不要随便取</title>
+      <link>http://localhost:1313/post/linux-hostname/</link>
+      <pubDate>Wed, 05 Sep 2018 18:11:35 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/linux-hostname/</guid>
+      <description>&lt;p&gt;一个小问题，困扰很久了，最近解决掉了，就是不能以 root 打开任何 GUI ，打开之后不显示。
+问题在于我的 hostname 取成 localhost 了，所以打不开。。（下次不这样了）改个 hostname 就行。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hostnamectl set-hostname &amp;quot;myhostname&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>安装 graph-easy</title>
+      <link>http://localhost:1313/post/software-graph-easy/</link>
+      <pubDate>Mon, 03 Sep 2018 17:34:16 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/software-graph-easy/</guid>
+      <description>&lt;p&gt;推荐一个软件， graph-easy  。如果你查看文档的话，经常能看到一些 ascii 码流程画，个人觉得非常酷，于是去查找了一下，发现了这个软件。下面我将做一些简单的介绍。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>安装 deepin-wine 到 debian 上</title>
+      <link>http://localhost:1313/post/software-deepin-wine/</link>
+      <pubDate>Sun, 02 Sep 2018 19:21:21 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/software-deepin-wine/</guid>
+      <description>&lt;p&gt;我尝试了一下 &lt;a href=&#34;https://github.com/wszqkzqk/deepin-wine-ubuntu&#34;&gt;deepin-wine-ubuntu&lt;/a&gt; 项目，不过无法正常装上。所以我自己尝试了一下安装 deepin-wine 并尝试了一下 deepin 的 QQ 和 TIM 。效果还不错。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>网易云音乐 for linux 不用 root 打开</title>
+      <link>http://localhost:1313/post/software-netease-linux/</link>
+      <pubDate>Wed, 29 Aug 2018 16:42:55 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/software-netease-linux/</guid>
+      <description>&lt;p&gt;从知乎上看到这个，非常感谢 Fancy 的努力。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/277330447/answer/478510195&#34;&gt;点击此处前往&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

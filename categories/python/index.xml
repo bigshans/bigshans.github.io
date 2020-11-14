@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on Bigshans&#39; Blog</title>
+    <link>http://localhost:1313/categories/python/</link>
+    <description>Recent content in python on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 07 Dec 2018 20:47:45 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flask 入门项目 Flaskr（二）</title>
+      <link>http://localhost:1313/post/python-flask-flaskr-2/</link>
+      <pubDate>Fri, 07 Dec 2018 20:47:45 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/python-flask-flaskr-2/</guid>
+      <description>&lt;p&gt;今天身体不太舒服，感冒了。不过还是照着官网大概打了一下。这个项目的主体是完成了，改天写写测试。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Flask 入门项目 Flaskr（一）</title>
+      <link>http://localhost:1313/post/python-flask-flaskr/</link>
+      <pubDate>Thu, 06 Dec 2018 20:31:55 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/python-flask-flaskr/</guid>
+      <description>&lt;p&gt;昨天看了看 flask ，感觉很有意思，于是上官网看看文档，文档的 quickly started 很精简，讲述了基本用法。在 1.0.2 的文档下有一个小项目，很适合拿来练手。于是尝试跟着写了一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python3 在不同目录下 import 其他py 文件</title>
+      <link>http://localhost:1313/post/python-import/</link>
+      <pubDate>Fri, 26 Oct 2018 21:15:40 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/python-import/</guid>
+      <description>&lt;p&gt;python 的 import 机制实在是太弱。。&lt;/p&gt;
+&lt;p&gt;今天我将不同目录下的 python 文件导入，试了半天快要吐血，虽然说最后解决了，但是我还是要说真的是 shit 啊！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python3 下使用 base64</title>
+      <link>http://localhost:1313/post/python-base64/</link>
+      <pubDate>Wed, 17 Oct 2018 17:23:44 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/python-base64/</guid>
+      <description>用自带库 base64 。 import base64 encode = base64.b64encode(b&#39;i love python&#39;) # 加密 print(str(encode, &#39;utf-8&#39;)) # aSBsb3ZlIHB5dGhvbg== encode = base64.b64decode(b&#39;aSBsb3ZlIHB5dGhvbg==&#39;) print(encode) #解密</description>
+    </item>
+    
+    <item>
+      <title>python 爬虫获取 bilibili 封面</title>
+      <link>http://localhost:1313/post/python-bilibili-cover/</link>
+      <pubDate>Wed, 29 Aug 2018 17:01:17 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/python-bilibili-cover/</guid>
+      <description>&lt;p&gt;以前写的一个脚本，获取 B 站视频封面的脚本，使用了 urllib 来爬虫，用 feh 来打开图片。&lt;/p&gt;
+&lt;p&gt;以下是代码：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python 实现尾递归斐波那契数列</title>
+      <link>http://localhost:1313/post/python-learn/</link>
+      <pubDate>Tue, 28 Aug 2018 16:30:17 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/python-learn/</guid>
+      <description>&lt;p&gt;看了一下 &lt;a href=&#34;https://pythoncaff.com/docs/byte-of-python/2018&#34;&gt;《 Python 简明教程》&lt;/a&gt;，发现了一个很有意思的项目，它推荐了这个&lt;a href=&#34;https://github.com/karan/Projects&#34;&gt;项目&lt;/a&gt;来练手。这个项目是一份列表，关于用任何语言都可以实现的程序的项目。有兴趣可以实现一下。&lt;/p&gt;
+&lt;p&gt;我在这里写一下简单的斐波那契数列。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python 备忘录（一）</title>
+      <link>http://localhost:1313/post/python-bak-1/</link>
+      <pubDate>Mon, 27 Aug 2018 18:17:48 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/python-bak-1/</guid>
+      <description>&lt;p&gt;这些篇主要是记录 python 的一些知识，有些可能很基础，不过我总是忘记，以此备忘。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

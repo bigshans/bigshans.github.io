@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vim on Bigshans&#39; Blog</title>
+    <link>http://localhost:1313/tags/vim/</link>
+    <description>Recent content in vim on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 31 Jan 2019 11:27:53 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 vim 下修改自然码码表</title>
+      <link>http://localhost:1313/post/vim-rime/</link>
+      <pubDate>Thu, 31 Jan 2019 11:27:53 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/vim-rime/</guid>
+      <description>&lt;p&gt;最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添加一些字，所以我决定换用别的输入法。 fcitx-sunpinyin 可以添加用户词典，但添加新的单词的时候会严重卡顿，而且打某些字的时候也会卡顿，体验极其糟糕，所以我决定尝试一下 fcitx-rime 。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>写一个 vim 窗口跳转</title>
+      <link>http://localhost:1313/post/vimscript-windowscmd/</link>
+      <pubDate>Thu, 17 Jan 2019 21:37:36 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/vimscript-windowscmd/</guid>
+      <description>&lt;p&gt;spacemacs 的 which-key 可以实现 &lt;leader&gt; &lt;number&gt; 选择对应窗口，这个功能在 spacevim 上面都有，我挺喜欢的，不过不知道怎么实现的。之前我安装了 space-vim 项目的 vim-which-key 插件，根据 vim-leader-guide 改的，跟 which-key 很像，可以拿来用了。于是我这几天将我原来的 vim 配置做了一个大幅度的调整，并把这个功能给实现了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>vim 学习笔记（一）</title>
+      <link>http://localhost:1313/post/vim-learn-textobject/</link>
+      <pubDate>Thu, 30 Aug 2018 20:43:19 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/vim-learn-textobject/</guid>
+      <description>&lt;p&gt;vim 的文本对象是个很有趣的东西，使用它可以大幅提升效率，因此学习它还是很有必要的，如果想要在 vim 上进一步提高自己就必须学习这个。&lt;/p&gt;
+&lt;h2 id=&#34;a-和-i&#34;&gt;a 和 i&lt;/h2&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

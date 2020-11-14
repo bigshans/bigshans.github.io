@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>elasticsearch on Bigshans&#39; Blog</title>
+    <link>http://localhost:1313/tags/elasticsearch/</link>
+    <description>Recent content in elasticsearch on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 07 Apr 2020 10:24:48 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>elasticsearch 频繁更新问题</title>
+      <link>http://localhost:1313/post/elasticsearch-update/</link>
+      <pubDate>Tue, 07 Apr 2020 10:24:48 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/elasticsearch-update/</guid>
+      <description>&lt;p&gt;我一开始并没有发现这个问题，到后面 Debug 的时候猜想并与社区的小伙伴得到验证。&lt;/p&gt;
+&lt;p&gt;我们的问题是 elasticsearch 返回成功但是却并没有发生更新。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>elasticsearch 的简单使用</title>
+      <link>http://localhost:1313/post/elasticsearch/</link>
+      <pubDate>Mon, 30 Mar 2020 15:54:50 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/elasticsearch/</guid>
+      <description>&lt;p&gt;最近由于业务的增长，所以决定使用 elasticsearch 。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

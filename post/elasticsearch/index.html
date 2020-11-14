@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>elasticsearch 的简单使用 - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="最近由于业务的增长，所以决定使用 elasticsearch 。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.77.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/elasticsearch/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.c498defa82fc3c336204dc2ed5a67f9953a4ccd8ee6790405a676d77389e5789.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="elasticsearch 的简单使用" />
+<meta property="og:description" content="最近由于业务的增长，所以决定使用 elasticsearch 。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/elasticsearch/" />
+<meta property="article:published_time" content="2020-03-30T15:54:50+00:00" />
+<meta property="article:modified_time" content="2020-03-30T15:54:50+00:00" />
+<meta itemprop="name" content="elasticsearch 的简单使用">
+<meta itemprop="description" content="最近由于业务的增长，所以决定使用 elasticsearch 。">
+<meta itemprop="datePublished" content="2020-03-30T15:54:50+00:00" />
+<meta itemprop="dateModified" content="2020-03-30T15:54:50+00:00" />
+<meta itemprop="wordCount" content="668">
+
+
+
+<meta itemprop="keywords" content="elasticsearch," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="elasticsearch 的简单使用"/>
+<meta name="twitter:description" content="最近由于业务的增长，所以决定使用 elasticsearch 。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">elasticsearch 的简单使用</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-03-30 </span>
+        <div class="post-category">
+            <a href="/categories/elasticsearch/"> elasticsearch </a>
+            </div>
+          <span class="more-meta"> 约 668 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#安装">安装</a></li>
+        <li><a href="#启动">启动</a></li>
+        <li><a href="#curd">CURD</a>
+          <ul>
+            <li><a href="#增加一个-index">增加一个 index</a></li>
+            <li><a href="#增加一个-document">增加一个 document</a></li>
+            <li><a href="#删除一个-document">删除一个 document</a></li>
+            <li><a href="#修改一个-document">修改一个 document</a></li>
+            <li><a href="#按条件修改一个-document">按条件修改一个 document</a></li>
+            <li><a href="#按条件删除一个-document">按条件删除一个 document</a></li>
+            <li><a href="#搜索-document">搜索 document</a></li>
+          </ul>
+        </li>
+        <li><a href="#总结">总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    <div class="post-content">
+      <p>最近由于业务的增长，所以决定使用 elasticsearch 。</p>
+<h2 id="安装">安装</h2>
+<p>由于是 Debian 系统，所以可以使用 deb ，官方提供了源可以安装。</p>
+<pre><code class="language-sh">wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+sudo apt-get install apt-transport-https
+echo &quot;deb https://artifacts.elastic.co/packages/7.x/apt stable main&quot; | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
+sudo apt-get update &amp;&amp; sudo apt-get install elasticsearch
+</code></pre>
+<p>运行以上命令即可，但是呢，由于国内网速不给力，会下的很慢，所以我挂了代理下载 deb 包。</p>
+<pre><code class="language-sh">wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.6.1-amd64.deb
+sudo dpkg -i elasticsearch-7.6.1-amd64.deb
+</code></pre>
+<p>挂上代理之后飞速下载安装。</p>
+<h2 id="启动">启动</h2>
+<p>elasticsearch 不会在安装后启动更新，所以要手动启动。我们用的是 systemd ，所以只要执行一下命令就行了。</p>
+<pre><code class="language-sh">sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl enable elasticsearch.service
+sudo systemctl start elasticsearch.service
+</code></pre>
+<p>运行一下:</p>
+<pre><code class="language-sh">curl -X http://127.0.0.1:9200/
+</code></pre>
+<p>返回：</p>
+<pre><code class="language-json">{
+  &quot;name&quot; : &quot;Cp8oag6&quot;,
+  &quot;cluster_name&quot; : &quot;elasticsearch&quot;,
+  &quot;cluster_uuid&quot; : &quot;AT69_T_DTp-1qgIJlatQqA&quot;,
+  &quot;version&quot; : {
+    &quot;number&quot; : &quot;7.6.1&quot;,
+    &quot;build_flavor&quot; : &quot;default&quot;,
+    &quot;build_type&quot; : &quot;tar&quot;,
+    &quot;build_hash&quot; : &quot;f27399d&quot;,
+    &quot;build_date&quot; : &quot;2016-03-30T09:51:41.449Z&quot;,
+    &quot;build_snapshot&quot; : false,
+    &quot;lucene_version&quot; : &quot;8.4.0&quot;,
+    &quot;minimum_wire_compatibility_version&quot; : &quot;1.2.3&quot;,
+    &quot;minimum_index_compatibility_version&quot; : &quot;1.2.3&quot;
+  },
+  &quot;tagline&quot; : &quot;You Know, for Search&quot;
+}
+</code></pre>
+<p>启动成功。</p>
+<h2 id="curd">CURD</h2>
+<p>elasticsearch 有个 index 的概念，index 更像关系型的 Database ，而实际上在 elasticsearch 7.6.1 中更像是 table ，里面可以对任意的 document 进行 CURD 。</p>
+<p>elasticsearch 都使用 restful 接口进行操作。</p>
+<h3 id="增加一个-index">增加一个 index</h3>
+<pre><code class="language-sh">curl -X PUT http://127.0.0.1:9200/index
+</code></pre>
+<h3 id="增加一个-document">增加一个 document</h3>
+<pre><code class="language-sh">curl -X POST http://127.0.0.1:9200/index/_create/1 -H 'Content-Type: application/json' -d '{
+    &quot;username&quot; : &quot;jack&quot;,
+    &quot;password&quot; : &quot;1.2.3&quot;
+}'
+</code></pre>
+<h3 id="删除一个-document">删除一个 document</h3>
+<pre><code class="language-sh">curl -X DELETE http://127.0.0.1:9200/index/_doc/1
+</code></pre>
+<h3 id="修改一个-document">修改一个 document</h3>
+<pre><code class="language-sh">curl -X POST http://127.0.0.1:9200/index/_update/1 -H 'Content-Type: application/json' -d '{&quot;doc&quot; : {&quot;username&quot;:&quot;hello&quot;}}'
+</code></pre>
+<h3 id="按条件修改一个-document">按条件修改一个 document</h3>
+<pre><code class="language-sh">curl -L -X POST 'http://127.0.0.1:9200/index/_update_by_query' \
+         -H 'Content-Type: application/json' \
+         --data-raw '{
+             &quot;query&quot;: {
+                 &quot;username&quot;:&quot;jack&quot;
+             },
+                 &quot;script&quot;: {
+                     &quot;inline&quot;: &quot;ctx._source.password = '122'&quot;
+                 }
+         }'
+</code></pre>
+<p>貌似不能用 doc 进行部分更新，只能用 script 。</p>
+<h3 id="按条件删除一个-document">按条件删除一个 document</h3>
+<pre><code class="language-sh">curl -L -X POST 'http://127.0.0.1:9200/index/_delete_by_query?conflicts=proceed' \
+         -H 'Content-Type: application/json' \
+         --data-raw '{
+             &quot;query&quot;: {
+                 &quot;match_all&quot;: {}
+             }
+         }'
+</code></pre>
+<h3 id="搜索-document">搜索 document</h3>
+<pre><code class="language-sh">curl -L -X POST 'http://127.0.0.1:9200/index/_search' \
+         -H 'Content-Type: application/json' \
+         --data-raw '{
+             &quot;query&quot; : {
+                 &quot;match&quot;: {
+                     &quot;username&quot;: &quot;jack&quot;
+                 }
+             },
+         }'
+</code></pre>
+<p>elasticsearch 的搜索语法被称为 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html">DSL</a> ，这里简单对几个语法做介绍。</p>
+<pre><code class="language-json">{
+    &quot;query&quot; : {
+        &quot;match&quot;: {
+            &quot;username&quot;: &quot;jack&quot;
+        }
+    }
+}
+</code></pre>
+<p><code>match</code> 里对字段进行模糊搜索，会对字段进行分词。如果不想要分词可以使用 <code>term</code> 。</p>
+<pre><code class="language-json">{
+    &quot;query&quot; : {
+        &quot;term&quot;: {
+            &quot;username&quot;: &quot;jack&quot;
+        }
+    }
+}
+</code></pre>
+<p>但两者都只能对单一字段进行查询，如果要分字段查询，需要使用 <code>bool</code>。</p>
+<pre><code class="language-json">{
+    &quot;query&quot;: {
+        &quot;bool&quot;: {
+            &quot;should&quot;: [
+            {&quot;term&quot;: {&quot;username&quot;: &quot;jack&quot;}},
+            {&quot;term&quot;: {&quot;password&quot;: &quot;1234&quot;}}
+            ]
+        }
+    }
+}
+</code></pre>
+<h2 id="总结">总结</h2>
+<p>elasticsearch 整体用下来还是非常顺畅的，之前压崩 mongo 的查询量交给 elasticsearch 还是很轻松的。不过，对比单纯的数据库有失灵活，但想要两全哪有那么好的东西呢？</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-03-30
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/elasticsearch/">elasticsearch</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/elasticsearch-update/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">elasticsearch 频繁更新问题</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/rinted/">
+            <span class="next-text nav-default">rinted 做端口转发</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

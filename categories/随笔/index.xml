@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>随笔 on Bigshans&#39; Blog</title>
+    <link>http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/</link>
+    <description>Recent content in 随笔 on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 31 Dec 2019 22:06:34 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2019总结</title>
+      <link>http://localhost:1313/post/2019%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Tue, 31 Dec 2019 22:06:34 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2019%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;p&gt;在 2019 年的最后一天写这一年最后一篇博文。这一年说实话，过得并不好，东北赛没有拿到奖，工作又找的不顺利，去医院诊断了双相情感障碍。工作越做越没有信心，越做越没有热情，感觉难以为继。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>读书的退步</title>
+      <link>http://localhost:1313/post/%E9%9A%8F%E7%AC%94-readingback/</link>
+      <pubDate>Thu, 04 Jul 2019 19:00:34 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/%E9%9A%8F%E7%AC%94-readingback/</guid>
+      <description>&lt;p&gt;我自高中以后便没有写过什么作文了，一来是没有什么闲心，二来是没有什么动力。同样的情况，我从高三开始便没有再读书了，就是那些闲书，以前我最爱看的，什么小说啊，社科啊，哲学之类的。在我高三开始，为了省下复习的时间，于是便戒了书瘾。结果是，书瘾戒了，学习却没有好，高中时候花了大量时间去读闲书，到头来却是得到了最差的结果。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于暑假的总结</title>
+      <link>http://localhost:1313/post/%E5%85%B3%E4%BA%8E%E6%9A%91%E5%81%87%E7%9A%84%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sat, 25 Aug 2018 14:17:10 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/%E5%85%B3%E4%BA%8E%E6%9A%91%E5%81%87%E7%9A%84%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;p&gt;最终使用了 hexo 搭建自己的博客，而不是闲得蛋疼非得自己写。&lt;/p&gt;
+&lt;p&gt;这个暑假原本打算写一个网易云音乐的第三方客户端，然而最终还是弃了，UI过于蛋疼，于是改用现有的主题。自己写了大半天发现主题并不好用=。= ，html 和 css 真的不太懂啊。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>FirstBlog</title>
+      <link>http://localhost:1313/post/firstblog/</link>
+      <pubDate>Sat, 25 Aug 2018 13:05:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/firstblog/</guid>
+      <description>&lt;p&gt;个人尝试hexo+gitpages&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

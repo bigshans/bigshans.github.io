@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software on Bigshans&#39; Blog</title>
+    <link>http://localhost:1313/tags/software/</link>
+    <description>Recent content in software on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 09 Sep 2018 19:18:52 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>deb 打包指北</title>
+      <link>http://localhost:1313/post/linux-deb-package/</link>
+      <pubDate>Sun, 09 Sep 2018 19:18:52 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/linux-deb-package/</guid>
+      <description>&lt;p&gt;最近几天在给我的一些软件打包，原本打算建立一个私人仓库，不过没有云还是算了。本地打包的话貌似空间不太够，不过首先还是要学习一下 debian 的相关知识的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>安装 deepin-wine 到 debian 上</title>
+      <link>http://localhost:1313/post/software-deepin-wine/</link>
+      <pubDate>Sun, 02 Sep 2018 19:21:21 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/software-deepin-wine/</guid>
+      <description>&lt;p&gt;我尝试了一下 &lt;a href=&#34;https://github.com/wszqkzqk/deepin-wine-ubuntu&#34;&gt;deepin-wine-ubuntu&lt;/a&gt; 项目，不过无法正常装上。所以我自己尝试了一下安装 deepin-wine 并尝试了一下 deepin 的 QQ 和 TIM 。效果还不错。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

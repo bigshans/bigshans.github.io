@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>latex on Bigshans&#39; Blog</title>
+    <link>http://localhost:1313/tags/latex/</link>
+    <description>Recent content in latex on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Dec 2018 15:46:18 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>latex 部分常用公式代码</title>
+      <link>http://localhost:1313/post/latex/</link>
+      <pubDate>Wed, 26 Dec 2018 15:46:18 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/latex/</guid>
+      <description>&lt;p&gt;我个人很喜欢在 emacs 里用 latex 写公式，而且可以从中到处对应的 pdf ，很方便。在这里我记录一下常用的代码。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

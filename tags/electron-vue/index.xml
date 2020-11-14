@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>electron-vue on Bigshans&#39; Blog</title>
+    <link>http://localhost:1313/tags/electron-vue/</link>
+    <description>Recent content in electron-vue on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Aug 2018 12:41:45 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/electron-vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>webpack 的 require 和 import 相关的一点问题</title>
+      <link>http://localhost:1313/post/net-musicvue-problem-set1/</link>
+      <pubDate>Sun, 26 Aug 2018 12:41:45 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/net-musicvue-problem-set1/</guid>
+      <description>&lt;p&gt;今天继续用 electron-vue 写 NeteaseCloudMusic 的第三方 app， 用的 NeteaseCloudMusicApi 使用起来却很麻烦。不知道为什么之前可以正常使用，现在却不行了，摸索了好久，还是没能解决。不过还是有点收获的，接下来讲一讲。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

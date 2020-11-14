@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>python 爬虫获取 bilibili 封面 - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="以前写的一个脚本，获取 B 站视频封面的脚本，使用了 urllib 来爬虫，用 feh 来打开图片。
+以下是代码：
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.77.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/python-bilibili-cover/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.c498defa82fc3c336204dc2ed5a67f9953a4ccd8ee6790405a676d77389e5789.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="python 爬虫获取 bilibili 封面" />
+<meta property="og:description" content="以前写的一个脚本，获取 B 站视频封面的脚本，使用了 urllib 来爬虫，用 feh 来打开图片。
+以下是代码：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/python-bilibili-cover/" />
+<meta property="article:published_time" content="2018-08-29T17:01:17+00:00" />
+<meta property="article:modified_time" content="2018-08-29T17:01:17+00:00" />
+<meta itemprop="name" content="python 爬虫获取 bilibili 封面">
+<meta itemprop="description" content="以前写的一个脚本，获取 B 站视频封面的脚本，使用了 urllib 来爬虫，用 feh 来打开图片。
+以下是代码：">
+<meta itemprop="datePublished" content="2018-08-29T17:01:17+00:00" />
+<meta itemprop="dateModified" content="2018-08-29T17:01:17+00:00" />
+<meta itemprop="wordCount" content="542">
+
+
+
+<meta itemprop="keywords" content="python,爬虫," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="python 爬虫获取 bilibili 封面"/>
+<meta name="twitter:description" content="以前写的一个脚本，获取 B 站视频封面的脚本，使用了 urllib 来爬虫，用 feh 来打开图片。
+以下是代码："/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">python 爬虫获取 bilibili 封面</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-08-29 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> python </a>
+            </div>
+          <span class="more-meta"> 约 542 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+
+    <div class="post-content">
+      <p>以前写的一个脚本，获取 B 站视频封面的脚本，使用了 urllib 来爬虫，用 feh 来打开图片。</p>
+<p>以下是代码：</p>
+<pre><code class="language-python">#!/usr/bin/python3
+#coding:utf-8
+from lxml import etree
+import urllib.request
+import os
+import threading
+import re
+import sys
+import json
+
+all_file = []
+
+
+def feh_display(i):
+    l = len(all_file)
+    if (i == l):
+        for file_dir in all_file:
+            threading.Thread(target=os.system, args=('feh ./' + file_dir,)).start()
+    elif i &lt; l:
+        threading.Thread(target=os.system, args=('feh ./' + all_file[i], )).start()
+
+
+def display():
+    if len(all_file) == 1:
+        c = input('需要打开吗？(y/n)')
+        if (c == 'y' or c == 'Y'):
+            os.system('feh '+'./' + all_file[0])
+    else:
+        print('需要打开以下吗？')
+        i = 0
+        for file_dir in all_file:
+            print('[%d]%s'%(i,file_dir))
+            i += 1
+        print('[%d]%s'%(i,'所有都打开'))
+        i += 1
+        print('[%d]所有都不打开'%(i))
+        c = map(int, str(input('请选择以上哪些项:')).split(' '))
+        c = list(c)
+        if i in c:
+            return
+        elif i-1 in c:
+            feh_display(i-1)
+        else:
+            for index in c:
+                feh_display(index)
+
+def cover(av):
+    request_url = 'https://www.bilibili.com/video/av'+ av +'.html'
+    headers = {
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+        'Accept-Language':'zh-CN,zh;q=0.9',
+        'Connection':'keep-alive',
+        'Host':'m.bilibili.com',
+        'Host': 'm.bilibili.com',
+        'Referer':'https://www.bilibili.com/video/av' + av,
+        'User-Agent':'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Mobile Safari/537.36)'
+       }
+    page = urllib.request.urlopen(urllib.request.Request(request_url, headers=headers)).read().decode('utf-8')
+    page = page.split('\n')
+    data = ''
+    begin = False
+    for eve in page:
+        if eve == '&lt;script type=&quot;application/ld+json&quot;&gt;':
+            if begin == False:
+                begin = True
+                continue
+        if begin :
+            if eve !=  '&lt;/script&gt;':
+                data += eve
+            else:
+                begin = False
+                break
+    data = re.sub('\s','', data)
+    data = json.loads(data)
+    url = re.findall('(.*)@\w*\.*?',data['images'][0])[0]
+    # os.chdir('~/')
+    if not os.path.exists('cover') :
+        os.mkdir('cover')
+    print('&quot;' + data['title'] + '&quot;的封面正在获取...')
+    file_type = re.findall('\.(\w*)',url)[-1]
+    file_dir = 'cover/' + av + '.' + file_type
+    with open(file_dir,'wb') as f:
+        f.write(urllib.request.urlopen(url).read())
+    print(&quot;获取完毕,保存至./&quot; + file_dir)
+    all_file.append(file_dir)
+
+def main():
+    if len(sys.argv) &lt; 2:
+        print(&quot;Usage:&quot;)
+        print(&quot;    ./cover.py av_num1 av_num2 ...&quot;)
+        sys.exit()
+
+    av = sys.argv[1:]
+    for av_num in av:
+        cover(av_num)
+    display()
+
+if __name__ == '__main__':
+    main()
+</code></pre>
+<p>其实获取手机网页端的封面，在查看 API 时发现 json 文件在直接传来的网页里， lxml 一直没有取到，于是手动解析代码。转出来的图片重新按 av 号命名，放在 cover 文件夹里，还是很好用的。</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-08-29
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">python</a>
+          <a href="/tags/%E7%88%AC%E8%99%AB/">爬虫</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/vim-learn-textobject/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">vim 学习笔记（一）</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/software-netease-linux/">
+            <span class="next-text nav-default">网易云音乐 for linux 不用 root 打开</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

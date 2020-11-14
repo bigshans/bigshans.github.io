@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Express 源码阅读（一） - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="我们写一个简单的程序。
+const express = require(&#39;express&#39;); const app = express(); app.get(&#39;/&#39;, (req, res) =&amp;gt; { res.end(&#39;&amp;lt;h1&amp;gt;Hello&amp;lt;/h1&amp;gt;&#39;); }); app.listen(3000, () =&amp;gt; console.log(&#39;Connected!&#39;));  我们对这段代码进行 Debug 。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.77.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/node-express-source-read/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.c498defa82fc3c336204dc2ed5a67f9953a4ccd8ee6790405a676d77389e5789.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="Express 源码阅读（一）" />
+<meta property="og:description" content="我们写一个简单的程序。
+const express = require(&#39;express&#39;);
+const app = express();
+
+app.get(&#39;/&#39;, (req, res) =&gt; {
+    res.end(&#39;&lt;h1&gt;Hello&lt;/h1&gt;&#39;);
+});
+
+app.listen(3000, () =&gt; console.log(&#39;Connected!&#39;));
+
+我们对这段代码进行 Debug 。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/node-express-source-read/" />
+<meta property="article:published_time" content="2019-12-01T14:55:32+00:00" />
+<meta property="article:modified_time" content="2019-12-01T14:55:32+00:00" />
+<meta itemprop="name" content="Express 源码阅读（一）">
+<meta itemprop="description" content="我们写一个简单的程序。
+const express = require(&#39;express&#39;);
+const app = express();
+
+app.get(&#39;/&#39;, (req, res) =&gt; {
+    res.end(&#39;&lt;h1&gt;Hello&lt;/h1&gt;&#39;);
+});
+
+app.listen(3000, () =&gt; console.log(&#39;Connected!&#39;));
+
+我们对这段代码进行 Debug 。">
+<meta itemprop="datePublished" content="2019-12-01T14:55:32+00:00" />
+<meta itemprop="dateModified" content="2019-12-01T14:55:32+00:00" />
+<meta itemprop="wordCount" content="482">
+
+
+
+<meta itemprop="keywords" content="Express,Node," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Express 源码阅读（一）"/>
+<meta name="twitter:description" content="我们写一个简单的程序。
+const express = require(&#39;express&#39;);
+const app = express();
+
+app.get(&#39;/&#39;, (req, res) =&gt; {
+    res.end(&#39;&lt;h1&gt;Hello&lt;/h1&gt;&#39;);
+});
+
+app.listen(3000, () =&gt; console.log(&#39;Connected!&#39;));
+
+我们对这段代码进行 Debug 。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Express 源码阅读（一）</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-12-01 </span>
+        <div class="post-category">
+            <a href="/categories/node/"> Node </a>
+            </div>
+          <span class="more-meta"> 约 482 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#createapplication"><code>createApplication()</code></a></li>
+        <li><a href="#appinit"><code>app.init()</code></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    <div class="post-content">
+      <p>我们写一个简单的程序。</p>
+<pre><code class="language-js">const express = require('express');
+const app = express();
+
+app.get('/', (req, res) =&gt; {
+    res.end('&lt;h1&gt;Hello&lt;/h1&gt;');
+});
+
+app.listen(3000, () =&gt; console.log('Connected!'));
+</code></pre>
+<p>我们对这段代码进行 Debug 。</p>
+<h2 id="createapplication"><code>createApplication()</code></h2>
+<p>我们进入 express 源码，就会发现如下源码：</p>
+<pre><code class="language-js">module.exports = require('./lib/express');
+</code></pre>
+<p>原来是 require 了 lib/express 的源码，进入源码，我们便见到如下语句：</p>
+<pre><code class="language-js">exports = module.exports = createApplication;
+</code></pre>
+<p>我们调用的 <code>express</code> 本质上是调用了 <code>createApplication</code> 方法。</p>
+<p>我们进入到 <code>createApplication</code> 看看。</p>
+<pre><code class="language-js">function createApplication() {
+  var app = function(req, res, next) {
+    app.handle(req, res, next);
+  };
+
+  mixin(app, EventEmitter.prototype, false);
+  mixin(app, proto, false);
+
+  // expose the prototype that will get set on requests
+  app.request = Object.create(req, {
+    app: { configurable: true, enumerable: true, writable: true, value: app }
+  })
+
+  // expose the prototype that will get set on responses
+  app.response = Object.create(res, {
+    app: { configurable: true, enumerable: true, writable: true, value: app }
+  })
+
+  app.init();
+  return app;
+}
+</code></pre>
+<p><code>app</code> 本质上是一个 handle 函数，有三个变量，<code>req</code> 是 <code>request</code>，<code>res</code> 是 <code>response</code>，next 是回调函数。</p>
+<p><code>app</code> 继承了两个类，一个是 <code>EventEmitter</code> ，另一个 <code>proto</code> ，<code>proto</code> 是 <code>require</code> 了 <code>./applicaition</code> 的核心。</p>
+<p><code>app</code> 还有两个属性，<code>request</code> 和 <code>response</code> ，分别是 <code>http.InComingMessage</code> 和 <code>http.ServerResponse</code> 的原型，<code>request</code> 和 <code>response</code>，最终会作为 <code>http.createServer</code> 的第一参数和第二参数。</p>
+<p>最后是 <code>app.init()</code> ，进行默认的配置，增加默认的中间件，构建 route 的反射方法。</p>
+<h2 id="appinit"><code>app.init()</code></h2>
+<p>进入 <code>app.init()</code> 。</p>
+<pre><code class="language-js">app.init = function init() {
+  this.cache = {};
+  this.engines = {};
+  this.settings = {};
+
+  this.defaultConfiguration();
+};
+</code></pre>
+<p>那么大头就在 <code>this.defaultConfiguration()</code> 。我们一点点的看。</p>
+<pre><code class="language-js">  this.enable('x-powered-by');
+  this.set('etag', 'weak');
+  this.set('env', env);
+  this.set('query parser', 'extended');
+  this.set('subdomain offset', 2);
+  this.set('trust proxy', false);
+</code></pre>
+<p><code>x-powered-by</code> 是表示框架语言的。<code>etag</code> 是缓存，<code>query parser</code> 是解析请求参数的，<code>subdomain offset</code> 解析子域名， <code>trust proxy</code> 不采用代理托管模式。</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-12-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/express/">Express</a>
+          <a href="/tags/node/">Node</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/angular-virtual-scroll/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">angular 虚拟滚动的一些坑</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/linux-systemdnspawn/">
+            <span class="next-text nav-default">systemd-nspawn 的简单使用</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Java 源码阅读之 HashMap - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="对以下一段代码进行 Debug，阅读建议边 Debug 边看。
+import java.util.HashMap; public class Collec { public static void main(String[] args) { HashMap a = new HashMap(); a.put(&amp;quot;sd&amp;quot;, &amp;quot;54&amp;quot;); a.put(&amp;quot;sd&amp;quot;, &amp;quot;125&amp;quot;); } } " /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.77.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/src-java-hashmap/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.c498defa82fc3c336204dc2ed5a67f9953a4ccd8ee6790405a676d77389e5789.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="Java 源码阅读之 HashMap" />
+<meta property="og:description" content="对以下一段代码进行 Debug，阅读建议边 Debug 边看。
+import java.util.HashMap;
+
+public class Collec {
+    public static void main(String[] args) {
+        HashMap a = new HashMap();
+        a.put(&quot;sd&quot;, &quot;54&quot;);
+        a.put(&quot;sd&quot;, &quot;125&quot;);
+    }
+}
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/src-java-hashmap/" />
+<meta property="article:published_time" content="2019-10-04T22:32:30+00:00" />
+<meta property="article:modified_time" content="2019-10-04T22:32:30+00:00" />
+<meta itemprop="name" content="Java 源码阅读之 HashMap">
+<meta itemprop="description" content="对以下一段代码进行 Debug，阅读建议边 Debug 边看。
+import java.util.HashMap;
+
+public class Collec {
+    public static void main(String[] args) {
+        HashMap a = new HashMap();
+        a.put(&quot;sd&quot;, &quot;54&quot;);
+        a.put(&quot;sd&quot;, &quot;125&quot;);
+    }
+}
+">
+<meta itemprop="datePublished" content="2019-10-04T22:32:30+00:00" />
+<meta itemprop="dateModified" content="2019-10-04T22:32:30+00:00" />
+<meta itemprop="wordCount" content="2552">
+
+
+
+<meta itemprop="keywords" content="java,hashmap," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java 源码阅读之 HashMap"/>
+<meta name="twitter:description" content="对以下一段代码进行 Debug，阅读建议边 Debug 边看。
+import java.util.HashMap;
+
+public class Collec {
+    public static void main(String[] args) {
+        HashMap a = new HashMap();
+        a.put(&quot;sd&quot;, &quot;54&quot;);
+        a.put(&quot;sd&quot;, &quot;125&quot;);
+    }
+}
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Java 源码阅读之 HashMap</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-10-04 </span>
+        <div class="post-category">
+            <a href="/categories/java/"> java </a>
+            </div>
+          <span class="more-meta"> 约 2552 字 </span>
+          <span class="more-meta"> 预计阅读 6 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#继承关系">继承关系</a></li>
+        <li><a href="#初始化">初始化</a></li>
+        <li><a href="#put-方法">put 方法</a></li>
+        <li><a href="#resize-方法">resize 方法</a></li>
+        <li><a href="#putval-方法">putVal 方法</a></li>
+        <li><a href="#第二个-put-方法">第二个 put 方法</a></li>
+        <li><a href="#另一段代码">另一段代码</a></li>
+        <li><a href="#resize-方法-1">resize 方法</a></li>
+        <li><a href="#后记">后记</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    <div class="post-content">
+      <p>对以下一段代码进行 Debug，阅读建议边 Debug 边看。</p>
+<pre><code>import java.util.HashMap;
+
+public class Collec {
+    public static void main(String[] args) {
+        HashMap a = new HashMap();
+        a.put(&quot;sd&quot;, &quot;54&quot;);
+        a.put(&quot;sd&quot;, &quot;125&quot;);
+    }
+}
+</code></pre>
+<h2 id="继承关系">继承关系</h2>
+<p>HashMap &lt;- AbstractMap &lt;- Map 。</p>
+<h2 id="初始化">初始化</h2>
+<p>这里会调用初始化代码。</p>
+<pre><code>public HashMap() {
+    this.loadFactor = DEFAULT_LOAD_FACTOR;
+}
+</code></pre>
+<p>DEFAULT_LOAD_FACTOR默认是0.75。我们可以看到，在这里 HashMap 并没有初始化空间。</p>
+<h2 id="put-方法">put 方法</h2>
+<p>我们一步一步地来看。</p>
+<p>首先，我们调用了 put 方法，然后 put 方法回调了 putVal 方法。</p>
+<pre><code>public V put(K key, V value) {
+    return putVal(hash(key), key, value, false, true);
+}
+</code></pre>
+<p>首先将 key 进行 hash ，从而得到一个 int 值。</p>
+<pre><code>static final int hash(Object key) {
+    int h;
+    return (key == null)?0:(h = key.hashCode()) ^ (h &gt;&gt;&gt; 16);
+}
+</code></pre>
+<p>这里的意思是，将 key 的 hash 值先带符号右移 16 位，然后跟低位做异或操作。</p>
+<p>这样将并不直观，我们直接进行一下计算吧！</p>
+<p>首先我们的 key 设置为 131072 ，二进制为 10 0000 0000 0000，右移 16 位为 2，即 10 。两者异或地结果为 400002 ，二进制值为 10 0000 0000 0010 。这里就是将 hash 的低十六位与高十六位做了异或操作，使得低位与高位 01 分布均匀，减少 hash 冲突。</p>
+<p>我们转进 putVal 里面。</p>
+<pre><code>final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict)
+</code></pre>
+<p>前两个参数我们很清楚，但后面两个是什么意思呢？</p>
+<p>onlyIfAbsent ，为 true 时，不会改变原值。</p>
+<p>evict，为 false时，表格处于创建模式。用不到，暂时不用理解。</p>
+<pre><code>Node&lt;K, V&gt;[] tab; Node&lt;K, V&gt; p; int n, i;
+if ((tab = table) == null || (n = table.length) == 0) {
+    n = (tab = resize()).length;
+}
+</code></pre>
+<p>我们先不理会我们创建的值，单看判断语句。这里写得很紧凑，可以这么改写一下，方便理解。</p>
+<pre><code>Node&lt;K, V&gt;[] tab = table;int n;
+if (tab == null || table.length == 0) {
+    tab = resize();
+}
+n = tab.length;
+</code></pre>
+<p>由于 table 表在构造时没有初始化，所以 table 为 null 。我们接着转入 resize 方法里面看看。</p>
+<h2 id="resize-方法">resize 方法</h2>
+<p>第一步，保存旧值。</p>
+<pre><code>Node&lt;K, V&gt;[] oldTab = table;
+int oldCap = (oldCap == null)?0:oldCap.length;
+</code></pre>
+<p>保存原有的 table 的值并记录长度。如果为 null 则记录为 0 。</p>
+<pre><code>int oldThr = threshold;
+int newCap, newThr = 0;
+</code></pre>
+<p>threshold ，阈值，为 capacity * load factor 的结构，是下一次需要 resize 的大小。</p>
+<p>随后我们进入下一个判断。</p>
+<pre><code>if (oldCap &gt; 0) {
+    // 先不理会
+} else if (oldThr &gt; 0) {
+    // 先不理会
+} else {
+    newCap = DEFAULT_INITIAL_CAPACITY;
+    newThr = (int)(DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);
+}
+threshold = newThr;
+</code></pre>
+<p>此时我们的阈值和容量都为 0 ，于是就加载默认的配置，然后将新的阈值赋值给 threshold。</p>
+<p>DEFAULT_INITIAL_CAPACITY，1 &laquo; 4，就是 16。</p>
+<p>DEFAULT_LOAD_FACTOR，0.75f，就是 0.75。</p>
+<pre><code>Node&lt;K, V&gt;[] newTab = (Node&lt;K, V&gt;)new Node[newCap];
+table = newTab;
+</code></pre>
+<p>初始化此处的空间。</p>
+<p>然后结束初始化。回到我们的 putVal 方法。</p>
+<h2 id="putval-方法">putVal 方法</h2>
+<pre><code>if ((p = tab[i = (n - 1) &amp; hash]) == null) {
+    // 等会会讲
+}
+</code></pre>
+<p>又是一个紧凑的写法。我们可以用我们自己的方法改写一下。</p>
+<pre><code>int i = (n - 1) &amp; hash;
+Node&lt;K, V&gt; p = tab[i];
+if (p == null)
+</code></pre>
+<p>比较有意思的地方在于，我们没有直接使用 hash 做下标，问题很明显，这个 hash 会超过我们的 table 长度。</p>
+<p>一般的想法是取模，我们会写成：</p>
+<pre><code>int i = hash % (n - 1);
+</code></pre>
+<p>但 % 操作很慢，所以此处用 &amp; 代替 % 操作。</p>
+<p>如果长度为 16，则二进制为 10000，减一为 1111 。我们的 hash 是 984877383，二进制是 11 1010 1110 0001 1101 0000 0000 0111。我们取与之后的结果是 0111，就是 7。这与我们 984877383 % 16 的结果一致。不过，这也是得益于长度为 2 的整数幂。这点可以从我们的二进制操作中得出。如果我们想要让(n - 1) % hash 与 hash % (n - 1)行为一致的话，ｎ必须为 2 的整数幂。</p>
+<pre><code>tab[i] = newNode(hash, key, value, null);
+</code></pre>
+<p>由于当前所有节点是空的，符合条件，所以我们进入分支。在这里我们只是新建一个节点。</p>
+<pre><code>Node&lt;K, V&gt; newNode(int hash, K key, V value, Node&lt;K, V&gt; next) {
+    return new Node&lt;&gt;(hash, key, value, next);
+}
+</code></pre>
+<p>完成之后，我们进入收尾。</p>
+<pre><code>++mCount;
+</code></pre>
+<p>mCount 是记录我们修改了 HashMap 的次数。这个是用于 faild-fast 的。</p>
+<pre><code>if (++size &gt; threshold)
+    resize();
+afterNodeInsertion(evict);
+return null;
+</code></pre>
+<p>size 是记录有多少个键值对被占用，简单来说，就是 table 中不为空的个数。</p>
+<p>如果 size 大于阈值，就重新调整大小，但我们目前没有。</p>
+<p>afterNodeInsertion(evict) ，空函数，无意义。</p>
+<p>最后返回值为 null 。</p>
+<p>这就是整个插入一个无冲突值的过程。</p>
+<h2 id="第二个-put-方法">第二个 put 方法</h2>
+<p>接着是有冲突的 put ，前面都差不多。</p>
+<pre><code>if ((p = tab[i = (n - 1) &amp; hash]) == null)
+    tab[i] = newNode(hash, key, value, null);
+</code></pre>
+<p>我们进入 else 分支。</p>
+<pre><code>Node&lt;K, V&gt; e; K k;
+if (p.hash == hash &amp;&amp;
+   ((k = p .key) == key  || (key != null &amp;&amp; key.equals(k))))
+    e = p;
+</code></pre>
+<p>我们进行转写。</p>
+<pre><code>Node&lt;K, V&gt; e;
+K k = p .key;
+if (p.hash == hash &amp;&amp; (k == key || (key != null &amp;&amp; key.equals(k))))
+    e = p;
+</code></pre>
+<p>判断 hash 值是否相同，然后判断键值是否都相同。这里首先判断 k == key ，首先规避 k 为 null 的情况。</p>
+<p>如果符合条件，就暂时取出原来的节点。</p>
+<pre><code> if (e != null) {
+     V oldValue = e.value;
+     if (!onlyIfAbsent || oldValue == null)
+         e.value = value;
+     afterNodeAccess(e);
+     return oldValue;
+}
+</code></pre>
+<p>此时存在需要被替换替换的节点，我们取出原来的节点。</p>
+<p>onlyIfAbsent 此时为 false ，所以直接替换原值。</p>
+<p>afterNodeAccess(e) 为空函数。</p>
+<p>返回旧值。</p>
+<h2 id="另一段代码">另一段代码</h2>
+<p>再进行 Debug 。</p>
+<pre><code>public class Collec {
+    public static void main(String[] args) {
+        HashMap a = new HashMap(2);
+        a.put(&quot;sd&quot;, &quot;54&quot;);
+        a.put(&quot;sds&quot;, &quot;125&quot;); // breakpoint
+    }
+}
+</code></pre>
+<p>由于我们设置的容量为 2，这里就发生了碰撞。</p>
+<p>我们看看在链表情况下的代码。</p>
+<pre><code>for (int binCount = 0; ; ++binCount) {
+    if ((e = p.next) == null) {
+        p.next = newNode(hash, key, value, null);
+        if (binCount &gt;= TREEFIY_THRESHOLD - 1)
+            treeifyBin(tab, hash);
+        break;
+    }
+    if (e.hash == hash &amp;&amp;
+       ((k = e.key) == key || (key != null &amp;&amp; key.equals(k))))
+        break;
+    p = e;
+}
+</code></pre>
+<p>这块代码也是挺紧凑的，转写一下。</p>
+<pre><code>for (int binCount = 0; ; ++binCount) {
+    e = p.next;
+    if (e == null) {
+        p.next = newNode(hash, key, value, null);
+        if (binCount &gt;= TREEFIY_THRESHOLD - 1)
+            treeifyBin(tab, hash);
+        break;
+    }
+    if (e.hash == hash &amp;&amp;
+       ((k = e.key) == key || (key != null &amp;&amp; key.equals(k))))
+        break;
+    p = e;
+}
+</code></pre>
+<p>没有改多少，e = p.next 和 p = e 完成遍历链表。binCount 计算链表里的元素个数。</p>
+<p>由于我们要添加的新节点是之前没有过的，所以我们将进入 e == null 的分支。TREEFIY_THRESHOLD 的值为 8 。</p>
+<p>在我们完成新节点的添加之后，我们将进入之前我们进入过的代码。</p>
+<pre><code>++modCount;
+if (++size &gt; threshold)
+    resize();
+afterNodeInsertion(evict);
+</code></pre>
+<p>我们插入了一对新的键值对，并且超过了阈值，需要进行扩容。</p>
+<h2 id="resize-方法-1">resize 方法</h2>
+<pre><code>if (oldCap &gt; 0) {
+    if (oldCap &gt;= MAXIMUM_CAPACITY) {
+        threshold = Integer.MAX_VALUE;
+        return oldTab;
+    }
+    else if ((newCap = oldCap &lt;&lt; 1) &lt; MAXIMUM_CAPACITY &amp;&amp;
+             oldCap &gt;= DEFAULT_INITIAL_CAPACITY)
+        newThr = oldThr &lt;&lt; 1; // double threshold
+}
+</code></pre>
+<p>此时，我们的 oldCap 为 2 。</p>
+<p>MAXIMUM_CAPACITY 为 1 &laquo; 30 。</p>
+<p>我们重写一下 else-if 判断。</p>
+<pre><code>newCap = oldCap &lt;&lt; 1;
+if (newCap &lt; MAXIMUM_CAPACITY &amp;&amp; oldCap &gt;= DEFAULT_INITIAL_CAPACITY)
+    newThr = oldThr &lt;&lt; 1;
+</code></pre>
+<p>很显然，我们的我们原来的容量只有 2 ，两个分支都进不去。</p>
+<pre><code> if (newThr == 0) {
+     float ft = (float)newCap * loadFactor;
+     newThr = (newCap &lt; MAXIMUM_CAPACITY &amp;&amp; ft &lt; (float)MAXIMUM_CAPACITY ?
+               (int)ft : Integer.MAX_VALUE);
+ }
+</code></pre>
+<p>获取新的容量大小，比较是否超过了最大容量。</p>
+<p>接下来是一段比较长的代码了，我们一段一段地看。</p>
+<pre><code>for (int j = 0; j &lt; oldCap; ++j)
+</code></pre>
+<p>遍历原有的 table 。</p>
+<pre><code>Node&lt;K, V&gt; e;
+if ((e = oldCap[j]) != null)
+</code></pre>
+<p>赋值的同时判断是否是空值，只对非空值进行操作。这种写法很多，不赘述。</p>
+<pre><code>oldCap[j] = null;
+if (e.next == null)
+    newTab[e.hash &amp; (newCap - 1)] = e;
+</code></pre>
+<p>如果这个节点是单一的一个的话，根据 newTab 的大小重新计算 hash ，放到对应新的位置。但这里要保证重新计算的 hash 不会重复覆盖，那么如何保证呢？</p>
+<pre><code>else if (e instanceof TreeNode)
+    ((TreeNode&lt;K,V&gt;)e).split(this, newTab, j, oldCap);
+</code></pre>
+<p>这里裂树，我们条件没有达到。</p>
+<pre><code> Node&lt;K,V&gt; loHead = null, loTail = null;
+Node&lt;K,V&gt; hiHead = null, hiTail = null;
+Node&lt;K,V&gt; next;
+ do {
+     next = e.next;
+     if ((e.hash &amp; oldCap) == 0) {
+         if (loTail == null)
+             loHead = e;
+         else
+             loTail.next = e;
+         loTail = e;
+     }
+     else {
+         if (hiTail == null)
+             hiHead = e;
+         else
+             hiTail.next = e;
+         hiTail = e;
+     }
+ } while ((e = next) != null);
+</code></pre>
+<p>e.hash &amp; oldCap ，当 e.hash 的二进制位数小于 oldCap 时，这个值为0，当且仅当 oldCap 为二的整数幂的时候。如果 e.hash 的二进制位数大于 oldCap 的时候，就把此时的值放在高位。因为 newCap 为 oldCap 的二倍，所以对应位置的偏移为 oldCap + j 。就是下面这段代码的意思。</p>
+<pre><code> if (loTail != null) {
+     loTail.next = null;
+     newTab[j] = loHead;
+ }
+if (hiTail != null) {
+    hiTail.next = null;
+    newTab[j + oldCap] = hiHead;
+}
+</code></pre>
+<h2 id="后记">后记</h2>
+<p>为了写这个前前后后 Debug 了很久，收获很大。建议有能力的同学一定要自己 Debug 一下。你看一下源码就会发现，这里面坑好多ORZ。后续有时间的话还会再写的。</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-10-04
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/java/">java</a>
+          <a href="/tags/hashmap/">hashmap</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">分布式锁的简单实现</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/%E9%9A%8F%E7%AC%94-readingback/">
+            <span class="next-text nav-default">读书的退步</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

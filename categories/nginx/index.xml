@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nginx on Bigshans&#39; Blog</title>
+    <link>http://localhost:1313/categories/nginx/</link>
+    <description>Recent content in nginx on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 12 Oct 2018 19:02:22 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nginx 反向代理上 Pixiv（二）</title>
+      <link>http://localhost:1313/post/nginx-pixiv-2/</link>
+      <pubDate>Fri, 12 Oct 2018 19:02:22 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/nginx-pixiv-2/</guid>
+      <description>&lt;p&gt;这篇文章我发在 B 站了，地址是 &lt;a href=&#34;https://www.bilibili.com/read/cv1317348&#34;&gt;https://www.bilibili.com/read/cv1317348&lt;/a&gt; 。当然，这里我要讲细一点。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>nginx 反向代理上 Pixiv</title>
+      <link>http://localhost:1313/post/nginx-pixiv/</link>
+      <pubDate>Mon, 24 Sep 2018 15:40:34 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/nginx-pixiv/</guid>
+      <description>&lt;p&gt;Pixiv 被墙了，上不了。我上了 Pixiv 的贴吧，刚好发现有人发帖说如何再上 P 站（ &lt;a href=&#34;https://tieba.baidu.com/p/5882385726&#34;&gt;https://tieba.baidu.com/p/5882385726&lt;/a&gt; ） 。使用 nginx 做反向代理，看着比较简单，于是自己试了试，由于 nginx 自己不太熟，所以是尽量完成。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>org-mode on Bigshans&#39; Blog</title>
+    <link>http://localhost:1313/tags/org-mode/</link>
+    <description>Recent content in org-mode on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Dec 2018 14:46:48 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/org-mode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>org-mode 个人常用快捷键</title>
+      <link>http://localhost:1313/post/emacs-org-mode/</link>
+      <pubDate>Wed, 26 Dec 2018 14:46:48 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/emacs-org-mode/</guid>
+      <description>&lt;p&gt;最近在用 emacs 的 org-mode 来做一些笔记和 agenda ，个人觉得挺好用的。不认默认的 emacs 快捷键用 ctrl ，用了四天结果我小拇指贼疼，虽然将 ctrl 与 caps 进行交换了，但最后将 ralt 与 rctrl 进行交换，现在稍微好一点。不过我用的是 spacemacs ，用 spacemacs 的快捷键还是很好用的，也能保护好小拇指。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

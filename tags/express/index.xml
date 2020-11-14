@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Express on Bigshans&#39; Blog</title>
+    <link>http://localhost:1313/tags/express/</link>
+    <description>Recent content in Express on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 Dec 2019 14:55:32 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/express/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Express 源码阅读（一）</title>
+      <link>http://localhost:1313/post/node-express-source-read/</link>
+      <pubDate>Sun, 01 Dec 2019 14:55:32 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/node-express-source-read/</guid>
+      <description>&lt;p&gt;我们写一个简单的程序。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const express = require(&#39;express&#39;);
+const app = express();
+
+app.get(&#39;/&#39;, (req, res) =&amp;gt; {
+    res.end(&#39;&amp;lt;h1&amp;gt;Hello&amp;lt;/h1&amp;gt;&#39;);
+});
+
+app.listen(3000, () =&amp;gt; console.log(&#39;Connected!&#39;));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们对这段代码进行 Debug 。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Express 学习(一)</title>
+      <link>http://localhost:1313/post/nodejs-express-1/</link>
+      <pubDate>Thu, 27 Jun 2019 13:48:27 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/nodejs-express-1/</guid>
+      <description>&lt;p&gt;公司后端采用了 nodejs + express 环境，最近在看，现在记录一点笔记。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
