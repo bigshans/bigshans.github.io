@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 Apr 2020 10:24:48 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Nov 2020 21:38:31 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>随笔</title>
+      <link>http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/</link>
+      <pubDate>Sat, 14 Nov 2020 21:38:31 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>elasticsearch</title>
       <link>http://localhost:1313/categories/elasticsearch/</link>
@@ -40,15 +49,6 @@
       <pubDate>Sat, 18 Jan 2020 18:05:52 +0000</pubDate>
       
       <guid>http://localhost:1313/categories/mysql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>随笔</title>
-      <link>http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/</link>
-      <pubDate>Tue, 31 Dec 2019 22:06:34 +0000</pubDate>
-      
-      <guid>http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/</guid>
       <description></description>
     </item>
     
