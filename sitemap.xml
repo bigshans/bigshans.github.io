@@ -1024,7 +1024,21 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/electron-vue/</loc>
+    <loc>http://localhost:1313/tags/electron/</loc>
+    <lastmod>2018-08-26T12:41:45+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/netcloud-music/</loc>
+    <lastmod>2018-08-26T12:41:45+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/vue/</loc>
     <lastmod>2018-08-26T12:41:45+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

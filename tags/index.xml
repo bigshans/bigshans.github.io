@@ -593,11 +593,20 @@
     </item>
     
     <item>
-      <title>electron-vue</title>
-      <link>http://localhost:1313/tags/electron-vue/</link>
+      <title>electron</title>
+      <link>http://localhost:1313/tags/electron/</link>
       <pubDate>Sun, 26 Aug 2018 12:41:45 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/electron-vue/</guid>
+      <guid>http://localhost:1313/tags/electron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue</title>
+      <link>http://localhost:1313/tags/vue/</link>
+      <pubDate>Sun, 26 Aug 2018 12:41:45 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/vue/</guid>
       <description></description>
     </item>
     
