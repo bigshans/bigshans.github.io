@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 14 Nov 2020 21:38:31 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2020 18:30:45 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自动部署</title>
+      <link>http://localhost:1313/categories/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Sun, 15 Nov 2020 18:30:45 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>随笔</title>
       <link>http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/</link>

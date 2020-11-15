@@ -6,7 +6,16 @@
     <description>Recent content in nginx on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 13 Oct 2018 12:32:10 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2020 18:30:45 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何使用 Webhook 来实现自动部署项目</title>
+      <link>http://localhost:1313/post/how-to-use-webhook-to-deploy-project/</link>
+      <pubDate>Sun, 15 Nov 2020 18:30:45 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/how-to-use-webhook-to-deploy-project/</guid>
+      <description>自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。 在上家公司我也体验过自</description>
+    </item>
+    
     <item>
       <title>使用 OpenSSL 自建 CA</title>
       <link>http://localhost:1313/post/nginx-openssl/</link>

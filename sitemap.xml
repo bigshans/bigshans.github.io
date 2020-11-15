@@ -3,34 +3,69 @@
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2020-11-14T21:38:31+08:00</lastmod>
+    <lastmod>2020-11-15T18:30:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2020-11-14T21:38:31+08:00</lastmod>
+    <lastmod>2020-11-15T18:30:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
-    <lastmod>2020-11-14T21:38:31+08:00</lastmod>
+    <loc>http://localhost:1313/tags/nginx/</loc>
+    <lastmod>2020-11-15T18:30:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/php/</loc>
+    <lastmod>2020-11-15T18:30:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2020-11-14T21:38:31+08:00</lastmod>
+    <lastmod>2020-11-15T18:30:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2020-11-15T18:30:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/webhooks/</loc>
+    <lastmod>2020-11-15T18:30:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/how-to-use-webhook-to-deploy-project/</loc>
+    <lastmod>2020-11-15T18:30:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</loc>
+    <lastmod>2020-11-15T18:30:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/hugo/</loc>
     <lastmod>2020-11-14T21:38:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -725,13 +760,6 @@
   <url>
     <loc>http://localhost:1313/post/python-base64/</loc>
     <lastmod>2018-10-17T17:23:44+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/nginx/</loc>
-    <lastmod>2018-10-13T12:32:10+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
