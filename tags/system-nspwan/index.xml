@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>system-nspwan on Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/tags/system-nspwan/</link>
+    <link>https://bigshans.github.io/tags/system-nspwan/</link>
     <description>Recent content in system-nspwan on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 24 Nov 2019 23:23:03 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/system-nspwan/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Nov 2019 23:23:03 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/system-nspwan/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>systemd-nspawn 的简单使用</title>
-      <link>http://localhost:1313/post/linux-systemdnspawn/</link>
+      <link>https://bigshans.github.io/post/linux-systemdnspawn/</link>
       <pubDate>Sun, 24 Nov 2019 23:23:03 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/linux-systemdnspawn/</guid>
+      <guid>https://bigshans.github.io/post/linux-systemdnspawn/</guid>
       <description>&lt;p&gt;systemd-nspawn 是 docker 与一样的 container 应用，只不过 docker 相比，跟类似于 chroot 。个人还是比较喜欢 chroot 这样的，这样有种子系统的感觉，与 docker 的 container 相比， chroot 下的操作是会被保留下来的， docker 和 chroot 还是两种不同情况，不可同语。&lt;/p&gt;</description>
     </item>
     

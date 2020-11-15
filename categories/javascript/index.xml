@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>javascript on Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/categories/javascript/</link>
+    <link>https://bigshans.github.io/categories/javascript/</link>
     <description>Recent content in javascript on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 20 Oct 2019 10:11:38 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Oct 2019 10:11:38 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>分布式锁的简单实现</title>
-      <link>http://localhost:1313/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/</link>
+      <link>https://bigshans.github.io/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/</link>
       <pubDate>Sun, 20 Oct 2019 10:11:38 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/</guid>
+      <guid>https://bigshans.github.io/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/</guid>
       <description>&lt;p&gt;打算每周写一篇博客，希望每周都能有新的收获。本周写的博客是我在工作中应用写的一个有趣的东西。
 我们采用 pm2 进行进程管理，我们开启了多个进程，但各个进程之间并没有交流，所以，我想要全局操作某个变量时，就会出现数据安全问题，虽然在 redis 里面单个操作是原子，但我也要保证复合操作也是原子的。但我并不使用 redis 的事务，是因为这个事务会阻塞其他操作，所以，不如在应用层上实现锁，从而不阻塞 redis 。我们虽然不是分布式系统，但是是分布式进程，所以实现也参考分布式锁。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>js 实现 DOM 监视</title>
-      <link>http://localhost:1313/post/js-dom-watch/</link>
+      <link>https://bigshans.github.io/post/js-dom-watch/</link>
       <pubDate>Sun, 07 Oct 2018 15:53:19 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/js-dom-watch/</guid>
+      <guid>https://bigshans.github.io/post/js-dom-watch/</guid>
       <description>&lt;p&gt;花了点时间做了 b 站评论区地址链接化，比较麻烦的是 DOM 监视。找了很多，最后还是采用了 Muatation 来进行事件监视。&lt;/p&gt;
 &lt;p&gt;给个文档地址：http://javascript.ruanyifeng.com/dom/mutationobserver.html 。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>新写了两个油猴脚本</title>
-      <link>http://localhost:1313/post/js-tampermonkey-user-script/</link>
+      <link>https://bigshans.github.io/post/js-tampermonkey-user-script/</link>
       <pubDate>Fri, 05 Oct 2018 13:35:27 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/js-tampermonkey-user-script/</guid>
+      <guid>https://bigshans.github.io/post/js-tampermonkey-user-script/</guid>
       <description>&lt;p&gt;新写了两个油猴脚本针对 bilibili 。具体可以到我的 gist 上看，一个是针对番剧更新的，原本有一个番剧更新的脚本，但只是加了个标签而已，我又加了一些东西，方便查看，不过具体效果一般，而且番剧状态不能很好的体现，现没有找到好的 api 。另一个是针对 bilibili 动态的，动态不能点击链接很麻烦，于是简单写了脚本来实现将地址转换为链接。要点击进去才能有效，不过去除了带中文的链接。 bilibili 动态不能很好的选中也是一个问题，不过已经有脚本很好的实现了这个问题，所以我就不多写了。&lt;/p&gt;</description>
     </item>
     

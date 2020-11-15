@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>algorithm on Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/tags/algorithm/</link>
+    <link>https://bigshans.github.io/tags/algorithm/</link>
     <description>Recent content in algorithm on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 22 Mar 2019 20:40:40 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Mar 2019 20:40:40 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>最长上升子序列模板</title>
-      <link>http://localhost:1313/post/algorithm-lic/</link>
+      <link>https://bigshans.github.io/post/algorithm-lic/</link>
       <pubDate>Fri, 22 Mar 2019 20:40:40 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/algorithm-lic/</guid>
+      <guid>https://bigshans.github.io/post/algorithm-lic/</guid>
       <description>&lt;p&gt;最长上升子序列模板。以 poj 3903 为例。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>动态规划求解 RMQ 问题</title>
-      <link>http://localhost:1313/post/algorithm-rmq-segdp/</link>
+      <link>https://bigshans.github.io/post/algorithm-rmq-segdp/</link>
       <pubDate>Fri, 22 Mar 2019 19:37:15 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/algorithm-rmq-segdp/</guid>
+      <guid>https://bigshans.github.io/post/algorithm-rmq-segdp/</guid>
       <description>&lt;p&gt;rmq 即是区间最值问题，这里是动态规划模板的讲解。所谓 dp 的方法，就是区间 dp 的方法，如果采用原始的区间 dp 方法，那么当数据量很大时会出现时间和空间的双重爆破。这里我们采用了倍增法。我们通过这个模板来观察这个的实现以及思想。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>线段树算法</title>
-      <link>http://localhost:1313/post/algorithm-segtree/</link>
+      <link>https://bigshans.github.io/post/algorithm-segtree/</link>
       <pubDate>Fri, 08 Mar 2019 20:50:55 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/algorithm-segtree/</guid>
+      <guid>https://bigshans.github.io/post/algorithm-segtree/</guid>
       <description>&lt;p&gt;我的 ACM 线段树模板。&lt;/p&gt;</description>
     </item>
     

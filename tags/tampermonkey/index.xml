@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tampermonkey on Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/tags/tampermonkey/</link>
+    <link>https://bigshans.github.io/tags/tampermonkey/</link>
     <description>Recent content in tampermonkey on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Oct 2018 13:35:27 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/tampermonkey/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Oct 2018 13:35:27 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/tampermonkey/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>新写了两个油猴脚本</title>
-      <link>http://localhost:1313/post/js-tampermonkey-user-script/</link>
+      <link>https://bigshans.github.io/post/js-tampermonkey-user-script/</link>
       <pubDate>Fri, 05 Oct 2018 13:35:27 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/js-tampermonkey-user-script/</guid>
+      <guid>https://bigshans.github.io/post/js-tampermonkey-user-script/</guid>
       <description>&lt;p&gt;新写了两个油猴脚本针对 bilibili 。具体可以到我的 gist 上看，一个是针对番剧更新的，原本有一个番剧更新的脚本，但只是加了个标签而已，我又加了一些东西，方便查看，不过具体效果一般，而且番剧状态不能很好的体现，现没有找到好的 api 。另一个是针对 bilibili 动态的，动态不能点击链接很麻烦，于是简单写了脚本来实现将地址转换为链接。要点击进去才能有效，不过去除了带中文的链接。 bilibili 动态不能很好的选中也是一个问题，不过已经有脚本很好的实现了这个问题，所以我就不多写了。&lt;/p&gt;</description>
     </item>
     

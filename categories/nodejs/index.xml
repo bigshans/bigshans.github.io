@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nodejs on Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/categories/nodejs/</link>
+    <link>https://bigshans.github.io/categories/nodejs/</link>
     <description>Recent content in nodejs on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Jan 2020 21:58:14 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jan 2020 21:58:14 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/categories/nodejs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>写个简单的 QOS</title>
-      <link>http://localhost:1313/post/qosnodejs/</link>
+      <link>https://bigshans.github.io/post/qosnodejs/</link>
       <pubDate>Mon, 27 Jan 2020 21:58:14 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/qosnodejs/</guid>
+      <guid>https://bigshans.github.io/post/qosnodejs/</guid>
       <description>&lt;p&gt;最近客户端发生了 bug ，导致我们的服务被疯狂请求， QPS 高达 1000 ！数据压力很大，tjt 让我写个 qos ，就是限制接口访问次数，我粗略写了个，还可以。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>长连接与 Websocket</title>
-      <link>http://localhost:1313/post/websocket/</link>
+      <link>https://bigshans.github.io/post/websocket/</link>
       <pubDate>Sun, 27 Oct 2019 23:11:07 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/websocket/</guid>
+      <guid>https://bigshans.github.io/post/websocket/</guid>
       <description>&lt;p&gt;公司想要做一个聊天系统，原本打算上 Websocket ，我例程都写了，老板又不想弄长连接了，认为短连接就符合需求了，无奈。&lt;/p&gt;
 &lt;p&gt;Websocket 还是值得说一说的，我们是使用 node 开发的。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Express 学习(一)</title>
-      <link>http://localhost:1313/post/nodejs-express-1/</link>
+      <link>https://bigshans.github.io/post/nodejs-express-1/</link>
       <pubDate>Thu, 27 Jun 2019 13:48:27 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/nodejs-express-1/</guid>
+      <guid>https://bigshans.github.io/post/nodejs-express-1/</guid>
       <description>&lt;p&gt;公司后端采用了 nodejs + express 环境，最近在看，现在记录一点笔记。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>nodejs 的 import</title>
-      <link>http://localhost:1313/post/nodejs-es6-import/</link>
+      <link>https://bigshans.github.io/post/nodejs-es6-import/</link>
       <pubDate>Sun, 26 Aug 2018 20:29:41 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/nodejs-es6-import/</guid>
+      <guid>https://bigshans.github.io/post/nodejs-es6-import/</guid>
       <description>&lt;p&gt;nodejs 对 es 6 的支持目前并不完全，直接使用 import 不行，exports 也不行，可以用 babel 之类的编译， nodejs 10 可以尝试加上 flag ： &amp;ndash;experimental-modules。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;node --experimental-modules my-app.mjs
 &lt;/code&gt;&lt;/pre&gt;</description>

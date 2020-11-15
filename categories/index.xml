@@ -2,224 +2,224 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://bigshans.github.io/categories/</link>
     <description>Recent content in Categories on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Nov 2020 18:30:45 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2020 18:30:45 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>自动部署</title>
-      <link>http://localhost:1313/categories/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</link>
+      <link>https://bigshans.github.io/categories/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</link>
       <pubDate>Sun, 15 Nov 2020 18:30:45 +0800</pubDate>
       
-      <guid>http://localhost:1313/categories/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</guid>
+      <guid>https://bigshans.github.io/categories/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>随笔</title>
-      <link>http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/</link>
+      <link>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
       <pubDate>Sat, 14 Nov 2020 21:38:31 +0800</pubDate>
       
-      <guid>http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/</guid>
+      <guid>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</guid>
       <description></description>
     </item>
     
     <item>
       <title>elasticsearch</title>
-      <link>http://localhost:1313/categories/elasticsearch/</link>
+      <link>https://bigshans.github.io/categories/elasticsearch/</link>
       <pubDate>Tue, 07 Apr 2020 10:24:48 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/elasticsearch/</guid>
+      <guid>https://bigshans.github.io/categories/elasticsearch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>http://localhost:1313/categories/linux/</link>
+      <link>https://bigshans.github.io/categories/linux/</link>
       <pubDate>Sat, 15 Feb 2020 12:49:19 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/linux/</guid>
+      <guid>https://bigshans.github.io/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>nodejs</title>
-      <link>http://localhost:1313/categories/nodejs/</link>
+      <link>https://bigshans.github.io/categories/nodejs/</link>
       <pubDate>Mon, 27 Jan 2020 21:58:14 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/nodejs/</guid>
+      <guid>https://bigshans.github.io/categories/nodejs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mysql</title>
-      <link>http://localhost:1313/categories/mysql/</link>
+      <link>https://bigshans.github.io/categories/mysql/</link>
       <pubDate>Sat, 18 Jan 2020 18:05:52 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/mysql/</guid>
+      <guid>https://bigshans.github.io/categories/mysql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>css</title>
-      <link>http://localhost:1313/categories/css/</link>
+      <link>https://bigshans.github.io/categories/css/</link>
       <pubDate>Sun, 22 Dec 2019 21:21:47 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/css/</guid>
+      <guid>https://bigshans.github.io/categories/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>运维</title>
-      <link>http://localhost:1313/categories/%E8%BF%90%E7%BB%B4/</link>
+      <link>https://bigshans.github.io/categories/%E8%BF%90%E7%BB%B4/</link>
       <pubDate>Sun, 15 Dec 2019 21:12:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/%E8%BF%90%E7%BB%B4/</guid>
+      <guid>https://bigshans.github.io/categories/%E8%BF%90%E7%BB%B4/</guid>
       <description></description>
     </item>
     
     <item>
       <title>angular</title>
-      <link>http://localhost:1313/categories/angular/</link>
+      <link>https://bigshans.github.io/categories/angular/</link>
       <pubDate>Sun, 08 Dec 2019 20:23:42 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/angular/</guid>
+      <guid>https://bigshans.github.io/categories/angular/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Node</title>
-      <link>http://localhost:1313/categories/node/</link>
+      <link>https://bigshans.github.io/categories/node/</link>
       <pubDate>Sun, 01 Dec 2019 14:55:32 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/node/</guid>
+      <guid>https://bigshans.github.io/categories/node/</guid>
       <description></description>
     </item>
     
     <item>
       <title>emacs</title>
-      <link>http://localhost:1313/categories/emacs/</link>
+      <link>https://bigshans.github.io/categories/emacs/</link>
       <pubDate>Sun, 10 Nov 2019 20:35:36 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/emacs/</guid>
+      <guid>https://bigshans.github.io/categories/emacs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>javascript</title>
-      <link>http://localhost:1313/categories/javascript/</link>
+      <link>https://bigshans.github.io/categories/javascript/</link>
       <pubDate>Sun, 20 Oct 2019 10:11:38 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/javascript/</guid>
+      <guid>https://bigshans.github.io/categories/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>java</title>
-      <link>http://localhost:1313/categories/java/</link>
+      <link>https://bigshans.github.io/categories/java/</link>
       <pubDate>Fri, 04 Oct 2019 22:32:30 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/java/</guid>
+      <guid>https://bigshans.github.io/categories/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>algorithm</title>
-      <link>http://localhost:1313/categories/algorithm/</link>
+      <link>https://bigshans.github.io/categories/algorithm/</link>
       <pubDate>Fri, 22 Mar 2019 20:40:40 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/algorithm/</guid>
+      <guid>https://bigshans.github.io/categories/algorithm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vim</title>
-      <link>http://localhost:1313/categories/vim/</link>
+      <link>https://bigshans.github.io/categories/vim/</link>
       <pubDate>Thu, 31 Jan 2019 11:27:53 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/vim/</guid>
+      <guid>https://bigshans.github.io/categories/vim/</guid>
       <description></description>
     </item>
     
     <item>
       <title>latex</title>
-      <link>http://localhost:1313/categories/latex/</link>
+      <link>https://bigshans.github.io/categories/latex/</link>
       <pubDate>Wed, 26 Dec 2018 15:46:18 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/latex/</guid>
+      <guid>https://bigshans.github.io/categories/latex/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>http://localhost:1313/categories/python/</link>
+      <link>https://bigshans.github.io/categories/python/</link>
       <pubDate>Fri, 07 Dec 2018 20:47:45 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/python/</guid>
+      <guid>https://bigshans.github.io/categories/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>翻墙</title>
-      <link>http://localhost:1313/categories/%E7%BF%BB%E5%A2%99/</link>
+      <link>https://bigshans.github.io/categories/%E7%BF%BB%E5%A2%99/</link>
       <pubDate>Wed, 28 Nov 2018 15:03:05 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/%E7%BF%BB%E5%A2%99/</guid>
+      <guid>https://bigshans.github.io/categories/%E7%BF%BB%E5%A2%99/</guid>
       <description></description>
     </item>
     
     <item>
       <title>openssl</title>
-      <link>http://localhost:1313/categories/openssl/</link>
+      <link>https://bigshans.github.io/categories/openssl/</link>
       <pubDate>Sat, 13 Oct 2018 12:32:10 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/openssl/</guid>
+      <guid>https://bigshans.github.io/categories/openssl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>nginx</title>
-      <link>http://localhost:1313/categories/nginx/</link>
+      <link>https://bigshans.github.io/categories/nginx/</link>
       <pubDate>Fri, 12 Oct 2018 19:02:22 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/nginx/</guid>
+      <guid>https://bigshans.github.io/categories/nginx/</guid>
       <description></description>
     </item>
     
     <item>
       <title>software</title>
-      <link>http://localhost:1313/categories/software/</link>
+      <link>https://bigshans.github.io/categories/software/</link>
       <pubDate>Mon, 03 Sep 2018 17:34:16 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/software/</guid>
+      <guid>https://bigshans.github.io/categories/software/</guid>
       <description></description>
     </item>
     
     <item>
       <title>net-cloud-music</title>
-      <link>http://localhost:1313/categories/net-cloud-music/</link>
+      <link>https://bigshans.github.io/categories/net-cloud-music/</link>
       <pubDate>Mon, 27 Aug 2018 17:53:56 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/net-cloud-music/</guid>
+      <guid>https://bigshans.github.io/categories/net-cloud-music/</guid>
       <description></description>
     </item>
     
     <item>
       <title>netcloud-music</title>
-      <link>http://localhost:1313/categories/netcloud-music/</link>
+      <link>https://bigshans.github.io/categories/netcloud-music/</link>
       <pubDate>Sun, 26 Aug 2018 12:41:45 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/netcloud-music/</guid>
+      <guid>https://bigshans.github.io/categories/netcloud-music/</guid>
       <description></description>
     </item>
     
     <item>
       <title>初始化文件</title>
-      <link>http://localhost:1313/categories/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%87%E4%BB%B6/</link>
+      <link>https://bigshans.github.io/categories/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%87%E4%BB%B6/</link>
       <pubDate>Sat, 25 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%87%E4%BB%B6/</guid>
+      <guid>https://bigshans.github.io/categories/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%87%E4%BB%B6/</guid>
       <description></description>
     </item>
     

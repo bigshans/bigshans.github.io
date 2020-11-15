@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>software on Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/categories/software/</link>
+    <link>https://bigshans.github.io/categories/software/</link>
     <description>Recent content in software on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 03 Sep 2018 17:34:16 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Sep 2018 17:34:16 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/categories/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>安装 graph-easy</title>
-      <link>http://localhost:1313/post/software-graph-easy/</link>
+      <link>https://bigshans.github.io/post/software-graph-easy/</link>
       <pubDate>Mon, 03 Sep 2018 17:34:16 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/software-graph-easy/</guid>
+      <guid>https://bigshans.github.io/post/software-graph-easy/</guid>
       <description>&lt;p&gt;推荐一个软件， graph-easy  。如果你查看文档的话，经常能看到一些 ascii 码流程画，个人觉得非常酷，于是去查找了一下，发现了这个软件。下面我将做一些简单的介绍。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>安装 deepin-wine 到 debian 上</title>
-      <link>http://localhost:1313/post/software-deepin-wine/</link>
+      <link>https://bigshans.github.io/post/software-deepin-wine/</link>
       <pubDate>Sun, 02 Sep 2018 19:21:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/software-deepin-wine/</guid>
+      <guid>https://bigshans.github.io/post/software-deepin-wine/</guid>
       <description>&lt;p&gt;我尝试了一下 &lt;a href=&#34;https://github.com/wszqkzqk/deepin-wine-ubuntu&#34;&gt;deepin-wine-ubuntu&lt;/a&gt; 项目，不过无法正常装上。所以我自己尝试了一下安装 deepin-wine 并尝试了一下 deepin 的 QQ 和 TIM 。效果还不错。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>网易云音乐 for linux 不用 root 打开</title>
-      <link>http://localhost:1313/post/software-netease-linux/</link>
+      <link>https://bigshans.github.io/post/software-netease-linux/</link>
       <pubDate>Wed, 29 Aug 2018 16:42:55 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/software-netease-linux/</guid>
+      <guid>https://bigshans.github.io/post/software-netease-linux/</guid>
       <description>&lt;p&gt;从知乎上看到这个，非常感谢 Fancy 的努力。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/277330447/answer/478510195&#34;&gt;点击此处前往&lt;/a&gt;。&lt;/p&gt;</description>
     </item>

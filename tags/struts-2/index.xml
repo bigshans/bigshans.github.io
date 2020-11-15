@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>struts 2 on Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/tags/struts-2/</link>
+    <link>https://bigshans.github.io/tags/struts-2/</link>
     <description>Recent content in struts 2 on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 06 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/struts-2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/struts-2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在 idea 中布置 struts 2.5</title>
-      <link>http://localhost:1313/post/java-struts-idea/</link>
+      <link>https://bigshans.github.io/post/java-struts-idea/</link>
       <pubDate>Thu, 06 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/java-struts-idea/</guid>
+      <guid>https://bigshans.github.io/post/java-struts-idea/</guid>
       <description>&lt;p&gt;不得不说百度跟谷歌比还差的远啊。我从官网上下载 struts 的最小包，布置到 idea 上不能正常使用，百度不行上谷歌，终于解决了。&lt;/p&gt;</description>
     </item>
     

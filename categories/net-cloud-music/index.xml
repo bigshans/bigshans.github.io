@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>net-cloud-music on Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/categories/net-cloud-music/</link>
+    <link>https://bigshans.github.io/categories/net-cloud-music/</link>
     <description>Recent content in net-cloud-music on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Aug 2018 17:53:56 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/net-cloud-music/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Aug 2018 17:53:56 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/categories/net-cloud-music/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>将 router 的 js 混成一个</title>
-      <link>http://localhost:1313/post/net-musicvue-problem-set2/</link>
+      <link>https://bigshans.github.io/post/net-musicvue-problem-set2/</link>
       <pubDate>Mon, 27 Aug 2018 17:53:56 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/net-musicvue-problem-set2/</guid>
+      <guid>https://bigshans.github.io/post/net-musicvue-problem-set2/</guid>
       <description>&lt;p&gt;NeteaseCloudMusicApi 得重构，首先得把 router 目录下的一大堆给归拢为一个 js 方便 exports 。然而下面有九十多个文件，所以一个个复制粘贴是不现实的，更何况未来这些文件有改动，于上游一 merge ，这代码得改得老痛苦了。所以决定自己写一个小工具解决这个问题。&lt;/p&gt;</description>
     </item>
     

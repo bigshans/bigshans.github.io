@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>fcitx on Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/tags/fcitx/</link>
+    <link>https://bigshans.github.io/tags/fcitx/</link>
     <description>Recent content in fcitx on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 31 Jan 2019 11:27:53 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/fcitx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Jan 2019 11:27:53 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/fcitx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在 vim 下修改自然码码表</title>
-      <link>http://localhost:1313/post/vim-rime/</link>
+      <link>https://bigshans.github.io/post/vim-rime/</link>
       <pubDate>Thu, 31 Jan 2019 11:27:53 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/vim-rime/</guid>
+      <guid>https://bigshans.github.io/post/vim-rime/</guid>
       <description>&lt;p&gt;最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添加一些字，所以我决定换用别的输入法。 fcitx-sunpinyin 可以添加用户词典，但添加新的单词的时候会严重卡顿，而且打某些字的时候也会卡顿，体验极其糟糕，所以我决定尝试一下 fcitx-rime 。&lt;/p&gt;</description>
     </item>
     

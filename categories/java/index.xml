@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>java on Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/categories/java/</link>
+    <link>https://bigshans.github.io/categories/java/</link>
     <description>Recent content in java on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 04 Oct 2019 22:32:30 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Oct 2019 22:32:30 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/categories/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java 源码阅读之 HashMap</title>
-      <link>http://localhost:1313/post/src-java-hashmap/</link>
+      <link>https://bigshans.github.io/post/src-java-hashmap/</link>
       <pubDate>Fri, 04 Oct 2019 22:32:30 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/src-java-hashmap/</guid>
+      <guid>https://bigshans.github.io/post/src-java-hashmap/</guid>
       <description>&lt;p&gt;对以下一段代码进行 Debug，阅读建议边 Debug 边看。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;import java.util.HashMap;
 
@@ -28,37 +28,37 @@ public class Collec {
     
     <item>
       <title>spring 初步（一）</title>
-      <link>http://localhost:1313/post/spring-tutorial/</link>
+      <link>https://bigshans.github.io/post/spring-tutorial/</link>
       <pubDate>Thu, 27 Dec 2018 21:06:32 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/spring-tutorial/</guid>
+      <guid>https://bigshans.github.io/post/spring-tutorial/</guid>
       <description>&lt;p&gt;今天学习了一下 spring 。现在 spring 这一个系列的框架都挺火的，不管怎样都值得了解一番。不过，虽然如此，但我在网上查找的时候，看了半天基本没有找到一个好的切入口去学习。所以这个稍微学习一下也变得很「稍微」了。在此，我在这里写下一点学习 spring 的一点总结，希望能帮到后来者吧！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>openjdk 11 配置 struts 2.5 &#43; hibernate 5.3 环境</title>
-      <link>http://localhost:1313/post/java-hibernate-struts/</link>
+      <link>https://bigshans.github.io/post/java-hibernate-struts/</link>
       <pubDate>Sun, 02 Dec 2018 13:12:22 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/java-hibernate-struts/</guid>
+      <guid>https://bigshans.github.io/post/java-hibernate-struts/</guid>
       <description>&lt;p&gt;从昨天开始配置这个环境配到吐血，今天终于解决了，采用 idea 默认的配置无法使用，以前的项目可以用现在新建的不行了，我也不是很懂。 struts 一直报找不到 action ，我猜可能生成的目录变了，但改来改去着实难受，我也没耐心去猜，不如重新搞一个，所以本着折腾的精神搞出来了。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>idea 一直加载 maven</title>
-      <link>http://localhost:1313/post/java-idea-maven/</link>
+      <link>https://bigshans.github.io/post/java-idea-maven/</link>
       <pubDate>Sun, 28 Oct 2018 21:16:08 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/java-idea-maven/</guid>
+      <guid>https://bigshans.github.io/post/java-idea-maven/</guid>
       <description>之前遇到过一次 idea 无法正常加载 maven ，那时 hosts 里设置有问题，将 127.0.0.1 loacalhost 加入 hosts 里就行。现在又有新的问题，于是试了试在 import 里的 VMoption 改为 1024 就行了。</description>
     </item>
     
     <item>
       <title>在 idea 中布置 struts 2.5</title>
-      <link>http://localhost:1313/post/java-struts-idea/</link>
+      <link>https://bigshans.github.io/post/java-struts-idea/</link>
       <pubDate>Thu, 06 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/java-struts-idea/</guid>
+      <guid>https://bigshans.github.io/post/java-struts-idea/</guid>
       <description>&lt;p&gt;不得不说百度跟谷歌比还差的远啊。我从官网上下载 struts 的最小包，布置到 idea 上不能正常使用，百度不行上谷歌，终于解决了。&lt;/p&gt;</description>
     </item>
     

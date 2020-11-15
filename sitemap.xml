@@ -1,1114 +1,1114 @@
-<?xml-stylesheet type="text/xsl" href="http://localhost:1313/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://bigshans.github.io/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://bigshans.github.io/</loc>
     <lastmod>2020-11-15T18:30:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://bigshans.github.io/categories/</loc>
     <lastmod>2020-11-15T18:30:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/nginx/</loc>
+    <loc>https://bigshans.github.io/tags/nginx/</loc>
     <lastmod>2020-11-15T18:30:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/php/</loc>
+    <loc>https://bigshans.github.io/tags/php/</loc>
     <lastmod>2020-11-15T18:30:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://bigshans.github.io/post/</loc>
     <lastmod>2020-11-15T18:30:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://bigshans.github.io/tags/</loc>
     <lastmod>2020-11-15T18:30:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/webhooks/</loc>
+    <loc>https://bigshans.github.io/tags/webhooks/</loc>
     <lastmod>2020-11-15T18:30:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/how-to-use-webhook-to-deploy-project/</loc>
+    <loc>https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/</loc>
     <lastmod>2020-11-15T18:30:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</loc>
+    <loc>https://bigshans.github.io/categories/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</loc>
     <lastmod>2020-11-15T18:30:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
+    <loc>https://bigshans.github.io/tags/hugo/</loc>
     <lastmod>2020-11-14T21:38:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/move-to-hugo/</loc>
+    <loc>https://bigshans.github.io/post/move-to-hugo/</loc>
     <lastmod>2020-11-14T21:38:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <loc>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2020-11-14T21:38:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/elasticsearch/</loc>
+    <loc>https://bigshans.github.io/tags/elasticsearch/</loc>
     <lastmod>2020-04-07T10:24:48+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/elasticsearch/</loc>
+    <loc>https://bigshans.github.io/categories/elasticsearch/</loc>
     <lastmod>2020-04-07T10:24:48+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/elasticsearch-update/</loc>
+    <loc>https://bigshans.github.io/post/elasticsearch-update/</loc>
     <lastmod>2020-04-07T10:24:48+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/elasticsearch/</loc>
+    <loc>https://bigshans.github.io/post/elasticsearch/</loc>
     <lastmod>2020-03-30T15:54:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/linux/</loc>
+    <loc>https://bigshans.github.io/tags/linux/</loc>
     <lastmod>2020-02-15T12:49:19+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/linux/</loc>
+    <loc>https://bigshans.github.io/categories/linux/</loc>
     <lastmod>2020-02-15T12:49:19+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/rinted/</loc>
+    <loc>https://bigshans.github.io/tags/rinted/</loc>
     <lastmod>2020-02-15T12:49:19+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/rinted/</loc>
+    <loc>https://bigshans.github.io/post/rinted/</loc>
     <lastmod>2020-02-15T12:49:19+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/nodejs/</loc>
+    <loc>https://bigshans.github.io/tags/nodejs/</loc>
     <lastmod>2020-01-27T21:58:14+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/nodejs/</loc>
+    <loc>https://bigshans.github.io/categories/nodejs/</loc>
     <lastmod>2020-01-27T21:58:14+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/qosnodejs/</loc>
+    <loc>https://bigshans.github.io/post/qosnodejs/</loc>
     <lastmod>2020-01-27T21:58:14+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/mysql/</loc>
+    <loc>https://bigshans.github.io/tags/mysql/</loc>
     <lastmod>2020-01-18T18:05:52+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/mysql/</loc>
+    <loc>https://bigshans.github.io/categories/mysql/</loc>
     <lastmod>2020-01-18T18:05:52+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/mysqlfix/</loc>
+    <loc>https://bigshans.github.io/post/mysqlfix/</loc>
     <lastmod>2020-01-18T18:05:52+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/2019%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://bigshans.github.io/post/2019%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2019-12-31T22:06:34+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E9%9A%8F%E7%AC%94/</loc>
+    <loc>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2019-12-31T22:06:34+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/css/</loc>
+    <loc>https://bigshans.github.io/tags/css/</loc>
     <lastmod>2019-12-22T21:21:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/css/</loc>
+    <loc>https://bigshans.github.io/categories/css/</loc>
     <lastmod>2019-12-22T21:21:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/css%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/</loc>
+    <loc>https://bigshans.github.io/post/css%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/</loc>
     <lastmod>2019-12-22T21:21:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/mongodb/</loc>
+    <loc>https://bigshans.github.io/tags/mongodb/</loc>
     <lastmod>2019-12-15T21:12:21+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97/</loc>
+    <loc>https://bigshans.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2019-12-15T21:12:21+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/%E8%BF%90%E7%BB%B4/</loc>
+    <loc>https://bigshans.github.io/categories/%E8%BF%90%E7%BB%B4/</loc>
     <lastmod>2019-12-15T21:12:21+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/angular/</loc>
+    <loc>https://bigshans.github.io/tags/angular/</loc>
     <lastmod>2019-12-08T20:23:42+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/angular/</loc>
+    <loc>https://bigshans.github.io/categories/angular/</loc>
     <lastmod>2019-12-08T20:23:42+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/angular-virtual-scroll/</loc>
+    <loc>https://bigshans.github.io/post/angular-virtual-scroll/</loc>
     <lastmod>2019-12-08T20:23:42+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://bigshans.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2019-12-08T20:23:42+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/express/</loc>
+    <loc>https://bigshans.github.io/tags/express/</loc>
     <lastmod>2019-12-01T14:55:32+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/node-express-source-read/</loc>
+    <loc>https://bigshans.github.io/post/node-express-source-read/</loc>
     <lastmod>2019-12-01T14:55:32+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/node/</loc>
+    <loc>https://bigshans.github.io/tags/node/</loc>
     <lastmod>2019-12-01T14:55:32+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/node/</loc>
+    <loc>https://bigshans.github.io/categories/node/</loc>
     <lastmod>2019-12-01T14:55:32+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/system-nspwan/</loc>
+    <loc>https://bigshans.github.io/tags/system-nspwan/</loc>
     <lastmod>2019-11-24T23:23:03+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/systemd/</loc>
+    <loc>https://bigshans.github.io/tags/systemd/</loc>
     <lastmod>2019-11-24T23:23:03+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/linux-systemdnspawn/</loc>
+    <loc>https://bigshans.github.io/post/linux-systemdnspawn/</loc>
     <lastmod>2019-11-24T23:23:03+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/backup/</loc>
+    <loc>https://bigshans.github.io/tags/backup/</loc>
     <lastmod>2019-11-17T22:13:03+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/linux-backup/</loc>
+    <loc>https://bigshans.github.io/post/linux-backup/</loc>
     <lastmod>2019-11-17T22:13:03+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/docker/</loc>
+    <loc>https://bigshans.github.io/tags/docker/</loc>
     <lastmod>2019-11-10T20:35:36+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/emacs/</loc>
+    <loc>https://bigshans.github.io/tags/emacs/</loc>
     <lastmod>2019-11-10T20:35:36+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/emacs/</loc>
+    <loc>https://bigshans.github.io/categories/emacs/</loc>
     <lastmod>2019-11-10T20:35:36+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/docker-emacs/</loc>
+    <loc>https://bigshans.github.io/post/docker-emacs/</loc>
     <lastmod>2019-11-10T20:35:36+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/infinality-font/</loc>
+    <loc>https://bigshans.github.io/post/infinality-font/</loc>
     <lastmod>2019-11-03T10:23:43+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/emacs-hacking/</loc>
+    <loc>https://bigshans.github.io/post/emacs-hacking/</loc>
     <lastmod>2019-10-31T19:16:23+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/websocket/</loc>
+    <loc>https://bigshans.github.io/tags/websocket/</loc>
     <lastmod>2019-10-27T23:11:07+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/websocket/</loc>
+    <loc>https://bigshans.github.io/post/websocket/</loc>
     <lastmod>2019-10-27T23:11:07+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/javascript/</loc>
+    <loc>https://bigshans.github.io/tags/javascript/</loc>
     <lastmod>2019-10-20T10:11:38+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/javascript/</loc>
+    <loc>https://bigshans.github.io/categories/javascript/</loc>
     <lastmod>2019-10-20T10:11:38+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/</loc>
+    <loc>https://bigshans.github.io/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/</loc>
     <lastmod>2019-10-20T10:11:38+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/hashmap/</loc>
+    <loc>https://bigshans.github.io/tags/hashmap/</loc>
     <lastmod>2019-10-04T22:32:30+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/java/</loc>
+    <loc>https://bigshans.github.io/tags/java/</loc>
     <lastmod>2019-10-04T22:32:30+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/java/</loc>
+    <loc>https://bigshans.github.io/categories/java/</loc>
     <lastmod>2019-10-04T22:32:30+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/src-java-hashmap/</loc>
+    <loc>https://bigshans.github.io/post/src-java-hashmap/</loc>
     <lastmod>2019-10-04T22:32:30+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E8%83%A1%E6%89%AF/</loc>
+    <loc>https://bigshans.github.io/tags/%E8%83%A1%E6%89%AF/</loc>
     <lastmod>2019-07-04T19:00:34+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E9%9A%8F%E7%AC%94-readingback/</loc>
+    <loc>https://bigshans.github.io/post/%E9%9A%8F%E7%AC%94-readingback/</loc>
     <lastmod>2019-07-04T19:00:34+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/nodejs-express-1/</loc>
+    <loc>https://bigshans.github.io/post/nodejs-express-1/</loc>
     <lastmod>2019-06-27T13:48:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/debian/</loc>
+    <loc>https://bigshans.github.io/tags/debian/</loc>
     <lastmod>2019-06-26T11:24:44+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/ppa/</loc>
+    <loc>https://bigshans.github.io/tags/ppa/</loc>
     <lastmod>2019-06-26T11:24:44+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/linux-ppa-add/</loc>
+    <loc>https://bigshans.github.io/post/linux-ppa-add/</loc>
     <lastmod>2019-06-26T11:24:44+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/algorithm/</loc>
+    <loc>https://bigshans.github.io/tags/algorithm/</loc>
     <lastmod>2019-03-22T20:40:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/algorithm/</loc>
+    <loc>https://bigshans.github.io/categories/algorithm/</loc>
     <lastmod>2019-03-22T20:40:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/dp/</loc>
+    <loc>https://bigshans.github.io/tags/dp/</loc>
     <lastmod>2019-03-22T20:40:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/lis/</loc>
+    <loc>https://bigshans.github.io/tags/lis/</loc>
     <lastmod>2019-03-22T20:40:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/algorithm-lic/</loc>
+    <loc>https://bigshans.github.io/post/algorithm-lic/</loc>
     <lastmod>2019-03-22T20:40:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/rmq/</loc>
+    <loc>https://bigshans.github.io/tags/rmq/</loc>
     <lastmod>2019-03-22T19:37:15+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/algorithm-rmq-segdp/</loc>
+    <loc>https://bigshans.github.io/post/algorithm-rmq-segdp/</loc>
     <lastmod>2019-03-22T19:37:15+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/algorithm-segtree/</loc>
+    <loc>https://bigshans.github.io/post/algorithm-segtree/</loc>
     <lastmod>2019-03-08T20:50:55+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/fcitx/</loc>
+    <loc>https://bigshans.github.io/tags/fcitx/</loc>
     <lastmod>2019-01-31T11:27:53+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/rime/</loc>
+    <loc>https://bigshans.github.io/tags/rime/</loc>
     <lastmod>2019-01-31T11:27:53+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/vim/</loc>
+    <loc>https://bigshans.github.io/tags/vim/</loc>
     <lastmod>2019-01-31T11:27:53+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/vim/</loc>
+    <loc>https://bigshans.github.io/categories/vim/</loc>
     <lastmod>2019-01-31T11:27:53+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/vim-rime/</loc>
+    <loc>https://bigshans.github.io/post/vim-rime/</loc>
     <lastmod>2019-01-31T11:27:53+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
+    <loc>https://bigshans.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
     <lastmod>2019-01-31T11:27:53+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/vimscript/</loc>
+    <loc>https://bigshans.github.io/tags/vimscript/</loc>
     <lastmod>2019-01-17T21:37:36+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/vimscript-windowscmd/</loc>
+    <loc>https://bigshans.github.io/post/vimscript-windowscmd/</loc>
     <lastmod>2019-01-17T21:37:36+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/spring/</loc>
+    <loc>https://bigshans.github.io/tags/spring/</loc>
     <lastmod>2018-12-27T21:06:32+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/spring-tutorial/</loc>
+    <loc>https://bigshans.github.io/post/spring-tutorial/</loc>
     <lastmod>2018-12-27T21:06:32+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/latex/</loc>
+    <loc>https://bigshans.github.io/tags/latex/</loc>
     <lastmod>2018-12-26T15:46:18+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/latex/</loc>
+    <loc>https://bigshans.github.io/categories/latex/</loc>
     <lastmod>2018-12-26T15:46:18+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/latex/</loc>
+    <loc>https://bigshans.github.io/post/latex/</loc>
     <lastmod>2018-12-26T15:46:18+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/org-mode/</loc>
+    <loc>https://bigshans.github.io/tags/org-mode/</loc>
     <lastmod>2018-12-26T14:46:48+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/emacs-org-mode/</loc>
+    <loc>https://bigshans.github.io/post/emacs-org-mode/</loc>
     <lastmod>2018-12-26T14:46:48+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/flask/</loc>
+    <loc>https://bigshans.github.io/tags/flask/</loc>
     <lastmod>2018-12-07T20:47:45+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/python-flask-flaskr-2/</loc>
+    <loc>https://bigshans.github.io/post/python-flask-flaskr-2/</loc>
     <lastmod>2018-12-07T20:47:45+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/python/</loc>
+    <loc>https://bigshans.github.io/tags/python/</loc>
     <lastmod>2018-12-07T20:47:45+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/python/</loc>
+    <loc>https://bigshans.github.io/categories/python/</loc>
     <lastmod>2018-12-07T20:47:45+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/python-flask-flaskr/</loc>
+    <loc>https://bigshans.github.io/post/python-flask-flaskr/</loc>
     <lastmod>2018-12-06T20:31:55+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/hibernate/</loc>
+    <loc>https://bigshans.github.io/tags/hibernate/</loc>
     <lastmod>2018-12-02T13:12:22+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/java-hibernate-struts/</loc>
+    <loc>https://bigshans.github.io/post/java-hibernate-struts/</loc>
     <lastmod>2018-12-02T13:12:22+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/struts/</loc>
+    <loc>https://bigshans.github.io/tags/struts/</loc>
     <lastmod>2018-12-02T13:12:22+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/ssr/</loc>
+    <loc>https://bigshans.github.io/tags/ssr/</loc>
     <lastmod>2018-11-28T15:03:05+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/ssr-install/</loc>
+    <loc>https://bigshans.github.io/post/ssr-install/</loc>
     <lastmod>2018-11-28T15:03:05+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E7%BF%BB%E5%A2%99/</loc>
+    <loc>https://bigshans.github.io/tags/%E7%BF%BB%E5%A2%99/</loc>
     <lastmod>2018-11-28T15:03:05+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/%E7%BF%BB%E5%A2%99/</loc>
+    <loc>https://bigshans.github.io/categories/%E7%BF%BB%E5%A2%99/</loc>
     <lastmod>2018-11-28T15:03:05+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/idea/</loc>
+    <loc>https://bigshans.github.io/tags/idea/</loc>
     <lastmod>2018-10-28T21:16:08+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/java-idea-maven/</loc>
+    <loc>https://bigshans.github.io/post/java-idea-maven/</loc>
     <lastmod>2018-10-28T21:16:08+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/maven/</loc>
+    <loc>https://bigshans.github.io/tags/maven/</loc>
     <lastmod>2018-10-28T21:16:08+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/python-import/</loc>
+    <loc>https://bigshans.github.io/post/python-import/</loc>
     <lastmod>2018-10-26T21:15:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/base64/</loc>
+    <loc>https://bigshans.github.io/tags/base64/</loc>
     <lastmod>2018-10-17T17:23:44+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/python-base64/</loc>
+    <loc>https://bigshans.github.io/post/python-base64/</loc>
     <lastmod>2018-10-17T17:23:44+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/openssl/</loc>
+    <loc>https://bigshans.github.io/tags/openssl/</loc>
     <lastmod>2018-10-13T12:32:10+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/openssl/</loc>
+    <loc>https://bigshans.github.io/categories/openssl/</loc>
     <lastmod>2018-10-13T12:32:10+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/nginx-openssl/</loc>
+    <loc>https://bigshans.github.io/post/nginx-openssl/</loc>
     <lastmod>2018-10-13T12:32:10+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/nginx/</loc>
+    <loc>https://bigshans.github.io/categories/nginx/</loc>
     <lastmod>2018-10-12T19:02:22+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/nginx-pixiv-2/</loc>
+    <loc>https://bigshans.github.io/post/nginx-pixiv-2/</loc>
     <lastmod>2018-10-12T19:02:22+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/js-dom-watch/</loc>
+    <loc>https://bigshans.github.io/post/js-dom-watch/</loc>
     <lastmod>2018-10-07T15:53:19+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/tampermonkey/</loc>
+    <loc>https://bigshans.github.io/tags/tampermonkey/</loc>
     <lastmod>2018-10-05T13:35:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/js-tampermonkey-user-script/</loc>
+    <loc>https://bigshans.github.io/post/js-tampermonkey-user-script/</loc>
     <lastmod>2018-10-05T13:35:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/hosts/</loc>
+    <loc>https://bigshans.github.io/tags/hosts/</loc>
     <lastmod>2018-09-24T15:40:34+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/nginx-pixiv/</loc>
+    <loc>https://bigshans.github.io/post/nginx-pixiv/</loc>
     <lastmod>2018-09-24T15:40:34+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/linux-deb-package/</loc>
+    <loc>https://bigshans.github.io/post/linux-deb-package/</loc>
     <lastmod>2018-09-09T19:18:52+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/software/</loc>
+    <loc>https://bigshans.github.io/tags/software/</loc>
     <lastmod>2018-09-09T19:18:52+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/bumbeeble/</loc>
+    <loc>https://bigshans.github.io/tags/bumbeeble/</loc>
     <lastmod>2018-09-08T09:22:39+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/nvidia/</loc>
+    <loc>https://bigshans.github.io/tags/nvidia/</loc>
     <lastmod>2018-09-08T09:22:39+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/linux-nvidia-bumblebee/</loc>
+    <loc>https://bigshans.github.io/post/linux-nvidia-bumblebee/</loc>
     <lastmod>2018-09-08T09:22:39+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/struts-2/</loc>
+    <loc>https://bigshans.github.io/tags/struts-2/</loc>
     <lastmod>2018-09-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/java-struts-idea/</loc>
+    <loc>https://bigshans.github.io/post/java-struts-idea/</loc>
     <lastmod>2018-09-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/linux-hostname/</loc>
+    <loc>https://bigshans.github.io/post/linux-hostname/</loc>
     <lastmod>2018-09-05T18:11:35+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/graph-easy/</loc>
+    <loc>https://bigshans.github.io/tags/graph-easy/</loc>
     <lastmod>2018-09-03T17:34:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/perl/</loc>
+    <loc>https://bigshans.github.io/tags/perl/</loc>
     <lastmod>2018-09-03T17:34:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/software/</loc>
+    <loc>https://bigshans.github.io/categories/software/</loc>
     <lastmod>2018-09-03T17:34:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/software-graph-easy/</loc>
+    <loc>https://bigshans.github.io/post/software-graph-easy/</loc>
     <lastmod>2018-09-03T17:34:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/software-deepin-wine/</loc>
+    <loc>https://bigshans.github.io/post/software-deepin-wine/</loc>
     <lastmod>2018-09-02T19:21:21+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/vim-learn-textobject/</loc>
+    <loc>https://bigshans.github.io/post/vim-learn-textobject/</loc>
     <lastmod>2018-08-30T20:43:19+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/python-bilibili-cover/</loc>
+    <loc>https://bigshans.github.io/post/python-bilibili-cover/</loc>
     <lastmod>2018-08-29T17:01:17+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E7%88%AC%E8%99%AB/</loc>
+    <loc>https://bigshans.github.io/tags/%E7%88%AC%E8%99%AB/</loc>
     <lastmod>2018-08-29T17:01:17+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/neteasecloudmusic/</loc>
+    <loc>https://bigshans.github.io/tags/neteasecloudmusic/</loc>
     <lastmod>2018-08-29T16:42:55+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/shell/</loc>
+    <loc>https://bigshans.github.io/tags/shell/</loc>
     <lastmod>2018-08-29T16:42:55+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/software-netease-linux/</loc>
+    <loc>https://bigshans.github.io/post/software-netease-linux/</loc>
     <lastmod>2018-08-29T16:42:55+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/lambda/</loc>
+    <loc>https://bigshans.github.io/tags/lambda/</loc>
     <lastmod>2018-08-28T16:30:17+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/python-learn/</loc>
+    <loc>https://bigshans.github.io/post/python-learn/</loc>
     <lastmod>2018-08-28T16:30:17+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/python-bak-1/</loc>
+    <loc>https://bigshans.github.io/post/python-bak-1/</loc>
     <lastmod>2018-08-27T18:17:48+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/net-cloud-music/</loc>
+    <loc>https://bigshans.github.io/categories/net-cloud-music/</loc>
     <lastmod>2018-08-27T17:53:56+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/net-musicvue-problem-set2/</loc>
+    <loc>https://bigshans.github.io/post/net-musicvue-problem-set2/</loc>
     <lastmod>2018-08-27T17:53:56+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/es6/</loc>
+    <loc>https://bigshans.github.io/tags/es6/</loc>
     <lastmod>2018-08-26T20:29:41+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/nodejs-es6-import/</loc>
+    <loc>https://bigshans.github.io/post/nodejs-es6-import/</loc>
     <lastmod>2018-08-26T20:29:41+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/dde/</loc>
+    <loc>https://bigshans.github.io/tags/dde/</loc>
     <lastmod>2018-08-26T17:34:37+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/gnome/</loc>
+    <loc>https://bigshans.github.io/tags/gnome/</loc>
     <lastmod>2018-08-26T17:34:37+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/kde/</loc>
+    <loc>https://bigshans.github.io/tags/kde/</loc>
     <lastmod>2018-08-26T17:34:37+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/linux-desktop/</loc>
+    <loc>https://bigshans.github.io/tags/linux-desktop/</loc>
     <lastmod>2018-08-26T17:34:37+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/linux-desktop/</loc>
+    <loc>https://bigshans.github.io/post/linux-desktop/</loc>
     <lastmod>2018-08-26T17:34:37+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/electron/</loc>
+    <loc>https://bigshans.github.io/tags/electron/</loc>
     <lastmod>2018-08-26T12:41:45+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/netcloud-music/</loc>
+    <loc>https://bigshans.github.io/categories/netcloud-music/</loc>
     <lastmod>2018-08-26T12:41:45+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/vue/</loc>
+    <loc>https://bigshans.github.io/tags/vue/</loc>
     <lastmod>2018-08-26T12:41:45+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/net-musicvue-problem-set1/</loc>
+    <loc>https://bigshans.github.io/post/net-musicvue-problem-set1/</loc>
     <lastmod>2018-08-26T12:41:45+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E5%85%B3%E4%BA%8E%E6%9A%91%E5%81%87%E7%9A%84%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8E%E6%9A%91%E5%81%87%E7%9A%84%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2018-08-25T14:17:10+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/firstblog/</loc>
+    <loc>https://bigshans.github.io/post/firstblog/</loc>
     <lastmod>2018-08-25T13:05:09+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://bigshans.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2018-08-25T13:05:09+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/hello-world/</loc>
+    <loc>https://bigshans.github.io/post/hello-world/</loc>
     <lastmod>2018-08-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%87%E4%BB%B6/</loc>
+    <loc>https://bigshans.github.io/categories/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%87%E4%BB%B6/</loc>
     <lastmod>2018-08-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gnome on Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/tags/gnome/</link>
+    <link>https://bigshans.github.io/tags/gnome/</link>
     <description>Recent content in gnome on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 26 Aug 2018 17:34:37 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/gnome/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Aug 2018 17:34:37 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/gnome/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>linux 桌面简单体验（一） ———— 关于 linux desktop 使用的总结</title>
-      <link>http://localhost:1313/post/linux-desktop/</link>
+      <link>https://bigshans.github.io/post/linux-desktop/</link>
       <pubDate>Sun, 26 Aug 2018 17:34:37 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/linux-desktop/</guid>
+      <guid>https://bigshans.github.io/post/linux-desktop/</guid>
       <description>&lt;p&gt;一直想写一个个人关于 linux desktop 的文章，算是个人在 linux 桌面上体验的总结。主要是 gnome 3 、 DDE 、KDE 、 i3wm 、 xfce4 、 cinnamon 等。陆续会写一下我在这些桌面上体验的一些总结，希望内给予你们一些帮助。&lt;/p&gt;</description>
     </item>
     

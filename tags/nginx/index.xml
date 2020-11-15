@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nginx on Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/tags/nginx/</link>
+    <link>https://bigshans.github.io/tags/nginx/</link>
     <description>Recent content in nginx on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Nov 2020 18:30:45 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2020 18:30:45 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何使用 Webhook 来实现自动部署项目</title>
-      <link>http://localhost:1313/post/how-to-use-webhook-to-deploy-project/</link>
+      <link>https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/</link>
       <pubDate>Sun, 15 Nov 2020 18:30:45 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/how-to-use-webhook-to-deploy-project/</guid>
+      <guid>https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/</guid>
       <description>自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。 在上家公司我也体验过自</description>
     </item>
     
     <item>
       <title>使用 OpenSSL 自建 CA</title>
-      <link>http://localhost:1313/post/nginx-openssl/</link>
+      <link>https://bigshans.github.io/post/nginx-openssl/</link>
       <pubDate>Sat, 13 Oct 2018 12:32:10 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/nginx-openssl/</guid>
+      <guid>https://bigshans.github.io/post/nginx-openssl/</guid>
       <description>&lt;p&gt;谷歌上找了半天终于找到了，https://www.cnblogs.com/luo630/p/9534734.html 。&lt;/p&gt;
 &lt;p&gt;当然自己动手就有点不太一样了。这个主要是为了将 pixiv nginx 的 ca 证书进行替换，不依赖于他人，也防止其他的各种问题。&lt;/p&gt;
 &lt;p&gt;下面是一些步骤总结：&lt;/p&gt;</description>
@@ -29,19 +29,19 @@
     
     <item>
       <title>nginx 反向代理上 Pixiv（二）</title>
-      <link>http://localhost:1313/post/nginx-pixiv-2/</link>
+      <link>https://bigshans.github.io/post/nginx-pixiv-2/</link>
       <pubDate>Fri, 12 Oct 2018 19:02:22 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/nginx-pixiv-2/</guid>
+      <guid>https://bigshans.github.io/post/nginx-pixiv-2/</guid>
       <description>&lt;p&gt;这篇文章我发在 B 站了，地址是 &lt;a href=&#34;https://www.bilibili.com/read/cv1317348&#34;&gt;https://www.bilibili.com/read/cv1317348&lt;/a&gt; 。当然，这里我要讲细一点。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>nginx 反向代理上 Pixiv</title>
-      <link>http://localhost:1313/post/nginx-pixiv/</link>
+      <link>https://bigshans.github.io/post/nginx-pixiv/</link>
       <pubDate>Mon, 24 Sep 2018 15:40:34 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/nginx-pixiv/</guid>
+      <guid>https://bigshans.github.io/post/nginx-pixiv/</guid>
       <description>&lt;p&gt;Pixiv 被墙了，上不了。我上了 Pixiv 的贴吧，刚好发现有人发帖说如何再上 P 站（ &lt;a href=&#34;https://tieba.baidu.com/p/5882385726&#34;&gt;https://tieba.baidu.com/p/5882385726&lt;/a&gt; ） 。使用 nginx 做反向代理，看着比较简单，于是自己试了试，由于 nginx 自己不太熟，所以是尽量完成。&lt;/p&gt;</description>
     </item>
     

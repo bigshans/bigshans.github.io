@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>graph-easy on Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/tags/graph-easy/</link>
+    <link>https://bigshans.github.io/tags/graph-easy/</link>
     <description>Recent content in graph-easy on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 03 Sep 2018 17:34:16 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/graph-easy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Sep 2018 17:34:16 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/graph-easy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>安装 graph-easy</title>
-      <link>http://localhost:1313/post/software-graph-easy/</link>
+      <link>https://bigshans.github.io/post/software-graph-easy/</link>
       <pubDate>Mon, 03 Sep 2018 17:34:16 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/software-graph-easy/</guid>
+      <guid>https://bigshans.github.io/post/software-graph-easy/</guid>
       <description>&lt;p&gt;推荐一个软件， graph-easy  。如果你查看文档的话，经常能看到一些 ascii 码流程画，个人觉得非常酷，于是去查找了一下，发现了这个软件。下面我将做一些简单的介绍。&lt;/p&gt;</description>
     </item>
     

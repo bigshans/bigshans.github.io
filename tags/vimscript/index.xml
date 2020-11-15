@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vimscript on Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/tags/vimscript/</link>
+    <link>https://bigshans.github.io/tags/vimscript/</link>
     <description>Recent content in vimscript on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Jan 2019 21:37:36 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/vimscript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jan 2019 21:37:36 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/vimscript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>写一个 vim 窗口跳转</title>
-      <link>http://localhost:1313/post/vimscript-windowscmd/</link>
+      <link>https://bigshans.github.io/post/vimscript-windowscmd/</link>
       <pubDate>Thu, 17 Jan 2019 21:37:36 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/vimscript-windowscmd/</guid>
+      <guid>https://bigshans.github.io/post/vimscript-windowscmd/</guid>
       <description>&lt;p&gt;spacemacs 的 which-key 可以实现 &lt;leader&gt; &lt;number&gt; 选择对应窗口，这个功能在 spacevim 上面都有，我挺喜欢的，不过不知道怎么实现的。之前我安装了 space-vim 项目的 vim-which-key 插件，根据 vim-leader-guide 改的，跟 which-key 很像，可以拿来用了。于是我这几天将我原来的 vim 配置做了一个大幅度的调整，并把这个功能给实现了。&lt;/p&gt;</description>
     </item>
     

@@ -2,117 +2,117 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/</link>
+    <link>https://bigshans.github.io/</link>
     <description>Recent content on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Nov 2020 18:30:45 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2020 18:30:45 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何使用 Webhook 来实现自动部署项目</title>
-      <link>http://localhost:1313/post/how-to-use-webhook-to-deploy-project/</link>
+      <link>https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/</link>
       <pubDate>Sun, 15 Nov 2020 18:30:45 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/how-to-use-webhook-to-deploy-project/</guid>
+      <guid>https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/</guid>
       <description>自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。 在上家公司我也体验过自</description>
     </item>
     
     <item>
       <title>迁移到 Hugo 上</title>
-      <link>http://localhost:1313/post/move-to-hugo/</link>
+      <link>https://bigshans.github.io/post/move-to-hugo/</link>
       <pubDate>Sat, 14 Nov 2020 21:38:31 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/move-to-hugo/</guid>
+      <guid>https://bigshans.github.io/post/move-to-hugo/</guid>
       <description>好久没有写博客了。 这次我终于把 Hexo 换掉，换成 Hugo 了。其实 Hexo 有很多主题挺不错，相较之下，Hugo 很多主题我都不是很满意。不过我还是选择了 Hugo ，一是 Hexo</description>
     </item>
     
     <item>
       <title>elasticsearch 频繁更新问题</title>
-      <link>http://localhost:1313/post/elasticsearch-update/</link>
+      <link>https://bigshans.github.io/post/elasticsearch-update/</link>
       <pubDate>Tue, 07 Apr 2020 10:24:48 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/elasticsearch-update/</guid>
+      <guid>https://bigshans.github.io/post/elasticsearch-update/</guid>
       <description>&lt;p&gt;我一开始并没有发现这个问题，到后面 Debug 的时候猜想并与社区的小伙伴得到验证。&lt;/p&gt;
 &lt;p&gt;我们的问题是 elasticsearch 返回成功但是却并没有发生更新。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>elasticsearch 的简单使用</title>
-      <link>http://localhost:1313/post/elasticsearch/</link>
+      <link>https://bigshans.github.io/post/elasticsearch/</link>
       <pubDate>Mon, 30 Mar 2020 15:54:50 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/elasticsearch/</guid>
+      <guid>https://bigshans.github.io/post/elasticsearch/</guid>
       <description>&lt;p&gt;最近由于业务的增长，所以决定使用 elasticsearch 。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>rinted 做端口转发</title>
-      <link>http://localhost:1313/post/rinted/</link>
+      <link>https://bigshans.github.io/post/rinted/</link>
       <pubDate>Sat, 15 Feb 2020 12:49:19 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/rinted/</guid>
+      <guid>https://bigshans.github.io/post/rinted/</guid>
       <description>&lt;p&gt;因为腾讯云的 Mongo 和 Redis 都是内网的地址，不能访问，官方说内网进行内网转发就行，于是就用 rinted 做了一个内网转发。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>写个简单的 QOS</title>
-      <link>http://localhost:1313/post/qosnodejs/</link>
+      <link>https://bigshans.github.io/post/qosnodejs/</link>
       <pubDate>Mon, 27 Jan 2020 21:58:14 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/qosnodejs/</guid>
+      <guid>https://bigshans.github.io/post/qosnodejs/</guid>
       <description>&lt;p&gt;最近客户端发生了 bug ，导致我们的服务被疯狂请求， QPS 高达 1000 ！数据压力很大，tjt 让我写个 qos ，就是限制接口访问次数，我粗略写了个，还可以。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>解决 mysql 进程无法启动的问题</title>
-      <link>http://localhost:1313/post/mysqlfix/</link>
+      <link>https://bigshans.github.io/post/mysqlfix/</link>
       <pubDate>Sat, 18 Jan 2020 18:05:52 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/mysqlfix/</guid>
+      <guid>https://bigshans.github.io/post/mysqlfix/</guid>
       <description>&lt;p&gt;最近想写一点小东西，就发现自己电脑上的 mysql 出了点问题，解决之后做个小记录。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>2019总结</title>
-      <link>http://localhost:1313/post/2019%E6%80%BB%E7%BB%93/</link>
+      <link>https://bigshans.github.io/post/2019%E6%80%BB%E7%BB%93/</link>
       <pubDate>Tue, 31 Dec 2019 22:06:34 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2019%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://bigshans.github.io/post/2019%E6%80%BB%E7%BB%93/</guid>
       <description>&lt;p&gt;在 2019 年的最后一天写这一年最后一篇博文。这一年说实话，过得并不好，东北赛没有拿到奖，工作又找的不顺利，去医院诊断了双相情感障碍。工作越做越没有信心，越做越没有热情，感觉难以为继。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>css绘制三角形</title>
-      <link>http://localhost:1313/post/css%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/</link>
+      <link>https://bigshans.github.io/post/css%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/</link>
       <pubDate>Sun, 22 Dec 2019 21:21:47 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/css%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/</guid>
+      <guid>https://bigshans.github.io/post/css%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/</guid>
       <description>&lt;p&gt;最近写前端要一个下拉箭头，所以选择用 css 画一个三角形来用，话不多说，看代码：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>服务器故障日志</title>
-      <link>http://localhost:1313/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97/</link>
+      <link>https://bigshans.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97/</link>
       <pubDate>Sun, 15 Dec 2019 21:12:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97/</guid>
+      <guid>https://bigshans.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97/</guid>
       <description>&lt;p&gt;小公司的后端有时候就不得不兼任多职，既是后端又是运维。现在又差不多是全栈了，这样下去说不定会怎么样呢！说回正题，这回我负责的客服系统出了故障，虽然对用户影响不大，但对客服影响很大（亲爱的客服小姐姐，对不起），客服无法正常工作了。全靠 CTO 调试数据库发现问题所在。虽然在公司的 wiki 上小记一笔，但公司上写得还是严肃许多的。这里我就说话随意多了。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>angular 虚拟滚动的一些坑</title>
-      <link>http://localhost:1313/post/angular-virtual-scroll/</link>
+      <link>https://bigshans.github.io/post/angular-virtual-scroll/</link>
       <pubDate>Sun, 08 Dec 2019 20:23:42 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/angular-virtual-scroll/</guid>
+      <guid>https://bigshans.github.io/post/angular-virtual-scroll/</guid>
       <description>&lt;p&gt;最近被赶过去写前端了。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Express 源码阅读（一）</title>
-      <link>http://localhost:1313/post/node-express-source-read/</link>
+      <link>https://bigshans.github.io/post/node-express-source-read/</link>
       <pubDate>Sun, 01 Dec 2019 14:55:32 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/node-express-source-read/</guid>
+      <guid>https://bigshans.github.io/post/node-express-source-read/</guid>
       <description>&lt;p&gt;我们写一个简单的程序。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const express = require(&#39;express&#39;);
 const app = express();
@@ -128,76 +128,76 @@ app.listen(3000, () =&amp;gt; console.log(&#39;Connected!&#39;));
     
     <item>
       <title>systemd-nspawn 的简单使用</title>
-      <link>http://localhost:1313/post/linux-systemdnspawn/</link>
+      <link>https://bigshans.github.io/post/linux-systemdnspawn/</link>
       <pubDate>Sun, 24 Nov 2019 23:23:03 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/linux-systemdnspawn/</guid>
+      <guid>https://bigshans.github.io/post/linux-systemdnspawn/</guid>
       <description>&lt;p&gt;systemd-nspawn 是 docker 与一样的 container 应用，只不过 docker 相比，跟类似于 chroot 。个人还是比较喜欢 chroot 这样的，这样有种子系统的感觉，与 docker 的 container 相比， chroot 下的操作是会被保留下来的， docker 和 chroot 还是两种不同情况，不可同语。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在 linux 下备份系统</title>
-      <link>http://localhost:1313/post/linux-backup/</link>
+      <link>https://bigshans.github.io/post/linux-backup/</link>
       <pubDate>Sun, 17 Nov 2019 22:13:03 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/linux-backup/</guid>
+      <guid>https://bigshans.github.io/post/linux-backup/</guid>
       <description>&lt;p&gt;新买的移动硬盘到了，着手做新的启动盘。在硬盘上分了一个 G ，然后用 Deepin 的启动盘制作工具做了一个启动盘。然后重启，启动 Deepin live cd ，然后还备份还是失败了。没办法，只能另寻他路。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>玩玩 docker emacs</title>
-      <link>http://localhost:1313/post/docker-emacs/</link>
+      <link>https://bigshans.github.io/post/docker-emacs/</link>
       <pubDate>Sun, 10 Nov 2019 20:35:36 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/docker-emacs/</guid>
+      <guid>https://bigshans.github.io/post/docker-emacs/</guid>
       <description>&lt;p&gt;最近倒腾公司电脑，结果装不上 emacs 26，我的很多配置无法启用，在这里我要批评一下 deepin 。我真的是很少有听过降系统升级的。 deepin 还在 Debian stretch 上，如今 Debian 都上 buster 了。 deepin 为了稳定系统搞这个我觉得真是不行，至少软件也要新的嘛！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>infinality font 字体渲染安装</title>
-      <link>http://localhost:1313/post/infinality-font/</link>
+      <link>https://bigshans.github.io/post/infinality-font/</link>
       <pubDate>Sun, 03 Nov 2019 10:23:43 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/infinality-font/</guid>
+      <guid>https://bigshans.github.io/post/infinality-font/</guid>
       <description>&lt;p&gt;最近在工作电脑上安装了 deepin ，发现字体渲染很糟糕，于是在想起了 infinality 补丁，由于我个人电脑上是 manjaro ， arch 源里就有该包，所以我查找一下，发现 Debian 系的也有打包，成功安装之后，特此记录一下。&lt;/p&gt;
 &lt;p&gt;原文链接：&lt;a href=&#34;https://www.linuxdashen.com/debian8%E5%AE%89%E8%A3%85infinality%E6%94%B9%E5%96%84%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%EF%BC%8C%E5%AE%89%E8%A3%85ubuntu%E5%AD%97%E4%BD%93&#34;&gt;https://www.linuxdashen.com/debian8安装infinality改善字体渲染，安装ubuntu字体&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>happy hacking emacs</title>
-      <link>http://localhost:1313/post/emacs-hacking/</link>
+      <link>https://bigshans.github.io/post/emacs-hacking/</link>
       <pubDate>Thu, 31 Oct 2019 19:16:23 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/emacs-hacking/</guid>
+      <guid>https://bigshans.github.io/post/emacs-hacking/</guid>
       <description>&lt;p&gt;最近在折腾 emacs ，不得不说这个曲线真的是非常陡峭啊！但有些有趣的东西的确让人欲罢不能。今天就在这里跟大家分享一下折腾过程中出现的问题，希望能能给大家带来一点帮助。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>长连接与 Websocket</title>
-      <link>http://localhost:1313/post/websocket/</link>
+      <link>https://bigshans.github.io/post/websocket/</link>
       <pubDate>Sun, 27 Oct 2019 23:11:07 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/websocket/</guid>
+      <guid>https://bigshans.github.io/post/websocket/</guid>
       <description>&lt;p&gt;公司想要做一个聊天系统，原本打算上 Websocket ，我例程都写了，老板又不想弄长连接了，认为短连接就符合需求了，无奈。&lt;/p&gt;
 &lt;p&gt;Websocket 还是值得说一说的，我们是使用 node 开发的。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>分布式锁的简单实现</title>
-      <link>http://localhost:1313/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/</link>
+      <link>https://bigshans.github.io/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/</link>
       <pubDate>Sun, 20 Oct 2019 10:11:38 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/</guid>
+      <guid>https://bigshans.github.io/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/</guid>
       <description>&lt;p&gt;打算每周写一篇博客，希望每周都能有新的收获。本周写的博客是我在工作中应用写的一个有趣的东西。
 我们采用 pm2 进行进程管理，我们开启了多个进程，但各个进程之间并没有交流，所以，我想要全局操作某个变量时，就会出现数据安全问题，虽然在 redis 里面单个操作是原子，但我也要保证复合操作也是原子的。但我并不使用 redis 的事务，是因为这个事务会阻塞其他操作，所以，不如在应用层上实现锁，从而不阻塞 redis 。我们虽然不是分布式系统，但是是分布式进程，所以实现也参考分布式锁。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Java 源码阅读之 HashMap</title>
-      <link>http://localhost:1313/post/src-java-hashmap/</link>
+      <link>https://bigshans.github.io/post/src-java-hashmap/</link>
       <pubDate>Fri, 04 Oct 2019 22:32:30 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/src-java-hashmap/</guid>
+      <guid>https://bigshans.github.io/post/src-java-hashmap/</guid>
       <description>&lt;p&gt;对以下一段代码进行 Debug，阅读建议边 Debug 边看。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;import java.util.HashMap;
 
@@ -213,173 +213,173 @@ public class Collec {
     
     <item>
       <title>读书的退步</title>
-      <link>http://localhost:1313/post/%E9%9A%8F%E7%AC%94-readingback/</link>
+      <link>https://bigshans.github.io/post/%E9%9A%8F%E7%AC%94-readingback/</link>
       <pubDate>Thu, 04 Jul 2019 19:00:34 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/%E9%9A%8F%E7%AC%94-readingback/</guid>
+      <guid>https://bigshans.github.io/post/%E9%9A%8F%E7%AC%94-readingback/</guid>
       <description>&lt;p&gt;我自高中以后便没有写过什么作文了，一来是没有什么闲心，二来是没有什么动力。同样的情况，我从高三开始便没有再读书了，就是那些闲书，以前我最爱看的，什么小说啊，社科啊，哲学之类的。在我高三开始，为了省下复习的时间，于是便戒了书瘾。结果是，书瘾戒了，学习却没有好，高中时候花了大量时间去读闲书，到头来却是得到了最差的结果。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Express 学习(一)</title>
-      <link>http://localhost:1313/post/nodejs-express-1/</link>
+      <link>https://bigshans.github.io/post/nodejs-express-1/</link>
       <pubDate>Thu, 27 Jun 2019 13:48:27 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/nodejs-express-1/</guid>
+      <guid>https://bigshans.github.io/post/nodejs-express-1/</guid>
       <description>&lt;p&gt;公司后端采用了 nodejs + express 环境，最近在看，现在记录一点笔记。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在 Debian 下使用 PPA</title>
-      <link>http://localhost:1313/post/linux-ppa-add/</link>
+      <link>https://bigshans.github.io/post/linux-ppa-add/</link>
       <pubDate>Wed, 26 Jun 2019 11:24:44 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/linux-ppa-add/</guid>
+      <guid>https://bigshans.github.io/post/linux-ppa-add/</guid>
       <description>&lt;p&gt;仅仅使用 Debian 源里的软件包并不是很够，所以不可避免的，我们会使用一些第三方的软件源，比如 Arch 下的 aur ， Ubuntu 的 PPA ，等等。由于 Ubuntu 是 Debian 系的发行版，两者的包管理是相通的，所以我们可以借用一下 Ubuntu 的 PPA 来扩充我们的软件库。然而，两者毕竟不是同一发行版，所以还是会有很多的差别，我们并不能保证两者的软件包一定能通用，毕竟打包并不是针对 Debian 的，不过， Ubuntu 能用的， Debian 基本能用，所以，把 Ubuntu 的 ppa 拉过来还是很有意义的。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>最长上升子序列模板</title>
-      <link>http://localhost:1313/post/algorithm-lic/</link>
+      <link>https://bigshans.github.io/post/algorithm-lic/</link>
       <pubDate>Fri, 22 Mar 2019 20:40:40 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/algorithm-lic/</guid>
+      <guid>https://bigshans.github.io/post/algorithm-lic/</guid>
       <description>&lt;p&gt;最长上升子序列模板。以 poj 3903 为例。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>动态规划求解 RMQ 问题</title>
-      <link>http://localhost:1313/post/algorithm-rmq-segdp/</link>
+      <link>https://bigshans.github.io/post/algorithm-rmq-segdp/</link>
       <pubDate>Fri, 22 Mar 2019 19:37:15 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/algorithm-rmq-segdp/</guid>
+      <guid>https://bigshans.github.io/post/algorithm-rmq-segdp/</guid>
       <description>&lt;p&gt;rmq 即是区间最值问题，这里是动态规划模板的讲解。所谓 dp 的方法，就是区间 dp 的方法，如果采用原始的区间 dp 方法，那么当数据量很大时会出现时间和空间的双重爆破。这里我们采用了倍增法。我们通过这个模板来观察这个的实现以及思想。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>线段树算法</title>
-      <link>http://localhost:1313/post/algorithm-segtree/</link>
+      <link>https://bigshans.github.io/post/algorithm-segtree/</link>
       <pubDate>Fri, 08 Mar 2019 20:50:55 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/algorithm-segtree/</guid>
+      <guid>https://bigshans.github.io/post/algorithm-segtree/</guid>
       <description>&lt;p&gt;我的 ACM 线段树模板。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在 vim 下修改自然码码表</title>
-      <link>http://localhost:1313/post/vim-rime/</link>
+      <link>https://bigshans.github.io/post/vim-rime/</link>
       <pubDate>Thu, 31 Jan 2019 11:27:53 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/vim-rime/</guid>
+      <guid>https://bigshans.github.io/post/vim-rime/</guid>
       <description>&lt;p&gt;最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添加一些字，所以我决定换用别的输入法。 fcitx-sunpinyin 可以添加用户词典，但添加新的单词的时候会严重卡顿，而且打某些字的时候也会卡顿，体验极其糟糕，所以我决定尝试一下 fcitx-rime 。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>写一个 vim 窗口跳转</title>
-      <link>http://localhost:1313/post/vimscript-windowscmd/</link>
+      <link>https://bigshans.github.io/post/vimscript-windowscmd/</link>
       <pubDate>Thu, 17 Jan 2019 21:37:36 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/vimscript-windowscmd/</guid>
+      <guid>https://bigshans.github.io/post/vimscript-windowscmd/</guid>
       <description>&lt;p&gt;spacemacs 的 which-key 可以实现 &lt;leader&gt; &lt;number&gt; 选择对应窗口，这个功能在 spacevim 上面都有，我挺喜欢的，不过不知道怎么实现的。之前我安装了 space-vim 项目的 vim-which-key 插件，根据 vim-leader-guide 改的，跟 which-key 很像，可以拿来用了。于是我这几天将我原来的 vim 配置做了一个大幅度的调整，并把这个功能给实现了。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>spring 初步（一）</title>
-      <link>http://localhost:1313/post/spring-tutorial/</link>
+      <link>https://bigshans.github.io/post/spring-tutorial/</link>
       <pubDate>Thu, 27 Dec 2018 21:06:32 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/spring-tutorial/</guid>
+      <guid>https://bigshans.github.io/post/spring-tutorial/</guid>
       <description>&lt;p&gt;今天学习了一下 spring 。现在 spring 这一个系列的框架都挺火的，不管怎样都值得了解一番。不过，虽然如此，但我在网上查找的时候，看了半天基本没有找到一个好的切入口去学习。所以这个稍微学习一下也变得很「稍微」了。在此，我在这里写下一点学习 spring 的一点总结，希望能帮到后来者吧！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>latex 部分常用公式代码</title>
-      <link>http://localhost:1313/post/latex/</link>
+      <link>https://bigshans.github.io/post/latex/</link>
       <pubDate>Wed, 26 Dec 2018 15:46:18 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/latex/</guid>
+      <guid>https://bigshans.github.io/post/latex/</guid>
       <description>&lt;p&gt;我个人很喜欢在 emacs 里用 latex 写公式，而且可以从中到处对应的 pdf ，很方便。在这里我记录一下常用的代码。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>org-mode 个人常用快捷键</title>
-      <link>http://localhost:1313/post/emacs-org-mode/</link>
+      <link>https://bigshans.github.io/post/emacs-org-mode/</link>
       <pubDate>Wed, 26 Dec 2018 14:46:48 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/emacs-org-mode/</guid>
+      <guid>https://bigshans.github.io/post/emacs-org-mode/</guid>
       <description>&lt;p&gt;最近在用 emacs 的 org-mode 来做一些笔记和 agenda ，个人觉得挺好用的。不认默认的 emacs 快捷键用 ctrl ，用了四天结果我小拇指贼疼，虽然将 ctrl 与 caps 进行交换了，但最后将 ralt 与 rctrl 进行交换，现在稍微好一点。不过我用的是 spacemacs ，用 spacemacs 的快捷键还是很好用的，也能保护好小拇指。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Flask 入门项目 Flaskr（二）</title>
-      <link>http://localhost:1313/post/python-flask-flaskr-2/</link>
+      <link>https://bigshans.github.io/post/python-flask-flaskr-2/</link>
       <pubDate>Fri, 07 Dec 2018 20:47:45 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/python-flask-flaskr-2/</guid>
+      <guid>https://bigshans.github.io/post/python-flask-flaskr-2/</guid>
       <description>&lt;p&gt;今天身体不太舒服，感冒了。不过还是照着官网大概打了一下。这个项目的主体是完成了，改天写写测试。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Flask 入门项目 Flaskr（一）</title>
-      <link>http://localhost:1313/post/python-flask-flaskr/</link>
+      <link>https://bigshans.github.io/post/python-flask-flaskr/</link>
       <pubDate>Thu, 06 Dec 2018 20:31:55 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/python-flask-flaskr/</guid>
+      <guid>https://bigshans.github.io/post/python-flask-flaskr/</guid>
       <description>&lt;p&gt;昨天看了看 flask ，感觉很有意思，于是上官网看看文档，文档的 quickly started 很精简，讲述了基本用法。在 1.0.2 的文档下有一个小项目，很适合拿来练手。于是尝试跟着写了一下。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>openjdk 11 配置 struts 2.5 &#43; hibernate 5.3 环境</title>
-      <link>http://localhost:1313/post/java-hibernate-struts/</link>
+      <link>https://bigshans.github.io/post/java-hibernate-struts/</link>
       <pubDate>Sun, 02 Dec 2018 13:12:22 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/java-hibernate-struts/</guid>
+      <guid>https://bigshans.github.io/post/java-hibernate-struts/</guid>
       <description>&lt;p&gt;从昨天开始配置这个环境配到吐血，今天终于解决了，采用 idea 默认的配置无法使用，以前的项目可以用现在新建的不行了，我也不是很懂。 struts 一直报找不到 action ，我猜可能生成的目录变了，但改来改去着实难受，我也没耐心去猜，不如重新搞一个，所以本着折腾的精神搞出来了。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在linux 上安装 ssr</title>
-      <link>http://localhost:1313/post/ssr-install/</link>
+      <link>https://bigshans.github.io/post/ssr-install/</link>
       <pubDate>Wed, 28 Nov 2018 15:03:05 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/ssr-install/</guid>
+      <guid>https://bigshans.github.io/post/ssr-install/</guid>
       <description>&lt;p&gt;一直以来我都是用谷歌访问助手来访问谷歌的，不过有时候我还想要上推特和 YouTube ，虽然不经常吧，但一旦想要翻墙的时候还是很麻烦的。翻墙的方法有很多，借住 chrome 的插件可以完成一些，但是不完全，而且我要想白嫖的，那些收费的也未必有免费的好用。不过最近我的几个插件都不好用，于是我决定再增加一些方法。我安装了 ss 来翻墙。我用的是 Debian 的社区源，里面有 ss-qt5 可以用。我从 google+ 上找到了一个 ss 的账号尝试了一下，挺快的。不过只有这样一个账号我并不放心，于是有尝试找了找各种白嫖机场。虽然机场都有但是大多是 ssr 的，于是我决定下个 ssr 装上。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>idea 一直加载 maven</title>
-      <link>http://localhost:1313/post/java-idea-maven/</link>
+      <link>https://bigshans.github.io/post/java-idea-maven/</link>
       <pubDate>Sun, 28 Oct 2018 21:16:08 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/java-idea-maven/</guid>
+      <guid>https://bigshans.github.io/post/java-idea-maven/</guid>
       <description>之前遇到过一次 idea 无法正常加载 maven ，那时 hosts 里设置有问题，将 127.0.0.1 loacalhost 加入 hosts 里就行。现在又有新的问题，于是试了试在 import 里的 VMoption 改为 1024 就行了。</description>
     </item>
     
     <item>
       <title>python3 在不同目录下 import 其他py 文件</title>
-      <link>http://localhost:1313/post/python-import/</link>
+      <link>https://bigshans.github.io/post/python-import/</link>
       <pubDate>Fri, 26 Oct 2018 21:15:40 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/python-import/</guid>
+      <guid>https://bigshans.github.io/post/python-import/</guid>
       <description>&lt;p&gt;python 的 import 机制实在是太弱。。&lt;/p&gt;
 &lt;p&gt;今天我将不同目录下的 python 文件导入，试了半天快要吐血，虽然说最后解决了，但是我还是要说真的是 shit 啊！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>python3 下使用 base64</title>
-      <link>http://localhost:1313/post/python-base64/</link>
+      <link>https://bigshans.github.io/post/python-base64/</link>
       <pubDate>Wed, 17 Oct 2018 17:23:44 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/python-base64/</guid>
+      <guid>https://bigshans.github.io/post/python-base64/</guid>
       <description>用自带库 base64 。 import base64 encode = base64.b64encode(b&#39;i love python&#39;) # 加密 print(str(encode, &#39;utf-8&#39;)) # aSBsb3ZlIHB5dGhvbg== encode = base64.b64decode(b&#39;aSBsb3ZlIHB5dGhvbg==&#39;) print(encode) #解密</description>
     </item>
     
     <item>
       <title>使用 OpenSSL 自建 CA</title>
-      <link>http://localhost:1313/post/nginx-openssl/</link>
+      <link>https://bigshans.github.io/post/nginx-openssl/</link>
       <pubDate>Sat, 13 Oct 2018 12:32:10 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/nginx-openssl/</guid>
+      <guid>https://bigshans.github.io/post/nginx-openssl/</guid>
       <description>&lt;p&gt;谷歌上找了半天终于找到了，https://www.cnblogs.com/luo630/p/9534734.html 。&lt;/p&gt;
 &lt;p&gt;当然自己动手就有点不太一样了。这个主要是为了将 pixiv nginx 的 ca 证书进行替换，不依赖于他人，也防止其他的各种问题。&lt;/p&gt;
 &lt;p&gt;下面是一些步骤总结：&lt;/p&gt;</description>
@@ -387,74 +387,74 @@ public class Collec {
     
     <item>
       <title>nginx 反向代理上 Pixiv（二）</title>
-      <link>http://localhost:1313/post/nginx-pixiv-2/</link>
+      <link>https://bigshans.github.io/post/nginx-pixiv-2/</link>
       <pubDate>Fri, 12 Oct 2018 19:02:22 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/nginx-pixiv-2/</guid>
+      <guid>https://bigshans.github.io/post/nginx-pixiv-2/</guid>
       <description>&lt;p&gt;这篇文章我发在 B 站了，地址是 &lt;a href=&#34;https://www.bilibili.com/read/cv1317348&#34;&gt;https://www.bilibili.com/read/cv1317348&lt;/a&gt; 。当然，这里我要讲细一点。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>js 实现 DOM 监视</title>
-      <link>http://localhost:1313/post/js-dom-watch/</link>
+      <link>https://bigshans.github.io/post/js-dom-watch/</link>
       <pubDate>Sun, 07 Oct 2018 15:53:19 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/js-dom-watch/</guid>
+      <guid>https://bigshans.github.io/post/js-dom-watch/</guid>
       <description>&lt;p&gt;花了点时间做了 b 站评论区地址链接化，比较麻烦的是 DOM 监视。找了很多，最后还是采用了 Muatation 来进行事件监视。&lt;/p&gt;
 &lt;p&gt;给个文档地址：http://javascript.ruanyifeng.com/dom/mutationobserver.html 。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>新写了两个油猴脚本</title>
-      <link>http://localhost:1313/post/js-tampermonkey-user-script/</link>
+      <link>https://bigshans.github.io/post/js-tampermonkey-user-script/</link>
       <pubDate>Fri, 05 Oct 2018 13:35:27 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/js-tampermonkey-user-script/</guid>
+      <guid>https://bigshans.github.io/post/js-tampermonkey-user-script/</guid>
       <description>&lt;p&gt;新写了两个油猴脚本针对 bilibili 。具体可以到我的 gist 上看，一个是针对番剧更新的，原本有一个番剧更新的脚本，但只是加了个标签而已，我又加了一些东西，方便查看，不过具体效果一般，而且番剧状态不能很好的体现，现没有找到好的 api 。另一个是针对 bilibili 动态的，动态不能点击链接很麻烦，于是简单写了脚本来实现将地址转换为链接。要点击进去才能有效，不过去除了带中文的链接。 bilibili 动态不能很好的选中也是一个问题，不过已经有脚本很好的实现了这个问题，所以我就不多写了。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>nginx 反向代理上 Pixiv</title>
-      <link>http://localhost:1313/post/nginx-pixiv/</link>
+      <link>https://bigshans.github.io/post/nginx-pixiv/</link>
       <pubDate>Mon, 24 Sep 2018 15:40:34 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/nginx-pixiv/</guid>
+      <guid>https://bigshans.github.io/post/nginx-pixiv/</guid>
       <description>&lt;p&gt;Pixiv 被墙了，上不了。我上了 Pixiv 的贴吧，刚好发现有人发帖说如何再上 P 站（ &lt;a href=&#34;https://tieba.baidu.com/p/5882385726&#34;&gt;https://tieba.baidu.com/p/5882385726&lt;/a&gt; ） 。使用 nginx 做反向代理，看着比较简单，于是自己试了试，由于 nginx 自己不太熟，所以是尽量完成。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>deb 打包指北</title>
-      <link>http://localhost:1313/post/linux-deb-package/</link>
+      <link>https://bigshans.github.io/post/linux-deb-package/</link>
       <pubDate>Sun, 09 Sep 2018 19:18:52 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/linux-deb-package/</guid>
+      <guid>https://bigshans.github.io/post/linux-deb-package/</guid>
       <description>&lt;p&gt;最近几天在给我的一些软件打包，原本打算建立一个私人仓库，不过没有云还是算了。本地打包的话貌似空间不太够，不过首先还是要学习一下 debian 的相关知识的。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在 linux 下搞定 nvidia 双显卡</title>
-      <link>http://localhost:1313/post/linux-nvidia-bumblebee/</link>
+      <link>https://bigshans.github.io/post/linux-nvidia-bumblebee/</link>
       <pubDate>Sat, 08 Sep 2018 09:22:39 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/linux-nvidia-bumblebee/</guid>
+      <guid>https://bigshans.github.io/post/linux-nvidia-bumblebee/</guid>
       <description>&lt;p&gt;终于终于把双显卡整好了，该死的 NVIDIA 。为了双显卡我的桌面崩溃了几次，不过终于整好了。下面讲讲我处理这些的一些过程。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在 idea 中布置 struts 2.5</title>
-      <link>http://localhost:1313/post/java-struts-idea/</link>
+      <link>https://bigshans.github.io/post/java-struts-idea/</link>
       <pubDate>Thu, 06 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/java-struts-idea/</guid>
+      <guid>https://bigshans.github.io/post/java-struts-idea/</guid>
       <description>&lt;p&gt;不得不说百度跟谷歌比还差的远啊。我从官网上下载 struts 的最小包，布置到 idea 上不能正常使用，百度不行上谷歌，终于解决了。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>hostname 也不要随便取</title>
-      <link>http://localhost:1313/post/linux-hostname/</link>
+      <link>https://bigshans.github.io/post/linux-hostname/</link>
       <pubDate>Wed, 05 Sep 2018 18:11:35 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/linux-hostname/</guid>
+      <guid>https://bigshans.github.io/post/linux-hostname/</guid>
       <description>&lt;p&gt;一个小问题，困扰很久了，最近解决掉了，就是不能以 root 打开任何 GUI ，打开之后不显示。
 问题在于我的 hostname 取成 localhost 了，所以打不开。。（下次不这样了）改个 hostname 就行。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hostnamectl set-hostname &amp;quot;myhostname&amp;quot;
@@ -463,86 +463,86 @@ public class Collec {
     
     <item>
       <title>安装 graph-easy</title>
-      <link>http://localhost:1313/post/software-graph-easy/</link>
+      <link>https://bigshans.github.io/post/software-graph-easy/</link>
       <pubDate>Mon, 03 Sep 2018 17:34:16 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/software-graph-easy/</guid>
+      <guid>https://bigshans.github.io/post/software-graph-easy/</guid>
       <description>&lt;p&gt;推荐一个软件， graph-easy  。如果你查看文档的话，经常能看到一些 ascii 码流程画，个人觉得非常酷，于是去查找了一下，发现了这个软件。下面我将做一些简单的介绍。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>安装 deepin-wine 到 debian 上</title>
-      <link>http://localhost:1313/post/software-deepin-wine/</link>
+      <link>https://bigshans.github.io/post/software-deepin-wine/</link>
       <pubDate>Sun, 02 Sep 2018 19:21:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/software-deepin-wine/</guid>
+      <guid>https://bigshans.github.io/post/software-deepin-wine/</guid>
       <description>&lt;p&gt;我尝试了一下 &lt;a href=&#34;https://github.com/wszqkzqk/deepin-wine-ubuntu&#34;&gt;deepin-wine-ubuntu&lt;/a&gt; 项目，不过无法正常装上。所以我自己尝试了一下安装 deepin-wine 并尝试了一下 deepin 的 QQ 和 TIM 。效果还不错。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>vim 学习笔记（一）</title>
-      <link>http://localhost:1313/post/vim-learn-textobject/</link>
+      <link>https://bigshans.github.io/post/vim-learn-textobject/</link>
       <pubDate>Thu, 30 Aug 2018 20:43:19 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/vim-learn-textobject/</guid>
+      <guid>https://bigshans.github.io/post/vim-learn-textobject/</guid>
       <description>&lt;p&gt;vim 的文本对象是个很有趣的东西，使用它可以大幅提升效率，因此学习它还是很有必要的，如果想要在 vim 上进一步提高自己就必须学习这个。&lt;/p&gt;
 &lt;h2 id=&#34;a-和-i&#34;&gt;a 和 i&lt;/h2&gt;</description>
     </item>
     
     <item>
       <title>python 爬虫获取 bilibili 封面</title>
-      <link>http://localhost:1313/post/python-bilibili-cover/</link>
+      <link>https://bigshans.github.io/post/python-bilibili-cover/</link>
       <pubDate>Wed, 29 Aug 2018 17:01:17 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/python-bilibili-cover/</guid>
+      <guid>https://bigshans.github.io/post/python-bilibili-cover/</guid>
       <description>&lt;p&gt;以前写的一个脚本，获取 B 站视频封面的脚本，使用了 urllib 来爬虫，用 feh 来打开图片。&lt;/p&gt;
 &lt;p&gt;以下是代码：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>网易云音乐 for linux 不用 root 打开</title>
-      <link>http://localhost:1313/post/software-netease-linux/</link>
+      <link>https://bigshans.github.io/post/software-netease-linux/</link>
       <pubDate>Wed, 29 Aug 2018 16:42:55 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/software-netease-linux/</guid>
+      <guid>https://bigshans.github.io/post/software-netease-linux/</guid>
       <description>&lt;p&gt;从知乎上看到这个，非常感谢 Fancy 的努力。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/277330447/answer/478510195&#34;&gt;点击此处前往&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>python 实现尾递归斐波那契数列</title>
-      <link>http://localhost:1313/post/python-learn/</link>
+      <link>https://bigshans.github.io/post/python-learn/</link>
       <pubDate>Tue, 28 Aug 2018 16:30:17 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/python-learn/</guid>
+      <guid>https://bigshans.github.io/post/python-learn/</guid>
       <description>&lt;p&gt;看了一下 &lt;a href=&#34;https://pythoncaff.com/docs/byte-of-python/2018&#34;&gt;《 Python 简明教程》&lt;/a&gt;，发现了一个很有意思的项目，它推荐了这个&lt;a href=&#34;https://github.com/karan/Projects&#34;&gt;项目&lt;/a&gt;来练手。这个项目是一份列表，关于用任何语言都可以实现的程序的项目。有兴趣可以实现一下。&lt;/p&gt;
 &lt;p&gt;我在这里写一下简单的斐波那契数列。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>python 备忘录（一）</title>
-      <link>http://localhost:1313/post/python-bak-1/</link>
+      <link>https://bigshans.github.io/post/python-bak-1/</link>
       <pubDate>Mon, 27 Aug 2018 18:17:48 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/python-bak-1/</guid>
+      <guid>https://bigshans.github.io/post/python-bak-1/</guid>
       <description>&lt;p&gt;这些篇主要是记录 python 的一些知识，有些可能很基础，不过我总是忘记，以此备忘。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>将 router 的 js 混成一个</title>
-      <link>http://localhost:1313/post/net-musicvue-problem-set2/</link>
+      <link>https://bigshans.github.io/post/net-musicvue-problem-set2/</link>
       <pubDate>Mon, 27 Aug 2018 17:53:56 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/net-musicvue-problem-set2/</guid>
+      <guid>https://bigshans.github.io/post/net-musicvue-problem-set2/</guid>
       <description>&lt;p&gt;NeteaseCloudMusicApi 得重构，首先得把 router 目录下的一大堆给归拢为一个 js 方便 exports 。然而下面有九十多个文件，所以一个个复制粘贴是不现实的，更何况未来这些文件有改动，于上游一 merge ，这代码得改得老痛苦了。所以决定自己写一个小工具解决这个问题。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>nodejs 的 import</title>
-      <link>http://localhost:1313/post/nodejs-es6-import/</link>
+      <link>https://bigshans.github.io/post/nodejs-es6-import/</link>
       <pubDate>Sun, 26 Aug 2018 20:29:41 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/nodejs-es6-import/</guid>
+      <guid>https://bigshans.github.io/post/nodejs-es6-import/</guid>
       <description>&lt;p&gt;nodejs 对 es 6 的支持目前并不完全，直接使用 import 不行，exports 也不行，可以用 babel 之类的编译， nodejs 10 可以尝试加上 flag ： &amp;ndash;experimental-modules。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;node --experimental-modules my-app.mjs
 &lt;/code&gt;&lt;/pre&gt;</description>
@@ -550,47 +550,47 @@ public class Collec {
     
     <item>
       <title>linux 桌面简单体验（一） ———— 关于 linux desktop 使用的总结</title>
-      <link>http://localhost:1313/post/linux-desktop/</link>
+      <link>https://bigshans.github.io/post/linux-desktop/</link>
       <pubDate>Sun, 26 Aug 2018 17:34:37 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/linux-desktop/</guid>
+      <guid>https://bigshans.github.io/post/linux-desktop/</guid>
       <description>&lt;p&gt;一直想写一个个人关于 linux desktop 的文章，算是个人在 linux 桌面上体验的总结。主要是 gnome 3 、 DDE 、KDE 、 i3wm 、 xfce4 、 cinnamon 等。陆续会写一下我在这些桌面上体验的一些总结，希望内给予你们一些帮助。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>webpack 的 require 和 import 相关的一点问题</title>
-      <link>http://localhost:1313/post/net-musicvue-problem-set1/</link>
+      <link>https://bigshans.github.io/post/net-musicvue-problem-set1/</link>
       <pubDate>Sun, 26 Aug 2018 12:41:45 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/net-musicvue-problem-set1/</guid>
+      <guid>https://bigshans.github.io/post/net-musicvue-problem-set1/</guid>
       <description>&lt;p&gt;今天继续用 electron-vue 写 NeteaseCloudMusic 的第三方 app， 用的 NeteaseCloudMusicApi 使用起来却很麻烦。不知道为什么之前可以正常使用，现在却不行了，摸索了好久，还是没能解决。不过还是有点收获的，接下来讲一讲。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>关于暑假的总结</title>
-      <link>http://localhost:1313/post/%E5%85%B3%E4%BA%8E%E6%9A%91%E5%81%87%E7%9A%84%E6%80%BB%E7%BB%93/</link>
+      <link>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8E%E6%9A%91%E5%81%87%E7%9A%84%E6%80%BB%E7%BB%93/</link>
       <pubDate>Sat, 25 Aug 2018 14:17:10 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/%E5%85%B3%E4%BA%8E%E6%9A%91%E5%81%87%E7%9A%84%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8E%E6%9A%91%E5%81%87%E7%9A%84%E6%80%BB%E7%BB%93/</guid>
       <description>&lt;p&gt;最终使用了 hexo 搭建自己的博客，而不是闲得蛋疼非得自己写。&lt;/p&gt;
 &lt;p&gt;这个暑假原本打算写一个网易云音乐的第三方客户端，然而最终还是弃了，UI过于蛋疼，于是改用现有的主题。自己写了大半天发现主题并不好用=。= ，html 和 css 真的不太懂啊。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>FirstBlog</title>
-      <link>http://localhost:1313/post/firstblog/</link>
+      <link>https://bigshans.github.io/post/firstblog/</link>
       <pubDate>Sat, 25 Aug 2018 13:05:09 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/firstblog/</guid>
+      <guid>https://bigshans.github.io/post/firstblog/</guid>
       <description>&lt;p&gt;个人尝试hexo+gitpages&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>http://localhost:1313/post/hello-world/</link>
+      <link>https://bigshans.github.io/post/hello-world/</link>
       <pubDate>Sat, 25 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hello-world/</guid>
+      <guid>https://bigshans.github.io/post/hello-world/</guid>
       <description>&lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     

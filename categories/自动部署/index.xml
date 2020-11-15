@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>自动部署 on Bigshans&#39; Blog</title>
-    <link>http://localhost:1313/categories/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</link>
+    <link>https://bigshans.github.io/categories/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</link>
     <description>Recent content in 自动部署 on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Nov 2020 18:30:45 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2020 18:30:45 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何使用 Webhook 来实现自动部署项目</title>
-      <link>http://localhost:1313/post/how-to-use-webhook-to-deploy-project/</link>
+      <link>https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/</link>
       <pubDate>Sun, 15 Nov 2020 18:30:45 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/how-to-use-webhook-to-deploy-project/</guid>
+      <guid>https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/</guid>
       <description>自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。 在上家公司我也体验过自</description>
     </item>
     
