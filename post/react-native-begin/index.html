@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>初识 React Native （一） - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="公司目前在用 RN 在开发 PDA 上的项目，我来来回回也写了很多次，虽然说也不是很清楚 RN 到底是个什么玩意儿，但摸得差不多了。今天我们就来正式认识认识 RN 。" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
+
+
+<link rel="canonical" href="https://bigshans.github.io/post/react-native-begin/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.ee9bb8ff3ff2c10b694a9f9e402aaf1d296fc640398b55c68bc5a467622fb304.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="初识 React Native （一）" />
+<meta property="og:description" content="公司目前在用 RN 在开发 PDA 上的项目，我来来回回也写了很多次，虽然说也不是很清楚 RN 到底是个什么玩意儿，但摸得差不多了。今天我们就来正式认识认识 RN 。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/react-native-begin/" />
+<meta property="article:published_time" content="2020-12-02T21:26:09+08:00" />
+<meta property="article:modified_time" content="2020-12-02T21:26:09+08:00" />
+<meta itemprop="name" content="初识 React Native （一）">
+<meta itemprop="description" content="公司目前在用 RN 在开发 PDA 上的项目，我来来回回也写了很多次，虽然说也不是很清楚 RN 到底是个什么玩意儿，但摸得差不多了。今天我们就来正式认识认识 RN 。">
+<meta itemprop="datePublished" content="2020-12-02T21:26:09+08:00" />
+<meta itemprop="dateModified" content="2020-12-02T21:26:09+08:00" />
+<meta itemprop="wordCount" content="951">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="初识 React Native （一）"/>
+<meta name="twitter:description" content="公司目前在用 RN 在开发 PDA 上的项目，我来来回回也写了很多次，虽然说也不是很清楚 RN 到底是个什么玩意儿，但摸得差不多了。今天我们就来正式认识认识 RN 。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">初识 React Native （一）</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-12-02 </span>
+        <div class="post-category">
+            <a href="/categories/react-native/"> React Native </a>
+            </div>
+          <span class="more-meta"> 约 951 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#跨平台方案">跨平台方案</a>
+          <ul>
+            <li><a href="#hybird-方案">Hybird 方案</a></li>
+            <li><a href="#flutter-方案">Flutter 方案</a></li>
+            <li><a href="#react-native-方案">React Native 方案</a></li>
+          </ul>
+        </li>
+        <li><a href="#为什么使用-react-native">为什么使用 React Native</a></li>
+        <li><a href="#react-与-react-native-的异同">React 与 React Native 的异同</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    <div class="post-content">
+      <p>公司目前在用 RN 在开发 PDA 上的项目，我来来回回也写了很多次，虽然说也不是很清楚 RN 到底是个什么玩意儿，但摸得差不多了。今天我们就来正式认识认识 RN 。</p>
+<h2 id="跨平台方案">跨平台方案</h2>
+<p>手机 App 一般会有以下这两个问题：</p>
+<ol>
+<li>存在这不同手机系统平台机制不同，导致操作没法统一的情况。</li>
+<li>存在手机需要热更新的情况。</li>
+</ol>
+<p>由此，诞生了三种方案。一种是 Hybird 解决方案，一种是 Flutter 解决方案，剩下的一种是 React Native 解决方案了。</p>
+<h3 id="hybird-方案">Hybird 方案</h3>
+<p>Hybird 解决方案就是混合方案，该方案就是调起平台上 WebView 加载网页，展示 Web 页面来克服以上的问题。</p>
+<p>优点很明显，借助了 H5 的表现力和网页加载的灵活性，但缺点也很明显，调用 WebView 是个非常重的操作，通常会有几百毫秒的延迟，性能不佳。</p>
+<h3 id="flutter-方案">Flutter 方案</h3>
+<p>Flutter 是有 Google 提出的一套解决方案，他们重写了一套与平台无关的引擎，并用了一种新的语言 Dart 。组件的绘制都将由 Flutter 的引擎来完成，最大限度的保持各个平台的一致性，同时性能也是接近原生的。</p>
+<p>不过缺点也是有的，目前生态不够完善，仅仅靠 Flutter 提供的组件还不足以满足需求，而且需要另外学一门语言，学习成本比较高。</p>
+<h3 id="react-native-方案">React Native 方案</h3>
+<p>React Native 是由 Facebook 提出的一套解决方案，也是 React 系列的一部分。React Native 使用 React 编写 Native 程序，由 React 底层提供一致的抽象，保证各个平台的一致性，性能也是接近原生的。</p>
+<p>同时，React Native 借助了 React 的生态，发展也比较成熟了，很多问题都有了解决方案。</p>
+<p>但是缺点也有的，不能完全不受原生依赖的影响，必要的情况下仍然需要原生来帮忙。同时 React 为了确保一致性，阉割了一些原生的能力，同时有一些能力是平台特有的，React 这方面做的还不是很好。</p>
+<h2 id="为什么使用-react-native">为什么使用 React Native</h2>
+<p>第一点，React Native 性能比 Hybird 好，生态比 Flutter 成熟。</p>
+<p>第二点，如果你熟悉 js 和 React 的话， React Native 的开发效率也是很快的。</p>
+<p>第三点，React Native 借助 code-push 等工具可以很方便的实现热更新。</p>
+<h2 id="react-与-react-native-的异同">React 与 React Native 的异同</h2>
+<p>有趣的是，这两点我在刚上手的时候并没有搞懂，常常搞混，知道最近才搞清楚一点。</p>
+<p>首先，它们原理是一样的。</p>
+<p><img src="https://pic4.zhimg.com/v2-990aa3a1c34a8e1b956baaa00b4ca9db_r.jpg" alt=""></p>
+<p>二者都是基于 JSX 转译为 VirtualDOM ，React 会将 VirtualDOM 转换为对应的 Browser DOM ，而 React Native 会通过 JSBridge 转译为平台原生代码。React Native不使用HTML来渲染App，但是提供了可代替它的类似组件。<strong>这些React Native组件映射到渲染到App中的真正的原生iOS和Android UI组件,意味着你不能重用之前使用ReactJS渲染的HTML, SVG或Canvas任何库。</strong></p>
+<p>未完待续。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-12-02
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/how-to-use-webhook-to-deploy-project/">
+            <span class="next-text nav-default">如何使用 Webhook 来实现自动部署项目</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -3,14 +3,35 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2020-11-15T18:30:45+08:00</lastmod>
+    <lastmod>2020-12-02T21:26:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2020-11-15T18:30:45+08:00</lastmod>
+    <lastmod>2020-12-02T21:26:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/</loc>
+    <lastmod>2020-12-02T21:26:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/react-native/</loc>
+    <lastmod>2020-12-02T21:26:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/react-native-begin/</loc>
+    <lastmod>2020-12-02T21:26:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24,13 +45,6 @@
   
   <url>
     <loc>https://bigshans.github.io/tags/php/</loc>
-    <lastmod>2020-11-15T18:30:45+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/post/</loc>
     <lastmod>2020-11-15T18:30:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
