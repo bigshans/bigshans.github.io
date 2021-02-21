@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>用 Svelte 写个简单的 Todo - Bigshans&#39; Blog</title>
+  <title>在 Docker 内编译 React Native - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="官网： https://svelte.dev/ Svelte 是个新的前端框架，发展强劲。与目前主流的三大框架不同的是，Svelte 不采用 vdom ，而是借助 complier 的能力，打包出最小化的包，不附带更多的 runtime" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。 选择 Docker 镜像 其实 React Native" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.80.0 with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/svelte-todo/" />
+<link rel="canonical" href="https://bigshans.github.io/post/rn-android-docker/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,24 +40,24 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="用 Svelte 写个简单的 Todo" />
-<meta property="og:description" content="官网： https://svelte.dev/ Svelte 是个新的前端框架，发展强劲。与目前主流的三大框架不同的是，Svelte 不采用 vdom ，而是借助 complier 的能力，打包出最小化的包，不附带更多的 runtime" />
+<meta property="og:title" content="在 Docker 内编译 React Native" />
+<meta property="og:description" content="每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。 选择 Docker 镜像 其实 React Native" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/svelte-todo/" />
-<meta property="article:published_time" content="2021-02-16T20:30:32+08:00" />
-<meta property="article:modified_time" content="2021-02-16T20:30:32+08:00" />
-<meta itemprop="name" content="用 Svelte 写个简单的 Todo">
-<meta itemprop="description" content="官网： https://svelte.dev/ Svelte 是个新的前端框架，发展强劲。与目前主流的三大框架不同的是，Svelte 不采用 vdom ，而是借助 complier 的能力，打包出最小化的包，不附带更多的 runtime">
-<meta itemprop="datePublished" content="2021-02-16T20:30:32+08:00" />
-<meta itemprop="dateModified" content="2021-02-16T20:30:32+08:00" />
-<meta itemprop="wordCount" content="279">
+<meta property="og:url" content="https://bigshans.github.io/post/rn-android-docker/" />
+<meta property="article:published_time" content="2021-02-21T18:57:43+08:00" />
+<meta property="article:modified_time" content="2021-02-21T18:57:43+08:00" />
+<meta itemprop="name" content="在 Docker 内编译 React Native">
+<meta itemprop="description" content="每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。 选择 Docker 镜像 其实 React Native">
+<meta itemprop="datePublished" content="2021-02-21T18:57:43+08:00" />
+<meta itemprop="dateModified" content="2021-02-21T18:57:43+08:00" />
+<meta itemprop="wordCount" content="373">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="用 Svelte 写个简单的 Todo"/>
-<meta name="twitter:description" content="官网： https://svelte.dev/ Svelte 是个新的前端框架，发展强劲。与目前主流的三大框架不同的是，Svelte 不采用 vdom ，而是借助 complier 的能力，打包出最小化的包，不附带更多的 runtime"/>
+<meta name="twitter:title" content="在 Docker 内编译 React Native"/>
+<meta name="twitter:description" content="每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。 选择 Docker 镜像 其实 React Native"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -166,12 +166,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">用 Svelte 写个简单的 Todo</h1>
+      <h1 class="post-title">在 Docker 内编译 React Native</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-02-16 </span>
-        
-          <span class="more-meta"> 约 279 字 </span>
+        <span class="post-time"> 2021-02-21 </span>
+        <div class="post-category">
+            <a href="/categories/docker/"> docker </a>
+            </div>
+          <span class="more-meta"> 约 373 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         
       </div>
@@ -179,50 +181,30 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#选择-docker-镜像">选择 Docker 镜像</a></li>
+        <li><a href="#目录权限问题">目录权限问题</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 </div>
 
     <div class="post-content">
-      <blockquote>
-<p>官网： <a href="https://svelte.dev/">https://svelte.dev/</a></p>
-</blockquote>
-<p>Svelte 是个新的前端框架，发展强劲。与目前主流的三大框架不同的是，Svelte 不采用 vdom ，而是借助 complier 的能力，打包出最小化的包，不附带更多的 runtime 。Svelte 是由 rollup 作者开发的 Reative 框架，语法与 vue 很像，个人简单写了一下，速度是真的给力，打包也是真的简洁。</p>
-<p>下面是我简单用 Svelte 写的简单 Todo ，只有添加功能，不过实现起来相当舒服。</p>
-<p>App.svelte:</p>
-<pre><code class="language-html">&lt;script&gt;
-    let list = ['a'];
-    let todo = '';
-    function add() {
-        if (todo !== '') {
-            list[list.length] = todo;
-            todo = '';
-        }
-    }
-&lt;/script&gt;
-
-&lt;style&gt;
-    #todo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-    }
-&lt;/style&gt;
-
-&lt;div id=&quot;todo&quot;&gt;
-    &lt;input bind:value={todo} /&gt;
-    &lt;button on:click={add}&gt;添加&lt;/button&gt;
-
-    {#each list as todo}
-        &lt;li&gt;{todo}&lt;/li&gt;
-    {/each}
-&lt;/div&gt;
-</code></pre>
-<p>可以在官网的 REPL 里粘贴进去运行。</p>
-<p>编译后总代码不到 4KB ，是相当小了。</p>
+      <p>每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。</p>
+<h2 id="选择-docker-镜像">选择 Docker 镜像</h2>
+<p>其实 React Native 的镜像已经有人搭建好了，并上传到 Docker Hub 上了。我看了看目前热度比较高的几个镜像，并尝试了一下，最终在 reactnativecommunity 和 theanam 中进行抉择。其实前者更新更频繁一些，但 pull 下来镜像有 5G 多，所以最后选择了 theanam 的镜像。</p>
+<p>把镜像拉下来后，尝试了一下编译，发现了一些问题，调整了一下代码，最终成功编译起来了。</p>
+<h2 id="目录权限问题">目录权限问题</h2>
+<p>当我完成编译之后我发现，我的目录权限被改成 root 了。然后我上网搜索了一下，发现是 Docker 引起的，然后在 mac 下不会有这个问题（要死啊）。</p>
+<p>既然这样，那这应该是由来已久的问题，已经有不错的解决方案吧，幸运的是，我找到了。</p>
+<p>我使用 gosu 进行 work around 。</p>
+<p>我基于 theanam 写了个 Dockerfile ，重新 build 了一下还可以，运行后权限也没有改变。</p>
+<p>下面是我的地址：<a href="https://github.com/bigshans/rn-android">rn-android</a></p>
+<p>欢迎大家 Star ！</p>
 
     </div>
 
@@ -234,7 +216,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2021-02-16
+        2021-02-21
         
     </span>
   </p>
@@ -244,13 +226,9 @@
 <footer class="post-footer">
       
       <nav class="post-nav">
-        <a class="prev" href="/post/rn-android-docker/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">在 Docker 内编译 React Native</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/post/for-recent-things/">
-            <span class="next-text nav-default">为了一些近期的新闻所写的随笔</span>
+        
+        <a class="next" href="/post/svelte-todo/">
+            <span class="next-text nav-default">用 Svelte 写个简单的 Todo</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

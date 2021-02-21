@@ -6,7 +6,16 @@
     <description>Recent content on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 16 Feb 2021 20:30:32 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Feb 2021 18:57:43 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Docker 内编译 React Native</title>
+      <link>https://bigshans.github.io/post/rn-android-docker/</link>
+      <pubDate>Sun, 21 Feb 2021 18:57:43 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/rn-android-docker/</guid>
+      <description>每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。 选择 Docker 镜像 其实 React Native</description>
+    </item>
+    
     <item>
       <title>用 Svelte 写个简单的 Todo</title>
       <link>https://bigshans.github.io/post/svelte-todo/</link>
