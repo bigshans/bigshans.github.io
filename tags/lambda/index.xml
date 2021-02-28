@@ -6,6 +6,7 @@
     <description>Recent content in lambda on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <copyright>bigshans</copyright>
     <lastBuildDate>Tue, 28 Aug 2018 16:30:17 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/lambda/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>python 实现尾递归斐波那契数列</title>

@@ -6,6 +6,7 @@
     <description>Recent content in angular on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <copyright>bigshans</copyright>
     <lastBuildDate>Sun, 08 Dec 2019 20:23:42 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/categories/angular/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>angular 虚拟滚动的一些坑</title>

@@ -6,7 +6,17 @@
     <description>Recent content in Categories on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Feb 2021 18:57:43 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Sun, 28 Feb 2021 17:04:24 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nodejs</title>
+      <link>https://bigshans.github.io/categories/nodejs/</link>
+      <pubDate>Sun, 28 Feb 2021 17:04:24 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/nodejs/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>docker</title>
       <link>https://bigshans.github.io/categories/docker/</link>
@@ -58,15 +68,6 @@
       <pubDate>Sat, 15 Feb 2020 12:49:19 +0000</pubDate>
       
       <guid>https://bigshans.github.io/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nodejs</title>
-      <link>https://bigshans.github.io/categories/nodejs/</link>
-      <pubDate>Mon, 27 Jan 2020 21:58:14 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/nodejs/</guid>
       <description></description>
     </item>
     

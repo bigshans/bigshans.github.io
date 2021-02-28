@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>supertest on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/supertest/</link>
+    <description>Recent content in supertest on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Sun, 28 Feb 2021 17:04:24 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/supertest/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 jest 和 supertest 进行接口测试</title>
+      <link>https://bigshans.github.io/post/jest-api-test-supertest/</link>
+      <pubDate>Sun, 28 Feb 2021 17:04:24 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/jest-api-test-supertest/</guid>
+      <description>最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。 登录测试 有些</description>
+    </item>
+    
+  </channel>
+</rss>

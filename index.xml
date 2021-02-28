@@ -6,7 +6,17 @@
     <description>Recent content on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Feb 2021 18:57:43 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Sun, 28 Feb 2021 17:04:24 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 jest 和 supertest 进行接口测试</title>
+      <link>https://bigshans.github.io/post/jest-api-test-supertest/</link>
+      <pubDate>Sun, 28 Feb 2021 17:04:24 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/jest-api-test-supertest/</guid>
+      <description>最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。 登录测试 有些</description>
+    </item>
+    
     <item>
       <title>在 Docker 内编译 React Native</title>
       <link>https://bigshans.github.io/post/rn-android-docker/</link>

@@ -6,6 +6,7 @@
     <description>Recent content in elasticsearch on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <copyright>bigshans</copyright>
     <lastBuildDate>Tue, 07 Apr 2020 10:24:48 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>elasticsearch 频繁更新问题</title>

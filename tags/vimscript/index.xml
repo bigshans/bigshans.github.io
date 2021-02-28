@@ -6,6 +6,7 @@
     <description>Recent content in vimscript on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <copyright>bigshans</copyright>
     <lastBuildDate>Thu, 17 Jan 2019 21:37:36 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/vimscript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>写一个 vim 窗口跳转</title>
