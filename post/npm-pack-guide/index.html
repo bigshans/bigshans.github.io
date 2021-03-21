@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>安装 deepin-wine 到 debian 上 - Bigshans&#39; Blog</title>
+  <title>npm 打包指南 - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,8 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="我尝试了一下 deepin-wine-ubuntu 项目，不过无法正常装上。所以我自己尝试了一下安装 deepin-wine 并尝试了一下 deepin 的 QQ 和 TIM 。效果还不错。
-" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="最近在修改一些很长时间无人维护的包，估计包作者都不维护了，于是我重新搞了一份传到了 npm 上，有兴趣的可以看一下：log4js-rabbitmq-" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -27,7 +26,7 @@
 <meta name="generator" content="Hugo 0.81.0 with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/software-deepin-wine/" />
+<link rel="canonical" href="https://bigshans.github.io/post/npm-pack-guide/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,20 +40,20 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="安装 deepin-wine 到 debian 上" />
-<meta property="og:description" content="我尝试了一下 deepin-wine-ubuntu 项目，不过无法正常装上。所以我自己尝试了一下安装 deepin-wine 并尝试了一下 deepin 的 QQ 和 TIM 。效果还不错。" />
+<meta property="og:title" content="npm 打包指南" />
+<meta property="og:description" content="最近在修改一些很长时间无人维护的包，估计包作者都不维护了，于是我重新搞了一份传到了 npm 上，有兴趣的可以看一下：log4js-rabbitmq-" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/software-deepin-wine/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2018-09-02T19:21:21&#43;00:00" />
-<meta property="article:modified_time" content="2018-09-02T19:21:21&#43;00:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/npm-pack-guide/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-03-21T11:53:14&#43;08:00" />
+<meta property="article:modified_time" content="2021-03-21T11:53:14&#43;08:00" />
 
-<meta itemprop="name" content="安装 deepin-wine 到 debian 上">
-<meta itemprop="description" content="我尝试了一下 deepin-wine-ubuntu 项目，不过无法正常装上。所以我自己尝试了一下安装 deepin-wine 并尝试了一下 deepin 的 QQ 和 TIM 。效果还不错。"><meta itemprop="datePublished" content="2018-09-02T19:21:21&#43;00:00" />
-<meta itemprop="dateModified" content="2018-09-02T19:21:21&#43;00:00" />
-<meta itemprop="wordCount" content="302">
-<meta itemprop="keywords" content="linux,software," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="安装 deepin-wine 到 debian 上"/>
-<meta name="twitter:description" content="我尝试了一下 deepin-wine-ubuntu 项目，不过无法正常装上。所以我自己尝试了一下安装 deepin-wine 并尝试了一下 deepin 的 QQ 和 TIM 。效果还不错。"/>
+<meta itemprop="name" content="npm 打包指南">
+<meta itemprop="description" content="最近在修改一些很长时间无人维护的包，估计包作者都不维护了，于是我重新搞了一份传到了 npm 上，有兴趣的可以看一下：log4js-rabbitmq-"><meta itemprop="datePublished" content="2021-03-21T11:53:14&#43;08:00" />
+<meta itemprop="dateModified" content="2021-03-21T11:53:14&#43;08:00" />
+<meta itemprop="wordCount" content="801">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="npm 打包指南"/>
+<meta name="twitter:description" content="最近在修改一些很长时间无人维护的包，估计包作者都不维护了，于是我重新搞了一份传到了 npm 上，有兴趣的可以看一下：log4js-rabbitmq-"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -163,30 +162,68 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">安装 deepin-wine 到 debian 上</h1>
+      <h1 class="post-title">npm 打包指南</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2018-09-02 </span>
-        <div class="post-category">
-            <a href="/categories/software/"> software </a>
-            </div>
-          <span class="more-meta"> 约 302 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        <span class="post-time"> 2021-03-21 </span>
+        
+          <span class="more-meta"> 约 801 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
     </header>
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#协议">协议</a></li>
+        <li><a href="#库支持的语言规范">库支持的语言规范</a></li>
+        <li><a href="#调试">调试</a></li>
+        <li><a href="#结语">结语</a></li>
+        <li><a href="#附如何编写-dts-文件">附：如何编写 d.ts 文件</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 </div>
 
     <div class="post-content">
-      <p>我尝试了一下 <a href="https://github.com/wszqkzqk/deepin-wine-ubuntu">deepin-wine-ubuntu</a> 项目，不过无法正常装上。所以我自己尝试了一下安装 deepin-wine 并尝试了一下 deepin 的 QQ 和 TIM 。效果还不错。</p>
-<p>首先得先到 <a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/">阿里源</a> 下载的 deepin-wine ，我下的是旧版本的 2.18-10 。然后用 apt install 安装包然后出错，显示依赖问题，然后在源里查找依赖包，再用 apt install 这些包，又有新依赖，如此往复几次，最终没有依赖问题即安装成功。</p>
-<p>然后在安装 QQ 和 TIM ，在源里查找 deepin QQ 的包安装，QQ 还有包依赖问题，继续重复上面的步骤。 TIM 如 QQ 一样安装，不过打开会有 flash 问题。不管也没事。
-最后从菜单中打开它们。稳定性很好，能记住密码，比 crossover 的要稳定得多，但是不能加载动图，不过不碍事，语音可以用，视频不能用，比 crossover 的好一点。最后写了脚本，将这些打包上传到了 github 和码云上。</p>
-<p>地址请点击： <a href="https://github.com/bigshans/Deepin-wine-QQ-TIM-Debian">github</a> ， <a href="https://gitee.com/aerian/Deepin-wine-QQ-TIM-Debian">码云</a></p>
+      <p>最近在修改一些很长时间无人维护的包，估计包作者都不维护了，于是我重新搞了一份传到了 npm 上，有兴趣的可以看一下：<a href="https://www.npmjs.com/package/log4js-rabbitmq-appenders">log4js-rabbitmq-appenders</a> 。</p>
+<p>关于如何打包一个库，其实网上已经有很多教程了，核心其实就是两句命令：</p>
+<pre><code class="language-shell">npm login
+npm publish
+</code></pre>
+<p>如果你用的是淘宝源之类的镜像源，记得要把源地址改回官方源。登录的话就是在 <a href="https://npm.org">npm.org</a> 的帐号，如果没有的话就是需要注册，如果没有收到验证邮件的话，建议给官方客服发封邮件询问一下，客服会给你建立帐号的。</p>
+<p>其他的其实就是一些细枝末节的东西了。</p>
+<h2 id="协议">协议</h2>
+<p>如果你的库想要被更广泛的使用，就使用更宽松的协议，比如 BSD 、MIT 等，如果你想收紧对库的使用的话，就用 GPL 系列的协议。协议这块网上有很多好的建议，可以去看看 <a href="http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html">这一篇</a> 。</p>
+<h2 id="库支持的语言规范">库支持的语言规范</h2>
+<p>如果你写一个库，你就应该考虑好你要支持那些语言规范，现在比较广泛的就是 CommonJS 、 TypeScript 、AMD 等，有可能你的库就是基于以上这几个规范中的某一个规范写的，但你接下来可能要支持比这多得多的语言规范。比如说，你的库是用 CommonJS 编写的，但你的库也要支持 TypeScript ，考虑到要让一般用户能够简单使用你的库，你就应该要编写 d.ts 文件。这些情形十分复杂，以至于一些著名库也常常会在此踩坑。</p>
+<h2 id="调试">调试</h2>
+<p>由于每次修改了包之后，如果不修改版本号的话，是无法上传新的包。但有时候仅仅是测试，所以，比较好的方法是建立一个仓库，然后每次修改更新到仓库，然后在本地通过仓库地址进行包安装进行调试。为了不影响版本，最好再开一个分支处理。</p>
+<h2 id="结语">结语</h2>
+<p>算是为社区作出了一点微小的贡献吧！</p>
+<h2 id="附如何编写-dts-文件">附：如何编写 d.ts 文件</h2>
+<p>其实挺简单的，不知道为何我想得如此复杂。</p>
+<p>这是我编写的库的 <code>index.d.ts</code> ：</p>
+<pre><code class="language-typescript">/// &lt;referencee types=&quot;node&quot; /&gt;
+
+export const RabbitmqAppenders: any;
+</code></pre>
+<p>实际上对应的 <code>index.js</code>:</p>
+<pre><code class="language-javascript">module.exports = {
+  RabbitmqAppenders: require('./lib/index'),
+};
+</code></pre>
+<p>但是，如果你使用的是 <code>export default</code> 的话，你就会发现，编译后的 js 代码会这样子调用代码：</p>
+<pre><code class="language-javascript">require('You Module').default
+</code></pre>
+<p>很恶心，对吧？所以我的处理是单个 <code>export</code> 出来，而不是 <code>export default</code> 。</p>
+<p>另外，这个对应关系，事实上 <code>index.d.ts</code> 中 <code>export</code> 出来的对象应该要与 <code>index.js</code> 里 <code>export</code> 出的 结构一样就可以了，只不过多了一些类型说明罢了。</p>
+
     </div>
 
     <div class="post-copyright">
@@ -197,7 +234,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2018-09-02
+        2021-03-21
         
     </span>
   </p>
@@ -205,18 +242,11 @@
   
 </div>
 <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/linux/">linux</a>
-          <a href="/tags/software/">software</a>
-          </div>
+      
       <nav class="post-nav">
-        <a class="prev" href="/post/software-graph-easy/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">安装 graph-easy</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/post/vim-learn-textobject/">
-            <span class="next-text nav-default">vim 学习笔记（一）</span>
+        
+        <a class="next" href="/post/jest-api-test-supertest/">
+            <span class="next-text nav-default">使用 jest 和 supertest 进行接口测试</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

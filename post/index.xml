@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 28 Feb 2021 17:04:24 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Mar 2021 11:53:14 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>npm 打包指南</title>
+      <link>https://bigshans.github.io/post/npm-pack-guide/</link>
+      <pubDate>Sun, 21 Mar 2021 11:53:14 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/npm-pack-guide/</guid>
+      <description>最近在修改一些很长时间无人维护的包，估计包作者都不维护了，于是我重新搞了一份传到了 npm 上，有兴趣的可以看一下：log4js-rabbitmq-</description>
+    </item>
+    
     <item>
       <title>使用 jest 和 supertest 进行接口测试</title>
       <link>https://bigshans.github.io/post/jest-api-test-supertest/</link>

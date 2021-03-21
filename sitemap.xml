@@ -3,7 +3,21 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2021-02-28T17:04:24+08:00</lastmod>
+    <lastmod>2021-03-21T11:53:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/npm-pack-guide/</loc>
+    <lastmod>2021-03-21T11:53:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/</loc>
+    <lastmod>2021-03-21T11:53:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -31,13 +45,6 @@
   
   <url>
     <loc>https://bigshans.github.io/categories/nodejs/</loc>
-    <lastmod>2021-02-28T17:04:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/post/</loc>
     <lastmod>2021-02-28T17:04:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
