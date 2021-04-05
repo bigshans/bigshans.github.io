@@ -3,14 +3,56 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2021-03-21T11:53:14+08:00</lastmod>
+    <lastmod>2021-04-05T12:05:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2021-03-21T11:53:14+08:00</lastmod>
+    <lastmod>2021-04-05T12:05:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/</loc>
+    <lastmod>2021-04-05T12:05:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/</loc>
+    <lastmod>2021-04-05T12:05:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/%E5%93%B2%E5%AD%A6/</loc>
+    <lastmod>2021-04-05T12:05:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/%E5%93%B2%E5%AD%A6/</loc>
+    <lastmod>2021-04-05T12:05:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/philosophy-miletos/</loc>
+    <lastmod>2021-04-05T12:05:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/%E7%B1%B3%E5%88%A9%E9%83%BD%E5%AD%A6%E6%B4%BE/</loc>
+    <lastmod>2021-04-05T12:05:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -38,20 +80,6 @@
   
   <url>
     <loc>https://bigshans.github.io/post/npm-pack-guide/</loc>
-    <lastmod>2021-03-21T11:53:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2021-03-21T11:53:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/</loc>
     <lastmod>2021-03-21T11:53:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
