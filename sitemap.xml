@@ -3,28 +3,56 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2021-04-11T01:24:07+08:00</lastmod>
+    <lastmod>2021-04-11T15:58:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2021-04-11T01:24:07+08:00</lastmod>
+    <lastmod>2021-04-11T15:58:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2021-04-11T01:24:07+08:00</lastmod>
+    <lastmod>2021-04-11T15:58:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/tags/</loc>
-    <lastmod>2021-04-11T01:24:07+08:00</lastmod>
+    <lastmod>2021-04-11T15:58:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2021-04-11T15:58:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2021-04-11T15:58:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/study-front-end-way/</loc>
+    <lastmod>2021-04-11T15:58:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%BA%BF%E8%B7%AF/</loc>
+    <lastmod>2021-04-11T15:58:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -395,13 +423,6 @@
   
   <url>
     <loc>https://bigshans.github.io/post/angular-virtual-scroll/</loc>
-    <lastmod>2019-12-08T20:23:42+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2019-12-08T20:23:42+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
