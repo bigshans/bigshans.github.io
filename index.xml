@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 11 Apr 2021 18:18:57 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Apr 2021 18:07:20 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>修复 Broken 了的 locale</title>
+      <link>https://bigshans.github.io/post/fix-locale/</link>
+      <pubDate>Mon, 26 Apr 2021 18:07:20 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/fix-locale/</guid>
+      <description>昨天做了一件非常错误的事情，就是使用 Bleachbit 清理了一下系统。 Bleachbit 直接把我的 locale 给直接删掉了，然而当时我并没有关注到这一点，关上电脑就睡觉了，然后第二天</description>
+    </item>
+    
     <item>
       <title>为什么选择 Linux 桌面</title>
       <link>https://bigshans.github.io/post/why-choose-linux-desktop/</link>

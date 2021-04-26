@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>locale on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/locale/</link>
+    <description>Recent content in locale on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Mon, 26 Apr 2021 18:07:20 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/locale/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>修复 Broken 了的 locale</title>
+      <link>https://bigshans.github.io/post/fix-locale/</link>
+      <pubDate>Mon, 26 Apr 2021 18:07:20 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/fix-locale/</guid>
+      <description>昨天做了一件非常错误的事情，就是使用 Bleachbit 清理了一下系统。 Bleachbit 直接把我的 locale 给直接删掉了，然而当时我并没有关注到这一点，关上电脑就睡觉了，然后第二天</description>
+    </item>
+    
+  </channel>
+</rss>
