@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>手机 on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/categories/%E6%89%8B%E6%9C%BA/</link>
+    <description>Recent content in 手机 on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Tue, 27 Apr 2021 20:20:24 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E6%89%8B%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 root 下去除 MIUI 锁屏密码</title>
+      <link>https://bigshans.github.io/post/unlock-screen-sercet/</link>
+      <pubDate>Tue, 27 Apr 2021 20:20:24 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/unlock-screen-sercet/</guid>
+      <description>因为 root 手机忘了锁屏密码，所以想要破解掉。因为手机已经提前 root 了，我本以为这个问题只需要搜一下就可以了，然而搜索的结果却让我大跌眼镜。使用 adb 删除</description>
+    </item>
+    
+  </channel>
+</rss>
