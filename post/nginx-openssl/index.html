@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0 with theme even" />
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/nginx-openssl/" />
@@ -38,7 +38,7 @@
 
 
 
-<link href="/sass/main.min.8fd323da1f4b1162eabbc9d74dc22aca0145dde24ec3c733a22fb6bab5539579.css" rel="stylesheet">
+<link href="/sass/main.min.5313be20e771f12fdb03c7d968e0d47139ed80cf735679b71f2a09bc05c293e8.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 <link rel="stylesheet" href="/css/custom.css">
 
@@ -243,7 +243,7 @@ pixiv.crt # 这里最后生成的文件导入浏览器自建服务端证书
 <pre><code class="language-confg">[req]
 distinguished_name = pixiv.net.crt
 req_extensions = v3_req
-  
+
 [req_distinguished_name]
 countryName = CN
 countryName_default = CN
@@ -255,13 +255,13 @@ organizationalUnitName  = ...
 organizationalUnitName_default  = ...
 commonName = ...
 commonName_max  = 64
-  
+
 [ v3_req ]
 # Extensions to add to a certificate request
 basicConstraints = CA:FALSE
 keyUsage = nonRepudiation, digitalSignature, keyEncipherment
 subjectAltName = @alt_names
-  
+
 [alt_names]
 DNS.1=*.pixiv.net
 DNS.2=pixiv.net
