@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 06 May 2021 11:51:53 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 May 2021 22:04:17 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pleroma 安装排雷</title>
+      <link>https://bigshans.github.io/post/troubleshoot-pleroma/</link>
+      <pubDate>Fri, 21 May 2021 22:04:17 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/troubleshoot-pleroma/</guid>
+      <description>安装 Pleroma 倒也不是什么特别难的事，只要照着文档自己安装即可，但是，事情往往并没有你想的那么简单。 Pleroma 是一款基于 Elixir 开发的轻量级的微博系统，而且还支持</description>
+    </item>
+    
     <item>
       <title>认知复杂度——代码质量初探</title>
       <link>https://bigshans.github.io/post/cognitive-complexity/</link>
