@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 21 May 2021 22:04:17 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 May 2021 22:19:11 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>写了一个基于 art 的静态网页模块化项目</title>
+      <link>https://bigshans.github.io/post/art-html/</link>
+      <pubDate>Mon, 24 May 2021 22:19:11 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/art-html/</guid>
+      <description>最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。 背景 公司的主页是用静态网页写的，主要是用来展示，但是分很</description>
+    </item>
+    
     <item>
       <title>Pleroma 安装排雷</title>
       <link>https://bigshans.github.io/post/troubleshoot-pleroma/</link>
