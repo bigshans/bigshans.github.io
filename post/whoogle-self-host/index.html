@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>写了一个基于 art 的静态网页模块化项目 - Bigshans&#39; Blog</title>
+  <title>使用 Whoogle 自建搜索网站 - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。 背景 公司的主页是用静态网页写的，主要是用来展示，但是分很" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="准确来说，Whoogle 是一个元搜索引擎，他主要将 Google 的搜索结果过滤，并去除掉其中的隐私追踪部分。与 Whoogle 差不多的另一个网站框架是 SearX ，两者都是自建" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.83.1 with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/art-html/" />
+<link rel="canonical" href="https://bigshans.github.io/post/whoogle-self-host/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,20 +40,20 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="写了一个基于 art 的静态网页模块化项目" />
-<meta property="og:description" content="最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。 背景 公司的主页是用静态网页写的，主要是用来展示，但是分很" />
+<meta property="og:title" content="使用 Whoogle 自建搜索网站" />
+<meta property="og:description" content="准确来说，Whoogle 是一个元搜索引擎，他主要将 Google 的搜索结果过滤，并去除掉其中的隐私追踪部分。与 Whoogle 差不多的另一个网站框架是 SearX ，两者都是自建" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/art-html/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-05-24T22:19:11&#43;08:00" />
-<meta property="article:modified_time" content="2021-05-24T22:19:11&#43;08:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/whoogle-self-host/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-05-30T03:40:00&#43;08:00" />
+<meta property="article:modified_time" content="2021-05-30T03:40:00&#43;08:00" />
 
-<meta itemprop="name" content="写了一个基于 art 的静态网页模块化项目">
-<meta itemprop="description" content="最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。 背景 公司的主页是用静态网页写的，主要是用来展示，但是分很"><meta itemprop="datePublished" content="2021-05-24T22:19:11&#43;08:00" />
-<meta itemprop="dateModified" content="2021-05-24T22:19:11&#43;08:00" />
-<meta itemprop="wordCount" content="674">
-<meta itemprop="keywords" content="art-html," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="写了一个基于 art 的静态网页模块化项目"/>
-<meta name="twitter:description" content="最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。 背景 公司的主页是用静态网页写的，主要是用来展示，但是分很"/>
+<meta itemprop="name" content="使用 Whoogle 自建搜索网站">
+<meta itemprop="description" content="准确来说，Whoogle 是一个元搜索引擎，他主要将 Google 的搜索结果过滤，并去除掉其中的隐私追踪部分。与 Whoogle 差不多的另一个网站框架是 SearX ，两者都是自建"><meta itemprop="datePublished" content="2021-05-30T03:40:00&#43;08:00" />
+<meta itemprop="dateModified" content="2021-05-30T03:40:00&#43;08:00" />
+<meta itemprop="wordCount" content="694">
+<meta itemprop="keywords" content="whoogle,searx,google,搜索," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用 Whoogle 自建搜索网站"/>
+<meta name="twitter:description" content="准确来说，Whoogle 是一个元搜索引擎，他主要将 Google 的搜索结果过滤，并去除掉其中的隐私追踪部分。与 Whoogle 差不多的另一个网站框架是 SearX ，两者都是自建"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -162,14 +162,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">写了一个基于 art 的静态网页模块化项目</h1>
+      <h1 class="post-title">使用 Whoogle 自建搜索网站</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-05-24 </span>
+        <span class="post-time"> 2021-05-30 </span>
         <div class="post-category">
-            <a href="/categories/node/"> node </a>
+            <a href="/categories/whoogle/"> whoogle </a>
             </div>
-          <span class="more-meta"> 约 674 字 </span>
+          <span class="more-meta"> 约 694 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
@@ -177,36 +177,19 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#背景">背景</a></li>
-        <li><a href="#简单的技术选型">简单的技术选型</a></li>
-        <li><a href="#开发">开发</a></li>
-        <li><a href="#结语">结语</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
+  <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
 </div>
 
     <div class="post-content">
-      <p>最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 <a href="https://github.com/bigshans/art-html">https://github.com/bigshans/art-html</a> 。</p>
-<h2 id="背景">背景</h2>
-<p>公司的主页是用静态网页写的，主要是用来展示，但是分很多个页面，页面间有几个公用的组件。首先不考虑用 Vue 或者 React ，杀鸡焉用牛刀是其一，其二是首页需要做 SEO ，但是特意用一个 Nuxtjs 的又不太想（不需要那么多东西），我的 Leader 不太想再弄一个服务去跑这个东西，因为原来就直接丢到 OSS 上不需要管，根本不用考虑它对服务器的影响（反正又是找阿里就行了）。考虑了几种方案，感觉还是用传统的模板引擎最好，因为返回给前端的时候直接是生成好的页面，SEO 肯定没问题，问题是不开一个服务怎么弄呢？那就提前生成好就行了。</p>
-<p>我们可以用模板引擎将所有模板编译成 html ，然后写入文件。嗯，其实就是这么个思路。</p>
-<h2 id="简单的技术选型">简单的技术选型</h2>
-<p>首先引擎用 <code>art</code> ，因为我们公司在用，无门槛上手。然后 <code>art</code> 速度也很快，所以没有什么争议。</p>
-<p>然后再写一个开发时用到的服务，我直接用 <code>express</code> ，用 <code>koa</code> 也没有关系，随你喜欢。</p>
-<p>中间再加一个热加载功能，就是模板有变动，页面也随之自动 <code>reload</code> 。用到 <code>ws</code> 和 <code>cheerio</code> 。</p>
-<p>其中还要涉及到文件读写，我就又用了 <code>fs-extra</code> 。</p>
-<h2 id="开发">开发</h2>
-<p>前后大概花了一天时间，然后我还摸了会儿鱼。</p>
-<p>编译模板部分理一下逻辑：作为组件的模板不编译，作为入口的 <code>html</code> 需要编译。于是做了个简单的判断。</p>
-<p>热加载功能需要在每个页面追加一段 <code>script</code> 代码，所以不能简单的使用 <code>static</code> ，需要判断是 <code>html</code> 就插入代码。解析操作编译好的代码就使用 <code>cheerio</code> 了。</p>
-<h2 id="结语">结语</h2>
-<p>整体来说还是很有意思的，最后拿去交差了。我在搜索的时候也发现有些人有同样的问题，不过看时间也过去挺久了，不知道他们有没有解决。总之，我也把我这个解决方案放在这里了，希望能对你有帮助。</p>
+      <p>准确来说，Whoogle 是一个元搜索引擎，他主要将 Google 的搜索结果过滤，并去除掉其中的隐私追踪部分。与 Whoogle 差不多的另一个网站框架是 SearX ，两者都是自建的元搜索引擎，二者代码都开源到了 Github 上。</p>
+<p>Whoogle 与 SearX 相比，更加简单，功能也更加少，且只专注于 Google 的结果过滤。二者都是非常不错的框架，我更倾向于使用简单的 Whoogle 。</p>
+<p>网站: <a href="https://whoogle.sdf.org">https://whoogle.sdf.org</a></p>
+<p>Github: <a href="https://github.com/benbusby/whoogle-search">https://github.com/benbusby/whoogle-search</a></p>
+<p>我并没有用上面那个网站，而是自己搭建了一个，毕竟我手头还有一台服务器空着。我自己的网站是不公开的。官方的安装手册，提供了很多种安装方式，基本上就是几行命令的事情，你自己在配个 nginx 就很完美。不过，官方给的都是 root 用户下进行操作，有条件的话最好切换到非 root 用户下进行。</p>
+<p>然后就是搜索页，它提供的打开策略我是怎么也不舒服的，于是我写了个油猴脚本专门去处理这个问题，使得它另开标签页打开，而下一页不会打开新表情页。链接我放到下面，请随意取用，自建网站的同学可以修改一下网址匹配和图标。</p>
+<p>当然，出于某些你懂的原因，你要是自建的话，你得确保 Whoogle 能访问 Google 。</p>
+<p>最后说一下我为什么要这样绕着用 Google 。因为毫无疑问， Google 的搜索是真的不错，我用过 Duckduckgo ，还有其他几个搜索引擎， Google 给我的结果确实是最舒服的。因此，我还尝试了 StartPage 。但是 StartPage 对比 Duckduckgo 来说问题要更多，我使用它搜索莫名其妙地被拦截了好多次，这又迫使我改变我的默认搜索引擎。之所以不用 Google 是因为，第一，我是没有魔法的情况下用不了，第二，我讨厌各种无处不在的追踪。因为第二点情况，我先放弃了 Chrome ，改用 Chromium ，最后迁移到 Firefox 上，放弃使用 Google 搜索，也只是我在对抗隐私追踪的其中一步。现实中会有很多地方诱惑我们放弃对隐私的坚持，但是，只要坚持，你就会发现，即使不放弃隐私，也并不会让我们生活更糟。</p>
+<p>脚本地址： <a href="https://gist.github.com/bigshans/ab4b797742b4171817436758784d72c7">https://gist.github.com/bigshans/ab4b797742b4171817436758784d72c7</a></p>
 
     </div>
 
@@ -218,7 +201,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2021-05-24
+        2021-05-30
         
     </span>
   </p>
@@ -227,16 +210,15 @@
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/art-html/">art-html</a>
+          <a href="/tags/whoogle/">whoogle</a>
+          <a href="/tags/searx/">searx</a>
+          <a href="/tags/google/">google</a>
+          <a href="/tags/%E6%90%9C%E7%B4%A2/">搜索</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/whoogle-self-host/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">使用 Whoogle 自建搜索网站</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/post/troubleshoot-pleroma/">
-            <span class="next-text nav-default">Pleroma 安装排雷</span>
+        
+        <a class="next" href="/post/art-html/">
+            <span class="next-text nav-default">写了一个基于 art 的静态网页模块化项目</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
