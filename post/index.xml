@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 30 May 2021 03:40:00 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Jun 2021 09:04:01 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Postgresql 创建用户和数据库并赋权</title>
+      <link>https://bigshans.github.io/post/postgresql-tricks-1/</link>
+      <pubDate>Tue, 08 Jun 2021 09:04:01 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/postgresql-tricks-1/</guid>
+      <description>由于我经常忘记这个该怎么写了（因为不经常用），所以特地记录誊写一篇用来记忆。 创建新的数据库用户 先进入到 postgres 用户下，然后用运行 psql 进入数据库的命令</description>
+    </item>
+    
     <item>
       <title>使用 Whoogle 自建搜索网站</title>
       <link>https://bigshans.github.io/post/whoogle-self-host/</link>
