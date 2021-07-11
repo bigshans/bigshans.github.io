@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>flex 布局简说 - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="最近同事开分享会讲到了一点 flex 布局相关的东西，但是讲得很仓促，于是决定私下里整理一下，也算是对 flex 知识的总结。内容基本参考了 MDN 还有 W3C 文档的内容，" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.85.0 with theme even" />
+
+
+<link rel="canonical" href="https://bigshans.github.io/post/flex/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.5313be20e771f12fdb03c7d968e0d47139ed80cf735679b71f2a09bc05c293e8.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="flex 布局简说" />
+<meta property="og:description" content="最近同事开分享会讲到了一点 flex 布局相关的东西，但是讲得很仓促，于是决定私下里整理一下，也算是对 flex 知识的总结。内容基本参考了 MDN 还有 W3C 文档的内容，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/flex/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-07-10T22:35:25+08:00" />
+<meta property="article:modified_time" content="2021-07-10T22:35:25+08:00" />
+
+<meta itemprop="name" content="flex 布局简说">
+<meta itemprop="description" content="最近同事开分享会讲到了一点 flex 布局相关的东西，但是讲得很仓促，于是决定私下里整理一下，也算是对 flex 知识的总结。内容基本参考了 MDN 还有 W3C 文档的内容，"><meta itemprop="datePublished" content="2021-07-10T22:35:25+08:00" />
+<meta itemprop="dateModified" content="2021-07-10T22:35:25+08:00" />
+<meta itemprop="wordCount" content="1679">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="flex 布局简说"/>
+<meta name="twitter:description" content="最近同事开分享会讲到了一点 flex 布局相关的东西，但是讲得很仓促，于是决定私下里整理一下，也算是对 flex 知识的总结。内容基本参考了 MDN 还有 W3C 文档的内容，"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">flex 布局简说</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-07-10 </span>
+        <div class="post-category">
+            <a href="/categories/css/"> css </a>
+            </div>
+          <span class="more-meta"> 约 1679 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#flex-布局的盒子模型与术语">flex 布局的盒子模型与术语</a></li>
+        <li><a href="#flex-direction-和-flex-wrap"><code>flex-direction</code> 和 <code>flex-wrap</code></a></li>
+        <li><a href="#flex-grow-flex-shrink--flex-basis--flex-item-的属性"><code>flex-grow</code> 、<code>flex-shrink</code> 、 <code>flex-basis</code> —— flex item 的属性</a>
+          <ul>
+            <li><a href="#flex-grow"><code>flex-grow</code></a></li>
+            <li><a href="#flex-shrink"><code>flex-shrink</code></a></li>
+            <li><a href="#flex-basis"><code>flex-basis</code></a></li>
+            <li><a href="#flex-简写"><code>flex</code> 简写</a></li>
+          </ul>
+        </li>
+        <li><a href="#aligin-items-和-justify-content"><code>aligin-items</code> 和 <code>justify-content</code></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+    <div class="post-content">
+      <p>最近同事开分享会讲到了一点 flex 布局相关的东西，但是讲得很仓促，于是决定私下里整理一下，也算是对 flex 知识的总结。内容基本参考了 MDN 还有 W3C 文档的内容，当然，并不是面向初学者的内容，是知识整合。</p>
+<h2 id="flex-布局的盒子模型与术语">flex 布局的盒子模型与术语</h2>
+<p>当我们设置 <code>display: flex</code> 或 <code>display: inline-flex</code> 时，我们就生成了一个 flex 容器。 flex 容器的子元素称之为 <em>flex item</em> ，并且子元素使用 flex 布局。我们来看一下 flex 容器的盒子模型。</p>
+<p><img src="https://www.w3.org/TR/css-flexbox/images/flex-direction-terms.svg" alt=""></p>
+<p>我们来规定一下这些术语：</p>
+<ul>
+<li>main axis/主轴：就是 flex 容器的方向，由 <code>flex-direction</code> 决定。可以取四个值：<code>row</code>、<code>row-reverse</code>、<code>column</code>、<code>column-reverse</code>。</li>
+<li>main size/主尺寸：就是 flex 容器的大小，由容器的宽高或 item 的宽高决定。</li>
+<li>cross axis/交叉轴：垂直于主轴的轴线，如果主轴是水平的，交叉轴就是垂直的，反之亦然。</li>
+<li>cross size/交叉尺寸：与主尺寸相对，当主尺寸为容器的宽时，交叉尺寸则为高，反之亦然。</li>
+<li>main start/main end/cross start/cross end/起始线/终止线：代表 flex 容器布局开始和结束的地方， flex 布局不会随着书写系统的改变而改变。</li>
+</ul>
+<p>理解盒子模型是我们理解 flex 布局最关键的一步。</p>
+<h2 id="flex-direction-和-flex-wrap"><code>flex-direction</code> 和 <code>flex-wrap</code></h2>
+<p><code>flex-direction</code> 定义了 flex 容器的布局方向，它的四个方向分别对应：</p>
+<ul>
+<li><code>row</code> ，从左到右。</li>
+<li><code>row-reverse</code> ，从右到左。</li>
+<li><code>column</code> ，从上到下。</li>
+<li><code>column-reverse</code> ，从下到上。</li>
+</ul>
+<p><code>flex-wrap</code> 定义了当 flex item 溢出时应该如何处理，默认为 <code>nowrap</code> ，即不折行直接溢出，也可以使用 <code>wrap</code> 折行处理。</p>
+<p>CSS 还提供了简写 <code>flex-flow</code> 用来同时设置 <code>flex-direction</code> 和 <code>flex-wrap</code> 。</p>
+<h2 id="flex-grow-flex-shrink--flex-basis--flex-item-的属性"><code>flex-grow</code> 、<code>flex-shrink</code> 、 <code>flex-basis</code> —— flex item 的属性</h2>
+<p><code>flex-grow</code> 、<code>flex-shrink</code> 和 <code>flex-basis</code> 这三个属性有一个简写—— <code>flex</code> 。</p>
+<p>想要熟练使用 <code>flex</code> 属性，就必须要弄懂 <code>flex-grow</code> 、<code>flex-shrink</code> 和 <code>flex-basis</code> 。</p>
+<h3 id="flex-grow"><code>flex-grow</code></h3>
+<p><code>flex-grow</code> 生效于当 flex 容器主尺寸大于各个 flex item 尺寸之和时，默认值为 0 。当 flex 容器主尺寸大于各个 flex item 尺寸之和时，浏览器会将剩余空间按照各个 flex item 的 <code>flex-grow</code> 设定分配给各个 flex item 。例如，当  flex 容器有 3 个子元素，若 3 个子元素的 <code>flex-grow</code> 都设定为 1 时，那么浏览器就会将剩下的空间按照 1:1:1 比例进行分配，追加到子元素后面。</p>
+<h3 id="flex-shrink"><code>flex-shrink</code></h3>
+<p><code>flex-shrink</code> 生效于当 flex 容器主尺寸小于各个 flex item 尺寸之和时，默认值为 0 。当 flex 容器主尺寸小于各个 flex item 尺寸之和时，浏览器会按照子元素 <code>flex-shrink</code> 设定进行分配缩放。例如，当  flex 容器有 3 个子元素，若 flex 容器为 100px ，子元素的 <code>flex-shrink</code> 分别设定为 A 、B 元素 1 ，C 元素 2 ，三个元素宽度都为 60px ，<code>3*60=180px</code> ，溢出容器 80px 。我们计算总权重为 <code>1*60+1*60+2*60=240</code> ，因此 A 、B 元素需要减少 <code>1*60/240*80=20px</code> ，C 元素需要减少 <code>2*60/240*80=40px</code> ，最终 A 、B 为 40px ，C 为 20px 。</p>
+<p>关于 <code>flex-shrink</code> 和 <code>flex-grow</code> 的具体计算还请参看这篇文章 <a href="https://zhuanlan.zhihu.com/p/24372279"></a> 。</p>
+<h3 id="flex-basis"><code>flex-basis</code></h3>
+<p><code>flex-basis</code> 设定了 flex item 在主轴方向上初始大小，默认为 <code>auto</code> ，即与 flex item 自己的大小相同。当一个元素同时被设置了 <code>flex-basis</code> (除值为 <code>auto</code> 外) 和 <code>width</code> (或者在 <code>flex-direction: column</code> 情况下设置了<code>height</code>) ， <code>flex-basis</code> 具有更高的优先级。</p>
+<h3 id="flex-简写"><code>flex</code> 简写</h3>
+<p><code>flex</code> 简写形式允许你把三个数值按这个顺序书写 —— <code>flex-grow</code>，<code>flex-shrink</code> ，<code>flex-basis</code> 。</p>
+<p>我们可以使用一个，两个或三个值来指定 <code>flex</code> 属性。</p>
+<p>简写形式如下：</p>
+<pre><code class="language-css">/* 关键字值 */
+flex: auto;
+flex: initial;
+flex: none;
+
+/* 一个值, 无单位数字: flex-grow */
+flex: 2;
+
+/* 一个值, width/height: flex-basis */
+flex: 10em;
+flex: 30px;
+flex: min-content;
+
+/* 两个值: flex-grow | flex-basis */
+flex: 1 30px;
+
+/* 两个值: flex-grow | flex-shrink */
+flex: 2 2;
+
+/* 三个值: flex-grow | flex-shrink | flex-basis */
+flex: 2 2 10%;
+
+/*全局属性值 */
+flex: inherit;
+flex: initial;
+flex: unset;
+</code></pre>
+<p>语法规则如下：</p>
+<p><strong>单值语法</strong>: 值必须为以下其中之一:</p>
+<ul>
+<li>一个无单位数: 它会被当作 <code>flex:&lt;number&gt; 1 0</code> ； <code>&lt;flex-shrink&gt;</code> 的值被假定为1，然后 <code>&lt;flex-basis&gt;</code> 的值被假定为 <code>0</code> 。</li>
+<li>一个有效的宽度值: 它会被当作 <code>&lt;flex-basis&gt;</code> 的值</li>
+<li>关键字<code>none</code>，<code>auto</code>或<code>initial</code>.</li>
+</ul>
+<p><strong>双值语法</strong>: 第一个值必须为一个无单位数，并且它会被当作 <code>&lt;flex-grow&gt;</code> 的值。第二个值必须为以下之一：</p>
+<ul>
+<li>一个无单位数：它会被当作 <code>&lt;flex-shrink&gt;</code> 的值。</li>
+<li>一个有效的宽度值: 它会被当作 <code>&lt;flex-basis&gt;</code> 的值。</li>
+</ul>
+<p><strong>三值语法:</strong></p>
+<ul>
+<li>第一个值必须为一个无单位数，并且它会被当作 <code>&lt;flex-grow&gt;</code> 的值。</li>
+<li>第二个值必须为一个无单位数，并且它会被当作 <code>&lt;flex-shrink&gt;</code> 的值。</li>
+<li>第三个值必须为一个有效的宽度值， 并且它会被当作 <code>&lt;flex-basis&gt;</code> 的值。</li>
+</ul>
+<p>所以我们常用的 <code>flex: 1</code> 其实是 <code>flex: 1 1 0</code> 。</p>
+<h2 id="aligin-items-和-justify-content"><code>aligin-items</code> 和 <code>justify-content</code></h2>
+<p>这两个属性是老朋友了。</p>
+<p><code>aligin-items</code> 是设定在交叉轴对齐的方式，默认是 <code>stretch</code> ，这就是为什么flex元素会默认被拉伸到最高元素的高度。</p>
+<p><code>justify-content</code> 属性用来使元素在主轴方向上对齐，主轴方向是通过 <code>flex-direction</code> 设置的方向。初始值是<code>flex-start</code>，元素从容器的起始线排列。但是你也可以把值设置为<code>flex-end</code>，从终止线开始排列，或者<code>center</code>，在中间排列。</p>
+<p>主要内容就是这些。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-07-10
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/v8-study-1/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">v8 学习（一）——编译个v8 好麻烦啊！</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/postgresql-tricks-1/">
+            <span class="next-text nav-default">Postgresql 创建用户和数据库并赋权</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

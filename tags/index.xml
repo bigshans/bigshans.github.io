@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 08 Jun 2021 09:04:01 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Jul 2021 15:14:22 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>v8</title>
+      <link>https://bigshans.github.io/tags/v8/</link>
+      <pubDate>Sun, 11 Jul 2021 15:14:22 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/v8/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Postgresql</title>
       <link>https://bigshans.github.io/tags/postgresql/</link>

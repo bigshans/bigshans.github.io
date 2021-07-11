@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>v8 on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/v8/</link>
+    <description>Recent content in v8 on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Sun, 11 Jul 2021 15:14:22 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/v8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>v8 学习（一）——编译个v8 好麻烦啊！</title>
+      <link>https://bigshans.github.io/post/v8-study-1/</link>
+      <pubDate>Sun, 11 Jul 2021 15:14:22 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/v8-study-1/</guid>
+      <description>想要学习一下 v8 ，于是就尝试了一下编译 v8 源码，说实话，以国内的网络去做这件事超级麻烦。在折腾一番后，最后决定直接在我的海外服务器上进行编译。 安</description>
+    </item>
+    
+  </channel>
+</rss>
