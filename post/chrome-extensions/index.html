@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>如何编写一个 Chrome 扩展 - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="最近工作需要用到 Chrome 扩展，于是就特意学习了一下。起初，我以为 Chrome 扩展权限挺大，操作起来应该挺方便的，但是，实际情况各种权限需要申请，而且有些操作" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.87.0 with theme even" />
+
+
+<link rel="canonical" href="https://bigshans.github.io/post/chrome-extensions/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.184da86d2a45601961fbb04a2dc55252670675106caf6648087f1edd7259879a.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="如何编写一个 Chrome 扩展" />
+<meta property="og:description" content="最近工作需要用到 Chrome 扩展，于是就特意学习了一下。起初，我以为 Chrome 扩展权限挺大，操作起来应该挺方便的，但是，实际情况各种权限需要申请，而且有些操作" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/chrome-extensions/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-08-15T14:48:54+08:00" />
+<meta property="article:modified_time" content="2021-08-15T14:48:54+08:00" />
+
+<meta itemprop="name" content="如何编写一个 Chrome 扩展">
+<meta itemprop="description" content="最近工作需要用到 Chrome 扩展，于是就特意学习了一下。起初，我以为 Chrome 扩展权限挺大，操作起来应该挺方便的，但是，实际情况各种权限需要申请，而且有些操作"><meta itemprop="datePublished" content="2021-08-15T14:48:54+08:00" />
+<meta itemprop="dateModified" content="2021-08-15T14:48:54+08:00" />
+<meta itemprop="wordCount" content="1065">
+<meta itemprop="keywords" content="javascript,chrome," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何编写一个 Chrome 扩展"/>
+<meta name="twitter:description" content="最近工作需要用到 Chrome 扩展，于是就特意学习了一下。起初，我以为 Chrome 扩展权限挺大，操作起来应该挺方便的，但是，实际情况各种权限需要申请，而且有些操作"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">如何编写一个 Chrome 扩展</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-08-15 </span>
+        <div class="post-category">
+            <a href="/categories/javascript/"> javascript </a>
+            </div>
+          <span class="more-meta"> 约 1065 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#编写-mainfestjson">编写 mainfest.json</a></li>
+        <li><a href="#编写-backgroundjs">编写 background.js</a></li>
+        <li><a href="#编写-popuphtml-和-popupjs">编写 popup.html 和 popup.js</a></li>
+        <li><a href="#编写-optionshtml-与-optionsjs">编写 options.html 与 options.js</a></li>
+        <li><a href="#结语">结语</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+    <div class="post-content">
+      <p>最近工作需要用到 Chrome 扩展，于是就特意学习了一下。起初，我以为 Chrome 扩展权限挺大，操作起来应该挺方便的，但是，实际情况各种权限需要申请，而且有些操作还要不停的绕过，写起来也是挺烦的。</p>
+<p>不过我还是决定记录一下，毕竟是个挺有用的开发能力。</p>
+<p>以 Chrome 官方的教程为例。</p>
+<h2 id="编写-mainfestjson">编写 mainfest.json</h2>
+<p>此文件相当于扩展程序的投名状，用于描述扩展的名字、图标、功能简介、权限、脚本位置等等。</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;Getting Started Example&quot;,
+  &quot;description&quot;: &quot;Build an Extension!&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;manifest_version&quot;: 3,
+  &quot;background&quot;: {
+    &quot;service_worker&quot;: &quot;background.js&quot;
+  },
+  &quot;permissions&quot;: [&quot;storage&quot;, &quot;activeTab&quot;, &quot;scripting&quot;],
+  &quot;action&quot;: {
+    &quot;default_popup&quot;: &quot;popup.html&quot;,
+    &quot;default_icon&quot;: {
+      &quot;16&quot;: &quot;/images/get_started16.png&quot;,
+      &quot;32&quot;: &quot;/images/get_started32.png&quot;,
+      &quot;48&quot;: &quot;/images/get_started48.png&quot;,
+      &quot;128&quot;: &quot;/images/get_started128.png&quot;
+    }
+  },
+  &quot;icons&quot;: {
+    &quot;16&quot;: &quot;/images/get_started16.png&quot;,
+    &quot;32&quot;: &quot;/images/get_started32.png&quot;,
+    &quot;48&quot;: &quot;/images/get_started48.png&quot;,
+    &quot;128&quot;: &quot;/images/get_started128.png&quot;
+  },
+  &quot;options_page&quot;: &quot;options.html&quot;
+}
+</code></pre>
+<p>教程中使用的是 v3 版本，现在网上搜到的很多是 v2 版本，这个区别要注意。</p>
+<p>具体需要什么权限，请到 Chrome 扩展 API 那里查看。你需要使用什么 API 就申请什么权限。</p>
+<p>这里还有几个没有提到的选项，也是很重要的：</p>
+<p><code>host_permissions</code>，控制扩展生效的网址，值是个字符串数组。</p>
+<p><code>content_scripts</code>，控制扩展在特定网址下嵌入到文档的资源，值是个字符串对象，其中 <code>matches</code> 是个字符串数组，是必填内容， <code>js</code> 、 <code>css</code> 等是选填的。</p>
+<h2 id="编写-backgroundjs">编写 background.js</h2>
+<p>此脚本的位置对应的就是在 mainfest.json 中的 <code>background.service_worker</code> 。</p>
+<p>此脚本位于后台运行，没有界面。</p>
+<pre><code class="language-javascript">let color = '#3aa757';
+
+chrome.runtime.onInstalled.addListener(() =&gt; {
+  chrome.storage.sync.set({ color });
+  console.log('Default background color set to %cgreen', `color: ${color}`);
+});
+</code></pre>
+<h2 id="编写-popuphtml-和-popupjs">编写 popup.html 和 popup.js</h2>
+<p>我们在 <code>action.default_popup</code> 生命了该页面的位置。跟编写一般的 HTML 页面不同的是， popup.html 不能内嵌 js ，只能使用 script 标签引用。</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;button.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button id=&quot;changeColor&quot;&gt;&lt;/button&gt;
+    &lt;script src=&quot;popup.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>不要写 title ，因为它不是一个网页。</p>
+<p>popup.js 是由 popup.html 引用的，它不需要在 mainfest.json 里再度声明。</p>
+<pre><code class="language-javascript">// Initialize butotn with users's prefered color
+let changeColor = document.getElementById(&quot;changeColor&quot;);
+
+chrome.storage.sync.get(&quot;color&quot;, ({ color }) =&gt; {
+  changeColor.style.backgroundColor = color;
+});
+
+// When the button is clicked, inject setPageBackgroundColor into current page
+changeColor.addEventListener(&quot;click&quot;, async () =&gt; {
+  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    function: setPageBackgroundColor,
+  });
+});
+
+// The body of this function will be execuetd as a content script inside the
+// current page
+function setPageBackgroundColor() {
+  chrome.storage.sync.get(&quot;color&quot;, ({ color }) =&gt; {
+    document.body.style.backgroundColor = color;
+  });
+}
+</code></pre>
+<p>这里用了新的 api 去获取当前页。</p>
+<pre><code class="language-javascript">let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+</code></pre>
+<p><code>chrome.scripting.executeScript</code> 是像页面内注入函数，作用与 <code>content_scripts</code> 是一样的。</p>
+<h2 id="编写-optionshtml-与-optionsjs">编写 options.html 与 options.js</h2>
+<p>位置对应 <code>options_page</code> 字段，编写与 popup 大致相同，编写完成后菜单会多一个名叫选项的选项，点击之后就可进入选项页。</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;button.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;buttonDiv&quot;&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;p&gt;Choose a different background color!&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+  &lt;script src=&quot;options.js&quot;&gt;&lt;/script&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="language-javascript">let page = document.getElementById(&quot;buttonDiv&quot;);
+let selectedClassName = &quot;current&quot;;
+const presetButtonColors = [&quot;#3aa757&quot;, &quot;#e8453c&quot;, &quot;#f9bb2d&quot;, &quot;#4688f1&quot;];
+
+// Reacts to a button click by marking marking the selected button and saving
+// the selection
+function handleButtonClick(event) {
+  // Remove styling from the previously selected color
+  let current = event.target.parentElement.querySelector(
+    `.${selectedClassName}`
+  );
+  if (current &amp;&amp; current !== event.target) {
+    current.classList.remove(selectedClassName);
+  }
+
+  // Mark the button as selected
+  let color = event.target.dataset.color;
+  event.target.classList.add(selectedClassName);
+  chrome.storage.sync.set({ color });
+}
+
+// Add a button to the page for each supplied color
+function constructOptions(buttonColors) {
+  chrome.storage.sync.get(&quot;color&quot;, (data) =&gt; {
+    let currentColor = data.color;
+
+    // For each color we were provided…
+    for (let buttonColor of buttonColors) {
+      // …crate a button with that color…
+      let button = document.createElement(&quot;button&quot;);
+      button.dataset.color = buttonColor;
+      button.style.backgroundColor = buttonColor;
+
+      // …mark the currently selected color…
+      if (buttonColor === currentColor) {
+        button.classList.add(selectedClassName);
+      }
+
+      // …and register a listener for when that button is clicked
+      button.addEventListener(&quot;click&quot;, handleButtonClick);
+      page.appendChild(button);
+    }
+  });
+}
+
+// Initialize the page by constructing the color options
+constructOptions(presetButtonColors);
+</code></pre>
+<h2 id="结语">结语</h2>
+<p>我个人仅仅用了一部分进行开发，由于页面编写需要一些逻辑和效果，我直接使用 svelte 框架融合进项目里进行开发， build 后的产物还是十分轻量的。如果页面和逻辑比较复杂的，我推荐还是使用一些库为好。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-08-15
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/javascript/">javascript</a>
+          <a href="/tags/chrome/">chrome</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/anbox-install-guide/">
+            <span class="next-text nav-default">安装 Anbox for Arch</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
