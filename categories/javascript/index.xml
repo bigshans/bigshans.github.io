@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 15 Aug 2021 14:48:54 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Aug 2021 14:52:42 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何写一个深拷贝函数</title>
+      <link>https://bigshans.github.io/post/how-to-write-a-deep-copy-function/</link>
+      <pubDate>Sun, 22 Aug 2021 14:52:42 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/how-to-write-a-deep-copy-function/</guid>
+      <description>跟小伙伴们讨论的时候发现，es6 的解构其实和 Object.assign 一样属于是浅拷贝。那么一个深拷贝到底该怎么写呢？我个人阅读了一下 lodash 、 rambda 、 rfdc 的实现，发现思想其实</description>
+    </item>
+    
     <item>
       <title>如何编写一个 Chrome 扩展</title>
       <link>https://bigshans.github.io/post/chrome-extensions/</link>

@@ -7,22 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 15 Aug 2021 14:48:54 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Aug 2021 14:52:42 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>javascript</title>
+      <link>https://bigshans.github.io/tags/javascript/</link>
+      <pubDate>Sun, 22 Aug 2021 14:52:42 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>深拷贝</title>
+      <link>https://bigshans.github.io/tags/%E6%B7%B1%E6%8B%B7%E8%B4%9D/</link>
+      <pubDate>Sun, 22 Aug 2021 14:52:42 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/%E6%B7%B1%E6%8B%B7%E8%B4%9D/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>chrome</title>
       <link>https://bigshans.github.io/tags/chrome/</link>
       <pubDate>Sun, 15 Aug 2021 14:48:54 +0800</pubDate>
       
       <guid>https://bigshans.github.io/tags/chrome/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://bigshans.github.io/tags/javascript/</link>
-      <pubDate>Sun, 15 Aug 2021 14:48:54 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     
