@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>如何写一个深拷贝函数 - Bigshans&#39; Blog</title>
+  <title>函数式的骨感 - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="跟小伙伴们讨论的时候发现，es6 的解构其实和 Object.assign 一样属于是浅拷贝。那么一个深拷贝到底该怎么写呢？我个人阅读了一下 lodash 、 rambda 、 rfdc 的实现，发现思想其实" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="最近读了点 rambda 的源码。函数式是个很诱人的概念，借助函数式，你可以以十分数学的方式解决一些问题。虽然如此，函数式对于现实来说仍然过于抽象，如果我" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.87.0 with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/how-to-write-a-deep-copy-function/" />
+<link rel="canonical" href="https://bigshans.github.io/post/function-comment/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,20 +40,20 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="如何写一个深拷贝函数" />
-<meta property="og:description" content="跟小伙伴们讨论的时候发现，es6 的解构其实和 Object.assign 一样属于是浅拷贝。那么一个深拷贝到底该怎么写呢？我个人阅读了一下 lodash 、 rambda 、 rfdc 的实现，发现思想其实" />
+<meta property="og:title" content="函数式的骨感" />
+<meta property="og:description" content="最近读了点 rambda 的源码。函数式是个很诱人的概念，借助函数式，你可以以十分数学的方式解决一些问题。虽然如此，函数式对于现实来说仍然过于抽象，如果我" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/how-to-write-a-deep-copy-function/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-08-22T14:52:42+08:00" />
-<meta property="article:modified_time" content="2021-08-22T14:52:42+08:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/function-comment/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-08-24T17:22:43+08:00" />
+<meta property="article:modified_time" content="2021-08-24T17:22:43+08:00" />
 
-<meta itemprop="name" content="如何写一个深拷贝函数">
-<meta itemprop="description" content="跟小伙伴们讨论的时候发现，es6 的解构其实和 Object.assign 一样属于是浅拷贝。那么一个深拷贝到底该怎么写呢？我个人阅读了一下 lodash 、 rambda 、 rfdc 的实现，发现思想其实"><meta itemprop="datePublished" content="2021-08-22T14:52:42+08:00" />
-<meta itemprop="dateModified" content="2021-08-22T14:52:42+08:00" />
-<meta itemprop="wordCount" content="626">
-<meta itemprop="keywords" content="深拷贝,javascript," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="如何写一个深拷贝函数"/>
-<meta name="twitter:description" content="跟小伙伴们讨论的时候发现，es6 的解构其实和 Object.assign 一样属于是浅拷贝。那么一个深拷贝到底该怎么写呢？我个人阅读了一下 lodash 、 rambda 、 rfdc 的实现，发现思想其实"/>
+<meta itemprop="name" content="函数式的骨感">
+<meta itemprop="description" content="最近读了点 rambda 的源码。函数式是个很诱人的概念，借助函数式，你可以以十分数学的方式解决一些问题。虽然如此，函数式对于现实来说仍然过于抽象，如果我"><meta itemprop="datePublished" content="2021-08-24T17:22:43+08:00" />
+<meta itemprop="dateModified" content="2021-08-24T17:22:43+08:00" />
+<meta itemprop="wordCount" content="592">
+<meta itemprop="keywords" content="函数式,随笔,javascript,rambda," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="函数式的骨感"/>
+<meta name="twitter:description" content="最近读了点 rambda 的源码。函数式是个很诱人的概念，借助函数式，你可以以十分数学的方式解决一些问题。虽然如此，函数式对于现实来说仍然过于抽象，如果我"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -170,14 +170,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">如何写一个深拷贝函数</h1>
+      <h1 class="post-title">函数式的骨感</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-08-22 </span>
+        <span class="post-time"> 2021-08-24 </span>
         <div class="post-category">
-            <a href="/categories/javascript/"> javascript </a>
+            <a href="/categories/%E5%87%BD%E6%95%B0%E5%BC%8F/"> 函数式 </a>
             </div>
-          <span class="more-meta"> 约 626 字 </span>
+          <span class="more-meta"> 约 592 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
@@ -189,8 +189,9 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#基本思路">基本思路</a></li>
-        <li><a href="#编写">编写</a></li>
+        <li><a href="#不可变与无副作用">不可变与无副作用</a></li>
+        <li><a href="#递归与消失的尾递归">递归与消失的尾递归</a></li>
+        <li><a href="#命令式编程的辅料">命令式编程的辅料</a></li>
       </ul>
     </li>
   </ul>
@@ -198,90 +199,13 @@
 </div>
 
     <div class="post-content">
-      <p>跟小伙伴们讨论的时候发现，es6 的解构其实和 <code>Object.assign</code> 一样属于是浅拷贝。那么一个深拷贝到底该怎么写呢？我个人阅读了一下 lodash 、 rambda 、 rfdc 的实现，发现思想其实都是一样，由于 rfdc 放弃了对一些内容的支持，使得它的速度飞快，但这些内容实际上我是需要的，所以 rfdc 不考虑。剩下两个实现思想基本上是一样的，但是 lodash 的实现内容很多，没有 rambda 简洁，所以我以 rambda 为蓝本自己写了一个深拷贝函数。</p>
-<h2 id="基本思路">基本思路</h2>
-<p>首先，不同数据类型不同的方式处理，我们使用递归的方法依次遍历。这里除了基本类型以外，其他的诸如数组、对象、日期、正则等等，都需要特殊处理。这里还有个问题，就是循环依赖。我们可以各个节点的对象缓存起来，然后在每次遍历前进行依次检查，发现存在循环依赖，就直接返回。我们来看看代码。</p>
-<h2 id="编写">编写</h2>
-<p>我们需要一个方法来检测数据类型：</p>
-<pre><code class="language-javascript">function type(val) {
-  return val === 'null' ?
-    'Null'
-    :val === undefined
-    ? 'Undefined'
-    : Object.prototype.toString.call(val).slice(8, -1);
-}
-</code></pre>
-<p>然后是主要的代码：</p>
-<pre><code class="language-javascript">function clone(source) {
-  return source == null ? source : _clone(source);
-}
-
-function _cloneRegExp(pattern) {
-  return new RegExp(pattern.source,
-    (pattern.global     ? 'g' : '') +
-    (pattern.ignoreCase ? 'i' : '') +
-    (pattern.multiline  ? 'm' : '') +
-    (pattern.sticky     ? 'y' : '') +
-    (pattern.unicode    ? 'u' : ''));
-}
-
-function _clone(value, refFrom, refTo) {
-  function copy(copiedValue) {
-    const len = refFrom.length;
-    let idx = 0;
-    while (idx &lt; len) {
-      if (value === refFrom[idx]) {
-        return refTo[idx];
-      }
-      idx += 1;
-    }
-    refFrom[idx] = value;
-    refTo[idx] = copiedValue;
-    for (const key in value) {
-      if (value.hasOwnProperty(key)) {
-        copiedValue[key] = _clone(value[key], refFrom, refTo, true);
-      }
-    }
-    return copiedValue;
-  };
-  switch (type(value)) {
-    case 'Object':  return copy(Object.create(Object.getPrototypeOf(value)));
-    case 'Array':   return copy([]);
-    case 'Date':    return new Date(value.valueOf());
-    case 'RegExp': return _cloneRegExp(value);
-    case 'Int8Array':
-    case 'Uint8Array':
-    case 'Uint8ClampedArray':
-    case 'Int16Array':
-    case 'Uint16Array':
-    case 'Int32Array':
-    case 'Uint32Array':
-    case 'Float32Array':
-    case 'Float64Array':
-    case 'BigInt64Array':
-    case 'BigUint64Array':
-      return value.slice();
-    default:        return value;
-  }
-}
-</code></pre>
-<p><code>copy</code> 函数放在内部影响不大。</p>
-<pre><code class="language-javascript">    const len = refFrom.length;
-    let idx = 0;
-    while (idx &lt; len) {
-      if (value === refFrom[idx]) {
-        return refTo[idx];
-      }
-      idx += 1;
-    }
-    refFrom[idx] = value;
-    refTo[idx] = copiedValue;
-</code></pre>
-<p>这段代码是检测循环依赖的，如果没有循环依赖则缓存对象键值。</p>
-<p>下面的数组处理实际上是在处理 <code>Buffer</code> 。</p>
-<pre><code class="language-javascript">    case 'Object':  return copy(Object.create(Object.getPrototypeOf(value)));
-</code></pre>
-<p>这里还弄了原型链，基本上非常完善了。</p>
+      <p>最近读了点 rambda 的源码。函数式是个很诱人的概念，借助函数式，你可以以十分数学的方式解决一些问题。虽然如此，函数式对于现实来说仍然过于抽象，如果我们不去关注底层，那他确实是好的，然而一旦我们逼视其实现，我们就会发现它的窘迫与骨感，对于 js 来说尤是。</p>
+<h2 id="不可变与无副作用">不可变与无副作用</h2>
+<p>不可变与无副作用是函数式的两大特点，但对应到底层就意味着大量的复制。无论是深浅拷贝，拷贝的过程本身就要付出性能代价，而且每一次拷贝还要牺牲对应的空间。现实就是，函数式的库其实现并不能完全实现两者，需要依靠使用者的自觉，这完全是基于性能与抽象之平衡所考虑的。事实上，即使是函数式的语言，也会基于现实与抽象作出抉择。</p>
+<h2 id="递归与消失的尾递归">递归与消失的尾递归</h2>
+<p>用 js 实现函数式最大的窘迫就在于尾递归的消失，使得递归无法得到优化，从而引起堆栈溢出。虽然理论上用递归实现的，用迭代也能实现，但是一则实现难度不是一个难度了，二则丧失了函数式的明晰性了。</p>
+<h2 id="命令式编程的辅料">命令式编程的辅料</h2>
+<p>一个程序本质上是解决问题的，它必然是步骤的罗列，而函数式的理想在于抽象，在纯计算下，它有着出色的表达能力，然而程序不是单纯的计算，程序自身运行就会带有“副作用”。现实中的函数式并不存在，只存在作为命令式编程辅料的函数式，它只是用于改进原来命令式计算之缺陷而被加入到现有的很多命令式语言之中，我们只需要在性能可容许的范围用就可以了。但对于函数式本身来说，除了在理论堆中蜷缩，这样的现实未免过于骨感了。</p>
 
     </div>
 
@@ -293,7 +217,7 @@ function _clone(value, refFrom, refTo) {
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2021-08-22
+        2021-08-24
         
     </span>
   </p>
@@ -302,17 +226,15 @@ function _clone(value, refFrom, refTo) {
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/%E6%B7%B1%E6%8B%B7%E8%B4%9D/">深拷贝</a>
+          <a href="/tags/%E5%87%BD%E6%95%B0%E5%BC%8F/">函数式</a>
+          <a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>
           <a href="/tags/javascript/">javascript</a>
+          <a href="/tags/rambda/">rambda</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/function-comment/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">函数式的骨感</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/post/chrome-extensions/">
-            <span class="next-text nav-default">如何编写一个 Chrome 扩展</span>
+        
+        <a class="next" href="/post/how-to-write-a-deep-copy-function/">
+            <span class="next-text nav-default">如何写一个深拷贝函数</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

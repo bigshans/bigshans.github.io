@@ -7,13 +7,40 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 22 Aug 2021 14:52:42 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Aug 2021 17:22:43 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>javascript</title>
       <link>https://bigshans.github.io/tags/javascript/</link>
-      <pubDate>Sun, 22 Aug 2021 14:52:42 +0800</pubDate>
+      <pubDate>Tue, 24 Aug 2021 17:22:43 +0800</pubDate>
       
       <guid>https://bigshans.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rambda</title>
+      <link>https://bigshans.github.io/tags/rambda/</link>
+      <pubDate>Tue, 24 Aug 2021 17:22:43 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/rambda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>函数式</title>
+      <link>https://bigshans.github.io/tags/%E5%87%BD%E6%95%B0%E5%BC%8F/</link>
+      <pubDate>Tue, 24 Aug 2021 17:22:43 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/%E5%87%BD%E6%95%B0%E5%BC%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>随笔</title>
+      <link>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</link>
+      <pubDate>Tue, 24 Aug 2021 17:22:43 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</guid>
       <description></description>
     </item>
     
@@ -203,15 +230,6 @@
       <pubDate>Sun, 11 Apr 2021 18:18:57 +0800</pubDate>
       
       <guid>https://bigshans.github.io/tags/linux-%E6%A1%8C%E9%9D%A2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>随笔</title>
-      <link>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</link>
-      <pubDate>Sun, 11 Apr 2021 18:18:57 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</guid>
       <description></description>
     </item>
     
