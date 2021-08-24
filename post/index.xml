@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 24 Aug 2021 17:22:43 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Aug 2021 18:20:53 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Sharp 压缩图片、改变图片大小</title>
+      <link>https://bigshans.github.io/post/sharp/</link>
+      <pubDate>Tue, 24 Aug 2021 18:20:53 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/sharp/</guid>
+      <description>因为业务需要就写了个图片压缩服务，顺带改变大小，因为用的是 nodejs ，于是我就选择了 sharp ，基于 libvips。 代码非常好写： function resize(input, x, y) { return sharp(input) .resize(x, y, { fit: &#39;inside&#39; })</description>
+    </item>
+    
     <item>
       <title>函数式的骨感</title>
       <link>https://bigshans.github.io/post/function-comment/</link>

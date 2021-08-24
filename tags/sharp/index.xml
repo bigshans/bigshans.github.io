@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sharp on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/sharp/</link>
+    <description>Recent content in sharp on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Tue, 24 Aug 2021 18:20:53 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/sharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Sharp 压缩图片、改变图片大小</title>
+      <link>https://bigshans.github.io/post/sharp/</link>
+      <pubDate>Tue, 24 Aug 2021 18:20:53 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/sharp/</guid>
+      <description>因为业务需要就写了个图片压缩服务，顺带改变大小，因为用的是 nodejs ，于是我就选择了 sharp ，基于 libvips。 代码非常好写： function resize(input, x, y) { return sharp(input) .resize(x, y, { fit: &#39;inside&#39; })</description>
+    </item>
+    
+  </channel>
+</rss>
