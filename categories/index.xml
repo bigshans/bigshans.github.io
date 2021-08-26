@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 24 Aug 2021 18:20:53 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Aug 2021 15:43:34 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>javascript</title>
+      <link>https://bigshans.github.io/categories/javascript/</link>
+      <pubDate>Thu, 26 Aug 2021 15:43:34 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue</title>
+      <link>https://bigshans.github.io/categories/vue/</link>
+      <pubDate>Thu, 26 Aug 2021 15:43:34 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/vue/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>nodejs</title>
       <link>https://bigshans.github.io/categories/nodejs/</link>
@@ -23,15 +41,6 @@
       <pubDate>Tue, 24 Aug 2021 17:22:43 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/%E5%87%BD%E6%95%B0%E5%BC%8F/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://bigshans.github.io/categories/javascript/</link>
-      <pubDate>Sun, 22 Aug 2021 14:52:42 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/javascript/</guid>
       <description></description>
     </item>
     
