@@ -167,6 +167,30 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/">分布式锁的简单实现</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-10-20 </span>
+      <div class="post-category">
+          <a href="/categories/javascript/"> javascript </a>
+          </div>
+        <span class="more-meta"> 约 384 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      打算每周写一篇博客，希望每周都能有新的收获。本周写的博客是我在工作中应用写的一个有趣的东西。 我们采用 pm2 进行进程管理，我们开启了多个进程，但各个进程之间并没有交流，所以，我想要全局操作某个变量时，就会出现数据安全问题，虽然在 redis 里面单个操作是原子，但我也要保证复合操作也是原子的。但我并不使用 redis 的事务，是因为这个事务会阻塞其他操作，所以，不如在应用层上实现锁，从而不阻塞 redis 。我们虽然不是分布式系统，但是是分布式进程，所以实现也参考分布式锁。
+
+    </div>
+    <div class="read-more">
+      <a href="/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/src-java-hashmap/">Java 源码阅读之 HashMap</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2019-10-04 </span>
@@ -329,30 +353,6 @@ import java.util.HashMap; public class Collec { public static void main(String[]
     </div>
     <div class="read-more">
       <a href="/post/algorithm-segtree/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/vim-rime/">在 vim 下修改自然码码表</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-01-31 </span>
-      <div class="post-category">
-          <a href="/categories/vim/"> vim </a>
-          </div>
-        <span class="more-meta"> 约 1254 字 </span>
-        <span class="more-meta"> 预计阅读 3 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添加一些字，所以我决定换用别的输入法。 fcitx-sunpinyin 可以添加用户词典，但添加新的单词的时候会严重卡顿，而且打某些字的时候也会卡顿，体验极其糟糕，所以我决定尝试一下 fcitx-rime 。
-
-    </div>
-    <div class="read-more">
-      <a href="/post/vim-rime/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
