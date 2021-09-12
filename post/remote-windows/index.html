@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>在 Linux 下使用 Objective-C 编程 - Bigshans&#39; Blog</title>
+  <title>远程连接 Windows 开发的诸多尝试 - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。 Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="由于最近要用到 uniapp 进行开发，但是，由于项目不是 CLI 项目，所以最终还是要用到 HBuilderX 进行开发，然而，它没有 Linux 版 Orz 。不过好在公司给了我一台 Windows 电脑，所以我就" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.87.0 with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/write-hello-world-by-objective-c/" />
+<link rel="canonical" href="https://bigshans.github.io/post/remote-windows/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,20 +40,20 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="在 Linux 下使用 Objective-C 编程" />
-<meta property="og:description" content="GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。 Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需" />
+<meta property="og:title" content="远程连接 Windows 开发的诸多尝试" />
+<meta property="og:description" content="由于最近要用到 uniapp 进行开发，但是，由于项目不是 CLI 项目，所以最终还是要用到 HBuilderX 进行开发，然而，它没有 Linux 版 Orz 。不过好在公司给了我一台 Windows 电脑，所以我就" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/write-hello-world-by-objective-c/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-09-12T20:33:41+08:00" />
-<meta property="article:modified_time" content="2021-09-12T20:33:41+08:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/remote-windows/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-09-12T22:04:52+08:00" />
+<meta property="article:modified_time" content="2021-09-12T22:04:52+08:00" />
 
-<meta itemprop="name" content="在 Linux 下使用 Objective-C 编程">
-<meta itemprop="description" content="GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。 Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需"><meta itemprop="datePublished" content="2021-09-12T20:33:41+08:00" />
-<meta itemprop="dateModified" content="2021-09-12T20:33:41+08:00" />
-<meta itemprop="wordCount" content="404">
-<meta itemprop="keywords" content="linux,Objective-C," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="在 Linux 下使用 Objective-C 编程"/>
-<meta name="twitter:description" content="GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。 Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需"/>
+<meta itemprop="name" content="远程连接 Windows 开发的诸多尝试">
+<meta itemprop="description" content="由于最近要用到 uniapp 进行开发，但是，由于项目不是 CLI 项目，所以最终还是要用到 HBuilderX 进行开发，然而，它没有 Linux 版 Orz 。不过好在公司给了我一台 Windows 电脑，所以我就"><meta itemprop="datePublished" content="2021-09-12T22:04:52+08:00" />
+<meta itemprop="dateModified" content="2021-09-12T22:04:52+08:00" />
+<meta itemprop="wordCount" content="461">
+<meta itemprop="keywords" content="Windows,rdesktop,freedesktop," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="远程连接 Windows 开发的诸多尝试"/>
+<meta name="twitter:description" content="由于最近要用到 uniapp 进行开发，但是，由于项目不是 CLI 项目，所以最终还是要用到 HBuilderX 进行开发，然而，它没有 Linux 版 Orz 。不过好在公司给了我一台 Windows 电脑，所以我就"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -170,14 +170,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">在 Linux 下使用 Objective-C 编程</h1>
+      <h1 class="post-title">远程连接 Windows 开发的诸多尝试</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2021-09-12 </span>
         <div class="post-category">
-            <a href="/categories/objective-c/"> Objective-C </a>
+            <a href="/categories/%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91/"> 远程开发 </a>
             </div>
-          <span class="more-meta"> 约 404 字 </span>
+          <span class="more-meta"> 约 461 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         
       </div>
@@ -185,29 +185,39 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#anydesk">Anydesk</a></li>
+        <li><a href="#vnc">VNC</a></li>
+        <li><a href="#rdp">rdp</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 </div>
 
     <div class="post-content">
-      <p>GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。</p>
-<p>Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需要 Objective-C front-end for GCC ，Arch 下面直接安装 gcc-objc 这个包就可以了。</p>
-<p>但是呢，这个只是装了个编译器前端，重要的一些库都没有，在这里我们使用 GNUStep 模拟苹果的环境。实际上 GNUStep 与真实的苹果环境是有差异的，如果要进行 GUI 编程的话还要装 GUI 的库，但这些其实跟苹果已经毫无关系了。如果你只是为了学习 Objective-C ，或者使用 Objective-C 在 Linux 上编程，这些已经完全够了。</p>
-<p>Arch 安装 GNUStep ，会有两个包让你选，两个都要就可以了。安装完成我们写个 Demo 。</p>
-<pre><code class="language-objective-c">#import &lt;Foundation/Foundation.h&gt;
-
-int main (int argc, const char * argv[]) {
-   NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-   
-   NSLog (@&quot;hello world&quot;);
-   [pool drain];
-   return 0;
-}
+      <p>由于最近要用到 uniapp 进行开发，但是，由于项目不是 CLI 项目，所以最终还是要用到 HBuilderX 进行开发，然而，它没有 Linux 版 Orz 。不过好在公司给了我一台 Windows 电脑，所以我就想着，能不能远程连接 Windows 进行开发，因为我实在不想两台电脑换来换去。</p>
+<p>方案其实很有限，我大概试了一下：</p>
+<ul>
+<li>Anydesk 远程连接</li>
+<li>VNC 协议</li>
+<li>rdp 协议</li>
+</ul>
+<p>说一下这三者的感受吧！</p>
+<h2 id="anydesk">Anydesk</h2>
+<p>卡爆了，大概是因为这个是真的走远程吧！我试过虚拟机，真的很卡，我的虚拟机并不卡，但 Anydesk 的延迟却相当高，我个人并不推荐。</p>
+<h2 id="vnc">VNC</h2>
+<p>感觉好了很多，但是呢，本质上是桌面同步，我不管怎样都不能把桌面关上，还有屏幕大小，并不怎么灵活。还有剪切板同步的问题，并不能同步，跟我预期的有些差距。</p>
+<h2 id="rdp">rdp</h2>
+<p>这个只需要打开 Windows 默认的远程桌面功能，重启即可。我尝试了两款 rdp 客户端：freedesktop 和 rdesktop 。首先先说结论， freedesktop 完美符合我的需求。虽然很多人推 rdesktop ，然而其流畅度其实跟 freedesktop 差很多，还有一些 BUG ，比如我就遇到了光标消失的问题，rdesktop 处理起来就很蛋疼，而 freedesktop 则没有这些问题。</p>
+<p>freedesktop 的参数还是很有 DOS 风格的，我个人用这些参数：</p>
+<pre><code>xfreerdp /v:target_ip_address /u:username /p:password /f /audio-mode:0 +fonts +window-drag +clipboard /sound
 </code></pre>
-<p>保存上面一段代码为 <code>hello.m</code> ，运行命令:</p>
-<pre><code class="language-sh">gcc `gnustep-config --objc-flags` -lgnustep-base -lobjc hello.m -o hello
-</code></pre>
-<p>编译成功，运行 <code>./hello</code> 打印 <code>2021-09-12 20:50:45.378 hello[61801:61801] hello world</code> 。</p>
-<p>以上都是在命令行环境下的编程，如果想要进行苹果开发的话，你还是得买 Mac 。当然， Objective-C 也不一定非要与苹果绑定，也有基于 GNUStep 开发的图形界面库和应用，不过这些都跟苹果没有半毛钱关系了。</p>
+<p>音频也同步了，剪切板也同步了。</p>
+<p>以上。</p>
 
     </div>
 
@@ -228,17 +238,14 @@ int main (int argc, const char * argv[]) {
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/linux/">linux</a>
-          <a href="/tags/objective-c/">Objective-C</a>
+          <a href="/tags/windows/">Windows</a>
+          <a href="/tags/rdesktop/">rdesktop</a>
+          <a href="/tags/freedesktop/">freedesktop</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/remote-windows/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">远程连接 Windows 开发的诸多尝试</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/post/yuzu-setup/">
-            <span class="next-text nav-default">使用 yuzu 模拟器玩《月姬R》</span>
+        
+        <a class="next" href="/post/write-hello-world-by-objective-c/">
+            <span class="next-text nav-default">在 Linux 下使用 Objective-C 编程</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

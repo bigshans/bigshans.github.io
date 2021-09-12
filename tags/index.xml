@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 12 Sep 2021 20:33:41 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Sep 2021 22:04:52 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>freedesktop</title>
+      <link>https://bigshans.github.io/tags/freedesktop/</link>
+      <pubDate>Sun, 12 Sep 2021 22:04:52 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/freedesktop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rdesktop</title>
+      <link>https://bigshans.github.io/tags/rdesktop/</link>
+      <pubDate>Sun, 12 Sep 2021 22:04:52 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/rdesktop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://bigshans.github.io/tags/windows/</link>
+      <pubDate>Sun, 12 Sep 2021 22:04:52 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>linux</title>
       <link>https://bigshans.github.io/tags/linux/</link>
@@ -428,33 +455,6 @@
       <pubDate>Sun, 15 Dec 2019 21:12:21 +0000</pubDate>
       
       <guid>https://bigshans.github.io/tags/mongodb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>angular</title>
-      <link>https://bigshans.github.io/tags/angular/</link>
-      <pubDate>Sun, 08 Dec 2019 20:23:42 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/angular/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Express</title>
-      <link>https://bigshans.github.io/tags/express/</link>
-      <pubDate>Sun, 01 Dec 2019 14:55:32 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/express/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Node</title>
-      <link>https://bigshans.github.io/tags/node/</link>
-      <pubDate>Sun, 01 Dec 2019 14:55:32 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/node/</guid>
       <description></description>
     </item>
     

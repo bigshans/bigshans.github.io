@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>freedesktop on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/freedesktop/</link>
+    <description>Recent content in freedesktop on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Sun, 12 Sep 2021 22:04:52 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/freedesktop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>远程连接 Windows 开发的诸多尝试</title>
+      <link>https://bigshans.github.io/post/remote-windows/</link>
+      <pubDate>Sun, 12 Sep 2021 22:04:52 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/remote-windows/</guid>
+      <description>由于最近要用到 uniapp 进行开发，但是，由于项目不是 CLI 项目，所以最终还是要用到 HBuilderX 进行开发，然而，它没有 Linux 版 Orz 。不过好在公司给了我一台 Windows 电脑，所以我就</description>
+    </item>
+    
+  </channel>
+</rss>
