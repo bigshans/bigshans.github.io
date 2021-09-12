@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Objective-C on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/objective-c/</link>
+    <description>Recent content in Objective-C on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Sun, 12 Sep 2021 20:33:41 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/objective-c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Linux 下使用 Objective-C 编程</title>
+      <link>https://bigshans.github.io/post/write-hello-world-by-objective-c/</link>
+      <pubDate>Sun, 12 Sep 2021 20:33:41 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/write-hello-world-by-objective-c/</guid>
+      <description>GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。 Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需</description>
+    </item>
+    
+  </channel>
+</rss>

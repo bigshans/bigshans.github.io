@@ -3,41 +3,62 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2021-09-12T10:53:17+08:00</lastmod>
+    <lastmod>2021-09-12T20:33:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2021-09-12T10:53:17+08:00</lastmod>
+    <lastmod>2021-09-12T20:33:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/tags/linux/</loc>
-    <lastmod>2021-09-12T10:53:17+08:00</lastmod>
+    <lastmod>2021-09-12T20:33:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/categories/linux/</loc>
-    <lastmod>2021-09-12T10:53:17+08:00</lastmod>
+    <loc>https://bigshans.github.io/tags/objective-c/</loc>
+    <lastmod>2021-09-12T20:33:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/objective-c/</loc>
+    <lastmod>2021-09-12T20:33:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2021-09-12T10:53:17+08:00</lastmod>
+    <lastmod>2021-09-12T20:33:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/tags/</loc>
+    <lastmod>2021-09-12T20:33:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/write-hello-world-by-objective-c/</loc>
+    <lastmod>2021-09-12T20:33:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/linux/</loc>
     <lastmod>2021-09-12T10:53:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
