@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 13 Sep 2021 17:26:27 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Sep 2021 01:33:29 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>https://bigshans.github.io/categories/linux/</link>
+      <pubDate>Mon, 20 Sep 2021 01:33:29 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>随笔</title>
       <link>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
@@ -32,15 +41,6 @@
       <pubDate>Sun, 12 Sep 2021 20:33:41 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/objective-c/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://bigshans.github.io/categories/linux/</link>
-      <pubDate>Sun, 12 Sep 2021 10:53:17 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/linux/</guid>
       <description></description>
     </item>
     

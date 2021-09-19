@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 13 Sep 2021 17:26:27 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Sep 2021 01:33:29 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>写一个 Bash 补全函数</title>
+      <link>https://bigshans.github.io/post/write-a-bash-complete/</link>
+      <pubDate>Mon, 20 Sep 2021 01:33:29 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/write-a-bash-complete/</guid>
+      <description>我的配置文件里面有我以前封装的、用于管理博客文章的命令，只不过之前是用 Hexo ，而现在迁移到了 Hugo 上，已经好久没有了，现在发现，拂拂灰尘用起来还是很</description>
+    </item>
+    
     <item>
       <title>关于天涯神帖的议论</title>
       <link>https://bigshans.github.io/post/kk_tianya/</link>
@@ -459,15 +468,6 @@ app.listen(3000, () =&amp;gt; console.log(&#39;Connected!&#39;));
       <guid>https://bigshans.github.io/post/infinality-font/</guid>
       <description>&lt;p&gt;最近在工作电脑上安装了 deepin ，发现字体渲染很糟糕，于是在想起了 infinality 补丁，由于我个人电脑上是 manjaro ， arch 源里就有该包，所以我查找一下，发现 Debian 系的也有打包，成功安装之后，特此记录一下。&lt;/p&gt;
 &lt;p&gt;原文链接：&lt;a href=&#34;https://www.linuxdashen.com/debian8%E5%AE%89%E8%A3%85infinality%E6%94%B9%E5%96%84%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%EF%BC%8C%E5%AE%89%E8%A3%85ubuntu%E5%AD%97%E4%BD%93&#34;&gt;https://www.linuxdashen.com/debian8安装infinality改善字体渲染，安装ubuntu字体&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>happy hacking emacs</title>
-      <link>https://bigshans.github.io/post/emacs-hacking/</link>
-      <pubDate>Thu, 31 Oct 2019 19:16:23 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/emacs-hacking/</guid>
-      <description>&lt;p&gt;最近在折腾 emacs ，不得不说这个曲线真的是非常陡峭啊！但有些有趣的东西的确让人欲罢不能。今天就在这里跟大家分享一下折腾过程中出现的问题，希望能能给大家带来一点帮助。&lt;/p&gt;</description>
     </item>
     
   </channel>
