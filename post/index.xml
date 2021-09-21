@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 20 Sep 2021 01:33:29 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Sep 2021 01:08:35 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为什么使用 zsh 以及为什么这样使用</title>
+      <link>https://bigshans.github.io/post/why-and-how-use-zsh-this-way/</link>
+      <pubDate>Wed, 22 Sep 2021 01:08:35 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/why-and-how-use-zsh-this-way/</guid>
+      <description>我使用 zsh 作为我的默认 shell 已经很长时间了，大概是从我 Debian 时候开始就使用了。当初的原因其实很简单，因为强大的 Oh My Zsh ，如今我用了这么久，想要重新疏理一</description>
+    </item>
+    
     <item>
       <title>写一个 Bash 补全函数</title>
       <link>https://bigshans.github.io/post/write-a-bash-complete/</link>
@@ -458,16 +467,6 @@ app.listen(3000, () =&amp;gt; console.log(&#39;Connected!&#39;));
       
       <guid>https://bigshans.github.io/post/docker-emacs/</guid>
       <description>&lt;p&gt;最近倒腾公司电脑，结果装不上 emacs 26，我的很多配置无法启用，在这里我要批评一下 deepin 。我真的是很少有听过降系统升级的。 deepin 还在 Debian stretch 上，如今 Debian 都上 buster 了。 deepin 为了稳定系统搞这个我觉得真是不行，至少软件也要新的嘛！&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>infinality font 字体渲染安装</title>
-      <link>https://bigshans.github.io/post/infinality-font/</link>
-      <pubDate>Sun, 03 Nov 2019 10:23:43 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/infinality-font/</guid>
-      <description>&lt;p&gt;最近在工作电脑上安装了 deepin ，发现字体渲染很糟糕，于是在想起了 infinality 补丁，由于我个人电脑上是 manjaro ， arch 源里就有该包，所以我查找一下，发现 Debian 系的也有打包，成功安装之后，特此记录一下。&lt;/p&gt;
-&lt;p&gt;原文链接：&lt;a href=&#34;https://www.linuxdashen.com/debian8%E5%AE%89%E8%A3%85infinality%E6%94%B9%E5%96%84%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%EF%BC%8C%E5%AE%89%E8%A3%85ubuntu%E5%AD%97%E4%BD%93&#34;&gt;https://www.linuxdashen.com/debian8安装infinality改善字体渲染，安装ubuntu字体&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -7,22 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 20 Sep 2021 01:33:29 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Sep 2021 01:08:35 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>https://bigshans.github.io/tags/linux/</link>
+      <pubDate>Wed, 22 Sep 2021 01:08:35 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>https://bigshans.github.io/tags/shell/</link>
+      <pubDate>Wed, 22 Sep 2021 01:08:35 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/shell/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>bash</title>
       <link>https://bigshans.github.io/tags/bash/</link>
       <pubDate>Mon, 20 Sep 2021 01:33:29 +0800</pubDate>
       
       <guid>https://bigshans.github.io/tags/bash/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://bigshans.github.io/tags/linux/</link>
-      <pubDate>Mon, 20 Sep 2021 01:33:29 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
@@ -446,15 +455,6 @@
       <pubDate>Sat, 18 Jan 2020 18:05:52 +0000</pubDate>
       
       <guid>https://bigshans.github.io/tags/mysql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>css</title>
-      <link>https://bigshans.github.io/tags/css/</link>
-      <pubDate>Sun, 22 Dec 2019 21:21:47 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/css/</guid>
       <description></description>
     </item>
     
