@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Minikube 简介 - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.88.1 with theme even" />
+
+
+<link rel="canonical" href="https://bigshans.github.io/post/minikube-introduction/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.184da86d2a45601961fbb04a2dc55252670675106caf6648087f1edd7259879a.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="Minikube 简介" />
+<meta property="og:description" content="k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/minikube-introduction/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-09-22T15:47:06+08:00" />
+<meta property="article:modified_time" content="2021-09-22T15:47:06+08:00" />
+
+<meta itemprop="name" content="Minikube 简介">
+<meta itemprop="description" content="k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未"><meta itemprop="datePublished" content="2021-09-22T15:47:06+08:00" />
+<meta itemprop="dateModified" content="2021-09-22T15:47:06+08:00" />
+<meta itemprop="wordCount" content="1649">
+<meta itemprop="keywords" content="minikube,运维," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Minikube 简介"/>
+<meta name="twitter:description" content="k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Minikube 简介</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-09-22 </span>
+        <div class="post-category">
+            <a href="/categories/linux/"> linux </a>
+            </div>
+          <span class="more-meta"> 约 1649 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#安装">安装</a>
+          <ul>
+            <li><a href="#linux-安装">Linux 安装</a></li>
+            <li><a href="#mac-安装">Mac 安装</a></li>
+            <li><a href="#windows-安装">Windows 安装</a></li>
+          </ul>
+        </li>
+        <li><a href="#启动-minikube">启动 minikube</a></li>
+        <li><a href="#查看-pods">查看 pods</a></li>
+        <li><a href="#部署应用">部署应用</a></li>
+        <li><a href="#集群管理">集群管理</a></li>
+        <li><a href="#编写-deploymentyaml-配置">编写 <code>deployment.yaml</code> 配置</a></li>
+        <li><a href="#更新-deployment">更新 Deployment</a></li>
+        <li><a href="#伸缩-deployment">伸缩 deployment</a></li>
+        <li><a href="#开启-service">开启 service</a></li>
+        <li><a href="#删除-deployment">删除 deployment</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+    <div class="post-content">
+      <p>k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未免失于实务，逐于稍末了，故 k8s 团队开发了 minikube 以方便用户学习和开发。</p>
+<p>minikube 是个轻量版的 k8s ，它相比 k8s 更易于安装，命令与 k8s 基本保持一致，所以能够很好的用来学习 k8s 的各种指令。但同时， minikube 也舍弃了 k8s 的集群能力，只能单体运行。但这并无大碍，因为在 minikube 上的配置完全可以迁移到 k8s 上去。</p>
+<p>不过， minikube 不是唯一的轻量、可单体 k8s ，除此之外还有 mircoK8s 、k3s 等等，有兴趣的同学可以自己去阅览。</p>
+<h2 id="安装">安装</h2>
+<p>想要安装 minikube 需要符合以下条件：</p>
+<ul>
+<li>两核以上 GPU</li>
+<li>2GB 以上的空闲内存</li>
+<li>20GB 以上的剩余磁盘空间</li>
+<li>网络连接</li>
+<li>容器或虚拟机管理器，可选择 Docker, Hyperkit, Hyper-V, KVM, Parallels, Podman, VirtualBox, VMWare 中的一个。</li>
+</ul>
+<h3 id="linux-安装">Linux 安装</h3>
+<p>我个人使用的是 Arch Linux ，community 镜像里默认包含了 minikube ，虽然版本有点老了，但还是能用。</p>
+<pre><code class="language-shell">sudo pacman -S minikube
+</code></pre>
+<p>当然，对于一般 Linux 来说，最通用的做法是使用二进制包。</p>
+<pre><code class="language-shell">curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+</code></pre>
+<h3 id="mac-安装">Mac 安装</h3>
+<p>Mac 可以使用 homebrew 。</p>
+<pre><code class="language-shell">brew install minikube
+</code></pre>
+<p>当然也可以二进制。</p>
+<p>x86_64：</p>
+<pre><code class="language-shell">curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
+sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+</code></pre>
+<p>arm64：</p>
+<pre><code class="language-shell">curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-arm64
+sudo install minikube-darwin-arm64 /usr/local/bin/minikube
+</code></pre>
+<h3 id="windows-安装">Windows 安装</h3>
+<p>使用包管理其实贼好装。</p>
+<pre><code class="language-powershell">choco install minikube
+winget install minikube
+</code></pre>
+<p>上面分别使用了 chocolatey 和 windows package manager 。</p>
+<p>当然你也可以使用 exe 安装。</p>
+<ol>
+<li>下载 <a href="https://storage.googleapis.com/minikube/releases/latest/minikube-installer.exe">最新版本</a> ，如果你有 <code>curl</code> 可以像下面一样使用。</li>
+</ol>
+<pre><code class="language-powershell">curl -Lo minikube.exe https://github.com/kubernetes/minikube/releases/latest/download/minikube-windows-amd64.exe
+New-Item -Path &quot;c:\&quot; -Name &quot;minikube&quot; -ItemType &quot;directory&quot; -Force
+Move-Item .\minikube.exe c:\minikube\minikube.exe -Force
+</code></pre>
+<ol start="2">
+<li>添加到 <code>PATH</code> 。一下使用 Powershell ad Administrator 。</li>
+</ol>
+<pre><code class="language-powershell">$oldpath=[Environment]::GetEnvironmentVariable(&quot;Path&quot;, [EnvironmentVariableTarget]::Machine)
+if($oldpath -notlike &quot;*;C:\minikube*&quot;){`
+  [Environment]::SetEnvironmentVariable(&quot;Path&quot;, $oldpath+&quot;;C:\minikube&quot;, [EnvironmentVariableTarget]::Machine)`
+}
+</code></pre>
+<p>在完成安装之后，请再安装 kubectl ，这是用于管理 k8s 的工具，也可用于 minikube 的管理。</p>
+<p>除此之外，我推荐使用 Docker 作为 VM ，这样能与 k8s 很好地契合，虽然其他 VM 也可以。</p>
+<h2 id="启动-minikube">启动 minikube</h2>
+<p>想要启动 minikube ，我们需要运行如下命令：</p>
+<pre><code class="language-shell">minikube start
+</code></pre>
+<p>初次启动，不出意外的话， minikube 将会初始化 minikube ，并建立一个 cluster 到本地。这里请保证镜像获取的网络畅通，否则将启动失败。</p>
+<h2 id="查看-pods">查看 pods</h2>
+<p>安装完成并成功启动之后，我们可以借助 kubectl 查看当前跑的 pods ，</p>
+<pre><code class="language-shell">kubectl get po -A
+</code></pre>
+<p><code>-A</code> 会把隐藏的 pods 也给打印出来，目前，除了 minikube 默认跑的 pods 之外，没有别的 pods 在运行。</p>
+<p>我们也可以在 dashboard 上查看，首先我们需要打开 dashboard 。</p>
+<pre><code class="language-shell">minikube dashboard
+</code></pre>
+<p>然后 minikube 会帮我们打开默认浏览器以浏览 dashboard 。</p>
+<h2 id="部署应用">部署应用</h2>
+<p>首先，我们创建一个 deployment 并暴露出去。</p>
+<pre><code class="language-shell">kubectl create deployment hello-minikube --image=registry.cn-hangzhou.aliyuncs.com/google_containers/echoserver:1.10
+kubectl expose deployment hello-minikube --type=NodePort --port=8080
+</code></pre>
+<p>这个 deployment 就是我们的 pod ，就是应用。此时，我们的 pod 还没有正式暴露到外面。</p>
+<p>那么，我们如何正式暴露到外部呢？</p>
+<pre><code class="language-shell">minikube service hello-minikube
+</code></pre>
+<p>运行完成后将会为我们打开对应服务的网页。</p>
+<p>我们也可以使用 kubectl 为我们做端口转发。</p>
+<pre><code class="language-shell">kubectl port-forward service/hello-minikube 7080:8080
+</code></pre>
+<p>我们使用如下命令可以得知 <code>hello-minikube</code> 服务的一个状态：</p>
+<pre><code class="language-shell">kubectl get services hello-minikube
+</code></pre>
+<p>如果我们想要获取我们服务的 url ，可以使用下面的命令：</p>
+<pre><code class="language-shell">minikube service hello-minikube --url
+</code></pre>
+<h2 id="集群管理">集群管理</h2>
+<p>这里的集群是在单机上由 container 或 VM 组成的集群。</p>
+<p>下面是集群管理的一些简单的命令：</p>
+<pre><code class="language-shell">minikube pause # 暂停
+minikube unpause # 取消暂停
+minikube stop # 关闭
+minikube restart # 重启
+minikube config set memory 16384 # 设置参数，需要重启生效
+minikube delete --all # 删除所有集群，不建议用
+</code></pre>
+<h2 id="编写-deploymentyaml-配置">编写 <code>deployment.yaml</code> 配置</h2>
+<p>我们可以编写 yaml 来配置 minikube 。 yaml 是个与 json 很类似的文件格式。这里我们直接放出代码。</p>
+<pre><code class="language-yaml">apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rss-site
+  labels:
+    app: web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: front-end
+          image: nginx
+          ports:
+            - containerPort: 80
+        - name: rss-reader
+          image: nickchase/rss-php-nginx:v1
+          ports:
+            - containerPort: 88
+</code></pre>
+<p>我们简要的讲一下这些字段：</p>
+<ul>
+<li><code>appVersion</code> ， k8s 的 api 版本。</li>
+<li><code>kind</code> ，创建的对象类型，在这里是一个部署（Deployment）。</li>
+<li><code>metadata</code> ，对象的标识信息，下属的 <code>name</code> 和 <code>labels</code> 分别是名字和标签。</li>
+<li><code>spec</code> ，对象的状态描述。
+<ul>
+<li><code>replicas</code> ，副本数。</li>
+<li><code>selector</code> ，可控制的 Pod 。
+<ul>
+<li><code>matchLabels</code> ， 如名所示，匹配的标签。</li>
+</ul>
+</li>
+<li><code>template</code> ，Pod 模板。</li>
+</ul>
+</li>
+</ul>
+<p>执行一下命令生效：</p>
+<pre><code class="language-shell">kubectl apply -f deployment.yaml
+</code></pre>
+<p>获取 deployment 看一下是否创建成功：</p>
+<pre><code class="language-shell">kubectl get deployment
+</code></pre>
+<h2 id="更新-deployment">更新 Deployment</h2>
+<p>我们同样可以使用 <code>apply</code> 来更新配置。</p>
+<pre><code class="language-shell">kubectl apply -f deployment.yaml
+</code></pre>
+<p>我们也可以使用 <code>edit</code> 来更新指令，它打开编辑器来编辑容器中实际的 yaml 文件。</p>
+<pre><code class="language-shell">kubectl edit deployment.v1.apps/rss-site
+</code></pre>
+<h2 id="伸缩-deployment">伸缩 deployment</h2>
+<p>使用 <code>scale</code> 我们扩容或缩容容器。</p>
+<pre><code class="language-shell">kubectl scale deployment.v1.apps/rss-site --replicas=5
+</code></pre>
+<p>使用 <code>autoscale</code> 可以帮助我们自动扩容。</p>
+<pre><code class="language-shell">kubectl autoscale deployment.v1.apps/rss-site --min=3 --max=20 --cpu-percent=60
+</code></pre>
+<h2 id="开启-service">开启 service</h2>
+<p>我们继续在上面 <code>deployment.yaml</code> 的基础上再编写一个 service 。</p>
+<pre><code class="language-yaml">---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rss-site
+  namespace: default
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: web
+  type: NodePort
+</code></pre>
+<p>然后运行 <code>kubectl apply -f deployment.yaml</code> ，deployment 和 service 都部署成功，现在我们的功能正式暴露给外网了，我们来获取一下。</p>
+<pre><code class="language-shell">minikube service --url rss-site
+</code></pre>
+<p>完美。</p>
+<p>完整文件如下：</p>
+<pre><code class="language-yaml">---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rss-site
+  labels:
+    app: web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: front-end
+          image: nginx
+          ports:
+            - containerPort: 80
+        - name: rss-reader
+          image: nickchase/rss-php-nginx:v1
+          ports:
+            - containerPort: 88
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rss-site
+  namespace: default
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: web
+  type: NodePort
+</code></pre>
+<h2 id="删除-deployment">删除 deployment</h2>
+<p>我们需要按照顺序删除。</p>
+<ol>
+<li>删除服务： <code>kubectl delete service rss-site</code></li>
+<li>删除部署： <code>kubectl delete deployment rss-site</code></li>
+</ol>
+<p>此时我们 <code>get</code> 应该是拿不到数据的。</p>
+<p>以上就是 minikube 相关的一点介绍。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-09-22
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/minikube/">minikube</a>
+          <a href="/tags/%E8%BF%90%E7%BB%B4/">运维</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/why-and-how-use-zsh-this-way/">
+            <span class="next-text nav-default">为什么使用 zsh 以及为什么这样使用</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 22 Sep 2021 01:08:35 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Sep 2021 15:47:06 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Minikube 简介</title>
+      <link>https://bigshans.github.io/post/minikube-introduction/</link>
+      <pubDate>Wed, 22 Sep 2021 15:47:06 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/minikube-introduction/</guid>
+      <description>k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未</description>
+    </item>
+    
     <item>
       <title>为什么使用 zsh 以及为什么这样使用</title>
       <link>https://bigshans.github.io/post/why-and-how-use-zsh-this-way/</link>
@@ -458,15 +467,6 @@ app.listen(3000, () =&amp;gt; console.log(&#39;Connected!&#39;));
       
       <guid>https://bigshans.github.io/post/linux-backup/</guid>
       <description>&lt;p&gt;新买的移动硬盘到了，着手做新的启动盘。在硬盘上分了一个 G ，然后用 Deepin 的启动盘制作工具做了一个启动盘。然后重启，启动 Deepin live cd ，然后还备份还是失败了。没办法，只能另寻他路。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>玩玩 docker emacs</title>
-      <link>https://bigshans.github.io/post/docker-emacs/</link>
-      <pubDate>Sun, 10 Nov 2019 20:35:36 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/docker-emacs/</guid>
-      <description>&lt;p&gt;最近倒腾公司电脑，结果装不上 emacs 26，我的很多配置无法启用，在这里我要批评一下 deepin 。我真的是很少有听过降系统升级的。 deepin 还在 Debian stretch 上，如今 Debian 都上 buster 了。 deepin 为了稳定系统搞这个我觉得真是不行，至少软件也要新的嘛！&lt;/p&gt;</description>
     </item>
     
   </channel>
