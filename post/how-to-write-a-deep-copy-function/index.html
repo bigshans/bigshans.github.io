@@ -50,7 +50,7 @@
 <meta itemprop="name" content="如何写一个深拷贝函数">
 <meta itemprop="description" content="跟小伙伴们讨论的时候发现，es6 的解构其实和 Object.assign 一样属于是浅拷贝。那么一个深拷贝到底该怎么写呢？我个人阅读了一下 lodash 、 rambda 、 rfdc 的实现，发现思想其实"><meta itemprop="datePublished" content="2021-08-22T14:52:42+08:00" />
 <meta itemprop="dateModified" content="2021-08-22T14:52:42+08:00" />
-<meta itemprop="wordCount" content="626">
+<meta itemprop="wordCount" content="716">
 <meta itemprop="keywords" content="深拷贝,javascript," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="如何写一个深拷贝函数"/>
 <meta name="twitter:description" content="跟小伙伴们讨论的时候发现，es6 的解构其实和 Object.assign 一样属于是浅拷贝。那么一个深拷贝到底该怎么写呢？我个人阅读了一下 lodash 、 rambda 、 rfdc 的实现，发现思想其实"/>
@@ -177,7 +177,7 @@
         <div class="post-category">
             <a href="/categories/javascript/"> javascript </a>
             </div>
-          <span class="more-meta"> 约 626 字 </span>
+          <span class="more-meta"> 约 716 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
@@ -204,6 +204,7 @@
 <h2 id="编写">编写</h2>
 <p>我们需要一个方法来检测数据类型：</p>
 <pre><code class="language-javascript">function type(val) {
+  // 特判 null 和 undefined ，因为这两个会报错
   return val === 'null' ?
     'Null'
     :val === undefined
@@ -213,9 +214,11 @@
 </code></pre>
 <p>然后是主要的代码：</p>
 <pre><code class="language-javascript">function clone(source) {
+  // null 和 undefined 在 == 下相等
   return source == null ? source : _clone(source);
 }
 
+// 克隆正则
 function _cloneRegExp(pattern) {
   return new RegExp(pattern.source,
     (pattern.global     ? 'g' : '') +
@@ -226,15 +229,19 @@ function _cloneRegExp(pattern) {
 }
 
 function _clone(value, refFrom, refTo) {
+  // 递归克隆，并在内部构建函数处理，主要是为了保留变量
+  // 防止参数传递过多造成编写困难
   function copy(copiedValue) {
     const len = refFrom.length;
     let idx = 0;
+    // 循环引用查找
     while (idx &lt; len) {
       if (value === refFrom[idx]) {
         return refTo[idx];
       }
       idx += 1;
     }
+    // 无循环引用，自动扩充一位
     refFrom[idx] = value;
     refTo[idx] = copiedValue;
     for (const key in value) {
