@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 22 Sep 2021 15:47:06 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Sep 2021 11:57:02 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何合并 Git 无关历史</title>
+      <link>https://bigshans.github.io/post/git-merge-unrealted-histories/</link>
+      <pubDate>Mon, 27 Sep 2021 11:57:02 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/git-merge-unrealted-histories/</guid>
+      <description>由于每次线上建仓库总会给我留一个文件，导致我仓库连接远程总是提示无法合并无关代码。这里就写统一写一下这个问题如何解决。 git pull origin master --allow-unrelated-histories --allow-unrelated-histories 用于强制合</description>
+    </item>
+    
     <item>
       <title>Minikube 简介</title>
       <link>https://bigshans.github.io/post/minikube-introduction/</link>
@@ -458,15 +467,6 @@ app.listen(3000, () =&amp;gt; console.log(&#39;Connected!&#39;));
       
       <guid>https://bigshans.github.io/post/linux-systemdnspawn/</guid>
       <description>&lt;p&gt;systemd-nspawn 是 docker 与一样的 container 应用，只不过 docker 相比，跟类似于 chroot 。个人还是比较喜欢 chroot 这样的，这样有种子系统的感觉，与 docker 的 container 相比， chroot 下的操作是会被保留下来的， docker 和 chroot 还是两种不同情况，不可同语。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>在 linux 下备份系统</title>
-      <link>https://bigshans.github.io/post/linux-backup/</link>
-      <pubDate>Sun, 17 Nov 2019 22:13:03 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/linux-backup/</guid>
-      <description>&lt;p&gt;新买的移动硬盘到了，着手做新的启动盘。在硬盘上分了一个 G ，然后用 Deepin 的启动盘制作工具做了一个启动盘。然后重启，启动 Deepin live cd ，然后还备份还是失败了。没办法，只能另寻他路。&lt;/p&gt;</description>
     </item>
     
   </channel>
