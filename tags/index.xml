@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 27 Sep 2021 13:49:02 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Sep 2021 17:41:12 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>algorithm</title>
+      <link>https://bigshans.github.io/tags/algorithm/</link>
+      <pubDate>Mon, 27 Sep 2021 17:41:12 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>随笔</title>
       <link>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</link>
@@ -446,15 +455,6 @@
       <pubDate>Sun, 15 Nov 2020 18:30:45 +0800</pubDate>
       
       <guid>https://bigshans.github.io/tags/webhooks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://bigshans.github.io/tags/hugo/</link>
-      <pubDate>Sat, 14 Nov 2020 21:38:31 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     

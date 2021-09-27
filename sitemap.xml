@@ -2,29 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bigshans.github.io/tags/algorithm/</loc>
+    <lastmod>2021-09-27T17:41:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/algorithm/</loc>
+    <lastmod>2021-09-27T17:41:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2021-09-27T13:49:02+08:00</lastmod>
+    <lastmod>2021-09-27T17:41:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2021-09-27T13:49:02+08:00</lastmod>
+    <lastmod>2021-09-27T17:41:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2021-09-27T13:49:02+08:00</lastmod>
+    <lastmod>2021-09-27T17:41:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/sku-algorithm/</loc>
+    <lastmod>2021-09-27T17:41:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/tags/</loc>
-    <lastmod>2021-09-27T13:49:02+08:00</lastmod>
+    <lastmod>2021-09-27T17:41:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1145,20 +1166,6 @@
   <url>
     <loc>https://bigshans.github.io/post/linux-ppa-add/</loc>
     <lastmod>2019-06-26T11:24:44+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/algorithm/</loc>
-    <lastmod>2019-03-22T20:40:40+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/algorithm/</loc>
-    <lastmod>2019-03-22T20:40:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
