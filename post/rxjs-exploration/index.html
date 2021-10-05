@@ -50,7 +50,7 @@
 <meta itemprop="name" content="RxJs 初探 —— 基于事件为中心的编程">
 <meta itemprop="description" content="这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始"><meta itemprop="datePublished" content="2021-10-02T22:19:12+08:00" />
 <meta itemprop="dateModified" content="2021-10-02T22:19:12+08:00" />
-<meta itemprop="wordCount" content="4198">
+<meta itemprop="wordCount" content="4276">
 <meta itemprop="keywords" content="rxjs,javascript," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="RxJs 初探 —— 基于事件为中心的编程"/>
 <meta name="twitter:description" content="这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始"/>
@@ -177,7 +177,7 @@
         <div class="post-category">
             <a href="/categories/javascript/"> javascript </a>
             </div>
-          <span class="more-meta"> 约 4198 字 </span>
+          <span class="more-meta"> 约 4276 字 </span>
           <span class="more-meta"> 预计阅读 9 分钟 </span>
         
       </div>
@@ -225,18 +225,18 @@
 
     <div class="post-content">
       <p>这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始讲，把函数式放到一边，然而这个其实也是 FRP 的重点——事件建模。</p>
-<p>全文内容有点长，可以顺着思路慢慢看，结尾比较匆忙，看不看随意。</p>
+<p>全文内容有点长，可以顺着思路慢慢看，结尾比较匆忙，看不看随意。另外代码基于 RxJs 6 的，因此会与网上的一些版本有着明显的区别，建议阅读英文文档，中文文档旧了。</p>
 <hr>
 <p>RxJs 是以事件为核心的库，正如它官网所说的那样：</p>
 <blockquote>
 <p>RxJS is a library for composing asynchronous and event-based programs by using observable sequences.</p>
 </blockquote>
-<p>初学者学习的时候往往把握不住这个内核，而网上的诸多教程基本上是对各个概念的叙述，而不讲 RxJs 实际要处理的核心问题：事件。如果要我为 RxJs 的风格命名的话，我会命名为“面向事件编程”（OEP）。我接下来的叙述也会按照这个理解去处理。</p>
+<p>初学者学习的时候很多会被函数式给唬住，而网上的诸多教程基本上也是对函数式大吹特吹，而不讲 RxJs 实际要处理的核心问题：事件。如果要我为  RxJs 的风格命名的话，我会命名为“面向事件编程”（OEP）（实际上不是，方便法门而已）。我接下来的叙述也会按照这个理解去处理。</p>
 <h2 id="rxjs-的基本方法">RxJs 的基本方法</h2>
 <p>RxJs 基本概念很多，像什么 <code>Observable</code> 啦， <code>Observer</code> 啦， <code>Subject</code> 啦，但这些实际上都是处理工具， RxJs 的处理方法主要有三个：观察者模式、迭代器模式和函数式编程。</p>
 <p>那么 RxJs 如何将这三个方法应用于事件的管理上的呢？</p>
 <p>首先，是观察者模式和迭代器模式。观察者模式用于注册事件并管理事件，而迭代模式则用于触发事件，二者统一使用。前者是事件与事件之间的管理，后者同一事件发生顺序的管理。由此，二者构成了对事件不同维度上的管理。</p>
-<p>然后，是函数式编程。对于数据的管理即是对于事件发生的管理， RxJs 利用了函数式编程无副作用的特点并结合链式调用去流动数据，并将函数作为值传递，做了高层次的抽象。而对于 RxJs 初学者来说，函数式部分其实是最难的，初学的时候应该先跳过函数式，当你明白用非函数式如何实现之后再去看函数式实现之后，为什么要用函数式这个问题就豁然开朗了。</p>
+<p>然后，是函数式编程。对于数据的管理即是对于事件发生的管理， RxJs  利用了函数式编程无副作用的特点并结合链式调用去流动数据，并将函数作为值传递，做了高层次的抽象。而对于 RxJs  初学者来说，函数式部分其实是最难的，初学的时候应该先跳过函数式，当你明白用非函数式如何实现之后再去看函数式实现之后，为什么要用函数式这个问题就豁然开朗了。而且，你不要总想着函数式，这个是皮。</p>
 <h2 id="observable"><code>Observable</code></h2>
 <p><code>Observable</code> 对象的使用体现了 RxJs 最为基础的方法。 <code>Observable</code> 意为可订阅的，这里表示该对象可以被订阅。</p>
 <pre><code class="language-javascript">const { Observable } from 'rxjs';
@@ -610,7 +610,7 @@ setTimeout(() =&gt; {
 <p>这其实就是操作符一个很重要的作用，简化代码。</p>
 <h3 id="behaviorsubject"><code>BehaviorSubject</code></h3>
 <p><code>BehaviorSubject</code> 是 <code>Subject</code> 的变体，它在原有 <code>Subject</code> 的基础上多了个当前值的概念。看代码的应该就能理解了。</p>
-<pre><code>const { BehaviorSubject } = require('rxjs');
+<pre><code class="language-javascript">const { BehaviorSubject } = require('rxjs');
 
 const subject = new BehaviorSubject(0); // 初始值
 
