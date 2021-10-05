@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 26 Aug 2021 15:43:34 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Oct 2021 22:19:12 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RxJs 初探 —— 基于事件为中心的编程</title>
+      <link>https://bigshans.github.io/post/rxjs-exploration/</link>
+      <pubDate>Sat, 02 Oct 2021 22:19:12 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/rxjs-exploration/</guid>
+      <description>这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始</description>
+    </item>
+    
     <item>
       <title>Vue 3.2 &lt;script setup&gt; 摘要</title>
       <link>https://bigshans.github.io/post/vue3_2-setup/</link>

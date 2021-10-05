@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>RxJs 初探 —— 基于事件为中心的编程 - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.88.1 with theme even" />
+
+
+<link rel="canonical" href="https://bigshans.github.io/post/rxjs-exploration/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.184da86d2a45601961fbb04a2dc55252670675106caf6648087f1edd7259879a.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="RxJs 初探 —— 基于事件为中心的编程" />
+<meta property="og:description" content="这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/rxjs-exploration/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-10-02T22:19:12+08:00" />
+<meta property="article:modified_time" content="2021-10-02T22:19:12+08:00" />
+
+<meta itemprop="name" content="RxJs 初探 —— 基于事件为中心的编程">
+<meta itemprop="description" content="这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始"><meta itemprop="datePublished" content="2021-10-02T22:19:12+08:00" />
+<meta itemprop="dateModified" content="2021-10-02T22:19:12+08:00" />
+<meta itemprop="wordCount" content="4198">
+<meta itemprop="keywords" content="rxjs,javascript," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="RxJs 初探 —— 基于事件为中心的编程"/>
+<meta name="twitter:description" content="这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">RxJs 初探 —— 基于事件为中心的编程</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-10-02 </span>
+        <div class="post-category">
+            <a href="/categories/javascript/"> javascript </a>
+            </div>
+          <span class="more-meta"> 约 4198 字 </span>
+          <span class="more-meta"> 预计阅读 9 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#rxjs-的基本方法">RxJs 的基本方法</a></li>
+        <li><a href="#observable"><code>Observable</code></a></li>
+        <li><a href="#observer"><code>Observer</code></a></li>
+        <li><a href="#subscription"><code>Subscription</code></a></li>
+        <li><a href="#operators"><code>Operators</code></a></li>
+        <li><a href="#高阶-observable">高阶 <code>Observable</code></a>
+          <ul>
+            <li><a href="#concatall"><code>concatAll()</code></a></li>
+            <li><a href="#mergeall"><code>mergeAll()</code></a></li>
+            <li><a href="#switchall"><code>switchAll</code></a></li>
+            <li><a href="#exhaustall"><code>exhaustAll()</code></a></li>
+          </ul>
+        </li>
+        <li><a href="#subject"><code>Subject</code></a>
+          <ul>
+            <li><a href="#多播的-observable">多播的 <code>Observable</code></a></li>
+            <li><a href="#behaviorsubject"><code>BehaviorSubject</code></a></li>
+            <li><a href="#replaysubject"><code>ReplaySubject</code></a></li>
+            <li><a href="#asyncsubject"><code>AsyncSubject</code></a></li>
+          </ul>
+        </li>
+        <li><a href="#scheduler"><code>Scheduler</code></a>
+          <ul>
+            <li><a href="#调度器类别">调度器类别</a></li>
+            <li><a href="#更多的内容">更多的内容</a></li>
+          </ul>
+        </li>
+        <li><a href="#结语">结语</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+    <div class="post-content">
+      <p>这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始讲，把函数式放到一边，然而这个其实也是 FRP 的重点——事件建模。</p>
+<p>全文内容有点长，可以顺着思路慢慢看，结尾比较匆忙，看不看随意。</p>
+<hr>
+<p>RxJs 是以事件为核心的库，正如它官网所说的那样：</p>
+<blockquote>
+<p>RxJS is a library for composing asynchronous and event-based programs by using observable sequences.</p>
+</blockquote>
+<p>初学者学习的时候往往把握不住这个内核，而网上的诸多教程基本上是对各个概念的叙述，而不讲 RxJs 实际要处理的核心问题：事件。如果要我为 RxJs 的风格命名的话，我会命名为“面向事件编程”（OEP）。我接下来的叙述也会按照这个理解去处理。</p>
+<h2 id="rxjs-的基本方法">RxJs 的基本方法</h2>
+<p>RxJs 基本概念很多，像什么 <code>Observable</code> 啦， <code>Observer</code> 啦， <code>Subject</code> 啦，但这些实际上都是处理工具， RxJs 的处理方法主要有三个：观察者模式、迭代器模式和函数式编程。</p>
+<p>那么 RxJs 如何将这三个方法应用于事件的管理上的呢？</p>
+<p>首先，是观察者模式和迭代器模式。观察者模式用于注册事件并管理事件，而迭代模式则用于触发事件，二者统一使用。前者是事件与事件之间的管理，后者同一事件发生顺序的管理。由此，二者构成了对事件不同维度上的管理。</p>
+<p>然后，是函数式编程。对于数据的管理即是对于事件发生的管理， RxJs 利用了函数式编程无副作用的特点并结合链式调用去流动数据，并将函数作为值传递，做了高层次的抽象。而对于 RxJs 初学者来说，函数式部分其实是最难的，初学的时候应该先跳过函数式，当你明白用非函数式如何实现之后再去看函数式实现之后，为什么要用函数式这个问题就豁然开朗了。</p>
+<h2 id="observable"><code>Observable</code></h2>
+<p><code>Observable</code> 对象的使用体现了 RxJs 最为基础的方法。 <code>Observable</code> 意为可订阅的，这里表示该对象可以被订阅。</p>
+<pre><code class="language-javascript">const { Observable } from 'rxjs';
+
+const observable = new Observable(subscriber =&gt; {
+  // 迭代控制同事件的发生
+  subscriber.next(1);
+  subscriber.next(2);
+  subscriber.next(3);
+  setTimeout(() =&gt; {
+    subscriber.next(4);
+    subscriber.complete();
+  }, 1000);
+});
+ 
+console.log('just before subscribe');
+// 事件入口控制
+observable.subscribe({
+  next(x) { console.log('got value ' + x); }, // 事件处理
+  error(err) { console.error('something wrong occurred: ' + err); },
+  complete() { console.log('done'); }
+});
+console.log('just after subscribe');
+</code></pre>
+<p><code>Observable</code> 对象生成了一个事件的入口，在 <code>subscribe</code> 的时候，我们的事件便在事件中心注册了。而 <code>next</code> 是迭代器， <code>next</code> 代表下一个值，它控制了同一个事件触发的时序， <code>complete</code> 代表时序的结束，不再被触发。这里就是观察者和迭代器模式的结合，我们还没有到要讲函数式的时候。</p>
+<p>除此之外，我们还可以终止事件的发生。</p>
+<pre><code class="language-javascript">const { from } = require('rxjs');
+const observable = from([10, 20, 30]);
+const subscription = observable.subscribe(x =&gt; console.log(x));
+// Later:
+subscription.unsubscribe();
+</code></pre>
+<p>我们也可以在创建 <code>Observable</code> 时定义好 <code>unsubscribe</code> ，来做一些扫尾工作。</p>
+<pre><code class="language-javascript">const observable = new Observable(function subscribe(subscriber) {
+  // Keep track of the interval resource
+  const intervalId = setInterval(() =&gt; {
+    subscriber.next('hi');
+  }, 1000);
+
+  // Provide a way of canceling and disposing the interval resource
+  return function unsubscribe() {
+    clearInterval(intervalId);
+  };
+});
+</code></pre>
+<h2 id="observer"><code>Observer</code></h2>
+<p><code>Observer</code> 是什么？它意为观察者，就是观察者模式中的消费者，其实也就对应我们的一个事件。</p>
+<pre><code class="language-javascript">observable.subscribe(x =&gt; console.log('Observer got a next value: ' + x));
+</code></pre>
+<p><code>Observer</code> 可以是一个简单的函数，或者是像下面这样的结构：</p>
+<pre><code class="language-javascript">const observer = {
+  next: x =&gt; console.log('Observer got a next value: ' + x),
+  error: err =&gt; console.error('Observer got an error: ' + err),
+  complete: () =&gt; console.log('Observer got a complete notification'),
+};
+observable.subscribe(observer);
+</code></pre>
+<p>其中 <code>next</code> 是必须得有的，不然没法迭代。</p>
+<h2 id="subscription"><code>Subscription</code></h2>
+<p><code>Subscription</code> 就是订阅对象，是在调用 <code>subscribe</code> 后返回的。它只有一个无参的方法 <code>unsubscribe()</code> ，作用是取消订阅。订阅的取消显然是只有一次的。</p>
+<pre><code class="language-javascript">import { interval } from 'rxjs';
+
+const observable = interval(1000);
+const subscription = observable.subscribe(x =&gt; console.log(x));
+subscription.unsubscribe();
+</code></pre>
+<p>这里对象化订阅最大的好处就是方便管理订阅。</p>
+<h2 id="operators"><code>Operators</code></h2>
+<p><code>Operators</code> 一般翻译为操作符，是用处最大的部分，借助操作符，我们可以很方便地写出函数式的 RxJs 。换句话说，这里是 RxJs 函数式编程部分，用以更好的抽象 RxJs 的实现。</p>
+<p>操作符分文两类，一类是管道式的操作符（Pipeable Operators），一类是创建式的运算符（Creation Operators）。两类运算符都是在对数据流下手，管道式针修改流中数据从而生成了新的 <code>Observable</code> ，而创建式又分为两种——创建新数据和创建新的 <code>Observable</code> 。</p>
+<p>我们首先讲讲管道式的操作符。管道式操作符只有一个 <code>pipe()</code> ，且是在 <code>Observable</code> 的一个方法，这个方法传入至少一个只有一个参数的函数， <code>pipe()</code> 随后会传出一个新的 <code>Observable</code> 。为什么会传出新的 <code>Observable</code> 呢？是为了保持数据的不可变性。</p>
+<pre><code class="language-javascript">const { of } = require('rxjs');
+const { map } = require('rxjs/operators');
+
+const ob = of(1, 2, 3)
+const ob1 = ob.pipe(map(x =&gt; x * 2));
+const ob2 = ob.pipe(map(x =&gt; x + 1));
+
+ob1.subscribe(v =&gt; console.log('ob1 ' + v));
+ob2.subscribe(v =&gt; console.log('ob2 ' + v));
+</code></pre>
+<p>这样 <code>ob1</code> 和 <code>ob2</code> 引用的都是 <code>ob</code> 的数据，二者不互相影响，这就是函数式的好处。</p>
+<p>然后是创建式，分为两类，一类是创建 <code>Observable</code> 的，一类是创建数据的。</p>
+<p>像上面代码的例子， <code>of()</code> 是创建了一个新的 <code>Observable</code> ， <code>map</code> 则根据输入的数据创建了一个新的数据。这里仍然要注意副作用的问题，所以不要有副作用。</p>
+<p>除了 <code>of()</code> 之外， <code>interval()</code> 也是个常见的运算符。</p>
+<pre><code class="language-javascript">import { interval } from 'rxjs';
+
+const observable = interval(1000 /* number of milliseconds */);
+</code></pre>
+<p>当然，运算的内容特别多，也不需要全部都记住，自己那里写得麻烦再去找找有没有好用的运算简化，这样就行了。</p>
+<h2 id="高阶-observable">高阶 <code>Observable</code></h2>
+<p>我们之前讲了 <code>Observable</code> 对象，在我们学习了操作符之后，我们更深入地学习一下高价 <code>Observable</code> 。高阶听上去很高级，但实际上，我们要说的高阶就是多个 <code>Observable</code> 对象如何组合成一个 <code>Observable</code> 对象。</p>
+<p>这里得用到创建式操作符中的合并操作符（join operators），它会处理多个 <code>Observable</code> 并返回一个新的 <code>Observable</code> 。</p>
+<p>这些操作符有：</p>
+<ul>
+<li><code>concatAll()</code></li>
+<li><code>mergeAll()</code></li>
+<li><code>switchAll()</code></li>
+<li><code>exhaustAll()</code></li>
+</ul>
+<p>我们一个个来讲。</p>
+<h3 id="concatall"><code>concatAll()</code></h3>
+<p><code>concatAll()</code> 从它的名字上就知道它是将所有的 <code>Observable</code> 线性连接成一个数据的代码。</p>
+<pre><code class="language-javascript">const { of } = require('rxjs');
+const { map, concatAll } = require('rxjs/operators');
+
+of(1, 2, {a : 1})
+  .pipe(map(e =&gt; of(e)))
+  .pipe(concatAll())
+  .subscribe(e =&gt; console.log(e));
+</code></pre>
+<h3 id="mergeall"><code>mergeAll()</code></h3>
+<p><code>mergeAll()</code> 是将高阶 <code>Observable</code> 打平合并，合成一个一阶的 <code>Observable</code> 。它可以传入一个参数，就是同一事件最大的并发数，默认是 <code>Infinity</code> 。</p>
+<pre><code class="language-javascript">const { map, mergeAll, take } = require('rxjs/operators');
+const { of } = require('rxjs');
+
+const myPromise = val =&gt;
+  new Promise(resolve =&gt; setTimeout(() =&gt; resolve(`Result: ${val}`), 2000));
+// 发出 1,2,3
+const source = of(1, 2, 3);
+
+const example = source.pipe(
+  // 将每个值映射成 promise
+  map(val =&gt; myPromise(val)),
+  // 发出 source 的结果
+  mergeAll()
+);
+
+const subscribe = example.subscribe(val =&gt; console.log(val, Date.now()));
+</code></pre>
+<p>运行上述代码，你会发现除了第一个事件不同之外，其他事件的发生都是同一时间的，这也是它与 <code>concatAll()</code> 不一样的地方。</p>
+<h3 id="switchall"><code>switchAll</code></h3>
+<p><code>switchAll()</code>  的作用与 <code>mergeAll()</code> 的作用类似，都是将高阶 <code>Observable</code> 转换为一阶 <code>Observable</code> 。</p>
+<p>那么，它与 <code>mergeAll()</code> 有什么不同呢？ <code>switchAll()</code> 会处理最新的订阅，每当有新的订阅来的时候，就会退订旧的订阅。它们在并发冲突时的表现不同。</p>
+<pre><code class="language-javascript">const { interval } = require('rxjs');
+const { map, take, switchAll } = require('rxjs/operators');
+
+const a = interval(500).pipe(map((v) =&gt; 'a' + v), take(3));
+const b = interval(500).pipe(map((v) =&gt; 'b' + v), take(3));
+const higherOrderObservable = interval(1000).pipe(take(2), map(i =&gt; [a, b][i]));
+
+higherOrderObservable.pipe(switchAll()).subscribe((value) =&gt; console.log(value));
+/*
+output:
+a0
+a1
+b0
+b1
+*/
+</code></pre>
+<pre><code class="language-javascript">const { interval } = require('rxjs');
+const { map, take, mergeAll } = require('rxjs/operators');
+
+const a = interval(500).pipe(map((v) =&gt; 'a' + v), take(3));
+const b = interval(500).pipe(map((v) =&gt; 'b' + v), take(3));
+const higherOrderObservable = interval(1000).pipe(take(2), map(i =&gt; [a, b][i]));
+
+higherOrderObservable.pipe(mergeAll()).subscribe((value) =&gt; console.log(value));
+/*
+output:
+a0
+a1
+b0
+a2
+b1
+b2
+*/
+</code></pre>
+<p>因为有并发，所以输出是不唯一的，这一点在 <code>switchAll()</code> 上面体现得尤为明显，大家可以自己想想为什么会这么输出。</p>
+<h3 id="exhaustall"><code>exhaustAll()</code></h3>
+<p><code>exhaustAll()</code> ，在前一个内部观测值尚未完成时，通过放弃内部观测值，将一个高阶观测值转换为一阶观测值。<code>exhaust</code> 意为用尽、耗尽，这里指代这样的行为，即观察某一个订阅完全耗尽之后再进行下一个订阅的观察，期间的所有订阅都忽视掉。</p>
+<p>它与其他操作符的作用区别还是挺明显的。</p>
+<pre><code class="language-javascript">const { of, interval } = require('rxjs');
+const { map, take, exhaustAll } = require('rxjs/operators');
+
+of(1, 2, 3)
+  .pipe(map(ev =&gt; interval(100).pipe(take(5))))
+  .pipe(exhaustAll())
+  .subscribe(x =&gt; console.log(x))
+
+/*
+0
+1
+2
+3
+4
+*/
+</code></pre>
+<p>除此之外，还有 <code>concatMap()</code> 、 <code>mergeMap()</code> 、 <code>switchMap()</code> 和 <code>exhaustMap()</code>  ，它们实际上是对应操作符与 <code>map()</code> 的结合，在此就不赘述了。</p>
+<h2 id="subject"><code>Subject</code></h2>
+<p><code>Subject</code> 对象是什么呢？官方是这么描述的：</p>
+<blockquote>
+<p>A Subject is like an Observable, but can multicast to many Observers. Subjects are like EventEmitters: they maintain a registry of many listeners.</p>
+</blockquote>
+<p>挺玄乎的。 <code>subject</code> 这个词在这里并不好翻译，这里翻译成主体。主体意味着两层意思，一是它是主动的，强调它的主动性，二是它是被动的，强调它的中介性。综合起来更像是 <code>agent</code> ，这里 <code>Subject</code> 对象也更像是一个代理层。</p>
+<p>首先， <code>Subject</code> 可以像 <code>Observable</code> 使用。</p>
+<pre><code class="language-javascript">const { Subject } = require('rxjs');
+
+const subject = new Subject();
+
+subject.subscribe(v =&gt; console.log('Observer A: ' + v));
+subject.subscribe(v =&gt; console.log('Observer B: ' + v));
+
+subject.next(1);
+subject.next(2);
+</code></pre>
+<p>也可以像 <code>Observer</code> 一样被一个 <code>Observable</code> 接收。</p>
+<pre><code class="language-javascript">const { Subject, from } = require('rxjs');
+
+const subject = new Subject();
+
+subject.subscribe(v =&gt; console.log('Observer A: ' + v));
+subject.subscribe(v =&gt; console.log('Observer B: ' + v));
+
+from([1, 2, 3])
+  .subscribe(subject)
+</code></pre>
+<h3 id="多播的-observable">多播的 <code>Observable</code></h3>
+<p>借助 <code>Subject</code> ，我们只需要调动一次 <code>subscribe()</code> ，就可以同时广播到两个 <code>Observer</code> 上。</p>
+<p>我们看看下面的代码：</p>
+<pre><code class="language-javascript">const { Observable } = require('rxjs');
+
+const obs = new Observable(observer =&gt; {
+  let counter = 0;
+  const handler = setInterval(() =&gt; {
+    console.log(&quot;producer: &quot; + counter);
+    observer.next(counter);
+    counter++;
+  }, 1000);
+  return () =&gt; clearInterval(handler);
+});
+
+obs.subscribe((v) =&gt; console.log('subscription 1: ' + v));
+obs.subscribe((v) =&gt; console.log('subscription 2: ' + v));
+/*
+output:
+producer: 0
+subscription 1: 0
+producer: 0
+subscription 2: 0
+producer: 1
+subscription 1: 1
+producer: 1
+subscription 2: 1
+producer: 2
+subscription 1: 2
+producer: 2
+subscription 2: 2
+producer: 3
+subscription 1: 3
+producer: 3
+subscription 2: 3
+producer: 4
+subscription 1: 4
+producer: 4
+subscription 2: 4
+*/
+</code></pre>
+<p>你会发现每次 subscription 被调用前， producer 都被调用了一下，这不是我们期望的，因为 producer 被重复调用了，并生产了一样的值，这是无意义且多余的动作。于是我们用 <code>Subject</code> 进行改造。</p>
+<pre><code class="language-javascript">const { Observable, Subject } = require('rxjs');
+
+const obs = new Observable(observer =&gt; {
+  let counter = 0;
+  const handler = setInterval(() =&gt; {
+    console.log(&quot;producer: &quot; + counter);
+    observer.next(counter);
+    counter++;
+  }, 1000);
+  return () =&gt; clearInterval(handler);
+});
+
+const shared = new Subject();
+
+shared.subscribe((v) =&gt; console.log('subscription 1: ' + v));
+shared.subscribe((v) =&gt; console.log('subscription 2: ' + v));
+
+obs.subscribe(shared);
+/*
+output:
+producer: 0
+subscription 1: 0
+subscription 2: 0
+producer: 1
+subscription 1: 1
+subscription 2: 1
+producer: 2
+subscription 1: 2
+subscription 2: 2
+producer: 3
+subscription 1: 3
+subscription 2: 3
+producer: 4
+subscription 1: 4
+subscription 2: 4
+*/
+</code></pre>
+<p>可以了，现在我们达到了我们想要的结果，但我们想要更进一步。</p>
+<pre><code class="language-javascript">const { Observable, Subject, connectable } = require('rxjs');
+
+const obs = new Observable(observer =&gt; {
+  let counter = 0;
+  const handler = setInterval(() =&gt; {
+    console.log(&quot;producer: &quot; + counter);
+    observer.next(counter);
+    counter++;
+  }, 1000);
+  return () =&gt; clearInterval(handler);
+});
+
+const shared = connectable(obs, {
+  connector: () =&gt; new Subject(),
+  resetOnDisconnect: false
+});
+
+shared.subscribe((v) =&gt; console.log('subscription 1: ' + v));
+shared.subscribe((v) =&gt; console.log('subscription 2: ' + v));
+
+shared.connect();
+</code></pre>
+<p>这里我们使用 <code>connectable</code> 将 <code>obs</code> 变成了一个 <code>ConnetableObservable</code> ，赋予了 <code>obs</code> 的多播的能力。其中， <code>Subject</code> 是作为二者桥接的桥梁而存在的。这里的代码与上面的代码实际上就是等效的。</p>
+<h4 id="多播订阅的管理">多播订阅的管理</h4>
+<p>在多播里面，我们通常希望第一个订阅到达时进行 <code>connect()</code> ，最后一个离开时做 <code>unsubscribe()</code> ，这样能方便我们管理订阅。</p>
+<pre><code class="language-javascript">const { interval, Observable, Subject, connectable } = require('rxjs');
+
+const multicasted = connectable(interval(500), { connector: () =&gt; new Subject(), resetOnDisconnect: false });
+const subscription = multicasted.subscribe(v =&gt; console.log('observer A: ' + v));
+
+const subscriptionConnect = multicasted.connect();
+let subscription2;
+
+setTimeout(() =&gt; {
+  subscription2 = multicasted.subscribe(v =&gt; console.log('observer B: ' + v));
+}, 600);
+
+setTimeout(() =&gt; {
+  subscription.unsubscribe();
+}, 1200);
+
+
+setTimeout(() =&gt; {
+  subscription2.unsubscribe();
+  subscriptionConnect.unsubscribe();
+}, 2000);
+</code></pre>
+<p>然后你会发现这个代码非常麻烦。</p>
+<pre><code class="language-javascript">const { interval, Observable, Subject, connectable } = require(&quot;rxjs&quot;);
+const { share } = require(&quot;rxjs/operators&quot;);
+
+const multicasted = interval(500).pipe(
+  share({ connector: () =&gt; new Subject(), resetOnDisconnect: false })
+);
+const subscription = multicasted.subscribe((v) =&gt;
+  console.log(&quot;observer A: &quot; + v)
+);
+
+let subscription2;
+
+setTimeout(() =&gt; {
+  subscription2 = multicasted.subscribe((v) =&gt; console.log(&quot;observer B: &quot; + v));
+}, 600);
+
+setTimeout(() =&gt; {
+  subscription.unsubscribe();
+}, 1200);
+
+setTimeout(() =&gt; {
+  subscription2.unsubscribe();
+}, 2000);
+</code></pre>
+<p>这样我们就不需要自己管理 <code>connect</code> 了，当所有订阅取消之后，连接也会被断开。</p>
+<p>这其实就是操作符一个很重要的作用，简化代码。</p>
+<h3 id="behaviorsubject"><code>BehaviorSubject</code></h3>
+<p><code>BehaviorSubject</code> 是 <code>Subject</code> 的变体，它在原有 <code>Subject</code> 的基础上多了个当前值的概念。看代码的应该就能理解了。</p>
+<pre><code>const { BehaviorSubject } = require('rxjs');
+
+const subject = new BehaviorSubject(0); // 初始值
+
+subject.subscribe(v =&gt; console.log('observerA: ' + v));
+
+subject.next(1);
+subject.next(2);
+
+subject.subscribe(v =&gt; console.log('observerB: ' + v));
+
+subject.next(3);
+
+/*
+output:
+observerA: 0
+observerA: 1
+observerA: 2
+observerB: 2
+observerA: 3
+observerB: 3
+*/
+</code></pre>
+<h3 id="replaysubject"><code>ReplaySubject</code></h3>
+<p><code>ReplaySubject</code> 与 <code>BehaviorSubject</code> 还是比较像的， <code>ReplaySubject</code> 是一个带有缓存的 <code>Subject</code> ，当缓存为为 0 或 1 时，它的表现与 <code>BehaviorSubject</code> 基本上一样了。</p>
+<pre><code class="language-javascript">const { ReplaySubject } = require('rxjs');
+
+const subject = new ReplaySubject(3); // buffer 大小
+
+subject.subscribe(v =&gt; console.log('observerA: ' + v));
+
+subject.next(1);
+subject.next(2);
+subject.next(3);
+subject.next(4);
+
+subject.subscribe(v =&gt; console.log('observerB: ' + v));
+
+subject.next(5);
+/*
+output:
+observerA: 1
+observerA: 2
+observerA: 3
+observerA: 4
+observerB: 2
+observerB: 3
+observerB: 4
+observerA: 5
+observerB: 5
+*/
+</code></pre>
+<h3 id="asyncsubject"><code>AsyncSubject</code></h3>
+<p><code>AsyncSubject</code> 在多个值返回时，会取最后一个值。</p>
+<pre><code class="language-javascript">const { AsyncSubject } = require('rxjs');
+const subject = new AsyncSubject();
+ 
+subject.subscribe({
+  next: (v) =&gt; console.log(`observerA: ${v}`)
+});
+ 
+subject.next(1);
+subject.next(2);
+subject.next(3);
+subject.next(4);
+ 
+subject.subscribe({
+  next: (v) =&gt; console.log(`observerB: ${v}`)
+});
+ 
+subject.next(5);
+subject.complete();
+ 
+// Logs:
+// observerA: 5
+// observerB: 5
+</code></pre>
+<p>看起来好像没什么用，不过可以举一个场景，比如在多个 http 请求时，重复获取时可以保证只获取最后一个。</p>
+<h2 id="scheduler"><code>Scheduler</code></h2>
+<p><code>Scheduler</code> ，意为调度器，它控制了订阅数据的发送。</p>
+<pre><code class="language-javascript">const { Observable, asyncScheduler } = require('rxjs');
+const { observeOn } = require('rxjs/operators');
+ 
+const observable = new Observable((observer) =&gt; {
+  observer.next(1);
+  observer.next(2);
+  observer.next(3);
+  observer.complete();
+}).pipe(
+  observeOn(asyncScheduler)
+);
+ 
+console.log('just before subscribe');
+observable.subscribe({
+  next(x) {
+    console.log('got value ' + x)
+  },
+  error(err) {
+    console.error('something wrong occurred: ' + err);
+  },
+  complete() {
+     console.log('done');
+  }
+});
+console.log('just after subscribe');
+// Logs:
+// just before subscribe
+// just after subscribe
+// got value 1
+// got value 2
+// got value 3
+// done
+</code></pre>
+<p>比如说上面使用了 <code>asyncScheduler</code> ，使得数据数据被异步发送，事件也被异步触发。</p>
+<h3 id="调度器类别">调度器类别</h3>
+<ul>
+<li><code>null</code>，默认的调度，即同步调度。</li>
+<li><code>queueScheduler</code>，在当前事件帧上的队列调度。</li>
+<li><code>asapScheduler</code>，微任务调度。</li>
+<li><code>asyncScheduler</code>，异步调度，使用 <code>setInterval()</code> 。</li>
+<li><code>animationFrameScheduler</code>，在下一次浏览器内容绘制时调度。</li>
+</ul>
+<h3 id="更多的内容">更多的内容</h3>
+<p>&hellip;&hellip;</p>
+<h2 id="结语">结语</h2>
+<p>这篇文章断断续续写了好几天，虽然是有参考官方文档的，但是呢，官方也有些东西也没讲清楚。我来来回回看了几次，大概抓住了一个点，然后顺着讲了下去。有些内容根本没有讲完，比如说调度器部分，再比如自定义操作符，有兴趣的自己可以看看，即使没看也暂时不影响。写完就觉得非常累，但也非常值，终于把 RxJs 看进去了。希望你也能顺着文章的轨迹，进入 RxJs 的大门。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-10-02
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/rxjs/">rxjs</a>
+          <a href="/tags/javascript/">javascript</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/on-concrete-people-and-abstract-people/">
+            <span class="next-text nav-default">论具体的人与抽象的人</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
