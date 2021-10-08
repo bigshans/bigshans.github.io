@@ -3,14 +3,49 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2021-10-02T22:19:12+08:00</lastmod>
+    <lastmod>2021-10-08T17:37:47+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2021-10-02T22:19:12+08:00</lastmod>
+    <lastmod>2021-10-08T17:37:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/</loc>
+    <lastmod>2021-10-08T17:37:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/</loc>
+    <lastmod>2021-10-08T17:37:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/win-numb/</loc>
+    <lastmod>2021-10-08T17:37:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2021-10-08T17:37:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2021-10-08T17:37:47+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24,13 +59,6 @@
   
   <url>
     <loc>https://bigshans.github.io/categories/javascript/</loc>
-    <lastmod>2021-10-02T22:19:12+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/post/</loc>
     <lastmod>2021-10-02T22:19:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -51,28 +79,7 @@
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/tags/</loc>
-    <lastmod>2021-10-02T22:19:12+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigshans.github.io/post/on-concrete-people-and-abstract-people/</loc>
-    <lastmod>2021-10-01T17:49:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2021-10-01T17:49:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2021-10-01T17:49:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
