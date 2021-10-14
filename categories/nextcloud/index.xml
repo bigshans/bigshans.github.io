@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nextcloud on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/categories/nextcloud/</link>
+    <description>Recent content in nextcloud on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Thu, 14 Oct 2021 09:47:19 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/nextcloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安装 Collabora Office</title>
+      <link>https://bigshans.github.io/post/collabora-install/</link>
+      <pubDate>Thu, 14 Oct 2021 09:47:19 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/collabora-install/</guid>
+      <description>最近在配置 Nextcloud 的 Office 功能，尝试了一下 OnlyOffice ，实在是太不稳定了。我最终选择了 Collabora Office 作为替代。 首先，极其不推荐使用 Docker 部署，因为 Docker 已经好久没维护了，其次，如</description>
+    </item>
+    
+  </channel>
+</rss>
