@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tensorflow on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/categories/tensorflow/</link>
+    <description>Recent content in tensorflow on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Mon, 18 Oct 2021 16:06:11 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tensorflow 入门之数学基础</title>
+      <link>https://bigshans.github.io/post/tensorflow-tutorial-math-basis/</link>
+      <pubDate>Mon, 18 Oct 2021 16:06:11 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/tensorflow-tutorial-math-basis/</guid>
+      <description>数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。今天我们就来学习一下 Tensorflow 的一些简单的数学基础，并且与 Tensorflow 的数据结构进行结合，使我们能够不</description>
+    </item>
+    
+  </channel>
+</rss>
