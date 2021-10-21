@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。今天我们就来学习一下 Tensorflow 的一些简单的数学基础，并且与 Tensorflow 的数据结构进行结合，使我们能够不" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。本篇以 d2l 第二版所提供的数学知识作为阅读内容进行学习。换而言之，本篇是 d2l 的读书笔记。我" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -35,25 +35,25 @@
 
 
 
-<link href="/sass/main.min.b0c6a65638aed399d04b625166fb172e2f3ddf4538702b72f6f65c05c7dc4db1.css" rel="stylesheet">
+<link href="/sass/main.min.495f38c8e2fdb3693708e555c70a08685a83da1ab330345991e1c3371ceab9ab.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 <link rel="stylesheet" href="/css/custom.css">
 
 
 <meta property="og:title" content="Tensorflow 入门之数学基础" />
-<meta property="og:description" content="数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。今天我们就来学习一下 Tensorflow 的一些简单的数学基础，并且与 Tensorflow 的数据结构进行结合，使我们能够不" />
+<meta property="og:description" content="数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。本篇以 d2l 第二版所提供的数学知识作为阅读内容进行学习。换而言之，本篇是 d2l 的读书笔记。我" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigshans.github.io/post/tensorflow-tutorial-math-basis/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-10-18T16:06:11+08:00" />
 <meta property="article:modified_time" content="2021-10-18T16:06:11+08:00" />
 
 <meta itemprop="name" content="Tensorflow 入门之数学基础">
-<meta itemprop="description" content="数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。今天我们就来学习一下 Tensorflow 的一些简单的数学基础，并且与 Tensorflow 的数据结构进行结合，使我们能够不"><meta itemprop="datePublished" content="2021-10-18T16:06:11+08:00" />
+<meta itemprop="description" content="数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。本篇以 d2l 第二版所提供的数学知识作为阅读内容进行学习。换而言之，本篇是 d2l 的读书笔记。我"><meta itemprop="datePublished" content="2021-10-18T16:06:11+08:00" />
 <meta itemprop="dateModified" content="2021-10-18T16:06:11+08:00" />
-<meta itemprop="wordCount" content="2723">
+<meta itemprop="wordCount" content="6920">
 <meta itemprop="keywords" content="machine learing,tensorflow," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tensorflow 入门之数学基础"/>
-<meta name="twitter:description" content="数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。今天我们就来学习一下 Tensorflow 的一些简单的数学基础，并且与 Tensorflow 的数据结构进行结合，使我们能够不"/>
+<meta name="twitter:description" content="数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。本篇以 d2l 第二版所提供的数学知识作为阅读内容进行学习。换而言之，本篇是 d2l 的读书笔记。我"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -177,8 +177,8 @@
         <div class="post-category">
             <a href="/categories/tensorflow/"> tensorflow </a>
             </div>
-          <span class="more-meta"> 约 2723 字 </span>
-          <span class="more-meta"> 预计阅读 6 分钟 </span>
+          <span class="more-meta"> 约 6920 字 </span>
+          <span class="more-meta"> 预计阅读 14 分钟 </span>
         
       </div>
     </header>
@@ -204,6 +204,27 @@
             <li><a href="#范数">范数</a></li>
           </ul>
         </li>
+        <li><a href="#微分">微分</a>
+          <ul>
+            <li><a href="#导数">导数</a></li>
+            <li><a href="#偏导数">偏导数</a></li>
+            <li><a href="#梯度">梯度</a></li>
+            <li><a href="#链式法则">链式法则</a></li>
+            <li><a href="#自动求导">自动求导</a></li>
+          </ul>
+        </li>
+        <li><a href="#概率">概率</a>
+          <ul>
+            <li><a href="#基本概率论">基本概率论</a></li>
+            <li><a href="#联合概率">联合概率</a></li>
+            <li><a href="#条件概率">条件概率</a></li>
+            <li><a href="#贝叶斯定理">贝叶斯定理</a></li>
+            <li><a href="#边际化">边际化</a></li>
+            <li><a href="#独立性">独立性</a></li>
+            <li><a href="#期望和差异">期望和差异</a></li>
+          </ul>
+        </li>
+        <li><a href="#结语">结语</a></li>
       </ul>
     </li>
   </ul>
@@ -213,7 +234,7 @@
     <div class="post-content">
       
 
-<p>数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。今天我们就来学习一下 Tensorflow 的一些简单的数学基础，并且与 Tensorflow 的数据结构进行结合，使我们能够不失抽象的情况下直观地与代码想联系。不多说，开始吧！</p>
+<p>数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。本篇以 d2l 第二版所提供的数学知识作为阅读内容进行学习。换而言之，本篇是 d2l 的读书笔记。我尽量把我能弄懂弄清楚，所以，开始吧！</p>
 <h2 id="导入">导入</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span></code></pre></div>
 <h2 id="线性代数">线性代数</h2>
@@ -498,6 +519,240 @@ b_{n1} &amp; b_{n2} &amp; \dots &amp; b_{nk} \\
 <span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="co">       [70., 70., 70.]], dtype=float32)&gt;</span></span>
 <span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
 <h3 id="范数">范数</h3>
+<p>范数是具有“长度”概念的函数。非正式地说，一个向量的<em>范数</em>告诉我们一个向量有多大。 这里考虑的<em>大小</em>（size）概念不涉及维度，而是分量的大小。</p>
+<p>在线性代数中，向量范数是将向量映射到标量的函数 <span class="math inline">\(f\)</span> 。向量范数需要满足一些属性。</p>
+<p>给定任意向量 <span class="math inline">\(\mathbf{x}\)</span> ，</p>
+<ul>
+<li><p>性质一，如果我们按常数因子 <span class="math inline">\(\alpha\)</span> 缩放向量的所有元素，其范数也会按照相同常数因子的绝对值缩放： <span class="math display">\[
+f\left(\alpha\mathbf{x}\right) = \left|\alpha\right|f\left(\mathbf{x}\right)
+\]</span></p></li>
+<li><p>性质二，三角不等式： <span class="math display">\[
+f\left(\mathbf{x+y}\right) \le f\left(\mathbf{x}\right) + f\left(\mathbf{y}\right)
+\]</span></p></li>
+<li><p>性质三，非负性： <span class="math display">\[
+f\left(\mathbf{x}\right) \ge 0
+\]</span></p></li>
+<li><p>性质四，范数最小为 0 ，当且仅当全部向量全由 0 组成： <span class="math display">\[
+\forall_i,\left[\mathbf{x}\right]_i = 0 \Leftrightarrow f\left(\mathbf{x}\right) = 0
+\]</span></p></li>
+</ul>
+<p>举个例子，比如 <span class="math inline">\(L_2\)</span> 范数欧几里德距离。假设 <span class="math inline">\(n\)</span> 维向量 <span class="math inline">\(\mathbf{x}\)</span> 中的元素是 <span class="math inline">\(x_1, \cdots , x_n\)</span> ,其中 <span class="math inline">\(L_2\)</span> 是向量元素平方和的平方根： <span class="math display">\[
+\left \| \mathbf{x} \right \|_2 = \sqrt{\sum_{i=1}^{n} x_i^2}
+\]</span></p>
+<p>其中，在 <span class="math inline">\(L_2\)</span> 范数中常常省略下标 2 ，也就是说 <span class="math inline">\(\left\|\mathbf{x}\right\|\)</span> 等同于 <span class="math inline">\(\left\|\mathbf{x}\right\|_2\)</span> 。在 tensorflow 中，我们使用 <code>tf.norm</code> 来计算 <span class="math inline">\(L_2\)</span> 范数。</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> f.constant([<span class="fl">3.0</span>, <span class="op">-</span><span class="fl">4.0</span>])</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>tf.norm(u)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co">output:</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;tf.Tensor: shape=(), dtype=float32, numpy=5.0&gt;</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
+<p>在深度学习中，我们更常使用 <span class="math inline">\(L_2\)</span> 范数的平方，你还会遇到 <span class="math inline">\(L_2\)</span> 范数，它表示为向量元素的绝对值之和： <span class="math display">\[
+\left\| \mathbf{x} \right\|_1 = \sum_{i=1}^{n} \left|x_i\right|
+\]</span></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>tf.reduce_sum(tf.<span class="bu">abs</span>(u))</span></code></pre></div>
+<p><span class="math inline">\(L_1\)</span> 范数和 <span class="math inline">\(L_2\)</span> 范数都是更一般的 <span class="math inline">\(L_p\)</span> 范数的特例： <span class="math display">\[
+\left\| \mathbf{x} \right\|_p = \left(\sum_{i=1}^{n} \left|x_i\right|^p\right)^{1/p}
+\]</span></p>
+<p>类似于向量的 <span class="math inline">\(L_2\)</span> 范数，矩阵 <span class="math inline">\(\mathbf{X} \in \mathbb{R}^{m\times n}\)</span> 的<em>弗罗贝尼乌斯范数</em>（Frobenius norm）是矩阵元素平方和的平方根： <span class="math display">\[
+\left \| \mathbf{X} \right \|_F = \sqrt{\sum_{i=1}^{m} \sum_{j=1}^n x_{ij}^2}
+\]</span> 弗罗贝尼乌斯范数满足向量范数的所有性质，它就像是矩阵形向量的 <span class="math inline">\(L_2\)</span> 范数。 调用以下函数将计算矩阵的弗罗贝尼乌斯范数。</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>tf.norm(tf.ones((<span class="dv">4</span>, <span class="dv">9</span>)))</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co">output:</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;tf.Tensor: shape=(), dtype=float32, numpy=6.0&gt;</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
+<h2 id="微分">微分</h2>
+<h3 id="导数">导数</h3>
+<p>假设我们有一个函数 <span class="math inline">\(f：\mathbb{R}^n \rightarrow \mathbb{R}\)</span> ，其输入输出都是标量。 <span class="math inline">\(f\)</span> 的<strong>导数</strong>被定义为 <span class="math display">\[
+f&#39;\left(x\right) = \lim_{h\rightarrow\infty} \frac{f(x + h) - f(x)}{h} ,
+\]</span> 如果 <span class="math inline">\(f&#39;(a)\)</span> 存在，则称 <span class="math inline">\(f\)</span> 在 <span class="math inline">\(a\)</span> 处是<strong>可微</strong>（differentiable）的。如果<em>f</em>在一个区间内的每个数上都是可微的，则此函数在此区间中是可微的。我们可以将导数 <span class="math inline">\(f&#39;(x)\)</span> 解释为 <span class="math inline">\(f(x)\)</span> 相对于 <span class="math inline">\(x\)</span> 的<em>瞬时</em>（instantaneous）变化率。所谓的瞬时变化率是基于 <span class="math inline">\(x\)</span> 中的变化 <span class="math inline">\(h\)</span> ，且<span class="math inline">\(h\)</span> 接近 0 。</p>
+<p>让我们熟悉一下导数的几个等价符号。给定 <span class="math inline">\(y=f(x)\)</span> ，其中 <span class="math inline">\(x\)</span> 和 <span class="math inline">\(y\)</span> 分别是函数 <span class="math inline">\(y\)</span> 的自变量和因变量。以下表达式是等价的： <span class="math display">\[
+f&#39;(x) = y&#39; = \frac{dy}{dx} = \frac{df}{dx} = \frac{d}{dx} f(x) = Df{x} = D_xf{x},
+\]</span> 其中符号 <span class="math inline">\(\frac{d}{dx}\)</span> 和 <span class="math inline">\(D\)</span> 是微分运算符，表示微分操作。我们可以使用一下规则来对常数求微分：</p>
+<ul>
+<li><span class="math inline">\(DC = 0\)</span> （<span class="math inline">\(C\)</span> 是一个常数）</li>
+<li><span class="math inline">\(Dx^n=nx^{x-1}\)</span> （<span class="math inline">\(n\)</span> 是任意实数）</li>
+<li><span class="math inline">\(De^x = e^x\)</span></li>
+<li><span class="math inline">\(D\ln(x) = 1/x\)</span></li>
+</ul>
+<p>为了微分一个由一些简单函数（如上面的常见函数）组成的函数，下面的法则使用起来很方便。 假设函数 <span class="math inline">\(f\)</span> 和 <span class="math inline">\(g\)</span> 都是可微的， <span class="math inline">\(C\)</span> 是一个常数，我们有：</p>
+<ul>
+<li><p>常数相乘法则 <span class="math display">\[
+\frac{d}{dx}\left[Cf(x)\right] = C\frac{d}{dx}f(x),
+\]</span></p></li>
+<li><p>加法法则 <span class="math display">\[
+\frac{d}{dx}[f(x) + g(x)] = \frac{d}{dx}f(x) + \frac{d}{dx} g(x),
+\]</span></p></li>
+<li><p>乘法法则 <span class="math display">\[
+\frac{d}{dx}[f(x)g(x)] = f(x)\frac{d}{dx}[g(x)] + g(x)\frac{d}{dx}[f(x)],
+\]</span></p></li>
+<li><p>除法法则 <span class="math display">\[
+\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{g(x)\frac{d}{dx}\left[f(x)]-f(x)\frac{d}{dx}\left[g(x)\right]\right]}{[g(x)]^2}
+\]</span></p></li>
+</ul>
+<h3 id="偏导数">偏导数</h3>
+<p>到目前为止，我们只讨论了仅含一个变量的函数的微分。在深度学习中，函数通常依赖于许多变量。因此，我们需要将微分的思想推广到这些<em>多元函数</em>（multivariate function）上。</p>
+<p>设 <span class="math inline">\(y=f(x_1,x_2,\cdots,x_n)\)</span> 是一个具有 <span class="math inline">\(n\)</span> 个变量的函数。 <span class="math inline">\(y\)</span> 关于第 <span class="math inline">\(i\)</span> 个参数 <span class="math inline">\(x_i\)</span> 的<strong>偏导数</strong>（partial derivative）为： <span class="math display">\[
+  \frac{\partial y}{\partial x_i} = \lim_{h \rightarrow \infty} \frac{f(x_1,\cdots,x_{i-1}, x_i+h, x_{i+1}, \cdots, x_n) - f(x_1, \cdots, x_i, \cdots, x_n)}{h}
+\]</span> 为了计算 <span class="math inline">\(\frac{\partial y}{\partial x_i}\)</span> ，我们可以简单地将 <span class="math inline">\(x_1, \cdots, x_{i-1}, x_{i+1}, \cdots， x_n\)</span> 看作常数。对于偏导数的表示，一下是等价的： <span class="math display">\[
+  \frac{\partial y}{\partial x_i} = \frac{\partial f}{\partial x_i} = f_{x_i} = f_i = D_if=D_{x_i}f
+\]</span></p>
+<h3 id="梯度">梯度</h3>
+<p>我们可以连结一个多元函数对其所有变量的偏导数，以得到该函数的<em>梯度</em>（gradient）向量。设函数 <span class="math inline">\(f：\mathbb{R}^n \rightarrow \mathbb{R}\)</span> 输入的是一个 <span class="math inline">\(n\)</span> 维向量 <span class="math inline">\(\mathbf{x} = [x_1, x_2, \cdots, x_n]^{\mathsf{T}}\)</span> ，并且输出的是一个标量。函数 <span class="math inline">\(f(\mathbf{x})\)</span> 相对于 <span class="math inline">\(\mathbf{x}\)</span> 的梯度是一个包含 <span class="math inline">\(n\)</span> 个偏导数的向量： <span class="math display">\[
+  \nabla_xf(x) = \left[\frac{\partial f(x)}{\partial x_1}, \frac{\partial f(x)}{\partial x_2}, \cdots, \frac{\partial f(x)}{\partial x_n}\right]^{\mathsf{T}},
+\]</span> 其中 <span class="math inline">\(\nabla_xf(x)\)</span> 通常在没有歧义时被 <span class="math inline">\(\nabla f(x)\)</span> 取代。</p>
+<p>假设 <span class="math inline">\(\mathbf{x}\)</span> 为 <span class="math inline">\(n\)</span> 维向量，在微分多元函数时经常使用一下规则：</p>
+<ul>
+<li>对于所有 <span class="math inline">\(\mathbf{A} \in \mathsf{R}^{m\times n}\)</span> ，都有 <span class="math inline">\(\nabla_{\mathbf{x}}\mathbf{Ax} = \mathbf{A}^{\mathsf{T}}\)</span></li>
+<li>对于所有 <span class="math inline">\(\mathbf{A} \in \mathsf{R}^{m\times n}\)</span> ，都有 <span class="math inline">\(\nabla_{\mathbf{x}}\mathbf{x^{\mathsf{T}}A} = \mathbf{A}\)</span></li>
+<li>对于所有 <span class="math inline">\(\mathbf{A} \in \mathsf{R}^{m\times n}\)</span> ，都有 <span class="math inline">\(\nabla_{\mathbf{x}}\mathbf{A_x} = \mathbf{(A+A^{\mathsf{T}})x}\)</span></li>
+<li><span class="math inline">\(\nabla_{\mathbf{x}}\|\mathbf{x}\|^2=\mathbf{\nabla_{x} x^{\mathsf{T}}x}=2\mathbf{x}\)</span></li>
+<li>对于任何矩阵 <span class="math inline">\(\mathbf{X}\)</span> ，我们都有 <span class="math inline">\(\nabla_{\mathbf{x}}\|\mathbf{X}\|_F^2 = 2\mathbf{X}\)</span> 。</li>
+</ul>
+<h3 id="链式法则">链式法则</h3>
+<p>然而，上面方法可能很难找到梯度。 这是因为在深度学习中，多元函数通常是<em>复合</em>（composite）的，所以我们可能没法应用上述任何规则来微分这些函数。 幸运的是，链式法则使我们能够微分复合函数。</p>
+<p>让我们先考虑单变量函数。假设函数 <span class="math inline">\(y=f(u)\)</span> 和 <span class="math inline">\(u=g(x)\)</span> 都是可微的，根据链式法则： <span class="math display">\[
+\frac{dy}{dx} = \frac{dy}{du}\frac{du}{dx},
+\]</span> 现在让我们把注意力转向一个更一般的场景，即函数具有任意数量的变量的情况。假设可微分函数 <span class="math inline">\(y\)</span> 有变量 <span class="math inline">\(u_1, u_2, \cdots , u_m\)</span> ，其中每个可微分函数 <span class="math inline">\(u_i\)</span> 都有变量 <span class="math inline">\(x_1, x_2, \cdots ,x_n\)</span> 。注意，的函数。对于任意 <span class="math inline">\(i = 1, 2, \cdots, n\)</span> ，链式法则给出： <span class="math display">\[
+\frac{dy}{dx_i} = \frac{dy}{du_1}\frac{du_1}{dx_i} + \frac{dy}{du_2}\frac{du_2}{dx_i} + \cdots + \frac{dy}{du_m}\frac{du_m}{dx_i}
+\]</span></p>
+<h3 id="自动求导">自动求导</h3>
+<p>求导对于机器学习优化算法来说是非常关键的异步，，但每次都手动计算是非常麻烦的，于是深度学习框架往往会自动求导。</p>
+<h4 id="例子一">例子一</h4>
+<p>假设我们想对函数 <span class="math inline">\(y=2\mathbf{x \cdot x}\)</span> 还是列向量 <span class="math inline">\(\mathbf{x}\)</span> 求导。</p>
+<p>首先，我们创建变量 x 并初始化。</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> tf.<span class="bu">range</span>(<span class="dv">4</span>, dtype<span class="op">=</span>tf.float32)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>x</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co">output:</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;tf.Tensor: shape=(4,), dtype=float32, numpy=array([0., 1., 2., 3.], dtype=float32)&gt;</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
+<p>在我们计算 <span class="math inline">\(y\)</span> 关于 <span class="math inline">\(\mathbf{x}\)</span> 的梯度之前，我们需要一个地方来存储梯度。重要的是，我们不会在每次对一个参数求导时都分配新的内存。因为我们经常会成千上万次地更新相同的参数，每次都分配新的内存可能很快就会将内存耗尽。</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> tf.Variable(x)</span></code></pre></div>
+<p>现在我们计算 <span class="math inline">\(y\)</span> 。</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 把所有计算记录在磁带上</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> tf.GradientTape() <span class="im">as</span> t:</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> tf.tensordot(x, x, axes<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>y</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="co">output:</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;tf.Tensor: shape=(), dtype=float32, numpy=28.0&gt;</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
+<p><code>x</code>是一个长度为4的向量，计算<code>x</code>和<code>x</code>的内积，得到了我们赋值给<code>y</code>的标量输出。接下来，我们可以通过调用反向传播函数来自动计算<code>y</code>关于<code>x</code>每个分量的梯度，并打印这些梯度。</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>x_grad <span class="op">=</span> t.gradient(y, x)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>x_grad</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co">output:</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;tf.Tensor: shape=(4,), dtype=float32, numpy=array([ 0.,  4.,  8., 12.], dtype=float32)&gt;</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
+<p>函数 <span class="math inline">\(y=2\mathbf{x^{\mathsf{T}}x}\)</span> 关于 <span class="math inline">\(\mathbf{x}\)</span> 的梯度应为 <span class="math inline">\(4\mathbf{x}\)</span> 。我们可以验证一下。</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>x_grad <span class="op">==</span> <span class="dv">4</span> <span class="op">*</span> x</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;tf.Tensor: shape=(4,), dtype=bool, numpy=array([ True,  True,  True,  True])&gt;</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
+<p>现在让我们计算<code>x</code>的另一个函数。</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> tf.GradienTape() <span class="im">as</span> t:</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> tf.reduce_sum(x)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>t.gradient(y, x)</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;tf.Tensor: shape=(4,), dtype=float32, numpy=array([1., 1., 1., 1.], dtype=float32)&gt;</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
+<h4 id="非标量变量的反向传播">非标量变量的反向传播</h4>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> tf.GradientTape() <span class="im">as</span> t:</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> x <span class="op">*</span> x</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>t.gradient(y, x)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="co">output:</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;tf.Tensor: shape=(4,), dtype=float32, numpy=array([0., 2., 4., 6.], dtype=float32)&gt;</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
+<h4 id="分离计算">分离计算</h4>
+<p>有时，我们希望将某些计算移动到记录的计算图之外。 例如，假设<code>y</code>是作为<code>x</code>的函数计算的，而<code>z</code>则是作为<code>y</code>和<code>x</code>的函数计算的。 现在，想象一下，我们想计算<code>z</code>关于<code>x</code>的梯度，但由于某种原因，我们希望将<code>y</code>视为一个常数，并且只考虑到<code>x</code>在<code>y</code>被计算后发挥的作用。</p>
+<p>在这里，我们可以分离<code>y</code>来返回一个新变量<code>u</code>，该变量与<code>y</code>具有相同的值，但丢弃计算图中如何计算<code>y</code>的任何信息。换句话说，梯度不会向后流经<code>u</code>到<code>x</code>。因此，下面的反向传播函数计算<code>z=u*x</code>关于<code>x</code>的偏导数，同时将<code>u</code>作为常数处理，而不是<code>z=x*x*x</code>关于<code>x</code>的偏导数。</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 设置 `persistent=True` 来运行 `t.gradient`多次</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> tf.GradientTape(persistent<span class="op">=</span><span class="va">True</span>) <span class="im">as</span> t:</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> x <span class="op">*</span> x</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    u <span class="op">=</span> tf.stop_gradient(y)</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>    z <span class="op">=</span> u <span class="op">*</span> x</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>x_grad <span class="op">=</span> t.gradient(z, x)</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>x_grad <span class="op">==</span> u</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="co">output:</span></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;tf.Tensor: shape=(4,), dtype=bool, numpy=array([ True,  True,  True,  True])&gt;</span></span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
+<pre><code>&lt;tf.Tensor: shape=(4,), dtype=bool, numpy=array([ True,  True,  True,  True])&gt;</code></pre>
+<p>由于记录了<code>y</code>的计算结果，我们可以随后在<code>y</code>上调用反向传播，得到<code>y=x*x</code>关于的<code>x</code>的导数，这里是<code>2*x</code>。</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>t.gradient(y, x) <span class="op">==</span> <span class="dv">2</span> <span class="op">*</span> x</span></code></pre></div>
+<pre><code>&lt;tf.Tensor: shape=(4,), dtype=bool, numpy=array([ True,  True,  True,  True])&gt;</code></pre>
+<h4 id="python-控制流的梯度计算">Python 控制流的梯度计算</h4>
+<p>使用自动求导的一个好处是，即使构建函数的计算图需要通过Python控制流（例如，条件、循环或任意函数调用），我们仍然可以计算得到的变量的梯度。在下面的代码中，<code>while</code>循环的迭代次数和<code>if</code>语句的结果都取决于输入<code>a</code>的值。</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(a):</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> a <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> tf.norm(b) <span class="op">&lt;</span> <span class="dv">1000</span>:</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>        b <span class="op">=</span> b <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> tf.reduce_sum(b) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>        c <span class="op">=</span> b</span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>        c <span class="op">=</span> <span class="dv">100</span> <span class="op">*</span> b</span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> c</span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> tf.Variable(tf.random.normal(shape<span class="op">=</span>()))</span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> tf.GradientTape() <span class="im">as</span> t:</span>
+<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a>    d <span class="op">=</span> f(a)</span>
+<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a>d_grad <span class="op">=</span> t.gradient(d, a)</span>
+<span id="cb36-15"><a href="#cb36-15" aria-hidden="true" tabindex="-1"></a>d_grad</span>
+<span id="cb36-16"><a href="#cb36-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-17"><a href="#cb36-17" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
+<span id="cb36-18"><a href="#cb36-18" aria-hidden="true" tabindex="-1"></a><span class="co">output:</span></span>
+<span id="cb36-19"><a href="#cb36-19" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;tf.Tensor: shape=(), dtype=float32, numpy=1024.0&gt;</span></span>
+<span id="cb36-20"><a href="#cb36-20" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
+<p>我们现在可以分析上面定义的<code>f</code>函数。请注意，它在其输入<code>a</code>中是分段线性的。换言之，对于任何<code>a</code>，存在某个常量标量<code>k</code>，使得<code>f(a)=k*a</code>，其中<code>k</code>的值取决于输入<code>a</code>。因此，<code>d/a</code>允许我们验证梯度是否正确。</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>d_grad <span class="op">==</span> d <span class="op">/</span> a</span></code></pre></div>
+<pre><code>&lt;tf.Tensor: shape=(), dtype=bool, numpy=True&gt;</code></pre>
+<h2 id="概率">概率</h2>
+<h3 id="基本概率论">基本概率论</h3>
+<h4 id="概率论公理">概率论公理</h4>
+<p>在处理骰子掷出时，我们将集合 <span class="math inline">\(\mathcal{S} = \{1, 2, 3,4,5,6\}\)</span> 称为<strong>样本空间</strong>（sample space）或<strong>结果空间</strong>（outcome space）。<strong>事件</strong>（event）是来自给定样本空间的一组结果。例如，“看到 5” 和 “看到奇数” 都是掷出骰子的有效事件。</p>
+<p>形式上，<strong>概率</strong>（probability）可以被认为是将集合映射到真实值的函数。在给定样本空间 <span class="math inline">\(\mathcal{S}\)</span> 中，事件 <span class="math inline">\(\mathcal{A}\)</span> 的概率，表示为 <span class="math inline">\(P(\mathcal{A})\)</span> ，满足以下属性：</p>
+<ul>
+<li>对于任意事件 <span class="math inline">\(\mathcal{A}\)</span> ，其概率从不会是负数，即 <span class="math inline">\(P(\mathcal{A}) \ge 0\)</span></li>
+<li>整个样本空间的概率为 1 ，即 <span class="math inline">\(P(\mathcal{S}) = 1\)</span></li>
+<li>对于<strong>互斥</strong>事件的任意一个可数序列 <span class="math inline">\(\mathcal{A_1},\mathcal{A_2}, \dots\)</span> 序列中任意事件发生的概率等于它们各自发生概率之和，即 <span class="math inline">\(P\left({\textstyle \bigcup_{i=1}^{\infty}}\mathcal{A}_i\right) = {\textstyle \sum_{i=1}^{\infty}}P(\mathcal{A}_i)\)</span></li>
+</ul>
+<p>这些也是概率论的公理。</p>
+<h4 id="随机变量">随机变量</h4>
+<p>随机变量几乎可以是任何数量，并且不是确定性的。它可以在随机实验的一组可能性中取一个值。考虑一个随机变量 <span class="math inline">\(X\)</span> ，其值在掷骰子的样本空间 <span class="math inline">\(\mathcal{S}=\{1,2,3,4,5,6\}\)</span> 中。我们可以将事件“看到一个5”表示为 <span class="math inline">\(\{X=5\}\)</span> 或 <span class="math inline">\(X=5\)</span>，其概率表示或 <span class="math inline">\(P(\{X=5\})\)</span> 或 <span class="math inline">\(P(X=5)\)</span>。进一步的，我们用 <span class="math inline">\(P(1 \le X \le 3)\)</span> 表示事件 <span class="math inline">\(\{1\le X \le 3\}\)</span> ，即 <span class="math inline">\(\{X = 1,2,or,3\}\)</span> 的概率。</p>
+<h3 id="联合概率">联合概率</h3>
+<p>联合概率（joint probability），给定任何值 <span class="math inline">\(a\)</span> 和 <span class="math inline">\(b\)</span> ，同时满足 <span class="math inline">\(A = a\)</span> 和 <span class="math inline">\(B = b\)</span> 的概率是 <span class="math inline">\(P(A = a, B = b)\)</span> ，即对应的联合概率。注意，对于任何 <span class="math inline">\(a\)</span> 和 <span class="math inline">\(b\)</span> 的取值， <span class="math inline">\(P(A = a, B = b) \le P(A = a)\)</span> ，对于 <span class="math inline">\(P(B = b)\)</span> 亦然。</p>
+<h3 id="条件概率">条件概率</h3>
+<p>比率 <span class="math inline">\(0 \le \frac{P(A=a, B=b)}{P(A=a)} \le 1\)</span> 我们称为条件概率，我们用 <span class="math inline">\(P(B = b | A = a)\)</span> 来表示它：它是在 <span class="math inline">\(A = a\)</span> 发生后 <span class="math inline">\(B = b\)</span> 的概率。</p>
+<h3 id="贝叶斯定理">贝叶斯定理</h3>
+<p>使用条件概率的定义，我们可以得出统计学中最有用和最著名的方程之一：<em>Bayes定理</em>（Bayes’ theorem）。</p>
+<p>根据条件概率的定义我们易得，<span class="math inline">\(P(A,B) = P(B|A)P(A)\)</span> 。</p>
+<p>同理， <span class="math inline">\(P(A,B)=P(A|B)P(B)\)</span> 。</p>
+<p>联立， <span class="math inline">\(P(B|A)P(A)=P(A|B)P(B)\)</span> 。</p>
+<p>假设 <span class="math inline">\(P(B) &gt; 0\)</span> ,我们就得到了 <span class="math display">\[
+P(A|B) = \frac{P(B|A)P(A)}{P(B)}，
+\]</span></p>
+<h3 id="边际化">边际化</h3>
+<p>边际化是从 <span class="math inline">\(P(A, B)\)</span> 中确定 <span class="math inline">\(P(B)\)</span> 的操作。我们可以看到 <span class="math inline">\(B\)</span> 的概率相当于计算 <span class="math inline">\(A\)</span> 的所有可能选择，并将所有选择的连接概率聚合在一起，就可以得到 <span class="math inline">\(B\)</span> 的概率。 <span class="math display">\[
+P(B) = \sum_AP(A,B),
+\]</span> 这也称为<em>求和规则</em>。边际化结果的概率或分布称为<em>边际概率</em>或<em>边际分布</em>。</p>
+<h3 id="独立性">独立性</h3>
+<p>两个随机变量 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 是独立的，意味着事件 <span class="math inline">\(A\)</span> 的发生不会透露有关 <span class="math inline">\(B\)</span> 事件发生的任何信息，统计学上记为 <span class="math inline">\(A \bot B\)</span> ，根据贝叶斯定理，我们马上就能得到 <span class="math inline">\(P(A|B) = P(A)\)</span> 。在其他所有情况下我们称 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 依赖。</p>
+<p>由于 <span class="math inline">\(P(A | B) = \frac{P(A, B)}{P(B)} = P(A)\)</span> 等价于 <span class="math inline">\(P(A, B) = P(A)P(B)\)</span> ，因此两个随机变量是独立的当且仅当两个随机变量的联合分布是其各自分布的乘积。同样地，给定另一个随机变量 <span class="math inline">\(C\)</span> 时，两个随机变量 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 是<strong>条件独立</strong>的，当且仅当 <span class="math inline">\(P(A, B|C) = P(A|C)P(B|C)\)</span> 。这个情况表示为 <span class="math inline">\(A \bot B | C\)</span> 。</p>
+<h3 id="期望和差异">期望和差异</h3>
+<p>为了概括概率分步的关键特征，我们需要一些测量方法。随机变量 <span class="math inline">\(X\)</span> 的<strong>期望</strong>表示为 <span class="math display">\[
+E[X] = \sum_xxP(X = x).
+\]</span> 当函数 <span class="math inline">\(f(x)\)</span> 的输入是从分步 <span class="math inline">\(P\)</span> 中出去的随机变量时， <span class="math inline">\(f(x)\)</span> 的期望为 <span class="math display">\[
+E_{x \sim p}[f(x)] = \sum_xf(x)P(x).
+\]</span> 在许多情况下，我们希望衡量随机变量 <span class="math inline">\(X\)</span> 与其期望值的偏置。这可以通过方差来量化 <span class="math display">\[
+\mathrm{Var}[X] = E[(X-E[X]^2)] = E[X^2] - E[X]^2.
+\]</span> 他们的平方根被称为<strong>标准差</strong>（standard deviation）。随机变量函数的方差衡量的是，当该随机变量分步中采样不同值 <span class="math inline">\(x\)</span> 时，函数值偏离该函数期望的程度： <span class="math display">\[
+\mathrm{Var}[f(x)] = E[(f(x) - E[f(x)])^2]
+\]</span></p>
+<h2 id="结语">结语</h2>
+<p>这是我写的最多的一篇博客了，写到最后我仍然有些东西稀里糊涂的，但是大致上还是把握了一些。以前深度学习看不懂的地方能够懂一点。这些数学最最重要的就是前面花大幅笔墨书写的线性代数的内容，虽然说后面也很重要，但线代不懂后面意义也不大， Tensorflow 名字有一般是 tensor 。当然，深度学习的数学也不是就这么完了，路曼曼其修远兮，但现在暂告一段落。</p>
 
 
 

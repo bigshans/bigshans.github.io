@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 14 Oct 2021 09:47:19 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Oct 2021 16:06:11 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>machine learing</title>
+      <link>https://bigshans.github.io/tags/machine-learing/</link>
+      <pubDate>Mon, 18 Oct 2021 16:06:11 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/machine-learing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tensorflow</title>
+      <link>https://bigshans.github.io/tags/tensorflow/</link>
+      <pubDate>Mon, 18 Oct 2021 16:06:11 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/tensorflow/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>linux</title>
       <link>https://bigshans.github.io/tags/linux/</link>
@@ -437,24 +455,6 @@
       <pubDate>Sun, 28 Feb 2021 17:04:24 +0800</pubDate>
       
       <guid>https://bigshans.github.io/tags/supertest/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nginx</title>
-      <link>https://bigshans.github.io/tags/nginx/</link>
-      <pubDate>Sun, 15 Nov 2020 18:30:45 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/nginx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>php</title>
-      <link>https://bigshans.github.io/tags/php/</link>
-      <pubDate>Sun, 15 Nov 2020 18:30:45 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/php/</guid>
       <description></description>
     </item>
     

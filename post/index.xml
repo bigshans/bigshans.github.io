@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 14 Oct 2021 09:47:19 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Oct 2021 16:06:11 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tensorflow 入门之数学基础</title>
+      <link>https://bigshans.github.io/post/tensorflow-tutorial-math-basis/</link>
+      <pubDate>Mon, 18 Oct 2021 16:06:11 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/tensorflow-tutorial-math-basis/</guid>
+      <description>数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。本篇以 d2l 第二版所提供的数学知识作为阅读内容进行学习。换而言之，本篇是 d2l 的读书笔记。我</description>
+    </item>
+    
     <item>
       <title>安装 Collabora Office</title>
       <link>https://bigshans.github.io/post/collabora-install/</link>
@@ -448,15 +457,6 @@
       
       <guid>https://bigshans.github.io/post/qosnodejs/</guid>
       <description>&lt;p&gt;最近客户端发生了 bug ，导致我们的服务被疯狂请求， QPS 高达 1000 ！数据压力很大，tjt 让我写个 qos ，就是限制接口访问次数，我粗略写了个，还可以。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>解决 mysql 进程无法启动的问题</title>
-      <link>https://bigshans.github.io/post/mysqlfix/</link>
-      <pubDate>Sat, 18 Jan 2020 18:05:52 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/mysqlfix/</guid>
-      <description>&lt;p&gt;最近想写一点小东西，就发现自己电脑上的 mysql 出了点问题，解决之后做个小记录。&lt;/p&gt;</description>
     </item>
     
   </channel>
