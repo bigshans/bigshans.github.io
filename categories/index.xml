@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 18 Oct 2021 16:06:11 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Oct 2021 13:46:00 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>https://bigshans.github.io/categories/linux/</link>
+      <pubDate>Fri, 22 Oct 2021 13:46:00 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>tensorflow</title>
       <link>https://bigshans.github.io/categories/tensorflow/</link>
@@ -23,15 +32,6 @@
       <pubDate>Thu, 14 Oct 2021 09:47:19 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/collabora/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://bigshans.github.io/categories/linux/</link>
-      <pubDate>Thu, 14 Oct 2021 09:47:19 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/linux/</guid>
       <description></description>
     </item>
     

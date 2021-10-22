@@ -167,6 +167,31 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/node-express-source-read/">Express 源码阅读（一）</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-12-01 </span>
+      <div class="post-category">
+          <a href="/categories/node/"> Node </a>
+          </div>
+        <span class="more-meta"> 约 482 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      我们写一个简单的程序。
+const express = require(&#39;express&#39;); const app = express(); app.get(&#39;/&#39;, (req, res) =&amp;gt; { res.end(&#39;&amp;lt;h1&amp;gt;Hello&amp;lt;/h1&amp;gt;&#39;); }); app.listen(3000, () =&amp;gt; console.log(&#39;Connected!&#39;));  我们对这段代码进行 Debug 。
+
+    </div>
+    <div class="read-more">
+      <a href="/post/node-express-source-read/" class="read-more-link">阅读更多 »</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/linux-systemdnspawn/">systemd-nspawn 的简单使用</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2019-11-24 </span>
@@ -329,30 +354,6 @@ Websocket 还是值得说一说的，我们是使用 node 开发的。
     </div>
     <div class="read-more">
       <a href="/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/src-java-hashmap/">Java 源码阅读之 HashMap</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-10-04 </span>
-      <div class="post-category">
-          <a href="/categories/java/"> java </a>
-          </div>
-        <span class="more-meta"> 约 2552 字 </span>
-        <span class="more-meta"> 预计阅读 6 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      对以下一段代码进行 Debug，阅读建议边 Debug 边看。
-import java.util.HashMap; public class Collec { public static void main(String[] args) { HashMap a = new HashMap(); a.put(&amp;quot;sd&amp;quot;, &amp;quot;54&amp;quot;); a.put(&amp;quot;sd&amp;quot;, &amp;quot;125&amp;quot;); } } 
-    </div>
-    <div class="read-more">
-      <a href="/post/src-java-hashmap/" class="read-more-link">阅读更多 »</a>
     </div>
   </div>
 </article>
