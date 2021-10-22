@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 22 Sep 2021 01:08:35 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Oct 2021 14:13:51 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>read 在 zsh 和 bash 下的不同</title>
+      <link>https://bigshans.github.io/post/different-command-read-between-zsh-and-bash/</link>
+      <pubDate>Fri, 22 Oct 2021 14:13:51 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/different-command-read-between-zsh-and-bash/</guid>
+      <description>不实际进行使用我还注意不到这个区别，就是 read 这个命令在 zsh 和 bash 下是不同的。 缘起 起因是我在脚本里写的两个命令同时都用了 read ，区别在于一个是封装在 bash 脚</description>
+    </item>
+    
     <item>
       <title>为什么使用 zsh 以及为什么这样使用</title>
       <link>https://bigshans.github.io/post/why-and-how-use-zsh-this-way/</link>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Bigshans&#39; Blog</title>
+  <title>read 在 zsh 和 bash 下的不同 - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="不实际进行使用我还注意不到这个区别，就是 read 这个命令在 zsh 和 bash 下是不同的。 缘起 起因是我在脚本里写的两个命令同时都用了 read ，区别在于一个是封装在 bash 脚" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,9 +26,7 @@
 <meta name="generator" content="Hugo 0.89.0-DEV with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/" />
-  <link href="https://bigshans.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Bigshans&#39; Blog" />
-  <link href="https://bigshans.github.io/index.xml" rel="feed" type="application/rss+xml" title="Bigshans&#39; Blog" />
+<link rel="canonical" href="https://bigshans.github.io/post/different-command-read-between-zsh-and-bash/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,15 +40,20 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="Bigshans&#39; Blog" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://bigshans.github.io/" />
+<meta property="og:title" content="read 在 zsh 和 bash 下的不同" />
+<meta property="og:description" content="不实际进行使用我还注意不到这个区别，就是 read 这个命令在 zsh 和 bash 下是不同的。 缘起 起因是我在脚本里写的两个命令同时都用了 read ，区别在于一个是封装在 bash 脚" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/different-command-read-between-zsh-and-bash/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-10-22T14:13:51+08:00" />
+<meta property="article:modified_time" content="2021-10-22T14:13:51+08:00" />
 
-<meta itemprop="name" content="Bigshans&#39; Blog">
-<meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Bigshans&#39; Blog"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
+<meta itemprop="name" content="read 在 zsh 和 bash 下的不同">
+<meta itemprop="description" content="不实际进行使用我还注意不到这个区别，就是 read 这个命令在 zsh 和 bash 下是不同的。 缘起 起因是我在脚本里写的两个命令同时都用了 read ，区别在于一个是封装在 bash 脚"><meta itemprop="datePublished" content="2021-10-22T14:13:51+08:00" />
+<meta itemprop="dateModified" content="2021-10-22T14:13:51+08:00" />
+<meta itemprop="wordCount" content="429">
+<meta itemprop="keywords" content="shell," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="read 在 zsh 和 bash 下的不同"/>
+<meta name="twitter:description" content="不实际进行使用我还注意不到这个区别，就是 read 这个命令在 zsh 和 bash 下是不同的。 缘起 起因是我在脚本里写的两个命令同时都用了 read ，区别在于一个是封装在 bash 脚"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -164,91 +167,101 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <section id="posts" class="posts">
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E5%85%B3%E4%BA%8E%E6%9A%91%E5%81%87%E7%9A%84%E6%80%BB%E7%BB%93/">关于暑假的总结</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-08-25 </span>
-      <div class="post-category">
-          <a href="/categories/%E9%9A%8F%E7%AC%94/"> 随笔 </a>
-          </div>
-        <span class="more-meta"> 约 419 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      最终使用了 hexo 搭建自己的博客，而不是闲得蛋疼非得自己写。
-这个暑假原本打算写一个网易云音乐的第三方客户端，然而最终还是弃了，UI过于蛋疼，于是改用现有的主题。自己写了大半天发现主题并不好用=。= ，html 和 css 真的不太懂啊。
-
-    </div>
-    <div class="read-more">
-      <a href="/post/%E5%85%B3%E4%BA%8E%E6%9A%91%E5%81%87%E7%9A%84%E6%80%BB%E7%BB%93/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/firstblog/">FirstBlog</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-08-25 </span>
-      <div class="post-category">
-          <a href="/categories/%E9%9A%8F%E7%AC%94/"> 随笔 </a>
-          </div>
-        <span class="more-meta"> 约 17 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      个人尝试hexo&#43;gitpages
-
-    </div>
-    <div class="read-more">
-      <a href="/post/firstblog/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/hello-world/">Hello World</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-08-25 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%87%E4%BB%B6/"> 初始化文件 </a>
-          </div>
-        <span class="more-meta"> 约 78 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-
-    </div>
-    <div class="read-more">
-      <a href="/post/hello-world/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    </section>
-  
-  <nav class="pagination">
-    <a class="prev" href="/page/13/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text">上一页</span>
-      </a>
+          <article class="post">
     
-  </nav>
+    <header class="post-header">
+      <h1 class="post-title">read 在 zsh 和 bash 下的不同</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-10-22 </span>
+        <div class="post-category">
+            <a href="/categories/linux/"> linux </a>
+            </div>
+          <span class="more-meta"> 约 429 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#缘起">缘起</a></li>
+        <li><a href="#区别">区别</a></li>
+        <li><a href="#更舒服的选择">更舒服的选择</a></li>
+        <li><a href="#结语">结语</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+    <div class="post-content">
+      <p>不实际进行使用我还注意不到这个区别，就是 <code>read</code> 这个命令在 zsh 和 bash 下是不同的。</p>
+<h2 id="缘起">缘起</h2>
+<p>起因是我在脚本里写的两个命令同时都用了 <code>read</code> ，区别在于一个是封装在 bash 脚本里的，另一个是封装成 zsh 函数。因而当我使用 <code>-p</code> 参数的时候， zsh 就会报错给我 <code>read: -p: no coprocess</code> 。</p>
+<p>当我反复确认没有拼写上的问题，我就确信这应该又是 zsh 和 bash 有区别的锅。</p>
+<h2 id="区别">区别</h2>
+<p>在 zsh 中， <code>-p</code> 意味着从一个协程读取输入，而 bash 则意味着一个提示，因此 zsh 会报 <code>no coprocess</code> 的错误。</p>
+<p>假设我们的 bash 语句为</p>
+<pre><code class="language-bash">read -p &quot;What are you doing?&quot; message
+</code></pre>
+<p>则 zsh 得改成</p>
+<pre><code class="language-zsh"># 这是 zsh
+read 'message?What are you doing?'
+</code></pre>
+<p>然后问题似乎是解决了。</p>
+<h2 id="更舒服的选择">更舒服的选择</h2>
+<p>但是当你尝试在你的输入中左右移动时，你有会发现你无法在 zsh 里移动。而在 bash 里你需要添加 <code>-e</code> 参数。</p>
+<pre><code class="language-bash">read -p &quot;What are you doing?&quot; message
+</code></pre>
+<p>可惜的是， zsh 并不兼容，但这个时候有一个很好的替代： <code>zle</code> 。使用 <code>zle</code> 的 <code>vared</code> 来替代 <code>read</code> ，还可以有更好的体验。</p>
+<pre><code class="language-zsh"># 这是 zsh
+vared -p 'What would you like to do?: ' -c tmp
+</code></pre>
+<h2 id="结语">结语</h2>
+<p>虽然是个小问题但真正遇上的时候就真的是焦头烂额，还好有处理方法。关于 zsh 与 bash 的不同，在 zsh 自己的文档已经很详细了，详情使用命令 <code>man zshbuiltins</code> 查看。当然，自己搜索网页也是可以的。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-10-22
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/shell/">shell</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/hugo-patch-with-pandoc/">
+            <span class="next-text nav-default">给 Hugo 增加一些 Pandoc 支持增强</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
         </div>
         
+
+  
+
+  
 
       </div>
     </main>

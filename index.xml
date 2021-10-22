@@ -7,14 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 22 Oct 2021 13:46:00 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Oct 2021 14:13:51 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>read 在 zsh 和 bash 下的不同</title>
+      <link>https://bigshans.github.io/post/different-command-read-between-zsh-and-bash/</link>
+      <pubDate>Fri, 22 Oct 2021 14:13:51 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/different-command-read-between-zsh-and-bash/</guid>
+      <description>不实际进行使用我还注意不到这个区别，就是 read 这个命令在 zsh 和 bash 下是不同的。 缘起 起因是我在脚本里写的两个命令同时都用了 read ，区别在于一个是封装在 bash 脚</description>
+    </item>
+    
     <item>
       <title>给 Hugo 增加一些 Pandoc 支持增强</title>
       <link>https://bigshans.github.io/post/hugo-patch-with-pandoc/</link>
       <pubDate>Fri, 22 Oct 2021 13:46:00 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/hugo-patch-with-pandoc/</guid>
-      <description>Hugo 可以使用不同的 markdown 引擎来解析 ‘md’ ，pandoc 就是其中之一。不过问题在于，使用 pandoc 就不会有 TOC ，如果在意这个的话使用起来还是挺麻烦的。 缘起 我</description>
+      <description>Hugo 可以使用不同的 markdown 引擎来解析 md ，pandoc 就是其中之一。不过问题在于，使用 pandoc 就不会有 TOC ，如果在意这个的话使用起来还是挺麻烦的。 缘起 我个人使</description>
     </item>
     
     <item>
@@ -448,15 +457,6 @@
       
       <guid>https://bigshans.github.io/post/elasticsearch/</guid>
       <description>&lt;p&gt;最近由于业务的增长，所以决定使用 elasticsearch 。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>rinted 做端口转发</title>
-      <link>https://bigshans.github.io/post/rinted/</link>
-      <pubDate>Sat, 15 Feb 2020 12:49:19 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/rinted/</guid>
-      <description>&lt;p&gt;因为腾讯云的 Mongo 和 Redis 都是内网的地址，不能访问，官方说内网进行内网转发就行，于是就用 rinted 做了一个内网转发。&lt;/p&gt;</description>
     </item>
     
   </channel>
