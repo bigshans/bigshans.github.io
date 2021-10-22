@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 07 Dec 2018 20:47:45 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Oct 2021 16:12:26 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>numpy 基础</title>
+      <link>https://bigshans.github.io/post/numpy-basic/</link>
+      <pubDate>Fri, 22 Oct 2021 16:12:26 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/numpy-basic/</guid>
+      <description>numpy 几乎可以说是 python 矩阵计算的基础库了，众多大数据处理框架都引用了它。因此，如果我们有意向大数据前进，我们必不可不面对它。 预备前提 如果你想要学习</description>
+    </item>
+    
+    <item>
+      <title>Tensorflow 入门之数学基础</title>
+      <link>https://bigshans.github.io/post/tensorflow-tutorial-math-basis/</link>
+      <pubDate>Mon, 18 Oct 2021 16:06:11 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/tensorflow-tutorial-math-basis/</guid>
+      <description>数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。本篇以 d2l 第二版所提供的数学知识作为阅读内容进行学习。换而言之，本篇是 d2l 的读书笔记。我</description>
+    </item>
+    
     <item>
       <title>Flask 入门项目 Flaskr（二）</title>
       <link>https://bigshans.github.io/post/python-flask-flaskr-2/</link>

@@ -7,22 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 22 Oct 2021 14:13:51 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Oct 2021 16:12:26 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>大数据</title>
+      <link>https://bigshans.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Fri, 22 Oct 2021 16:12:26 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>机器学习</title>
+      <link>https://bigshans.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Fri, 22 Oct 2021 16:12:26 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>linux</title>
       <link>https://bigshans.github.io/categories/linux/</link>
       <pubDate>Fri, 22 Oct 2021 14:13:51 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tensorflow</title>
-      <link>https://bigshans.github.io/categories/tensorflow/</link>
-      <pubDate>Mon, 18 Oct 2021 16:06:11 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/tensorflow/</guid>
       <description></description>
     </item>
     

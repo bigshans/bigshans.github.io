@@ -3,27 +3,83 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2021-10-22T14:13:51+08:00</lastmod>
+    <lastmod>2021-10-22T16:12:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2021-10-22T14:13:51+08:00</lastmod>
+    <lastmod>2021-10-22T16:12:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/categories/linux/</loc>
-    <lastmod>2021-10-22T14:13:51+08:00</lastmod>
+    <loc>https://bigshans.github.io/tags/numpy/</loc>
+    <lastmod>2021-10-22T16:12:26+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/numpy-basic/</loc>
+    <lastmod>2021-10-22T16:12:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/post/</loc>
+    <lastmod>2021-10-22T16:12:26+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/python/</loc>
+    <lastmod>2021-10-22T16:12:26+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/</loc>
+    <lastmod>2021-10-22T16:12:26+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
+    <lastmod>2021-10-22T16:12:26+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
+    <lastmod>2021-10-22T16:12:26+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2021-10-22T16:12:26+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2021-10-22T16:12:26+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/linux/</loc>
     <lastmod>2021-10-22T14:13:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -38,13 +94,6 @@
   
   <url>
     <loc>https://bigshans.github.io/tags/shell/</loc>
-    <lastmod>2021-10-22T14:13:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/</loc>
     <lastmod>2021-10-22T14:13:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -72,21 +121,7 @@
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/tags/machine-learing/</loc>
-    <lastmod>2021-10-18T16:06:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigshans.github.io/tags/tensorflow/</loc>
-    <lastmod>2021-10-18T16:06:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/tensorflow/</loc>
     <lastmod>2021-10-18T16:06:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1424,13 +1459,6 @@
   
   <url>
     <loc>https://bigshans.github.io/post/python-flask-flaskr-2/</loc>
-    <lastmod>2018-12-07T20:47:45+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/python/</loc>
     <lastmod>2018-12-07T20:47:45+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
