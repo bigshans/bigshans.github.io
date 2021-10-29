@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 14 Oct 2021 09:47:19 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Oct 2021 01:08:44 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch 打包备忘录</title>
+      <link>https://bigshans.github.io/post/arch-pack-memo/</link>
+      <pubDate>Sat, 30 Oct 2021 01:08:44 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/arch-pack-memo/</guid>
+      <description>最近又写了一个 PKGBUILD 传到了 AUR 。不过距离上一次打包已经过去很久了，这些包其实许久没有更新了，就到我自己都忘了要怎么打包了。因为一些常用命令经常记不</description>
+    </item>
+    
     <item>
       <title>安装 Collabora Office</title>
       <link>https://bigshans.github.io/post/collabora-install/</link>

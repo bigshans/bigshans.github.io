@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 22 Oct 2021 16:12:26 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Oct 2021 01:08:44 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch 打包备忘录</title>
+      <link>https://bigshans.github.io/post/arch-pack-memo/</link>
+      <pubDate>Sat, 30 Oct 2021 01:08:44 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/arch-pack-memo/</guid>
+      <description>最近又写了一个 PKGBUILD 传到了 AUR 。不过距离上一次打包已经过去很久了，这些包其实许久没有更新了，就到我自己都忘了要怎么打包了。因为一些常用命令经常记不</description>
+    </item>
+    
     <item>
       <title>numpy 基础</title>
       <link>https://bigshans.github.io/post/numpy-basic/</link>
@@ -447,16 +456,6 @@
       
       <guid>https://bigshans.github.io/post/move-to-hugo/</guid>
       <description>好久没有写博客了。 这次我终于把 Hexo 换掉，换成 Hugo 了。其实 Hexo 有很多主题挺不错，相较之下，Hugo 很多主题我都不是很满意。不过我还是选择了 Hugo ，一是 Hexo</description>
-    </item>
-    
-    <item>
-      <title>elasticsearch 频繁更新问题</title>
-      <link>https://bigshans.github.io/post/elasticsearch-update/</link>
-      <pubDate>Tue, 07 Apr 2020 10:24:48 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/elasticsearch-update/</guid>
-      <description>&lt;p&gt;我一开始并没有发现这个问题，到后面 Debug 的时候猜想并与社区的小伙伴得到验证。&lt;/p&gt;
-&lt;p&gt;我们的问题是 elasticsearch 返回成功但是却并没有发生更新。&lt;/p&gt;</description>
     </item>
     
   </channel>

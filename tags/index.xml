@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 22 Oct 2021 16:12:26 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Oct 2021 01:08:44 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>https://bigshans.github.io/tags/linux/</link>
+      <pubDate>Sat, 30 Oct 2021 01:08:44 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>打包</title>
+      <link>https://bigshans.github.io/tags/%E6%89%93%E5%8C%85/</link>
+      <pubDate>Sat, 30 Oct 2021 01:08:44 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/%E6%89%93%E5%8C%85/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>numpy</title>
       <link>https://bigshans.github.io/tags/numpy/</link>
@@ -77,15 +95,6 @@
       <pubDate>Mon, 18 Oct 2021 16:06:11 +0800</pubDate>
       
       <guid>https://bigshans.github.io/tags/tensorflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://bigshans.github.io/tags/linux/</link>
-      <pubDate>Thu, 14 Oct 2021 09:47:19 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
@@ -446,15 +455,6 @@
       <pubDate>Sun, 11 Apr 2021 01:24:07 +0800</pubDate>
       
       <guid>https://bigshans.github.io/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>科幻小说</title>
-      <link>https://bigshans.github.io/tags/%E7%A7%91%E5%B9%BB%E5%B0%8F%E8%AF%B4/</link>
-      <pubDate>Sun, 11 Apr 2021 01:24:07 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/%E7%A7%91%E5%B9%BB%E5%B0%8F%E8%AF%B4/</guid>
       <description></description>
     </item>
     

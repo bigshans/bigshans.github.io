@@ -2,15 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bigshans.github.io/post/arch-pack-memo/</loc>
+    <lastmod>2021-10-30T01:08:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2021-10-22T16:12:26+08:00</lastmod>
+    <lastmod>2021-10-30T01:08:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2021-10-22T16:12:26+08:00</lastmod>
+    <lastmod>2021-10-30T01:08:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/linux/</loc>
+    <lastmod>2021-10-30T01:08:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/linux/</loc>
+    <lastmod>2021-10-30T01:08:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/</loc>
+    <lastmod>2021-10-30T01:08:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/</loc>
+    <lastmod>2021-10-30T01:08:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/%E6%89%93%E5%8C%85/</loc>
+    <lastmod>2021-10-30T01:08:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30,21 +72,7 @@
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2021-10-22T16:12:26+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigshans.github.io/tags/python/</loc>
-    <lastmod>2021-10-22T16:12:26+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/</loc>
     <lastmod>2021-10-22T16:12:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -74,13 +102,6 @@
   <url>
     <loc>https://bigshans.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2021-10-22T16:12:26+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/linux/</loc>
-    <lastmod>2021-10-22T14:13:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -136,13 +157,6 @@
   
   <url>
     <loc>https://bigshans.github.io/categories/collabora/</loc>
-    <lastmod>2021-10-14T09:47:19+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/linux/</loc>
     <lastmod>2021-10-14T09:47:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
