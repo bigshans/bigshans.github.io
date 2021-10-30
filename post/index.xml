@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 30 Oct 2021 01:08:44 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Oct 2021 18:15:47 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>对死亡的讨论</title>
+      <link>https://bigshans.github.io/post/discussion-of-death/</link>
+      <pubDate>Sat, 30 Oct 2021 18:15:47 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/discussion-of-death/</guid>
+      <description>关于死亡，最让我触动的一句话莫过于加缪在西西弗斯神话里的那句： 唯一严肃的哲学问题，就是自杀。 这个讨论十分有趣，我曾深深陷入到自杀的逻辑里面不</description>
+    </item>
+    
     <item>
       <title>Arch 打包备忘录</title>
       <link>https://bigshans.github.io/post/arch-pack-memo/</link>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/</guid>
       <description>自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。 在上家公司我也体验过自</description>
-    </item>
-    
-    <item>
-      <title>迁移到 Hugo 上</title>
-      <link>https://bigshans.github.io/post/move-to-hugo/</link>
-      <pubDate>Sat, 14 Nov 2020 21:38:31 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/move-to-hugo/</guid>
-      <description>好久没有写博客了。 这次我终于把 Hexo 换掉，换成 Hugo 了。其实 Hexo 有很多主题挺不错，相较之下，Hugo 很多主题我都不是很满意。不过我还是选择了 Hugo ，一是 Hexo</description>
     </item>
     
   </channel>
