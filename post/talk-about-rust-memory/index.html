@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>简单谈一谈 Rust 的内存管理 - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.89.0-DEV with theme even" />
+
+
+<link rel="canonical" href="https://bigshans.github.io/post/talk-about-rust-memory/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b66231a2560ad66435f5e2b7a0dd47d3c09452299beb1d46ed99fec246c893b5.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="简单谈一谈 Rust 的内存管理" />
+<meta property="og:description" content="本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/talk-about-rust-memory/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-10-31T17:13:41+08:00" />
+<meta property="article:modified_time" content="2021-10-31T17:13:41+08:00" />
+
+<meta itemprop="name" content="简单谈一谈 Rust 的内存管理">
+<meta itemprop="description" content="本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复"><meta itemprop="datePublished" content="2021-10-31T17:13:41+08:00" />
+<meta itemprop="dateModified" content="2021-10-31T17:13:41+08:00" />
+<meta itemprop="wordCount" content="1212">
+<meta itemprop="keywords" content="rust," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="简单谈一谈 Rust 的内存管理"/>
+<meta name="twitter:description" content="本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">简单谈一谈 Rust 的内存管理</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-10-31 </span>
+        <div class="post-category">
+            <a href="/categories/rust/"> rust </a>
+            </div>
+          <span class="more-meta"> 约 1212 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#所有权与-gc">所有权与 GC</a></li>
+        <li><a href="#什么是所有权">什么是所有权？</a></li>
+        <li><a href="#借用">借用</a></li>
+        <li><a href="#结语">结语</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+    <div class="post-content">
+      <p>本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复返工意义不大，不如当作笔记，学完了然后自己再重新写一篇。本篇文章主要就是来讲一讲 Rust 的内存所有权机制，这部分其实不难，但与我们平常代码的编码有很大不同。本文主要也是将学习 Rust 过程中的一些见解进行发布，内容比较单独，可以独立成篇。</p>
+<h2 id="所有权与-gc">所有权与 GC</h2>
+<p>Rust 所有权乍看之下似乎与其他语言格格不入，但你细看之下就会发现它实际上是另一种形式的 GC 。它依靠编译将可能出现的、实际上会影响 GC 的麻烦排除掉，并直接在语法层面去杜绝循环依赖。相比之下， Rust 不需要像 Java 、 Go 、 Python 等一样 “Stop the World” ，但代价就是，你必须放弃原来在 Java 上的那套代码习惯，不过，带来的好处是，如果你的代码能够通过编译，那么无论是 GC 、 内存还是依赖，你都可以放很多心。</p>
+<h2 id="什么是所有权">什么是所有权？</h2>
+<p>Rust 的所有权，本质上是用来规定指针与指针所指向对象关系的。在 Rust 中，非基础类型实际上都是一个指针，它们的对象都存放到堆中，指针与指针指向的对象是一一对应的， Rust 的所有权规定，不允许有第二个指针指向同一个对象。在 Rust 中，我们可以使用深拷贝使得两个指针所指向的对象其值是一样的。但如果确实的需要将对象移交给另一个指针呢？ Rust 称之为转移，但由于一个指针只能有一个对象，所以另一个指针此刻就失去对值的所有权，指针此刻是一个空指针。因此，从这个原理上看， Rust 是绝对不会出现依赖循环的。</p>
+<p>那么 Rust 什么时候释放对象呢？当一个对象不再被任何任何指针所指向的时候，对象就会被释放。而指针不再指向对象的时候有两个情况，一个是移交了对象之后，另一个则是在作用域结束之后。因此，在 Rust 中，所有对象需要被释放的时间都可以被清晰地计算出来而没有其他有 GC 语言所遭遇的问题。</p>
+<p>这么看， Rust 的所有权确实不错，不过，这么编程不难受吗？</p>
+<h2 id="借用">借用</h2>
+<p>我们来看一段代码，</p>
+<pre><code class="language-rust">fn main() {
+    let s = String::from(&quot;Hello, &quot;);
+    let length =  len(&amp;s);
+    println!(&quot;{}: {}&quot;, s, length);
+}
+
+fn len(s: &amp;String) -&gt; usize {
+    s.len()
+}
+</code></pre>
+<p>此处，我们使用了引用。如果我们不使用引用的话，我们得这么写，</p>
+<pre><code class="language-rust">fn main() {
+    let s = String::from(&quot;Hello, &quot;);
+    let (s, length) =  len(s);
+    println!(&quot;{}: {}&quot;, s, length);
+}
+
+fn len(s: String) -&gt; (String, usize) {
+    let length = s.len();
+    (s, length)
+}
+</code></pre>
+<p>这是因为在 Rust 中传递参数也算是一种转移，但这就会给我们的编程带来不便。因此， Rust 便提出了引用。</p>
+<p>引用，在 Rust 所有权机制中也被称为借用。在借用当中，所有权没有发生变化，值只是被借出去用了。跟赋值一样， Rust 对可变与不可变做了严格地限制， Rust 默认是不可变引用，也就是不能修改被引用值，如果想要改变被引用值必须显示声明。 Rust 规定，同一时间只能有一个可变引用，或者是多个不可变引用，程序员需要判断好引用是处在什么情况下被使用的。不过，这并不是一个很难的判断。</p>
+<h2 id="结语">结语</h2>
+<p>Rust 是一门很工程的语言，它将代码上探索的最佳实践当作语法，以期在编译期杜绝潜在的烂代码。只要有足够的代码实践其实就能明白 Rust 的好处，但 Rust 的方法固然不错，对于很多初学者来说还是过于难了，因此还是推荐有一定编程经验的人学习。即使不写代码，学习思想也是很有益处的。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-10-31
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/rust/">rust</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/discussion-of-death/">
+            <span class="next-text nav-default">对死亡的讨论</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
