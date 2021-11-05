@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>使用 Tensorflow 极简实现线性回归 - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="应工作之要，最近在看机器学习。虽然机器学习挺火的，然而好的机器学习教程真的少，不少是掐住了人们急功近利的心态，提供各种“一口吃成个胖子”的“" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.89.0-DEV with theme even" />
+
+
+<link rel="canonical" href="https://bigshans.github.io/post/minimal-linear-regression-of-tensorflow/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b66231a2560ad66435f5e2b7a0dd47d3c09452299beb1d46ed99fec246c893b5.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="使用 Tensorflow 极简实现线性回归" />
+<meta property="og:description" content="应工作之要，最近在看机器学习。虽然机器学习挺火的，然而好的机器学习教程真的少，不少是掐住了人们急功近利的心态，提供各种“一口吃成个胖子”的“" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/minimal-linear-regression-of-tensorflow/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-11-05T11:27:46+08:00" />
+<meta property="article:modified_time" content="2021-11-05T11:27:46+08:00" />
+
+<meta itemprop="name" content="使用 Tensorflow 极简实现线性回归">
+<meta itemprop="description" content="应工作之要，最近在看机器学习。虽然机器学习挺火的，然而好的机器学习教程真的少，不少是掐住了人们急功近利的心态，提供各种“一口吃成个胖子”的“"><meta itemprop="datePublished" content="2021-11-05T11:27:46+08:00" />
+<meta itemprop="dateModified" content="2021-11-05T11:27:46+08:00" />
+<meta itemprop="wordCount" content="1532">
+<meta itemprop="keywords" content="机器学习," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用 Tensorflow 极简实现线性回归"/>
+<meta name="twitter:description" content="应工作之要，最近在看机器学习。虽然机器学习挺火的，然而好的机器学习教程真的少，不少是掐住了人们急功近利的心态，提供各种“一口吃成个胖子”的“"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">使用 Tensorflow 极简实现线性回归</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-11-05 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"> 机器学习 </a>
+            </div>
+          <span class="more-meta"> 约 1532 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#数据准备">数据准备</a></li>
+        <li><a href="#最简陋的实现">最简（陋）的实现</a>
+          <ul>
+            <li><a href="#建立模型">建立模型</a></li>
+            <li><a href="#定义损失函数">定义损失函数</a></li>
+            <li><a href="#训练">训练</a></li>
+            <li><a href="#查看结果">查看结果</a></li>
+          </ul>
+        </li>
+        <li><a href="#使用-tensorflow-高阶-api-改进">使用 Tensorflow 高阶 API 改进</a>
+          <ul>
+            <li><a href="#建立模型-1">建立模型</a></li>
+            <li><a href="#梯度下降">梯度下降</a></li>
+            <li><a href="#查看结果-1">查看结果</a></li>
+          </ul>
+        </li>
+        <li><a href="#最简实现利用-tensorflow-线性神经网络">最简实现——利用 Tensorflow 线性神经网络</a>
+          <ul>
+            <li><a href="#建立模型-2">建立模型</a></li>
+            <li><a href="#训练-1">训练</a></li>
+            <li><a href="#查看结果-2">查看结果</a></li>
+          </ul>
+        </li>
+        <li><a href="#结语">结语</a></li>
+        <li><a href="#附录">附录</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+    <div class="post-content">
+      <p>应工作之要，最近在看机器学习。虽然机器学习挺火的，然而好的机器学习教程真的少，不少是掐住了人们急功近利的心态，提供各种“一口吃成个胖子”的“食谱”。我也是品尝了许多，现在隐隐约约看出点门道来。入门机器学习，不等于入门深度学习，初学者没必要一开始深扎到学术前沿去，而且不少像我这样的开发者更习惯从用出发，像机器学习这种原理性较强的工程，我们就很吃亏了。比起如何提供更好的算法，我们更关心如何针对现有问题利用现有算法解决问题。虽然相关的包已经很多了，但一些特殊需求还是驱使我们去学习 Tensorflow 以特异化我们的工程。</p>
+<p>闲话少说，讲讲线性回归的实现。首先先明确的一点就是，线性回归就是线性神经网络。其次，我假设你是懂原理的，但是不清楚如何用 Tensorflow 实现。我们实际上是可以通过原理，视 Tensorflow 为工具集以实现一个最简的神经网络。</p>
+<h2 id="数据准备">数据准备</h2>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+import tensorflow as tf
+
+true_w = 10.9
+true_b = 20.0
+num_samples = 100
+
+X = tf.random.normal(shape=[num_samples, 1]).numpy()
+noise = tf.random.normal(shape=[num_samples, 1]).numpy()
+y = X * true_w + true_b + noise
+</code></pre>
+<p><code>true_w</code> 和 <code>true_b</code> 是我们真正要求取的结果。</p>
+<p>线性回归的一般模型是一元一次函数。</p>
+<h2 id="最简陋的实现">最简（陋）的实现</h2>
+<h3 id="建立模型">建立模型</h3>
+<pre><code class="language-python">class Model(object):
+    def __init__(self):
+        self.W = tf.Variable(tf.random.uniform([1]))
+        self.b = tf.Variable(tf.random.uniform([1]))
+        
+    def __call__(self, x):
+        return self.W *x + self.b
+
+model = Model()
+</code></pre>
+<p>我们建立了一个线性模型，此刻它的 <code>W</code> 和 <code>b</code> 为随机值。</p>
+<h3 id="定义损失函数">定义损失函数</h3>
+<pre><code class="language-python">def loss(model, x, y):
+    _y = model(x)
+    return tf.reduce_mean(tf.square(_y - y))
+</code></pre>
+<p>这里实现了平方损失函数。
+$$
+Loos(w, b, x, y) = \sum_{i=1}^N(f(w,b,x_i)-y_i)^2
+$$</p>
+<h3 id="训练">训练</h3>
+<pre><code class="language-python">epochs = 10
+learning_rate = 0.1
+
+for epoch in range(epochs):
+    with tf.GradientTape() as tape:
+        losses = loss(model, X, y)
+    dW, db = tape.gradient(losses, [model.W, model.b])
+    model.W.assign_sub(learning_rate * dW)
+    model.b.assign_sub(learning_rate * db)
+    print(f'Epoch [{epoch}/{epochs}], loss [{losses:.3f}], W/b [{float(model.W.numpy()):.3f}/{float(model.b.numpy()):.3f}]')
+
+plt.scatter(X, y)
+plt.plot(X, model(X), c='r')
+</code></pre>
+<p>这部分代码就是在自动求导寻求梯度。</p>
+<pre><code class="language-python">    with tf.GradientTape() as tape:
+        losses = loss(model, X, y)
+    dW, db = tape.gradient(losses, [model.W, model.b])
+</code></pre>
+<p>然后更新梯度。</p>
+<p>更新次数到达一定程度，梯度将不会再更新了。</p>
+<h3 id="查看结果">查看结果</h3>
+<pre><code class="language-python">plt.scatter(X, y)
+plt.plot(X, model(X), c='r')
+</code></pre>
+<p>借助 <code>matplotlib</code> 我们可以查看我们的结果。</p>
+<p><img src="/img/plot.png" alt=""></p>
+<p>可以看到我们的结果非常贴近了。训练并不意味着非要特别多才管用，训练到一定程度就无效了，我们实际上只是在逼近我们想要的那个结果。</p>
+<h2 id="使用-tensorflow-高阶-api-改进">使用 Tensorflow 高阶 API 改进</h2>
+<h3 id="建立模型-1">建立模型</h3>
+<pre><code class="language-python">model = tf.keras.layers.Dense(units=1)
+</code></pre>
+<p>这里我们使用线性神经元来处理，此时的 <code>model</code> 是一个神经元。</p>
+<h3 id="梯度下降">梯度下降</h3>
+<pre><code class="language-python">epochs = 100
+learning_rate = 0.02
+
+for epoch in range(epochs):
+    with tf.GradientTape() as tape:
+        _y = model(X)
+        loss = tf.reduce_mean(tf.keras.losses.mean_squared_error(y, _y))
+    grads = tape.gradient(loss, model.variables)
+    optimizer = tf.keras.optimizers.SGD(learning_rate)
+    optimizer.apply_gradients(zip(grads, model.variables))
+    print(f'Epoch [{epoch}/{epochs}], loss [{loss:.3f}]')
+</code></pre>
+<p>损失函数是与之前一样的写法，但是我们借助了 keras 已经实现的方法。 <code>optimizer</code> 用的是 <code>SGD</code> ，即随机梯度下降，也称为增量梯度下降，是一种迭代方法，用于优化可微分目标函数。该方法通过在小批量数据上计算损失函数的梯度而迭代地更新权重与偏置项，这里其实就是之前实现的那个更新。</p>
+<p>梯度下降算法需要根据不同情况下调整，目前我们就需要用这个。</p>
+<h3 id="查看结果-1">查看结果</h3>
+<p>与之前一样的代码。</p>
+<p><img src="/img/plot2.png" alt=""></p>
+<p>这里需要注意一下学习次数和学习率，有时候结果不够可能是训练次数不够，但如果训练太慢的话可以尝试调整一下学习率，不过不要调过头。调参是一门学问。</p>
+<h2 id="最简实现利用-tensorflow-线性神经网络">最简实现——利用 Tensorflow 线性神经网络</h2>
+<h3 id="建立模型-2">建立模型</h3>
+<pre><code class="language-python">model = tf.keras.Sequential()
+model.add(tf.keras.layers.Dense(units=1, input_dim=1))
+</code></pre>
+<p>这里我们建立而一层的、且只包含一个神经元的线性神经网络。 <code>tf.keras.Sequential()</code> 代表神经元线性排布。</p>
+<p>关于结构，可以使用 <code>model.summary()</code> 查看。</p>
+<h3 id="训练-1">训练</h3>
+<pre><code class="language-python">model.compile(optimizer='sgd', loss='mse')
+model.fit(X, y, steps_per_epoch=1000)
+</code></pre>
+<p>代码简化了非常之多，因为代码本来重复性就特别高。 <code>compile</code> 我们将编译模型，并加入优化器和损失函数， <code>sgd</code> 和 <code>mse</code> 指代的就是我们之前的方法。 <code>fit</code> 就是正式训练开始，将会训练 1000 。</p>
+<p>代码整体非常的自动化，也非常简洁。这就是使用 Tensorflow 的好处。</p>
+<h3 id="查看结果-2">查看结果</h3>
+<p><img src="/img/plot3.png" alt=""></p>
+<p>可以根据结果再调整训练。</p>
+<p>说实话，图形化也是机器学习非常重要的一环，图片能直观的将一些关系表达出来。所以，善用 <code>plt</code> 。</p>
+<h2 id="结语">结语</h2>
+<p>目前学习机器学习也一段时间了，感觉最难的部分倒也不是数学，而是缺乏引导。</p>
+<p>我读的不少文章，要么讲得太初级，要么太高级，要么过于理论，要完全把内容照抄一遍，只能说他们懂了，我完全没有懂。所以与其等待别人，不如自己想办法。</p>
+<p>个人学下来，目前觉得，得至少把机器学习常用的三大基础框架学了首先，其他的再徐徐图之。 Tensorflow 方面深度学习过于出名了，反而不利于初学机器学习的人，我觉得一开始进行机器学习就碰神经网络简直劝退。理论上，用 Tensorflow 进行机器学习也是可以的，然而很少有人做，我表示也是很难受，只能一个个找。我要是真做成了，就分享给大家，哈哈！</p>
+<h2 id="附录">附录</h2>
+<ol>
+<li><a href="https://huhuhang.com/post/machine-learning/tensorflow-2-0-02">参考文章</a></li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-11-05
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/talk-about-rust-memory/">
+            <span class="next-text nav-default">简单谈一谈 Rust 的内存管理</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

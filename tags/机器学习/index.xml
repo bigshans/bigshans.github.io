@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 22 Oct 2021 16:12:26 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Nov 2021 11:27:46 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Tensorflow 极简实现线性回归</title>
+      <link>https://bigshans.github.io/post/minimal-linear-regression-of-tensorflow/</link>
+      <pubDate>Fri, 05 Nov 2021 11:27:46 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/minimal-linear-regression-of-tensorflow/</guid>
+      <description>应工作之要，最近在看机器学习。虽然机器学习挺火的，然而好的机器学习教程真的少，不少是掐住了人们急功近利的心态，提供各种“一口吃成个胖子”的“</description>
+    </item>
+    
     <item>
       <title>numpy 基础</title>
       <link>https://bigshans.github.io/post/numpy-basic/</link>
