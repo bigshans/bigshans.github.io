@@ -7,16 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 06 Nov 2021 19:17:22 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>从文档谈到代码工程化</title>
-      <link>https://bigshans.github.io/post/from-doc-to-engineering/</link>
-      <pubDate>Sat, 06 Nov 2021 19:17:22 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/from-doc-to-engineering/</guid>
-      <description>今天跟同事谈到了 swagger 的问题。 swagger 很方便的一点在于可以从代码抽离出文档。它的便利性我不否认，但我要争论的点在于，即使有了 swagger ，我们仍然要维护一份文档</description>
-    </item>
-    
+    <lastBuildDate>Fri, 05 Nov 2021 11:27:46 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Tensorflow 极简实现线性回归</title>
       <link>https://bigshans.github.io/post/minimal-linear-regression-of-tensorflow/</link>
@@ -456,6 +447,15 @@
       
       <guid>https://bigshans.github.io/post/for-recent-things/</guid>
       <description>最近事情发生的蛮多的，我想写一点表达一下，发泄一下。 新冠 当新冠从一种病毒，演变到一种政治表达时，一切都开始不对味儿了。 去年，西方国家以一系列</description>
+    </item>
+    
+    <item>
+      <title>2020 总结</title>
+      <link>https://bigshans.github.io/post/2020-summary/</link>
+      <pubDate>Sun, 03 Jan 2021 00:52:28 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/2020-summary/</guid>
+      <description>2020 年真的是多灾多难的一年。我在年初主动辞退了在墨墨的工作，然后回到温州，准备到杭州找工作，然后历经四个月的磨难，终于平安落地。现在也找到了房</description>
     </item>
     
   </channel>

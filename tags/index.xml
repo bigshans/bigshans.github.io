@@ -7,16 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 06 Nov 2021 19:17:22 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>随笔</title>
-      <link>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</link>
-      <pubDate>Sat, 06 Nov 2021 19:17:22 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Fri, 05 Nov 2021 11:27:46 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>机器学习</title>
       <link>https://bigshans.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
@@ -32,6 +23,15 @@
       <pubDate>Sun, 31 Oct 2021 17:13:41 +0800</pubDate>
       
       <guid>https://bigshans.github.io/tags/rust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>随笔</title>
+      <link>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</link>
+      <pubDate>Sat, 30 Oct 2021 18:15:47 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</guid>
       <description></description>
     </item>
     

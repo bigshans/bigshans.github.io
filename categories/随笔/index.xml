@@ -7,16 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 06 Nov 2021 19:17:22 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>从文档谈到代码工程化</title>
-      <link>https://bigshans.github.io/post/from-doc-to-engineering/</link>
-      <pubDate>Sat, 06 Nov 2021 19:17:22 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/from-doc-to-engineering/</guid>
-      <description>今天跟同事谈到了 swagger 的问题。 swagger 很方便的一点在于可以从代码抽离出文档。它的便利性我不否认，但我要争论的点在于，即使有了 swagger ，我们仍然要维护一份文档</description>
-    </item>
-    
+    <lastBuildDate>Sat, 30 Oct 2021 18:15:47 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>对死亡的讨论</title>
       <link>https://bigshans.github.io/post/discussion-of-death/</link>
