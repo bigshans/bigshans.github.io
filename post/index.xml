@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 05 Nov 2021 11:27:46 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Nov 2021 17:27:40 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为什么 overflow 能够清除 float</title>
+      <link>https://bigshans.github.io/post/why-bfc-can-clear-flow/</link>
+      <pubDate>Sun, 07 Nov 2021 17:27:40 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/why-bfc-can-clear-flow/</guid>
+      <description>有些学问还是自己研究最为靠谱，像是 overflow 为什么能清 float ，都知道是 BFC ，但是为什么呢？因为在文档流中，普通的 div 其实也是 BFC ，所以，理论上添加 overflow 为非 visible 的时</description>
+    </item>
+    
     <item>
       <title>使用 Tensorflow 极简实现线性回归</title>
       <link>https://bigshans.github.io/post/minimal-linear-regression-of-tensorflow/</link>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/for-recent-things/</guid>
       <description>最近事情发生的蛮多的，我想写一点表达一下，发泄一下。 新冠 当新冠从一种病毒，演变到一种政治表达时，一切都开始不对味儿了。 去年，西方国家以一系列</description>
-    </item>
-    
-    <item>
-      <title>2020 总结</title>
-      <link>https://bigshans.github.io/post/2020-summary/</link>
-      <pubDate>Sun, 03 Jan 2021 00:52:28 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/2020-summary/</guid>
-      <description>2020 年真的是多灾多难的一年。我在年初主动辞退了在墨墨的工作，然后回到温州，准备到杭州找工作，然后历经四个月的磨难，终于平安落地。现在也找到了房</description>
     </item>
     
   </channel>

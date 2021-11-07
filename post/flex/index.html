@@ -50,7 +50,7 @@
 <meta itemprop="name" content="flex 布局简说">
 <meta itemprop="description" content="最近同事开分享会讲到了一点 flex 布局相关的东西，但是讲得很仓促，于是决定私下里整理一下，也算是对 flex 知识的总结。内容基本参考了 MDN 还有 W3C 文档的内容，"><meta itemprop="datePublished" content="2021-07-10T22:35:25+08:00" />
 <meta itemprop="dateModified" content="2021-07-10T22:35:25+08:00" />
-<meta itemprop="wordCount" content="1679">
+<meta itemprop="wordCount" content="1710">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="flex 布局简说"/>
 <meta name="twitter:description" content="最近同事开分享会讲到了一点 flex 布局相关的东西，但是讲得很仓促，于是决定私下里整理一下，也算是对 flex 知识的总结。内容基本参考了 MDN 还有 W3C 文档的内容，"/>
@@ -177,7 +177,7 @@
         <div class="post-category">
             <a href="/categories/css/"> css </a>
             </div>
-          <span class="more-meta"> 约 1679 字 </span>
+          <span class="more-meta"> 约 1710 字 </span>
           <span class="more-meta"> 预计阅读 4 分钟 </span>
         
       </div>
@@ -245,9 +245,9 @@
 <p>我们可以使用一个，两个或三个值来指定 <code>flex</code> 属性。</p>
 <p>简写形式如下：</p>
 <pre><code class="language-css">/* 关键字值 */
-flex: auto;
-flex: initial;
-flex: none;
+flex: auto; /* flex: 1 1 auto */
+flex: initial; /* flex: 0 1 auto */
+flex: none; /* flex: 0 0 auto */
 
 /* 一个值, 无单位数字: flex-grow */
 flex: 2;
@@ -294,7 +294,7 @@ flex: unset;
 <p>这两个属性是老朋友了。</p>
 <p><code>aligin-items</code> 是设定在交叉轴对齐的方式，默认是 <code>stretch</code> ，这就是为什么flex元素会默认被拉伸到最高元素的高度。</p>
 <p><code>justify-content</code> 属性用来使元素在主轴方向上对齐，主轴方向是通过 <code>flex-direction</code> 设置的方向。初始值是<code>flex-start</code>，元素从容器的起始线排列。但是你也可以把值设置为<code>flex-end</code>，从终止线开始排列，或者<code>center</code>，在中间排列。</p>
-<p>主要内容就是这些。</p>
+<p>最后，关于 <code>flex</code> 属性的话也可以参考这篇博文： <a href="https://www.zhangxinxu.com/wordpress/2020/10/css-flex-0-1-none/">https://www.zhangxinxu.com/wordpress/2020/10/css-flex-0-1-none/</a> 。</p>
 
     </div>
 

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 22 Dec 2019 21:21:47 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Nov 2021 17:27:40 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为什么 overflow 能够清除 float</title>
+      <link>https://bigshans.github.io/post/why-bfc-can-clear-flow/</link>
+      <pubDate>Sun, 07 Nov 2021 17:27:40 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/why-bfc-can-clear-flow/</guid>
+      <description>有些学问还是自己研究最为靠谱，像是 overflow 为什么能清 float ，都知道是 BFC ，但是为什么呢？因为在文档流中，普通的 div 其实也是 BFC ，所以，理论上添加 overflow 为非 visible 的时</description>
+    </item>
+    
     <item>
       <title>css绘制三角形</title>
       <link>https://bigshans.github.io/post/css%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/</link>
