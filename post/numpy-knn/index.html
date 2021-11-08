@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>为什么 overflow 能够清除 float - Bigshans&#39; Blog</title>
+  <title>纯 numpy 实现 KNN - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="有些学问还是自己研究最为靠谱，像是 overflow 为什么能清 float ，都知道是 BFC ，但是为什么呢？因为在文档流中，普通的 div 其实也是 BFC ，所以，理论上添加 overflow 为非 visible 的时" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.90.0-DEV with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/why-bfc-can-clear-flow/" />
+<link rel="canonical" href="https://bigshans.github.io/post/numpy-knn/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,20 +40,20 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="为什么 overflow 能够清除 float" />
-<meta property="og:description" content="有些学问还是自己研究最为靠谱，像是 overflow 为什么能清 float ，都知道是 BFC ，但是为什么呢？因为在文档流中，普通的 div 其实也是 BFC ，所以，理论上添加 overflow 为非 visible 的时" />
+<meta property="og:title" content="纯 numpy 实现 KNN" />
+<meta property="og:description" content="首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/why-bfc-can-clear-flow/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-11-07T17:27:40+08:00" />
-<meta property="article:modified_time" content="2021-11-07T17:27:40+08:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/numpy-knn/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-11-08T15:16:47+08:00" />
+<meta property="article:modified_time" content="2021-11-08T15:16:47+08:00" />
 
-<meta itemprop="name" content="为什么 overflow 能够清除 float">
-<meta itemprop="description" content="有些学问还是自己研究最为靠谱，像是 overflow 为什么能清 float ，都知道是 BFC ，但是为什么呢？因为在文档流中，普通的 div 其实也是 BFC ，所以，理论上添加 overflow 为非 visible 的时"><meta itemprop="datePublished" content="2021-11-07T17:27:40+08:00" />
-<meta itemprop="dateModified" content="2021-11-07T17:27:40+08:00" />
-<meta itemprop="wordCount" content="441">
-<meta itemprop="keywords" content="css," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="为什么 overflow 能够清除 float"/>
-<meta name="twitter:description" content="有些学问还是自己研究最为靠谱，像是 overflow 为什么能清 float ，都知道是 BFC ，但是为什么呢？因为在文档流中，普通的 div 其实也是 BFC ，所以，理论上添加 overflow 为非 visible 的时"/>
+<meta itemprop="name" content="纯 numpy 实现 KNN">
+<meta itemprop="description" content="首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的"><meta itemprop="datePublished" content="2021-11-08T15:16:47+08:00" />
+<meta itemprop="dateModified" content="2021-11-08T15:16:47+08:00" />
+<meta itemprop="wordCount" content="451">
+<meta itemprop="keywords" content="numpy,机器学习," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="纯 numpy 实现 KNN"/>
+<meta name="twitter:description" content="首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -170,14 +170,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">为什么 overflow 能够清除 float</h1>
+      <h1 class="post-title">纯 numpy 实现 KNN</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-11-07 </span>
+        <span class="post-time"> 2021-11-08 </span>
         <div class="post-category">
-            <a href="/categories/css/"> css </a>
+            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"> 机器学习 </a>
             </div>
-          <span class="more-meta"> 约 441 字 </span>
+          <span class="more-meta"> 约 451 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         
       </div>
@@ -185,22 +185,77 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#导入库">导入库</a></li>
+        <li><a href="#predict">predict</a></li>
+        <li><a href="#完整代码">完整代码</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 </div>
 
     <div class="post-content">
-      <p>有些学问还是自己研究最为靠谱，像是 <code>overflow</code> 为什么能清 <code>float</code> ，都知道是 BFC ，但是为什么呢？因为在文档流中，普通的 <code>div</code> 其实也是 <code>BFC</code> ，所以，理论上添加 <code>overflow</code> 为非 <code>visible</code> 的时候，它也仍然是 BFC 啊？所以，问题在哪里呢？</p>
-<p>我个人是在 <a href="https://stackoverflow.com/questions/6196725/how-does-the-css-block-formatting-context-work">StackOverflow</a> 上找到了我想要的。</p>
-<p>主要是文档下面的一段内容：</p>
-<blockquote>
-<p>Floats, absolutely positioned elements, block containers (such as inline-blocks, table-cells, and table-captions) that are not block boxes, and block boxes with &lsquo;overflow&rsquo; other than &lsquo;visible&rsquo; (except when that value has been propagated to the viewport) establish new block formatting contexts for their contents.</p>
-</blockquote>
-<p>简单来说，就是当我们设置 <code>div</code> 为 <code>float</code> 、 绝对定位元素、块级容器等非块盒型，或块级盒型的 <code>overflow</code> 为除 <code>visible</code> 以外的值时，会为盒子创建新的上下文。而关于这个新的上下文：</p>
-<blockquote>
-<p>In a block formatting context, each box&rsquo;s left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch)</p>
-</blockquote>
-<p>意思是，其子元素将左右相连贴合，实际上的样子，就像清除了浮动了一样。这个要求本质上是为了让盒型保持规整，否则盒型就不是一个规则的矩形了。</p>
-<p>实际上， BFC 清浮动的方法只有上述几种建立新的 BFC 的方法有效，其他的是无作用的。另外， <code>clear</code> 与盒型的方法是完全不一样的， <code>clear</code> 不会影响原有的浮动，但 BFC 的方法实际上是会影响的。实际用的时候需要考虑。但是，如果不是为了兼容性， <code>flex</code> 和 <code>grid</code> 其实是更好的方案。</p>
+      <p>首先，感谢知乎文章 <a href="https://zhuanlan.zhihu.com/p/59755939">https://zhuanlan.zhihu.com/p/59755939</a> 提供了<strong>纯 numpy</strong> 的写法，我这个也基本上是抄他的。</p>
+<p>kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的 kNN ， kNN 的缺点还是比较大的，在有更好算法的前提下我们并不用它。</p>
+<h2 id="导入库">导入库</h2>
+<pre><code class="language-python">from sklearn import datasets, model_selection
+import numpy as np
+from collections import Counter
+</code></pre>
+<p>原理我不讲了，很简单的。导入的几个库，其中 <code>sklearn</code> 主要是用它的鸢尾花数据集和划分测试集的能力， <code>Counter</code> 是 python 内建库，用于最后投票。</p>
+<h2 id="predict">predict</h2>
+<pre><code class="language-python">def _predict(self, X):
+    distances = [ np.sqrt(np.sum((x_train - X) ** 2)) for x_train in self._x_train]
+    sorted_dis = np.argsort(distances)
+    topK = [self._y_train[s] for s in sorted_dis[:self.k]]
+    votes = Counter(topK)
+    return votes.most_common(1)[0][0]
+</code></pre>
+<p>这段代码基本上在暴力求解。</p>
+<p><code>np.sqrt(np.sum((x_train - X) ** 2))</code> 在求解 <code>x_train</code> 和 <code>X</code> 之间的距离， <code>distances</code> 为 <code>X</code> 与 <code>self._x_train</code> 中的每个张量之间的距离。</p>
+<p><code>np.argsort(distances)</code> 将 <code>distances</code> 从小到大排序，并返回的是对应的索引。</p>
+<p><code>topK</code> 是对应排序后前 <code>self.k</code> 个距离 <code>X</code> 最近的标签。之后利用 <code>votes</code> 求解出前 <code>k</code> 个标签中最常出现的。</p>
+<h2 id="完整代码">完整代码</h2>
+<pre><code class="language-python">from sklearn import datasets, model_selection
+import numpy as np
+from collections import Counter
+
+
+class KNNClassify:
+    def __init__(self, k = 5):
+        self.k = k
+        self._x_train = None
+        self._y_train = None
+
+    def fit(self, X, y):
+        self._x_train = X
+        self._y_train = y
+        return self
+
+    def predict(self, X):
+        y_predict = [self._predict(x) for x in X]
+        return np.array(y_predict)
+
+    def _predict(self, X):
+        distances = [ np.sqrt(np.sum((x_train - X) ** 2)) for x_train in self._x_train]
+        sorted_dis = np.argsort(distances)
+        topK = [self._y_train[s] for s in sorted_dis[:self.k]]
+        votes = Counter(topK)
+        return votes.most_common(1)[0][0]
+
+iris = datasets.load_iris()
+iris_x, iris_y = iris.data, iris.target
+Xtr, Xte, Ytr, Yte = model_selection.train_test_split(iris_x, iris_y, test_size=0.3, random_state=42)
+
+knn = KNNClassify()
+knn.fit(Xtr, Ytr)
+print(knn.predict(Xte) == Yte)
+</code></pre>
+<p>我写得比较简单。有兴趣看看连接里的大佬，写得比较规范。</p>
 
     </div>
 
@@ -212,7 +267,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2021-11-07
+        2021-11-08
         
     </span>
   </p>
@@ -221,16 +276,13 @@
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/css/">css</a>
+          <a href="/tags/numpy/">numpy</a>
+          <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/numpy-knn/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">纯 numpy 实现 KNN</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/post/minimal-linear-regression-of-tensorflow/">
-            <span class="next-text nav-default">使用 Tensorflow 极简实现线性回归</span>
+        
+        <a class="next" href="/post/why-bfc-can-clear-flow/">
+            <span class="next-text nav-default">为什么 overflow 能够清除 float</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 07 Nov 2021 17:27:40 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Nov 2021 15:16:47 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>纯 numpy 实现 KNN</title>
+      <link>https://bigshans.github.io/post/numpy-knn/</link>
+      <pubDate>Mon, 08 Nov 2021 15:16:47 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/numpy-knn/</guid>
+      <description>首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的</description>
+    </item>
+    
     <item>
       <title>为什么 overflow 能够清除 float</title>
       <link>https://bigshans.github.io/post/why-bfc-can-clear-flow/</link>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/svelte-todo/</guid>
       <description>官网： https://svelte.dev/ Svelte 是个新的前端框架，发展强劲。与目前主流的三大框架不同的是，Svelte 不采用 vdom ，而是借助 complier 的能力，打包出最小化的包，不附带更多的 runtime</description>
-    </item>
-    
-    <item>
-      <title>为了一些近期的新闻所写的随笔</title>
-      <link>https://bigshans.github.io/post/for-recent-things/</link>
-      <pubDate>Sun, 24 Jan 2021 12:16:43 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/for-recent-things/</guid>
-      <description>最近事情发生的蛮多的，我想写一点表达一下，发泄一下。 新冠 当新冠从一种病毒，演变到一种政治表达时，一切都开始不对味儿了。 去年，西方国家以一系列</description>
     </item>
     
   </channel>
