@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>纯 numpy 实现 KNN - Bigshans&#39; Blog</title>
+  <title>Github Action 使用速记 - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="最近尝试搞一下 Github Action ，因为看到别人搞了一下，用起来挺方便的。先说一下使用的体验，首先速度比不上用自己电脑编译，但胜在方便，比较大的编译最好还是" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.90.0-DEV with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/numpy-knn/" />
+<link rel="canonical" href="https://bigshans.github.io/post/github-action-shorthand/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,20 +40,20 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="纯 numpy 实现 KNN" />
-<meta property="og:description" content="首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的" />
+<meta property="og:title" content="Github Action 使用速记" />
+<meta property="og:description" content="最近尝试搞一下 Github Action ，因为看到别人搞了一下，用起来挺方便的。先说一下使用的体验，首先速度比不上用自己电脑编译，但胜在方便，比较大的编译最好还是" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/numpy-knn/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-11-08T15:16:47+08:00" />
-<meta property="article:modified_time" content="2021-11-08T15:16:47+08:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/github-action-shorthand/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-11-23T18:07:24+08:00" />
+<meta property="article:modified_time" content="2021-11-23T18:07:24+08:00" />
 
-<meta itemprop="name" content="纯 numpy 实现 KNN">
-<meta itemprop="description" content="首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的"><meta itemprop="datePublished" content="2021-11-08T15:16:47+08:00" />
-<meta itemprop="dateModified" content="2021-11-08T15:16:47+08:00" />
-<meta itemprop="wordCount" content="451">
-<meta itemprop="keywords" content="numpy,机器学习," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="纯 numpy 实现 KNN"/>
-<meta name="twitter:description" content="首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的"/>
+<meta itemprop="name" content="Github Action 使用速记">
+<meta itemprop="description" content="最近尝试搞一下 Github Action ，因为看到别人搞了一下，用起来挺方便的。先说一下使用的体验，首先速度比不上用自己电脑编译，但胜在方便，比较大的编译最好还是"><meta itemprop="datePublished" content="2021-11-23T18:07:24+08:00" />
+<meta itemprop="dateModified" content="2021-11-23T18:07:24+08:00" />
+<meta itemprop="wordCount" content="518">
+<meta itemprop="keywords" content="github,CI," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Github Action 使用速记"/>
+<meta name="twitter:description" content="最近尝试搞一下 Github Action ，因为看到别人搞了一下，用起来挺方便的。先说一下使用的体验，首先速度比不上用自己电脑编译，但胜在方便，比较大的编译最好还是"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -170,15 +170,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">纯 numpy 实现 KNN</h1>
+      <h1 class="post-title">Github Action 使用速记</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-11-08 </span>
+        <span class="post-time"> 2021-11-23 </span>
         <div class="post-category">
-            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"> 机器学习 </a>
+            <a href="/categories/ci/"> CI </a>
             </div>
-          <span class="more-meta"> 约 451 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 518 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
     </header>
@@ -189,9 +189,8 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#导入库">导入库</a></li>
-        <li><a href="#predict">predict</a></li>
-        <li><a href="#完整代码">完整代码</a></li>
+        <li><a href="#编写-workflows">编写 workflows</a></li>
+        <li><a href="#具体感受">具体感受</a></li>
       </ul>
     </li>
   </ul>
@@ -199,63 +198,41 @@
 </div>
 
     <div class="post-content">
-      <p>首先，感谢知乎文章 <a href="https://zhuanlan.zhihu.com/p/59755939">https://zhuanlan.zhihu.com/p/59755939</a> 提供了<strong>纯 numpy</strong> 的写法，我这个也基本上是抄他的。</p>
-<p>kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的 kNN ， kNN 的缺点还是比较大的，在有更好算法的前提下我们并不用它。</p>
-<h2 id="导入库">导入库</h2>
-<pre><code class="language-python">from sklearn import datasets, model_selection
-import numpy as np
-from collections import Counter
+      <p>最近尝试搞一下 Github Action ，因为看到别人搞了一下，用起来挺方便的。先说一下使用的体验，首先速度比不上用自己电脑编译，但胜在方便，比较大的编译最好还是本地来处理， Github Action 提供机器性能有限，像代码检查、小项目编译、小型定时任务这些还是很不错的。</p>
+<h2 id="编写-workflows">编写 workflows</h2>
+<p>我目前给两个库编写了 Github Action ，一个是 emacs-git 的打包，另一个 PPet 的打包，前者比较有代表性。</p>
+<p>创建 Github Action 需要创建隐藏目录 <code>.github</code> ，我创建了 <code>main.yml</code> 到 <code>.github/workflows</code> 下面。</p>
+<p><code>main.yml</code> 文件：</p>
+<pre><code class="language-yml">name: Github Action Build PKGBUILD
+on:
+  push:
+  schedule:
+    - cron: '0 8-21 * * *'
+jobs:
+  build_for_arch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: GNU Emacs. Development master branch.
+        uses: antman666/build-aur-action@mine
+        with:
+          repo-name: emacs-aur
+      - uses: ncipollo/release-action@v1.8.6
+        with:
+          allowUpdates: true
+          tag: &quot;v29.0.50&quot;
+          artifacts: &quot;./*.zst&quot;
+          token: ${{ secrets.GITHUB_TOKEN }}
 </code></pre>
-<p>原理我不讲了，很简单的。导入的几个库，其中 <code>sklearn</code> 主要是用它的鸢尾花数据集和划分测试集的能力， <code>Counter</code> 是 python 内建库，用于最后投票。</p>
-<h2 id="predict">predict</h2>
-<pre><code class="language-python">def _predict(self, X):
-    distances = [ np.sqrt(np.sum((x_train - X) ** 2)) for x_train in self._x_train]
-    sorted_dis = np.argsort(distances)
-    topK = [self._y_train[s] for s in sorted_dis[:self.k]]
-    votes = Counter(topK)
-    return votes.most_common(1)[0][0]
-</code></pre>
-<p>这段代码基本上在暴力求解。</p>
-<p><code>np.sqrt(np.sum((x_train - X) ** 2))</code> 在求解 <code>x_train</code> 和 <code>X</code> 之间的距离， <code>distances</code> 为 <code>X</code> 与 <code>self._x_train</code> 中的每个张量之间的距离。</p>
-<p><code>np.argsort(distances)</code> 将 <code>distances</code> 从小到大排序，并返回的是对应的索引。</p>
-<p><code>topK</code> 是对应排序后前 <code>self.k</code> 个距离 <code>X</code> 最近的标签。之后利用 <code>votes</code> 求解出前 <code>k</code> 个标签中最常出现的。</p>
-<h2 id="完整代码">完整代码</h2>
-<pre><code class="language-python">from sklearn import datasets, model_selection
-import numpy as np
-from collections import Counter
-
-
-class KNNClassify:
-    def __init__(self, k = 5):
-        self.k = k
-        self._x_train = None
-        self._y_train = None
-
-    def fit(self, X, y):
-        self._x_train = X
-        self._y_train = y
-        return self
-
-    def predict(self, X):
-        y_predict = [self._predict(x) for x in X]
-        return np.array(y_predict)
-
-    def _predict(self, X):
-        distances = [ np.sqrt(np.sum((x_train - X) ** 2)) for x_train in self._x_train]
-        sorted_dis = np.argsort(distances)
-        topK = [self._y_train[s] for s in sorted_dis[:self.k]]
-        votes = Counter(topK)
-        return votes.most_common(1)[0][0]
-
-iris = datasets.load_iris()
-iris_x, iris_y = iris.data, iris.target
-Xtr, Xte, Ytr, Yte = model_selection.train_test_split(iris_x, iris_y, test_size=0.3, random_state=42)
-
-knn = KNNClassify()
-knn.fit(Xtr, Ytr)
-print(knn.predict(Xte) == Yte)
-</code></pre>
-<p>我写得比较简单。有兴趣看看连接里的大佬，写得比较规范。</p>
+<p>Github Action 就是根据 yaml 文件创建对应的 CI 任务的。这里我创建了一个 <code>cron</code> 定时任务，且该任务在仓库被 push 的时候也会被触发。任务的具体内容由 <code>jobs</code> 来定义。</p>
+<p><code>runs-on</code> 代表任务的运行环境， <code>steps</code> 代表具体的步骤。下面的内容你可以看到 <code>uses</code> ，这个代表一个别人已经写好了的 Github Action ，我们使用 <code>uses</code> 并补充对应的参数就可以启动任务了。</p>
+<p><code>actions/checkout@v2</code> 是用来修复 Github Action 分支切换问题的， Github Action 无法直接拉取到分支内容，于是先用这个来做个 workaround 。</p>
+<p><code>antman666/build-aur-action@v1.8.6</code> 是用来构建 AUR 包的。</p>
+<p><code>ncipollo/release-action@v1.8.6</code> 是用来发布构建好的包的。</p>
+<h2 id="具体感受">具体感受</h2>
+<p>我是尝试过内核自动构建，但编译速度太慢，还不如我自己手动编译。频繁更新的 emacs-git 是相当好用，而 PPet 包则一般般，只不过自己懒得在自己电脑上处理，交给 Github Action 还是很方便的。</p>
 
     </div>
 
@@ -267,7 +244,7 @@ print(knn.predict(Xte) == Yte)
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2021-11-08
+        2021-11-23
         
     </span>
   </p>
@@ -276,17 +253,13 @@ print(knn.predict(Xte) == Yte)
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/numpy/">numpy</a>
-          <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+          <a href="/tags/github/">github</a>
+          <a href="/tags/ci/">CI</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/github-action-shorthand/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Github Action 使用速记</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/post/why-bfc-can-clear-flow/">
-            <span class="next-text nav-default">为什么 overflow 能够清除 float</span>
+        
+        <a class="next" href="/post/numpy-knn/">
+            <span class="next-text nav-default">纯 numpy 实现 KNN</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

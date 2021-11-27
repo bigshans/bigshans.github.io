@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 08 Nov 2021 15:16:47 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Nov 2021 18:07:24 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github Action 使用速记</title>
+      <link>https://bigshans.github.io/post/github-action-shorthand/</link>
+      <pubDate>Tue, 23 Nov 2021 18:07:24 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/github-action-shorthand/</guid>
+      <description>最近尝试搞一下 Github Action ，因为看到别人搞了一下，用起来挺方便的。先说一下使用的体验，首先速度比不上用自己电脑编译，但胜在方便，比较大的编译最好还是</description>
+    </item>
+    
     <item>
       <title>纯 numpy 实现 KNN</title>
       <link>https://bigshans.github.io/post/numpy-knn/</link>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/rn-android-docker/</guid>
       <description>每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。 选择 Docker 镜像 其实 React Native</description>
-    </item>
-    
-    <item>
-      <title>用 Svelte 写个简单的 Todo</title>
-      <link>https://bigshans.github.io/post/svelte-todo/</link>
-      <pubDate>Tue, 16 Feb 2021 20:30:32 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/svelte-todo/</guid>
-      <description>官网： https://svelte.dev/ Svelte 是个新的前端框架，发展强劲。与目前主流的三大框架不同的是，Svelte 不采用 vdom ，而是借助 complier 的能力，打包出最小化的包，不附带更多的 runtime</description>
     </item>
     
   </channel>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/github/</link>
+    <description>Recent content in github on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Tue, 23 Nov 2021 18:07:24 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github Action 使用速记</title>
+      <link>https://bigshans.github.io/post/github-action-shorthand/</link>
+      <pubDate>Tue, 23 Nov 2021 18:07:24 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/github-action-shorthand/</guid>
+      <description>最近尝试搞一下 Github Action ，因为看到别人搞了一下，用起来挺方便的。先说一下使用的体验，首先速度比不上用自己电脑编译，但胜在方便，比较大的编译最好还是</description>
+    </item>
+    
+  </channel>
+</rss>
