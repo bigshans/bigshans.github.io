@@ -51,7 +51,7 @@
 <meta itemprop="name" content="nginx 反向代理上 Pixiv（二）">
 <meta itemprop="description" content="这篇文章我发在 B 站了，地址是 https://www.bilibili.com/read/cv1317348 。当然，这里我要讲细一点。"><meta itemprop="datePublished" content="2018-10-12T19:02:22+00:00" />
 <meta itemprop="dateModified" content="2018-10-12T19:02:22+00:00" />
-<meta itemprop="wordCount" content="1222">
+<meta itemprop="wordCount" content="1231">
 <meta itemprop="keywords" content="nginx,linux," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="nginx 反向代理上 Pixiv（二）"/>
 <meta name="twitter:description" content="这篇文章我发在 B 站了，地址是 https://www.bilibili.com/read/cv1317348 。当然，这里我要讲细一点。"/>
@@ -178,7 +178,7 @@
         <div class="post-category">
             <a href="/categories/nginx/"> nginx </a>
             </div>
-          <span class="more-meta"> 约 1222 字 </span>
+          <span class="more-meta"> 约 1231 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         
       </div>
@@ -209,20 +209,20 @@
    server 210.129.120.55:443;
 }
 
-
+upstream sketch-pixiv-net {
    server 210.140.174.37:443;
    server 210.140.170.179:443;
    server 210.140.175.130:443;
 }
 
-
+upstream imgaz-pixiv-net {
    server 210.140.131.145:443;
    server 210.140.131.144:443;
    server 210.140.131.147:443;
    server 210.140.131.153:443;
 }
 
-
+upstream i-pximg-net {
    server 210.140.92.134:443;
    server 210.140.92.135:443;
    server 210.140.92.136:443;

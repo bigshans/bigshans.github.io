@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 23 Nov 2021 18:07:24 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Nov 2021 15:38:55 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为什么使用或为什么不用 TypeScript</title>
+      <link>https://bigshans.github.io/post/why-use-or-why-not-use-ts/</link>
+      <pubDate>Mon, 29 Nov 2021 15:38:55 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/why-use-or-why-not-use-ts/</guid>
+      <description>最近在写 Angular ，众所周知，现在要写 Angular 基本上是除了 TypeScript 就没得跑了。不得不说， Angular 真是前端规范化的练兵场，前端三大框架中，唯 Angular 严格控制了编写的方式，从环</description>
+    </item>
+    
     <item>
       <title>Github Action 使用速记</title>
       <link>https://bigshans.github.io/post/github-action-shorthand/</link>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/jest-api-test-supertest/</guid>
       <description>最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。 登录测试 有些</description>
-    </item>
-    
-    <item>
-      <title>在 Docker 内编译 React Native</title>
-      <link>https://bigshans.github.io/post/rn-android-docker/</link>
-      <pubDate>Sun, 21 Feb 2021 18:57:43 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/rn-android-docker/</guid>
-      <description>每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。 选择 Docker 镜像 其实 React Native</description>
     </item>
     
   </channel>

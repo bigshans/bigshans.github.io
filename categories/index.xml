@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 23 Nov 2021 18:07:24 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Nov 2021 15:38:55 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>随笔</title>
+      <link>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
+      <pubDate>Mon, 29 Nov 2021 15:38:55 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>CI</title>
       <link>https://bigshans.github.io/categories/ci/</link>
@@ -41,15 +50,6 @@
       <pubDate>Sun, 31 Oct 2021 17:13:41 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/rust/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>随笔</title>
-      <link>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
-      <pubDate>Sat, 30 Oct 2021 18:15:47 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</guid>
       <description></description>
     </item>
     

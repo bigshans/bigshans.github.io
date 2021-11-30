@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 30 Oct 2021 18:15:47 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Nov 2021 15:38:55 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为什么使用或为什么不用 TypeScript</title>
+      <link>https://bigshans.github.io/post/why-use-or-why-not-use-ts/</link>
+      <pubDate>Mon, 29 Nov 2021 15:38:55 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/why-use-or-why-not-use-ts/</guid>
+      <description>最近在写 Angular ，众所周知，现在要写 Angular 基本上是除了 TypeScript 就没得跑了。不得不说， Angular 真是前端规范化的练兵场，前端三大框架中，唯 Angular 严格控制了编写的方式，从环</description>
+    </item>
+    
     <item>
       <title>对死亡的讨论</title>
       <link>https://bigshans.github.io/post/discussion-of-death/</link>
