@@ -3,28 +3,63 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2021-11-29T15:38:55+08:00</lastmod>
+    <lastmod>2021-11-30T14:04:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2021-11-29T15:38:55+08:00</lastmod>
+    <lastmod>2021-11-30T14:04:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/nginx/</loc>
+    <lastmod>2021-11-30T14:04:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</loc>
+    <lastmod>2021-11-30T14:04:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2021-11-29T15:38:55+08:00</lastmod>
+    <lastmod>2021-11-30T14:04:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/tags/</loc>
-    <lastmod>2021-11-29T15:38:55+08:00</lastmod>
+    <lastmod>2021-11-30T14:04:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2021-11-30T14:04:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2021-11-30T14:04:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/%E8%BF%90%E7%BB%B4/</loc>
+    <lastmod>2021-11-30T14:04:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -388,13 +423,6 @@
   
   <url>
     <loc>https://bigshans.github.io/post/minikube-introduction/</loc>
-    <lastmod>2021-09-22T15:47:06+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/%E8%BF%90%E7%BB%B4/</loc>
     <lastmod>2021-09-22T15:47:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -877,20 +905,6 @@
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2021-04-11T15:58:45+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2021-04-11T15:58:45+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigshans.github.io/post/study-front-end-way/</loc>
     <lastmod>2021-04-11T15:58:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1040,13 +1054,6 @@
   <url>
     <loc>https://bigshans.github.io/post/react-native-begin/</loc>
     <lastmod>2020-12-02T21:26:09+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/nginx/</loc>
-    <lastmod>2020-11-15T18:30:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

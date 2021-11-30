@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 29 Nov 2021 15:38:55 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Nov 2021 14:04:23 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx 按路由分流请求</title>
+      <link>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</link>
+      <pubDate>Tue, 30 Nov 2021 14:04:23 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</guid>
+      <description>一个很恶心的需求，到部署最后部署的时候才发现问题很大，但只好死马当活马医了。 我们目前搞了两个项目，其中一个项目是传统 Vue 项目，另一个是 Angular SSR ，刚</description>
+    </item>
+    
     <item>
       <title>为什么使用或为什么不用 TypeScript</title>
       <link>https://bigshans.github.io/post/why-use-or-why-not-use-ts/</link>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/npm-pack-guide/</guid>
       <description>最近在修改一些很长时间无人维护的包，估计包作者都不维护了，于是我重新搞了一份传到了 npm 上，有兴趣的可以看一下：log4js-rabbitmq-</description>
-    </item>
-    
-    <item>
-      <title>使用 jest 和 supertest 进行接口测试</title>
-      <link>https://bigshans.github.io/post/jest-api-test-supertest/</link>
-      <pubDate>Sun, 28 Feb 2021 17:04:24 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/jest-api-test-supertest/</guid>
-      <description>最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。 登录测试 有些</description>
     </item>
     
   </channel>

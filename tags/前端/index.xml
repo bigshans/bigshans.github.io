@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 11 Apr 2021 15:58:45 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Nov 2021 14:04:23 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx 按路由分流请求</title>
+      <link>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</link>
+      <pubDate>Tue, 30 Nov 2021 14:04:23 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</guid>
+      <description>一个很恶心的需求，到部署最后部署的时候才发现问题很大，但只好死马当活马医了。 我们目前搞了两个项目，其中一个项目是传统 Vue 项目，另一个是 Angular SSR ，刚</description>
+    </item>
+    
     <item>
       <title>前端学习之路</title>
       <link>https://bigshans.github.io/post/study-front-end-way/</link>
