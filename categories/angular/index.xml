@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 08 Dec 2019 20:23:42 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/categories/angular/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Dec 2021 09:29:04 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/angular/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Angular 简易入门</title>
+      <link>https://bigshans.github.io/post/getting-started-with-angular/</link>
+      <pubDate>Mon, 06 Dec 2021 09:29:04 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/getting-started-with-angular/</guid>
+      <description>因为最近重新用了用 Angular ，在有了 Vue 和 React 的使用经验之后，对 Angular 又有了新的理解。 Angular 是真正意义上与 Vue 和 React 区分的框架，因为其思想与二者截然不同。不过我不讨</description>
+    </item>
+    
     <item>
       <title>angular 虚拟滚动的一些坑</title>
       <link>https://bigshans.github.io/post/angular-virtual-scroll/</link>
