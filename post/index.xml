@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 10 Dec 2021 11:18:47 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Dec 2021 15:24:17 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>呼吸之痛</title>
+      <link>https://bigshans.github.io/post/pain-of-breathing/</link>
+      <pubDate>Thu, 16 Dec 2021 15:24:17 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/pain-of-breathing/</guid>
+      <description>我的咽喉炎、鼻炎不知道是什么时候落下的病根，也许是初中，也许是高中，我不清楚。但在高中的时候，我这两个病最为严重。最折磨的时候，二病总是接踵</description>
+    </item>
+    
     <item>
       <title>旧事记——高中</title>
       <link>https://bigshans.github.io/post/past-memory-for-high-school/</link>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/why-choose-linux-desktop/</guid>
       <description>今天算是创作欲爆棚了，想到了一点东西就又写一点。今天来探讨一下这个话题，为什么选择 Linux 桌面。 为什么选择 Linux 市面上日用消费者最多的操作系统，主要是</description>
-    </item>
-    
-    <item>
-      <title>前端学习之路</title>
-      <link>https://bigshans.github.io/post/study-front-end-way/</link>
-      <pubDate>Sun, 11 Apr 2021 15:58:45 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/study-front-end-way/</guid>
-      <description>我在大学里面学的还是 Java ，然后工作之后，就一直在用 Node ，从一开始的 Node 后端，到现在的 Node 全栈，可以说是学习了不少，今天就在这里与大家分享一下我前端学</description>
     </item>
     
   </channel>
