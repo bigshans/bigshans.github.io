@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>typescript on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/categories/typescript/</link>
+    <description>Recent content in typescript on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Fri, 17 Dec 2021 15:26:50 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TypeScript 类型体操之斐波那契</title>
+      <link>https://bigshans.github.io/post/type-gymnastics-for-typescript/</link>
+      <pubDate>Fri, 17 Dec 2021 15:26:50 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/type-gymnastics-for-typescript/</guid>
+      <description>类型体操如果不是写库的话，基本上是屠龙技。 TypeScript 的类型系统本质上是一个小函数式语言，通过类型体操能够更清晰的感受到这一点。不过 TypeScript 类型系统有限制，</description>
+    </item>
+    
+  </channel>
+</rss>
