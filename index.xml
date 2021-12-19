@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 17 Dec 2021 15:26:50 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Dec 2021 15:47:37 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>伤变</title>
+      <link>https://bigshans.github.io/post/%E4%BC%A4%E5%8F%98/</link>
+      <pubDate>Sun, 19 Dec 2021 15:47:37 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E4%BC%A4%E5%8F%98/</guid>
+      <description>昔人已乘黄鹤去，白云千载空悠悠。 事物自我总是处于否定的发展之中，他们首先是重复，像是被子上相似的褶皱，随后，这些褶皱因着历史而产生了差异，从</description>
+    </item>
+    
     <item>
       <title>TypeScript 类型体操之斐波那契</title>
       <link>https://bigshans.github.io/post/type-gymnastics-for-typescript/</link>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/unlock-screen-sercet/</guid>
       <description>因为 root 手机忘了锁屏密码，所以想要破解掉。因为手机已经提前 root 了，我本以为这个问题只需要搜一下就可以了，然而搜索的结果却让我大跌眼镜。使用 adb 删除</description>
-    </item>
-    
-    <item>
-      <title>修复 Broken 了的 locale</title>
-      <link>https://bigshans.github.io/post/fix-locale/</link>
-      <pubDate>Mon, 26 Apr 2021 18:07:20 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/fix-locale/</guid>
-      <description>昨天做了一件非常错误的事情，就是使用 Bleachbit 清理了一下系统。 Bleachbit 直接把我的 locale 给直接删掉了，然而当时我并没有关注到这一点，关上电脑就睡觉了，然后第二天</description>
     </item>
     
   </channel>
