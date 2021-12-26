@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.90.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.92.0-DEV with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/hugo-patch-with-pandoc/" />
@@ -185,23 +185,11 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#缘起">缘起</a></li>
-        <li><a href="#编译安装">编译安装</a></li>
-        <li><a href="#结语">结语</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
+  <div class="post-toc-content"></div>
 </div>
 
     <div class="post-content">
-      
-
-<p>Hugo 可以使用不同的 markdown 引擎来解析 <code>md</code> ，pandoc 就是其中之一。不过问题在于，使用 pandoc 就不会有 TOC ，如果在意这个的话使用起来还是挺麻烦的。</p>
+      <p>Hugo 可以使用不同的 markdown 引擎来解析 <code>md</code> ，pandoc 就是其中之一。不过问题在于，使用 pandoc 就不会有 TOC ，如果在意这个的话使用起来还是挺麻烦的。</p>
 <h2 id="缘起">缘起</h2>
 <p>我个人使用 pandoc 主要是为了处理公式问题，我默认使用的 Hugo 引擎没有正确处理块公式，所以我就转用了 pandoc ，效果还是十分丝滑的，当然只是部分页面使用。</p>
 <p>Hugo 在使用 pandoc 没有 TOC 的主要原因在于没有使用 <code>--toc</code> 参数，所以没有生成 TOC ，但实际情况要复杂一些，我个人选择 fork 了一份源码自己编译处理。</p>
@@ -212,8 +200,6 @@
 <h2 id="结语">结语</h2>
 <p>如果你想要使用，只需要添加 <code>markup: pdc</code> 到头部就可以了。不过，仍然需要注意的是，由于解析上的区别，一些 CSS 样式需要对主题代码进行调整，比如代码块， pandoc 直接用 class name 表示语言，但 Hugo 会加个 language 的前缀，这些都需要对应代码的兼容，我个人主题都做了适配。其他的，只能说慢慢看有没有问题，至于官方最新的更新就不知道到什么时候了。</p>
 <p>最后，为了演示，本篇也是用 pandoc 渲染的。</p>
-
-
 
     </div>
 

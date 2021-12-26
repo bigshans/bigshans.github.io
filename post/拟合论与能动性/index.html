@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>用 Svelte 写个简单的 Todo - Bigshans&#39; Blog</title>
+  <title>拟合论与能动性 - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="官网： https://svelte.dev/ Svelte 是个新的前端框架，发展强劲。与目前主流的三大框架不同的是，Svelte 不采用 vdom ，而是借助 complier 的能力，打包出最小化的包，不附带更多的 runtime" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="拟合论 人的认识事物的本质，是人在拟合外在事物。拟合论与符合论是不同的，人拟合事物并不要求观念与对象的一致，因为不一致也能够实践。人所拟合的观" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.92.0-DEV with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/svelte-todo/" />
+<link rel="canonical" href="https://bigshans.github.io/post/%E6%8B%9F%E5%90%88%E8%AE%BA%E4%B8%8E%E8%83%BD%E5%8A%A8%E6%80%A7/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,20 +40,20 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="用 Svelte 写个简单的 Todo" />
-<meta property="og:description" content="官网： https://svelte.dev/ Svelte 是个新的前端框架，发展强劲。与目前主流的三大框架不同的是，Svelte 不采用 vdom ，而是借助 complier 的能力，打包出最小化的包，不附带更多的 runtime" />
+<meta property="og:title" content="拟合论与能动性" />
+<meta property="og:description" content="拟合论 人的认识事物的本质，是人在拟合外在事物。拟合论与符合论是不同的，人拟合事物并不要求观念与对象的一致，因为不一致也能够实践。人所拟合的观" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/svelte-todo/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-02-16T20:30:32+08:00" />
-<meta property="article:modified_time" content="2021-02-16T20:30:32+08:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/%E6%8B%9F%E5%90%88%E8%AE%BA%E4%B8%8E%E8%83%BD%E5%8A%A8%E6%80%A7/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-12-26T18:11:26+08:00" />
+<meta property="article:modified_time" content="2021-12-26T18:11:26+08:00" />
 
-<meta itemprop="name" content="用 Svelte 写个简单的 Todo">
-<meta itemprop="description" content="官网： https://svelte.dev/ Svelte 是个新的前端框架，发展强劲。与目前主流的三大框架不同的是，Svelte 不采用 vdom ，而是借助 complier 的能力，打包出最小化的包，不附带更多的 runtime"><meta itemprop="datePublished" content="2021-02-16T20:30:32+08:00" />
-<meta itemprop="dateModified" content="2021-02-16T20:30:32+08:00" />
-<meta itemprop="wordCount" content="279">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="用 Svelte 写个简单的 Todo"/>
-<meta name="twitter:description" content="官网： https://svelte.dev/ Svelte 是个新的前端框架，发展强劲。与目前主流的三大框架不同的是，Svelte 不采用 vdom ，而是借助 complier 的能力，打包出最小化的包，不附带更多的 runtime"/>
+<meta itemprop="name" content="拟合论与能动性">
+<meta itemprop="description" content="拟合论 人的认识事物的本质，是人在拟合外在事物。拟合论与符合论是不同的，人拟合事物并不要求观念与对象的一致，因为不一致也能够实践。人所拟合的观"><meta itemprop="datePublished" content="2021-12-26T18:11:26+08:00" />
+<meta itemprop="dateModified" content="2021-12-26T18:11:26+08:00" />
+<meta itemprop="wordCount" content="1148">
+<meta itemprop="keywords" content="随笔," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="拟合论与能动性"/>
+<meta name="twitter:description" content="拟合论 人的认识事物的本质，是人在拟合外在事物。拟合论与符合论是不同的，人拟合事物并不要求观念与对象的一致，因为不一致也能够实践。人所拟合的观"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -170,63 +170,43 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">用 Svelte 写个简单的 Todo</h1>
+      <h1 class="post-title">拟合论与能动性</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-02-16 </span>
-        
-          <span class="more-meta"> 约 279 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        <span class="post-time"> 2021-12-26 </span>
+        <div class="post-category">
+            <a href="/categories/%E9%9A%8F%E7%AC%94/"> 随笔 </a>
+            </div>
+          <span class="more-meta"> 约 1148 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
         
       </div>
     </header>
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#拟合论">拟合论</a></li>
+        <li><a href="#能动性">能动性</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 </div>
 
     <div class="post-content">
-      <blockquote>
-<p>官网： <a href="https://svelte.dev/">https://svelte.dev/</a></p>
-</blockquote>
-<p>Svelte 是个新的前端框架，发展强劲。与目前主流的三大框架不同的是，Svelte 不采用 vdom ，而是借助 complier 的能力，打包出最小化的包，不附带更多的 runtime 。Svelte 是由 rollup 作者开发的 Reative 框架，语法与 vue 很像，个人简单写了一下，速度是真的给力，打包也是真的简洁。</p>
-<p>下面是我简单用 Svelte 写的简单 Todo ，只有添加功能，不过实现起来相当舒服。</p>
-<p>App.svelte:</p>
-<pre><code class="language-html">&lt;script&gt;
-    let list = ['a'];
-    let todo = '';
-    function add() {
-        if (todo !== '') {
-            list[list.length] = todo;
-            todo = '';
-        }
-    }
-&lt;/script&gt;
-
-&lt;style&gt;
-    #todo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-    }
-&lt;/style&gt;
-
-&lt;div id=&quot;todo&quot;&gt;
-    &lt;input bind:value={todo} /&gt;
-    &lt;button on:click={add}&gt;添加&lt;/button&gt;
-
-    {#each list as todo}
-        &lt;li&gt;{todo}&lt;/li&gt;
-    {/each}
-&lt;/div&gt;
-</code></pre>
-<p>可以在官网的 REPL 里粘贴进去运行。</p>
-<p>编译后总代码不到 4KB ，是相当小了。</p>
+      <h2 id="拟合论">拟合论</h2>
+<p>人的认识事物的本质，是人在拟合外在事物。拟合论与符合论是不同的，人拟合事物并不要求观念与对象的一致，因为不一致也能够实践。人所拟合的观念，最终是要落到实践，并经过实践检验的，人的拟合机制就是出于这样的目的去运作的，人无法落回到反实践的拟合中去。当然，这里也存在一些反驳，比如说神话观念，但神话本身也是用于解释实践的，它经过实践且被批驳，只要人们认同其中的反实践意义，神话也就只能是神话。人的观念，必然是关于某一实践的观念。同时，拟合论也不同于反射论，反射是一种同态的变换，但拟合是可以完全不同态的，拟合与被拟合物可以是完全不一致的，这个道理我们前面讲过。</p>
+<p>显然，对于人来说，外在的概念最开始是不分的。人在一开始就是在纯意识的世界之中，随着实践的检验，人对于世界的拟合，物质世界便涌现在我们意识世界之中。我们意识到了被拟合物的存在，我们对于被拟合物的感知是以否定形式确定的，被拟合物与拟合物决然不同，我们不能对被拟合物说点什么，它是对我们拟合的纯粹否定，我们所感知到的被拟合物的存在，只是幕布上的影子罢了。</p>
+<p>一旦人意识到了被拟合物的存在，人就从原来欠拟合的状态之中脱离，从而进入到拟合状态。实际上，现代科学认识论基础应该不是经验主义，而恰恰是这种拟合论。其肇始应溯于康德、休谟，但后世的哲学家们对于这条潜在的路是有所偏离的。哲学家对于认识仍保持这一种古典的认识，唯一比较有突破的应该是马克思、弗洛伊德、拉康这一脉。先验观念论是人类认识的青年，它应该要更为成熟。</p>
+<h2 id="能动性">能动性</h2>
+<p>能动性是一个很有意思的问题。人是主动的，且长久是主动的，如果视人为了达到某一目的而行动，那么其目的应该是永久缺位的。人有能动性是无疑的，那么动物呢？我觉得也毫无疑问，除了石头之类的静物，所有的生命，应该是有能动性的。</p>
+<p>有人可能觉得，一定要有意识，才够资格提能动性，但这是在拿人的方式在度其他生命，不过，我觉得谈论其他存在的能动性其实没有意义，不管其他存在如何，最重要的是人。</p>
+<p>人的能动性就不得不问，人先天匮乏是什么？我觉得是人对胎儿环境的原始需求，与现实之中的必然匮乏，从而推动人行动。人对于需求的行动，最终就是为了回归母体，但是这种回归是必然的不可能，因此在这种冲突之下，人就像永动机一样不停的行动下去。</p>
+<p>而关于自我的问题，我觉得自我是主体所能控制的综合，这种外在存在被当作内在的存在，通过这种双重误认，主体将一大堆矛盾隐藏到自我之后，让主体的分裂通过自我调和。通过这个虚假的外在，人得以维持住自身的一致性。但这种外在与内在混为一谈，必然会造成内外混乱，从而外我与内我被强行缝合，主体陷入到了不可控制的混乱中。事实上，人是需要区分这种内我和外我的，且主体不可脱离自我。自我是拟合验证机制的重要内容，人并不需要真实，人需要可实践的猜测。</p>
 
     </div>
 
@@ -238,7 +218,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2021-02-16
+        2021-12-26
         
     </span>
   </p>
@@ -246,15 +226,13 @@
   
 </div>
 <footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>
+          </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/rn-android-docker/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">在 Docker 内编译 React Native</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/post/for-recent-things/">
-            <span class="next-text nav-default">为了一些近期的新闻所写的随笔</span>
+        
+        <a class="next" href="/post/%E4%BC%A4%E5%8F%98/">
+            <span class="next-text nav-default">伤变</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

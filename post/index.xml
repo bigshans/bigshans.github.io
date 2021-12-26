@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 19 Dec 2021 15:47:37 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Dec 2021 18:11:26 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>拟合论与能动性</title>
+      <link>https://bigshans.github.io/post/%E6%8B%9F%E5%90%88%E8%AE%BA%E4%B8%8E%E8%83%BD%E5%8A%A8%E6%80%A7/</link>
+      <pubDate>Sun, 26 Dec 2021 18:11:26 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E6%8B%9F%E5%90%88%E8%AE%BA%E4%B8%8E%E8%83%BD%E5%8A%A8%E6%80%A7/</guid>
+      <description>拟合论 人的认识事物的本质，是人在拟合外在事物。拟合论与符合论是不同的，人拟合事物并不要求观念与对象的一致，因为不一致也能够实践。人所拟合的观</description>
+    </item>
+    
     <item>
       <title>伤变</title>
       <link>https://bigshans.github.io/post/%E4%BC%A4%E5%8F%98/</link>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/%E6%94%BF%E6%B2%BB%E8%A1%8C%E5%8A%A8%E8%AE%BA/</guid>
       <description>批判的武器当然不能代替武器的批判。——马克思 我对于一般的政治理论的探索缺乏兴趣，因为这些争论往往流于立场，成了屁股决定脑袋的「政治先验决定论</description>
-    </item>
-    
-    <item>
-      <title>在 root 下去除 MIUI 锁屏密码</title>
-      <link>https://bigshans.github.io/post/unlock-screen-sercet/</link>
-      <pubDate>Tue, 27 Apr 2021 20:20:24 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/unlock-screen-sercet/</guid>
-      <description>因为 root 手机忘了锁屏密码，所以想要破解掉。因为手机已经提前 root 了，我本以为这个问题只需要搜一下就可以了，然而搜索的结果却让我大跌眼镜。使用 adb 删除</description>
     </item>
     
   </channel>

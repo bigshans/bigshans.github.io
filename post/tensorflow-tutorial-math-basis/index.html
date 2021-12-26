@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.90.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.92.0-DEV with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/tensorflow-tutorial-math-basis/" />
@@ -185,56 +185,11 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#导入">导入</a></li>
-        <li><a href="#线性代数">线性代数</a>
-          <ul>
-            <li><a href="#标量">标量</a></li>
-            <li><a href="#向量">向量</a></li>
-            <li><a href="#矩阵">矩阵</a></li>
-            <li><a href="#张量">张量</a></li>
-            <li><a href="#张量算法的基本性质">张量算法的基本性质</a></li>
-            <li><a href="#降维">降维</a></li>
-            <li><a href="#点积">点积</a></li>
-            <li><a href="#矩阵向量积">矩阵向量积</a></li>
-            <li><a href="#矩阵乘法">矩阵乘法</a></li>
-            <li><a href="#范数">范数</a></li>
-          </ul>
-        </li>
-        <li><a href="#微分">微分</a>
-          <ul>
-            <li><a href="#导数">导数</a></li>
-            <li><a href="#偏导数">偏导数</a></li>
-            <li><a href="#梯度">梯度</a></li>
-            <li><a href="#链式法则">链式法则</a></li>
-            <li><a href="#自动求导">自动求导</a></li>
-          </ul>
-        </li>
-        <li><a href="#概率">概率</a>
-          <ul>
-            <li><a href="#基本概率论">基本概率论</a></li>
-            <li><a href="#联合概率">联合概率</a></li>
-            <li><a href="#条件概率">条件概率</a></li>
-            <li><a href="#贝叶斯定理">贝叶斯定理</a></li>
-            <li><a href="#边际化">边际化</a></li>
-            <li><a href="#独立性">独立性</a></li>
-            <li><a href="#期望和差异">期望和差异</a></li>
-          </ul>
-        </li>
-        <li><a href="#结语">结语</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
+  <div class="post-toc-content"></div>
 </div>
 
     <div class="post-content">
-      
-
-<p>数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。本篇以 d2l 第二版所提供的数学知识作为阅读内容进行学习。换而言之，本篇是 d2l 的读书笔记。我尽量把我能弄懂弄清楚，所以，开始吧！</p>
+      <p>数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。本篇以 d2l 第二版所提供的数学知识作为阅读内容进行学习。换而言之，本篇是 d2l 的读书笔记。我尽量把我能弄懂弄清楚，所以，开始吧！</p>
 <h2 id="导入">导入</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span></code></pre></div>
 <h2 id="线性代数">线性代数</h2>
@@ -753,8 +708,6 @@ E_{x \sim p}[f(x)] = \sum_xf(x)P(x).
 \]</span></p>
 <h2 id="结语">结语</h2>
 <p>这是我写的最多的一篇博客了，写到最后我仍然有些东西稀里糊涂的，但是大致上还是把握了一些。以前深度学习看不懂的地方能够懂一点。这些数学最最重要的就是前面花大幅笔墨书写的线性代数的内容，虽然说后面也很重要，但线代不懂后面意义也不大， Tensorflow 名字有一般是 tensor 。当然，深度学习的数学也不是就这么完了，路曼曼其修远兮，但现在暂告一段落。</p>
-
-
 
     </div>
 
