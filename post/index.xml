@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 28 Dec 2021 13:41:37 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Dec 2021 15:28:05 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2021 年年终总结</title>
+      <link>https://bigshans.github.io/post/2021%E5%B9%B4%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Tue, 28 Dec 2021 15:28:05 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/2021%E5%B9%B4%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</guid>
+      <description>大概是比较奇怪的一年吧！写这篇 blog 底时候，距离年底还差几天，不过大差不差了。 今年公司扩张，从原来几十个人的小公司，变成了现在一百多号人的小公司</description>
+    </item>
+    
     <item>
       <title>圈复杂度</title>
       <link>https://bigshans.github.io/post/cc/</link>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/troubleshoot-pleroma/</guid>
       <description>安装 Pleroma 倒也不是什么特别难的事，只要照着文档自己安装即可，但是，事情往往并没有你想的那么简单。 Pleroma 是一款基于 Elixir 开发的轻量级的微博系统，而且还支持</description>
-    </item>
-    
-    <item>
-      <title>认知复杂度——代码质量初探</title>
-      <link>https://bigshans.github.io/post/cognitive-complexity/</link>
-      <pubDate>Thu, 06 May 2021 11:51:53 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/cognitive-complexity/</guid>
-      <description>Cognitive Complexity ，即认知复杂度，是来自于 Sonar 官方的一个概念。认知复杂度主要是以可测量的方式，将代码估算成一个数字，用以衡量代码的理解难度的。它基于一下三条</description>
     </item>
     
   </channel>
