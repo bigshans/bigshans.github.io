@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 28 Dec 2021 11:14:45 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Dec 2021 13:41:37 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>代码质量</title>
+      <link>https://bigshans.github.io/tags/%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F/</link>
+      <pubDate>Tue, 28 Dec 2021 13:41:37 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>圈复杂度</title>
+      <link>https://bigshans.github.io/tags/%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/</link>
+      <pubDate>Tue, 28 Dec 2021 13:41:37 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>随笔</title>
       <link>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</link>
@@ -437,24 +455,6 @@
       <pubDate>Sun, 30 May 2021 03:40:00 +0800</pubDate>
       
       <guid>https://bigshans.github.io/tags/%E6%90%9C%E7%B4%A2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>art-html</title>
-      <link>https://bigshans.github.io/tags/art-html/</link>
-      <pubDate>Mon, 24 May 2021 22:19:11 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/art-html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pleroma</title>
-      <link>https://bigshans.github.io/tags/pleroma/</link>
-      <pubDate>Fri, 21 May 2021 22:04:17 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/pleroma/</guid>
       <description></description>
     </item>
     

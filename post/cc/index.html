@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>圈复杂度 - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="eslint 有个圈复杂度底配置，于是就顺便看了看。圈复杂度（Cyclomatic, CC），又称条件复杂度，是一种衡量代码复杂度底标准，其标记为 V(G) 。 相比" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0-DEV with theme even" />
+
+
+<link rel="canonical" href="https://bigshans.github.io/post/cc/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b66231a2560ad66435f5e2b7a0dd47d3c09452299beb1d46ed99fec246c893b5.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="圈复杂度" />
+<meta property="og:description" content="eslint 有个圈复杂度底配置，于是就顺便看了看。圈复杂度（Cyclomatic, CC），又称条件复杂度，是一种衡量代码复杂度底标准，其标记为 V(G) 。 相比" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/cc/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-12-28T13:41:37+08:00" />
+<meta property="article:modified_time" content="2021-12-28T13:41:37+08:00" />
+
+<meta itemprop="name" content="圈复杂度">
+<meta itemprop="description" content="eslint 有个圈复杂度底配置，于是就顺便看了看。圈复杂度（Cyclomatic, CC），又称条件复杂度，是一种衡量代码复杂度底标准，其标记为 V(G) 。 相比"><meta itemprop="datePublished" content="2021-12-28T13:41:37+08:00" />
+<meta itemprop="dateModified" content="2021-12-28T13:41:37+08:00" />
+<meta itemprop="wordCount" content="1160">
+<meta itemprop="keywords" content="代码质量,圈复杂度," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="圈复杂度"/>
+<meta name="twitter:description" content="eslint 有个圈复杂度底配置，于是就顺便看了看。圈复杂度（Cyclomatic, CC），又称条件复杂度，是一种衡量代码复杂度底标准，其标记为 V(G) 。 相比"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">圈复杂度</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-12-28 </span>
+        <div class="post-category">
+            <a href="/categories/%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F/"> 代码质量 </a>
+            </div>
+          <span class="more-meta"> 约 1160 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#圈复杂度与出错风险">圈复杂度与出错风险</a></li>
+        <li><a href="#计算方法">计算方法</a></li>
+        <li><a href="#圈复杂度与认知复杂度">圈复杂度与认知复杂度</a></li>
+        <li><a href="#如何降低圈复杂度">如何降低圈复杂度</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+    <div class="post-content">
+      <p>eslint 有个圈复杂度底配置，于是就顺便看了看。圈复杂度（Cyclomatic, CC），又称条件复杂度，是一种衡量代码复杂度底标准，其标记为 V(G) 。</p>
+<p>相比于认知复杂度，圈复杂度更倾向于用数学模型来构建对代码复杂度底描述。与认知复杂度类似的是，圈复杂度越越高，程序出错底风险也就越大，其缺陷个数也可能越多。圈复杂度的说明程序代码底判断逻辑复杂，可能质量低，且难于测试和维护。</p>
+<h2 id="圈复杂度与出错风险">圈复杂度与出错风险</h2>
+<table>
+<thead>
+<tr>
+<th>圈复杂度</th>
+<th>代码情况</th>
+<th>可测性</th>
+<th>维护成本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 ~ 10</td>
+<td>清晰</td>
+<td>高</td>
+<td>低</td>
+</tr>
+<tr>
+<td>10 ~ 20</td>
+<td>复杂</td>
+<td>中</td>
+<td>中</td>
+</tr>
+<tr>
+<td>20 ~ 30</td>
+<td>非常复杂</td>
+<td>低</td>
+<td>高</td>
+</tr>
+<tr>
+<td>&gt; 30</td>
+<td>不可读</td>
+<td>不可测</td>
+<td>非常高</td>
+</tr>
+</tbody>
+</table>
+<p><strong>一般来说，圈复杂度大于 10 底方法存在很大的出错风险。</strong></p>
+<h2 id="计算方法">计算方法</h2>
+<p>任何一个程序都可以被表达为一个流程图，由此我们可以构建出一幅有向图。</p>
+<pre><code class="language-text">+------+     +------+     +-----+
+|  if  | --&gt; | else | --&gt; | end |
++------+     +------+     +-----+
+  |                         ^
+  |                         |
+  v                         |
++------+                    |
+| then | -------------------+
++------+
+</code></pre>
+<p>圈复杂度底计算公式为： V(G) = E - N + 2 ，其中 E 为边数， N 为节点数。</p>
+<p>根据公式，我们可以得知，一个 if else 底圈复杂度为 V(G) = 4 - 4 + 2 = 2 。</p>
+<p>我们再计算其他流程底圈复杂度。</p>
+<pre><code class="language-text">+-------+     +-----+
+| start | --&gt; | end |
++-------+     +-----+
+</code></pre>
+<p>顺序流程， V(G) = 1 - 2 + 2 = 1 。</p>
+<pre><code class="language-text">     +---------+     +-----+
+  +&gt; |  test   | --&gt; | end |
+  |  +---------+     +-----+
+  |    |
+  |    |
+  |    v
+  |  +---------+
+  +- | process |
+     +---------+
+</code></pre>
+<p>while 循环， V(G) = 3 - 3 + 2 = 2 。</p>
+<p>不过这个计算也比较复杂，每次需要画流程图，圈复杂度有个更直观计算方法， V(G) = P + 1 ，其中， P 为被判定的节点数。</p>
+<p>常见的被判定节点有：</p>
+<ul>
+<li>if</li>
+<li>while</li>
+<li>for</li>
+<li>case</li>
+<li>catch</li>
+<li>and 和 or 布尔操作</li>
+<li>三元操作符</li>
+</ul>
+<p>举个例子。</p>
+<pre><code class="language-C">void sort(int *A)
+{
+  int i = 0;
+  int n = 5;
+  int j = 0;
+  while (i &lt; (n - 1)) 
+  {
+    j = i + 1;
+    while (j &lt; n) 
+    {
+      if (A[i] &lt; A[j]) 
+      {
+        swap(A[i], A[j]);
+      }
+    }
+    i = i + 1;
+  }
+}
+</code></pre>
+<p>有两个 while 和一个 if ，因此 V(G) = 2 * 1 + 1 + 1 = 1 。</p>
+<pre><code class="language-C">int find (int match)
+{
+  for (int var in list) 
+  {
+    if (var == match &amp;&amp; var != NAN) 
+    {
+      return var;
+    }
+  }
+}
+</code></pre>
+<p>有一个 for ，一个 if ，一个 and ，因此 V(G) = 1 + 1 + 1 + 1 = 4 。</p>
+<h2 id="圈复杂度与认知复杂度">圈复杂度与认知复杂度</h2>
+<p>可以说，在经过简化之后，圈复杂度底计算相比认知复杂度要简单许多，但圈复杂度仍然面临一个问题：圈复杂度高的代码真的代码复杂程度高吗？举个简单的反例。</p>
+<pre><code class="language-C">int sumOfPrimes(int max) {
+    int total = 0;
+    for(int i = 1; i &lt;= max; ++i) {
+        for (int j = 2; j &lt; i; ++j) {
+            if (i % j == 0) {
+                continue;
+            }
+        }
+        total += i;
+    }
+    return total;
+}
+// 代码 1
+// V(G) = 4
+</code></pre>
+<pre><code class="language-cpp">String getWords(int number) {
+    switch(number) {
+        case 1:
+          return &quot;one&quot;;
+        case 2:
+          return &quot;two&quot;;
+        case 3:
+          return &quot;a few&quot;;
+        default:
+          return &quot;lots&quot;;
+    }
+}
+// 代码 2
+// V(G) = 4
+</code></pre>
+<p>虽然以上两段代码，其圈复杂度相同，显然，代码 2 比代码 1 更易于理解。因此，认知复杂度的提出就是为了解决这个问题。但认知复杂度因此也就放弃圈复杂度简洁的计算模式，使得认知复杂度难于计算，而且认知复杂度也不能说完全解决了这个问题，双方各有优劣。</p>
+<h2 id="如何降低圈复杂度">如何降低圈复杂度</h2>
+<p>常用的方法有：</p>
+<ul>
+<li>简化、合并条件表达式</li>
+<li>将条件判定提炼出独立函数</li>
+<li>将大函数拆成小函数</li>
+<li>以明确函数取代参数</li>
+<li>替换算法</li>
+<li>逆向表达</li>
+<li>移除控制标记</li>
+<li>以多态取代条件式</li>
+<li>参数化方法</li>
+<li>明确函数取代参数</li>
+</ul>
+<p>总的来说，降低圈复杂最重要的，不仅仅是缩减代码而将代码变得零碎，最重要的目的，是为了增加代码底自解释性。不然就又会从一个陷阱跳到另一个陷阱中去。但长代码的可读性总是很糟糕的，适当缩略代码是很必要的。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-12-28
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F/">代码质量</a>
+          <a href="/tags/%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/">圈复杂度</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/programer-quotes/">
+            <span class="next-text nav-default">广为流传的程序员语录摘抄</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
