@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 30 Dec 2021 16:36:14 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Jan 2022 11:36:13 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>对认识论的纯粹批判</title>
+      <link>https://bigshans.github.io/post/%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%9A%84%E7%BA%AF%E7%B2%B9%E6%89%B9%E5%88%A4/</link>
+      <pubDate>Thu, 06 Jan 2022 11:36:13 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%9A%84%E7%BA%AF%E7%B2%B9%E6%89%B9%E5%88%A4/</guid>
+      <description>早上突然想到的就写了，唯我论批判部分还算清楚，后面认识论批判部分就稍显吃力了，但全文论证还算清晰吧！ 唯我论认为世界除了我之外没有别的存在，这</description>
+    </item>
+    
     <item>
       <title>为什么还是纸质书？</title>
       <link>https://bigshans.github.io/post/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%98%E6%98%AF%E7%BA%B8%E8%B4%A8%E4%B9%A6/</link>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/whoogle-self-host/</guid>
       <description>准确来说，Whoogle 是一个元搜索引擎，他主要将 Google 的搜索结果过滤，并去除掉其中的隐私追踪部分。与 Whoogle 差不多的另一个网站框架是 SearX ，两者都是自建</description>
-    </item>
-    
-    <item>
-      <title>写了一个基于 art 的静态网页模块化项目</title>
-      <link>https://bigshans.github.io/post/art-html/</link>
-      <pubDate>Mon, 24 May 2021 22:19:11 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/art-html/</guid>
-      <description>最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。 背景 公司的主页是用静态网页写的，主要是用来展示，但是分很</description>
     </item>
     
   </channel>
