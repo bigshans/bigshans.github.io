@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 06 Jan 2022 11:36:13 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Jan 2022 15:01:18 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lua 快速入门</title>
+      <link>https://bigshans.github.io/post/lua-quickly-begin/</link>
+      <pubDate>Sun, 09 Jan 2022 15:01:18 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/lua-quickly-begin/</guid>
+      <description>lua 是一门用标准 C 语言编写的、轻量小巧的脚本语言，它常常被嵌入到各种 C 语言项目中做扩展语言。它与 C 的兼容性不必多说，本身也是用 C 写的，速度也是</description>
+    </item>
+    
     <item>
       <title>对认识论的纯粹批判</title>
       <link>https://bigshans.github.io/post/%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%9A%84%E7%BA%AF%E7%B2%B9%E6%89%B9%E5%88%A4/</link>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/postgresql-tricks-1/</guid>
       <description>由于我经常忘记这个该怎么写了（因为不经常用），所以特地记录誊写一篇用来记忆。 创建新的数据库用户 先进入到 postgres 用户下，然后用运行 psql 进入数据库的命令</description>
-    </item>
-    
-    <item>
-      <title>使用 Whoogle 自建搜索网站</title>
-      <link>https://bigshans.github.io/post/whoogle-self-host/</link>
-      <pubDate>Sun, 30 May 2021 03:40:00 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/whoogle-self-host/</guid>
-      <description>准确来说，Whoogle 是一个元搜索引擎，他主要将 Google 的搜索结果过滤，并去除掉其中的隐私追踪部分。与 Whoogle 差不多的另一个网站框架是 SearX ，两者都是自建</description>
     </item>
     
   </channel>

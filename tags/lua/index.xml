@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lua on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/lua/</link>
+    <description>Recent content in lua on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Sun, 09 Jan 2022 15:01:18 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/lua/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lua 快速入门</title>
+      <link>https://bigshans.github.io/post/lua-quickly-begin/</link>
+      <pubDate>Sun, 09 Jan 2022 15:01:18 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/lua-quickly-begin/</guid>
+      <description>lua 是一门用标准 C 语言编写的、轻量小巧的脚本语言，它常常被嵌入到各种 C 语言项目中做扩展语言。它与 C 的兼容性不必多说，本身也是用 C 写的，速度也是</description>
+    </item>
+    
+  </channel>
+</rss>

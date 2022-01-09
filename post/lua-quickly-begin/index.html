@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>lua 快速入门 - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="lua 是一门用标准 C 语言编写的、轻量小巧的脚本语言，它常常被嵌入到各种 C 语言项目中做扩展语言。它与 C 的兼容性不必多说，本身也是用 C 写的，速度也是" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0-DEV with theme even" />
+
+
+<link rel="canonical" href="https://bigshans.github.io/post/lua-quickly-begin/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b66231a2560ad66435f5e2b7a0dd47d3c09452299beb1d46ed99fec246c893b5.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="lua 快速入门" />
+<meta property="og:description" content="lua 是一门用标准 C 语言编写的、轻量小巧的脚本语言，它常常被嵌入到各种 C 语言项目中做扩展语言。它与 C 的兼容性不必多说，本身也是用 C 写的，速度也是" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/lua-quickly-begin/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-01-09T15:01:18+08:00" />
+<meta property="article:modified_time" content="2022-01-09T15:01:18+08:00" />
+
+<meta itemprop="name" content="lua 快速入门">
+<meta itemprop="description" content="lua 是一门用标准 C 语言编写的、轻量小巧的脚本语言，它常常被嵌入到各种 C 语言项目中做扩展语言。它与 C 的兼容性不必多说，本身也是用 C 写的，速度也是"><meta itemprop="datePublished" content="2022-01-09T15:01:18+08:00" />
+<meta itemprop="dateModified" content="2022-01-09T15:01:18+08:00" />
+<meta itemprop="wordCount" content="2588">
+<meta itemprop="keywords" content="lua," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="lua 快速入门"/>
+<meta name="twitter:description" content="lua 是一门用标准 C 语言编写的、轻量小巧的脚本语言，它常常被嵌入到各种 C 语言项目中做扩展语言。它与 C 的兼容性不必多说，本身也是用 C 写的，速度也是"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">lua 快速入门</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-01-09 </span>
+        <div class="post-category">
+            <a href="/categories/lua/"> lua </a>
+            </div>
+          <span class="more-meta"> 约 2588 字 </span>
+          <span class="more-meta"> 预计阅读 6 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#learn-lua-in-y-minutes">Learn Lua in Y minutes</a></li>
+        <li><a href="#数据类型">数据类型</a>
+          <ul>
+            <li><a href="#nil">nil</a></li>
+            <li><a href="#number">number</a></li>
+            <li><a href="#boolean">boolean</a></li>
+            <li><a href="#string">string</a></li>
+            <li><a href="#function">function</a></li>
+            <li><a href="#table">table</a></li>
+          </ul>
+        </li>
+        <li><a href="#局部变量和全局变量">局部变量和全局变量</a></li>
+        <li><a href="#控制流">控制流</a>
+          <ul>
+            <li><a href="#ifelse">if/else</a></li>
+            <li><a href="#while">while</a></li>
+            <li><a href="#repeat">repeat</a></li>
+            <li><a href="#for">for</a></li>
+            <li><a href="#break-return-和-goto">break, return 和 goto</a></li>
+          </ul>
+        </li>
+        <li><a href="#and-or--not">and, or , not</a></li>
+        <li><a href="#函数">函数</a></li>
+        <li><a href="#函数回调">函数回调</a></li>
+        <li><a href="#简单的面向对象">简单的面向对象</a></li>
+        <li><a href="#模块">模块</a></li>
+        <li><a href="#其他一些要注意的">其他一些要注意的</a>
+          <ul>
+            <li><a href="#数组大小的获取">数组大小的获取</a></li>
+            <li><a href="#虚变量">虚变量</a></li>
+            <li><a href="#比较运算符">比较运算符</a></li>
+            <li><a href="#调用代码前先定义函数">调用代码前先定义函数</a></li>
+            <li><a href="#点号与冒号操作符的区别">点号与冒号操作符的区别</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+    <div class="post-content">
+      <p>lua 是一门用标准 C 语言编写的、轻量小巧的脚本语言，它常常被嵌入到各种 C 语言项目中做扩展语言。它与 C 的兼容性不必多说，本身也是用 C 写的，速度也是非常的快。像 Redis 、 Nginx 、 AwesomeWM 等都拿它做扩展语言，现在 Neovim 也加入了增强 lua 语言扩展，性能也是非常好。虽然我目前没有用 lua 语言扩展的打算，但也不打算未来不用。总之，先学起来。</p>
+<h2 id="learn-lua-in-y-minutes">Learn Lua in Y minutes</h2>
+<p>lua 快速学习， <a href="https://learnxinyminutes.com/docs/lua/">https://learnxinyminutes.com/docs/lua/</a> 。</p>
+<h2 id="数据类型">数据类型</h2>
+<p>主要分为：</p>
+<ul>
+<li>nil</li>
+<li>number</li>
+<li>boolean</li>
+<li>string</li>
+<li>function</li>
+<li>table</li>
+</ul>
+<p>我们一个个看。</p>
+<h3 id="nil">nil</h3>
+<pre><code class="language-lua">local a -- output: nil
+</code></pre>
+<p><code>nil</code> 代表空值，默认没有定义时就是 <code>nil</code> 。</p>
+<pre><code>local a = 1
+a = nil
+</code></pre>
+<p>当变量被赋 <code>nil</code> ，变量其实也就被删除了，值在正确的时候会被释放。</p>
+<h3 id="number">number</h3>
+<pre><code class="language-lua">local num = 42  -- All numbers are doubles.
+-- Don't freak out, 64-bit doubles have 52 bits for
+-- storing exact int values; machine precision is
+-- not a problem for ints that need &lt; 52 bits.
+</code></pre>
+<p>number 跟 JavaScript 一样 int 和 double 不分。</p>
+<h3 id="boolean">boolean</h3>
+<pre><code class="language-lua">local a = true
+local b = false
+</code></pre>
+<p>boolean 值主要就是两个： <code>true</code> 和 <code>false</code> 。</p>
+<h3 id="string">string</h3>
+<pre><code class="language-lua">s = 'walternate'  -- Immutable strings like Python.
+t = &quot;double-quotes are also fine&quot;
+u = [[ Double brackets
+       start and end
+       multi-line strings.]]
+e = [=[string have a [[]].]=]
+</code></pre>
+<p>lua 有三种表示字符串的方法：单引号、双引号以及括号。前面两个没有什么好说的，考好主要是用以表示多行字符串，以及不转义的字符串表达，想要规避中括号则用 <code>[=[]=]</code> ，不想规避直接 <code>[[]]</code> 即可。</p>
+<h3 id="function">function</h3>
+<pre><code class="language-lua">local function foo()
+    print(&quot;in the function&quot;)
+    --dosomething()
+    local x = 10
+    local y = 20
+    return x + y
+end
+
+local a = foo    --把函数赋给变量
+
+print(a())
+</code></pre>
+<p>lua 中视函数也是值，于是我们可以借助回调的手段实现闭包。</p>
+<h3 id="table">table</h3>
+<pre><code class="language-lua">local corp = {
+    web = &quot;www.google.com&quot;,   --索引为字符串，key = &quot;web&quot;,
+                              --            value = &quot;www.google.com&quot;
+    telephone = &quot;12345678&quot;,   --索引为字符串
+    staff = {&quot;Jack&quot;, &quot;Scott&quot;, &quot;Gary&quot;}, --索引为字符串，值也是一个表
+    100876,              --相当于 [1] = 100876，此时索引为数字
+                         --      key = 1, value = 100876
+    100191,              --相当于 [2] = 100191，此时索引为数字
+    [10] = 360,          --直接把数字索引给出
+    [&quot;city&quot;] = &quot;Beijing&quot; --索引为字符串
+}
+</code></pre>
+<p>lua 借助 table 类型以实现面向对象、字典、数组等特性。</p>
+<p>值得一提的是， lua 作为数组是，下标是从 1 开始的。</p>
+<h2 id="局部变量和全局变量">局部变量和全局变量</h2>
+<p>通过上面的代码其实你应该已经注意到了 <code>local</code> 这个关键字， <code>local</code> 代表局部变量。我们不用 <code>local</code> 声明变量不存在语法上的问题，不过此时，我们的变量变成了全局变量。如果不是必要的话，这将会污染我们的全局变量命名空间。因此，还请谨慎把握。</p>
+<h2 id="控制流">控制流</h2>
+<ul>
+<li>if/else</li>
+<li>while</li>
+<li>repeat</li>
+<li>for</li>
+<li>break, return 和 goto</li>
+</ul>
+<h3 id="ifelse">if/else</h3>
+<pre><code class="language-lua">if num &gt; 40 then
+  print('over 40')
+elseif s ~= 'walternate' then  -- ~= is not equals.
+  -- Equality check is == like Python; ok for strs.
+  io.write('not over 40\n')  -- Defaults to stdout.
+else
+  -- Variables are global by default.
+  thisIsGlobal = 5  -- Camel case is common.
+
+  -- How to make a variable local:
+  local line = io.read()  -- Reads next stdin line.
+
+  -- String concatenation uses the .. operator:
+  print('Winter is coming, ' .. line)
+end
+</code></pre>
+<p>我们可以注意到， lua 的风格是 pascal 式的。</p>
+<p>与 C/C++ 不同的是， lua 的 <code>elseif</code> 是写在一起的，并不等同于 <code>else</code> 里嵌 <code>if</code> 。</p>
+<h3 id="while">while</h3>
+<pre><code class="language-lua">while num &lt; 50 do
+  num = num + 1  -- No ++ or += type operators.
+end
+</code></pre>
+<h3 id="repeat">repeat</h3>
+<pre><code class="language-lua">repeat
+  print('the way of the future')
+  num = num - 1
+until num == 0
+</code></pre>
+<p><code>repeat</code> 类似于 <code>do-while</code> ，但条件与 <code>do-while</code> 是相反的，这点需要注意。</p>
+<h3 id="for">for</h3>
+<pre><code class="language-lua">karlSum = 0
+for i = 1, 100 do  -- The range includes both ends.
+  karlSum = karlSum + i
+end
+
+-- Use &quot;100, 1, -1&quot; as the range to count down:
+fredSum = 0
+for j = 100, 1, -1 do
+  fredSum = fredSum + j
+end
+</code></pre>
+<p>这里的 <code>1, 100</code> 表示数字 1 到 100 ，且步长为 1 。 <code>100, 1, -1</code> 表示数字 100 到 1 ，且步长为 -1 。这里对一个数字范围进行了迭代。</p>
+<pre><code class="language-lua">-- 打印数组a的所有值
+local a = {&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;}
+for i, v in ipairs(a) do
+  print(&quot;index:&quot;, i, &quot; value:&quot;, v)
+end
+-- 打印table t中所有的key
+for k in pairs(t) do
+    print(k)
+end
+</code></pre>
+<p>这里则对 table 进行了迭代。</p>
+<h3 id="break-return-和-goto">break, return 和 goto</h3>
+<h4 id="break">break</h4>
+<pre><code class="language-lua">-- 计算最小的x,使从1到x的所有数相加和大于100
+sum = 0
+i = 1
+while true do
+    sum = sum + i
+    if sum &gt; 100 then
+        break
+    end
+    i = i + 1
+end
+print(&quot;The result is &quot; .. i)  --&gt;output:The result is 14
+</code></pre>
+<h4 id="return">return</h4>
+<pre><code class="language-lua">local function add(x, y)
+    return x + y
+    --print(&quot;add: I will return the result &quot; .. (x + y))
+    --因为前面有个return，若不注释该语句，则会报错
+end
+
+local function is_positive(x)
+    if x &gt; 0 then
+        return x .. &quot; is positive&quot;
+    else
+        return x .. &quot; is non-positive&quot;
+    end
+
+    --由于return只出现在前面显式的语句块，所以此语句不注释也不会报错
+    --，但是不会被执行，此处不会产生输出
+    print(&quot;function end!&quot;)
+end
+
+local sum = add(10, 20)
+print(&quot;The sum is &quot; .. sum)  --&gt;output:The sum is 30
+local answer = is_positive(-10)
+print(answer)                --&gt;output:-10 is non-positive
+</code></pre>
+<p>lua 还可以用 <code>do-end</code> 括起来。</p>
+<pre><code class="language-lua">local function foo()
+    print(&quot;before&quot;)
+    do return end
+    print(&quot;after&quot;)  -- 这一行语句永远不会执行到
+end
+</code></pre>
+<h4 id="goto">goto</h4>
+<p>在 lua 中我们使用 <code>goto</code> 来实现 <code>continue</code> 。</p>
+<pre><code class="language-lua">for i = 1, 3 do
+    if i &lt;= 2 then
+        print(i, &quot;yes continue&quot;)
+        goto continue
+    end
+
+    print(i, &quot; no continue&quot;)
+
+    ::continue::
+    print([[i'm end]])
+end
+</code></pre>
+<p>在其他语言里，一般我们不建议使用 <code>goto</code> ，主要是因为 <code>goto</code> 过分灵活会破坏程序结构。实质上，只要你能把握好代码结构， <code>goto</code> 可以更好的简化代码。</p>
+<h2 id="and-or--not">and, or , not</h2>
+<p>lua 采用了关键字进行布尔运算，类似于 python 。</p>
+<h2 id="函数">函数</h2>
+<pre><code class="language-lua">function fib(n)
+  if n &lt; 2 then return 1 end
+  return fib(n - 2) + fib(n - 1)
+end
+
+-- Closures and anonymous functions are ok:
+function adder(x)
+  -- The returned function is created when adder is
+  -- called, and remembers the value of x:
+  return function (y) return x + y end
+end
+a1 = adder(9)
+a2 = adder(36)
+print(a1(16))  --&gt; 25
+print(a2(64))  --&gt; 100
+
+-- Returns, func calls, and assignments all work
+-- with lists that may be mismatched in length.
+-- Unmatched receivers are nil;
+-- unmatched senders are discarded.
+
+x, y, z = 1, 2, 3, 4
+-- Now x = 1, y = 2, z = 3, and 4 is thrown away.
+
+function bar(a, b, c)
+  print(a, b, c)
+  return 4, 8, 15, 16, 23, 42
+end
+
+x, y = bar('zaphod')  --&gt; prints &quot;zaphod  nil nil&quot;
+-- Now x = 4, y = 8, values 15...42 are discarded.
+
+-- Functions are first-class, may be local/global.
+-- These are the same:
+function f(x) return x * x end
+f = function (x) return x * x end
+
+-- And so are these:
+local function g(x) return math.sin(x) end
+local g; g  = function (x) return math.sin(x) end
+-- the 'local g' decl makes g-self-references ok.
+
+-- Trig funcs work in radians, by the way.
+
+-- Calls with one string param don't need parens:
+print 'hello'  -- Works fine.
+</code></pre>
+<p>lua 的函数定义其实一看就懂，这里比较特色的是， lua 函数传参允许传更多的参数，虽然多出来的会被抛弃；可以不用圆括号；多返回值。</p>
+<p>当我们不为函数设定名字是，该函数就是匿名函数。函数也分全局函数和局部函数，前面讲过，不赘述。</p>
+<h2 id="函数回调">函数回调</h2>
+<pre><code class="language-lua">unpack = table.unpack or unpack
+
+local function run(x, y)
+    print(&quot;run&quot;, x, y)
+end
+
+local function attack(targetId)
+    print(&quot;targetId&quot;, targetId)
+end
+
+local function callback(method, ...)
+    local args = {...} or {}
+    method(unpack(args, 1, #args))
+end
+
+callback(run, 1, 2)
+callback(attack, 1111)
+</code></pre>
+<h2 id="简单的面向对象">简单的面向对象</h2>
+<pre><code class="language-lua">Dog = {}                                   -- 1.
+
+function Dog:new()                         -- 2.
+  newObj = {sound = 'woof'}                -- 3.
+  self.__index = self                      -- 4.
+  return setmetatable(newObj, self)        -- 5.
+end
+
+function Dog:makeSound()                   -- 6.
+  print('I say ' .. self.sound)
+end
+
+mrDog = Dog:new()                          -- 7.
+mrDog:makeSound()  -- 'I say woof'         -- 8.
+-- 1. Dog acts like a class; it's really a table.
+-- 2. function tablename:fn(...) is the same as
+--    function tablename.fn(self, ...)
+--    The : just adds a first arg called self.
+--    Read 7 &amp; 8 below for how self gets its value.
+-- 3. newObj will be an instance of class Dog.
+-- 4. self = the class being instantiated. Often
+--    self = Dog, but inheritance can change it.
+--    newObj gets self's functions when we set both
+--    newObj's metatable and self's __index to self.
+-- 5. Reminder: setmetatable returns its first arg.
+-- 6. The : works as in 2, but this time we expect
+--    self to be an instance instead of a class.
+-- 7. Same as Dog.new(Dog), so self = Dog in new().
+-- 8. Same as mrDog.makeSound(mrDog); self = mrDog.
+</code></pre>
+<p>下面是继承：</p>
+<pre><code class="language-lua">LoudDog = Dog:new()                           -- 1.
+
+function LoudDog:makeSound()
+  s = self.sound .. ' '                       -- 2.
+  print(s .. s .. s)
+end
+
+seymour = LoudDog:new()                       -- 3.
+seymour:makeSound()  -- 'woof woof woof'      -- 4.
+
+-- 1. LoudDog gets Dog's methods and variables.
+-- 2. self has a 'sound' key from new(), see 3.
+-- 3. Same as LoudDog.new(LoudDog), and converted to
+--    Dog.new(LoudDog) as LoudDog has no 'new' key,
+--    but does have __index = Dog on its metatable.
+--    Result: seymour's metatable is LoudDog, and
+--    LoudDog.__index = LoudDog. So seymour.key will
+--    = seymour.key, LoudDog.key, Dog.key, whichever
+--    table is the first with the given key.
+-- 4. The 'makeSound' key is found in LoudDog; this
+--    is the same as LoudDog.makeSound(seymour).
+
+-- If needed, a subclass's new() is like the base's:
+function LoudDog:new()
+  newObj = {}
+  -- set up newObj
+  self.__index = self
+  return setmetatable(newObj, self)
+end
+</code></pre>
+<h2 id="模块">模块</h2>
+<pre><code class="language-lua">local _M = {}
+
+local function get_name()
+    return &quot;Lucy&quot;
+end
+
+function _M.greeting()
+    print(&quot;hello &quot; .. get_name())
+end
+
+return _M
+</code></pre>
+<p>在这里我们定义了一个 table ，并在最后将它 <code>return</code> 出去， <code>_M</code> 就是我们这个模块所要导出的数据。注意，这里全局变量其实是会有影响的，不定义为 <code>local</code> 才能暴露出去。</p>
+<pre><code class="language-lua">local my_module = require(&quot;my&quot;)
+my_module.greeting()     --&gt;output: hello Lucy
+</code></pre>
+<p><code>require</code> 加载模块，返回值就是之前的 <code>_M</code> 。</p>
+<h2 id="其他一些要注意的">其他一些要注意的</h2>
+<h3 id="数组大小的获取">数组大小的获取</h3>
+<pre><code class="language-lua">local a = {1, 2, 3, 4}
+print #a
+</code></pre>
+<p><code>#</code> 操作符可以获取数组的长度。</p>
+<h3 id="虚变量">虚变量</h3>
+<pre><code class="language-lua">local t = {1, 3, 5}
+
+print(&quot;all  data:&quot;)
+for i,v in ipairs(t) do
+    print(i,v)
+end
+
+print(&quot;&quot;)
+print(&quot;part data:&quot;)
+for _,v in ipairs(t) do
+    print(v)
+end
+</code></pre>
+<p>虚变量指的是 <code>_</code> ，一般我们不会去读它的值。虚变量可以被多次使用。</p>
+<pre><code class="language-lua">function foo()
+    return 1, 2, 3, 4
+end
+
+local _, _, bar = foo();    -- 我们只需要第三个
+print(bar)
+</code></pre>
+<p>一般就是用来占位的。</p>
+<h3 id="比较运算符">比较运算符</h3>
+<p>lua 的不等于为 <code>~=</code> ，其他的与 C 基本一致。</p>
+<h3 id="调用代码前先定义函数">调用代码前先定义函数</h3>
+<p>lua 必须先定义，后调用，这与 JavaScript 还有 Python 不一样。</p>
+<h3 id="点号与冒号操作符的区别">点号与冒号操作符的区别</h3>
+<pre><code class="language-lua">obj = { x = 20 }
+
+function obj:fun1()
+    print(self.x)
+end
+</code></pre>
+<p>等价于</p>
+<pre><code class="language-lua">obj = { x = 20 }
+
+function obj.fun1(self)
+    print(self.x)
+end
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-01-09
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/lua/">lua</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%9A%84%E7%BA%AF%E7%B2%B9%E6%89%B9%E5%88%A4/">
+            <span class="next-text nav-default">对认识论的纯粹批判</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -3,28 +3,49 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2022-01-06T11:36:13+08:00</lastmod>
+    <lastmod>2022-01-09T15:01:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2022-01-06T11:36:13+08:00</lastmod>
+    <lastmod>2022-01-09T15:01:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/lua/</loc>
+    <lastmod>2022-01-09T15:01:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/lua/</loc>
+    <lastmod>2022-01-09T15:01:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/lua-quickly-begin/</loc>
+    <lastmod>2022-01-09T15:01:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2022-01-06T11:36:13+08:00</lastmod>
+    <lastmod>2022-01-09T15:01:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/tags/</loc>
-    <lastmod>2022-01-06T11:36:13+08:00</lastmod>
+    <lastmod>2022-01-09T15:01:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
