@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 06 Jan 2022 11:36:13 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Jan 2022 22:50:29 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开源正在死亡</title>
+      <link>https://bigshans.github.io/post/open-source-is-dying/</link>
+      <pubDate>Tue, 11 Jan 2022 22:50:29 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/open-source-is-dying/</guid>
+      <description>开源正在死亡，或者说，已经死亡。 起因是 Faker.js 作者破坏代码的行为，本来这种行为按我以前的肯定是会批判作者的，但我想想不对，为什么每次遇上这样的问题</description>
+    </item>
+    
     <item>
       <title>对认识论的纯粹批判</title>
       <link>https://bigshans.github.io/post/%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%9A%84%E7%BA%AF%E7%B2%B9%E6%89%B9%E5%88%A4/</link>

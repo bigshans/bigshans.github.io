@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 09 Jan 2022 15:01:18 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Jan 2022 22:50:29 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开源正在死亡</title>
+      <link>https://bigshans.github.io/post/open-source-is-dying/</link>
+      <pubDate>Tue, 11 Jan 2022 22:50:29 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/open-source-is-dying/</guid>
+      <description>开源正在死亡，或者说，已经死亡。 起因是 Faker.js 作者破坏代码的行为，本来这种行为按我以前的肯定是会批判作者的，但我想想不对，为什么每次遇上这样的问题</description>
+    </item>
+    
     <item>
       <title>lua 快速入门</title>
       <link>https://bigshans.github.io/post/lua-quickly-begin/</link>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/flex/</guid>
       <description>最近同事开分享会讲到了一点 flex 布局相关的东西，但是讲得很仓促，于是决定私下里整理一下，也算是对 flex 知识的总结。内容基本参考了 MDN 还有 W3C 文档的内容，</description>
-    </item>
-    
-    <item>
-      <title>Postgresql 创建用户和数据库并赋权</title>
-      <link>https://bigshans.github.io/post/postgresql-tricks-1/</link>
-      <pubDate>Tue, 08 Jun 2021 09:04:01 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/postgresql-tricks-1/</guid>
-      <description>由于我经常忘记这个该怎么写了（因为不经常用），所以特地记录誊写一篇用来记忆。 创建新的数据库用户 先进入到 postgres 用户下，然后用运行 psql 进入数据库的命令</description>
     </item>
     
   </channel>
