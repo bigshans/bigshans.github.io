@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>php on Bigshans&#39; Blog</title>
-    <link>https://bigshans.github.io/tags/php/</link>
+    <link>https://bigshans.github.io/categories/php/</link>
     <description>Recent content in php on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 12 Jan 2022 11:51:08 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Jan 2022 11:51:08 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/php/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PHP学习（一）—— 面向过程的 PHP</title>
       <link>https://bigshans.github.io/post/php-study-1/</link>
@@ -15,15 +15,6 @@
       
       <guid>https://bigshans.github.io/post/php-study-1/</guid>
       <description>PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C++ 和</description>
-    </item>
-    
-    <item>
-      <title>如何使用 Webhook 来实现自动部署项目</title>
-      <link>https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/</link>
-      <pubDate>Sun, 15 Nov 2020 18:30:45 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/</guid>
-      <description>自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。 在上家公司我也体验过自</description>
     </item>
     
   </channel>

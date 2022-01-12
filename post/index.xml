@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 11 Jan 2022 22:50:29 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Jan 2022 11:51:08 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP学习（一）—— 面向过程的 PHP</title>
+      <link>https://bigshans.github.io/post/php-study-1/</link>
+      <pubDate>Wed, 12 Jan 2022 11:51:08 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/php-study-1/</guid>
+      <description>PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C++ 和</description>
+    </item>
+    
     <item>
       <title>开源正在死亡</title>
       <link>https://bigshans.github.io/post/open-source-is-dying/</link>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/v8-study-1/</guid>
       <description>想要学习一下 v8 ，于是就尝试了一下编译 v8 源码，说实话，以国内的网络去做这件事超级麻烦。在折腾一番后，最后决定直接在我的海外服务器上进行编译。 安</description>
-    </item>
-    
-    <item>
-      <title>flex 布局简说</title>
-      <link>https://bigshans.github.io/post/flex/</link>
-      <pubDate>Sat, 10 Jul 2021 22:35:25 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/flex/</guid>
-      <description>最近同事开分享会讲到了一点 flex 布局相关的东西，但是讲得很仓促，于是决定私下里整理一下，也算是对 flex 知识的总结。内容基本参考了 MDN 还有 W3C 文档的内容，</description>
     </item>
     
   </channel>

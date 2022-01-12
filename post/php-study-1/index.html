@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>PHP学习（一）—— 面向过程的 PHP - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C&#43;&#43; 和" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0-DEV with theme even" />
+
+
+<link rel="canonical" href="https://bigshans.github.io/post/php-study-1/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b66231a2560ad66435f5e2b7a0dd47d3c09452299beb1d46ed99fec246c893b5.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="PHP学习（一）—— 面向过程的 PHP" />
+<meta property="og:description" content="PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C&#43;&#43; 和" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/php-study-1/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-01-12T11:51:08+08:00" />
+<meta property="article:modified_time" content="2022-01-12T11:51:08+08:00" />
+
+<meta itemprop="name" content="PHP学习（一）—— 面向过程的 PHP">
+<meta itemprop="description" content="PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C&#43;&#43; 和"><meta itemprop="datePublished" content="2022-01-12T11:51:08+08:00" />
+<meta itemprop="dateModified" content="2022-01-12T11:51:08+08:00" />
+<meta itemprop="wordCount" content="2790">
+<meta itemprop="keywords" content="php,编程语言学习," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="PHP学习（一）—— 面向过程的 PHP"/>
+<meta name="twitter:description" content="PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C&#43;&#43; 和"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">PHP学习（一）—— 面向过程的 PHP</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-01-12 </span>
+        <div class="post-category">
+            <a href="/categories/php/"> php </a>
+            <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/"> 编程语言学习 </a>
+            </div>
+          <span class="more-meta"> 约 2790 字 </span>
+          <span class="more-meta"> 预计阅读 6 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#变量与常量定义">变量与常量定义</a>
+          <ul>
+            <li><a href="#变量">变量</a></li>
+            <li><a href="#常量">常量</a></li>
+          </ul>
+        </li>
+        <li><a href="#基本数据类型">基本数据类型</a>
+          <ul>
+            <li><a href="#数字">数字</a></li>
+            <li><a href="#字符串">字符串</a></li>
+            <li><a href="#布尔">布尔</a></li>
+            <li><a href="#类型判断与类型转换">类型判断与类型转换</a></li>
+          </ul>
+        </li>
+        <li><a href="#数组">数组</a></li>
+        <li><a href="#php-控制结构">PHP 控制结构</a>
+          <ul>
+            <li><a href="#分支结构">分支结构</a></li>
+          </ul>
+        </li>
+        <li><a href="#运算符">运算符</a></li>
+        <li><a href="#函数">函数</a>
+          <ul>
+            <li><a href="#自定义函数">自定义函数</a></li>
+            <li><a href="#匿名函数">匿名函数</a></li>
+            <li><a href="#可变参数与默认参数">可变参数与默认参数</a></li>
+            <li><a href="#可变函数">可变函数</a></li>
+          </ul>
+        </li>
+        <li><a href="#函数作用域">函数作用域</a></li>
+        <li><a href="#小结">小结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+    <div class="post-content">
+      <p>PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C++ 和 Java 的杂交，而且 PHP 虽然兼容，但如果尽量用上新特性的话，都觉得是两门语言。我并不打算学过去 PHP 5 那种语法，当初学得恶心，最新的 PHP 语法其实好很多。</p>
+<h2 id="变量与常量定义">变量与常量定义</h2>
+<h3 id="变量">变量</h3>
+<p>PHP 的变量名都以 <code>$</code> 开头，槽点挺多的， PHP 程序员是多想要钱啊……咳咳，除开 <code>$</code> ，变量名其实与一般语言命名一样。</p>
+<pre><code class="language-php">&lt;? php
+$greeting = &quot;Hello, World!&quot;;
+$_greeting = &quot;Hello, World!&quot;;
+$greeting_1 = &quot;Hello, World!&quot;;
+# $1greeting = &quot;Hello, World!&quot;; 错误
+# $greeting-1 = &quot;Hello, World!&quot;; 错误
+?&gt;
+</code></pre>
+<p>PHP 作为一门若类型的动态弱类型语言，声明变量和使用都十分灵活。</p>
+<pre><code class="language-php">&lt;?php
+$greeting = &quot;你好， PHP！&quot;;
+$var_name = &quot;greeting&quot;;
+echo $$var_name; // 等同于 echo $greeting;
+?&gt;
+</code></pre>
+<p>因为 <code>$varName</code> 的变量值是 <code>greeting</code> ，所以当我们调用 <code>$$varName</code> 时， <code>$varName</code> 被替换成 <code>greeting</code> ，因此实际上引用的是 <code>$greeting</code> ，由于 <code>$varName</code> 的值可以动态设置，所以也就可以实现了一个可变变量。</p>
+<h3 id="常量">常量</h3>
+<p>PHP 的常量使用 <code>define</code> 方法定义，也可以使用 <code>const</code> 关键字定义，不过 <code>const</code> 一般在类中使用居多，但在文件中使用也是可以的。</p>
+<pre><code class="language-php">&lt;?php
+define(&quot;HELLO&quot;, &quot;HELLO&quot;);
+const WORLD = &quot;WORLD&quot;;
+echo HELLO.&quot; &quot;.WORLD;
+?&gt;
+</code></pre>
+<h2 id="基本数据类型">基本数据类型</h2>
+<p>主要是数字、字符串、布尔这三类。查看数据类型我们可以使用 <code>var_dump</code> 方法。</p>
+<h3 id="数字">数字</h3>
+<p>数字分为整型与浮点型。</p>
+<pre><code class="language-php">&lt;?php
+$time = 2022;
+var_dump($time); // int(2022)
+$f = 2.2;
+var_dump($f); // float(2.2)
+?&gt;
+</code></pre>
+<p>不过需要注意的是， <code>1 / 2</code> 结果为浮点数，而不是整型。</p>
+<pre><code class="language-php">&lt;?php
+echo var_dump(1 / 2); // float(0.5)
+?&gt;
+</code></pre>
+<h3 id="字符串">字符串</h3>
+<p>PHP 字符串使用单引号和双引号皆可，但二者在功能上稍有区别。</p>
+<pre><code class="language-php">&lt;?php
+echo '\'\n';
+echo &quot;\n&quot;;
+?&gt;
+</code></pre>
+<p>单引号不发生转义，除了 <code>\'</code> 。双引号可以，同时也可以类似模板字符串使用变量。</p>
+<pre><code class="language-php">&lt;?php
+$name = &quot;Jack&quot;;
+$hello = &quot;Hello World, $name\n&quot;;
+echo $hello;
+$name = &quot;Mike&quot;;
+echo $hello;
+echo &quot;Hello World, {$name}\n&quot;;
+echo &quot;Hello World, ${name}\n&quot;;
+# Output:
+# Hello World, Jack
+# Hello World, Jack
+# Hello World, Jack
+# Hello World, Jack
+?&gt;
+</code></pre>
+<p>多行字符串使用 <code>&lt;&lt;&lt;'END' ... END</code> 或 <code>&lt;&lt;&lt;END ... END</code> ，区别也在于一个转义一个不转义。</p>
+<pre><code class="language-php">&lt;?php
+// Since PHP 5.3, nowdocs can be used for uninterpolated multi-liners
+$nowdoc = &lt;&lt;&lt;'END'
+Multi line
+string
+END;
+
+// Heredocs will do string interpolation
+$heredoc = &lt;&lt;&lt;END
+Multi line
+$sgl_quotes
+END;
+?&gt;
+</code></pre>
+<h3 id="布尔">布尔</h3>
+<p>PHP 的布尔类型数值如常规一样，是 <code>true</code> 和 <code>false</code> ，但两个值大小写不敏感。</p>
+<pre><code class="language-php">&lt;?php
+$boolean = true;  // or TRUE or True
+$boolean = FALSE; // or false or False
+?&gt;
+</code></pre>
+<h3 id="类型判断与类型转换">类型判断与类型转换</h3>
+<p>虽然 <code>var_dump</code> 可以判断类型，但有时候我们想要更直接的方法去判断，因此 PHP 提供了 <code>is_string</code> 、 <code>is_int</code>/<code>is_integer</code> 、 <code>is_float</code>/<code>is_double</code> 、 <code>is_bool</code> 等方法。</p>
+<p>PHP 的类型转换形式上与 C 语言还是很相似的。</p>
+<pre><code class="language-php">&lt;?php
+$str = &quot;123&quot;;
+$int = 2020;
+$float = 99.0;
+$bool = false;
+
+var_dump((int) $str);
+var_dump((bool) $str);
+var_dump((string) $str);
+var_dump((bool) $str);
+var_dump((int) $float);
+var_dump((string) $float);
+var_dump((string) $bool);
+var_dump((int) $bool);
+?&gt;
+</code></pre>
+<h2 id="数组">数组</h2>
+<p>PHP 数组比较早的时候只能用 <code>array</code> 方法，后面才有 <code>[]</code> 语法，两种创建方式实际上是类似的。</p>
+<p>PHP 数组与 lua 的 table 类似，揉捏了列表和字典的结构，但是从 0 开始。</p>
+<pre><code class="language-php">&lt;?php
+$nums = [2, 4, 8, 16, 32];
+$nums_old = array(2, 4, 8, 16, 32);
+echo var_dump($nums);
+echo var_dump($nums_old);
+?&gt;
+</code></pre>
+<p>PHP 数组也可以当作字典使用。</p>
+<pre><code class="language-php">&lt;?php
+$book = ['name' =&gt; '不能承受的生命之轻', 'author' =&gt; '米兰昆德拉'];
+$book_old = array('name' =&gt; '不能承受的生命之轻', 'author' =&gt; '米兰昆德拉');
+echo var_dump($book);
+echo var_dump($book_old);
+?&gt;
+</code></pre>
+<p>也可以混合使用。</p>
+<pre><code class="language-php">&lt;?php
+$game = ['明日方舟', 'company' =&gt; '鹰角网络'];
+$game_old = array('明日方舟', 'company' =&gt; '鹰角网络');
+echo var_dump($game);
+echo var_dump($game_old);
+?&gt;
+</code></pre>
+<p>没有定义索引的就自动使用数字进行索引了。</p>
+<p>当然，虽然我们可以写代码进行增删，但如果语言本身提供了就更加方便了。在 PHP 中，我们可以使用 <code>array_push</code> 进行添加，使用 <code>unset</code> 来取消数组中的某一个值。</p>
+<pre><code class="language-php">&lt;?php
+$a = [1, 2, 3];
+array_push($a, 5);
+print_r($a);
+unset($a[1]);
+print_r($a);
+?&gt;
+</code></pre>
+<p><code>unset</code> 也可以用来取消任何一个变量，如果我们想要删除整个数组，我们可以直接 <code>unset($a)</code> 。</p>
+<p>PHP 也允许我们直接用索引的方式添加。</p>
+<pre><code class="language-php">&lt;?php
+$a = [1, 2, 3];
+$a[3] = 5;
+print_r($a);
+unset($a[1]);
+print_r($a);
+?&gt;
+</code></pre>
+<p>但这里有一个问题，就是当我们删了一个值之后，数字索引就乱了， PHP 为我们提供了一个方法来重排索引， <code>array_values</code> 。</p>
+<pre><code class="language-php">&lt;?php
+$a = [1, 2, 3];
+$a[3] = 5;
+print_r($a);
+unset($a[1]);
+$a = array_values($a);
+print_r($a);
+?&gt;
+</code></pre>
+<p>如果我们想知道数组大小呢？我们可以通过 <code>count</code> 函数获得。</p>
+<pre><code class="language-php">&lt;?php
+$a = [1, 2, 3];
+echo count($a);
+?&gt;
+</code></pre>
+<p>你可以看到上面的代码我们用了两种不同的方式打印数组， <code>var_dump</code> 和 <code>print_r</code> 。 <code>var_dump</code> 会详细展示类型信息，而 <code>print_r</code> 则会吐出更精简的数组结构，区别仅仅在此。</p>
+<h2 id="php-控制结构">PHP 控制结构</h2>
+<p>PHP 的控制结构与 C 语言大致相近，除了 <code>foreach</code> 。</p>
+<h3 id="分支结构">分支结构</h3>
+<h4 id="if"><code>if</code></h4>
+<pre><code class="language-php">&lt;?php
+if (true) {
+    print 'I get printed';
+}
+
+if (false) {
+    print 'I don\'t';
+} else {
+    print 'I get printed';
+}
+
+if (false) {
+    print 'Does not get printed';
+} elseif (true) {
+    print 'Does';
+}
+
+if (false) {
+    print 'Does not get printed';
+} else if (true) {
+    print 'Does';
+}
+?&gt;
+</code></pre>
+<p>还有一种模板结构。</p>
+<pre><code class="language-php">&lt;?php if ($x): ?&gt;
+This is displayed if the test is truthy.
+&lt;?php else: ?&gt;
+This is displayed otherwise.
+&lt;?php endif; ?&gt;
+</code></pre>
+<h4 id="switch"><code>switch</code></h4>
+<pre><code class="language-php">&lt;?php
+$x = 0;
+switch ($x) {
+    case '0':
+        print 'Switch does type coercion';
+        break; // You must include a break, or you will fall through
+               // to cases 'two' and 'three'
+    case 'two':
+    case 'three':
+        // Do something if $variable is either 'two' or 'three'
+        break;
+    default:
+        // Do something by default
+}
+?&gt;
+</code></pre>
+<h4 id="while"><code>while</code></h4>
+<pre><code class="language-php">&lt;?php
+$i = 0;
+while ($i &lt; 5) {
+    echo $i++;
+} // Prints &quot;01234&quot;
+
+echo &quot;\n&quot;;
+
+$i = 0;
+do {
+    echo $i++;
+} while ($i &lt; 5); // Prints &quot;01234&quot;
+?&gt;
+</code></pre>
+<h4 id="foreach"><code>foreach</code></h4>
+<p>PHP 的 <code>foreach</code> 主要是用于迭代的。</p>
+<pre><code class="language-php">&lt;?php
+foreach($data as $key =&gt; $val) {
+    // ...
+}
+?&gt;
+</code></pre>
+<p>这里的 <code>$data</code> 是需要迭代的对象， <code>$key</code> 是键名， <code>$val</code> 是键值。如果只想要值的话可以不要 <code>$key</code> 。</p>
+<pre><code class="language-php">&lt;?php
+foreach($data as $val) {
+    // ...
+}
+?&gt;
+</code></pre>
+<pre><code class="language-php">&lt;?php
+$wheels = ['bicycle' =&gt; 2, 'car' =&gt; 4];
+
+// Foreach loops can iterate over arrays
+foreach ($wheels as $wheel_count) {
+    echo $wheel_count;
+} // Prints &quot;24&quot;
+
+echo &quot;\n&quot;;
+
+// You can iterate over the keys as well as the values
+foreach ($wheels as $vehicle =&gt; $wheel_count) {
+    echo &quot;A $vehicle has $wheel_count wheels&quot;;
+}
+
+echo &quot;\n&quot;;
+?&gt;
+</code></pre>
+<h4 id="for"><code>for</code></h4>
+<p>PHP 的 <code>for</code> 与 C 大致一样。</p>
+<pre><code class="language-php">&lt;?php
+$i = 0;
+for ($i = 0; $i &lt; 5; $i++) {
+    if ($i === 3) {
+        continue; // Skip this iteration of the loop
+    }
+    echo $i;
+} // Prints &quot;0124&quot;
+?&gt;
+</code></pre>
+<h2 id="运算符">运算符</h2>
+<p>除了正常的加减乘除之外， PHP 还引入了求幂符号 <code>**</code> 。</p>
+<p>PHP 还有自增运算符 <code>--</code> 、 <code>++</code> 。</p>
+<p>比较运算符的情况类似于 JavaScript ，基本上就是多了 <code>&lt;&gt;</code> 、 <code>&lt;=&gt;</code> 。前者等于 <code>!=</code> ，后者情况比较特殊，被称做结合比较运算符。</p>
+<pre><code class="language-php">&lt;?php
+$a = 100;
+$b = 1000;
+
+echo $a &lt;=&gt; $a; // 0 since they are equal
+echo $a &lt;=&gt; $b; // -1 since $a &lt; $b
+echo $b &lt;=&gt; $a; // 1 since $b &gt; $a
+?&gt;
+</code></pre>
+<p>逻辑运算符与 C 语言一致。</p>
+<p>特别提一点，字符串连接使用 <code>.</code> 而不能使用 <code>+</code> 。</p>
+<h2 id="函数">函数</h2>
+<h3 id="自定义函数">自定义函数</h3>
+<pre><code class="language-php">&lt;?php
+
+/**
+ * 计算两数相加之和
+ * @param $a
+ * @param $b
+ * @return mixed
+ */
+function add($a, $b) {
+    $sum = $a + $b;
+    return $sum;
+}
+?&gt;
+</code></pre>
+<p>从 PHP 7 开始允许声明数值类型。</p>
+<pre><code class="language-php">&lt;?php
+/**
+ * 计算两数相加之和
+ * @param int $a
+ * @param int $b
+ * @return int
+ */
+function add(int $a, int $b): int {
+    $sum = $a + $b;
+    return $sum;
+}
+?&gt;
+</code></pre>
+<p>这样，任何非 <code>int</code> 类型的参数都无法传入。</p>
+<p>函数参数默认以值传递方式进行传递，无论是基本类型还是其他的。想要引用传递则使用 <code>&amp;</code> 符号。</p>
+<pre><code class="language-php">&lt;?php
+$a = [1, 2, 3];
+function test(array $k) {
+    $k[1] = 1;
+}
+test($a);
+print_r($a); // 没变
+function test_1(array &amp;$k) {
+    $k[1] = 1;
+}
+test_1($a);
+print_r($a); // 变了
+?&gt;
+</code></pre>
+<h3 id="匿名函数">匿名函数</h3>
+<pre><code class="language-php">&lt;?php
+$add = function(int $a, int $b): int {
+    return $a + $b;
+};
+$sum = $add(1, 2);
+echo $sum . PHP_EOL;
+?&gt;
+</code></pre>
+<h3 id="可变参数与默认参数">可变参数与默认参数</h3>
+<p>可变参列表使用 <code>...</code> 定义。</p>
+<pre><code class="language-php">&lt;?php
+function call_user_func ($function, ...$parameter) {
+    print_r($parameter);
+}
+?&gt;
+</code></pre>
+<p>默认参数需要放到最后。</p>
+<pre><code class="language-php">&lt;?php
+function add($x, $y = 1) { // $y is optional and defaults to 1
+    $result = $x + $y;
+    return $result;
+}
+?&gt;
+</code></pre>
+<p>还有一种完全放弃治疗的获取参数方式。</p>
+<pre><code class="language-php">&lt;?php
+// You can get all the parameters passed to a function
+function parameters() {
+    $numargs = func_num_args();
+    if ($numargs &gt; 0) {
+        echo func_get_arg(0) . ' | ';
+    }
+    $args_array = func_get_args();
+    foreach ($args_array as $key =&gt; $arg) {
+        echo $key . ' - ' . $arg . ' | ';
+    }
+}
+
+parameters('Hello', 'World'); // Hello | 0 - Hello | 1 - World |
+?&gt;
+</code></pre>
+<h3 id="可变函数">可变函数</h3>
+<p>以匿名函数的方式定义的变量也被视作函数变量，由于是变量，所以就可以被重新定义。这种在运行时动态设置函数类型值给变量的功能，在 PHP 中称之为可变函数。</p>
+<pre><code class="language-php">&lt;?php
+/**
+ * 通过匿名函数定义两数相加函数 add
+ * @param int $a
+ * @param int $b
+ * @return int
+ */
+$add = function (int $a, int $b = 2): int {
+    return $a + $b;
+};
+
+/**
+ * 两数相乘函数 multi
+ * @param int $a
+ * @param int $b
+ * @return int
+ */
+$multi = function (int $a, int $b): int {
+    return $a * $b;
+};
+
+// 调用匿名函数
+$n1 = 1;
+$n2 = 3;
+$sum = $add($n1, $n2);
+echo &quot;$n1 + $n2 = $sum&quot; . PHP_EOL;
+// 将 multi 赋值给 $add
+$add = $multi;
+$product = $add($n1, $n2);
+echo &quot;$n1 x $n2 = $product&quot; . PHP_EOL;
+?&gt;
+</code></pre>
+<h2 id="函数作用域">函数作用域</h2>
+<p>PHP 的函数作用域是隔得非常清楚的，如果不声明，函数是无法使用父作用域的。</p>
+<pre><code class="language-php">&lt;?php
+$n1 = 1;
+$n2 = 3;
+
+function t() {
+    global $n1;
+    return function () use ($n1) {
+        return $n1;
+    };
+}
+
+// 计算两数相加
+$add = function () use ($n1, $n2) {
+    return $n1 + $n2;
+};
+
+// 计算两数相乘
+$multi = function () use ($n1, $n2){
+    return $n1 * $n2;
+};
+
+// 调用匿名函数
+$sum = $add();
+echo &quot;$n1 + $n2 = $sum&quot; . PHP_EOL;
+$product = $multi();
+echo &quot;$n1 x $n2 = $product&quot; . PHP_EOL;
+?&gt;
+</code></pre>
+<p>对于匿名函数，可以使用 <code>use</code> 使用父作用域关键字，同样也可以使用 <code>global</code> 定义全局作用域可访问值。除此之外， PHP 还提供了 <code>$GLOBALS</code> 数组，数组内就是全部的全局变量。</p>
+<h2 id="小结">小结</h2>
+<p>PHP 是个多范式编程语言，面向过程编程只是其最基本的编程形式。相对其他语言来说， PHP 是个自由度非常大的语言，同时也对代码质量管理提出了挑战。关于 PHP 的 OOP ，以后有时间再谈吧！</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-01-12
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/php/">php</a>
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">编程语言学习</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/open-source-is-dying/">
+            <span class="next-text nav-default">开源正在死亡</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
