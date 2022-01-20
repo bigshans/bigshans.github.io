@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 12 Jan 2022 11:51:08 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Jan 2022 11:31:19 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开源社区需要终身仁慈的独裁者吗？</title>
+      <link>https://bigshans.github.io/post/does-open-sources-need-bdfl/</link>
+      <pubDate>Thu, 20 Jan 2022 11:31:19 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/does-open-sources-need-bdfl/</guid>
+      <description>最近随笔确实有点多，但生活其实不能只有代码，回头看看也需要将随笔分分类了。说回正题， BDFL 像是个政治名词，但实际上是用来指代某些开源软件的开发者</description>
+    </item>
+    
     <item>
       <title>PHP学习（一）—— 面向过程的 PHP</title>
       <link>https://bigshans.github.io/post/php-study-1/</link>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/anbox-install-guide/</guid>
       <description>台风天写这篇文章。 最近更新了 Linux 的内核，然后日常发布合并，日常逛 Issues 的时候，发现有人提出要 Anbox 的需求。Anbox 我试着安装过几次，然后每次装上都因</description>
-    </item>
-    
-    <item>
-      <title>v8 学习（一）——编译个v8 好麻烦啊！</title>
-      <link>https://bigshans.github.io/post/v8-study-1/</link>
-      <pubDate>Sun, 11 Jul 2021 15:14:22 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/v8-study-1/</guid>
-      <description>想要学习一下 v8 ，于是就尝试了一下编译 v8 源码，说实话，以国内的网络去做这件事超级麻烦。在折腾一番后，最后决定直接在我的海外服务器上进行编译。 安</description>
     </item>
     
   </channel>
