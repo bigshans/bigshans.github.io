@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>开源社区需要终身仁慈的独裁者吗？ - Bigshans&#39; Blog</title>
+  <title>coc-kite-cmp 发布 - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="最近随笔确实有点多，但生活其实不能只有代码，回头看看也需要将随笔分分类了。说回正题， BDFL 像是个政治名词，但实际上是用来指代某些开源软件的开发者" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="最近在尝试 AI complete ，主要是 TabNine 和 Kite ，两者可以基于本地代码作出较好的智能推测。在 VSCode 上，两者都有对应的插件，但在 Vim 上时，情况就不同了。我使用的是 coc.nvim ，作" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.93.0-DEV with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/does-open-sources-need-bdfl/" />
+<link rel="canonical" href="https://bigshans.github.io/post/coc-kite-cmp-publish/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,20 +40,20 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="开源社区需要终身仁慈的独裁者吗？" />
-<meta property="og:description" content="最近随笔确实有点多，但生活其实不能只有代码，回头看看也需要将随笔分分类了。说回正题， BDFL 像是个政治名词，但实际上是用来指代某些开源软件的开发者" />
+<meta property="og:title" content="coc-kite-cmp 发布" />
+<meta property="og:description" content="最近在尝试 AI complete ，主要是 TabNine 和 Kite ，两者可以基于本地代码作出较好的智能推测。在 VSCode 上，两者都有对应的插件，但在 Vim 上时，情况就不同了。我使用的是 coc.nvim ，作" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/does-open-sources-need-bdfl/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-01-20T11:31:19+08:00" />
-<meta property="article:modified_time" content="2022-01-20T11:31:19+08:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/coc-kite-cmp-publish/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-01-23T19:10:42+08:00" />
+<meta property="article:modified_time" content="2022-01-23T19:10:42+08:00" />
 
-<meta itemprop="name" content="开源社区需要终身仁慈的独裁者吗？">
-<meta itemprop="description" content="最近随笔确实有点多，但生活其实不能只有代码，回头看看也需要将随笔分分类了。说回正题， BDFL 像是个政治名词，但实际上是用来指代某些开源软件的开发者"><meta itemprop="datePublished" content="2022-01-20T11:31:19+08:00" />
-<meta itemprop="dateModified" content="2022-01-20T11:31:19+08:00" />
-<meta itemprop="wordCount" content="919">
-<meta itemprop="keywords" content="随笔," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="开源社区需要终身仁慈的独裁者吗？"/>
-<meta name="twitter:description" content="最近随笔确实有点多，但生活其实不能只有代码，回头看看也需要将随笔分分类了。说回正题， BDFL 像是个政治名词，但实际上是用来指代某些开源软件的开发者"/>
+<meta itemprop="name" content="coc-kite-cmp 发布">
+<meta itemprop="description" content="最近在尝试 AI complete ，主要是 TabNine 和 Kite ，两者可以基于本地代码作出较好的智能推测。在 VSCode 上，两者都有对应的插件，但在 Vim 上时，情况就不同了。我使用的是 coc.nvim ，作"><meta itemprop="datePublished" content="2022-01-23T19:10:42+08:00" />
+<meta itemprop="dateModified" content="2022-01-23T19:10:42+08:00" />
+<meta itemprop="wordCount" content="519">
+<meta itemprop="keywords" content="vim,coc.nvim,kite,typescript," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="coc-kite-cmp 发布"/>
+<meta name="twitter:description" content="最近在尝试 AI complete ，主要是 TabNine 和 Kite ，两者可以基于本地代码作出较好的智能推测。在 VSCode 上，两者都有对应的插件，但在 Vim 上时，情况就不同了。我使用的是 coc.nvim ，作"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -170,14 +170,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">开源社区需要终身仁慈的独裁者吗？</h1>
+      <h1 class="post-title">coc-kite-cmp 发布</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2022-01-20 </span>
+        <span class="post-time"> 2022-01-23 </span>
         <div class="post-category">
-            <a href="/categories/%E9%9A%8F%E7%AC%94/"> 随笔 </a>
+            <a href="/categories/vim/"> vim </a>
             </div>
-          <span class="more-meta"> 约 919 字 </span>
+          <span class="more-meta"> 约 519 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
@@ -185,16 +185,28 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#编写-coc-kite-cmp-插件">编写 coc-kite-cmp 插件</a></li>
+        <li><a href="#感想">感想</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 </div>
 
     <div class="post-content">
-      <p>最近随笔确实有点多，但生活其实不能只有代码，回头看看也需要将随笔分分类了。说回正题， BDFL 像是个政治名词，但实际上是用来指代某些开源软件的开发者，比如 Linus 、 Python 之父。说起开源，人们印象里会是更加民主的感觉，甚至是直接民主。但直接民主的开源是有问题的，用户提出的想法不能等同于需求，也未必合适于项目，因此筛选是必须的，而仁慈的独裁者在这其中拥有绝对的主导权。</p>
-<p>在 <a href="http://web.archive.org/web/20160306114904/http:/hueniverse.com/2016/01/26/how-to-use-open-source-and-shut-the-fuck-up-at-the-same-time/">How to Use Open Source and Shut the Fuck Up At the Same Time</a> 这篇文章中， Eran Hammer 表达了对开源社区一种普遍的白嫖现象的愤怒。这是非常可以理解的，开源开发者在项目中投入了大量的精力，但使用者给他们的回报却很少，而且使用者对项目还提出了许多甚至苛刻的要求。如果你去观察任意一个大的开源社区的 issues ，你会发现大量重复的问题、重复的需求，以及各种不合适的建议。而用户却以使用者自居，仿佛自己是项目真正的拥有者一样。</p>
-<p>在商业公司中，同样的问题也是出现的，但不同的，商业公司在软件工程的演进中出现了一个新的职位——产品经理。现在许多开源项目并没有产品经理，因为这个职位与开发者合并了，开源项目的开发者往往也是开源项目的“产品经理”，这就造成了一个问题，开发者不得不直接面对用户，这其实是危险的，因为繁杂的产品业务会把开发者从开发之中拉出来。</p>
-<p>然而很多开源开发者并没有意识到这一点，他们将用户的位置看得太重了——事实上很多商业公司也没能摆脱这一点。而用户们自己也没有自觉，使用者与开发者自觉地站在了不对等的位置上。在这种情况下，仁慈的独裁者反倒显得必要了，他把握住了项目的主导，并强行将自己站到与使用者一样的位置，他使使用者意识到自己的僭越。</p>
-<p>“僭越”一词在这里是否用的过于严重了，其实不是。用户的位置是使用者，而不是项目的拥有者，而以开发者自居，却不行开发之实的用户，就是骚扰与僭越。</p>
-<p>问题讨论到这里其实很明晰了，开源社区真的需要 BDFL 吗？不一定，但核心开发者们一定要把握住项目的绝对主导权。开源项目与商业项目，究其本质都是软件工程，因其实践的相似性，而存在着可以互相借鉴的地方。商业公司对于需求的管理，是许多开源开发者所望尘莫及的。许多开源开发者是有意放弃在这方面的努力，最终，将自己被迫处于用户之下，这是往往是开发者自己造成的，需要开发者们自己努力。</p>
+      <p>最近在尝试 AI complete ，主要是 TabNine 和 Kite ，两者可以基于本地代码作出较好的智能推测。在 VSCode 上，两者都有对应的插件，但在 Vim 上时，情况就不同了。我使用的是 coc.nvim ，作为我的补全框架， TabNine 有 coc-tabnine ，但 Kite 的 coc-kite 与 VSCode 上的不一致。于是我决定手动解决这个问题。</p>
+<h2 id="编写-coc-kite-cmp-插件">编写 coc-kite-cmp 插件</h2>
+<p>coc 插件编写其实并不是一件难事，我准备依照 coc-tabnine 和 VSCode 上的 Kite 插件自己写一个 Kite 的支持。</p>
+<p>首先， coc 本身的框架与 VSCode 的插件框架是极其相似的。然后我又对比了 coc-kite 的源码——实际上并没有源码，只有打包好之后的 npm 包——发现原 coc-kite 仅仅支持了 Python ，而 Kite 本身对 Python 是全支持，除此之外的其他语言，是部分支持的。由于我要的仅仅是补全，所以其他的功能我也不需要，接下来的工作就很清晰了。</p>
+<p>原先的 coc-kite 是使用了 <code>vscode-languageserver-protocol</code> 这个包的类型，可能是历史原因吧，毕竟有一年多没有更新了，而我就改用了 <code>coc.nvim</code> 包里的内容。除此之外， <code>coc.nvim</code> API 也发生了变化， coc-kite 里面的代码不少需要重新调整。这里面最烦的当属网络问题， <code>Kite-API</code> 的 <code>requestJSON</code> 方法不能正常使用， <code>axios</code> 也是，最后我发现 <code>coc.nvim</code> 自己提供了一个 <code>fetch</code> ，又折腾了一会儿才万事大吉。</p>
+<h2 id="感想">感想</h2>
+<p>最后的效果还是可以的， Kite 的提示可以在更多文件上出现，不过比起原来 coc-kite ，在 Python 的支持上弱了许多，如果需要更好的 Python 支持，而不是单纯智能补全，那建议使用 coc-kite 。</p>
+<p>最后仓库： <a href="https://github.com/bigshans/coc-kite-cmp">coc-kite-cmp</a> 。</p>
+<p>已经上传 npm 需要安装直接运行 <code>:CocInstall coc-kite-cmp</code> 即可。</p>
 
     </div>
 
@@ -206,7 +218,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2022-01-20
+        2022-01-23
         
     </span>
   </p>
@@ -215,16 +227,15 @@
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>
+          <a href="/tags/vim/">vim</a>
+          <a href="/tags/coc.nvim/">coc.nvim</a>
+          <a href="/tags/kite/">kite</a>
+          <a href="/tags/typescript/">typescript</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/coc-kite-cmp-publish/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">coc-kite-cmp 发布</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/post/php-study-1/">
-            <span class="next-text nav-default">PHP学习（一）—— 面向过程的 PHP</span>
+        
+        <a class="next" href="/post/does-open-sources-need-bdfl/">
+            <span class="next-text nav-default">开源社区需要终身仁慈的独裁者吗？</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
