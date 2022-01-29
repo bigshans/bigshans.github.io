@@ -27,15 +27,6 @@
     </item>
     
     <item>
-      <title>对认识论的纯粹批判</title>
-      <link>https://bigshans.github.io/post/%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%9A%84%E7%BA%AF%E7%B2%B9%E6%89%B9%E5%88%A4/</link>
-      <pubDate>Thu, 06 Jan 2022 11:36:13 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%9A%84%E7%BA%AF%E7%B2%B9%E6%89%B9%E5%88%A4/</guid>
-      <description>早上突然想到的就写了，唯我论批判部分还算清楚，后面认识论批判部分就稍显吃力了，但全文论证还算清晰吧！ 唯我论认为世界除了我之外没有别的存在，这</description>
-    </item>
-    
-    <item>
       <title>为什么还是纸质书？</title>
       <link>https://bigshans.github.io/post/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%98%E6%98%AF%E7%BA%B8%E8%B4%A8%E4%B9%A6/</link>
       <pubDate>Thu, 30 Dec 2021 16:36:14 +0800</pubDate>
@@ -168,6 +159,16 @@
       
       <guid>https://bigshans.github.io/post/essay-%E7%A7%91%E5%B9%BB%E5%B0%8F%E8%AF%B4%E4%B8%AD%E7%9A%84%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
       <description>这是我在看 vivy 时想到的，也是我看很多人工智能讨论时，经常看到的问题。我们经常在科幻小说中看到那种高智慧的机器人，但这种所谓的机器人，只是被降格</description>
+    </item>
+    
+    <item>
+      <title>关于暑假的总结</title>
+      <link>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8E%E6%9A%91%E5%81%87%E7%9A%84%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sat, 25 Aug 2018 14:17:10 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8E%E6%9A%91%E5%81%87%E7%9A%84%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;p&gt;最终使用了 hexo 搭建自己的博客，而不是闲得蛋疼非得自己写。&lt;/p&gt;
+&lt;p&gt;这个暑假原本打算写一个网易云音乐的第三方客户端，然而最终还是弃了，UI 过于蛋疼，于是改用现有的主题。自己写了大半天发现主题并不好用=。= ，html 和 css 真的不太懂啊。&lt;/p&gt;</description>
     </item>
     
   </channel>

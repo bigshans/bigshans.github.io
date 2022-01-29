@@ -7,25 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 20 Jan 2022 11:31:19 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>开源社区需要终身仁慈的独裁者吗？</title>
-      <link>https://bigshans.github.io/post/does-open-sources-need-bdfl/</link>
-      <pubDate>Thu, 20 Jan 2022 11:31:19 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/does-open-sources-need-bdfl/</guid>
-      <description>最近随笔确实有点多，但生活其实不能只有代码，回头看看也需要将随笔分分类了。说回正题， BDFL 像是个政治名词，但实际上是用来指代某些开源软件的开发者</description>
-    </item>
-    
-    <item>
-      <title>开源正在死亡</title>
-      <link>https://bigshans.github.io/post/open-source-is-dying/</link>
-      <pubDate>Tue, 11 Jan 2022 22:50:29 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/open-source-is-dying/</guid>
-      <description>开源正在死亡，或者说，已经死亡。 起因是 Faker.js 作者破坏代码的行为，本来这种行为按我以前的肯定是会批判作者的，但我想想不对，为什么每次遇上这样的问题</description>
-    </item>
-    
+    <lastBuildDate>Thu, 06 Jan 2022 11:36:13 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>对认识论的纯粹批判</title>
       <link>https://bigshans.github.io/post/%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%9A%84%E7%BA%AF%E7%B2%B9%E6%89%B9%E5%88%A4/</link>
@@ -42,33 +24,6 @@
       
       <guid>https://bigshans.github.io/post/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%98%E6%98%AF%E7%BA%B8%E8%B4%A8%E4%B9%A6/</guid>
       <description>我还是读电子书居多，没有为什么，因为量大，轻便，但正经读书的时候我还是喜欢纸质书。我不是什么传统的人，喜欢纸质书，主要还是因为读起来舒服，但</description>
-    </item>
-    
-    <item>
-      <title>广为流传的程序员语录摘抄</title>
-      <link>https://bigshans.github.io/post/programer-quotes/</link>
-      <pubDate>Tue, 28 Dec 2021 11:14:45 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/programer-quotes/</guid>
-      <description>这些网上传得到处都是，一些语录真是犀利，一针见血。我在这里也是简单吐槽一下，放松放松身心。 程序员编程语录 一个好的程序员是那种过单行线马路都要</description>
-    </item>
-    
-    <item>
-      <title>拟合论与能动性</title>
-      <link>https://bigshans.github.io/post/%E6%8B%9F%E5%90%88%E8%AE%BA%E4%B8%8E%E8%83%BD%E5%8A%A8%E6%80%A7/</link>
-      <pubDate>Sun, 26 Dec 2021 18:11:26 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E6%8B%9F%E5%90%88%E8%AE%BA%E4%B8%8E%E8%83%BD%E5%8A%A8%E6%80%A7/</guid>
-      <description>拟合论 人的认识事物的本质，是人在拟合外在事物。拟合论与符合论是不同的，人拟合事物并不要求观念与对象的一致，因为不一致也能够实践。人所拟合的观</description>
-    </item>
-    
-    <item>
-      <title>伤变</title>
-      <link>https://bigshans.github.io/post/%E4%BC%A4%E5%8F%98/</link>
-      <pubDate>Sun, 19 Dec 2021 15:47:37 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E4%BC%A4%E5%8F%98/</guid>
-      <description>昔人已乘黄鹤去，白云千载空悠悠。 固知一死生为虚诞，齐彭殇为妄作。 事物自我总是处于否定的发展之中，他们首先是重复，像是被子上相似的褶皱，随后，</description>
     </item>
     
     <item>
@@ -90,39 +45,12 @@
     </item>
     
     <item>
-      <title>为什么使用或为什么不用 TypeScript</title>
-      <link>https://bigshans.github.io/post/why-use-or-why-not-use-ts/</link>
-      <pubDate>Mon, 29 Nov 2021 15:38:55 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/why-use-or-why-not-use-ts/</guid>
-      <description>最近在写 Angular ，众所周知，现在要写 Angular 基本上是除了 TypeScript 就没得跑了。不得不说， Angular 真是前端规范化的练兵场，前端三大框架中，唯 Angular 严格控制了编写的方式，从环</description>
-    </item>
-    
-    <item>
-      <title>对死亡的讨论</title>
-      <link>https://bigshans.github.io/post/discussion-of-death/</link>
-      <pubDate>Sat, 30 Oct 2021 18:15:47 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/discussion-of-death/</guid>
-      <description>关于死亡，最让我触动的一句话莫过于加缪在西西弗斯神话里的那句： 唯一严肃的哲学问题，就是自杀。 这个讨论十分有趣，我曾深深陷入到自杀的逻辑里面不</description>
-    </item>
-    
-    <item>
       <title>赢麻了</title>
       <link>https://bigshans.github.io/post/win-numb/</link>
       <pubDate>Fri, 08 Oct 2021 17:37:47 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/win-numb/</guid>
       <description>这个词我都快看麻了=.= 。在经济下行的今天，社会环境真是越来越焦躁了。 我在此并不发表什么政治观点，我只是在输出情绪。 首先，政府对于未来的预测</description>
-    </item>
-    
-    <item>
-      <title>论具体的人与抽象的人</title>
-      <link>https://bigshans.github.io/post/on-concrete-people-and-abstract-people/</link>
-      <pubDate>Fri, 01 Oct 2021 17:49:11 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/on-concrete-people-and-abstract-people/</guid>
-      <description>本篇的内容本来是突发的，要不要写本来是随意的，但随着我对这个问题更多的思考，兹文也处于不得不写之状态了。 具体的人与抽象的人，分别指的是什么？</description>
     </item>
     
     <item>
@@ -135,48 +63,12 @@
     </item>
     
     <item>
-      <title>关于天涯神帖的议论</title>
-      <link>https://bigshans.github.io/post/kk_tianya/</link>
-      <pubDate>Mon, 13 Sep 2021 17:26:27 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/kk_tianya/</guid>
-      <description>最近老是看到天涯的那个讨论房价的 帖子 ，神叨很多，个人感觉充满了精英主义、犬儒主义以及阴谋论的“洞见”，但说的并非不对，只是味道非常不正，简直</description>
-    </item>
-    
-    <item>
-      <title>关于政治行动论的修正</title>
-      <link>https://bigshans.github.io/post/%E6%94%BF%E6%B2%BB%E8%A1%8C%E5%8A%A8%E8%AE%BA%E8%AE%A2%E6%AD%A3/</link>
-      <pubDate>Wed, 05 May 2021 13:09:04 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E6%94%BF%E6%B2%BB%E8%A1%8C%E5%8A%A8%E8%AE%BA%E8%AE%A2%E6%AD%A3/</guid>
-      <description>在这里我们重新确立一下标准，并重新订立一下我们所要讨论的目标。我们要讨论的是行为，而不是理论。当然，我们不希望孤立的讨论行为，因为这会让我们</description>
-    </item>
-    
-    <item>
-      <title>政治行动论——反政治光谱的新政治光谱</title>
-      <link>https://bigshans.github.io/post/%E6%94%BF%E6%B2%BB%E8%A1%8C%E5%8A%A8%E8%AE%BA/</link>
-      <pubDate>Tue, 04 May 2021 13:44:54 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E6%94%BF%E6%B2%BB%E8%A1%8C%E5%8A%A8%E8%AE%BA/</guid>
-      <description>批判的武器当然不能代替武器的批判。——马克思 我对于一般的政治理论的探索缺乏兴趣，因为这些争论往往流于立场，成了屁股决定脑袋的「政治先验决定论</description>
-    </item>
-    
-    <item>
       <title>为什么选择 Linux 桌面</title>
       <link>https://bigshans.github.io/post/why-choose-linux-desktop/</link>
       <pubDate>Sun, 11 Apr 2021 18:18:57 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/why-choose-linux-desktop/</guid>
       <description>今天算是创作欲爆棚了，想到了一点东西就又写一点。今天来探讨一下这个话题，为什么选择 Linux 桌面。 为什么选择 Linux 市面上日用消费者最多的操作系统，主要是</description>
-    </item>
-    
-    <item>
-      <title>关于科幻小说中的机器人，或者是人工智能的讨论</title>
-      <link>https://bigshans.github.io/post/essay-%E7%A7%91%E5%B9%BB%E5%B0%8F%E8%AF%B4%E4%B8%AD%E7%9A%84%E6%9C%BA%E5%99%A8%E4%BA%BA/</link>
-      <pubDate>Sun, 11 Apr 2021 01:24:07 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/essay-%E7%A7%91%E5%B9%BB%E5%B0%8F%E8%AF%B4%E4%B8%AD%E7%9A%84%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
-      <description>这是我在看 vivy 时想到的，也是我看很多人工智能讨论时，经常看到的问题。我们经常在科幻小说中看到那种高智慧的机器人，但这种所谓的机器人，只是被降格</description>
     </item>
     
     <item>
@@ -204,16 +96,6 @@
       
       <guid>https://bigshans.github.io/post/%E9%9A%8F%E7%AC%94-readingback/</guid>
       <description>&lt;p&gt;我自高中以后便没有写过什么作文了，一来是没有什么闲心，二来是没有什么动力。同样的情况，我从高三开始便没有再读书了，就是那些闲书，以前我最爱看的，什么小说啊，社科啊，哲学之类的。在我高三开始，为了省下复习的时间，于是便戒了书瘾。结果是，书瘾戒了，学习却没有好，高中时候花了大量时间去读闲书，到头来却是得到了最差的结果。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>关于暑假的总结</title>
-      <link>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8E%E6%9A%91%E5%81%87%E7%9A%84%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Sat, 25 Aug 2018 14:17:10 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8E%E6%9A%91%E5%81%87%E7%9A%84%E6%80%BB%E7%BB%93/</guid>
-      <description>&lt;p&gt;最终使用了 hexo 搭建自己的博客，而不是闲得蛋疼非得自己写。&lt;/p&gt;
-&lt;p&gt;这个暑假原本打算写一个网易云音乐的第三方客户端，然而最终还是弃了，UI过于蛋疼，于是改用现有的主题。自己写了大半天发现主题并不好用=。= ，html 和 css 真的不太懂啊。&lt;/p&gt;</description>
     </item>
     
     <item>
