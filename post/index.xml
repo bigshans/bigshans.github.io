@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 23 Jan 2022 19:10:42 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Jan 2022 09:35:29 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>两种匮乏</title>
+      <link>https://bigshans.github.io/post/two-kinds-scarcity/</link>
+      <pubDate>Sun, 30 Jan 2022 09:35:29 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/two-kinds-scarcity/</guid>
+      <description>性别的话题是我比较难介入，因为究其原因，我自身的性别导致我思考的局限，但我觉得我仍然要去思考其中的一些问题，以下是我暂时的一种思考。 男性与女</description>
+    </item>
+    
     <item>
       <title>coc-kite-cmp 发布</title>
       <link>https://bigshans.github.io/post/coc-kite-cmp-publish/</link>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/how-to-write-a-deep-copy-function/</guid>
       <description>跟小伙伴们讨论的时候发现，es6 的解构其实和 Object.assign 一样属于是浅拷贝。那么一个深拷贝到底该怎么写呢？我个人阅读了一下 lodash 、 rambda 、 rfdc 的实现，发现思想其实</description>
-    </item>
-    
-    <item>
-      <title>如何编写一个 Chrome 扩展</title>
-      <link>https://bigshans.github.io/post/chrome-extensions/</link>
-      <pubDate>Sun, 15 Aug 2021 14:48:54 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/chrome-extensions/</guid>
-      <description>最近工作需要用到 Chrome 扩展，于是就特意学习了一下。起初，我以为 Chrome 扩展权限挺大，操作起来应该挺方便的，但是，实际情况各种权限需要申请，而且有些操作</description>
     </item>
     
   </channel>
