@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 30 Jan 2022 09:35:29 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Feb 2022 12:07:47 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>思辨</title>
-      <link>https://bigshans.github.io/categories/%E6%80%9D%E8%BE%A8/</link>
-      <pubDate>Sun, 30 Jan 2022 09:35:29 +0800</pubDate>
+      <title>随笔</title>
+      <link>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
+      <pubDate>Thu, 03 Feb 2022 12:07:47 +0800</pubDate>
       
-      <guid>https://bigshans.github.io/categories/%E6%80%9D%E8%BE%A8/</guid>
+      <guid>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</guid>
       <description></description>
     </item>
     
@@ -63,15 +63,6 @@
     </item>
     
     <item>
-      <title>随笔</title>
-      <link>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
-      <pubDate>Thu, 06 Jan 2022 11:36:13 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>年终总结</title>
       <link>https://bigshans.github.io/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
       <pubDate>Tue, 28 Dec 2021 15:28:05 +0800</pubDate>
@@ -86,6 +77,15 @@
       <pubDate>Tue, 28 Dec 2021 13:41:37 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>思辨</title>
+      <link>https://bigshans.github.io/categories/%E6%80%9D%E8%BE%A8/</link>
+      <pubDate>Sun, 26 Dec 2021 18:11:26 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/%E6%80%9D%E8%BE%A8/</guid>
       <description></description>
     </item>
     
