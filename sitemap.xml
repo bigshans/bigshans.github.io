@@ -2,21 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://bigshans.github.io/</loc>
-    <lastmod>2022-02-03T12:07:47+08:00</lastmod>
+    <loc>https://bigshans.github.io/post/top-blog/</loc>
+    <lastmod>2022-02-12T09:21:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2022-02-03T12:07:47+08:00</lastmod>
+    <loc>https://bigshans.github.io/</loc>
+    <lastmod>2022-02-12T09:21:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/post/</loc>
+    <lastmod>2022-02-12T09:21:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/</loc>
     <lastmod>2022-02-03T12:07:47+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

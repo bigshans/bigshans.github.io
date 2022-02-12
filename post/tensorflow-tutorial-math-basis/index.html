@@ -234,12 +234,16 @@
     <div class="post-content">
       
 
-<p>数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。本篇以 d2l 第二版所提供的数学知识作为阅读内容进行学习。换而言之，本篇是 d2l 的读书笔记。我尽量把我能弄懂弄清楚，所以，开始吧！</p>
+<p>数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。本篇以 d2l
+第二版所提供的数学知识作为阅读内容进行学习。换而言之，本篇是 d2l
+的读书笔记。我尽量把我能弄懂弄清楚，所以，开始吧！</p>
 <h2 id="导入">导入</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span></code></pre></div>
 <h2 id="线性代数">线性代数</h2>
 <h3 id="标量">标量</h3>
-<p>所谓标量，就是只有大小、没有方向、可用实数表示的一个量。在 tensorflow 中，我们使用 只有一个元素的张量表示，它可以被正常用于加减乘除。对于我们来说，实际上它就是一个数。</p>
+<p>所谓标量，就是只有大小、没有方向、可用实数表示的一个量。在 tensorflow
+中，我们使用
+只有一个元素的张量表示，它可以被正常用于加减乘除。对于我们来说，实际上它就是一个数。</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> tf.constant([<span class="fl">3.0</span>])</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> tf.constant([<span class="fl">2.0</span>])</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -259,19 +263,28 @@ a_n \\
 \end{matrix}
 \right], \tag{1, 1}
 \]</span></p>
-<p>其中 <span class="math inline">\(a_1 , \dots, a_n\)</span> 都是向量的元素，我们使用索引来访问任何一个元素。</p>
+<p>其中 <span class="math inline">\(a_1 , \dots, a_n\)</span>
+都是向量的元素，我们使用索引来访问任何一个元素。</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">3</span>]</span></code></pre></div>
-<p>显而易见的，向量只有一维，它因此存在一个长度。通过 <code>len()</code> 即可以获得。</p>
+<p>显而易见的，向量只有一维，它因此存在一个长度。通过 <code>len()</code>
+即可以获得。</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(x)</span></code></pre></div>
-<p>因为我们实际上是把它当作一个特殊的张量来使用的，它实际上还存在一个 <code>shape</code> ，只不过是一维的。</p>
+<p>因为我们实际上是把它当作一个特殊的张量来使用的，它实际上还存在一个
+<code>shape</code> ，只不过是一维的。</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>x.shape</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># TensorShape([4])</span></span></code></pre></div>
 <h3 id="矩阵">矩阵</h3>
-<p>我们一步步前进你就会发现，标量到向量，意味着我们从零维到达了一维，而从向量到矩阵，我们则从一维到达了二维。矩阵在形式上是由 <span class="math inline">\(m \times n\)</span> 个元素组成的 <span class="math inline">\(m\)</span> 行 <span class="math inline">\(n\)</span> 列的元素几何，在代码中，被表示为具有两个轴的张量。</p>
+<p>我们一步步前进你就会发现，标量到向量，意味着我们从零维到达了一维，而从向量到矩阵，我们则从一维到达了二维。矩阵在形式上是由
+<span class="math inline">\(m \times n\)</span> 个元素组成的 <span class="math inline">\(m\)</span> 行 <span class="math inline">\(n\)</span>
+列的元素几何，在代码中，被表示为具有两个轴的张量。</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> tf.reshapre(tf.<span class="bu">range</span>(<span class="dv">20</span>), (<span class="dv">5</span>, <span class="dv">4</span>))</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>A</span></code></pre></div>
 <p>这里我们使用 <code>reshapre()</code> 创建了一个矩阵。</p>
-<p>在数学表示法中，我们使用 <span class="math inline">\(\mathbf{A} \in \mathbb{R}^{m\times n}\)</span> 来表示矩阵，其由 <span class="math inline">\(m\)</span> 行和 <span class="math inline">\(n\)</span> 列的实值标量组成。直观地，我们可以将任意矩阵 <span class="math inline">\(\mathbf{A} \in \mathbb{R}^{m\times n}\)</span> 视为一个表格，其中每个元素 <span class="math inline">\(a_{ij}\)</span> 属于第 <span class="math inline">\(i\)</span> 行第 <span class="math inline">\(j\)</span> 列： <span class="math display">\[
+<p>在数学表示法中，我们使用 <span class="math inline">\(\mathbf{A} \in
+\mathbb{R}^{m\times n}\)</span> 来表示矩阵，其由 <span class="math inline">\(m\)</span> 行和 <span class="math inline">\(n\)</span>
+列的实值标量组成。直观地，我们可以将任意矩阵 <span class="math inline">\(\mathbf{A} \in \mathbb{R}^{m\times n}\)</span>
+视为一个表格，其中每个元素 <span class="math inline">\(a_{ij}\)</span>
+属于第 <span class="math inline">\(i\)</span> 行第 <span class="math inline">\(j\)</span> 列： <span class="math display">\[
 \mathbf{x} = \left[
 \begin{matrix}
 a_{11} &amp; a_{12} &amp; \dots &amp; a_{1n} \\
@@ -280,10 +293,14 @@ a_{21} &amp; a_{22} &amp; \dots &amp; a_{2n} \\
 a_{m1} &amp; a_{m2} &amp; \dots &amp; a_{mn} \\
 \end{matrix}
 \right], \tag{2, 1}
-\]</span> 如果 <span class="math inline">\(m = n\)</span> ，则称之为方矩阵。</p>
-<p>有时候我们想要翻转矩阵。当我们交换举轴和列时，其结果成为矩阵的转置（transpose）。我们用 <span class="math inline">\(\mathbf{B} = \mathbf{A^\mathrm{T}}\)</span> 。我用使用 <code>tf.transpose()</code> 进行转置。</p>
+\]</span> 如果 <span class="math inline">\(m = n\)</span>
+，则称之为方矩阵。</p>
+<p>有时候我们想要翻转矩阵。当我们交换举轴和列时，其结果成为矩阵的转置（transpose）。我们用
+<span class="math inline">\(\mathbf{B} = \mathbf{A^\mathrm{T}}\)</span>
+。我用使用 <code>tf.transpose()</code> 进行转置。</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tf.transpose(A)</span></code></pre></div>
-<p>比如我们对 <code>(2, 1)</code> 进行转置就得到了 <code>(2, 2)</code> 。 <span class="math display">\[
+<p>比如我们对 <code>(2, 1)</code> 进行转置就得到了 <code>(2, 2)</code>
+。 <span class="math display">\[
 \mathbf{x} = \left[
 \begin{matrix}
 a_{11} &amp; a_{21} &amp; \dots &amp; a_{m1} \\
@@ -292,7 +309,8 @@ a_{12} &amp; a_{22} &amp; \dots &amp; a_{m2} \\
 a_{1n} &amp; a_{n2} &amp; \dots &amp; a_{mn} \\
 \end{matrix}
 \right], \tag{2, 2}
-\]</span> 如果 <span class="math inline">\(\mathbf{A} = \mathbf{A^{\mathrm{T}}}\)</span> ，则该矩阵我们称为对称矩阵。</p>
+\]</span> 如果 <span class="math inline">\(\mathbf{A} =
+\mathbf{A^{\mathrm{T}}}\)</span> ，则该矩阵我们称为对称矩阵。</p>
 <p>我们可以用代码简单证明一下。</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> tf.constant([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">4</span>], [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]])</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">==</span> tftranspose(B)</span>
@@ -339,7 +357,11 @@ a_{1n} &amp; a_{n2} &amp; \dots &amp; a_{mn} \\
 <span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co">        [24., 26., 28., 30.],</span></span>
 <span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="co">        [32., 34., 36., 38.]], dtype=float32)&gt;)</span></span>
 <span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
-<p>具体而言，两个矩阵按元素乘法成为<em>哈达玛积</em>（Hadamard product，数学符号 <span class="math inline">\(\odot\)</span>）。对于矩阵 <span class="math inline">\(\mathbf{B} \in \mathbb{R}^{m \times n}\)</span> ，其中第 <span class="math inline">\(i\)</span> 行和第 <span class="math inline">\(j\)</span> 列的元素是 <span class="math inline">\(b_{ij}\)</span> 。矩阵 <span class="math inline">\(\mathbf{A}\)</span> （定义 <code>2，1</code>）和 <span class="math inline">\(\mathbf{B}\)</span> 的哈达玛积为： <span class="math display">\[
+<p>具体而言，两个矩阵按元素乘法成为<em>哈达玛积</em>（Hadamard
+product，数学符号 <span class="math inline">\(\odot\)</span>）。对于矩阵
+<span class="math inline">\(\mathbf{B} \in \mathbb{R}^{m \times
+n}\)</span> ，其中第 <span class="math inline">\(i\)</span> 行和第 <span class="math inline">\(j\)</span> 列的元素是 <span class="math inline">\(b_{ij}\)</span> 。矩阵 <span class="math inline">\(\mathbf{A}\)</span> （定义 <code>2，1</code>）和
+<span class="math inline">\(\mathbf{B}\)</span> 的哈达玛积为： <span class="math display">\[
 \mathbf{A} \odot \mathbf{B} = \left[
 \begin{matrix}
 a_{11}b_{11} &amp; a_{12}b_{12} &amp; \dots &amp; a_{1n}b_{1n} \\
@@ -367,12 +389,15 @@ a_{m1}b_{m1} &amp; a_{m2}b_{m2} &amp; \dots &amp; a_{mn}b_{mn} \\
 <span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="co"> TensorShape([2, 3, 4]))</span></span>
 <span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
 <h3 id="降维">降维</h3>
-<p>我们可以对任何张量计算其元素的和。在数学表示法中，我们使用 <span class="math inline">\(\sum\)</span> 来表示求和，为了表示向量中元素的总和，可以记为 <span class="math inline">\(\sum_{i=1}^{d}x_i\)</span> 。在 tensorflow 中，我们调用 <code>tf.reduce_sum()</code> 来计算求和。</p>
+<p>我们可以对任何张量计算其元素的和。在数学表示法中，我们使用 <span class="math inline">\(\sum\)</span>
+来表示求和，为了表示向量中元素的总和，可以记为 <span class="math inline">\(\sum_{i=1}^{d}x_i\)</span> 。在 tensorflow
+中，我们调用 <code>tf.reduce_sum()</code> 来计算求和。</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> tf.<span class="bu">range</span>(<span class="dv">4</span>, dtype<span class="op">=</span>tf.float32)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>x, tf.reduce_sum(x)</span></code></pre></div>
 <p>我们也可以表示任何形状张量的元素和。例如，矩阵 <span class="math inline">\(\mathbf{A}\)</span> 中的元素和可以记为 <span class="math inline">\(\sum_{i=1}^{m}\sum_{j=1}^{n}a_{ij}\)</span> 。</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>A.shape, tf.reduce_sum(A)</span></code></pre></div>
-<p>默认情况下，调用求和函数会沿所有的轴降低张量的维度，使它变为一个标量。 我们还可以指定张量沿哪一个轴来通过求和降低维度。</p>
+<p>默认情况下，调用求和函数会沿所有的轴降低张量的维度，使它变为一个标量。
+我们还可以指定张量沿哪一个轴来通过求和降低维度。</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>A_sum_axis0 <span class="op">=</span> tf.reduce_sum(A, axis<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>A_sum_axis0, A_sum_axis0.shape</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
@@ -380,7 +405,10 @@ a_{m1}b_{m1} &amp; a_{m2}b_{m2} &amp; \dots &amp; a_{mn}b_{mn} \\
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co">(&lt;tf.Tensor: shape=(4,), dtype=float32, numpy=array([40., 45., 50., 55.], dtype=float32)&gt;,</span></span>
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co"> TensorShape([4]))</span></span>
 <span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
-<p>其中 <code>axis</code> 的决定了求和函数将哪个轴合并，可以使用 <code>list</code> 进行多轴求和。显然，当 <code>axis=[0,1]</code> 时，对矩阵 <span class="math inline">\(\mathbf{A}\)</span> 的求和与直接求和无异。</p>
+<p>其中 <code>axis</code> 的决定了求和函数将哪个轴合并，可以使用
+<code>list</code> 进行多轴求和。显然，当 <code>axis=[0,1]</code>
+时，对矩阵 <span class="math inline">\(\mathbf{A}\)</span>
+的求和与直接求和无异。</p>
 <h4 id="非降维求和">非降维求和</h4>
 <p>有时候维度保持住还是非常有用的。</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>sum_A <span class="op">=</span> tf.reduce_sum(A, axis<span class="op">=</span><span class="dv">1</span>, keepdims<span class="op">=</span><span class="va">True</span>)</span>
@@ -406,7 +434,11 @@ a_{m1}b_{m1} &amp; a_{m2}b_{m2} &amp; \dots &amp; a_{mn}b_{mn} \\
 <span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="co">       [40., 45., 50., 55.]], dtype=float32)&gt;</span></span>
 <span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
 <h3 id="点积">点积</h3>
-<p>所谓点积（Dot Product），即给定两个向量 <span class="math inline">\(\mathbf{x}, \mathbf{y} \in \mathbb{R}^d\)</span> ，它们的点积为 <span class="math inline">\(\mathbf{x} \cdot \mathbf{y}\)</span> （或 <span class="math inline">\(\left&lt;\mathbf{x}, \mathbf{y}\right&gt;\)</span>），计算为相同位置的按元素成绩的和： <span class="math inline">\(\mathbf{x \cdot y} = \sum_{i=1}^{d}x_iy_i\)</span> 。</p>
+<p>所谓点积（Dot Product），即给定两个向量 <span class="math inline">\(\mathbf{x}, \mathbf{y} \in \mathbb{R}^d\)</span>
+，它们的点积为 <span class="math inline">\(\mathbf{x} \cdot
+\mathbf{y}\)</span> （或 <span class="math inline">\(\left&lt;\mathbf{x},
+\mathbf{y}\right&gt;\)</span>），计算为相同位置的按元素成绩的和： <span class="math inline">\(\mathbf{x \cdot y} = \sum_{i=1}^{d}x_iy_i\)</span>
+。</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> tf.ones(<span class="dv">4</span>, dtype<span class="op">=</span>tf.float32)</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>x, y, tf.tensordot(x, y, axes<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
@@ -417,10 +449,16 @@ a_{m1}b_{m1} &amp; a_{m2}b_{m2} &amp; \dots &amp; a_{mn}b_{mn} \\
 <span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
 <p>其实也可以直接相加。</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>tf.redice_sum(x <span class="op">*</span> y)</span></code></pre></div>
-<p>从代数上看， <span class="math inline">\(\mathbf{x} \cdot \mathbf{y}\)</span> 实际上等于 <span class="math inline">\(\mathbf{x}^{\mathsf{T}} \mathbf{y}\)</span> ；从几何上看，点积可以直观的定义为 <span class="math inline">\(\mathbf{a \cdot b} = \mathbf{|a||b|}\cos \theta\)</span> ， <span class="math inline">\(\theta\)</span> 为 <span class="math inline">\(\mathbf{A}\)</span> 和 <span class="math inline">\(\mathbf{B}\)</span> 的夹角，因此，不难理解，两个向量的点积可以理解为向量 <span class="math inline">\(\mathbf{A}\)</span> 在向量 <span class="math inline">\(\mathbf{B}\)</span> 上的投影再乘以 <span class="math inline">\(\mathbf{B}\)</span> 的长度。</p>
+<p>从代数上看， <span class="math inline">\(\mathbf{x} \cdot
+\mathbf{y}\)</span> 实际上等于 <span class="math inline">\(\mathbf{x}^{\mathsf{T}} \mathbf{y}\)</span>
+；从几何上看，点积可以直观的定义为 <span class="math inline">\(\mathbf{a
+\cdot b} = \mathbf{|a||b|}\cos \theta\)</span> ， <span class="math inline">\(\theta\)</span> 为 <span class="math inline">\(\mathbf{A}\)</span> 和 <span class="math inline">\(\mathbf{B}\)</span>
+的夹角，因此，不难理解，两个向量的点积可以理解为向量 <span class="math inline">\(\mathbf{A}\)</span> 在向量 <span class="math inline">\(\mathbf{B}\)</span> 上的投影再乘以 <span class="math inline">\(\mathbf{B}\)</span> 的长度。</p>
 <h3 id="矩阵向量积">矩阵向量积</h3>
-<p>现在，我们知道如何计算点积，我们可以开始计算<em>矩阵向量积</em>（matrix-vector product）了。这个实际上是一个过渡内容。</p>
-<p>我们首先将矩阵 <span class="math inline">\(\mathbf{A}\)</span> 用行向量表示： <span class="math display">\[
+<p>现在，我们知道如何计算点积，我们可以开始计算<em>矩阵向量积</em>（matrix-vector
+product）了。这个实际上是一个过渡内容。</p>
+<p>我们首先将矩阵 <span class="math inline">\(\mathbf{A}\)</span>
+用行向量表示： <span class="math display">\[
 \mathbf{A} = \left[
 \begin{matrix}
 \mathbf{a_1^{\mathsf{T}}} \\
@@ -429,7 +467,8 @@ a_{m1}b_{m1} &amp; a_{m2}b_{m2} &amp; \dots &amp; a_{mn}b_{mn} \\
 \mathbf{a_m^{\mathsf{T}}} \\
 \end{matrix}
 \right] \tag{4, 1}
-\]</span> 其中，<span class="math inline">\(\mathbf{a_i^{\mathsf{T}}} \in \mathbb{R}^n\)</span> 都是行向量，表示矩阵第 <span class="math inline">\(i\)</span> 行。矩阵向量积 <span class="math inline">\(\mathbf{Ax}\)</span> 是一个长度为 <span class="math inline">\(m\)</span> 的列向量： <span class="math display">\[
+\]</span> 其中，<span class="math inline">\(\mathbf{a_i^{\mathsf{T}}}
+\in \mathbb{R}^n\)</span> 都是行向量，表示矩阵第 <span class="math inline">\(i\)</span> 行。矩阵向量积 <span class="math inline">\(\mathbf{Ax}\)</span> 是一个长度为 <span class="math inline">\(m\)</span> 的列向量： <span class="math display">\[
 \mathbf{Ax} = \left[
 \begin{matrix}
 \mathbf{a_1^{\mathsf{T}}} \\
@@ -448,7 +487,9 @@ a_{m1}b_{m1} &amp; a_{m2}b_{m2} &amp; \dots &amp; a_{mn}b_{mn} \\
 \]</span></p>
 <h3 id="矩阵乘法">矩阵乘法</h3>
 <p>现在我们学习矩阵乘法。</p>
-<p>假设我们有两个矩阵 <span class="math inline">\(\mathbf{A} \in \mathbb{R}^{n\times k}\)</span> 和 <span class="math inline">\(\mathbf{B} \in \mathbb{R}^{n\times k}\)</span> ： <span class="math display">\[
+<p>假设我们有两个矩阵 <span class="math inline">\(\mathbf{A} \in
+\mathbb{R}^{n\times k}\)</span> 和 <span class="math inline">\(\mathbf{B} \in \mathbb{R}^{n\times k}\)</span> ：
+<span class="math display">\[
 \mathbf{A} = \left[
 \begin{matrix}
 a_{11} &amp; a_{12} &amp; \dots &amp; a_{1k} \\
@@ -465,7 +506,9 @@ b_{21} &amp; b_{22} &amp; \dots &amp; b_{2k} \\
 b_{n1} &amp; b_{n2} &amp; \dots &amp; b_{nk} \\
 \end{matrix}
 \right] \tag{5, 1}
-\]</span> 用行向量 <span class="math inline">\(\mathbf{a_i^{\mathsf{T}}} \in \mathbb{R}^k\)</span> 表示矩阵 <span class="math inline">\(\mathbf{A}\)</span> 的第 <span class="math inline">\(i\)</span> 行，并让列向量 <span class="math inline">\(\mathbf{b_j} \in \mathbb{R}^k\)</span> 表示矩阵 <span class="math inline">\(\mathbf{B}\)</span> 的第 <span class="math inline">\(j\)</span> 列，则 <span class="math display">\[
+\]</span> 用行向量 <span class="math inline">\(\mathbf{a_i^{\mathsf{T}}}
+\in \mathbb{R}^k\)</span> 表示矩阵 <span class="math inline">\(\mathbf{A}\)</span> 的第 <span class="math inline">\(i\)</span> 行，并让列向量 <span class="math inline">\(\mathbf{b_j} \in \mathbb{R}^k\)</span> 表示矩阵
+<span class="math inline">\(\mathbf{B}\)</span> 的第 <span class="math inline">\(j\)</span> 列，则 <span class="math display">\[
 \mathbf{A} = \left[
 \begin{matrix}
 \mathbf{a_1^{\mathsf{T}}} \\
@@ -500,13 +543,20 @@ b_{n1} &amp; b_{n2} &amp; \dots &amp; b_{nk} \\
 \end{matrix}
 \right] = \left[
 \begin{matrix}
-\mathbf{a_1^{\mathsf{T}}b_1} &amp; \mathbf{a_1^{\mathsf{T}}b_2} &amp; \cdots &amp; \mathbf{a_1^{\mathsf{T}}b_m} \\
-\mathbf{a_2^{\mathsf{T}}b_1} &amp; \mathbf{a_2^{\mathsf{T}}b_2} &amp; \cdots &amp; \mathbf{a_2^{\mathsf{T}}b_m} \\
+\mathbf{a_1^{\mathsf{T}}b_1} &amp; \mathbf{a_1^{\mathsf{T}}b_2} &amp;
+\cdots &amp; \mathbf{a_1^{\mathsf{T}}b_m} \\
+\mathbf{a_2^{\mathsf{T}}b_1} &amp; \mathbf{a_2^{\mathsf{T}}b_2} &amp;
+\cdots &amp; \mathbf{a_2^{\mathsf{T}}b_m} \\
 \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-\mathbf{a_n^{\mathsf{T}}b_1} &amp; \mathbf{a_n^{\mathsf{T}}b_2} &amp; \cdots &amp; \mathbf{a_n^{\mathsf{T}}b_m} \\
+\mathbf{a_n^{\mathsf{T}}b_1} &amp; \mathbf{a_n^{\mathsf{T}}b_2} &amp;
+\cdots &amp; \mathbf{a_n^{\mathsf{T}}b_m} \\
 \end{matrix}
 \right] \tag{5, 3}
-\]</span> 我们可以将矩阵-矩阵乘法 <span class="math inline">\(\mathbf{AB}\)</span> 看作是简单地执行 <span class="math inline">\(m\)</span> 次矩阵-向量积，并将结果拼接在一起，形成一个 <span class="math inline">\(m\times n\)</span> 矩阵。在下面的代码中，我们在 <code>A</code> 和 <code>B</code> 上执行矩阵乘法。这里的 <code>A</code> 是一个5行4列的矩阵， <code>B</code> 是一个4行3列的矩阵。相乘后，我们得到了一个5行3列的矩阵。</p>
+\]</span> 我们可以将矩阵-矩阵乘法 <span class="math inline">\(\mathbf{AB}\)</span> 看作是简单地执行 <span class="math inline">\(m\)</span>
+次矩阵-向量积，并将结果拼接在一起，形成一个 <span class="math inline">\(m\times n\)</span> 矩阵。在下面的代码中，我们在
+<code>A</code> 和 <code>B</code> 上执行矩阵乘法。这里的 <code>A</code>
+是一个5行4列的矩阵， <code>B</code>
+是一个4行3列的矩阵。相乘后，我们得到了一个5行3列的矩阵。</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> tf.ones((<span class="dv">4</span>, <span class="dv">3</span>), dtype<span class="op">=</span>float64)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>tf.matmul(A, B)</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
@@ -519,43 +569,61 @@ b_{n1} &amp; b_{n2} &amp; \dots &amp; b_{nk} \\
 <span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="co">       [70., 70., 70.]], dtype=float32)&gt;</span></span>
 <span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
 <h3 id="范数">范数</h3>
-<p>范数是具有“长度”概念的函数。非正式地说，一个向量的<em>范数</em>告诉我们一个向量有多大。 这里考虑的<em>大小</em>（size）概念不涉及维度，而是分量的大小。</p>
+<p>范数是具有“长度”概念的函数。非正式地说，一个向量的<em>范数</em>告诉我们一个向量有多大。
+这里考虑的<em>大小</em>（size）概念不涉及维度，而是分量的大小。</p>
 <p>在线性代数中，向量范数是将向量映射到标量的函数 <span class="math inline">\(f\)</span> 。向量范数需要满足一些属性。</p>
 <p>给定任意向量 <span class="math inline">\(\mathbf{x}\)</span> ，</p>
 <ul>
-<li><p>性质一，如果我们按常数因子 <span class="math inline">\(\alpha\)</span> 缩放向量的所有元素，其范数也会按照相同常数因子的绝对值缩放： <span class="math display">\[
-f\left(\alpha\mathbf{x}\right) = \left|\alpha\right|f\left(\mathbf{x}\right)
+<li><p>性质一，如果我们按常数因子 <span class="math inline">\(\alpha\)</span>
+缩放向量的所有元素，其范数也会按照相同常数因子的绝对值缩放： <span class="math display">\[
+f\left(\alpha\mathbf{x}\right) =
+\left|\alpha\right|f\left(\mathbf{x}\right)
 \]</span></p></li>
 <li><p>性质二，三角不等式： <span class="math display">\[
-f\left(\mathbf{x+y}\right) \le f\left(\mathbf{x}\right) + f\left(\mathbf{y}\right)
+f\left(\mathbf{x+y}\right) \le f\left(\mathbf{x}\right) +
+f\left(\mathbf{y}\right)
 \]</span></p></li>
 <li><p>性质三，非负性： <span class="math display">\[
 f\left(\mathbf{x}\right) \ge 0
 \]</span></p></li>
 <li><p>性质四，范数最小为 0 ，当且仅当全部向量全由 0 组成： <span class="math display">\[
-\forall_i,\left[\mathbf{x}\right]_i = 0 \Leftrightarrow f\left(\mathbf{x}\right) = 0
+\forall_i,\left[\mathbf{x}\right]_i = 0 \Leftrightarrow
+f\left(\mathbf{x}\right) = 0
 \]</span></p></li>
 </ul>
-<p>举个例子，比如 <span class="math inline">\(L_2\)</span> 范数欧几里德距离。假设 <span class="math inline">\(n\)</span> 维向量 <span class="math inline">\(\mathbf{x}\)</span> 中的元素是 <span class="math inline">\(x_1, \cdots , x_n\)</span> ,其中 <span class="math inline">\(L_2\)</span> 是向量元素平方和的平方根： <span class="math display">\[
+<p>举个例子，比如 <span class="math inline">\(L_2\)</span>
+范数欧几里德距离。假设 <span class="math inline">\(n\)</span> 维向量
+<span class="math inline">\(\mathbf{x}\)</span> 中的元素是 <span class="math inline">\(x_1, \cdots , x_n\)</span> ,其中 <span class="math inline">\(L_2\)</span> 是向量元素平方和的平方根： <span class="math display">\[
 \left \| \mathbf{x} \right \|_2 = \sqrt{\sum_{i=1}^{n} x_i^2}
 \]</span></p>
-<p>其中，在 <span class="math inline">\(L_2\)</span> 范数中常常省略下标 2 ，也就是说 <span class="math inline">\(\left\|\mathbf{x}\right\|\)</span> 等同于 <span class="math inline">\(\left\|\mathbf{x}\right\|_2\)</span> 。在 tensorflow 中，我们使用 <code>tf.norm</code> 来计算 <span class="math inline">\(L_2\)</span> 范数。</p>
+<p>其中，在 <span class="math inline">\(L_2\)</span> 范数中常常省略下标
+2 ，也就是说 <span class="math inline">\(\left\|\mathbf{x}\right\|\)</span> 等同于 <span class="math inline">\(\left\|\mathbf{x}\right\|_2\)</span> 。在
+tensorflow 中，我们使用 <code>tf.norm</code> 来计算 <span class="math inline">\(L_2\)</span> 范数。</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> f.constant([<span class="fl">3.0</span>, <span class="op">-</span><span class="fl">4.0</span>])</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>tf.norm(u)</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co">output:</span></span>
 <span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;tf.Tensor: shape=(), dtype=float32, numpy=5.0&gt;</span></span>
 <span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
-<p>在深度学习中，我们更常使用 <span class="math inline">\(L_2\)</span> 范数的平方，你还会遇到 <span class="math inline">\(L_2\)</span> 范数，它表示为向量元素的绝对值之和： <span class="math display">\[
+<p>在深度学习中，我们更常使用 <span class="math inline">\(L_2\)</span>
+范数的平方，你还会遇到 <span class="math inline">\(L_2\)</span>
+范数，它表示为向量元素的绝对值之和： <span class="math display">\[
 \left\| \mathbf{x} \right\|_1 = \sum_{i=1}^{n} \left|x_i\right|
 \]</span></p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>tf.reduce_sum(tf.<span class="bu">abs</span>(u))</span></code></pre></div>
 <p><span class="math inline">\(L_1\)</span> 范数和 <span class="math inline">\(L_2\)</span> 范数都是更一般的 <span class="math inline">\(L_p\)</span> 范数的特例： <span class="math display">\[
-\left\| \mathbf{x} \right\|_p = \left(\sum_{i=1}^{n} \left|x_i\right|^p\right)^{1/p}
+\left\| \mathbf{x} \right\|_p = \left(\sum_{i=1}^{n}
+\left|x_i\right|^p\right)^{1/p}
 \]</span></p>
-<p>类似于向量的 <span class="math inline">\(L_2\)</span> 范数，矩阵 <span class="math inline">\(\mathbf{X} \in \mathbb{R}^{m\times n}\)</span> 的<em>弗罗贝尼乌斯范数</em>（Frobenius norm）是矩阵元素平方和的平方根： <span class="math display">\[
-\left \| \mathbf{X} \right \|_F = \sqrt{\sum_{i=1}^{m} \sum_{j=1}^n x_{ij}^2}
-\]</span> 弗罗贝尼乌斯范数满足向量范数的所有性质，它就像是矩阵形向量的 <span class="math inline">\(L_2\)</span> 范数。 调用以下函数将计算矩阵的弗罗贝尼乌斯范数。</p>
+<p>类似于向量的 <span class="math inline">\(L_2\)</span> 范数，矩阵
+<span class="math inline">\(\mathbf{X} \in \mathbb{R}^{m\times
+n}\)</span> 的<em>弗罗贝尼乌斯范数</em>（Frobenius
+norm）是矩阵元素平方和的平方根： <span class="math display">\[
+\left \| \mathbf{X} \right \|_F = \sqrt{\sum_{i=1}^{m} \sum_{j=1}^n
+x_{ij}^2}
+\]</span> 弗罗贝尼乌斯范数满足向量范数的所有性质，它就像是矩阵形向量的
+<span class="math inline">\(L_2\)</span> 范数。
+调用以下函数将计算矩阵的弗罗贝尼乌斯范数。</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>tf.norm(tf.ones((<span class="dv">4</span>, <span class="dv">9</span>)))</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co">output:</span></span>
@@ -563,19 +631,30 @@ f\left(\mathbf{x}\right) \ge 0
 <span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
 <h2 id="微分">微分</h2>
 <h3 id="导数">导数</h3>
-<p>假设我们有一个函数 <span class="math inline">\(f：\mathbb{R}^n \rightarrow \mathbb{R}\)</span> ，其输入输出都是标量。 <span class="math inline">\(f\)</span> 的<strong>导数</strong>被定义为 <span class="math display">\[
-f&#39;\left(x\right) = \lim_{h\rightarrow\infty} \frac{f(x + h) - f(x)}{h} ,
-\]</span> 如果 <span class="math inline">\(f&#39;(a)\)</span> 存在，则称 <span class="math inline">\(f\)</span> 在 <span class="math inline">\(a\)</span> 处是<strong>可微</strong>（differentiable）的。如果<em>f</em>在一个区间内的每个数上都是可微的，则此函数在此区间中是可微的。我们可以将导数 <span class="math inline">\(f&#39;(x)\)</span> 解释为 <span class="math inline">\(f(x)\)</span> 相对于 <span class="math inline">\(x\)</span> 的<em>瞬时</em>（instantaneous）变化率。所谓的瞬时变化率是基于 <span class="math inline">\(x\)</span> 中的变化 <span class="math inline">\(h\)</span> ，且<span class="math inline">\(h\)</span> 接近 0 。</p>
-<p>让我们熟悉一下导数的几个等价符号。给定 <span class="math inline">\(y=f(x)\)</span> ，其中 <span class="math inline">\(x\)</span> 和 <span class="math inline">\(y\)</span> 分别是函数 <span class="math inline">\(y\)</span> 的自变量和因变量。以下表达式是等价的： <span class="math display">\[
-f&#39;(x) = y&#39; = \frac{dy}{dx} = \frac{df}{dx} = \frac{d}{dx} f(x) = Df{x} = D_xf{x},
-\]</span> 其中符号 <span class="math inline">\(\frac{d}{dx}\)</span> 和 <span class="math inline">\(D\)</span> 是微分运算符，表示微分操作。我们可以使用一下规则来对常数求微分：</p>
+<p>假设我们有一个函数 <span class="math inline">\(f：\mathbb{R}^n
+\rightarrow \mathbb{R}\)</span> ，其输入输出都是标量。 <span class="math inline">\(f\)</span> 的<strong>导数</strong>被定义为 <span class="math display">\[
+f&#39;\left(x\right) = \lim_{h\rightarrow\infty} \frac{f(x + h) -
+f(x)}{h} ,
+\]</span> 如果 <span class="math inline">\(f&#39;(a)\)</span> 存在，则称
+<span class="math inline">\(f\)</span> 在 <span class="math inline">\(a\)</span>
+处是<strong>可微</strong>（differentiable）的。如果<em>f</em>在一个区间内的每个数上都是可微的，则此函数在此区间中是可微的。我们可以将导数
+<span class="math inline">\(f&#39;(x)\)</span> 解释为 <span class="math inline">\(f(x)\)</span> 相对于 <span class="math inline">\(x\)</span>
+的<em>瞬时</em>（instantaneous）变化率。所谓的瞬时变化率是基于 <span class="math inline">\(x\)</span> 中的变化 <span class="math inline">\(h\)</span> ，且<span class="math inline">\(h\)</span> 接近 0 。</p>
+<p>让我们熟悉一下导数的几个等价符号。给定 <span class="math inline">\(y=f(x)\)</span> ，其中 <span class="math inline">\(x\)</span> 和 <span class="math inline">\(y\)</span> 分别是函数 <span class="math inline">\(y\)</span> 的自变量和因变量。以下表达式是等价的：
+<span class="math display">\[
+f&#39;(x) = y&#39; = \frac{dy}{dx} = \frac{df}{dx} = \frac{d}{dx} f(x) =
+Df{x} = D_xf{x},
+\]</span> 其中符号 <span class="math inline">\(\frac{d}{dx}\)</span> 和
+<span class="math inline">\(D\)</span>
+是微分运算符，表示微分操作。我们可以使用一下规则来对常数求微分：</p>
 <ul>
 <li><span class="math inline">\(DC = 0\)</span> （<span class="math inline">\(C\)</span> 是一个常数）</li>
 <li><span class="math inline">\(Dx^n=nx^{x-1}\)</span> （<span class="math inline">\(n\)</span> 是任意实数）</li>
 <li><span class="math inline">\(De^x = e^x\)</span></li>
 <li><span class="math inline">\(D\ln(x) = 1/x\)</span></li>
 </ul>
-<p>为了微分一个由一些简单函数（如上面的常见函数）组成的函数，下面的法则使用起来很方便。 假设函数 <span class="math inline">\(f\)</span> 和 <span class="math inline">\(g\)</span> 都是可微的， <span class="math inline">\(C\)</span> 是一个常数，我们有：</p>
+<p>为了微分一个由一些简单函数（如上面的常见函数）组成的函数，下面的法则使用起来很方便。
+假设函数 <span class="math inline">\(f\)</span> 和 <span class="math inline">\(g\)</span> 都是可微的， <span class="math inline">\(C\)</span> 是一个常数，我们有：</p>
 <ul>
 <li><p>常数相乘法则 <span class="math display">\[
 \frac{d}{dx}\left[Cf(x)\right] = C\frac{d}{dx}f(x),
@@ -584,42 +663,82 @@ f&#39;(x) = y&#39; = \frac{dy}{dx} = \frac{df}{dx} = \frac{d}{dx} f(x) = Df{x} =
 \frac{d}{dx}[f(x) + g(x)] = \frac{d}{dx}f(x) + \frac{d}{dx} g(x),
 \]</span></p></li>
 <li><p>乘法法则 <span class="math display">\[
-\frac{d}{dx}[f(x)g(x)] = f(x)\frac{d}{dx}[g(x)] + g(x)\frac{d}{dx}[f(x)],
+\frac{d}{dx}[f(x)g(x)] = f(x)\frac{d}{dx}[g(x)] +
+g(x)\frac{d}{dx}[f(x)],
 \]</span></p></li>
 <li><p>除法法则 <span class="math display">\[
-\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{g(x)\frac{d}{dx}\left[f(x)]-f(x)\frac{d}{dx}\left[g(x)\right]\right]}{[g(x)]^2}
+\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] =
+\frac{g(x)\frac{d}{dx}\left[f(x)]-f(x)\frac{d}{dx}\left[g(x)\right]\right]}{[g(x)]^2}
 \]</span></p></li>
 </ul>
 <h3 id="偏导数">偏导数</h3>
-<p>到目前为止，我们只讨论了仅含一个变量的函数的微分。在深度学习中，函数通常依赖于许多变量。因此，我们需要将微分的思想推广到这些<em>多元函数</em>（multivariate function）上。</p>
-<p>设 <span class="math inline">\(y=f(x_1,x_2,\cdots,x_n)\)</span> 是一个具有 <span class="math inline">\(n\)</span> 个变量的函数。 <span class="math inline">\(y\)</span> 关于第 <span class="math inline">\(i\)</span> 个参数 <span class="math inline">\(x_i\)</span> 的<strong>偏导数</strong>（partial derivative）为： <span class="math display">\[
-  \frac{\partial y}{\partial x_i} = \lim_{h \rightarrow \infty} \frac{f(x_1,\cdots,x_{i-1}, x_i+h, x_{i+1}, \cdots, x_n) - f(x_1, \cdots, x_i, \cdots, x_n)}{h}
-\]</span> 为了计算 <span class="math inline">\(\frac{\partial y}{\partial x_i}\)</span> ，我们可以简单地将 <span class="math inline">\(x_1, \cdots, x_{i-1}, x_{i+1}, \cdots， x_n\)</span> 看作常数。对于偏导数的表示，一下是等价的： <span class="math display">\[
-  \frac{\partial y}{\partial x_i} = \frac{\partial f}{\partial x_i} = f_{x_i} = f_i = D_if=D_{x_i}f
+<p>到目前为止，我们只讨论了仅含一个变量的函数的微分。在深度学习中，函数通常依赖于许多变量。因此，我们需要将微分的思想推广到这些<em>多元函数</em>（multivariate
+function）上。</p>
+<p>设 <span class="math inline">\(y=f(x_1,x_2,\cdots,x_n)\)</span>
+是一个具有 <span class="math inline">\(n\)</span> 个变量的函数。 <span class="math inline">\(y\)</span> 关于第 <span class="math inline">\(i\)</span> 个参数 <span class="math inline">\(x_i\)</span> 的<strong>偏导数</strong>（partial
+derivative）为： <span class="math display">\[
+  \frac{\partial y}{\partial x_i} = \lim_{h \rightarrow \infty}
+\frac{f(x_1,\cdots,x_{i-1}, x_i+h, x_{i+1}, \cdots, x_n) - f(x_1,
+\cdots, x_i, \cdots, x_n)}{h}
+\]</span> 为了计算 <span class="math inline">\(\frac{\partial
+y}{\partial x_i}\)</span> ，我们可以简单地将 <span class="math inline">\(x_1, \cdots, x_{i-1}, x_{i+1}, \cdots，
+x_n\)</span> 看作常数。对于偏导数的表示，一下是等价的： <span class="math display">\[
+  \frac{\partial y}{\partial x_i} = \frac{\partial f}{\partial x_i} =
+f_{x_i} = f_i = D_if=D_{x_i}f
 \]</span></p>
 <h3 id="梯度">梯度</h3>
-<p>我们可以连结一个多元函数对其所有变量的偏导数，以得到该函数的<em>梯度</em>（gradient）向量。设函数 <span class="math inline">\(f：\mathbb{R}^n \rightarrow \mathbb{R}\)</span> 输入的是一个 <span class="math inline">\(n\)</span> 维向量 <span class="math inline">\(\mathbf{x} = [x_1, x_2, \cdots, x_n]^{\mathsf{T}}\)</span> ，并且输出的是一个标量。函数 <span class="math inline">\(f(\mathbf{x})\)</span> 相对于 <span class="math inline">\(\mathbf{x}\)</span> 的梯度是一个包含 <span class="math inline">\(n\)</span> 个偏导数的向量： <span class="math display">\[
-  \nabla_xf(x) = \left[\frac{\partial f(x)}{\partial x_1}, \frac{\partial f(x)}{\partial x_2}, \cdots, \frac{\partial f(x)}{\partial x_n}\right]^{\mathsf{T}},
-\]</span> 其中 <span class="math inline">\(\nabla_xf(x)\)</span> 通常在没有歧义时被 <span class="math inline">\(\nabla f(x)\)</span> 取代。</p>
-<p>假设 <span class="math inline">\(\mathbf{x}\)</span> 为 <span class="math inline">\(n\)</span> 维向量，在微分多元函数时经常使用一下规则：</p>
+<p>我们可以连结一个多元函数对其所有变量的偏导数，以得到该函数的<em>梯度</em>（gradient）向量。设函数
+<span class="math inline">\(f：\mathbb{R}^n \rightarrow
+\mathbb{R}\)</span> 输入的是一个 <span class="math inline">\(n\)</span>
+维向量 <span class="math inline">\(\mathbf{x} = [x_1, x_2, \cdots,
+x_n]^{\mathsf{T}}\)</span> ，并且输出的是一个标量。函数 <span class="math inline">\(f(\mathbf{x})\)</span> 相对于 <span class="math inline">\(\mathbf{x}\)</span> 的梯度是一个包含 <span class="math inline">\(n\)</span> 个偏导数的向量： <span class="math display">\[
+  \nabla_xf(x) = \left[\frac{\partial f(x)}{\partial x_1},
+\frac{\partial f(x)}{\partial x_2}, \cdots, \frac{\partial
+f(x)}{\partial x_n}\right]^{\mathsf{T}},
+\]</span> 其中 <span class="math inline">\(\nabla_xf(x)\)</span>
+通常在没有歧义时被 <span class="math inline">\(\nabla f(x)\)</span>
+取代。</p>
+<p>假设 <span class="math inline">\(\mathbf{x}\)</span> 为 <span class="math inline">\(n\)</span>
+维向量，在微分多元函数时经常使用一下规则：</p>
 <ul>
-<li>对于所有 <span class="math inline">\(\mathbf{A} \in \mathsf{R}^{m\times n}\)</span> ，都有 <span class="math inline">\(\nabla_{\mathbf{x}}\mathbf{Ax} = \mathbf{A}^{\mathsf{T}}\)</span></li>
-<li>对于所有 <span class="math inline">\(\mathbf{A} \in \mathsf{R}^{m\times n}\)</span> ，都有 <span class="math inline">\(\nabla_{\mathbf{x}}\mathbf{x^{\mathsf{T}}A} = \mathbf{A}\)</span></li>
-<li>对于所有 <span class="math inline">\(\mathbf{A} \in \mathsf{R}^{m\times n}\)</span> ，都有 <span class="math inline">\(\nabla_{\mathbf{x}}\mathbf{A_x} = \mathbf{(A+A^{\mathsf{T}})x}\)</span></li>
-<li><span class="math inline">\(\nabla_{\mathbf{x}}\|\mathbf{x}\|^2=\mathbf{\nabla_{x} x^{\mathsf{T}}x}=2\mathbf{x}\)</span></li>
-<li>对于任何矩阵 <span class="math inline">\(\mathbf{X}\)</span> ，我们都有 <span class="math inline">\(\nabla_{\mathbf{x}}\|\mathbf{X}\|_F^2 = 2\mathbf{X}\)</span> 。</li>
+<li>对于所有 <span class="math inline">\(\mathbf{A} \in
+\mathsf{R}^{m\times n}\)</span> ，都有 <span class="math inline">\(\nabla_{\mathbf{x}}\mathbf{Ax} =
+\mathbf{A}^{\mathsf{T}}\)</span></li>
+<li>对于所有 <span class="math inline">\(\mathbf{A} \in
+\mathsf{R}^{m\times n}\)</span> ，都有 <span class="math inline">\(\nabla_{\mathbf{x}}\mathbf{x^{\mathsf{T}}A} =
+\mathbf{A}\)</span></li>
+<li>对于所有 <span class="math inline">\(\mathbf{A} \in
+\mathsf{R}^{m\times n}\)</span> ，都有 <span class="math inline">\(\nabla_{\mathbf{x}}\mathbf{A_x} =
+\mathbf{(A+A^{\mathsf{T}})x}\)</span></li>
+<li><span class="math inline">\(\nabla_{\mathbf{x}}\|\mathbf{x}\|^2=\mathbf{\nabla_{x}
+x^{\mathsf{T}}x}=2\mathbf{x}\)</span></li>
+<li>对于任何矩阵 <span class="math inline">\(\mathbf{X}\)</span>
+，我们都有 <span class="math inline">\(\nabla_{\mathbf{x}}\|\mathbf{X}\|_F^2 =
+2\mathbf{X}\)</span> 。</li>
 </ul>
 <h3 id="链式法则">链式法则</h3>
-<p>然而，上面方法可能很难找到梯度。 这是因为在深度学习中，多元函数通常是<em>复合</em>（composite）的，所以我们可能没法应用上述任何规则来微分这些函数。 幸运的是，链式法则使我们能够微分复合函数。</p>
+<p>然而，上面方法可能很难找到梯度。
+这是因为在深度学习中，多元函数通常是<em>复合</em>（composite）的，所以我们可能没法应用上述任何规则来微分这些函数。
+幸运的是，链式法则使我们能够微分复合函数。</p>
 <p>让我们先考虑单变量函数。假设函数 <span class="math inline">\(y=f(u)\)</span> 和 <span class="math inline">\(u=g(x)\)</span> 都是可微的，根据链式法则： <span class="math display">\[
 \frac{dy}{dx} = \frac{dy}{du}\frac{du}{dx},
-\]</span> 现在让我们把注意力转向一个更一般的场景，即函数具有任意数量的变量的情况。假设可微分函数 <span class="math inline">\(y\)</span> 有变量 <span class="math inline">\(u_1, u_2, \cdots , u_m\)</span> ，其中每个可微分函数 <span class="math inline">\(u_i\)</span> 都有变量 <span class="math inline">\(x_1, x_2, \cdots ,x_n\)</span> 。注意，的函数。对于任意 <span class="math inline">\(i = 1, 2, \cdots, n\)</span> ，链式法则给出： <span class="math display">\[
-\frac{dy}{dx_i} = \frac{dy}{du_1}\frac{du_1}{dx_i} + \frac{dy}{du_2}\frac{du_2}{dx_i} + \cdots + \frac{dy}{du_m}\frac{du_m}{dx_i}
+\]</span>
+现在让我们把注意力转向一个更一般的场景，即函数具有任意数量的变量的情况。假设可微分函数
+<span class="math inline">\(y\)</span> 有变量 <span class="math inline">\(u_1, u_2, \cdots , u_m\)</span>
+，其中每个可微分函数 <span class="math inline">\(u_i\)</span> 都有变量
+<span class="math inline">\(x_1, x_2, \cdots ,x_n\)</span>
+。注意，的函数。对于任意 <span class="math inline">\(i = 1, 2, \cdots,
+n\)</span> ，链式法则给出： <span class="math display">\[
+\frac{dy}{dx_i} = \frac{dy}{du_1}\frac{du_1}{dx_i} +
+\frac{dy}{du_2}\frac{du_2}{dx_i} + \cdots +
+\frac{dy}{du_m}\frac{du_m}{dx_i}
 \]</span></p>
 <h3 id="自动求导">自动求导</h3>
 <p>求导对于机器学习优化算法来说是非常关键的异步，，但每次都手动计算是非常麻烦的，于是深度学习框架往往会自动求导。</p>
 <h4 id="例子一">例子一</h4>
-<p>假设我们想对函数 <span class="math inline">\(y=2\mathbf{x \cdot x}\)</span> 还是列向量 <span class="math inline">\(\mathbf{x}\)</span> 求导。</p>
+<p>假设我们想对函数 <span class="math inline">\(y=2\mathbf{x \cdot
+x}\)</span> 还是列向量 <span class="math inline">\(\mathbf{x}\)</span>
+求导。</p>
 <p>首先，我们创建变量 x 并初始化。</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> tf.<span class="bu">range</span>(<span class="dv">4</span>, dtype<span class="op">=</span>tf.float32)</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>x</span>
@@ -627,7 +746,8 @@ f&#39;(x) = y&#39; = \frac{dy}{dx} = \frac{df}{dx} = \frac{d}{dx} f(x) = Df{x} =
 <span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co">output:</span></span>
 <span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;tf.Tensor: shape=(4,), dtype=float32, numpy=array([0., 1., 2., 3.], dtype=float32)&gt;</span></span>
 <span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
-<p>在我们计算 <span class="math inline">\(y\)</span> 关于 <span class="math inline">\(\mathbf{x}\)</span> 的梯度之前，我们需要一个地方来存储梯度。重要的是，我们不会在每次对一个参数求导时都分配新的内存。因为我们经常会成千上万次地更新相同的参数，每次都分配新的内存可能很快就会将内存耗尽。</p>
+<p>在我们计算 <span class="math inline">\(y\)</span> 关于 <span class="math inline">\(\mathbf{x}\)</span>
+的梯度之前，我们需要一个地方来存储梯度。重要的是，我们不会在每次对一个参数求导时都分配新的内存。因为我们经常会成千上万次地更新相同的参数，每次都分配新的内存可能很快就会将内存耗尽。</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> tf.Variable(x)</span></code></pre></div>
 <p>现在我们计算 <span class="math inline">\(y\)</span> 。</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 把所有计算记录在磁带上</span></span>
@@ -645,7 +765,8 @@ f&#39;(x) = y&#39; = \frac{dy}{dx} = \frac{df}{dx} = \frac{d}{dx} f(x) = Df{x} =
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co">output:</span></span>
 <span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;tf.Tensor: shape=(4,), dtype=float32, numpy=array([ 0.,  4.,  8., 12.], dtype=float32)&gt;</span></span>
 <span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
-<p>函数 <span class="math inline">\(y=2\mathbf{x^{\mathsf{T}}x}\)</span> 关于 <span class="math inline">\(\mathbf{x}\)</span> 的梯度应为 <span class="math inline">\(4\mathbf{x}\)</span> 。我们可以验证一下。</p>
+<p>函数 <span class="math inline">\(y=2\mathbf{x^{\mathsf{T}}x}\)</span>
+关于 <span class="math inline">\(\mathbf{x}\)</span> 的梯度应为 <span class="math inline">\(4\mathbf{x}\)</span> 。我们可以验证一下。</p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>x_grad <span class="op">==</span> <span class="dv">4</span> <span class="op">*</span> x</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;tf.Tensor: shape=(4,), dtype=bool, numpy=array([ True,  True,  True,  True])&gt;</span></span>
@@ -666,7 +787,9 @@ f&#39;(x) = y&#39; = \frac{dy}{dx} = \frac{df}{dx} = \frac{d}{dx} f(x) = Df{x} =
 <span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;tf.Tensor: shape=(4,), dtype=float32, numpy=array([0., 2., 4., 6.], dtype=float32)&gt;</span></span>
 <span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
 <h4 id="分离计算">分离计算</h4>
-<p>有时，我们希望将某些计算移动到记录的计算图之外。 例如，假设<code>y</code>是作为<code>x</code>的函数计算的，而<code>z</code>则是作为<code>y</code>和<code>x</code>的函数计算的。 现在，想象一下，我们想计算<code>z</code>关于<code>x</code>的梯度，但由于某种原因，我们希望将<code>y</code>视为一个常数，并且只考虑到<code>x</code>在<code>y</code>被计算后发挥的作用。</p>
+<p>有时，我们希望将某些计算移动到记录的计算图之外。
+例如，假设<code>y</code>是作为<code>x</code>的函数计算的，而<code>z</code>则是作为<code>y</code>和<code>x</code>的函数计算的。
+现在，想象一下，我们想计算<code>z</code>关于<code>x</code>的梯度，但由于某种原因，我们希望将<code>y</code>视为一个常数，并且只考虑到<code>x</code>在<code>y</code>被计算后发挥的作用。</p>
 <p>在这里，我们可以分离<code>y</code>来返回一个新变量<code>u</code>，该变量与<code>y</code>具有相同的值，但丢弃计算图中如何计算<code>y</code>的任何信息。换句话说，梯度不会向后流经<code>u</code>到<code>x</code>。因此，下面的反向传播函数计算<code>z=u*x</code>关于<code>x</code>的偏导数，同时将<code>u</code>作为常数处理，而不是<code>z=x*x*x</code>关于<code>x</code>的偏导数。</p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 设置 `persistent=True` 来运行 `t.gradient`多次</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> tf.GradientTape(persistent<span class="op">=</span><span class="va">True</span>) <span class="im">as</span> t:</span>
@@ -712,47 +835,89 @@ f&#39;(x) = y&#39; = \frac{dy}{dx} = \frac{df}{dx} = \frac{d}{dx} f(x) = Df{x} =
 <h2 id="概率">概率</h2>
 <h3 id="基本概率论">基本概率论</h3>
 <h4 id="概率论公理">概率论公理</h4>
-<p>在处理骰子掷出时，我们将集合 <span class="math inline">\(\mathcal{S} = \{1, 2, 3,4,5,6\}\)</span> 称为<strong>样本空间</strong>（sample space）或<strong>结果空间</strong>（outcome space）。<strong>事件</strong>（event）是来自给定样本空间的一组结果。例如，“看到 5” 和 “看到奇数” 都是掷出骰子的有效事件。</p>
-<p>形式上，<strong>概率</strong>（probability）可以被认为是将集合映射到真实值的函数。在给定样本空间 <span class="math inline">\(\mathcal{S}\)</span> 中，事件 <span class="math inline">\(\mathcal{A}\)</span> 的概率，表示为 <span class="math inline">\(P(\mathcal{A})\)</span> ，满足以下属性：</p>
+<p>在处理骰子掷出时，我们将集合 <span class="math inline">\(\mathcal{S}
+= \{1, 2, 3,4,5,6\}\)</span> 称为<strong>样本空间</strong>（sample
+space）或<strong>结果空间</strong>（outcome
+space）。<strong>事件</strong>（event）是来自给定样本空间的一组结果。例如，“看到
+5” 和 “看到奇数” 都是掷出骰子的有效事件。</p>
+<p>形式上，<strong>概率</strong>（probability）可以被认为是将集合映射到真实值的函数。在给定样本空间
+<span class="math inline">\(\mathcal{S}\)</span> 中，事件 <span class="math inline">\(\mathcal{A}\)</span> 的概率，表示为 <span class="math inline">\(P(\mathcal{A})\)</span> ，满足以下属性：</p>
 <ul>
-<li>对于任意事件 <span class="math inline">\(\mathcal{A}\)</span> ，其概率从不会是负数，即 <span class="math inline">\(P(\mathcal{A}) \ge 0\)</span></li>
+<li>对于任意事件 <span class="math inline">\(\mathcal{A}\)</span>
+，其概率从不会是负数，即 <span class="math inline">\(P(\mathcal{A}) \ge
+0\)</span></li>
 <li>整个样本空间的概率为 1 ，即 <span class="math inline">\(P(\mathcal{S}) = 1\)</span></li>
-<li>对于<strong>互斥</strong>事件的任意一个可数序列 <span class="math inline">\(\mathcal{A_1},\mathcal{A_2}, \dots\)</span> 序列中任意事件发生的概率等于它们各自发生概率之和，即 <span class="math inline">\(P\left({\textstyle \bigcup_{i=1}^{\infty}}\mathcal{A}_i\right) = {\textstyle \sum_{i=1}^{\infty}}P(\mathcal{A}_i)\)</span></li>
+<li>对于<strong>互斥</strong>事件的任意一个可数序列 <span class="math inline">\(\mathcal{A_1},\mathcal{A_2}, \dots\)</span>
+序列中任意事件发生的概率等于它们各自发生概率之和，即 <span class="math inline">\(P\left({\textstyle
+\bigcup_{i=1}^{\infty}}\mathcal{A}_i\right) = {\textstyle
+\sum_{i=1}^{\infty}}P(\mathcal{A}_i)\)</span></li>
 </ul>
 <p>这些也是概率论的公理。</p>
 <h4 id="随机变量">随机变量</h4>
-<p>随机变量几乎可以是任何数量，并且不是确定性的。它可以在随机实验的一组可能性中取一个值。考虑一个随机变量 <span class="math inline">\(X\)</span> ，其值在掷骰子的样本空间 <span class="math inline">\(\mathcal{S}=\{1,2,3,4,5,6\}\)</span> 中。我们可以将事件“看到一个5”表示为 <span class="math inline">\(\{X=5\}\)</span> 或 <span class="math inline">\(X=5\)</span>，其概率表示或 <span class="math inline">\(P(\{X=5\})\)</span> 或 <span class="math inline">\(P(X=5)\)</span>。进一步的，我们用 <span class="math inline">\(P(1 \le X \le 3)\)</span> 表示事件 <span class="math inline">\(\{1\le X \le 3\}\)</span> ，即 <span class="math inline">\(\{X = 1,2,or,3\}\)</span> 的概率。</p>
+<p>随机变量几乎可以是任何数量，并且不是确定性的。它可以在随机实验的一组可能性中取一个值。考虑一个随机变量
+<span class="math inline">\(X\)</span> ，其值在掷骰子的样本空间 <span class="math inline">\(\mathcal{S}=\{1,2,3,4,5,6\}\)</span>
+中。我们可以将事件“看到一个5”表示为 <span class="math inline">\(\{X=5\}\)</span> 或 <span class="math inline">\(X=5\)</span>，其概率表示或 <span class="math inline">\(P(\{X=5\})\)</span> 或 <span class="math inline">\(P(X=5)\)</span>。进一步的，我们用 <span class="math inline">\(P(1 \le X \le 3)\)</span> 表示事件 <span class="math inline">\(\{1\le X \le 3\}\)</span> ，即 <span class="math inline">\(\{X = 1,2,or,3\}\)</span> 的概率。</p>
 <h3 id="联合概率">联合概率</h3>
-<p>联合概率（joint probability），给定任何值 <span class="math inline">\(a\)</span> 和 <span class="math inline">\(b\)</span> ，同时满足 <span class="math inline">\(A = a\)</span> 和 <span class="math inline">\(B = b\)</span> 的概率是 <span class="math inline">\(P(A = a, B = b)\)</span> ，即对应的联合概率。注意，对于任何 <span class="math inline">\(a\)</span> 和 <span class="math inline">\(b\)</span> 的取值， <span class="math inline">\(P(A = a, B = b) \le P(A = a)\)</span> ，对于 <span class="math inline">\(P(B = b)\)</span> 亦然。</p>
+<p>联合概率（joint probability），给定任何值 <span class="math inline">\(a\)</span> 和 <span class="math inline">\(b\)</span> ，同时满足 <span class="math inline">\(A = a\)</span> 和 <span class="math inline">\(B =
+b\)</span> 的概率是 <span class="math inline">\(P(A = a, B = b)\)</span>
+，即对应的联合概率。注意，对于任何 <span class="math inline">\(a\)</span> 和 <span class="math inline">\(b\)</span> 的取值， <span class="math inline">\(P(A = a, B = b) \le P(A = a)\)</span> ，对于 <span class="math inline">\(P(B = b)\)</span> 亦然。</p>
 <h3 id="条件概率">条件概率</h3>
-<p>比率 <span class="math inline">\(0 \le \frac{P(A=a, B=b)}{P(A=a)} \le 1\)</span> 我们称为条件概率，我们用 <span class="math inline">\(P(B = b | A = a)\)</span> 来表示它：它是在 <span class="math inline">\(A = a\)</span> 发生后 <span class="math inline">\(B = b\)</span> 的概率。</p>
+<p>比率 <span class="math inline">\(0 \le \frac{P(A=a, B=b)}{P(A=a)} \le
+1\)</span> 我们称为条件概率，我们用 <span class="math inline">\(P(B = b
+| A = a)\)</span> 来表示它：它是在 <span class="math inline">\(A =
+a\)</span> 发生后 <span class="math inline">\(B = b\)</span>
+的概率。</p>
 <h3 id="贝叶斯定理">贝叶斯定理</h3>
-<p>使用条件概率的定义，我们可以得出统计学中最有用和最著名的方程之一：<em>Bayes定理</em>（Bayes’ theorem）。</p>
-<p>根据条件概率的定义我们易得，<span class="math inline">\(P(A,B) = P(B|A)P(A)\)</span> 。</p>
+<p>使用条件概率的定义，我们可以得出统计学中最有用和最著名的方程之一：<em>Bayes定理</em>（Bayes’
+theorem）。</p>
+<p>根据条件概率的定义我们易得，<span class="math inline">\(P(A,B) =
+P(B|A)P(A)\)</span> 。</p>
 <p>同理， <span class="math inline">\(P(A,B)=P(A|B)P(B)\)</span> 。</p>
-<p>联立， <span class="math inline">\(P(B|A)P(A)=P(A|B)P(B)\)</span> 。</p>
-<p>假设 <span class="math inline">\(P(B) &gt; 0\)</span> ,我们就得到了 <span class="math display">\[
+<p>联立， <span class="math inline">\(P(B|A)P(A)=P(A|B)P(B)\)</span>
+。</p>
+<p>假设 <span class="math inline">\(P(B) &gt; 0\)</span> ,我们就得到了
+<span class="math display">\[
 P(A|B) = \frac{P(B|A)P(A)}{P(B)}，
 \]</span></p>
 <h3 id="边际化">边际化</h3>
-<p>边际化是从 <span class="math inline">\(P(A, B)\)</span> 中确定 <span class="math inline">\(P(B)\)</span> 的操作。我们可以看到 <span class="math inline">\(B\)</span> 的概率相当于计算 <span class="math inline">\(A\)</span> 的所有可能选择，并将所有选择的连接概率聚合在一起，就可以得到 <span class="math inline">\(B\)</span> 的概率。 <span class="math display">\[
+<p>边际化是从 <span class="math inline">\(P(A, B)\)</span> 中确定 <span class="math inline">\(P(B)\)</span> 的操作。我们可以看到 <span class="math inline">\(B\)</span> 的概率相当于计算 <span class="math inline">\(A\)</span>
+的所有可能选择，并将所有选择的连接概率聚合在一起，就可以得到 <span class="math inline">\(B\)</span> 的概率。 <span class="math display">\[
 P(B) = \sum_AP(A,B),
-\]</span> 这也称为<em>求和规则</em>。边际化结果的概率或分布称为<em>边际概率</em>或<em>边际分布</em>。</p>
+\]</span>
+这也称为<em>求和规则</em>。边际化结果的概率或分布称为<em>边际概率</em>或<em>边际分布</em>。</p>
 <h3 id="独立性">独立性</h3>
-<p>两个随机变量 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 是独立的，意味着事件 <span class="math inline">\(A\)</span> 的发生不会透露有关 <span class="math inline">\(B\)</span> 事件发生的任何信息，统计学上记为 <span class="math inline">\(A \bot B\)</span> ，根据贝叶斯定理，我们马上就能得到 <span class="math inline">\(P(A|B) = P(A)\)</span> 。在其他所有情况下我们称 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 依赖。</p>
-<p>由于 <span class="math inline">\(P(A | B) = \frac{P(A, B)}{P(B)} = P(A)\)</span> 等价于 <span class="math inline">\(P(A, B) = P(A)P(B)\)</span> ，因此两个随机变量是独立的当且仅当两个随机变量的联合分布是其各自分布的乘积。同样地，给定另一个随机变量 <span class="math inline">\(C\)</span> 时，两个随机变量 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 是<strong>条件独立</strong>的，当且仅当 <span class="math inline">\(P(A, B|C) = P(A|C)P(B|C)\)</span> 。这个情况表示为 <span class="math inline">\(A \bot B | C\)</span> 。</p>
+<p>两个随机变量 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 是独立的，意味着事件 <span class="math inline">\(A\)</span> 的发生不会透露有关 <span class="math inline">\(B\)</span> 事件发生的任何信息，统计学上记为 <span class="math inline">\(A \bot B\)</span>
+，根据贝叶斯定理，我们马上就能得到 <span class="math inline">\(P(A|B) =
+P(A)\)</span> 。在其他所有情况下我们称 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 依赖。</p>
+<p>由于 <span class="math inline">\(P(A | B) = \frac{P(A, B)}{P(B)} =
+P(A)\)</span> 等价于 <span class="math inline">\(P(A, B) =
+P(A)P(B)\)</span>
+，因此两个随机变量是独立的当且仅当两个随机变量的联合分布是其各自分布的乘积。同样地，给定另一个随机变量
+<span class="math inline">\(C\)</span> 时，两个随机变量 <span class="math inline">\(A\)</span> 和 <span class="math inline">\(B\)</span> 是<strong>条件独立</strong>的，当且仅当
+<span class="math inline">\(P(A, B|C) = P(A|C)P(B|C)\)</span>
+。这个情况表示为 <span class="math inline">\(A \bot B | C\)</span>
+。</p>
 <h3 id="期望和差异">期望和差异</h3>
 <p>为了概括概率分步的关键特征，我们需要一些测量方法。随机变量 <span class="math inline">\(X\)</span> 的<strong>期望</strong>表示为 <span class="math display">\[
 E[X] = \sum_xxP(X = x).
-\]</span> 当函数 <span class="math inline">\(f(x)\)</span> 的输入是从分步 <span class="math inline">\(P\)</span> 中出去的随机变量时， <span class="math inline">\(f(x)\)</span> 的期望为 <span class="math display">\[
+\]</span> 当函数 <span class="math inline">\(f(x)\)</span>
+的输入是从分步 <span class="math inline">\(P\)</span>
+中出去的随机变量时， <span class="math inline">\(f(x)\)</span> 的期望为
+<span class="math display">\[
 E_{x \sim p}[f(x)] = \sum_xf(x)P(x).
-\]</span> 在许多情况下，我们希望衡量随机变量 <span class="math inline">\(X\)</span> 与其期望值的偏置。这可以通过方差来量化 <span class="math display">\[
+\]</span> 在许多情况下，我们希望衡量随机变量 <span class="math inline">\(X\)</span> 与其期望值的偏置。这可以通过方差来量化
+<span class="math display">\[
 \mathrm{Var}[X] = E[(X-E[X]^2)] = E[X^2] - E[X]^2.
-\]</span> 他们的平方根被称为<strong>标准差</strong>（standard deviation）。随机变量函数的方差衡量的是，当该随机变量分步中采样不同值 <span class="math inline">\(x\)</span> 时，函数值偏离该函数期望的程度： <span class="math display">\[
+\]</span> 他们的平方根被称为<strong>标准差</strong>（standard
+deviation）。随机变量函数的方差衡量的是，当该随机变量分步中采样不同值
+<span class="math inline">\(x\)</span> 时，函数值偏离该函数期望的程度：
+<span class="math display">\[
 \mathrm{Var}[f(x)] = E[(f(x) - E[f(x)])^2]
 \]</span></p>
 <h2 id="结语">结语</h2>
-<p>这是我写的最多的一篇博客了，写到最后我仍然有些东西稀里糊涂的，但是大致上还是把握了一些。以前深度学习看不懂的地方能够懂一点。这些数学最最重要的就是前面花大幅笔墨书写的线性代数的内容，虽然说后面也很重要，但线代不懂后面意义也不大， Tensorflow 名字有一般是 tensor 。当然，深度学习的数学也不是就这么完了，路曼曼其修远兮，但现在暂告一段落。</p>
+<p>这是我写的最多的一篇博客了，写到最后我仍然有些东西稀里糊涂的，但是大致上还是把握了一些。以前深度学习看不懂的地方能够懂一点。这些数学最最重要的就是前面花大幅笔墨书写的线性代数的内容，虽然说后面也很重要，但线代不懂后面意义也不大，
+Tensorflow 名字有一般是 tensor
+。当然，深度学习的数学也不是就这么完了，路曼曼其修远兮，但现在暂告一段落。</p>
 
 
 
