@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 03 Feb 2022 12:07:47 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Feb 2022 10:53:18 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>评测</title>
+      <link>https://bigshans.github.io/categories/%E8%AF%84%E6%B5%8B/</link>
+      <pubDate>Sun, 13 Feb 2022 10:53:18 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/%E8%AF%84%E6%B5%8B/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>随笔</title>
       <link>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
@@ -446,15 +455,6 @@
       <pubDate>Fri, 07 Dec 2018 20:47:45 +0000</pubDate>
       
       <guid>https://bigshans.github.io/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>翻墙</title>
-      <link>https://bigshans.github.io/categories/%E7%BF%BB%E5%A2%99/</link>
-      <pubDate>Wed, 28 Nov 2018 15:03:05 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/%E7%BF%BB%E5%A2%99/</guid>
       <description></description>
     </item>
     

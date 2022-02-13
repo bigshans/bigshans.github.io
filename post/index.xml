@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 12 Feb 2022 09:21:31 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Feb 2022 10:53:18 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -15,6 +15,15 @@
       
       <guid>https://bigshans.github.io/post/top-blog/</guid>
       <description>本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义</description>
+    </item>
+    
+    <item>
+      <title>Keychron K2 使用体验</title>
+      <link>https://bigshans.github.io/post/keyboard-experience-keychron-k2/</link>
+      <pubDate>Sun, 13 Feb 2022 10:53:18 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/keyboard-experience-keychron-k2/</guid>
+      <description>因为从来没用过机械键盘，一直用的薄膜，所以想尝试玩玩，入手了一块 K2 。怎么说呢？因为是随便选的，而且也没有深入了解，这块键盘真的是让我一言难尽</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/sharp/</guid>
       <description>因为业务需要就写了个图片压缩服务，顺带改变大小，因为用的是 nodejs ，于是我就选择了 sharp ，基于 libvips。 代码非常好写： function resize(input, x, y) { return sharp(input) .resize(x, y, { fit: &#39;inside&#39; })</description>
-    </item>
-    
-    <item>
-      <title>函数式的骨感</title>
-      <link>https://bigshans.github.io/post/function-comment/</link>
-      <pubDate>Tue, 24 Aug 2021 17:22:43 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/function-comment/</guid>
-      <description>最近读了点 rambda 的源码。函数式是个很诱人的概念，借助函数式，你可以以十分数学的方式解决一些问题。虽然如此，函数式对于现实来说仍然过于抽象，如果我</description>
     </item>
     
   </channel>
