@@ -10,14 +10,49 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2022-02-16T17:11:39+08:00</lastmod>
+    <lastmod>2022-02-23T16:47:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2022-02-16T17:11:39+08:00</lastmod>
+    <lastmod>2022-02-23T16:47:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/</loc>
+    <lastmod>2022-02-23T16:47:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/</loc>
+    <lastmod>2022-02-23T16:47:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/vim/</loc>
+    <lastmod>2022-02-23T16:47:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/vim/</loc>
+    <lastmod>2022-02-23T16:47:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/fixed-conflicts-between-coc-and-indentline/</loc>
+    <lastmod>2022-02-23T16:47:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37,21 +72,7 @@
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2022-02-16T17:11:39+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigshans.github.io/post/sed-quickly-note/</loc>
-    <lastmod>2022-02-16T17:11:39+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/</loc>
     <lastmod>2022-02-16T17:11:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -129,20 +150,6 @@
   
   <url>
     <loc>https://bigshans.github.io/tags/typescript/</loc>
-    <lastmod>2022-01-23T19:10:42+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/vim/</loc>
-    <lastmod>2022-01-23T19:10:42+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/vim/</loc>
     <lastmod>2022-01-23T19:10:42+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

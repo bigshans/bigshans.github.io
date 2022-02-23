@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 16 Feb 2022 17:11:39 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Feb 2022 16:47:18 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vim</title>
+      <link>https://bigshans.github.io/categories/vim/</link>
+      <pubDate>Wed, 23 Feb 2022 16:47:18 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/vim/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>linux</title>
       <link>https://bigshans.github.io/categories/linux/</link>
@@ -32,15 +41,6 @@
       <pubDate>Thu, 03 Feb 2022 12:07:47 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vim</title>
-      <link>https://bigshans.github.io/categories/vim/</link>
-      <pubDate>Sun, 23 Jan 2022 19:10:42 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/vim/</guid>
       <description></description>
     </item>
     

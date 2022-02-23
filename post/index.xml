@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 16 Feb 2022 17:11:39 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Feb 2022 16:47:18 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -15,6 +15,15 @@
       
       <guid>https://bigshans.github.io/post/top-blog/</guid>
       <description>本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义</description>
+    </item>
+    
+    <item>
+      <title>修复 coc.nvim 和 indentLines 的冲突</title>
+      <link>https://bigshans.github.io/post/fixed-conflicts-between-coc-and-indentline/</link>
+      <pubDate>Wed, 23 Feb 2022 16:47:18 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/fixed-conflicts-between-coc-and-indentline/</guid>
+      <description>我用的是 indentLines 是 Yggdrot/indentLine ，与 coc.nvim 存在冲突，主要是诊断的高亮覆盖了 indentLine 的高亮导致 indentLine 无法显示。当然，并不是所有的 buffer 里都会这样，但是需要诊断的 FileType 都是这样。 使用的</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/yuzu-setup/</guid>
       <description>最近想要玩《月姬R》。目前，《月姬R》发布在了 PS4 和 Switch 上面，所以我在想能不能用模拟器去运行《月姬R》。简单查找了一下，发现了 yuzu ，嗯， Linux 下可运行</description>
-    </item>
-    
-    <item>
-      <title>Vue 3.2 &lt;script setup&gt; 摘要</title>
-      <link>https://bigshans.github.io/post/vue3_2-setup/</link>
-      <pubDate>Thu, 26 Aug 2021 15:43:34 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/vue3_2-setup/</guid>
-      <description>在 Vue 3.2 发布的内容中，最主要内容就是 &amp;lt;script setup&amp;gt; 。 &amp;lt;script setup&amp;gt; 想必大家都有使用过，跟当初作为实验特性不同，这次正式发布还是有很多的修改的。 废除 useContext() 原先获取全局 ctx</description>
     </item>
     
   </channel>

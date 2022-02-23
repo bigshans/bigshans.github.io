@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 23 Jan 2022 19:10:42 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/vim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Feb 2022 16:47:18 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>修复 coc.nvim 和 indentLines 的冲突</title>
+      <link>https://bigshans.github.io/post/fixed-conflicts-between-coc-and-indentline/</link>
+      <pubDate>Wed, 23 Feb 2022 16:47:18 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/fixed-conflicts-between-coc-and-indentline/</guid>
+      <description>我用的是 indentLines 是 Yggdrot/indentLine ，与 coc.nvim 存在冲突，主要是诊断的高亮覆盖了 indentLine 的高亮导致 indentLine 无法显示。当然，并不是所有的 buffer 里都会这样，但是需要诊断的 FileType 都是这样。 使用的</description>
+    </item>
+    
     <item>
       <title>coc-kite-cmp 发布</title>
       <link>https://bigshans.github.io/post/coc-kite-cmp-publish/</link>
