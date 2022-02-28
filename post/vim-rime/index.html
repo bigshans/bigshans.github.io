@@ -16,8 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添加一些字，所以我决定换用别的输入法。 fcitx-sunpinyin 可以添加用户词典，但添加新的单词的时候会严重卡顿，而且打某些字的时候也会卡顿，体验极其糟糕，所以我决定尝试一下 fcitx-rime 。
-" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -44,19 +43,19 @@
 
 
 <meta property="og:title" content="在 vim 下修改自然码码表" />
-<meta property="og:description" content="最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添加一些字，所以我决定换用别的输入法。 fcitx-sunpinyin 可以添加用户词典，但添加新的单词的时候会严重卡顿，而且打某些字的时候也会卡顿，体验极其糟糕，所以我决定尝试一下 fcitx-rime 。" />
+<meta property="og:description" content="最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigshans.github.io/post/vim-rime/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2019-01-31T11:27:53+00:00" />
 <meta property="article:modified_time" content="2019-01-31T11:27:53+00:00" />
 
 <meta itemprop="name" content="在 vim 下修改自然码码表">
-<meta itemprop="description" content="最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添加一些字，所以我决定换用别的输入法。 fcitx-sunpinyin 可以添加用户词典，但添加新的单词的时候会严重卡顿，而且打某些字的时候也会卡顿，体验极其糟糕，所以我决定尝试一下 fcitx-rime 。"><meta itemprop="datePublished" content="2019-01-31T11:27:53+00:00" />
+<meta itemprop="description" content="最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添"><meta itemprop="datePublished" content="2019-01-31T11:27:53+00:00" />
 <meta itemprop="dateModified" content="2019-01-31T11:27:53+00:00" />
-<meta itemprop="wordCount" content="1254">
+<meta itemprop="wordCount" content="1341">
 <meta itemprop="keywords" content="rime,vim,fcitx,正则表达式," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="在 vim 下修改自然码码表"/>
-<meta name="twitter:description" content="最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添加一些字，所以我决定换用别的输入法。 fcitx-sunpinyin 可以添加用户词典，但添加新的单词的时候会严重卡顿，而且打某些字的时候也会卡顿，体验极其糟糕，所以我决定尝试一下 fcitx-rime 。"/>
+<meta name="twitter:description" content="最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -180,7 +179,7 @@
         <div class="post-category">
             <a href="/categories/vim/"> vim </a>
             </div>
-          <span class="more-meta"> 约 1254 字 </span>
+          <span class="more-meta"> 约 1341 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         
       </div>
@@ -223,7 +222,7 @@
 <p>主要是修改 algebra 的正则。rime 的正则就是用的 perl 的，所以了解 perl 的正则语法就行了。</p>
 <p>最后的 speller 如下：</p>
 <pre><code class="language-yaml">speller:
-  alphabet: &quot;zyxwvutsrqponmlkjihgfedcba;&quot;
+  alphabet: 'zyxwvutsrqponmlkjihgfedcba;'
   delimiter: &quot; '&quot;
   algebra:
     - derive/^(\w*);(\w)(\w)$/$1;$2$3/    ＃ 完全自然码
@@ -279,6 +278,10 @@
 <li><a href="https://github.com/rime/home/wiki/RimeWithSchemata">rime 输入方案入门指导</a></li>
 <li><a href="https://github.com/henices/rime">自然码 2000</a></li>
 </ol>
+<hr>
+<p>更新：</p>
+<p>最近修改了一下词库，因为原来的词库确实问题比较多。结合了 luna_pinyin 的内容，再顺便加了些表情和颜文字之类的内容，原来的内容似乎要重新调教了，不过新的词库准是准了很多，各有优劣吧！</p>
+
     </div>
 
     <div class="post-copyright">
