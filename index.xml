@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 23 Feb 2022 16:47:18 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Mar 2022 21:29:21 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -15,6 +15,15 @@
       
       <guid>https://bigshans.github.io/post/top-blog/</guid>
       <description>本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义</description>
+    </item>
+    
+    <item>
+      <title>如何使用 ja-netfilter</title>
+      <link>https://bigshans.github.io/post/how-to-use-ja-netfilter/</link>
+      <pubDate>Wed, 02 Mar 2022 21:29:21 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/how-to-use-ja-netfilter/</guid>
+      <description>之前淘宝卖的 JB 帐号又失效了，连带着服务器也失效了，感觉店家是跑路了。 JB 家的东西是不错的，不过就是一个客户端套多个皮，当成多个 IDE ，让我觉得有点</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/write-hello-world-by-objective-c/</guid>
       <description>GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。 Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需</description>
-    </item>
-    
-    <item>
-      <title>使用 yuzu 模拟器玩《月姬R》</title>
-      <link>https://bigshans.github.io/post/yuzu-setup/</link>
-      <pubDate>Sun, 12 Sep 2021 10:53:17 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/yuzu-setup/</guid>
-      <description>最近想要玩《月姬R》。目前，《月姬R》发布在了 PS4 和 Switch 上面，所以我在想能不能用模拟器去运行《月姬R》。简单查找了一下，发现了 yuzu ，嗯， Linux 下可运行</description>
     </item>
     
   </channel>
