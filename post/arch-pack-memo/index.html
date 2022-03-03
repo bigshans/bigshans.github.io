@@ -52,7 +52,7 @@
 <meta itemprop="name" content="Arch 打包备忘录">
 <meta itemprop="description" content="最近又写了一个 PKGBUILD 传到了 AUR 。不过距离上一次打包已经过去很久了，这些包其实许久没有更新了，就到我自己都忘了要怎么打包了。因为一些常用命令经常记不"><meta itemprop="datePublished" content="2021-10-30T01:08:44+08:00" />
 <meta itemprop="dateModified" content="2021-10-30T01:08:44+08:00" />
-<meta itemprop="wordCount" content="395">
+<meta itemprop="wordCount" content="426">
 <meta itemprop="keywords" content="linux,打包," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Arch 打包备忘录"/>
 <meta name="twitter:description" content="最近又写了一个 PKGBUILD 传到了 AUR 。不过距离上一次打包已经过去很久了，这些包其实许久没有更新了，就到我自己都忘了要怎么打包了。因为一些常用命令经常记不"/>
@@ -179,7 +179,7 @@
         <div class="post-category">
             <a href="/categories/linux/"> linux </a>
             </div>
-          <span class="more-meta"> 约 395 字 </span>
+          <span class="more-meta"> 约 426 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         
       </div>
@@ -194,6 +194,7 @@
         <li><a href="#打包过程中源码所在的位置">打包过程中源码所在的位置</a></li>
         <li><a href="#shasum256-生成">shasum256 生成</a></li>
         <li><a href="#srcinfo-的生成"><code>.SRCINFO</code> 的生成</a></li>
+        <li><a href="#查看已安装软件的信息">查看已安装软件的信息</a></li>
       </ul>
     </li>
   </ul>
@@ -215,6 +216,10 @@
 <h2 id="srcinfo-的生成"><code>.SRCINFO</code> 的生成</h2>
 <p>如果要提交给 AUR ，此文件必不可缺。但是对于打包来说没有影响，但如果要上传就要记牢这条命令。</p>
 <pre><code class="language-bash">makepkg --printsrcinfo &gt; .SRCINFO
+</code></pre>
+<h2 id="查看已安装软件的信息">查看已安装软件的信息</h2>
+<pre><code class="language-bash">pacman -Ql &lt;package-name&gt; # 显示包内文件
+pacman -Qi &lt;package-name&gt; # 显示包详细信息
 </code></pre>
 <p>以上就是一些备忘。</p>
 
