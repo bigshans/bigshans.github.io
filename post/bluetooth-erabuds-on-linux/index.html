@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>[置顶] 关于本博客 - Bigshans&#39; Blog</title>
+  <title>在 Arch 上启用 QCY-T8 蓝牙耳机 - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。 经过查找我发现了 pipeware ，一个 pulseaudio 的替代方" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.93.0-DEV with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/top-blog/" />
+<link rel="canonical" href="https://bigshans.github.io/post/bluetooth-erabuds-on-linux/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,20 +42,20 @@
 
 
 
-<meta property="og:title" content="[置顶] 关于本博客" />
-<meta property="og:description" content="本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义" />
+<meta property="og:title" content="在 Arch 上启用 QCY-T8 蓝牙耳机" />
+<meta property="og:description" content="突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。 经过查找我发现了 pipeware ，一个 pulseaudio 的替代方" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/top-blog/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-02-12T09:21:31+08:00" />
-<meta property="article:modified_time" content="2022-02-12T09:21:31+08:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/bluetooth-erabuds-on-linux/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-03-05T15:57:05+08:00" />
+<meta property="article:modified_time" content="2022-03-05T15:57:05+08:00" />
 
-<meta itemprop="name" content="[置顶] 关于本博客">
-<meta itemprop="description" content="本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义"><meta itemprop="datePublished" content="2022-02-12T09:21:31+08:00" />
-<meta itemprop="dateModified" content="2022-02-12T09:21:31+08:00" />
-<meta itemprop="wordCount" content="194">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[置顶] 关于本博客"/>
-<meta name="twitter:description" content="本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义"/>
+<meta itemprop="name" content="在 Arch 上启用 QCY-T8 蓝牙耳机">
+<meta itemprop="description" content="突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。 经过查找我发现了 pipeware ，一个 pulseaudio 的替代方"><meta itemprop="datePublished" content="2022-03-05T15:57:05+08:00" />
+<meta itemprop="dateModified" content="2022-03-05T15:57:05+08:00" />
+<meta itemprop="wordCount" content="276">
+<meta itemprop="keywords" content="linux," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="在 Arch 上启用 QCY-T8 蓝牙耳机"/>
+<meta name="twitter:description" content="突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。 经过查找我发现了 pipeware ，一个 pulseaudio 的替代方"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -172,12 +172,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">[置顶] 关于本博客</h1>
+      <h1 class="post-title">在 Arch 上启用 QCY-T8 蓝牙耳机</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2022-02-12 </span>
-        
-          <span class="more-meta"> 约 194 字 </span>
+        <span class="post-time"> 2022-03-05 </span>
+        <div class="post-category">
+            <a href="/categories/linux/"> linux </a>
+            </div>
+          <span class="more-meta"> 约 276 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         
       </div>
@@ -189,23 +191,21 @@
 </div>
 
     <div class="post-content">
-      <ol>
-<li>
-<p>本博客所有文章，采取 <code>CC BY-NC-SA 4.0</code> 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。</p>
-</li>
-<li>
-<p>本人受安那其主义、马克思主义、拉康、尼采、齐泽克等影响，立场上反对法西斯蒂，反对安那其资本主义，反对沙文主义。</p>
-</li>
-<li>
-<p>本人支持自由软件运动、开源运动。</p>
-</li>
-<li>
-<p>本博客主要以技术文章为主，同时辅以部分个人观点。</p>
-</li>
-<li>
-<p>以上内容在目前为止是有效的，但在未来可能会改变。本文在未来可能会加以变化。</p>
-</li>
-</ol>
+      <p>突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。</p>
+<p>经过查找我发现了 pipeware ，一个 pulseaudio 的替代方案。根据 ArchWiki 的步骤，我装了 pipeware-pulse ，然而蓝牙还是没有正常检测到。然后我根据 ArchWiki 提供的配置，添加了一个文件。</p>
+<p><code>/etc/pipewire/media-session.d/bluez-monitor.conf</code>:</p>
+<pre><code>rules = [
+{
+    actions = {
+        update-props = {
+            bluez5.autoswitch-profile = true
+        }
+    }
+}
+]
+</code></pre>
+<p>然后重启就能正常发现耳机了。</p>
+<p>但还有个问题，蓝牙虽然发现了，但耳机效果奇差。我觉得可能还是协议问题，应该是 AAC 的问题，于是查了查，有人说降级 bluez 和 bluez-libs 到 5.58 就行了。目前最新的已经到 5.6 以上了，于是我从 Archive 仓库里找到了历史版本，降级重启之后，耳机音质恢复正常。接下来就是锁版本了，完美 （￣ ▽ ￣） 。</p>
 
     </div>
 
@@ -217,7 +217,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2022-02-12
+        2022-03-05
         
     </span>
   </p>
@@ -225,11 +225,17 @@
   
 </div>
 <footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/linux/">linux</a>
+          </div>
       <nav class="post-nav">
-        
-        <a class="next" href="/post/bluetooth-erabuds-on-linux/">
-            <span class="next-text nav-default">在 Arch 上启用 QCY-T8 蓝牙耳机</span>
+        <a class="prev" href="/post/top-blog/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[置顶] 关于本博客</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/how-to-use-ja-netfilter/">
+            <span class="next-text nav-default">如何使用 ja-netfilter</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

@@ -10,34 +10,55 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2022-03-02T21:29:21+08:00</lastmod>
+    <lastmod>2022-03-05T15:57:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2022-03-02T21:29:21+08:00</lastmod>
+    <lastmod>2022-03-05T15:57:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/tags/jetbrains/</loc>
-    <lastmod>2022-03-02T21:29:21+08:00</lastmod>
+    <loc>https://bigshans.github.io/tags/linux/</loc>
+    <lastmod>2022-03-05T15:57:05+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/linux/</loc>
+    <lastmod>2022-03-05T15:57:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2022-03-02T21:29:21+08:00</lastmod>
+    <lastmod>2022-03-05T15:57:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/tags/</loc>
+    <lastmod>2022-03-05T15:57:05+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/bluetooth-erabuds-on-linux/</loc>
+    <lastmod>2022-03-05T15:57:05+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/jetbrains/</loc>
     <lastmod>2022-03-02T21:29:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -74,20 +95,6 @@
   <url>
     <loc>https://bigshans.github.io/post/fixed-conflicts-between-coc-and-indentline/</loc>
     <lastmod>2022-02-23T16:47:18+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/linux/</loc>
-    <lastmod>2022-02-16T17:11:39+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/linux/</loc>
-    <lastmod>2022-02-16T17:11:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
