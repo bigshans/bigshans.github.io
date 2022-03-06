@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 05 Mar 2022 15:57:05 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Mar 2022 14:24:56 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>修复 Keychron K2 的 Fn 键在 Arch 上不好使的问题</title>
+      <link>https://bigshans.github.io/post/keychron-k2-fn-fixed/</link>
+      <pubDate>Sun, 06 Mar 2022 14:24:56 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/keychron-k2-fn-fixed/</guid>
+      <description>话说 Keychron 这个软件系统兼容做的真差，没想到基础的 Fn 键也能出岔子。 虽然我已经将键盘布局改为 Windows 布局，但 Fn + F1~F12 仍然处于完全不能用的状态。 Windows 用户也不能幸</description>
+    </item>
+    
     <item>
       <title>在 Arch 上启用 QCY-T8 蓝牙耳机</title>
       <link>https://bigshans.github.io/post/bluetooth-erabuds-on-linux/</link>
