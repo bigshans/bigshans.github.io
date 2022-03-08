@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 06 Mar 2022 14:24:56 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Mar 2022 23:36:03 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -15,6 +15,15 @@
       
       <guid>https://bigshans.github.io/post/top-blog/</guid>
       <description>本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义</description>
+    </item>
+    
+    <item>
+      <title>我不使用中文编程</title>
+      <link>https://bigshans.github.io/post/i-dont-use-programming/</link>
+      <pubDate>Tue, 08 Mar 2022 23:36:03 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/i-dont-use-programming/</guid>
+      <description>讨论中文编程的人总是默认输入法是个已经解决的问题，但实际上不是的。中文输入法现在似乎已经很好地用于日常生活了，那它是否已经准备了中文编程呢？</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/write-a-bash-complete/</guid>
       <description>我的配置文件里面有我以前封装的、用于管理博客文章的命令，只不过之前是用 Hexo ，而现在迁移到了 Hugo 上，已经好久没有了，现在发现，拂拂灰尘用起来还是很</description>
-    </item>
-    
-    <item>
-      <title>关于天涯神帖的议论</title>
-      <link>https://bigshans.github.io/post/kk_tianya/</link>
-      <pubDate>Mon, 13 Sep 2021 17:26:27 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/kk_tianya/</guid>
-      <description>最近老是看到天涯的那个讨论房价的 帖子 ，神叨很多，个人感觉充满了精英主义、犬儒主义以及阴谋论的“洞见”，但说的并非不对，只是味道非常不正，简直</description>
     </item>
     
   </channel>
