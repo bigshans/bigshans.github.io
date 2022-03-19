@@ -10,14 +10,49 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2022-03-19T00:52:32+08:00</lastmod>
+    <lastmod>2022-03-19T23:23:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2022-03-19T00:52:32+08:00</lastmod>
+    <lastmod>2022-03-19T23:23:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/</loc>
+    <lastmod>2022-03-19T23:23:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/</loc>
+    <lastmod>2022-03-19T23:23:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/%E6%80%9D%E8%BE%A8/</loc>
+    <lastmod>2022-03-19T23:23:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/%E6%80%9D%E8%BE%A8/</loc>
+    <lastmod>2022-03-19T23:23:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/modern-creator/</loc>
+    <lastmod>2022-03-19T23:23:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -31,20 +66,6 @@
   
   <url>
     <loc>https://bigshans.github.io/categories/linux/</loc>
-    <lastmod>2022-03-19T00:52:32+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2022-03-19T00:52:32+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/</loc>
     <lastmod>2022-03-19T00:52:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -289,13 +310,6 @@
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/tags/%E6%80%9D%E8%BE%A8/</loc>
-    <lastmod>2022-01-06T11:36:13+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigshans.github.io/post/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%98%E6%98%AF%E7%BA%B8%E8%B4%A8%E4%B9%A6/</loc>
     <lastmod>2021-12-30T16:36:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -354,13 +368,6 @@
   <url>
     <loc>https://bigshans.github.io/post/programer-quotes/</loc>
     <lastmod>2021-12-28T11:14:45+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/%E6%80%9D%E8%BE%A8/</loc>
-    <lastmod>2021-12-26T18:11:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
