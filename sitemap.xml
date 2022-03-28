@@ -16,6 +16,13 @@
   </url>
   
   <url>
+    <loc>https://bigshans.github.io/categories/</loc>
+    <lastmod>2022-03-29T01:16:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bigshans.github.io/post/</loc>
     <lastmod>2022-03-29T01:16:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -37,15 +44,15 @@
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/post/onset-diary/</loc>
+    <loc>https://bigshans.github.io/categories/%E5%8F%91%E7%97%85%E6%97%A5%E8%AE%B0/</loc>
     <lastmod>2022-03-29T01:16:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2022-03-19T23:23:15+08:00</lastmod>
+    <loc>https://bigshans.github.io/post/onset-diary/</loc>
+    <lastmod>2022-03-29T01:16:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
