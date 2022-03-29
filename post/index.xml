@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 29 Mar 2022 01:16:23 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Mar 2022 17:57:26 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -15,6 +15,15 @@
       
       <guid>https://bigshans.github.io/post/top-blog/</guid>
       <description>本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义</description>
+    </item>
+    
+    <item>
+      <title>已死的上帝</title>
+      <link>https://bigshans.github.io/post/god-is-dead/</link>
+      <pubDate>Tue, 29 Mar 2022 17:57:26 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/god-is-dead/</guid>
+      <description>上帝已死，具有两个意思。一个表面的基督是虚无的，人心中的上帝轰然倒坍。另一个是一切规律、信仰，或死或活的，仿上帝的，这些主宰着人们思想的大他</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/git-merge-unrealted-histories/</guid>
       <description>由于每次线上建仓库总会给我留一个文件，导致我仓库连接远程总是提示无法合并无关代码。这里就写统一写一下这个问题如何解决。 git pull origin master --allow-unrelated-histories --allow-unrelated-histories 用于强制合</description>
-    </item>
-    
-    <item>
-      <title>Minikube 简介</title>
-      <link>https://bigshans.github.io/post/minikube-introduction/</link>
-      <pubDate>Wed, 22 Sep 2021 15:47:06 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/minikube-introduction/</guid>
-      <description>k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未</description>
     </item>
     
   </channel>
