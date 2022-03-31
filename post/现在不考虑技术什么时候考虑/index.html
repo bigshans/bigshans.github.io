@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>sort 在 Chrome 和 Firefox 表现不同 - Bigshans&#39; Blog</title>
+  <title>现在不考虑技术什么时候考虑 - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="首先，这个区别不算 BUG ，因为标准并没有规定该怎么排，但这个细微区别在实现一些特殊需求时需要被注意到。 注意下面一段代码： var a = [1, 1, 1, 1, 1]; a = a.map((k, i)" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="技术情结总是一个可以批判的东西，可以被用来批判任何不合时宜的技术优化思想，然而，此种批判也存在着滥用。对于小公司来说，还没有达到可以随意不谈" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.93.0-DEV with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/different-sort-between-firefox-and-chrome/" />
+<link rel="canonical" href="https://bigshans.github.io/post/%E7%8E%B0%E5%9C%A8%E4%B8%8D%E8%80%83%E8%99%91%E6%8A%80%E6%9C%AF%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%80%83%E8%99%91/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,20 +42,20 @@
 
 
 
-<meta property="og:title" content="sort 在 Chrome 和 Firefox 表现不同" />
-<meta property="og:description" content="首先，这个区别不算 BUG ，因为标准并没有规定该怎么排，但这个细微区别在实现一些特殊需求时需要被注意到。 注意下面一段代码： var a = [1, 1, 1, 1, 1]; a = a.map((k, i)" />
+<meta property="og:title" content="现在不考虑技术什么时候考虑" />
+<meta property="og:description" content="技术情结总是一个可以批判的东西，可以被用来批判任何不合时宜的技术优化思想，然而，此种批判也存在着滥用。对于小公司来说，还没有达到可以随意不谈" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/different-sort-between-firefox-and-chrome/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-03-31T10:18:10+08:00" />
-<meta property="article:modified_time" content="2022-03-31T10:18:10+08:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/%E7%8E%B0%E5%9C%A8%E4%B8%8D%E8%80%83%E8%99%91%E6%8A%80%E6%9C%AF%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%80%83%E8%99%91/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-03-31T20:44:21+08:00" />
+<meta property="article:modified_time" content="2022-03-31T20:44:21+08:00" />
 
-<meta itemprop="name" content="sort 在 Chrome 和 Firefox 表现不同">
-<meta itemprop="description" content="首先，这个区别不算 BUG ，因为标准并没有规定该怎么排，但这个细微区别在实现一些特殊需求时需要被注意到。 注意下面一段代码： var a = [1, 1, 1, 1, 1]; a = a.map((k, i)"><meta itemprop="datePublished" content="2022-03-31T10:18:10+08:00" />
-<meta itemprop="dateModified" content="2022-03-31T10:18:10+08:00" />
-<meta itemprop="wordCount" content="355">
-<meta itemprop="keywords" content="javascript," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="sort 在 Chrome 和 Firefox 表现不同"/>
-<meta name="twitter:description" content="首先，这个区别不算 BUG ，因为标准并没有规定该怎么排，但这个细微区别在实现一些特殊需求时需要被注意到。 注意下面一段代码： var a = [1, 1, 1, 1, 1]; a = a.map((k, i)"/>
+<meta itemprop="name" content="现在不考虑技术什么时候考虑">
+<meta itemprop="description" content="技术情结总是一个可以批判的东西，可以被用来批判任何不合时宜的技术优化思想，然而，此种批判也存在着滥用。对于小公司来说，还没有达到可以随意不谈"><meta itemprop="datePublished" content="2022-03-31T20:44:21+08:00" />
+<meta itemprop="dateModified" content="2022-03-31T20:44:21+08:00" />
+<meta itemprop="wordCount" content="594">
+<meta itemprop="keywords" content="技术随笔," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="现在不考虑技术什么时候考虑"/>
+<meta name="twitter:description" content="技术情结总是一个可以批判的东西，可以被用来批判任何不合时宜的技术优化思想，然而，此种批判也存在着滥用。对于小公司来说，还没有达到可以随意不谈"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -172,15 +172,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">sort 在 Chrome 和 Firefox 表现不同</h1>
+      <h1 class="post-title">现在不考虑技术什么时候考虑</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2022-03-31 </span>
         <div class="post-category">
-            <a href="/categories/javascript/"> javascript </a>
+            <a href="/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/"> 技术随笔 </a>
             </div>
-          <span class="more-meta"> 约 355 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 594 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
     </header>
@@ -191,58 +191,10 @@
 </div>
 
     <div class="post-content">
-      <p>首先，这个区别不算 BUG ，因为标准并没有规定该怎么排，但这个细微区别在实现一些特殊需求时需要被注意到。</p>
-<p>注意下面一段代码：</p>
-<pre><code class="language-javascript">var a = [1, 1, 1, 1, 1];
-a = a.map((k, i) =&gt; ({ a: k, i: i }));
-function cmp(a, b) {
-  console.log(a.index, b.index);
-  return a.a - b.a;
-}
-a.sort(cmp);
-</code></pre>
-<p>Firefox 的结果：</p>
-<pre><code>0 1
-1 2
-2 3
-3 4
-</code></pre>
-<p>Chrome 的结果：</p>
-<pre><code>1 0
-2 1
-3 2
-4 3
-</code></pre>
-<p>可以看到， Firefox 调用应该是 <code>cmp(a[n], a[n + 1])</code> ， Chrome 则是 <code>cmp(a[n + 1], a[n])</code> 。当你不关心这个顺序时，这个区别是不影响的，虽然调用顺序不同，但就正常情况下是一致，不过当你这么写就需要关心了。</p>
-<pre><code class="language-javascript">var a = [1, 1, 1, 1, 7];
-a = a.map((k, i) =&gt; ({ a: k, i: i === a.length - 1 ? undefined : i + 1 }));
-function cmp(a, b) {
-  console.log(a.i, b.i);
-  return b.i ? b.a - a.a : 0;
-}
-console.log(JSON.stringify(a.sort(cmp)));
-</code></pre>
-<p>Firefox 的结果是：</p>
-<pre><code>[{&quot;a&quot;:1,&quot;i&quot;:1},{&quot;a&quot;:1,&quot;i&quot;:2},{&quot;a&quot;:1,&quot;i&quot;:3},{&quot;a&quot;:1,&quot;i&quot;:4},{&quot;a&quot;:7}]
-</code></pre>
-<p>Chrome 的结果是：</p>
-<pre><code>[{&quot;a&quot;:7},{&quot;a&quot;:1,&quot;i&quot;:1},{&quot;a&quot;:1,&quot;i&quot;:2},{&quot;a&quot;:1,&quot;i&quot;:3},{&quot;a&quot;:1,&quot;i&quot;:4}]
-</code></pre>
-<p>7 排前面了。</p>
-<p>不过实际上除了自己做的特殊情况，顺序是无需考虑的事情：</p>
-<pre><code class="language-javascript">var a = [1, 2, 3, 4];
-function cmp(a, b) {
-  if (a &gt; b) {
-    return -1;
-  } else if (a === b) {
-    return 0;
-  }
-  return 1;
-}
-console.log(a.sort(cmp));
-</code></pre>
-<p>这个结果是两边一致的。</p>
-<p>遇到那些情况需要你清楚调用顺序，然后规避一下就好了。</p>
+      <p>技术情结总是一个可以批判的东西，可以被用来批判任何不合时宜的技术优化思想，然而，此种批判也存在着滥用。对于小公司来说，还没有达到可以随意不谈技术，只谈业务的地步。事实上，<strong>很多公司的业务短板就是技术短板</strong>，然而这些公司的领导往往并不这么认为。他们视此种技术上的需求归为技术人员的一种技术情结，并斥责技术人员“不切实际”。</p>
+<p>然而，这种指责是有效的吗？当现有技术不足以支撑当前需求时，这种需求的实现就必然只能是缺失或者瘸腿的。领导领导们乐意称之为必要的妥协，但事实上呢？如果它是整个业务之中必然的一个点，那么所谓的妥协，我们可以毫不客气地称之为自寻死路。因为，如果不突破这样的技术节点，业务就无法突破，任何尝试绕过它的方法都必然比尝试到达它要远。最后的结果无非是，小公司永远是小公司。</p>
+<p>而对于大多数公司，尤其是小公司，都还没有达到可以抛弃技术而奢谈业务的程度。许多公司实际上没有什么能力去处理这样的问题，一些公司基本一出生就昭示它必然会死去，可以渡到彼岸的毕竟只是少数。世界就是残酷的，有人不愿意相信现实，宁愿做梦，然后把压力传给别人，指责别人揭穿了这样的事实。所以，我的反问是：“现在不考虑技术什么时候考虑？”</p>
+<p>技术是为了解决某事的技术，要考虑到问题，以及问题对应的工具，以及<strong>我们是否有这样的能力去处理这样的问题</strong>？我固然反对不合时宜的技术优化，然而很多时候，很多公司的技术底蕴还不足以让他们随意奢谈。</p>
 
     </div>
 
@@ -263,16 +215,16 @@ console.log(a.sort(cmp));
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/javascript/">javascript</a>
+          <a href="/tags/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/">技术随笔</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/%E7%8E%B0%E5%9C%A8%E4%B8%8D%E8%80%83%E8%99%91%E6%8A%80%E6%9C%AF%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%80%83%E8%99%91/">
+        <a class="prev" href="/post/top-blog/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">现在不考虑技术什么时候考虑</span>
+            <span class="prev-text nav-default">[置顶] 关于本博客</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/post/god-is-dead/">
-            <span class="next-text nav-default">已死的上帝</span>
+        <a class="next" href="/post/different-sort-between-firefox-and-chrome/">
+            <span class="next-text nav-default">sort 在 Chrome 和 Firefox 表现不同</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

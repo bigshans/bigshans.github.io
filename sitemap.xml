@@ -10,14 +10,49 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2022-03-31T10:18:10+08:00</lastmod>
+    <lastmod>2022-03-31T20:44:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2022-03-31T10:18:10+08:00</lastmod>
+    <lastmod>2022-03-31T20:44:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/</loc>
+    <lastmod>2022-03-31T20:44:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/</loc>
+    <lastmod>2022-03-31T20:44:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2022-03-31T20:44:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2022-03-31T20:44:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/%E7%8E%B0%E5%9C%A8%E4%B8%8D%E8%80%83%E8%99%91%E6%8A%80%E6%9C%AF%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%80%83%E8%99%91/</loc>
+    <lastmod>2022-03-31T20:44:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37,21 +72,7 @@
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2022-03-31T10:18:10+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigshans.github.io/post/different-sort-between-firefox-and-chrome/</loc>
-    <lastmod>2022-03-31T10:18:10+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/</loc>
     <lastmod>2022-03-31T10:18:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

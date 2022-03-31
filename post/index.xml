@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 31 Mar 2022 10:18:10 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Mar 2022 20:44:21 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -15,6 +15,15 @@
       
       <guid>https://bigshans.github.io/post/top-blog/</guid>
       <description>本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义</description>
+    </item>
+    
+    <item>
+      <title>现在不考虑技术什么时候考虑</title>
+      <link>https://bigshans.github.io/post/%E7%8E%B0%E5%9C%A8%E4%B8%8D%E8%80%83%E8%99%91%E6%8A%80%E6%9C%AF%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%80%83%E8%99%91/</link>
+      <pubDate>Thu, 31 Mar 2022 20:44:21 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E7%8E%B0%E5%9C%A8%E4%B8%8D%E8%80%83%E8%99%91%E6%8A%80%E6%9C%AF%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%80%83%E8%99%91/</guid>
+      <description>技术情结总是一个可以批判的东西，可以被用来批判任何不合时宜的技术优化思想，然而，此种批判也存在着滥用。对于小公司来说，还没有达到可以随意不谈</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/sku-algorithm/</guid>
       <description>一个重复写过几次的老算法了，今天总结一下大体思路。这是一个在电商领域非常常见的算法，就是选择商品 Sku 时的算法。 这个算法的写法非常只多，往往需要</description>
-    </item>
-    
-    <item>
-      <title>随笔之一</title>
-      <link>https://bigshans.github.io/post/essay-1/</link>
-      <pubDate>Mon, 27 Sep 2021 13:49:02 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/essay-1/</guid>
-      <description>现在回看我几个月前的想法又觉得可笑了。 想法总是在变的，这是好事。对于我来说，就是越来越能够将自己的觉得不对的地方表达出来了。但此种动态不意味</description>
     </item>
     
   </channel>
