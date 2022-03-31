@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 29 Mar 2022 17:57:26 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Mar 2022 10:18:10 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -15,6 +15,15 @@
       
       <guid>https://bigshans.github.io/post/top-blog/</guid>
       <description>本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义</description>
+    </item>
+    
+    <item>
+      <title>sort 在 Chrome 和 Firefox 表现不同</title>
+      <link>https://bigshans.github.io/post/different-sort-between-firefox-and-chrome/</link>
+      <pubDate>Thu, 31 Mar 2022 10:18:10 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/different-sort-between-firefox-and-chrome/</guid>
+      <description>首先，这个区别不算 BUG ，因为标准并没有规定该怎么排，但这个细微区别在实现一些特殊需求时需要被注意到。 注意下面一段代码： var a = [1, 1, 1, 1, 1]; a = a.map((k, i)</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/essay-1/</guid>
       <description>现在回看我几个月前的想法又觉得可笑了。 想法总是在变的，这是好事。对于我来说，就是越来越能够将自己的觉得不对的地方表达出来了。但此种动态不意味</description>
-    </item>
-    
-    <item>
-      <title>如何合并 Git 无关历史</title>
-      <link>https://bigshans.github.io/post/git-merge-unrealted-histories/</link>
-      <pubDate>Mon, 27 Sep 2021 11:57:02 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/git-merge-unrealted-histories/</guid>
-      <description>由于每次线上建仓库总会给我留一个文件，导致我仓库连接远程总是提示无法合并无关代码。这里就写统一写一下这个问题如何解决。 git pull origin master --allow-unrelated-histories --allow-unrelated-histories 用于强制合</description>
     </item>
     
   </channel>
