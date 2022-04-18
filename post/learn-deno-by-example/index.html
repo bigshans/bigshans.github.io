@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>从例子开始学习 Deno - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="Deno 算是一个新的 TypeScript 运行时，个人简单看了一下，感觉还可以。用来简单写一些东西还是很方便的。但网络上 Deno 相关的教程都很老了， Deno 都出正式了，但相关的教" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.93.0-DEV with theme even" />
+
+
+<link rel="canonical" href="https://bigshans.github.io/post/learn-deno-by-example/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.00f7274d88d3ab705ddab69119533d0df4bf1a2ef296f8644c1173bc3eacc49b.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+<meta property="og:title" content="从例子开始学习 Deno" />
+<meta property="og:description" content="Deno 算是一个新的 TypeScript 运行时，个人简单看了一下，感觉还可以。用来简单写一些东西还是很方便的。但网络上 Deno 相关的教程都很老了， Deno 都出正式了，但相关的教" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/learn-deno-by-example/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-14T17:30:03+08:00" />
+<meta property="article:modified_time" content="2022-04-14T17:30:03+08:00" />
+
+<meta itemprop="name" content="从例子开始学习 Deno">
+<meta itemprop="description" content="Deno 算是一个新的 TypeScript 运行时，个人简单看了一下，感觉还可以。用来简单写一些东西还是很方便的。但网络上 Deno 相关的教程都很老了， Deno 都出正式了，但相关的教"><meta itemprop="datePublished" content="2022-04-14T17:30:03+08:00" />
+<meta itemprop="dateModified" content="2022-04-14T17:30:03+08:00" />
+<meta itemprop="wordCount" content="1234">
+<meta itemprop="keywords" content="deno,typescript," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="从例子开始学习 Deno"/>
+<meta name="twitter:description" content="Deno 算是一个新的 TypeScript 运行时，个人简单看了一下，感觉还可以。用来简单写一些东西还是很方便的。但网络上 Deno 相关的教程都很老了， Deno 都出正式了，但相关的教"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">从例子开始学习 Deno</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-04-14 </span>
+        <div class="post-category">
+            <a href="/categories/deno/"> deno </a>
+            </div>
+          <span class="more-meta"> 约 1234 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#http-server-的例子">HTTP Server 的例子</a></li>
+        <li><a href="#输入提示的例子">输入提示的例子</a></li>
+        <li><a href="#获取环境变量">获取环境变量</a></li>
+        <li><a href="#依赖管理">依赖管理</a></li>
+        <li><a href="#移动重命名文件">移动/重命名文件</a></li>
+        <li><a href="#fetch"><code>fetch</code></a></li>
+        <li><a href="#结尾">结尾</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+    <div class="post-content">
+      <p>Deno 算是一个新的 TypeScript 运行时，个人简单看了一下，感觉还可以。用来简单写一些东西还是很方便的。但网络上 Deno 相关的教程都很老了， Deno 都出正式了，但相关的教程大多还是尝鲜，所以找例子的时候遇到了很大的问题。</p>
+<p>建议到<a href="https://examples.deno.land">官方的 Example</a> 上去找。</p>
+<h2 id="http-server-的例子">HTTP Server 的例子</h2>
+<p>Hello World 级别的例子，但是由于版本变化，所以网上的很多例子跑不起来。</p>
+<pre><code class="language-typescript">import { serve } from &quot;https://deno.land/std/http/server.ts&quot;;
+
+serve(() =&gt; new Response('Hello World!'));
+</code></pre>
+<p>服务会跑在 8000 端口。可以设置成别的端口。</p>
+<p>为了防止因为版本变化而导致脚本失效，请标明版本。</p>
+<pre><code class="language-typescript">import { serve } from &quot;https://deno.land/std@0.129.0/http/server.ts&quot;;
+
+serve(() =&gt; new Response('Hello World!'));
+</code></pre>
+<p>官方的例子还有两个，一个是路由的例子，一个是 Stream 的例子。</p>
+<pre><code class="language-typescript">import { serve } from &quot;https://deno.land/std@0.129.0/http/server.ts&quot;;
+
+const BOOK_ROUTE = new URLPattern({ pathname: '/books/:id' });
+
+function handler(req: Request): Response {
+  const match = BOOK_ROUTE.exec(req.url);
+  if (match) {
+    const id = match.pathname.groups.id;
+    return new Response(`Book ${id}`);
+  }
+  return new Response('Not found (try /books/1)', {
+    status: 404,
+  })
+}
+
+console.log('Running on 8000 port');
+serve(handler);
+</code></pre>
+<p><code>Response</code> 和 <code>Response</code> 是 <code>fetch</code> 的。是的， Deno 内置实现了 <code>fetch</code> 。</p>
+<pre><code class="language-typescript">import { serve } from &quot;https://deno.land/std@0.114.0/http/server.ts&quot;;
+
+function handler(_req: Request): Response {
+
+  let timer: number | undefined = undefined;
+  const body = new ReadableStream({
+
+    start(controller) {
+      timer = setInterval(() =&gt; {
+        const message = `It is ${new Date().toISOString()}\n`;
+        controller.enqueue(new TextEncoder().encode(message));
+      }, 1000);
+    },
+
+    cancel() {
+      if (timer !== undefined) {
+        clearInterval(timer);
+      }
+    },
+  });
+
+  return new Response(body, {
+    headers: {
+      &quot;content-type&quot;: &quot;text/plain&quot;,
+      &quot;x-content-type-options&quot;: &quot;nosniff&quot;,
+    },
+  });
+}
+
+console.log(&quot;Listening on http://localhost:8000&quot;);
+serve(handler);
+</code></pre>
+<p>Deno 内置了很多类型，且不需要像 Node 一样自己再 <code>require</code> 。</p>
+<p>这段脚本会一直往客户端写入固定格式的文字。</p>
+<p>需要注意的是，以上脚本运行都需要以 <code>deno run --alow-net &lt;script name&gt;</code> 的格式运行。 Deno 严格限制了脚本在运行时的权限，以增强安全性。后面还有一些脚本需要打开对应的权限，嫌麻烦可以使用 <code>--allow-all</code> 打开全部权限。</p>
+<h2 id="输入提示的例子">输入提示的例子</h2>
+<pre><code class="language-typescript">alert(&quot;Please acknowledge the message.&quot;);
+console.log(&quot;The message has been acknowledged.&quot;);
+
+const shouldProceed = confirm(&quot;Do you want to proceed?&quot;);
+console.log(&quot;Should proceed?&quot;, shouldProceed);
+
+const name = prompt(&quot;Please enter your name:&quot;);
+console.log(&quot;Name:&quot;, name);
+
+const age = prompt(&quot;Please enter your age:&quot;, &quot;18&quot;);
+console.log(&quot;Age:&quot;, age);
+</code></pre>
+<p><code>alert</code> 、 <code>confirm</code> 、 <code>prompt</code> 等 API 原本是浏览器所有的，但 Deno 为了保持浏览器和 CLI 下一致性，于是实现了对应的接口。三者可以很方便的实现输入，比 Node 要简单许多。</p>
+<p>Deno 除了以上三者，还有 <code>window</code> 、 <code>location</code> 等。</p>
+<h2 id="获取环境变量">获取环境变量</h2>
+<pre><code class="language-typescript">const PORT = Deno.env.get('PORT');
+console.log('PORT:', PORT);
+
+const env = Deno.env.toObject();
+console.log('env:', env);
+Deno.env.set(&quot;MY_PASSWORD&quot;, &quot;123456&quot;);
+
+Deno.env.delete(&quot;MY_PASSWORD&quot;);
+
+Deno.env.set(&quot;MY_PASSWORD&quot;, &quot;123&quot;);
+Deno.env.set(&quot;my_password&quot;, &quot;456&quot;);
+console.log(&quot;UPPERCASE:&quot;, Deno.env.get(&quot;MY_PASSWORD&quot;));
+console.log(&quot;lowercase:&quot;, Deno.env.get(&quot;my_password&quot;));
+</code></pre>
+<p>Deno 把主要的 API 都放在了 <code>Deno</code> 对象里，基本上不需要像 Node 一样要额外引入。</p>
+<p><code>env</code> 不同于 Node 的 <code>process.env</code> ，它是一个对象，可以进行 OOP ，比 Node 进行了更好的封装。</p>
+<h2 id="依赖管理">依赖管理</h2>
+<pre><code class="language-typescript">// deps.ts
+export * as http from &quot;https://deno.land/std@0.119.0/http/mod.ts&quot;;
+export * as path from &quot;https://deno.land/std@0.119.0/path/mod.ts&quot;;
+</code></pre>
+<pre><code class="language-typescript">// main.ts
+import { path } from &quot;./deps.ts&quot;;
+</code></pre>
+<p>我觉得这个算是 Deno 的一个毛病吧！ import uri 虽然没有 node_modules 了，但同时也使得依赖管理变得麻烦了，毕竟如果要改版本，就要对所有的 uri 进行替换，问题会很大。</p>
+<p>采用 <code>deps.ts</code> 基本上就是为了处理这个问题，把所有依赖集中在一起管理，我觉得有点变相 package.json 的意思，而且这个依赖路径写起来也挺麻烦的。</p>
+<h2 id="移动重命名文件">移动/重命名文件</h2>
+<pre><code class="language-typescript">await Deno.writeTextFile(&quot;./hello.txt&quot;, &quot;Hello World!&quot;);
+await Deno.rename(&quot;./hello.txt&quot;, &quot;./hello-renamed.txt&quot;);
+console.log(await Deno.readTextFile(&quot;./hello-renamed.txt&quot;));
+
+try {
+  await Deno.rename(&quot;./hello.txt&quot;, &quot;./does/not/exist&quot;);
+} catch (err) {
+  console.error(err);
+}
+
+Deno.renameSync(&quot;./hello-renamed.txt&quot;, &quot;./hello-again.txt&quot;);
+
+await Deno.writeTextFile(&quot;./hello.txt&quot;, &quot;Invisible content.&quot;);
+await Deno.rename(&quot;./hello-again.txt&quot;, &quot;./hello.txt&quot;);
+console.log(await Deno.readTextFile(&quot;./hello.txt&quot;));
+</code></pre>
+<p>涉及到文件读写权限问题，需要加 <code>--alow-read</code> 和 <code>--allow-write</code> 参数。</p>
+<p>Deno 把文件操作也集成到了 <code>Deno</code> 对象内，不用像 Node 一样要额外引入 <code>fs</code> 。同时 Deno 支持 Top-Level await 。</p>
+<h2 id="fetch"><code>fetch</code></h2>
+<pre><code class="language-typescript">let resp = await fetch(&quot;https://example.com&quot;);
+
+console.log(resp.status); // 200
+console.log(resp.headers.get(&quot;Content-Type&quot;)); // &quot;text/html&quot;
+console.log(await resp.text()); // &quot;Hello, World!&quot;
+
+resp = await fetch(&quot;https://example.com&quot;);
+await resp.arrayBuffer();
+/** or await response2.json(); */
+/** or await response2.blob(); */
+
+resp = await fetch(&quot;https://example.com&quot;);
+for await (const chunk of resp.body!) {
+  console.log(&quot;chunk&quot;, chunk);
+}
+
+const body = `{&quot;name&quot;: &quot;Deno&quot;}`;
+resp = await fetch(&quot;https://example.com&quot;, {
+  method: &quot;POST&quot;,
+  headers: {
+    &quot;Content-Type&quot;: &quot;application/json&quot;,
+    &quot;X-API-Key&quot;: &quot;foobar&quot;,
+  },
+  body,
+});
+
+const req = new Request(&quot;https://example.com&quot;, {
+  method: &quot;DELETE&quot;,
+});
+resp = await fetch(req);
+
+const url = &quot;https://example.com&quot;;
+new Request(url, {
+  method: &quot;POST&quot;,
+  body: new Uint8Array([1, 2, 3]),
+});
+new Request(url, {
+  method: &quot;POST&quot;,
+  body: new Blob([&quot;Hello, World!&quot;]),
+});
+new Request(url, {
+  method: &quot;POST&quot;,
+  body: new URLSearchParams({ &quot;foo&quot;: &quot;bar&quot; }),
+});
+
+const formData = new FormData();
+formData.append(&quot;name&quot;, &quot;Deno&quot;);
+formData.append(&quot;file&quot;, new Blob([&quot;Hello, World!&quot;]), &quot;hello.txt&quot;);
+resp = await fetch(&quot;https://example.com&quot;, {
+  method: &quot;POST&quot;,
+  body: formData,
+});
+
+const bodyStream = new ReadableStream({
+  start(controller) {
+    controller.enqueue(&quot;Hello, World!&quot;);
+    controller.close();
+  },
+});
+resp = await fetch(&quot;https://example.com&quot;, {
+  method: &quot;POST&quot;,
+  body: bodyStream,
+});
+
+</code></pre>
+<p>涉及到网络权限问题，需要 <code>--alow-net</code> 参数。</p>
+<p>这里主要展示了 Deno 对 <code>fetch</code> 支持。</p>
+<h2 id="结尾">结尾</h2>
+<p>除了 API 之类的不同， Deno 还提供了更多的工具，比如 lsp 、 format 、 lint 等，而且 Deno 才刚刚起步，未来还很难说。不过目前 Deno 还缺少杀手级的应用，如果有的话，确实能大放异彩。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-04-14
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/deno/">deno</a>
+          <a href="/tags/typescript/">typescript</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/top-blog/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[置顶] 关于本博客</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/maybe-lua-is-not-the-solution/">
+            <span class="next-text nav-default">可能 lua 不是配置 nvim 的最佳解决方案</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+  <div style="font-size: 12px; margin-left: 10px">
+    This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+  </div>
+  </div>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.6859c6fd99ae69f47f61e2dfb7ec58be80966cbca8e8838407458d85484d0de8.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

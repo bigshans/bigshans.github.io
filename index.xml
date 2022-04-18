@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 04 Apr 2022 21:55:06 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Apr 2022 17:30:03 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -15,6 +15,15 @@
       
       <guid>https://bigshans.github.io/post/top-blog/</guid>
       <description>本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义</description>
+    </item>
+    
+    <item>
+      <title>从例子开始学习 Deno</title>
+      <link>https://bigshans.github.io/post/learn-deno-by-example/</link>
+      <pubDate>Thu, 14 Apr 2022 17:30:03 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/learn-deno-by-example/</guid>
+      <description>Deno 算是一个新的 TypeScript 运行时，个人简单看了一下，感觉还可以。用来简单写一些东西还是很方便的。但网络上 Deno 相关的教程都很老了， Deno 都出正式了，但相关的教</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/rxjs-exploration/</guid>
       <description>这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始</description>
-    </item>
-    
-    <item>
-      <title>论具体的人与抽象的人</title>
-      <link>https://bigshans.github.io/post/on-concrete-people-and-abstract-people/</link>
-      <pubDate>Fri, 01 Oct 2021 17:49:11 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/on-concrete-people-and-abstract-people/</guid>
-      <description>本篇的内容本来是突发的，要不要写本来是随意的，但随着我对这个问题更多的思考，兹文也处于不得不写之状态了。 具体的人与抽象的人，分别指的是什么？</description>
     </item>
     
   </channel>
