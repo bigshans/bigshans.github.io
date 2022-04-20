@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>extension on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/extension/</link>
+    <description>Recent content in extension on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Wed, 20 Apr 2022 15:55:27 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/extension/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>配置 bufferline.nvim</title>
+      <link>https://bigshans.github.io/post/config-bufline-nvim/</link>
+      <pubDate>Wed, 20 Apr 2022 15:55:27 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/config-bufline-nvim/</guid>
+      <description>眼馋这个 bufferline 很久了，最近想尝试一下。 安装 首先，安装就是很简单的使用 vim-plug 。 Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。 require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了</description>
+    </item>
+    
+  </channel>
+</rss>

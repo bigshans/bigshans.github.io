@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 14 Apr 2022 17:30:03 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Apr 2022 15:55:27 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -15,6 +15,15 @@
       
       <guid>https://bigshans.github.io/post/top-blog/</guid>
       <description>本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义</description>
+    </item>
+    
+    <item>
+      <title>配置 bufferline.nvim</title>
+      <link>https://bigshans.github.io/post/config-bufline-nvim/</link>
+      <pubDate>Wed, 20 Apr 2022 15:55:27 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/config-bufline-nvim/</guid>
+      <description>眼馋这个 bufferline 很久了，最近想尝试一下。 安装 首先，安装就是很简单的使用 vim-plug 。 Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。 require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/win-numb/</guid>
       <description>这个词我都快看麻了=.= 。在经济下行的今天，社会环境真是越来越焦躁了。 我在此并不发表什么政治观点，我只是在输出情绪。 首先，政府对于未来的预测</description>
-    </item>
-    
-    <item>
-      <title>RxJs 初探 —— 基于事件为中心的编程</title>
-      <link>https://bigshans.github.io/post/rxjs-exploration/</link>
-      <pubDate>Sat, 02 Oct 2021 22:19:12 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/rxjs-exploration/</guid>
-      <description>这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始</description>
     </item>
     
   </channel>

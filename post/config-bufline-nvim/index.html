@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>配置 bufferline.nvim - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="眼馋这个 bufferline 很久了，最近想尝试一下。 安装 首先，安装就是很简单的使用 vim-plug 。 Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。 require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.98.0-DEV with theme even" />
+
+
+<link rel="canonical" href="https://bigshans.github.io/post/config-bufline-nvim/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.00f7274d88d3ab705ddab69119533d0df4bf1a2ef296f8644c1173bc3eacc49b.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+<meta property="og:title" content="配置 bufferline.nvim" />
+<meta property="og:description" content="眼馋这个 bufferline 很久了，最近想尝试一下。 安装 首先，安装就是很简单的使用 vim-plug 。 Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。 require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/config-bufline-nvim/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-20T15:55:27+08:00" />
+<meta property="article:modified_time" content="2022-04-20T15:55:27+08:00" />
+
+<meta itemprop="name" content="配置 bufferline.nvim">
+<meta itemprop="description" content="眼馋这个 bufferline 很久了，最近想尝试一下。 安装 首先，安装就是很简单的使用 vim-plug 。 Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。 require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了"><meta itemprop="datePublished" content="2022-04-20T15:55:27+08:00" />
+<meta itemprop="dateModified" content="2022-04-20T15:55:27+08:00" />
+<meta itemprop="wordCount" content="711">
+<meta itemprop="keywords" content="nvim,extension," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="配置 bufferline.nvim"/>
+<meta name="twitter:description" content="眼馋这个 bufferline 很久了，最近想尝试一下。 安装 首先，安装就是很简单的使用 vim-plug 。 Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。 require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">配置 bufferline.nvim</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-04-20 </span>
+        <div class="post-category">
+            <a href="/categories/nvim/"> nvim </a>
+            </div>
+          <span class="more-meta"> 约 711 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#安装">安装</a></li>
+        <li><a href="#配置">配置</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+    <div class="post-content">
+      <p>眼馋这个 bufferline 很久了，最近想尝试一下。</p>
+<h2 id="安装">安装</h2>
+<p>首先，安装就是很简单的使用 vim-plug 。</p>
+<pre><code class="language-vimscript">Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+</code></pre>
+<p>然后需要在 lua 的配置文件中再次 setup 一下。</p>
+<pre><code class="language-lua">require('bufferline').setup{}
+</code></pre>
+<p>如此，安装就安装完成了。</p>
+<h2 id="配置">配置</h2>
+<p>bufferline 默认的配置对我来说有些不太适应，应为之前我更习惯使用 tab ，不过纯 tab 弊病也挺多的，于是我改变了一下思维方式。</p>
+<p>整体的配置思路是这样的，将一个 tab 作为一个 workspace ，切换到对应的 tab 下会隐藏其他 tab 下的 buffer ，而一个 tab 下的 buffer 和各个 tab id 的展示就交由 bufferline 来处理。切换 buffer 借助 bufferline.nvim 提供命令来执行。</p>
+<p>这里要额外处理的工作是，需要再绑定一个 <code>autocmd</code> 来记录各个 tab 下有哪些 buffer 被打开。之所以需要额外记录，是因为当你使用 <code>BufferLineGoto</code> 进行跳转时会把其他 buffer 都给隐藏掉。</p>
+<p>然后是 lua 配置：</p>
+<pre><code class="language-lua">function plugin_config:bufferline()
+    local tab_group = {}
+    local tabpagenr = vim.fn['tabpagenr'];
+    local bufnr = vim.fn['bufnr']
+    vim.api.nvim_create_autocmd({ &quot;BufEnter&quot; }, {
+        pattern = '*',
+        callback = function ()
+            local tabId = tabpagenr()
+            local buf = bufnr()
+            if tab_group[tabId] then
+                for _, v in ipairs(tab_group[tabId]) do
+                    if v == buf then
+                        return
+                    end
+                end
+                table.insert(tab_group[tabId], buf)
+            else
+                tab_group[tabId] = { buf }
+            end
+        end
+    })
+    vim.api.nvim_create_autocmd({ &quot;BufDelete&quot; }, {
+        pattern = '*',
+        callback = function ()
+            local tabId = tabpagenr()
+            local buf = bufnr()
+            if tab_group[tabId] then
+                local list = {}
+                for _, v in ipairs(tab_group[tabId]) do
+                    if v == buf then
+                       goto contine
+                    end
+                    table.insert(list, v)
+                    ::contine::
+                end
+                tab_group[tabId] = list
+            end
+        end
+    })
+    require('bufferline').setup{
+        options = {
+            enforce_regular_tabs = false,
+            diagnostics = &quot;coc&quot;,
+            diagnostics_indicator = function(count, level, diagnostics_dict, context)
+                local icon = level:match(&quot;error&quot;) and &quot; &quot; or &quot; &quot;
+                return &quot; &quot; .. icon .. count
+            end,
+            numbers = function(opts)
+                return string.format(' %s/%s.%s', vim.fn['tabpagenr'](), opts.id, opts.ordinal)
+            end,
+            offsets = {
+                {
+                    filetype = &quot;coc-explorer&quot;,
+                    text = function()
+                        return vim.fn.getcwd()
+                    end,
+                    highlight = &quot;Directory&quot;,
+                    text_align = &quot;left&quot;
+                },
+                {
+                    filetype = 'vista',
+                    text = function()
+                        return vim.fn.getcwd()
+                    end,
+                    highlight = &quot;Tags&quot;,
+                    text_align = &quot;right&quot;
+                }
+            },
+            separator_style = &quot;slant&quot;,
+            custom_filter = function (buf_number, buf_numbers)
+                if string.match(vim.fn['bufname'](buf_number), &quot;term&quot;) then
+                    return false
+                end
+                local tabId = tabpagenr()
+                if tab_group[tabId] then
+                    for _, p in ipairs(tab_group[tabId]) do
+                        if p == buf_number then
+                            return true
+                        end
+                    end
+                end
+                return false
+            end
+        }
+    };
+end
+</code></pre>
+<p>然后 keybindings 在 vim 中配置：</p>
+<pre><code class="language-vimscript">function BufferLineKeys()
+    nnoremap &lt;silent&gt;&lt;M-1&gt; &lt;Cmd&gt;BufferLineGoToBuffer 1&lt;CR&gt;
+    nnoremap &lt;silent&gt;&lt;M-2&gt; &lt;Cmd&gt;BufferLineGoToBuffer 2&lt;CR&gt;
+    nnoremap &lt;silent&gt;&lt;M-3&gt; &lt;Cmd&gt;BufferLineGoToBuffer 3&lt;CR&gt;
+    nnoremap &lt;silent&gt;&lt;M-4&gt; &lt;Cmd&gt;BufferLineGoToBuffer 4&lt;CR&gt;
+    nnoremap &lt;silent&gt;&lt;M-5&gt; &lt;Cmd&gt;BufferLineGoToBuffer 5&lt;CR&gt;
+    nnoremap &lt;silent&gt;&lt;M-6&gt; &lt;Cmd&gt;BufferLineGoToBuffer 6&lt;CR&gt;
+    nnoremap &lt;silent&gt;&lt;M-7&gt; &lt;Cmd&gt;BufferLineGoToBuffer 7&lt;CR&gt;
+    nnoremap &lt;silent&gt;&lt;M-8&gt; &lt;Cmd&gt;BufferLineGoToBuffer 8&lt;CR&gt;
+    nnoremap &lt;silent&gt;&lt;M-9&gt; &lt;Cmd&gt;BufferLineGoToBuffer 9&lt;CR&gt;
+    nn &lt;silent&gt; gb :BufferLinePick&lt;CR&gt;
+endfunction
+</code></pre>
+<p>不过，虽然配置好了，但这个退出的快捷键我仍然不够满意，因为现在的命令是绑定 <code>:q</code> 的，使得我们不得不拆称两个快捷键来处理。一个用来退出，一个用来杀死 buffer 。</p>
+<p>于是我写了个方法来处理。</p>
+<pre><code class="language-vimscript">function! functions#bufQuit() abort
+    if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) &gt; 1
+        execute 'bdelete'
+    else
+        execute 'quit'
+    endif
+endfunction
+</code></pre>
+<p>然后快捷键绑定就可以了。</p>
+<pre><code class="language-vimscript">nmap &lt;silent&gt;&lt;leader&gt;q :call functions#bufQuit()&lt;CR&gt;
+</code></pre>
+<p>现在，这个 buffer 就真的像是 tab 了。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-04-20
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/nvim/">nvim</a>
+          <a href="/tags/extension/">extension</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/top-blog/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[置顶] 关于本博客</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/learn-deno-by-example/">
+            <span class="next-text nav-default">从例子开始学习 Deno</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+  <div style="font-size: 12px; margin-left: 10px">
+    This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+  </div>
+  </div>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
