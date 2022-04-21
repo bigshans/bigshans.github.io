@@ -244,7 +244,7 @@ console.log(a.sort(cmp));
 <p>遇到那些情况需要你清楚调用顺序，然后规避一下就好了。</p>
 <hr>
 <p>补遗：</p>
-<p><a href="https://stackoverflow.com/questions/68113002/js-sort-different-behaviour-in-firefox-and-chrome">这个问题</a>提出了类似的疑问，下面的回答并解答了疑惑。</p>
+<p><a href="https://stackoverflow.com/questions/68113002/js-sort-different-behaviour-in-firefox-and-chrome">这个问题</a>提出了类似的疑问，下面的回答解答了此疑惑。</p>
 <p>简单来说， <code>compareFn</code> 需要满足比较比较一致性。如果 <code>a = b</code> 且 <code>a = c, b = d</code> ，那么 <code>a = d</code> ，但我上面的代码就不满足比较一致性了，很可能会出现 <code>a != d</code> 的情况 ，因此就会出现因为浏览器算法实现差异而出现问题。比如题目中仅仅实现了 <code>-1</code> 和 <code>0</code> 的情况，缺少 <code>1</code> ，这就会导致比较一致性问题的出现。</p>
 <p>当然，这实际上是不规范使用 compareFn 的结果。</p>
 
