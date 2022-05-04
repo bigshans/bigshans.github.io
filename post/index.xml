@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 20 Apr 2022 15:55:27 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 May 2022 16:54:26 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -15,6 +15,15 @@
       
       <guid>https://bigshans.github.io/post/top-blog/</guid>
       <description>本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义</description>
+    </item>
+    
+    <item>
+      <title>关于 IP 所属地的公开</title>
+      <link>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8Eip%E6%89%80%E5%B1%9E%E5%9C%B0%E7%9A%84%E5%85%AC%E5%BC%80/</link>
+      <pubDate>Wed, 04 May 2022 16:54:26 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8Eip%E6%89%80%E5%B1%9E%E5%9C%B0%E7%9A%84%E5%85%AC%E5%BC%80/</guid>
+      <description>不得不说李彦宏确实是懂中国人的，现在中国互联网市场上隐私权被严重侵犯的现状，有很大一部分原因也是因为国人自己不重视的缘故。有的人会抗辩说，这</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/collabora-install/</guid>
       <description>最近在配置 Nextcloud 的 Office 功能，尝试了一下 OnlyOffice ，实在是太不稳定了。我最终选择了 Collabora Office 作为替代。 首先，极其不推荐使用 Docker 部署，因为 Docker 版已经好久没维护了，其次，</description>
-    </item>
-    
-    <item>
-      <title>赢麻了</title>
-      <link>https://bigshans.github.io/post/win-numb/</link>
-      <pubDate>Fri, 08 Oct 2021 17:37:47 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/win-numb/</guid>
-      <description>这个词我都快看麻了=.= 。在经济下行的今天，社会环境真是越来越焦躁了。 我在此并不发表什么政治观点，我只是在输出情绪。 首先，政府对于未来的预测</description>
     </item>
     
   </channel>

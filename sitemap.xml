@@ -10,14 +10,49 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2022-04-20T15:55:27+08:00</lastmod>
+    <lastmod>2022-05-04T16:54:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2022-04-20T15:55:27+08:00</lastmod>
+    <lastmod>2022-05-04T16:54:26+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/</loc>
+    <lastmod>2022-05-04T16:54:26+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/</loc>
+    <lastmod>2022-05-04T16:54:26+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8Eip%E6%89%80%E5%B1%9E%E5%9C%B0%E7%9A%84%E5%85%AC%E5%BC%80/</loc>
+    <lastmod>2022-05-04T16:54:26+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2022-05-04T16:54:26+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2022-05-04T16:54:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -38,20 +73,6 @@
   
   <url>
     <loc>https://bigshans.github.io/categories/nvim/</loc>
-    <lastmod>2022-04-20T15:55:27+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2022-04-20T15:55:27+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/</loc>
     <lastmod>2022-04-20T15:55:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -318,20 +339,6 @@
   
   <url>
     <loc>https://bigshans.github.io/post/%E8%AF%BB%E4%B8%8A%E6%B5%B7%E6%88%BF%E5%9C%B0%E4%BA%A7%E7%A0%94%E7%A9%B6%E6%81%B6%E6%96%87%E6%9C%89%E6%84%9F/</loc>
-    <lastmod>2022-02-03T12:07:47+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2022-02-03T12:07:47+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2022-02-03T12:07:47+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 20 Apr 2022 15:55:27 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 May 2022 16:54:26 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>随笔</title>
+      <link>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
+      <pubDate>Wed, 04 May 2022 16:54:26 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>nvim</title>
       <link>https://bigshans.github.io/categories/nvim/</link>
@@ -95,15 +104,6 @@
       <pubDate>Sun, 13 Feb 2022 10:53:18 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/%E8%AF%84%E6%B5%8B/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>随笔</title>
-      <link>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
-      <pubDate>Thu, 03 Feb 2022 12:07:47 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</guid>
       <description></description>
     </item>
     
