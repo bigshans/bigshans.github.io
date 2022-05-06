@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>NodeJs 启动代码解析（一） - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.98.0-DEV with theme even" />
+
+
+<link rel="canonical" href="https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.00f7274d88d3ab705ddab69119533d0df4bf1a2ef296f8644c1173bc3eacc49b.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+<meta property="og:title" content="NodeJs 启动代码解析（一）" />
+<meta property="og:description" content="NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-06T10:04:22+08:00" />
+<meta property="article:modified_time" content="2022-05-06T10:04:22+08:00" />
+
+<meta itemprop="name" content="NodeJs 启动代码解析（一）">
+<meta itemprop="description" content="NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //"><meta itemprop="datePublished" content="2022-05-06T10:04:22+08:00" />
+<meta itemprop="dateModified" content="2022-05-06T10:04:22+08:00" />
+<meta itemprop="wordCount" content="1100">
+<meta itemprop="keywords" content="nodejs," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="NodeJs 启动代码解析（一）"/>
+<meta name="twitter:description" content="NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">NodeJs 启动代码解析（一）</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-05-06 </span>
+        <div class="post-category">
+            <a href="/categories/nodejs/"> nodejs </a>
+            </div>
+          <span class="more-meta"> 约 1100 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#nodestartargc-argv"><code>node::Start(argc, argv)</code></a></li>
+        <li><a href="#initializeonceperprocessargc-argv"><code>InitializeOncePerProcess(argc, argv)</code></a></li>
+        <li><a href="#node-实例">Node 实例</a>
+          <ul>
+            <li><a href="#初始化">初始化</a></li>
+            <li><a href="#runenv_info"><code>Run(env_info)</code></a></li>
+            <li><a href="#runexit_code-envget"><code>Run(&amp;exit_code, env.get())</code></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+    <div class="post-content">
+      <p>NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 <code>WIN32</code> 、 <code>UNIX</code> 、 <code>LINUX</code> 。我们主要分析 Linux 部分。</p>
+<p>简化一下代码，我们得到 main 函数的主要代码。</p>
+<pre><code class="language-cpp">int main(int argc, char* argv[]) {
+  node::per_process::linux_at_secure = getauxval(AT_SECURE);
+  // Disable stdio buffering, it interacts poorly with printf()
+  // calls elsewhere in the program (e.g., any logging from V8.)
+  setvbuf(stdout, nullptr, _IONBF, 0);
+  setvbuf(stderr, nullptr, _IONBF, 0);
+  return node::Start(argc, argv);
+}
+</code></pre>
+<p><code>node</code> 是 NodeJs 部分的 namespace ，与 V8 的相区分。</p>
+<p><code>node::Start(argc, argv)</code> 则是整个 Node 开始的部分。</p>
+<h2 id="nodestartargc-argv"><code>node::Start(argc, argv)</code></h2>
+<p>代码在 node.cc 源文件里。</p>
+<pre><code class="language-cpp">int Start(int argc, char** argv) {
+  InitializationResult result = InitializeOncePerProcess(argc, argv);
+  if (result.early_return) {
+    return result.exit_code;
+  }
+
+  {
+    Isolate::CreateParams params;
+    const std::vector&lt;size_t&gt;* indices = nullptr;
+    const EnvSerializeInfo* env_info = nullptr;
+    bool use_node_snapshot =
+        per_process::cli_options-&gt;per_isolate-&gt;node_snapshot;
+    if (use_node_snapshot) {
+      v8::StartupData* blob = NodeMainInstance::GetEmbeddedSnapshotBlob();
+      if (blob != nullptr) {
+        params.snapshot_blob = blob;
+        indices = NodeMainInstance::GetIsolateDataIndices();
+        env_info = NodeMainInstance::GetEnvSerializeInfo();
+      }
+    }
+    uv_loop_configure(uv_default_loop(), UV_METRICS_IDLE_TIME);
+
+    NodeMainInstance main_instance(&amp;params,
+                                   uv_default_loop(),
+                                   per_process::v8_platform.Platform(),
+                                   result.args,
+                                   result.exec_args,
+                                   indices);
+    result.exit_code = main_instance.Run(env_info);
+  }
+
+  TearDownOncePerProcess();
+  return result.exit_code;
+}
+</code></pre>
+<p>首先，与以前的 Node 相比，新版的 Node 多了 snapshot 功能，因此代码在这里也多了一层 snapshot 检测。</p>
+<pre><code class="language-cpp">InitializationResult result = InitializeOncePerProcess(argc, argv);
+if (result.early_return) {
+    return result.exit_code;
+}
+</code></pre>
+<p><code>InitializeOncePerProcess</code> 函数调用了它自身的另一个多态方法。该方法初始化了一些 C++ 模块，比如说 <code>crypto</code> ，然后初始化了 V8 引擎。</p>
+<p><code>uv_loop_configure</code> 函数对 libuv 进行了配置。</p>
+<p>之后创建了 <code>NodeMainInstance</code> 实例。</p>
+<p><code>TearDownOncePerProcess</code> 则是程序运行完成后的收尾处理。</p>
+<h2 id="initializeonceperprocessargc-argv"><code>InitializeOncePerProcess(argc, argv)</code></h2>
+<p><code>InitializeOncePerProcess(argc, arg)</code> 默认启用了一些参数。</p>
+<pre><code class="language-cpp">InitializationResult InitializeOncePerProcess(int argc, char** argv) {
+  return InitializeOncePerProcess(argc, argv, kDefaultInitialization);
+}
+</code></pre>
+<p>其中 <code>kDefaultInitialization</code> 是一个枚举值。</p>
+<pre><code class="language-cpp">enum InitializationSettingsFlags : uint64_t {
+  kDefaultInitialization = 1 &lt;&lt; 0,
+  kInitializeV8 = 1 &lt;&lt; 1,
+  kRunPlatformInit = 1 &lt;&lt; 2,
+  kInitOpenSSL = 1 &lt;&lt; 3
+};
+</code></pre>
+<p><code>InitializeOncePerProcess</code> 源码非常长，在此就不列出来了，它也在 node.cc 源文件中。</p>
+<p>在初始化 V8 前，首先需要对传入参数进行解析。</p>
+<pre><code class="language-cpp">  InitializationResult result;
+  result.args = std::vector&lt;std::string&gt;(argv, argv + argc);
+  std::vector&lt;std::string&gt; errors;
+
+  // This needs to run *before* V8::Initialize().
+  {
+    result.exit_code = InitializeNodeWithArgs(
+        &amp;(result.args), &amp;(result.exec_args), &amp;errors, process_flags);
+    for (const std::string&amp; error : errors)
+      fprintf(stderr, &quot;%s: %s\n&quot;, result.args.at(0).c_str(), error.c_str());
+    if (result.exit_code != 0) {
+      result.early_return = true;
+      return result;
+    }
+  }
+</code></pre>
+<p><code>result</code> 就是最后要传出去的值。</p>
+<p><code>InitializeNodeWithArgs</code> 主要对内建模块进行了初始化，同时设置了环境变量，并解析传入的参数格式，如果格式错误就会报错。</p>
+<p>后续主要是判断是否可以启用 crypto 模块，完成后便设置进 V8 里面。</p>
+<p>最后就启动 V8 。</p>
+<pre><code class="language-cpp">  per_process::v8_platform.Initialize(
+      static_cast&lt;int&gt;(per_process::cli_options-&gt;v8_thread_pool_size));
+  if (init_flags &amp; kInitializeV8) {
+    V8::Initialize();
+  }
+
+  performance::performance_v8_start = PERFORMANCE_NOW();
+  per_process::v8_initialized = true;
+</code></pre>
+<h2 id="node-实例">Node 实例</h2>
+<p>Node 实例的源码在源文件 node_main_instance.cc 源文件中。</p>
+<h3 id="初始化">初始化</h3>
+<pre><code class="language-cpp">NodeMainInstance::NodeMainInstance(
+    Isolate::CreateParams* params,
+    uv_loop_t* event_loop,
+    MultiIsolatePlatform* platform,
+    const std::vector&lt;std::string&gt;&amp; args,
+    const std::vector&lt;std::string&gt;&amp; exec_args,
+    const std::vector&lt;size_t&gt;* per_isolate_data_indexes)
+    : args_(args),
+      exec_args_(exec_args),
+      array_buffer_allocator_(ArrayBufferAllocator::Create()),
+      isolate_(nullptr),
+      platform_(platform),
+      isolate_data_(nullptr),
+      owns_isolate_(true) {
+  // ...
+
+  isolate_ = Isolate::Allocate();
+  CHECK_NOT_NULL(isolate_);
+  // Register the isolate on the platform before the isolate gets initialized,
+  // so that the isolate can access the platform during initialization.
+  platform-&gt;RegisterIsolate(isolate_, event_loop);
+  SetIsolateCreateParamsForNode(params);
+  Isolate::Initialize(isolate_, *params);
+
+  isolate_data_ = std::make_unique&lt;IsolateData&gt;(isolate_,
+                                                event_loop,
+                                                platform,
+                                                array_buffer_allocator_.get(),
+                                                per_isolate_data_indexes);
+  // ...
+  isolate_data_-&gt;max_young_gen_size =
+      params-&gt;constraints.max_young_generation_size_in_bytes();
+}
+</code></pre>
+<p>我缩减了一些代码。由于我的代码稍微有点老，所以与当前的源码有所区别。</p>
+<p>Node 在此创建了一个 <code>Isolate</code> ， <code>Isolate</code> 是 V8 里面的概念，对应 JS 引擎实例。</p>
+<p>出了创建实例之外， Node 还设置了新生代最大空间。</p>
+<h3 id="runenv_info"><code>Run(env_info)</code></h3>
+<p><code>Run</code> 方法有两个重载，这是其中一个。</p>
+<pre><code class="language-cpp">int NodeMainInstance::Run(const EnvSerializeInfo* env_info) {
+  Locker locker(isolate_);
+  Isolate::Scope isolate_scope(isolate_);
+  HandleScope handle_scope(isolate_);
+
+  int exit_code = 0;
+  DeleteFnPtr&lt;Environment, FreeEnvironment&gt; env =
+      CreateMainEnvironment(&amp;exit_code, env_info);
+  CHECK_NOT_NULL(env);
+
+  Context::Scope context_scope(env-&gt;context());
+  Run(&amp;exit_code, env.get());
+  return exit_code;
+}
+</code></pre>
+<p>Node 首先对 <code>isolate_</code> 上了锁，并创建了一个作用域。 <code>env</code> 就是根据系统环境生成的环境信息。</p>
+<h3 id="runexit_code-envget"><code>Run(&amp;exit_code, env.get())</code></h3>
+<pre><code class="language-cpp">void NodeMainInstance::Run(int* exit_code, Environment* env) {
+  if (*exit_code == 0) {
+    LoadEnvironment(env, StartExecutionCallback{});
+
+    *exit_code = SpinEventLoop(env).FromMaybe(1);
+  }
+
+  ResetStdio();
+  // ...
+}
+</code></pre>
+<p>如果能够正常运行的话，就会启动 libuv 做事件循环。<code>LoadEnvironment(env, StartExecutionCallback{});</code> 进行初始化，并加载内部库。</p>
+<pre><code class="language-cpp">MaybeLocal&lt;Value&gt; LoadEnvironment(
+    Environment* env,
+    StartExecutionCallback cb) {
+  env-&gt;InitializeLibuv();
+  env-&gt;InitializeDiagnostics();
+
+  return StartExecution(env, cb);
+}
+</code></pre>
+<p>事件循环的主体在 <code>SpinEventLoop(env)</code> 里，代码主要在一个 <code>do-while</code> 里运行。</p>
+<pre><code class="language-cpp">Maybe&lt;int&gt; SpinEventLoop(Environment* env) {
+  CHECK_NOT_NULL(env);
+  MultiIsolatePlatform* platform = GetMultiIsolatePlatform(env);
+  CHECK_NOT_NULL(platform);
+
+  Isolate* isolate = env-&gt;isolate();
+  HandleScope handle_scope(isolate);
+  Context::Scope context_scope(env-&gt;context());
+  SealHandleScope seal(isolate);
+
+  if (env-&gt;is_stopping()) return Nothing&lt;int&gt;();
+
+  env-&gt;set_trace_sync_io(env-&gt;options()-&gt;trace_sync_io);
+  {
+    bool more;
+    env-&gt;performance_state()-&gt;Mark(
+        node::performance::NODE_PERFORMANCE_MILESTONE_LOOP_START);
+    // 循环主体
+    do {
+      if (env-&gt;is_stopping()) break;
+      uv_run(env-&gt;event_loop(), UV_RUN_DEFAULT);
+      if (env-&gt;is_stopping()) break;
+
+      platform-&gt;DrainTasks(isolate);
+
+      more = uv_loop_alive(env-&gt;event_loop());
+      if (more &amp;&amp; !env-&gt;is_stopping()) continue;
+
+      if (EmitProcessBeforeExit(env).IsNothing())
+        break;
+
+      // Emit `beforeExit` if the loop became alive either after emitting
+      // event, or after running some callbacks.
+      more = uv_loop_alive(env-&gt;event_loop());
+    } while (more == true &amp;&amp; !env-&gt;is_stopping());
+    env-&gt;performance_state()-&gt;Mark(
+        node::performance::NODE_PERFORMANCE_MILESTONE_LOOP_EXIT);
+  }
+  if (env-&gt;is_stopping()) return Nothing&lt;int&gt;();
+
+  env-&gt;set_trace_sync_io(false);
+  env-&gt;PrintInfoForSnapshotIfDebug();
+  env-&gt;VerifyNoStrongBaseObjects();
+  return EmitProcessExit(env);
+}
+</code></pre>
+<p>这里的代码位于 embed_helpers.cc 源文件内。</p>
+<p>从这里可以看出 Node 确实是单线程的。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-05-06
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/nodejs/">nodejs</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/top-blog/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[置顶] 关于本博客</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/%E5%85%B3%E4%BA%8Eip%E6%89%80%E5%B1%9E%E5%9C%B0%E7%9A%84%E5%85%AC%E5%BC%80/">
+            <span class="next-text nav-default">关于 IP 所属地的公开</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+  <div style="font-size: 12px; margin-left: 10px">
+    This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+  </div>
+  </div>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

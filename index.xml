@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 04 May 2022 16:54:26 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 May 2022 10:04:22 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -15,6 +15,15 @@
       
       <guid>https://bigshans.github.io/post/top-blog/</guid>
       <description>本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义</description>
+    </item>
+    
+    <item>
+      <title>NodeJs 启动代码解析（一）</title>
+      <link>https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/</link>
+      <pubDate>Fri, 06 May 2022 10:04:22 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/</guid>
+      <description>NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/tensorflow-tutorial-math-basis/</guid>
       <description>数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。本篇以 d2l 第二版所提供的数学知识作为阅读内容进行学习。换而言之，本篇是 d2l 的读书笔记。我</description>
-    </item>
-    
-    <item>
-      <title>安装 Collabora Office</title>
-      <link>https://bigshans.github.io/post/collabora-install/</link>
-      <pubDate>Thu, 14 Oct 2021 09:47:19 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/collabora-install/</guid>
-      <description>最近在配置 Nextcloud 的 Office 功能，尝试了一下 OnlyOffice ，实在是太不稳定了。我最终选择了 Collabora Office 作为替代。 首先，极其不推荐使用 Docker 部署，因为 Docker 版已经好久没维护了，其次，</description>
     </item>
     
   </channel>

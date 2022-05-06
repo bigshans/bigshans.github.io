@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 24 Aug 2021 18:20:53 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 May 2022 10:04:22 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NodeJs 启动代码解析（一）</title>
+      <link>https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/</link>
+      <pubDate>Fri, 06 May 2022 10:04:22 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/</guid>
+      <description>NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //</description>
+    </item>
+    
     <item>
       <title>使用 Sharp 压缩图片、改变图片大小</title>
       <link>https://bigshans.github.io/post/sharp/</link>
