@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 15 May 2022 11:24:14 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 May 2022 10:46:28 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -15,6 +15,15 @@
       
       <guid>https://bigshans.github.io/post/top-blog/</guid>
       <description>本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义</description>
+    </item>
+    
+    <item>
+      <title>《事件捕获与事件冒泡》补遗</title>
+      <link>https://bigshans.github.io/post/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/</link>
+      <pubDate>Tue, 17 May 2022 10:46:28 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/</guid>
+      <description>阅读的文章是关于事件捕获与事件冒泡先后执行顺序 ，写得挺好的，就是我读的时候漏了一点。 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width&amp;quot;&amp;gt; &amp;lt;title&amp;gt;DOM 冒泡&amp;lt;/title&amp;gt; &amp;lt;style type=&amp;quot;text/css&amp;quot;</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/numpy-basic/</guid>
       <description>numpy 几乎可以说是 python 矩阵计算的基础库了，众多大数据处理框架都引用了它。因此，如果我们有意向大数据前进，我们必不可不面对它。 预备前提 如果你想要学习</description>
-    </item>
-    
-    <item>
-      <title>read 在 zsh 和 bash 下的不同</title>
-      <link>https://bigshans.github.io/post/different-command-read-between-zsh-and-bash/</link>
-      <pubDate>Fri, 22 Oct 2021 14:13:51 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/different-command-read-between-zsh-and-bash/</guid>
-      <description>不实际进行使用我还注意不到这个区别，就是 read 这个命令在 zsh 和 bash 下是不同的。 缘起 起因是我在脚本里写的两个命令同时都用了 read ，区别在于一个是封装在 bash 脚</description>
     </item>
     
   </channel>

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 15 May 2022 11:24:14 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 May 2022 10:46:28 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>javascript</title>
+      <link>https://bigshans.github.io/categories/javascript/</link>
+      <pubDate>Tue, 17 May 2022 10:46:28 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>思辨</title>
       <link>https://bigshans.github.io/categories/%E6%80%9D%E8%BE%A8/</link>
@@ -59,15 +68,6 @@
       <pubDate>Thu, 31 Mar 2022 20:44:21 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://bigshans.github.io/categories/javascript/</link>
-      <pubDate>Thu, 31 Mar 2022 10:18:10 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/javascript/</guid>
       <description></description>
     </item>
     
