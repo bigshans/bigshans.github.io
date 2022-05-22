@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 18 May 2022 09:07:16 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 May 2022 11:41:54 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -15,6 +15,15 @@
       
       <guid>https://bigshans.github.io/post/top-blog/</guid>
       <description>本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义</description>
+    </item>
+    
+    <item>
+      <title>现代经济学批判</title>
+      <link>https://bigshans.github.io/post/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E6%89%B9%E5%88%A4/</link>
+      <pubDate>Sun, 22 May 2022 11:41:54 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E6%89%B9%E5%88%A4/</guid>
+      <description>现代经济学是从古典经济学上发展过来的，现代经济学完成了古典经济学所要达成的目标，即一切价值的量化。而这种量化，正是通过消灭传统价值理论达成的</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/discussion-of-death/</guid>
       <description>关于死亡，最让我触动的一句话莫过于加缪在西西弗斯神话里的那句： 唯一严肃的哲学问题，就是自杀。 这个讨论十分有趣，我曾深深陷入到自杀的逻辑里面不</description>
-    </item>
-    
-    <item>
-      <title>Arch 打包备忘录</title>
-      <link>https://bigshans.github.io/post/arch-pack-memo/</link>
-      <pubDate>Sat, 30 Oct 2021 01:08:44 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/arch-pack-memo/</guid>
-      <description>最近又写了一个 PKGBUILD 传到了 AUR 。不过距离上一次打包已经过去很久了，这些包其实许久没有更新了，就到我自己都忘了要怎么打包了。因为一些常用命令经常记不</description>
     </item>
     
   </channel>
