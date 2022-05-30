@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 22 May 2022 11:41:54 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 May 2022 10:14:24 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 如何合并 Git 无关历史 latex 部分常用公式代码</description>
+    </item>
+    
+    <item>
+      <title>谈谈王垠</title>
+      <link>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88%E7%8E%8B%E5%9E%A0/</link>
+      <pubDate>Mon, 30 May 2022 10:14:24 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88%E7%8E%8B%E5%9E%A0/</guid>
+      <description>王垠是个精英主义很重的人，偏爱理论多过实践。 我以前读过一些他的文章，现在又读了一些，发现我与过去对他的评价不同了。现实是参差、复杂且匮乏的，</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/talk-about-rust-memory/</guid>
       <description>本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复</description>
-    </item>
-    
-    <item>
-      <title>对死亡的讨论</title>
-      <link>https://bigshans.github.io/post/discussion-of-death/</link>
-      <pubDate>Sat, 30 Oct 2021 18:15:47 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/discussion-of-death/</guid>
-      <description>关于死亡，最让我触动的一句话莫过于加缪在西西弗斯神话里的那句： 唯一严肃的哲学问题，就是自杀。 这个讨论十分有趣，我曾深深陷入到自杀的逻辑里面不</description>
     </item>
     
   </channel>
