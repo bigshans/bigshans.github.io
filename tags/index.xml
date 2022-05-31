@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 30 May 2022 10:14:24 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 May 2022 10:55:31 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>golang</title>
+      <link>https://bigshans.github.io/tags/golang/</link>
+      <pubDate>Tue, 31 May 2022 10:55:31 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>随笔</title>
       <link>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</link>
@@ -383,15 +392,6 @@
       <pubDate>Fri, 22 Oct 2021 14:13:51 +0800</pubDate>
       
       <guid>https://bigshans.github.io/tags/shell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>https://bigshans.github.io/tags/golang/</link>
-      <pubDate>Fri, 22 Oct 2021 13:46:00 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/golang/</guid>
       <description></description>
     </item>
     

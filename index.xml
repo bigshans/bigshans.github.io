@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 30 May 2022 10:14:24 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 May 2022 10:55:31 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 如何合并 Git 无关历史 latex 部分常用公式代码</description>
+    </item>
+    
+    <item>
+      <title>GO 的调度器</title>
+      <link>https://bigshans.github.io/post/the-go-scheduler/</link>
+      <pubDate>Tue, 31 May 2022 10:55:31 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/the-go-scheduler/</guid>
+      <description>译前序 本文翻译自 The Go Scheduler ，虽然时间有点久了，但只是阐释思想的话并没有太大问题。由于我个人翻译水平有限，若有纰漏，敬请谅解。 序 由 Dmitry Vyukov 贡献的新调度</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/minimal-linear-regression-of-tensorflow/</guid>
       <description>应工作之要，最近在看机器学习。虽然机器学习挺火的，然而好的机器学习教程真的少，不少是掐住了人们急功近利的心态，提供各种“一口吃成个胖子”的“</description>
-    </item>
-    
-    <item>
-      <title>简单谈一谈 Rust 的内存管理</title>
-      <link>https://bigshans.github.io/post/talk-about-rust-memory/</link>
-      <pubDate>Sun, 31 Oct 2021 17:13:41 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/talk-about-rust-memory/</guid>
-      <description>本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复</description>
     </item>
     
   </channel>
