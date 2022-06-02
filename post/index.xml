@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 31 May 2022 10:55:31 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Jun 2022 11:09:26 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 如何合并 Git 无关历史 latex 部分常用公式代码</description>
+    </item>
+    
+    <item>
+      <title>谈谈墨子</title>
+      <link>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88%E5%A2%A8%E5%AD%90/</link>
+      <pubDate>Thu, 02 Jun 2022 11:09:26 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88%E5%A2%A8%E5%AD%90/</guid>
+      <description>以前我以为墨子思想的核心是兼爱非攻，但我读了十批判书后得到了一点有趣的观点，墨子的核心是天志明鬼。郭沫若的文章显得过于尊孔了，导致墨子的立场</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/why-bfc-can-clear-flow/</guid>
       <description>有些学问还是自己研究最为靠谱，像是 overflow 为什么能清 float ，都知道是 BFC ，但是为什么呢？因为在文档流中，普通的 div 其实也是 BFC ，所以，理论上添加 overflow 为非 visible 的时</description>
-    </item>
-    
-    <item>
-      <title>使用 Tensorflow 极简实现线性回归</title>
-      <link>https://bigshans.github.io/post/minimal-linear-regression-of-tensorflow/</link>
-      <pubDate>Fri, 05 Nov 2021 11:27:46 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/minimal-linear-regression-of-tensorflow/</guid>
-      <description>应工作之要，最近在看机器学习。虽然机器学习挺火的，然而好的机器学习教程真的少，不少是掐住了人们急功近利的心态，提供各种“一口吃成个胖子”的“</description>
     </item>
     
   </channel>
