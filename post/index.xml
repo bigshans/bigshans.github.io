@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 02 Jun 2022 11:09:26 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Jun 2022 02:53:15 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 如何合并 Git 无关历史 latex 部分常用公式代码</description>
+    </item>
+    
+    <item>
+      <title>关于唐山打人事件的一点评论</title>
+      <link>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8E%E5%94%90%E5%B1%B1%E6%89%93%E4%BA%BA%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%B8%80%E7%82%B9%E8%AF%84%E8%AE%BA/</link>
+      <pubDate>Sat, 11 Jun 2022 02:53:15 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8E%E5%94%90%E5%B1%B1%E6%89%93%E4%BA%BA%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%B8%80%E7%82%B9%E8%AF%84%E8%AE%BA/</guid>
+      <description>有两件事情是可以进行判断的： 性骚扰是不对的。 打人是不对的。 对于施暴者的定性，毫无疑问是犯罪，两人也已经被抓获。关于本案，对于第二点我觉得没有</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/numpy-knn/</guid>
       <description>首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的</description>
-    </item>
-    
-    <item>
-      <title>为什么 overflow 能够清除 float</title>
-      <link>https://bigshans.github.io/post/why-bfc-can-clear-flow/</link>
-      <pubDate>Sun, 07 Nov 2021 17:27:40 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/why-bfc-can-clear-flow/</guid>
-      <description>有些学问还是自己研究最为靠谱，像是 overflow 为什么能清 float ，都知道是 BFC ，但是为什么呢？因为在文档流中，普通的 div 其实也是 BFC ，所以，理论上添加 overflow 为非 visible 的时</description>
     </item>
     
   </channel>
