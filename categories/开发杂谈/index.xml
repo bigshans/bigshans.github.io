@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开发杂谈 on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/categories/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/</link>
+    <description>Recent content in 开发杂谈 on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Mon, 29 Nov 2021 15:38:55 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为什么使用或为什么不用 TypeScript</title>
+      <link>https://bigshans.github.io/post/why-use-or-why-not-use-ts/</link>
+      <pubDate>Mon, 29 Nov 2021 15:38:55 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/why-use-or-why-not-use-ts/</guid>
+      <description>最近在写 Angular ，众所周知，现在要写 Angular 基本上是除了 TypeScript 就没得跑了。不得不说， Angular 真是前端规范化的练兵场，前端三大框架中，唯 Angular 严格控制了编写的方式，从环</description>
+    </item>
+    
+    <item>
+      <title>函数式的骨感</title>
+      <link>https://bigshans.github.io/post/function-comment/</link>
+      <pubDate>Tue, 24 Aug 2021 17:22:43 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/function-comment/</guid>
+      <description>最近读了点 rambda 的源码。函数式是个很诱人的概念，借助函数式，你可以以十分数学的方式解决一些问题。虽然如此，函数式对于现实来说仍然过于抽象，如果我</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -35,14 +35,5 @@
       <description>这些网上传得到处都是，一些语录真是犀利，一针见血。我在这里也是简单吐槽一下，放松放松身心。 程序员编程语录 一个好的程序员是那种过单行线马路都要</description>
     </item>
     
-    <item>
-      <title>为什么使用或为什么不用 TypeScript</title>
-      <link>https://bigshans.github.io/post/why-use-or-why-not-use-ts/</link>
-      <pubDate>Mon, 29 Nov 2021 15:38:55 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/why-use-or-why-not-use-ts/</guid>
-      <description>最近在写 Angular ，众所周知，现在要写 Angular 基本上是除了 TypeScript 就没得跑了。不得不说， Angular 真是前端规范化的练兵场，前端三大框架中，唯 Angular 严格控制了编写的方式，从环</description>
-    </item>
-    
   </channel>
 </rss>
