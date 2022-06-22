@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 31 Mar 2022 20:44:21 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Jun 2022 23:09:18 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gRPC vs RESTful</title>
+      <link>https://bigshans.github.io/post/grpc-vs-restful/</link>
+      <pubDate>Wed, 22 Jun 2022 23:09:18 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/grpc-vs-restful/</guid>
+      <description>gRPC 和 RESTful 的比较是两套 API 风格的比较。虽然 gRPC 采取了 HTTP2 ，但这并不代表 RESTful 不能基于 HTTP2 ，但 RESTful 也可以采用 HTTP1 ，这是因为二者的着眼点有所不同。 gRPC 采用了二进制的方</description>
+    </item>
+    
     <item>
       <title>现在不考虑技术什么时候考虑</title>
       <link>https://bigshans.github.io/post/%E7%8E%B0%E5%9C%A8%E4%B8%8D%E8%80%83%E8%99%91%E6%8A%80%E6%9C%AF%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%80%83%E8%99%91/</link>

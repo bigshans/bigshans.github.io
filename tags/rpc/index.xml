@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RPC on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/rpc/</link>
+    <description>Recent content in RPC on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Wed, 22 Jun 2022 23:09:18 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/rpc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gRPC vs RESTful</title>
+      <link>https://bigshans.github.io/post/grpc-vs-restful/</link>
+      <pubDate>Wed, 22 Jun 2022 23:09:18 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/grpc-vs-restful/</guid>
+      <description>gRPC 和 RESTful 的比较是两套 API 风格的比较。虽然 gRPC 采取了 HTTP2 ，但这并不代表 RESTful 不能基于 HTTP2 ，但 RESTful 也可以采用 HTTP1 ，这是因为二者的着眼点有所不同。 gRPC 采用了二进制的方</description>
+    </item>
+    
+  </channel>
+</rss>

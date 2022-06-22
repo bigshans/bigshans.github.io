@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>关于唐山打人事件的一点评论 - Bigshans&#39; Blog</title>
+  <title>gRPC vs RESTful - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="有两件事情是可以进行判断的： 性骚扰是不对的。 打人是不对的。 对于施暴者的定性，毫无疑问是犯罪，两人也已经被抓获。关于本案，对于第二点我觉得没有" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="gRPC 和 RESTful 的比较是两套 API 风格的比较。虽然 gRPC 采取了 HTTP2 ，但这并不代表 RESTful 不能基于 HTTP2 ，但 RESTful 也可以采用 HTTP1 ，这是因为二者的着眼点有所不同。 gRPC 采用了二进制的方" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.100.0-DEV with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/%E5%85%B3%E4%BA%8E%E5%94%90%E5%B1%B1%E6%89%93%E4%BA%BA%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%B8%80%E7%82%B9%E8%AF%84%E8%AE%BA/" />
+<link rel="canonical" href="https://bigshans.github.io/post/grpc-vs-restful/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,20 +42,20 @@
 
 
 
-<meta property="og:title" content="关于唐山打人事件的一点评论" />
-<meta property="og:description" content="有两件事情是可以进行判断的： 性骚扰是不对的。 打人是不对的。 对于施暴者的定性，毫无疑问是犯罪，两人也已经被抓获。关于本案，对于第二点我觉得没有" />
+<meta property="og:title" content="gRPC vs RESTful" />
+<meta property="og:description" content="gRPC 和 RESTful 的比较是两套 API 风格的比较。虽然 gRPC 采取了 HTTP2 ，但这并不代表 RESTful 不能基于 HTTP2 ，但 RESTful 也可以采用 HTTP1 ，这是因为二者的着眼点有所不同。 gRPC 采用了二进制的方" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/%E5%85%B3%E4%BA%8E%E5%94%90%E5%B1%B1%E6%89%93%E4%BA%BA%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%B8%80%E7%82%B9%E8%AF%84%E8%AE%BA/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-06-11T02:53:15+08:00" />
-<meta property="article:modified_time" content="2022-06-11T02:53:15+08:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/grpc-vs-restful/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-06-22T23:09:18+08:00" />
+<meta property="article:modified_time" content="2022-06-22T23:09:18+08:00" />
 
-<meta itemprop="name" content="关于唐山打人事件的一点评论">
-<meta itemprop="description" content="有两件事情是可以进行判断的： 性骚扰是不对的。 打人是不对的。 对于施暴者的定性，毫无疑问是犯罪，两人也已经被抓获。关于本案，对于第二点我觉得没有"><meta itemprop="datePublished" content="2022-06-11T02:53:15+08:00" />
-<meta itemprop="dateModified" content="2022-06-11T02:53:15+08:00" />
-<meta itemprop="wordCount" content="1179">
-<meta itemprop="keywords" content="时事评论," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="关于唐山打人事件的一点评论"/>
-<meta name="twitter:description" content="有两件事情是可以进行判断的： 性骚扰是不对的。 打人是不对的。 对于施暴者的定性，毫无疑问是犯罪，两人也已经被抓获。关于本案，对于第二点我觉得没有"/>
+<meta itemprop="name" content="gRPC vs RESTful">
+<meta itemprop="description" content="gRPC 和 RESTful 的比较是两套 API 风格的比较。虽然 gRPC 采取了 HTTP2 ，但这并不代表 RESTful 不能基于 HTTP2 ，但 RESTful 也可以采用 HTTP1 ，这是因为二者的着眼点有所不同。 gRPC 采用了二进制的方"><meta itemprop="datePublished" content="2022-06-22T23:09:18+08:00" />
+<meta itemprop="dateModified" content="2022-06-22T23:09:18+08:00" />
+<meta itemprop="wordCount" content="952">
+<meta itemprop="keywords" content="RPC,gRPC," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="gRPC vs RESTful"/>
+<meta name="twitter:description" content="gRPC 和 RESTful 的比较是两套 API 风格的比较。虽然 gRPC 采取了 HTTP2 ，但这并不代表 RESTful 不能基于 HTTP2 ，但 RESTful 也可以采用 HTTP1 ，这是因为二者的着眼点有所不同。 gRPC 采用了二进制的方"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -172,15 +172,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">关于唐山打人事件的一点评论</h1>
+      <h1 class="post-title">gRPC vs RESTful</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2022-06-11 </span>
+        <span class="post-time"> 2022-06-22 </span>
         <div class="post-category">
-            <a href="/categories/%E6%97%B6%E4%BA%8B%E8%AF%84%E8%AE%BA/"> 时事评论 </a>
+            <a href="/categories/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/"> 开发杂谈 </a>
             </div>
-          <span class="more-meta"> 约 1179 字 </span>
-          <span class="more-meta"> 预计阅读 3 分钟 </span>
+          <span class="more-meta"> 约 952 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
     </header>
@@ -191,28 +191,19 @@
 </div>
 
     <div class="post-content">
-      <p>有两件事情是可以进行判断的：</p>
-<blockquote>
+      <p>gRPC 和 RESTful 的比较是两套 API 风格的比较。虽然 gRPC 采取了 HTTP2 ，但这并不代表 RESTful 不能基于 HTTP2 ，但 RESTful 也可以采用 HTTP1 ，这是因为二者的着眼点有所不同。 gRPC 采用了二进制的方式进行传输，目的是为了更快、更多样化的传输数据，而 RESTful 采用 JSON 作为传输数据的格式，相应的也就牺牲了速度与传输数据的多样化，但同时收获了数据的可读性。我们深入进去就会发现，为了数据的可读性， RESTful 必须对数据进行冗余，以此来保证传输数据的可读性，而 gRPC 则对数据进行压缩，以保证大数据能够被更快的传输过去，但同时加深了调试的难度。因此，当我们传输的数据越大的时候， gRPC 就越具有优势，因为当数据量过大是，可读性反而成了拖累，速度会反向影响调试和可读性。且二进制对于计算机来说是比 JSON 结构好读的， JSON 解析必然是一大负担，当 JSON 足够大时，解析也会变得十分困难，而栈帧的结构对于计算机来说更好。</p>
+<p>虽然如此，但当你用 Python 或者 NodeJS 写一个 RESTful 的服务，总比写一个 gRPC 服务要容易得多。的确，你要完成一个 gRPC ，你必须书写 proto ，还要生成代码，显得十分累赘。但各个 RPC 之间通过 proto 可以确认彼此间的接口调用，同时，不同语言的项目可以通过 proto 统一类型，而不必理解各个语言间的差异，这是十分好的。而且，对于静态语言来说，类型是必须书写的，使用 gRPC 提供的工具自动生成代码也节省了好多功夫。毕竟，像 Java 之类的语言做客户端处理 JSON ，比起 NodeJS 来说实在差太多。</p>
+<p>但对于 gRPC 来说，还有一点十分重要，就是负载均衡。负载均衡的问题其实是 HTTP2 带来的， HTTP2 的多路复用、 Server Push 为 gRPC 所用，并在服务间创建一条长连接。显然，负载失衡是必然的问题，为了处理负载失衡的问题，一般会创建 Balance Loader 来处理。但 RESTful 由于并没有长连接需要保持，且不复用，所以反而没有这个问题。使用 RESTful ，我们可以直接使用 NGINX 之类的代理服务进行负载均衡。在 gRPC ，但如果我们仍然想要 gRPC 给我们带来优点的话，我们必须考虑自己写一个 Balance Loader 。</p>
+<p>综上所述， gRPC 对比 RESTful 是有诸多优点的：</p>
 <ol>
-<li>
-<p>性骚扰是不对的。</p>
-</li>
-<li>
-<p>打人是不对的。</p>
-</li>
+<li>速度快，传输体积小，对于计算机来说解析方便。理论上可传输更大体积。</li>
+<li>统一不同服务提供者和服务消费者对于接口的描述，自动生成代码省去了一些语言编码的功夫。</li>
 </ol>
-</blockquote>
-<p>对于施暴者的定性，毫无疑问是犯罪，两人也已经被抓获。关于本案，对于第二点我觉得没有什么好说的，但第一点就有很多人延伸了。</p>
-<p>关于性骚扰，毫无疑问是一个女权主义的常见论题。关于女权主义，我虽然同情女性的遭遇，但我并不自称自己为女权主义。因为当肉体称为正义的内容时，男性这具肉体似乎就有了天生的原罪。于是，女权主义就有了与神学相似的结构。男性的结构连带着肉体是要被超越的，而这种超越，如果只是对原先父权制结构的上下颠倒，那么他也只不过是父权制的翻版而已。对于所谓“母权制”的畅想，也不过是女权主义版本的诺替斯主义。这是我对田园女权理论最大的不满。</p>
-<p>事实上，如果女权主义的出发点是女性，那么反而会强化父权制本身，甚至作为父权制运作本身。因为女性本身就是父权制所制造的，女性不需要女性这个位置，她需要一个更符合她实践的位置。因此男权也要回归他的位置，而不是为了剥削而去僭越。性别应该方便人实践，而不是反过来成为人的约束。</p>
-<p>回到性骚扰上来，作为一名男性应该要知道性骚扰不是一件值得称道的事情。但那些应该知道的男性往往不会意识到，这就很糟糕了。性骚扰不仅仅是一个女权主义的问题，它本身就是一个法律的问题。《中华人民共和国妇女权益保障法》第 40 条规定：“禁止对妇女实施性骚扰”。但从现实来看，普法和执法的力度都不太够。而且最近的一些案件也噤声了许多为此而苦恼的女性，造成了非常不好的影响。如果不能在这方面有所推进，大概还是现状如此混乱吧？</p>
-<hr>
-<p>现在这个情况可真的是乱啊！</p>
-<p>女性主义问题在父权社会几乎就是背景板，性骚扰本身就是女性主义问题的典型。而打人事件就是性骚扰的后果，而且扩大化了，从这个角度看确实是女性主义问题。但问题不能单单这么看，当我们把性骚扰当作前提，那么这件事就是一起非常恶性的寻衅滋事，打人者如此有恃无恐，背后的问题一定更大。</p>
-<p>我觉得这件事情能够引起大众理性的短路，很大程度上是对这件这件事无法找到一个合理的切分点。女性主义多少是有点的，类似的案件中，女性其实比男性要更无力，而且从起因看，鲜有将男性作为自己性骚扰对象的。而且被男性拒绝和被女性拒绝从暴怒的理由是不同的，男性面对女性更容易以暴力方式令其就范，背后就是整个父权社会的符号机制所压迫的。</p>
-<p>那么社会治安事件又如何呢？完全没有问题。只要理由一替换，同样事件同样的逻辑也都成立，甚至更为普遍。男性可能还能抗一下，但女性就真的不行了，因此，女性比男性更为恐惧。</p>
-<p>那么哪个是最主要的呢？打人是最主要的，其次是女性主义问题。因为即使男女平等了，但在类似事件面前，结果都是类似。但不代表女性主义的矛盾不存在，只是它处于次要的地位，也需要我们加以关注。这是也是很重要的事情。</p>
-<p>而且，比起这件事是否是女性主义性质的。围绕这件事而出现的各种争论，我觉得是更为有趣，是更加女性主义的。</p>
+<p>但缺点则对能力不足的技术团队颇有挑战：</p>
+<ol>
+<li>负载均衡问题是一点，需要有一定技术力去实现。横向对比 thrift ，则缺少了服务发现、连接池等能力，但 RESTful 本身也没有这些，且 thrift 跟 HTTP 无关。</li>
+</ol>
+<p>对于技术力不足的团队来说，用 RESTful 构建 RPC 不失为一种良好的选择。</p>
 
     </div>
 
@@ -224,7 +215,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2022-06-11
+        2022-06-22
         
     </span>
   </p>
@@ -233,16 +224,17 @@
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/%E6%97%B6%E4%BA%8B%E8%AF%84%E8%AE%BA/">时事评论</a>
+          <a href="/tags/rpc/">RPC</a>
+          <a href="/tags/grpc/">gRPC</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/grpc-vs-restful/">
+        <a class="prev" href="/post/%E5%A4%87%E5%BF%98%E5%BD%95/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">gRPC vs RESTful</span>
+            <span class="prev-text nav-default">[置顶] 备忘录</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/post/%E8%B0%88%E8%B0%88%E5%A2%A8%E5%AD%90/">
-            <span class="next-text nav-default">谈谈墨子</span>
+        <a class="next" href="/post/%E5%85%B3%E4%BA%8E%E5%94%90%E5%B1%B1%E6%89%93%E4%BA%BA%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%B8%80%E7%82%B9%E8%AF%84%E8%AE%BA/">
+            <span class="next-text nav-default">关于唐山打人事件的一点评论</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
