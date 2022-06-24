@@ -17,48 +17,55 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2022-06-23T21:29:23+08:00</lastmod>
+    <lastmod>2022-06-24T13:49:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2022-06-23T21:29:23+08:00</lastmod>
+    <lastmod>2022-06-24T13:49:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2022-06-23T21:29:23+08:00</lastmod>
+    <lastmod>2022-06-24T13:49:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/tags/</loc>
-    <lastmod>2022-06-23T21:29:23+08:00</lastmod>
+    <lastmod>2022-06-24T13:49:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/post/%E5%AE%9E%E7%94%A8%E4%B8%8E%E5%AE%9E%E8%B7%B5/</loc>
-    <lastmod>2022-06-23T21:29:23+08:00</lastmod>
+    <loc>https://bigshans.github.io/post/critical-outline/</loc>
+    <lastmod>2022-06-24T13:49:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/tags/%E6%80%9D%E8%BE%A8/</loc>
-    <lastmod>2022-06-23T21:29:23+08:00</lastmod>
+    <lastmod>2022-06-24T13:49:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/%E6%80%9D%E8%BE%A8/</loc>
+    <lastmod>2022-06-24T13:49:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/%E5%AE%9E%E7%94%A8%E4%B8%8E%E5%AE%9E%E8%B7%B5/</loc>
     <lastmod>2022-06-23T21:29:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

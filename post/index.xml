@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 23 Jun 2022 21:29:23 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Jun 2022 13:49:09 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -23,7 +23,16 @@
       <pubDate>Wed, 18 May 2022 09:07:16 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
-      <description>文章备忘录： Arch 打包备忘录 如何合并 Git 无关历史 latex 部分常用公式代码</description>
+      <description>文章备忘录： Arch 打包备忘录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要</description>
+    </item>
+    
+    <item>
+      <title>批判纲要</title>
+      <link>https://bigshans.github.io/post/critical-outline/</link>
+      <pubDate>Fri, 24 Jun 2022 13:49:09 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/critical-outline/</guid>
+      <description>因为经常性会有思想在我的头脑里出现但理不出文章，草率写文章也不太好，所以就一个地方单独记录。 新实用主义 罗蒂的反本质主义只是将反本质作为本质而</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/drop-shadow-hidden-origin-image/</guid>
       <description>看到张鑫大佬的这篇文章很有意思。 张鑫大佬讲述了如何使用 filter 中的 drop-shadow 实现 png 图标改颜色的技巧，本质上是利用阴影偏移实现的。不过我有一点我一直没有搞明</description>
-    </item>
-    
-    <item>
-      <title>Nginx 按路由分流请求</title>
-      <link>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</link>
-      <pubDate>Tue, 30 Nov 2021 14:04:23 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</guid>
-      <description>一个很恶心的需求，到部署最后部署的时候才发现问题很大，但只好死马当活马医了。 我们目前搞了两个项目，其中一个项目是传统 Vue 项目，另一个是 Angular SSR ，刚</description>
     </item>
     
   </channel>
