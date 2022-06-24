@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 23 Jun 2022 15:44:16 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Jun 2022 21:29:23 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 如何合并 Git 无关历史 latex 部分常用公式代码</description>
+    </item>
+    
+    <item>
+      <title>实用与实践</title>
+      <link>https://bigshans.github.io/post/%E5%AE%9E%E7%94%A8%E4%B8%8E%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Thu, 23 Jun 2022 21:29:23 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E5%AE%9E%E7%94%A8%E4%B8%8E%E5%AE%9E%E8%B7%B5/</guid>
+      <description>对实用主义实用的批判 对于实用性的反思我们可以窥见所谓实用主义的反实践内核。 实用主义带给我们最大的不满在于，实用这个概念本身。我们如何得出一个</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</guid>
       <description>一个很恶心的需求，到部署最后部署的时候才发现问题很大，但只好死马当活马医了。 我们目前搞了两个项目，其中一个项目是传统 Vue 项目，另一个是 Angular SSR ，刚</description>
-    </item>
-    
-    <item>
-      <title>为什么使用或为什么不用 TypeScript</title>
-      <link>https://bigshans.github.io/post/why-use-or-why-not-use-ts/</link>
-      <pubDate>Mon, 29 Nov 2021 15:38:55 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/why-use-or-why-not-use-ts/</guid>
-      <description>最近在写 Angular ，众所周知，现在要写 Angular 基本上是除了 TypeScript 就没得跑了。不得不说， Angular 真是前端规范化的练兵场，前端三大框架中，唯 Angular 严格控制了编写的方式，从环</description>
     </item>
     
   </channel>
