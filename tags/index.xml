@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 24 Jun 2022 13:49:09 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Jul 2022 20:07:05 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>软件体验</title>
+      <link>https://bigshans.github.io/tags/%E8%BD%AF%E4%BB%B6%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Sat, 02 Jul 2022 20:07:05 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/%E8%BD%AF%E4%BB%B6%E4%BD%93%E9%AA%8C/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>思辨</title>
       <link>https://bigshans.github.io/tags/%E6%80%9D%E8%BE%A8/</link>
@@ -446,15 +455,6 @@
       <pubDate>Sat, 02 Oct 2021 22:19:12 +0800</pubDate>
       
       <guid>https://bigshans.github.io/tags/rxjs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>algorithm</title>
-      <link>https://bigshans.github.io/tags/algorithm/</link>
-      <pubDate>Mon, 27 Sep 2021 17:41:12 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/algorithm/</guid>
       <description></description>
     </item>
     

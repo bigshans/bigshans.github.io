@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 24 Jun 2022 13:49:09 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Jul 2022 20:07:05 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要</description>
+    </item>
+    
+    <item>
+      <title>Notion 使用体验</title>
+      <link>https://bigshans.github.io/post/notion-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Sat, 02 Jul 2022 20:07:05 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/notion-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
+      <description>以前我其实听说过 Notion ，也注册帐号尝试了一下，但由于过于复杂所以放弃了。不过最近我又开始使用了，而且发现上手之后感觉还不错，所以在此讲一下我的使</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/drop-shadow-hidden-origin-image/</guid>
       <description>看到张鑫大佬的这篇文章很有意思。 张鑫大佬讲述了如何使用 filter 中的 drop-shadow 实现 png 图标改颜色的技巧，本质上是利用阴影偏移实现的。不过我有一点我一直没有搞明</description>
-    </item>
-    
-    <item>
-      <title>Nginx 按路由分流请求</title>
-      <link>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</link>
-      <pubDate>Tue, 30 Nov 2021 14:04:23 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</guid>
-      <description>一个很恶心的需求，到部署最后部署的时候才发现问题很大，但只好死马当活马医了。 我们目前搞了两个项目，其中一个项目是传统 Vue 项目，另一个是 Angular SSR ，刚</description>
     </item>
     
   </channel>
