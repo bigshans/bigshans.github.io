@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 02 Jul 2022 20:07:05 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Jul 2022 00:27:31 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要</description>
+    </item>
+    
+    <item>
+      <title>解“不患寡而患不均”</title>
+      <link>https://bigshans.github.io/post/%E8%A7%A3%E4%B8%8D%E6%82%A3%E5%AF%A1%E8%80%8C%E6%82%A3%E4%B8%8D%E5%9D%87/</link>
+      <pubDate>Thu, 07 Jul 2022 00:27:31 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E8%A7%A3%E4%B8%8D%E6%82%A3%E5%AF%A1%E8%80%8C%E6%82%A3%E4%B8%8D%E5%9D%87/</guid>
+      <description>现代人按照平均主义去或者公平公正去理解，会觉得这句话很怪，因为“寡”与“均”似乎没有什么关联，而应该作“不患贫而患不均”才对。 但古代经学家并</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/chun-qiu-zuozhuan-zhu-1/</guid>
       <description>由于内容是竖排繁体，不太好读，所以抄下来读，至于以后怎样再说。 正文 前言 （一）春秋名义 《春秋》本是当时各国史书的通名，所以《国语晋语》七说：“</description>
-    </item>
-    
-    <item>
-      <title>drop-shadow 隐藏原始图像</title>
-      <link>https://bigshans.github.io/post/drop-shadow-hidden-origin-image/</link>
-      <pubDate>Fri, 03 Dec 2021 16:32:50 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/drop-shadow-hidden-origin-image/</guid>
-      <description>看到张鑫大佬的这篇文章很有意思。 张鑫大佬讲述了如何使用 filter 中的 drop-shadow 实现 png 图标改颜色的技巧，本质上是利用阴影偏移实现的。不过我有一点我一直没有搞明</description>
     </item>
     
   </channel>
