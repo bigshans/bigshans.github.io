@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 07 Jul 2022 00:27:31 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Jul 2022 16:21:41 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要</description>
+    </item>
+    
+    <item>
+      <title>人、管理与软件开发——从敏捷开发谈起</title>
+      <link>https://bigshans.github.io/post/%E4%BA%BA-%E7%AE%A1%E7%90%86%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Thu, 07 Jul 2022 16:21:41 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E4%BA%BA-%E7%AE%A1%E7%90%86%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</guid>
+      <description>敏捷开发本质上是后福特主义在软件工程方面的实践，两者在组织管理方面的理念简直如出一辙。事实上，在欧美企业大量转向后福特的管理制度之后，敏捷的</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/getting-started-with-angular/</guid>
       <description>因为最近重新用了用 Angular ，在有了 Vue 和 React 的使用经验之后，对 Angular 又有了新的理解。 Angular 是真正意义上与 Vue 和 React 区分的框架，因为其思想与二者截然不同。不过我不讨</description>
-    </item>
-    
-    <item>
-      <title>抄书——春秋左传注（一）</title>
-      <link>https://bigshans.github.io/post/chun-qiu-zuozhuan-zhu-1/</link>
-      <pubDate>Sat, 04 Dec 2021 13:47:41 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/chun-qiu-zuozhuan-zhu-1/</guid>
-      <description>由于内容是竖排繁体，不太好读，所以抄下来读，至于以后怎样再说。 正文 前言 （一）春秋名义 《春秋》本是当时各国史书的通名，所以《国语晋语》七说：“</description>
     </item>
     
   </channel>
