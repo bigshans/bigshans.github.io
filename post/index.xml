@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 07 Jul 2022 16:21:41 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Jul 2022 23:26:42 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要</description>
+    </item>
+    
+    <item>
+      <title>存在论提纲</title>
+      <link>https://bigshans.github.io/post/%E5%AD%98%E5%9C%A8%E8%AE%BA%E6%8F%90%E7%BA%B2/</link>
+      <pubDate>Sat, 23 Jul 2022 23:26:42 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E5%AD%98%E5%9C%A8%E8%AE%BA%E6%8F%90%E7%BA%B2/</guid>
+      <description>人在世界上，如同水在水中。 意识不等于主体，人的主体就是整个人本身。因为在认识之中，整个人都投入到了认识之中。 人是不可分割的。 意识是人的一种官</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/past-memory-for-high-school/</guid>
       <description>想起了一些旧事。 我不是很喜欢我的高中，我中考那年赶上合校，几所市里几所学校与差校就合并起来，一些学校废掉了高中部，然后高中部的教资就和其他学</description>
-    </item>
-    
-    <item>
-      <title>Angular 简易入门</title>
-      <link>https://bigshans.github.io/post/getting-started-with-angular/</link>
-      <pubDate>Mon, 06 Dec 2021 09:29:04 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/getting-started-with-angular/</guid>
-      <description>因为最近重新用了用 Angular ，在有了 Vue 和 React 的使用经验之后，对 Angular 又有了新的理解。 Angular 是真正意义上与 Vue 和 React 区分的框架，因为其思想与二者截然不同。不过我不讨</description>
     </item>
     
   </channel>
