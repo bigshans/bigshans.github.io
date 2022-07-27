@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 23 Jul 2022 23:26:42 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Jul 2022 14:05:02 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要</description>
+    </item>
+    
+    <item>
+      <title>如何使用 wine-wechat-setup</title>
+      <link>https://bigshans.github.io/post/how-to-use-wine-wechat-setup/</link>
+      <pubDate>Wed, 27 Jul 2022 14:05:02 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/how-to-use-wine-wechat-setup/</guid>
+      <description>最近升级了一下微信，好久没有这个脚本好像都不会用了。此脚本是依云姐写的，在 Archlinuxcn 源上，需要配合 wine-for-wechat 。 wine-wechat-setup 提供了一个 wechat 命令，如果你已经在本地安装了微信</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/pain-of-breathing/</guid>
       <description>我的咽喉炎、鼻炎不知道是什么时候落下的病根，也许是初中，也许是高中，我不清楚。但在高中的时候，我这两个病最为严重。最折磨的时候，二病总是接踵</description>
-    </item>
-    
-    <item>
-      <title>旧事记——高中</title>
-      <link>https://bigshans.github.io/post/past-memory-for-high-school/</link>
-      <pubDate>Fri, 10 Dec 2021 11:18:47 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/past-memory-for-high-school/</guid>
-      <description>想起了一些旧事。 我不是很喜欢我的高中，我中考那年赶上合校，几所市里几所学校与差校就合并起来，一些学校废掉了高中部，然后高中部的教资就和其他学</description>
     </item>
     
   </channel>
