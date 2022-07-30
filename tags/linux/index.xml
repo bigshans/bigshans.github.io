@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 06 Mar 2022 14:24:56 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jul 2022 23:26:25 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Linux 上用 C 写一个守护进程</title>
+      <link>https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/</link>
+      <pubDate>Sat, 30 Jul 2022 23:26:25 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/</guid>
+      <description>因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方</description>
+    </item>
+    
     <item>
       <title>修复 Keychron K2 的 Fn 键在 Arch 上不好使的问题</title>
       <link>https://bigshans.github.io/post/keychron-k2-fn-fixed/</link>

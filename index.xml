@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 27 Jul 2022 14:05:02 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jul 2022 23:26:25 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+    </item>
+    
+    <item>
+      <title>在 Linux 上用 C 写一个守护进程</title>
+      <link>https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/</link>
+      <pubDate>Sat, 30 Jul 2022 23:26:25 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/</guid>
+      <description>因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/type-gymnastics-for-typescript/</guid>
       <description>类型体操如果不是写库的话，基本上是屠龙技。 TypeScript 的类型系统本质上是一个小函数式语言，通过类型体操能够更清晰的感受到这一点。不过 TypeScript 类型系统有限制，</description>
-    </item>
-    
-    <item>
-      <title>呼吸之痛</title>
-      <link>https://bigshans.github.io/post/pain-of-breathing/</link>
-      <pubDate>Thu, 16 Dec 2021 15:24:17 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/pain-of-breathing/</guid>
-      <description>我的咽喉炎、鼻炎不知道是什么时候落下的病根，也许是初中，也许是高中，我不清楚。但在高中的时候，我这两个病最为严重。最折磨的时候，二病总是接踵</description>
     </item>
     
   </channel>
