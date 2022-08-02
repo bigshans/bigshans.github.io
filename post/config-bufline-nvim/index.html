@@ -52,7 +52,7 @@
 <meta itemprop="name" content="配置 bufferline.nvim">
 <meta itemprop="description" content="眼馋这个 bufferline 很久了，最近想尝试一下。 安装 首先，安装就是很简单的使用 vim-plug 。 Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。 require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了"><meta itemprop="datePublished" content="2022-04-20T15:55:27+08:00" />
 <meta itemprop="dateModified" content="2022-04-20T15:55:27+08:00" />
-<meta itemprop="wordCount" content="717">
+<meta itemprop="wordCount" content="748">
 <meta itemprop="keywords" content="nvim,extension," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="配置 bufferline.nvim"/>
 <meta name="twitter:description" content="眼馋这个 bufferline 很久了，最近想尝试一下。 安装 首先，安装就是很简单的使用 vim-plug 。 Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。 require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了"/>
@@ -179,7 +179,7 @@
         <div class="post-category">
             <a href="/categories/nvim/"> nvim </a>
             </div>
-          <span class="more-meta"> 约 717 字 </span>
+          <span class="more-meta"> 约 748 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
@@ -218,6 +218,7 @@
     local tab_group = {}
     local tabpagenr = vim.fn['tabpagenr'];
     local bufnr = vim.fn['bufnr']
+    local buflisted = vim.fn['buflisted']
     vim.api.nvim_create_autocmd({ &quot;BufEnter&quot; }, {
         pattern = '*',
         callback = function ()
@@ -239,17 +240,20 @@
         pattern = '*',
         callback = function ()
             local tabId = tabpagenr()
-            local buf = bufnr()
             if tab_group[tabId] then
-                local list = {}
-                for _, v in ipairs(tab_group[tabId]) do
-                    if v == buf then
-                       goto contine
+                local new_tab_group = {}
+                for k, tab_list in ipairs(tab_group) do
+                    local list = {}
+                    for _, v in ipairs(tab_list) do
+                        if buflisted(v) &gt; 0 then
+                            table.insert(list, v)
+                        end
                     end
-                    table.insert(list, v)
-                    ::contine::
+                    if #list ~= 0 then
+                        new_tab_group[k] = list
+                    end
                 end
-                tab_group[tabId] = list
+                tab_group = new_tab_group
             end
         end
     })
@@ -257,14 +261,21 @@
         options = {
             enforce_regular_tabs = false,
             diagnostics = &quot;coc&quot;,
-            diagnostics_indicator = function(count, level, diagnostics_dict, context)
+            diagnostics_update_in_insert = true,
+            diagnostics_indicator = function(count, level)
                 local icon = level:match(&quot;error&quot;) and &quot; &quot; or &quot; &quot;
                 return &quot; &quot; .. icon .. count
             end,
             numbers = function(opts)
-                return string.format(' %s/%s.%s', vim.fn['tabpagenr'](), opts.id, opts.ordinal)
+                return string.format(' %s/%s', vim.fn['tabpagenr'](), opts.ordinal)
             end,
             offsets = {
+                {
+                    filetype = &quot;NvimTree&quot;,
+                    text = &quot;File Explorer&quot;,
+                    highlight = &quot;Directory&quot;,
+                    text_align = &quot;left&quot;
+                },
                 {
                     filetype = &quot;coc-explorer&quot;,
                     text = function()
@@ -283,7 +294,7 @@
                 }
             },
             separator_style = &quot;slant&quot;,
-            custom_filter = function (buf_number, buf_numbers)
+            custom_filter = function (buf_number)
                 if string.match(vim.fn['bufname'](buf_number), &quot;term&quot;) then
                     return false
                 end
@@ -300,6 +311,7 @@
         }
     };
 end
+
 </code></pre>
 <p>然后 keybindings 在 vim 中配置：</p>
 <pre><code class="language-vimscript">function BufferLineKeys()
