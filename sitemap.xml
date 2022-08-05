@@ -17,7 +17,21 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2022-07-30T23:26:25+08:00</lastmod>
+    <lastmod>2022-08-05T16:46:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/</loc>
+    <lastmod>2022-08-05T16:46:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/trivial/</loc>
+    <lastmod>2022-08-05T16:46:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -45,13 +59,6 @@
   
   <url>
     <loc>https://bigshans.github.io/tags/linux/</loc>
-    <lastmod>2022-07-30T23:26:25+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/post/</loc>
     <lastmod>2022-07-30T23:26:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

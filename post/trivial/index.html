@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>在 Linux 上用 C 写一个守护进程 - Bigshans&#39; Blog</title>
+  <title>琐碎备录 - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="Makefile .PHONY 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。 Joi joi.string().allow(&#39;&#39;).allow(null).empty(&#39;&#39;).optional() ，允许字符串为空。" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.100.0-DEV with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/" />
+<link rel="canonical" href="https://bigshans.github.io/post/trivial/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,20 +42,20 @@
 
 
 
-<meta property="og:title" content="在 Linux 上用 C 写一个守护进程" />
-<meta property="og:description" content="因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方" />
+<meta property="og:title" content="琐碎备录" />
+<meta property="og:description" content="Makefile .PHONY 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。 Joi joi.string().allow(&#39;&#39;).allow(null).empty(&#39;&#39;).optional() ，允许字符串为空。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-07-30T23:26:25+08:00" />
-<meta property="article:modified_time" content="2022-07-30T23:26:25+08:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/trivial/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-08-05T16:46:36+08:00" />
+<meta property="article:modified_time" content="2022-08-05T16:46:36+08:00" />
 
-<meta itemprop="name" content="在 Linux 上用 C 写一个守护进程">
-<meta itemprop="description" content="因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方"><meta itemprop="datePublished" content="2022-07-30T23:26:25+08:00" />
-<meta itemprop="dateModified" content="2022-07-30T23:26:25+08:00" />
-<meta itemprop="wordCount" content="401">
-<meta itemprop="keywords" content="C,linux," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="在 Linux 上用 C 写一个守护进程"/>
-<meta name="twitter:description" content="因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方"/>
+<meta itemprop="name" content="琐碎备录">
+<meta itemprop="description" content="Makefile .PHONY 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。 Joi joi.string().allow(&#39;&#39;).allow(null).empty(&#39;&#39;).optional() ，允许字符串为空。"><meta itemprop="datePublished" content="2022-08-05T16:46:36+08:00" />
+<meta itemprop="dateModified" content="2022-08-05T16:46:36+08:00" />
+<meta itemprop="wordCount" content="45">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="琐碎备录"/>
+<meta name="twitter:description" content="Makefile .PHONY 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。 Joi joi.string().allow(&#39;&#39;).allow(null).empty(&#39;&#39;).optional() ，允许字符串为空。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -172,14 +172,12 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">在 Linux 上用 C 写一个守护进程</h1>
+      <h1 class="post-title">琐碎备录</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2022-07-30 </span>
-        <div class="post-category">
-            <a href="/categories/c/"> C </a>
-            </div>
-          <span class="more-meta"> 约 401 字 </span>
+        <span class="post-time"> 2022-08-05 </span>
+        
+          <span class="more-meta"> 约 45 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         
       </div>
@@ -187,61 +185,23 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#makefile">Makefile</a></li>
+        <li><a href="#joi">Joi</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 </div>
 
     <div class="post-content">
-      <p>因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 <code>fork()</code> 方法。</p>
-<p><code>fork()</code> 是由系统提供的方法，该方法会复制一份父进程作为子进程，同时并返回 pid 。 <code>pid &gt; 0</code> 代表本进程是父进程， <code>pid == 0</code> 代表本进程是子进程，而 <code>pid &lt; 0</code> 则代表分配失败。</p>
-<p>成为守护进程的基本步骤主要有四步：</p>
-<ol>
-<li>创建一个父进程。</li>
-<li>父进程使用 <code>fork()</code> 创建一个子进程。</li>
-<li>父进程退出。</li>
-<li>子进程设置 <code>setsid()</code> 。</li>
-</ol>
-<p>首先，父进程退出不代表子进程退出，如果子进程正常运行，但父进程忽然退出而没有处理子进程的话，此时子进程则成为了孤儿进程。此时子进程通过 <code>setsid()</code> 重新获取了自身的所有权，子进程此时则真正成为了一个独立的守护进程。</p>
-<p>以下是一个简单的例子。</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-#include &lt;unistd.h&gt;
-#include &lt;sys/types.h&gt;
-#include &lt;sys/stat.h&gt;
-#include &lt;string.h&gt;
-
-int main(int argc, char *argv[])
-{
-    FILE *fp = NULL;
-    pid_t pid = 0;
-    pid_t sid = 0;
-    pid = fork();
-    if (pid &lt; 0) {
-        printf(&quot;fork failed\n&quot;);
-        return 1;
-    }
-    if (pid &gt; 0) {
-        printf(&quot;process id of child process %d \n&quot;, pid);
-        return 0;
-    }
-    umask(0);
-    sid = setsid();
-    if (sid &lt; 0) {
-        return 1;
-    }
-    chdir(&quot;/tmp/t&quot;);
-    close(STDIN_FILENO);
-    close(STDOUT_FILENO);
-    close(STDERR_FILENO);
-    fp = fopen(&quot;Log.txt&quot;, &quot;w+&quot;);
-    while (1) {
-        sleep(1);
-        fprintf(fp, &quot;Logging info...\n&quot;);
-        fflush(fp);
-    }
-    fclose(fp);
-    return 0;
-}
-</code></pre>
+      <h2 id="makefile">Makefile</h2>
+<p><code>.PHONY</code> 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。</p>
+<h2 id="joi">Joi</h2>
+<p><code>joi.string().allow('').allow(null).empty('').optional()</code> ，允许字符串为空。</p>
 
     </div>
 
@@ -253,7 +213,7 @@ int main(int argc, char *argv[])
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2022-07-30
+        2022-08-05
         
     </span>
   </p>
@@ -261,18 +221,15 @@ int main(int argc, char *argv[])
   
 </div>
 <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/c/">C</a>
-          <a href="/tags/linux/">linux</a>
-          </div>
+      
       <nav class="post-nav">
-        <a class="prev" href="/post/trivial/">
+        <a class="prev" href="/post/%E5%A4%87%E5%BF%98%E5%BD%95/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">琐碎备录</span>
+            <span class="prev-text nav-default">[置顶] 备忘录</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/post/how-to-use-wine-wechat-setup/">
-            <span class="next-text nav-default">如何使用 wine-wechat-setup</span>
+        <a class="next" href="/post/write-a-daemon-with-c-in-linux/">
+            <span class="next-text nav-default">在 Linux 上用 C 写一个守护进程</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

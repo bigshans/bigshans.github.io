@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 30 Jul 2022 23:26:25 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Aug 2022 16:46:36 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -23,7 +23,16 @@
       <pubDate>Wed, 18 May 2022 09:07:16 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
-      <description>文章备忘录： Arch 打包备忘录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+      <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+    </item>
+    
+    <item>
+      <title>琐碎备录</title>
+      <link>https://bigshans.github.io/post/trivial/</link>
+      <pubDate>Fri, 05 Aug 2022 16:46:36 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/trivial/</guid>
+      <description>Makefile .PHONY 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。 Joi joi.string().allow(&#39;&#39;).allow(null).empty(&#39;&#39;).optional() ，允许字符串为空。</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/%E4%BC%A4%E5%8F%98/</guid>
       <description>昔人已乘黄鹤去，白云千载空悠悠。 固知一死生为虚诞，齐彭殇为妄作。 事物自我总是处于否定的发展之中，他们首先是重复，像是被子上相似的褶皱，随后，</description>
-    </item>
-    
-    <item>
-      <title>TypeScript 类型体操之斐波那契</title>
-      <link>https://bigshans.github.io/post/type-gymnastics-for-typescript/</link>
-      <pubDate>Fri, 17 Dec 2021 15:26:50 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/type-gymnastics-for-typescript/</guid>
-      <description>类型体操如果不是写库的话，基本上是屠龙技。 TypeScript 的类型系统本质上是一个小函数式语言，通过类型体操能够更清晰的感受到这一点。不过 TypeScript 类型系统有限制，</description>
     </item>
     
   </channel>
