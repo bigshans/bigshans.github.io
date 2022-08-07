@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 24 May 2021 22:19:11 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/node/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Aug 2022 20:42:17 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/node/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NodeJs 上的大文件问题</title>
+      <link>https://bigshans.github.io/post/bigfile-problem-for-node/</link>
+      <pubDate>Sun, 07 Aug 2022 20:42:17 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/bigfile-problem-for-node/</guid>
+      <description>大文件的读取与写入问题，一般使用流（stream）就可以很好的处理了。但大文件的问题并不单单是这样，如果仅仅是单纯的读取或写入，那么解决方案</description>
+    </item>
+    
     <item>
       <title>写了一个基于 art 的静态网页模块化项目</title>
       <link>https://bigshans.github.io/post/art-html/</link>
