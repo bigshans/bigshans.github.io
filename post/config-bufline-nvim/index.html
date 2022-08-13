@@ -295,7 +295,7 @@
             },
             separator_style = &quot;slant&quot;,
             custom_filter = function (buf_number)
-                if string.match(vim.fn['bufname'](buf_number), &quot;term&quot;) then
+                if string.match(vim.fn['bufname'](buf_number), &quot;^term://&quot;) then
                     return false
                 end
                 local tabId = tabpagenr()
