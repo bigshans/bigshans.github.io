@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 07 Aug 2022 20:42:17 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Aug 2022 17:56:49 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+    </item>
+    
+    <item>
+      <title>userChrome.js 的使用</title>
+      <link>https://bigshans.github.io/post/userchrome-usage/</link>
+      <pubDate>Sun, 14 Aug 2022 17:56:49 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/userchrome-usage/</guid>
+      <description>userChrome.js 是 Firefox 的一种玩法，可以高度自定义 Firefox 的界面、样式、功能。虽然 XUL 很早就死掉了，但所幸 userChrome.js 仍然是可用的。需要注意的是， userChrome.js 是非正式且冷门的自定义玩法，</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/programer-quotes/</guid>
       <description>这些网上传得到处都是，一些语录真是犀利，一针见血。我在这里也是简单吐槽一下，放松放松身心。 程序员编程语录 一个好的程序员是那种过单行线马路都要</description>
-    </item>
-    
-    <item>
-      <title>拟合论与能动性</title>
-      <link>https://bigshans.github.io/post/%E6%8B%9F%E5%90%88%E8%AE%BA%E4%B8%8E%E8%83%BD%E5%8A%A8%E6%80%A7/</link>
-      <pubDate>Sun, 26 Dec 2021 18:11:26 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E6%8B%9F%E5%90%88%E8%AE%BA%E4%B8%8E%E8%83%BD%E5%8A%A8%E6%80%A7/</guid>
-      <description>拟合论 人的认识事物的本质，是人在拟合外在事物。拟合论与符合论是不同的，人拟合事物并不要求观念与对象的一致，因为不一致也能够实践。人所拟合的观</description>
     </item>
     
   </channel>

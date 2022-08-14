@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 07 Aug 2022 20:42:17 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Aug 2022 17:56:49 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HACK</title>
+      <link>https://bigshans.github.io/categories/hack/</link>
+      <pubDate>Sun, 14 Aug 2022 17:56:49 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/hack/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>node</title>
       <link>https://bigshans.github.io/categories/node/</link>
@@ -23,15 +32,6 @@
       <pubDate>Sat, 30 Jul 2022 23:26:25 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/c/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>软件体验</title>
-      <link>https://bigshans.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%93%E9%AA%8C/</link>
-      <pubDate>Wed, 27 Jul 2022 14:05:02 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%93%E9%AA%8C/</guid>
       <description></description>
     </item>
     
@@ -59,6 +59,15 @@
       <pubDate>Thu, 07 Jul 2022 00:27:31 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>软件体验</title>
+      <link>https://bigshans.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Sat, 02 Jul 2022 20:07:05 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%93%E9%AA%8C/</guid>
       <description></description>
     </item>
     
@@ -446,15 +455,6 @@
       <pubDate>Wed, 02 Dec 2020 21:26:09 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/react-native/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>自动部署</title>
-      <link>https://bigshans.github.io/categories/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</link>
-      <pubDate>Sun, 15 Nov 2020 18:30:45 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</guid>
       <description></description>
     </item>
     
