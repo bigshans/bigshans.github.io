@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>[置顶] 备忘录 - Bigshans&#39; Blog</title>
+  <title>对 Golang 的批评 - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。 许多 Golang 的拥护者会称 Golang 是一门工程" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.100.0-DEV with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/" />
+<link rel="canonical" href="https://bigshans.github.io/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,20 +42,20 @@
 
 
 
-<meta property="og:title" content="[置顶] 备忘录" />
-<meta property="og:description" content="文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup" />
+<meta property="og:title" content="对 Golang 的批评" />
+<meta property="og:description" content="最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。 许多 Golang 的拥护者会称 Golang 是一门工程" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-05-18T09:07:16+08:00" />
-<meta property="article:modified_time" content="2022-05-18T09:07:16+08:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-08-18T03:42:04+08:00" />
+<meta property="article:modified_time" content="2022-08-18T03:42:04+08:00" />
 
-<meta itemprop="name" content="[置顶] 备忘录">
-<meta itemprop="description" content="文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup"><meta itemprop="datePublished" content="2022-05-18T09:07:16+08:00" />
-<meta itemprop="dateModified" content="2022-05-18T09:07:16+08:00" />
-<meta itemprop="wordCount" content="43">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[置顶] 备忘录"/>
-<meta name="twitter:description" content="文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup"/>
+<meta itemprop="name" content="对 Golang 的批评">
+<meta itemprop="description" content="最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。 许多 Golang 的拥护者会称 Golang 是一门工程"><meta itemprop="datePublished" content="2022-08-18T03:42:04+08:00" />
+<meta itemprop="dateModified" content="2022-08-18T03:42:04+08:00" />
+<meta itemprop="wordCount" content="957">
+<meta itemprop="keywords" content="开发杂谈," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="对 Golang 的批评"/>
+<meta name="twitter:description" content="最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。 许多 Golang 的拥护者会称 Golang 是一门工程"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -172,13 +172,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">[置顶] 备忘录</h1>
+      <h1 class="post-title">对 Golang 的批评</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2022-05-18 </span>
-        
-          <span class="more-meta"> 约 43 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        <span class="post-time"> 2022-08-18 </span>
+        <div class="post-category">
+            <a href="/categories/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/"> 开发杂谈 </a>
+            </div>
+          <span class="more-meta"> 约 957 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
     </header>
@@ -189,15 +191,12 @@
 </div>
 
     <div class="post-content">
-      <p>文章备忘录：</p>
-<ol>
-<li><a href="../arch-pack-memo">Arch 打包备忘录</a></li>
-<li><a href="../trivial">琐碎备录</a></li>
-<li><a href="../git-merge-unrealted-histories">如何合并 Git 无关历史</a></li>
-<li><a href="../latex">latex 部分常用公式代码</a></li>
-<li><a href="../critical-outline">批判纲要</a></li>
-<li><a href="../how-to-use-wine-wechat-setup">如何使用 wine-wechat-setup</a></li>
-</ol>
+      <p>最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。</p>
+<p>许多 Golang 的拥护者会称 Golang 是一门工程语言，他们有一种误解，即是工程问题是代码问题。但事实是，工程问题是一个现实的逻辑问题，而代码问题是代码的管理问题。 Golang 并没有解决很多逻辑问题，它是砍去了很多特性，比如说循环依赖，它觉得不好，砍了； try catch 机制；不好，砍了，泛型，不好，砍了，现在又偷工减料的加回来了。如果一个特性将会带来很多，一般的处理方法有两种，一种是引导人们更好的使用它，另一种是砍掉。Rust 选择了前者，而 Golang 则选择了后者。这固然是一种解决办法，但解决不了实际问题，更何况砍掉特性只会让语言的表达能力变弱，最终，语言会变得简陋而不是简单。</p>
+<p>因此， Golang 不是一门简单的语言，并不在于语法不简单，而在于它先天约定了很多写法，需要你额外去学习。但需要这些写法的原因在于， Golang 缺乏处理这些问题特性，又同时缺乏对这些问题进行通用化解决的能力，导致约定的代码模板多于语法本身的现象出现。</p>
+<p>我举个例子，比如说循环依赖。我们都说循环依赖是不好的，但真的如此吗？架构上的循环依赖，一部分考虑是架构上设计的不合理，但另一部分可能是现实逻辑要求实体间必然存在循环依赖。前者的话仅仅通过架构调整即可解决，但后者却要改变现实逻辑，这是不现实的。虽然说循环依赖是不好的，但在 Golang 中大家普遍通过接口来解决循环依赖，虽然代码层面的循环依赖没有了，但在现实逻辑中的依赖问题并没有解决，且通过一个接口进行转嫁。我们似乎完成了一个很好的解耦，但事实上这种解耦破坏了现实的逻辑，使得实体间逻辑增加，未必比循环依赖要来得简单。但除此之外， Golang 也没有更多的解决方案，面对纷繁复杂的现实世界， Golang 的表现力严重不足。</p>
+<p>又比如说泛型，泛型问题暴露出了 Golang 在多态方面的孱弱，而且它也没有什么宏或者什么好的元编程手段，导致它在这方面的表现力甚至不如 Java （C 在这方面的表现不知道高到哪里去了）。泛型的缺失迫使得程序员不得不书写大量的重复逻辑，在一些算法上，进行着一些毫无意义的重复。好在 Golang 官方还是能认识到这一点的，虽然新给的文字腿又小又贫瘠，但勉强还是有的。 Golang 还是要重新认识一下多态的价值。</p>
+<p>Golang 还是比较适合逻辑短小的容器，短小精悍，依赖清晰简明，至于想要委任给它什么业务，着实有些难为它了。</p>
 
     </div>
 
@@ -209,7 +208,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2022-05-18
+        2022-08-18
         
     </span>
   </p>
@@ -217,15 +216,17 @@
   
 </div>
 <footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/">开发杂谈</a>
+          </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/top-blog/">
+        <a class="prev" href="/post/%E5%A4%87%E5%BF%98%E5%BD%95/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">[置顶] 关于本博客</span>
+            <span class="prev-text nav-default">[置顶] 备忘录</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/">
-            <span class="next-text nav-default">对 Golang 的批评</span>
+        <a class="next" href="/post/userchrome-usage/">
+            <span class="next-text nav-default">userChrome.js 的使用</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
