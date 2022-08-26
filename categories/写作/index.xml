@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>写作 on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/categories/%E5%86%99%E4%BD%9C/</link>
+    <description>Recent content in 写作 on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Fri, 26 Aug 2022 17:53:27 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E5%86%99%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>琢词雕句</title>
+      <link>https://bigshans.github.io/post/%E7%90%A2%E8%AF%8D%E9%9B%95%E5%8F%A5/</link>
+      <pubDate>Fri, 26 Aug 2022 17:53:27 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E7%90%A2%E8%AF%8D%E9%9B%95%E5%8F%A5/</guid>
+      <description>本文是对遣词造句的一些浅薄研究，未来必定会长久更新。 中文不爱从句，因此复杂从句要少用。凡可用从句的地方，都可拆成多个分句，依着前后逻辑缀连成</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 18 Aug 2022 03:42:04 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Aug 2022 17:53:27 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+    </item>
+    
+    <item>
+      <title>琢词雕句</title>
+      <link>https://bigshans.github.io/post/%E7%90%A2%E8%AF%8D%E9%9B%95%E5%8F%A5/</link>
+      <pubDate>Fri, 26 Aug 2022 17:53:27 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E7%90%A2%E8%AF%8D%E9%9B%95%E5%8F%A5/</guid>
+      <description>本文是对遣词造句的一些浅薄研究，未来必定会长久更新。 中文不爱从句，因此复杂从句要少用。凡可用从句的地方，都可拆成多个分句，依着前后逻辑缀连成</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/2021%E5%B9%B4%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</guid>
       <description>大概是比较奇怪的一年吧！写这篇 blog 底时候，距离年底还差几天，不过大差不差了。 今年公司扩张，从原来几十个人的小公司，变成了现在一百多号人的小公司</description>
-    </item>
-    
-    <item>
-      <title>圈复杂度</title>
-      <link>https://bigshans.github.io/post/cc/</link>
-      <pubDate>Tue, 28 Dec 2021 13:41:37 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/cc/</guid>
-      <description>eslint 有个圈复杂度底配置，于是就顺便看了看。圈复杂度（Cyclomatic, CC），又称条件复杂度，是一种衡量代码复杂度底标准，其标记为 V(G) 。 相比</description>
     </item>
     
   </channel>
