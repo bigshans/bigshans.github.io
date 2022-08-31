@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 18 Aug 2022 03:42:04 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Aug 2022 15:21:43 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自顶向下的 ACID</title>
+      <link>https://bigshans.github.io/post/top-down-acid/</link>
+      <pubDate>Wed, 31 Aug 2022 15:21:43 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/top-down-acid/</guid>
+      <description>ACID ，即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability），只要你接</description>
+    </item>
+    
     <item>
       <title>对 Golang 的批评</title>
       <link>https://bigshans.github.io/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/</link>

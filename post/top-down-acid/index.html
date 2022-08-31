@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>琢词雕句 - Bigshans&#39; Blog</title>
+  <title>自顶向下的 ACID - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="本文是对遣词造句的一些浅薄研究，未来必定会长久更新。 中文不爱从句，因此复杂的从句要少用。凡可用从句的地方，都可拆成多个分句，并依前后逻辑缀连" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="ACID ，即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability），只要你接" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.100.0-DEV with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/%E7%90%A2%E8%AF%8D%E9%9B%95%E5%8F%A5/" />
+<link rel="canonical" href="https://bigshans.github.io/post/top-down-acid/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,20 +42,20 @@
 
 
 
-<meta property="og:title" content="琢词雕句" />
-<meta property="og:description" content="本文是对遣词造句的一些浅薄研究，未来必定会长久更新。 中文不爱从句，因此复杂的从句要少用。凡可用从句的地方，都可拆成多个分句，并依前后逻辑缀连" />
+<meta property="og:title" content="自顶向下的 ACID" />
+<meta property="og:description" content="ACID ，即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability），只要你接" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/%E7%90%A2%E8%AF%8D%E9%9B%95%E5%8F%A5/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-08-26T17:53:27+08:00" />
-<meta property="article:modified_time" content="2022-08-26T17:53:27+08:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/top-down-acid/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-08-31T15:21:43+08:00" />
+<meta property="article:modified_time" content="2022-08-31T15:21:43+08:00" />
 
-<meta itemprop="name" content="琢词雕句">
-<meta itemprop="description" content="本文是对遣词造句的一些浅薄研究，未来必定会长久更新。 中文不爱从句，因此复杂的从句要少用。凡可用从句的地方，都可拆成多个分句，并依前后逻辑缀连"><meta itemprop="datePublished" content="2022-08-26T17:53:27+08:00" />
-<meta itemprop="dateModified" content="2022-08-26T17:53:27+08:00" />
-<meta itemprop="wordCount" content="360">
-<meta itemprop="keywords" content="写作," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="琢词雕句"/>
-<meta name="twitter:description" content="本文是对遣词造句的一些浅薄研究，未来必定会长久更新。 中文不爱从句，因此复杂的从句要少用。凡可用从句的地方，都可拆成多个分句，并依前后逻辑缀连"/>
+<meta itemprop="name" content="自顶向下的 ACID">
+<meta itemprop="description" content="ACID ，即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability），只要你接"><meta itemprop="datePublished" content="2022-08-31T15:21:43+08:00" />
+<meta itemprop="dateModified" content="2022-08-31T15:21:43+08:00" />
+<meta itemprop="wordCount" content="1068">
+<meta itemprop="keywords" content="开发杂谈," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="自顶向下的 ACID"/>
+<meta name="twitter:description" content="ACID ，即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability），只要你接"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -172,15 +172,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">琢词雕句</h1>
+      <h1 class="post-title">自顶向下的 ACID</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2022-08-26 </span>
+        <span class="post-time"> 2022-08-31 </span>
         <div class="post-category">
-            <a href="/categories/%E5%86%99%E4%BD%9C/"> 写作 </a>
+            <a href="/categories/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/"> 开发杂谈 </a>
             </div>
-          <span class="more-meta"> 约 360 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 1068 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
         
       </div>
     </header>
@@ -191,13 +191,12 @@
 </div>
 
     <div class="post-content">
-      <p>本文是对遣词造句的一些浅薄研究，未来必定会长久更新。</p>
-<hr>
-<p>中文不爱从句，因此复杂的从句要少用。凡可用从句的地方，都可拆成多个分句，并依前后逻辑缀连成一条长复句。但分句与分句间，逻辑不应该并列，并列的逻辑如若不靠连接词连接，则会显得突兀。但更好的办法是拆成两个句子，尤其是两个分句逻辑较长之时。换而言之，应避免逻辑复杂的较长分句，和结构复杂的较长复句。句子的复杂程度到达一定地步，就会严重阻碍人们的对其的理解。</p>
-<p>分句之分，应尽量成分单纯。比如“是”之后，如果要跟串分句，或一长分句，则必须在“是”之后分开。单个分句应保持主谓简单，排比可以允许结构不完整，但成分必须同一。</p>
-<p>应尽量避免从句嵌套。</p>
-<p>质朴是指，意义尽量通过词汇表达。含蓄是指，意义尽量通过结构表达。</p>
-<p>尽量略去冗词。比如成语，常冗词过多。建议用词控制到字。量词之类的，也要控制。</p>
+      <p>ACID ，即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability），只要你接触数据库总是逃不掉的。现在，我问你一个问题，如果现在数据库不提供 ACID 保证，你如何在应用程序层面实现 ACID 呢？</p>
+<p>首先，这个问题本质上与问 ACID 的原理是一样的，只不过更偏向于顶层。我们接触数据库一般都是从顶层开始，而不是从底层开始，没有人一开始是通过读源码学习数据库的使用的。而数据库的设计，也不是一开始就看到了 ACID 的。向下的路径与向上的路径存在某种隐秘的重合。因此，讨论这个问题，有助于我们更好的理解 ACID 。</p>
+<p>我们关于数据库事务的需求是，有 N 条语句在一个事务内执行，它们要么都成功，要么都失败。显然，第一个问题是，我们如何保证失败之后进行回滚呢？唯一办法就是记录下操作，然后模拟反操作。事实上 git 就是这么做的。数据库需要回滚的操作有三种， insert 、 update 和 delete ， insert 和 delete 是相对的，但 update 不是，因为数据改变原有条件对应的数据也发生了变化，不可逆向回去，因此只能记录下被更新的数据和更新前的数据，或者说取个 diff 。由此我们获得关于如何实现事务的初步想法。</p>
+<p>但这是远远不够的。目前，我们还有一系列问题存在。比如，现在我们除了事务，还有很多语句也在执行。如果我们的事务都直接对代码进行修改，这无疑会造成一些混乱。因为事务是否成功只有在事务完成之后才能确定，一旦有逻辑依赖于这种成功性，我们就必须确保，我们的数据不能直接在数据上进行修改。解决办法就是在主干数据上进行分支，我们通过记录主干与分支的差异，从而达成主干与分支数据的隔离。这里需要考虑的问题有很多，比如不同事务间隔离的问题。由于事务间是可以并行的，所以事务与事务间的可见性也是一个麻烦的问题。我们可以进行一个抽象来思考这个问题。即使单个语句不是事务，我们也可以把它考虑成是某个可见性上的事务。于是，所有执行期间的可见性问题都将转换为事务间的隔离性问题。虽然同一时间内有众多事务事务执行，但是纵向地看，事务间对其他事务的可见性要求是有限和可分的，按读写可分为四类，宽松读宽松写，宽松读严格写，严格读宽松写，严格读严格写。这样的可见性划分足以满足我们的需求。</p>
+<p>但问题还没有解决。如果分支数据是叉开的，那么是否意味着数据要存两份呢？因为仅仅只有操作并不能满足事务在其中的速度。我们并不完全存两份，我们存各个数据操作后的 diff ，并借助指针进行偏移。在事务成功时，我们能够快速地应用上差异——显然，我们需要用到锁。在事务失败时，我们也能快速溯源进行回溯。</p>
+<p>当然，以上只是我们的粗略方案，实际数据库设计更为复杂。</p>
 
     </div>
 
@@ -209,7 +208,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2022-08-26
+        2022-08-31
         
     </span>
   </p>
@@ -218,16 +217,16 @@
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/%E5%86%99%E4%BD%9C/">写作</a>
+          <a href="/tags/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/">开发杂谈</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/top-down-acid/">
+        <a class="prev" href="/post/%E5%A4%87%E5%BF%98%E5%BD%95/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">自顶向下的 ACID</span>
+            <span class="prev-text nav-default">[置顶] 备忘录</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/">
-            <span class="next-text nav-default">对 Golang 的批评</span>
+        <a class="next" href="/post/%E7%90%A2%E8%AF%8D%E9%9B%95%E5%8F%A5/">
+            <span class="next-text nav-default">琢词雕句</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
