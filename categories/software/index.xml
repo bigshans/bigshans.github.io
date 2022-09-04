@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 03 Sep 2018 17:34:16 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Sep 2022 19:32:36 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Firefox PWA</title>
+      <link>https://bigshans.github.io/post/firefox-pwa/</link>
+      <pubDate>Sun, 04 Sep 2022 19:32:36 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/firefox-pwa/</guid>
+      <description>Firefox 很久之前就停止支持 PWA 了，但现在 SPA 蓬勃发展，很多所谓的应用不过是网页套壳罢了， PWA 能够更简单的将网页安装为应用，比起要在系统里塞数个 Electron ，我觉得</description>
+    </item>
+    
     <item>
       <title>安装 graph-easy</title>
       <link>https://bigshans.github.io/post/software-graph-easy/</link>

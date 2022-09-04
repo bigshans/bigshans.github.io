@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 03 Sep 2022 22:39:44 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Sep 2022 19:32:36 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+    </item>
+    
+    <item>
+      <title>使用 Firefox PWA</title>
+      <link>https://bigshans.github.io/post/firefox-pwa/</link>
+      <pubDate>Sun, 04 Sep 2022 19:32:36 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/firefox-pwa/</guid>
+      <description>Firefox 很久之前就停止支持 PWA 了，但现在 SPA 蓬勃发展，很多所谓的应用不过是网页套壳罢了， PWA 能够更简单的将网页安装为应用，比起要在系统里塞数个 Electron ，我觉得</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/lua-quickly-begin/</guid>
       <description>lua 是一门用标准 C 语言编写的、轻量小巧的脚本语言，它常常被嵌入到各种 C 语言项目中做扩展语言。它与 C 的兼容性不必多说，本身也是用 C 写的，速度也是</description>
-    </item>
-    
-    <item>
-      <title>对认识论的纯粹批判</title>
-      <link>https://bigshans.github.io/post/%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%9A%84%E7%BA%AF%E7%B2%B9%E6%89%B9%E5%88%A4/</link>
-      <pubDate>Thu, 06 Jan 2022 11:36:13 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%9A%84%E7%BA%AF%E7%B2%B9%E6%89%B9%E5%88%A4/</guid>
-      <description>早上突然想到的就写了，唯我论批判部分还算清楚，后面认识论批判部分就稍显吃力了，但全文论证还算清晰吧！ 唯我论认为世界除了我之外没有别的存在，这</description>
     </item>
     
   </channel>

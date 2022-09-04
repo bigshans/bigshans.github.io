@@ -17,28 +17,49 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2022-09-03T22:39:44+08:00</lastmod>
+    <lastmod>2022-09-04T19:32:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2022-09-03T22:39:44+08:00</lastmod>
+    <lastmod>2022-09-04T19:32:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2022-09-03T22:39:44+08:00</lastmod>
+    <lastmod>2022-09-04T19:32:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/software/</loc>
+    <lastmod>2022-09-04T19:32:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/software/</loc>
+    <lastmod>2022-09-04T19:32:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/tags/</loc>
-    <lastmod>2022-09-03T22:39:44+08:00</lastmod>
+    <lastmod>2022-09-04T19:32:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/firefox-pwa/</loc>
+    <lastmod>2022-09-04T19:32:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2508,13 +2529,6 @@
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/tags/software/</loc>
-    <lastmod>2018-09-09T19:18:52+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigshans.github.io/tags/bumbeeble/</loc>
     <lastmod>2018-09-08T09:22:39+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -2565,13 +2579,6 @@
   
   <url>
     <loc>https://bigshans.github.io/tags/perl/</loc>
-    <lastmod>2018-09-03T17:34:16+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/software/</loc>
     <lastmod>2018-09-03T17:34:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
