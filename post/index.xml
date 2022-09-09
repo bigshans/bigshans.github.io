@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 09 Sep 2022 14:31:52 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Sep 2022 14:54:41 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+    </item>
+    
+    <item>
+      <title>解决在 Konsole 下的 Emoji 展示问题</title>
+      <link>https://bigshans.github.io/post/konsole-emoji-show/</link>
+      <pubDate>Fri, 09 Sep 2022 14:54:41 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/konsole-emoji-show/</guid>
+      <description>解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。 这里借助 Noto Emoji 来处理。 Arch 下安装 noto-fonts-emoji 包，然后将下面内容</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/php-study-1/</guid>
       <description>PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C++ 和</description>
-    </item>
-    
-    <item>
-      <title>开源正在死亡</title>
-      <link>https://bigshans.github.io/post/open-source-is-dying/</link>
-      <pubDate>Tue, 11 Jan 2022 22:50:29 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/open-source-is-dying/</guid>
-      <description>开源正在死亡，或者说，已经死亡。 起因是 Faker.js 作者破坏代码的行为，本来这种行为按我以前的肯定是会批判作者的，但我想想不对，为什么每次遇上这样的问题</description>
     </item>
     
   </channel>

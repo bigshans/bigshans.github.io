@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 14 Aug 2022 17:56:49 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/hack/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Sep 2022 14:54:41 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/hack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决在 Konsole 下的 Emoji 展示问题</title>
+      <link>https://bigshans.github.io/post/konsole-emoji-show/</link>
+      <pubDate>Fri, 09 Sep 2022 14:54:41 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/konsole-emoji-show/</guid>
+      <description>解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。 这里借助 Noto Emoji 来处理。 Arch 下安装 noto-fonts-emoji 包，然后将下面内容</description>
+    </item>
+    
     <item>
       <title>userChrome.js 的使用</title>
       <link>https://bigshans.github.io/post/userchrome-usage/</link>

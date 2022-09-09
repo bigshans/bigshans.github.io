@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 09 Sep 2022 14:31:52 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Sep 2022 14:54:41 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HACK</title>
+      <link>https://bigshans.github.io/categories/hack/</link>
+      <pubDate>Fri, 09 Sep 2022 14:54:41 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/hack/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>linux</title>
       <link>https://bigshans.github.io/categories/linux/</link>
@@ -50,15 +59,6 @@
       <pubDate>Fri, 26 Aug 2022 17:53:27 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/%E5%86%99%E4%BD%9C/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HACK</title>
-      <link>https://bigshans.github.io/categories/hack/</link>
-      <pubDate>Sun, 14 Aug 2022 17:56:49 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/hack/</guid>
       <description></description>
     </item>
     
