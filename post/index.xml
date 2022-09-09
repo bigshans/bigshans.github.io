@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 04 Sep 2022 19:32:36 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Sep 2022 14:31:52 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+    </item>
+    
+    <item>
+      <title>将 snap 打包成 AUR</title>
+      <link>https://bigshans.github.io/post/package-snap-to-pkg/</link>
+      <pubDate>Fri, 09 Sep 2022 14:31:52 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/package-snap-to-pkg/</guid>
+      <description>masscode 仅仅提供了 snap 包给 Linux 版，但我并不想使用 snap ，所以就想单独打包。由于 masscode 是 electron 应用，所以理论上只需要拿到 resources/app.asar 就万事大吉了。 snap 包实际上是一个 squashfs ，所以打包</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/open-source-is-dying/</guid>
       <description>开源正在死亡，或者说，已经死亡。 起因是 Faker.js 作者破坏代码的行为，本来这种行为按我以前的肯定是会批判作者的，但我想想不对，为什么每次遇上这样的问题</description>
-    </item>
-    
-    <item>
-      <title>lua 快速入门</title>
-      <link>https://bigshans.github.io/post/lua-quickly-begin/</link>
-      <pubDate>Sun, 09 Jan 2022 15:01:18 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/lua-quickly-begin/</guid>
-      <description>lua 是一门用标准 C 语言编写的、轻量小巧的脚本语言，它常常被嵌入到各种 C 语言项目中做扩展语言。它与 C 的兼容性不必多说，本身也是用 C 写的，速度也是</description>
     </item>
     
   </channel>
