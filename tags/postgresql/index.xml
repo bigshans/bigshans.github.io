@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Postgresql on Bigshans&#39; Blog</title>
+    <title>PostgreSQL on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/postgresql/</link>
-    <description>Recent content in Postgresql on Bigshans&#39; Blog</description>
+    <description>Recent content in PostgreSQL on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 08 Jun 2021 09:04:01 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Sep 2022 01:10:10 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PostgreSQL 继承的实现</title>
+      <link>https://bigshans.github.io/post/postgre-inheritance/</link>
+      <pubDate>Thu, 29 Sep 2022 01:10:10 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/postgre-inheritance/</guid>
+      <description>PostgreSQL 的继承一般都被用来分区。 PostgreSQL 的分区实际上就是用继承实现的，硬要对比起来，就是继承要比单纯分区要灵活很多。 PostgreSQL 继承之后，子表和父表是两张表，仅仅</description>
+    </item>
+    
     <item>
       <title>Postgresql 创建用户和数据库并赋权</title>
       <link>https://bigshans.github.io/post/postgresql-tricks-1/</link>
