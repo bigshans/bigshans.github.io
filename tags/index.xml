@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 29 Sep 2022 01:10:10 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Oct 2022 23:31:50 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开发杂谈</title>
+      <link>https://bigshans.github.io/tags/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/</link>
+      <pubDate>Sun, 02 Oct 2022 23:31:50 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>PostgreSQL</title>
       <link>https://bigshans.github.io/tags/postgresql/</link>
@@ -59,15 +68,6 @@
       <pubDate>Sat, 03 Sep 2022 22:39:44 +0800</pubDate>
       
       <guid>https://bigshans.github.io/tags/%E6%80%9D%E8%BE%A8/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>开发杂谈</title>
-      <link>https://bigshans.github.io/tags/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/</link>
-      <pubDate>Wed, 31 Aug 2022 15:21:43 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/</guid>
       <description></description>
     </item>
     

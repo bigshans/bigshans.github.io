@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 29 Sep 2022 01:10:10 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Oct 2022 23:31:50 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+    </item>
+    
+    <item>
+      <title>对 GNU 的批判</title>
+      <link>https://bigshans.github.io/post/a-critique-of-gnu/</link>
+      <pubDate>Sun, 02 Oct 2022 23:31:50 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/a-critique-of-gnu/</guid>
+      <description>谈及 GNU ，我们总是称赞他们在过去，铸就了现代互联网的基础，但至于现在，则成了一种小众的趣味。这个问题比较复杂，简单来说，就是个人自由主义在面对</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/coc-kite-cmp-publish/</guid>
       <description>最近在尝试 AI complete ，主要是 TabNine 和 Kite ，两者可以基于本地代码作出较好的智能推测。在 VSCode 上，两者都有对应的插件，但在 Vim 上时，情况就不同了。我使用的是 coc.nvim ，作</description>
-    </item>
-    
-    <item>
-      <title>开源社区需要终身仁慈的独裁者吗？</title>
-      <link>https://bigshans.github.io/post/does-open-sources-need-bdfl/</link>
-      <pubDate>Thu, 20 Jan 2022 11:31:19 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/does-open-sources-need-bdfl/</guid>
-      <description>最近随笔确实有点多，但生活其实不能只有代码，回头看看也需要将随笔分分类了。说回正题， BDFL 像是个政治名词，但实际上是用来指代某些开源软件的开发者</description>
     </item>
     
   </channel>

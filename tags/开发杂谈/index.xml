@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 31 Aug 2022 15:21:43 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Oct 2022 23:31:50 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>对 GNU 的批判</title>
+      <link>https://bigshans.github.io/post/a-critique-of-gnu/</link>
+      <pubDate>Sun, 02 Oct 2022 23:31:50 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/a-critique-of-gnu/</guid>
+      <description>谈及 GNU ，我们总是称赞他们在过去，铸就了现代互联网的基础，但至于现在，则成了一种小众的趣味。这个问题比较复杂，简单来说，就是个人自由主义在面对</description>
+    </item>
+    
     <item>
       <title>自顶向下的 ACID</title>
       <link>https://bigshans.github.io/post/top-down-acid/</link>
