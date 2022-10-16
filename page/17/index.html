@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.100.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.105.0-DEV with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/" />
@@ -167,6 +167,30 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/rinted/">rinted 做端口转发</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-02-15 </span>
+      <div class="post-category">
+          <a href="/categories/linux/"> linux </a>
+          </div>
+        <span class="more-meta"> 约 118 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      因为腾讯云的 Mongo 和 Redis 都是内网的地址，不能访问，官方说内网进行内网转发就行，于是就用 rinted 做了一个内网转发。
+
+    </div>
+    <div class="read-more">
+      <a href="/post/rinted/" class="read-more-link">阅读更多 »</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/qosnodejs/">写个简单的 QOS</a></h1>
@@ -327,35 +351,11 @@
   <div class="post-content">
     <div class="post-summary">
       我们写一个简单的程序。
-const express = require(&#39;express&#39;); const app = express(); app.get(&#39;/&#39;, (req, res) =&amp;gt; { res.end(&#39;&amp;lt;h1&amp;gt;Hello&amp;lt;/h1&amp;gt;&#39;); }); app.listen(3000, () =&amp;gt; console.log(&#39;Connected!&#39;));  我们对这段代码进行 Debug 。
+const express = require(&#39;express&#39;); const app = express(); app.get(&#39;/&#39;, (req, res) =&amp;gt; { res.end(&#39;&amp;lt;h1&amp;gt;Hello&amp;lt;/h1&amp;gt;&#39;); }); app.listen(3000, () =&amp;gt; console.log(&#39;Connected!&#39;)); 我们对这段代码进行 Debug 。
 
     </div>
     <div class="read-more">
       <a href="/post/node-express-source-read/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/linux-systemdnspawn/">systemd-nspawn 的简单使用</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-11-24 </span>
-      <div class="post-category">
-          <a href="/categories/linux/"> linux </a>
-          </div>
-        <span class="more-meta"> 约 352 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      systemd-nspawn 是 docker 与一样的 container 应用，只不过 docker 相比，跟类似于 chroot 。个人还是比较喜欢 chroot 这样的，这样有种子系统的感觉，与 docker 的 container 相比， chroot 下的操作是会被保留下来的， docker 和 chroot 还是两种不同情况，不可同语。
-
-    </div>
-    <div class="read-more">
-      <a href="/post/linux-systemdnspawn/" class="read-more-link">阅读更多 »</a>
     </div>
   </div>
 </article>
@@ -417,7 +417,7 @@ const express = require(&#39;express&#39;); const app = express(); app.get(&#39;
 
 
 
-<script type="text/javascript" src="/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
   <script type="text/javascript">
     window.MathJax = {
       tex: {
