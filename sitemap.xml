@@ -17,28 +17,49 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2022-10-17T00:18:38+08:00</lastmod>
+    <lastmod>2022-11-13T23:16:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2022-10-17T00:18:38+08:00</lastmod>
+    <lastmod>2022-11-13T23:16:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/hack/</loc>
+    <lastmod>2022-11-13T23:16:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/hack/</loc>
+    <lastmod>2022-11-13T23:16:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2022-10-17T00:18:38+08:00</lastmod>
+    <lastmod>2022-11-13T23:16:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/tags/</loc>
-    <lastmod>2022-10-17T00:18:38+08:00</lastmod>
+    <lastmod>2022-11-13T23:16:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/how-to-increase-krunner-font/</loc>
+    <lastmod>2022-11-13T23:16:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -102,20 +123,6 @@
   <url>
     <loc>https://bigshans.github.io/post/postgre-inheritance/</loc>
     <lastmod>2022-09-29T01:10:10+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/hack/</loc>
-    <lastmod>2022-09-09T14:54:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/hack/</loc>
-    <lastmod>2022-09-09T14:54:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
