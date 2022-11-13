@@ -9,12 +9,12 @@
     <copyright>bigshans</copyright>
     <lastBuildDate>Sun, 13 Nov 2022 23:16:38 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/hack/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>如何增加 Krunner 的字体</title>
+      <title>如何放大 Krunner 的字体</title>
       <link>https://bigshans.github.io/post/how-to-increase-krunner-font/</link>
       <pubDate>Sun, 13 Nov 2022 23:16:38 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/how-to-increase-krunner-font/</guid>
-      <description>由于我切换到了 Xfce 下避难，而之前我一直用的是 Plasma ，很多软件我还是习惯用 KDE 的，更何况 Xfce 本身也挺匮乏的。 Krunner 的字体在 Plasma 下表现不错，但在 Xfce 下显得过小。但</description>
+      <description>最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。 Krunner 的字体在 Plasma 下表现不错，但在 Xfce 下</description>
     </item>
     
     <item>
