@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 12 Dec 2022 22:52:19 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Dec 2022 21:49:39 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>await 的背后</title>
+      <link>https://bigshans.github.io/post/await%E7%9A%84%E8%83%8C%E5%90%8E/</link>
+      <pubDate>Thu, 15 Dec 2022 21:49:39 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/await%E7%9A%84%E8%83%8C%E5%90%8E/</guid>
+      <description>我们一般会认为 async/await 是 Promise 的语法糖，实际上也没有错。但在 Node 10 的时候，一个 await 会产生三个微任务，导致单个 await 的性能远不如 Promise ，但在 Node 12 时， V8 团队称，其性能</description>
+    </item>
+    
     <item>
       <title>用 node 实现一个简单的 http 代理</title>
       <link>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</link>
