@@ -47,12 +47,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-12-12T22:52:19+08:00" />
-<meta property="article:modified_time" content="2022-12-14T07:58:17+00:00" />
+<meta property="article:modified_time" content="2022-12-15T03:59:33+00:00" />
 
 <meta itemprop="name" content="用 node 实现一个简单的 http 代理">
 <meta itemprop="description" content="http 代理可分为两种，一种是普通的代理，作为中间人传递两边的信息；另一种则是隧道的方式。 普通代理 const http = require(&#39;http&#39;); const url = require(&#39;url&#39;); function request(cReq, cRes) { const u = url.parse(cReq.url); const options = { host: u.hostname, port: u.port"><meta itemprop="datePublished" content="2022-12-12T22:52:19+08:00" />
-<meta itemprop="dateModified" content="2022-12-14T07:58:17+00:00" />
-<meta itemprop="wordCount" content="489">
+<meta itemprop="dateModified" content="2022-12-15T03:59:33+00:00" />
+<meta itemprop="wordCount" content="706">
 <meta itemprop="keywords" content="nodejs," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="用 node 实现一个简单的 http 代理"/>
 <meta name="twitter:description" content="http 代理可分为两种，一种是普通的代理，作为中间人传递两边的信息；另一种则是隧道的方式。 普通代理 const http = require(&#39;http&#39;); const url = require(&#39;url&#39;); function request(cReq, cRes) { const u = url.parse(cReq.url); const options = { host: u.hostname, port: u.port"/>
@@ -179,8 +179,8 @@
         <div class="post-category">
             <a href="/categories/nodejs/"> nodejs </a>
             </div>
-          <span class="more-meta"> 约 489 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 706 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
     </header>
@@ -194,6 +194,7 @@
         <li><a href="#普通代理">普通代理</a></li>
         <li><a href="#带隧道的-http-代理">带隧道的
 http 代理</a></li>
+        <li><a href="#反向代理">反向代理</a></li>
       </ul>
     </li>
   </ul>
@@ -270,7 +271,7 @@ https 网站。</p>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">connect</span>(cReq<span class="op">,</span> cSock) {</span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> u <span class="op">=</span> url<span class="op">.</span><span class="fu">parse</span>(<span class="st">&#39;http://&#39;</span> <span class="op">+</span> cReq<span class="op">.</span><span class="at">url</span>)<span class="op">;</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> pSock <span class="op">=</span> net<span class="op">.</span><span class="fu">connect</span>(u<span class="op">.</span><span class="at">port</span><span class="op">,</span> hostname<span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> pSock <span class="op">=</span> net<span class="op">.</span><span class="fu">connect</span>(u<span class="op">.</span><span class="at">port</span><span class="op">,</span> u<span class="op">.</span><span class="at">hostname</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
 <span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    cSock<span class="op">.</span><span class="fu">write</span>(<span class="st">&#39;HTTP/1.1 200 Connection Established</span><span class="sc">\r\n\r\n</span><span class="st">&#39;</span>)<span class="op">;</span></span>
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    pSock<span class="op">.</span><span class="fu">pipe</span>(cSock)<span class="op">;</span></span>
 <span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  })<span class="op">.</span><span class="fu">on</span>(<span class="st">&#39;error&#39;</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
@@ -286,6 +287,55 @@ https 网站。</p>
 <span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">listen</span>(<span class="dv">8888</span><span class="op">,</span> <span class="st">&#39;0.0.0.0&#39;</span>)<span class="op">;</span></span></code></pre></div>
 <p>这时候我们走代理就会发现很正常了。</p>
 <pre class="shell"><code>curl -x http://0.0.0.0:8888 https://baidu.com</code></pre>
+<h2 id="反向代理">反向代理</h2>
+<p>学会了用 node
+实现一个简单的正向代理，那么我们同样可以实现一个简单的反代。</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> http <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;http&#39;</span>)<span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> url <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;url&#39;</span>)<span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> net <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;net&#39;</span>)<span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">request</span>(cReq<span class="op">,</span> cRes) {</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> u <span class="op">=</span> url<span class="op">.</span><span class="fu">parse</span>(cReq<span class="op">.</span><span class="at">url</span>)<span class="op">;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> options <span class="op">=</span> {</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">hostname</span><span class="op">:</span> u<span class="op">.</span><span class="at">hostname</span> <span class="op">??</span> <span class="st">&#34;127.0.0.1&#34;</span><span class="op">,</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">port</span><span class="op">:</span> u<span class="op">.</span><span class="at">hostname</span> <span class="op">==</span> <span class="kw">null</span> <span class="op">?</span> <span class="dv">3000</span> <span class="op">:</span> u<span class="op">.</span><span class="at">port</span><span class="op">,</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">path</span><span class="op">:</span> u<span class="op">.</span><span class="at">path</span><span class="op">,</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">method</span><span class="op">:</span> cReq<span class="op">.</span><span class="at">method</span><span class="op">,</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">headers</span><span class="op">:</span> cReq<span class="op">.</span><span class="at">headers</span><span class="op">,</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(options)<span class="op">;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> pReq <span class="op">=</span> http<span class="op">.</span><span class="fu">request</span>(options<span class="op">,</span> (pRes) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    cRes<span class="op">.</span><span class="fu">writeHead</span>(<span class="dv">200</span><span class="op">,</span> pRes<span class="op">.</span><span class="at">statusCode</span>)<span class="op">;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    pRes<span class="op">.</span><span class="fu">pipe</span>(cRes)<span class="op">;</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  })<span class="op">.</span><span class="fu">on</span>(<span class="st">&#39;error&#39;</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(e)<span class="op">;</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    cRes<span class="op">.</span><span class="fu">end</span>()<span class="op">;</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  cReq<span class="op">.</span><span class="fu">pipe</span>(pReq)<span class="op">;</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">connect</span>(cReq<span class="op">,</span> cSock) {</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> u <span class="op">=</span> url<span class="op">.</span><span class="fu">parse</span>(<span class="st">&#39;http://&#39;</span> <span class="op">+</span> cReq<span class="op">.</span><span class="at">url</span>)<span class="op">;</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> port <span class="op">=</span> u<span class="op">.</span><span class="at">hostname</span> <span class="op">==</span> <span class="kw">null</span> <span class="op">?</span> <span class="dv">3000</span> <span class="op">:</span> u<span class="op">.</span><span class="at">port</span><span class="op">;</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> pSock <span class="op">=</span> net<span class="op">.</span><span class="fu">connect</span>(port<span class="op">,</span> u<span class="op">.</span><span class="at">hostname</span> <span class="op">??</span> <span class="st">&#34;127.0.0.1&#34;</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    cSock<span class="op">.</span><span class="fu">write</span>(<span class="st">&#39;HTTP/1.1 200 Connection established</span><span class="sc">\r\n\r\n</span><span class="st">&#39;</span>)<span class="op">;</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    pSock<span class="op">.</span><span class="fu">pipe</span>(cSock)<span class="op">;</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>  })<span class="op">.</span><span class="fu">on</span>(<span class="st">&#39;error&#39;</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(e)<span class="op">;</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    cSock<span class="op">.</span><span class="fu">end</span>()<span class="op">;</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  cSock<span class="op">.</span><span class="fu">pipe</span>(pSock)<span class="op">;</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>http<span class="op">.</span><span class="fu">createServer</span>()</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">on</span>(<span class="st">&#39;connect&#39;</span><span class="op">,</span> connect)</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">on</span>(<span class="st">&#39;request&#39;</span><span class="op">,</span> request)</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">listen</span>(<span class="dv">80</span>)<span class="op">;</span></span></code></pre></div>
+<p>我们用 <code>curl</code> 测试一下：</p>
+<pre class="shell"><code>curl http://0.0.0.0</code></pre>
+<p>80 端口需要 root 权限才能启动。同时，直接访问本地，
+<code>hostname</code> 会直接为 <code>null</code>
+，这里我们需要一些额外的修正，其余的并不是很困难。</p>
 <hr/>
 <p>参考：<a href="https://juejin.cn/post/6998351770871152653">HTTP
 代理原理及实现</a></p>
@@ -302,7 +352,7 @@ https 网站。</p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2022-12-14
+        2022-12-15
         
     </span>
   </p>
