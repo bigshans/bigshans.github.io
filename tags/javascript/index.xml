@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 17 May 2022 10:46:28 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Dec 2022 10:49:05 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript 的标签模板字符串</title>
+      <link>https://bigshans.github.io/post/tagged-template-string/</link>
+      <pubDate>Fri, 16 Dec 2022 10:49:05 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/tagged-template-string/</guid>
+      <description>标签模板是个看起来很 Magic 的语法，写起来像是这样。 console.log`Hello, World!`; // Output: [&amp;#34;Hello, World!&amp;#34;] 实际上，这里的模板标签被转换成这样的一句调用。 console.log.call(console, [&amp;#39;Hello, World!&amp;#39;]); 如果我们有用变量的话， const name = &amp;#39;world&amp;#39;;</description>
+    </item>
+    
     <item>
       <title>《事件捕获与事件冒泡》补遗</title>
       <link>https://bigshans.github.io/post/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/</link>

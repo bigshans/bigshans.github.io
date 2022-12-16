@@ -16,21 +16,56 @@
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/post/await%E7%9A%84%E8%83%8C%E5%90%8E/</loc>
-    <lastmod>2022-12-15T21:49:39+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2022-12-15T21:49:39+08:00</lastmod>
+    <lastmod>2022-12-16T10:49:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
+    <lastmod>2022-12-16T10:49:05+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/javascript/</loc>
+    <lastmod>2022-12-16T10:49:05+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/javascript/</loc>
+    <lastmod>2022-12-16T10:49:05+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/tagged-template-string/</loc>
+    <lastmod>2022-12-16T10:49:05+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/</loc>
+    <lastmod>2022-12-16T10:49:05+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/</loc>
+    <lastmod>2022-12-16T10:49:05+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/await%E7%9A%84%E8%83%8C%E5%90%8E/</loc>
     <lastmod>2022-12-15T21:49:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -45,20 +80,6 @@
   
   <url>
     <loc>https://bigshans.github.io/categories/nodejs/</loc>
-    <lastmod>2022-12-15T21:49:39+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2022-12-15T21:49:39+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/</loc>
     <lastmod>2022-12-15T21:49:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -507,20 +528,6 @@
   
   <url>
     <loc>https://bigshans.github.io/tags/html/</loc>
-    <lastmod>2022-05-17T10:46:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/javascript/</loc>
-    <lastmod>2022-05-17T10:46:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/javascript/</loc>
     <lastmod>2022-05-17T10:46:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
