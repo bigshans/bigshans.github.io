@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 27 Dec 2022 18:31:00 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Dec 2022 16:39:17 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+    </item>
+    
+    <item>
+      <title>2022 年年终总结</title>
+      <link>https://bigshans.github.io/post/2022%E5%B9%B4%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Wed, 28 Dec 2022 16:39:17 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/2022%E5%B9%B4%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</guid>
+      <description>看看去年写年终总结的时间，差不多是同一时刻。年末国内终于放开封控了，我也“有幸”感染了新冠，过去差不多一周了，咳嗽鼻塞还没好。现在感觉其实有</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/modern-creator/</guid>
       <description>现代创作者们面对关于自己接广告的行为，有一套统一的辩解，即是他们的创作本身并不赚钱，而创作却过多的影响了他们的谋生，如果创作本身不能盈利，那</description>
-    </item>
-    
-    <item>
-      <title>搞定了几个 Gitea 相关的问题</title>
-      <link>https://bigshans.github.io/post/gitea-config/</link>
-      <pubDate>Sat, 19 Mar 2022 00:52:32 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/gitea-config/</guid>
-      <description>Gitea 可以同步 Github 仓库之后，让我觉得仓库管理有很大的便利。因为我的很多代码毕竟保存在 Github 上，允许同步 Github 免去了我很多两头跑的工作。 但是有几个我还是不太</description>
     </item>
     
   </channel>
