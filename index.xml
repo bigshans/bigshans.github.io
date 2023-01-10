@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 07 Jan 2023 23:11:40 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Jan 2023 13:37:21 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+    </item>
+    
+    <item>
+      <title>《Vuejs设计与实现》读书笔记</title>
+      <link>https://bigshans.github.io/post/vuejs%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 08 Jan 2023 13:37:21 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/vuejs%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+      <description>第二篇 响应系统 第四章 响应系统的作用与实现 设计完善的响应式系统 借助 Proxy ，我们实现一个基本的响应式系统。书中代码我改成可以在 Node 中运行的代码了。 const bucket</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/god-is-dead/</guid>
       <description>上帝已死，具有两个意思。一个表面的基督是虚无的，人心中的上帝轰然倒坍。另一个是一切规律、信仰，或死或活的，仿上帝的，这些主宰着人们思想的大他</description>
-    </item>
-    
-    <item>
-      <title>发病日记</title>
-      <link>https://bigshans.github.io/post/onset-diary/</link>
-      <pubDate>Tue, 29 Mar 2022 01:16:23 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/onset-diary/</guid>
-      <description>最近在听 One Last Kiss ，我很喜欢，甚至现在也在听，因为很好哭。然而我现在哭不出来，明明之前我难过得想要嚎啕，然而在一阵不可抑制的掩面后，痛苦减轻了。</description>
     </item>
     
   </channel>
