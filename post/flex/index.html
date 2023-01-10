@@ -52,7 +52,7 @@
 <meta itemprop="name" content="flex 布局简说">
 <meta itemprop="description" content="最近同事开分享会讲到了一点 flex 布局相关的东西，但是讲得很仓促，于是决定私下里整理一下，也算是对 flex 知识的总结。内容基本参考了 MDN 还有 W3C 文档的内容，"><meta itemprop="datePublished" content="2021-07-10T22:35:25+08:00" />
 <meta itemprop="dateModified" content="2021-07-10T22:35:25+08:00" />
-<meta itemprop="wordCount" content="1710">
+<meta itemprop="wordCount" content="1760">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="flex 布局简说"/>
 <meta name="twitter:description" content="最近同事开分享会讲到了一点 flex 布局相关的东西，但是讲得很仓促，于是决定私下里整理一下，也算是对 flex 知识的总结。内容基本参考了 MDN 还有 W3C 文档的内容，"/>
@@ -179,7 +179,7 @@
         <div class="post-category">
             <a href="/categories/css/"> css </a>
             </div>
-          <span class="more-meta"> 约 1710 字 </span>
+          <span class="more-meta"> 约 1760 字 </span>
           <span class="more-meta"> 预计阅读 4 分钟 </span>
         
       </div>
@@ -233,17 +233,21 @@
 <p><code>flex-wrap</code> 定义了当 flex item 溢出时应该如何处理，默认为 <code>nowrap</code> ，即不折行直接溢出，也可以使用 <code>wrap</code> 折行处理。</p>
 <p>CSS 还提供了简写 <code>flex-flow</code> 用来同时设置 <code>flex-direction</code> 和 <code>flex-wrap</code> 。</p>
 <h2 id="flex-grow-flex-shrink--flex-basis--flex-item-的属性"><code>flex-grow</code> 、<code>flex-shrink</code> 、 <code>flex-basis</code> —— flex item 的属性</h2>
-<p><code>flex-grow</code> 、<code>flex-shrink</code> 和 <code>flex-basis</code> 这三个属性有一个简写—— <code>flex</code> 。</p>
+<p><code>flex</code> 属性是对 <code>flex-grow</code> 、<code>flex-shrink</code> 和 <code>flex-basis</code> 三个属性的一个快速书写。</p>
 <p>想要熟练使用 <code>flex</code> 属性，就必须要弄懂 <code>flex-grow</code> 、<code>flex-shrink</code> 和 <code>flex-basis</code> 。</p>
+<p>事实上，这三个属性分别对应了 flex 布局所要做的伸长、缩短和初始长度三件事。</p>
 <h3 id="flex-grow"><code>flex-grow</code></h3>
+<p>即伸长。</p>
 <p><code>flex-grow</code> 生效于当 flex 容器主尺寸大于各个 flex item 尺寸之和时，默认值为 0 。当 flex 容器主尺寸大于各个 flex item 尺寸之和时，浏览器会将剩余空间按照各个 flex item 的 <code>flex-grow</code> 设定分配给各个 flex item 。例如，当  flex 容器有 3 个子元素，若 3 个子元素的 <code>flex-grow</code> 都设定为 1 时，那么浏览器就会将剩下的空间按照 1:1:1 比例进行分配，追加到子元素后面。</p>
 <h3 id="flex-shrink"><code>flex-shrink</code></h3>
+<p>即缩短。</p>
 <p><code>flex-shrink</code> 生效于当 flex 容器主尺寸小于各个 flex item 尺寸之和时，默认值为 0 。当 flex 容器主尺寸小于各个 flex item 尺寸之和时，浏览器会按照子元素 <code>flex-shrink</code> 设定进行分配缩放。例如，当  flex 容器有 3 个子元素，若 flex 容器为 100px ，子元素的 <code>flex-shrink</code> 分别设定为 A 、B 元素 1 ，C 元素 2 ，三个元素宽度都为 60px ，<code>3*60=180px</code> ，溢出容器 80px 。我们计算总权重为 <code>1*60+1*60+2*60=240</code> ，因此 A 、B 元素需要减少 <code>1*60/240*80=20px</code> ，C 元素需要减少 <code>2*60/240*80=40px</code> ，最终 A 、B 为 40px ，C 为 20px 。</p>
 <p>关于 <code>flex-shrink</code> 和 <code>flex-grow</code> 的具体计算还请参看<a href="https://zhuanlan.zhihu.com/p/24372279">这篇文章</a> 。</p>
 <h3 id="flex-basis"><code>flex-basis</code></h3>
+<p>即初始长度。</p>
 <p><code>flex-basis</code> 设定了 flex item 在主轴方向上初始大小，默认为 <code>auto</code> ，即与 flex item 自己的大小相同。当一个元素同时被设置了 <code>flex-basis</code> (除值为 <code>auto</code> 外) 和 <code>width</code> (或者在 <code>flex-direction: column</code> 情况下设置了<code>height</code>) ， <code>flex-basis</code> 具有更高的优先级。</p>
 <h3 id="flex-简写"><code>flex</code> 简写</h3>
-<p><code>flex</code> 简写形式允许你把三个数值按这个顺序书写 —— <code>flex-grow</code>，<code>flex-shrink</code> ，<code>flex-basis</code> 。</p>
+<p><code>flex</code> 形式允许你把三个数值按这个顺序速写 —— <code>flex-grow</code>，<code>flex-shrink</code> ，<code>flex-basis</code> 。</p>
 <p>我们可以使用一个，两个或三个值来指定 <code>flex</code> 属性。</p>
 <p>简写形式如下：</p>
 <pre><code class="language-css">/* 关键字值 */
