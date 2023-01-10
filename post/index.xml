@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 08 Jan 2023 13:37:21 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jan 2023 09:27:35 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+    </item>
+    
+    <item>
+      <title>CSS 三栏布局</title>
+      <link>https://bigshans.github.io/post/css%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/</link>
+      <pubDate>Tue, 10 Jan 2023 09:27:35 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/css%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/</guid>
+      <description>三栏布局是比较经典的 CSS 布局，特点就是中间内容自适应，首先渲染，其次左右内容大小保持不变分布两旁。结构上打破了一般意义上的左中右的顺序，变成了</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/different-sort-between-firefox-and-chrome/</guid>
       <description>首先，这个区别不算 BUG ，因为标准并没有规定该怎么排，但这个细微区别在实现一些特殊需求时需要被注意到。 注意下面一段代码： var a = [1, 1, 1, 1, 1]; a = a.map((k, i)</description>
-    </item>
-    
-    <item>
-      <title>已死的上帝</title>
-      <link>https://bigshans.github.io/post/god-is-dead/</link>
-      <pubDate>Tue, 29 Mar 2022 17:57:26 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/god-is-dead/</guid>
-      <description>上帝已死，具有两个意思。一个表面的基督是虚无的，人心中的上帝轰然倒坍。另一个是一切规律、信仰，或死或活的，仿上帝的，这些主宰着人们思想的大他</description>
     </item>
     
   </channel>

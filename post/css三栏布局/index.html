@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>CSS 三栏布局 - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="三栏布局是比较经典的 CSS 布局，特点就是中间内容自适应，首先渲染，其次左右内容大小保持不变分布两旁。结构上打破了一般意义上的左中右的顺序，变成了" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.105.0-DEV with theme even" />
+
+
+<link rel="canonical" href="https://bigshans.github.io/post/css%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.334f93beb7cfba0aa3e21cd30f85a30b9f7e3db3064daba666a65fa41a974add.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+<meta property="og:title" content="CSS 三栏布局" />
+<meta property="og:description" content="三栏布局是比较经典的 CSS 布局，特点就是中间内容自适应，首先渲染，其次左右内容大小保持不变分布两旁。结构上打破了一般意义上的左中右的顺序，变成了" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/css%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-01-10T09:27:35+08:00" />
+<meta property="article:modified_time" content="2023-01-10T09:27:35+08:00" />
+
+<meta itemprop="name" content="CSS 三栏布局">
+<meta itemprop="description" content="三栏布局是比较经典的 CSS 布局，特点就是中间内容自适应，首先渲染，其次左右内容大小保持不变分布两旁。结构上打破了一般意义上的左中右的顺序，变成了"><meta itemprop="datePublished" content="2023-01-10T09:27:35+08:00" />
+<meta itemprop="dateModified" content="2023-01-10T09:27:35+08:00" />
+<meta itemprop="wordCount" content="1124">
+<meta itemprop="keywords" content="css," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSS 三栏布局"/>
+<meta name="twitter:description" content="三栏布局是比较经典的 CSS 布局，特点就是中间内容自适应，首先渲染，其次左右内容大小保持不变分布两旁。结构上打破了一般意义上的左中右的顺序，变成了"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">CSS 三栏布局</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-01-10 </span>
+        <div class="post-category">
+            <a href="/categories/css/"> css </a>
+            </div>
+          <span class="more-meta"> 约 1124 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#圣杯布局">圣杯布局</a></li>
+        <li><a href="#双飞翼布局">双飞翼布局</a></li>
+        <li><a href="#flex-实现三栏布局">flex
+实现三栏布局</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+    <div class="post-content">
+      
+
+<p>三栏布局是比较经典的 CSS
+布局，特点就是中间内容自适应，首先渲染，其次左右内容大小保持不变分布两旁。结构上打破了一般意义上的左中右的顺序，变成了中左右的顺序，但视觉展示仍然要求是左中右的布局，于是，如何将中间内容放回到中间，并重新分布左右则是此类技术的核心所在。在
+<code>flex</code> 之前，前端多用 <code>float</code>
+实现，出现了双飞翼和圣杯布局两种实现，现在我们可以用 <code>flex</code>
+来很简单的实现。</p>
+<h2 id="圣杯布局">圣杯布局</h2>
+<p>圣杯布局的基本 HTML 结构如下：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;header&#34;</span><span class="kw">&gt;</span>header<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;container&#34;</span><span class="kw">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;middle&#34;</span><span class="kw">&gt;</span>middle<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;left&#34;</span><span class="kw">&gt;</span>left<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;right&#34;</span><span class="kw">&gt;</span>right<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;footer&#34;</span><span class="kw">&gt;</span>footer<span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<p>我们可以看到，三栏的主要部分被 container
+容器包裹。圣杯布局主要是利用容器的内边距撑开左右，再借助
+<code>position: relative</code> 和 <code>margin</code>
+来实现左右元素的偏移，这里我们都使用了 <code>float</code>
+来脱离原有的文档流布局。</p>
+<p>基本思路是这样的：</p>
+<ol type="1">
+<li>设置 <code>container</code> 容器左右内边距，需要左右容器同宽。</li>
+<li>设置 <code>middle</code> 、 <code>left</code> 、 <code>right</code>
+为 <code>float: left</code> ，此时 <code>container</code>
+内部坍陷。可以给 <code>container</code> 设置
+<code>overflow: hidden</code> 或者给 <code>footer</code> 设置
+<code>clear: both</code> 来解决塌陷问题。</li>
+<li>设置 <code>middle</code> 宽度为 <code>width: 100%</code> 。</li>
+<li>将 <code>left</code> 向左边移动一个 <code>container</code> 加一个
+<code>left</code> 的宽度。</li>
+<li>将 <code>right</code> 向左移动一个 <code>right</code> 的宽度。</li>
+</ol>
+<p>最后实现的效果如下：</p>
+<div>
+<div class="header-1">
+header
+</div>
+<div class="container-1">
+<div class="middle-1">
+middle
+</div>
+<div class="left-1">
+left
+</div>
+<div class="right-1">
+right
+</div>
+</div>
+<div class="footer-1">
+footer
+</div>
+</div>
+<style type="text/css">
+.header-1,.footer-1,.middle-1,.left-1,.right-1 { height: 50px; }
+.container-1 { padding: 0 100px; }
+.header-1 { background-color: red; }
+.middle-1 { width: 100%; float: left; background-color: green; }
+.left-1 { width: 100px; float: left; background-color: blue; margin-left: calc(-100% - 100px); }
+.right-1 { width: 100px; float: left; background-color: pink; margin-right: -100px; }
+.footer-1 { clear: both; background-color: red; }
+</style>
+<p>css 源码如下：</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.header</span><span class="op">,</span><span class="fu">.footer</span><span class="op">,</span><span class="fu">.middle</span><span class="op">,</span><span class="fu">.left</span><span class="op">,</span><span class="fu">.right</span> { <span class="kw">height</span>: <span class="dv">50</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.container</span> { <span class="kw">padding</span>: <span class="dv">0</span> <span class="dv">100</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">.header</span> { <span class="kw">background-color</span>: <span class="cn">red</span><span class="op">;</span> }</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">.middle</span> { <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span> <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span> <span class="kw">background-color</span>: <span class="cn">green</span><span class="op">;</span> }</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">.left</span> { <span class="kw">width</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span> <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span> <span class="kw">background-color</span>: <span class="cn">blue</span><span class="op">;</span> <span class="kw">margin-left</span>: <span class="dv">-100</span><span class="dt">%</span><span class="op">;</span> <span class="kw">position</span>: <span class="dv">relative</span><span class="op">;</span> <span class="kw">left</span>: <span class="dv">-100</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">.right</span> { <span class="kw">width</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span> <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span> <span class="kw">background-color</span>: <span class="cn">pink</span><span class="op">;</span> <span class="kw">margin-left</span>: <span class="dv">-100</span><span class="dt">px</span><span class="op">;</span> <span class="kw">position</span>: <span class="dv">relative</span><span class="op">;</span> <span class="kw">left</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span>  }</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.footer</span> { <span class="kw">clear</span>: <span class="dv">both</span><span class="op">;</span> <span class="kw">background-color</span>: <span class="cn">red</span><span class="op">;</span> }</span></code></pre></div>
+<p>这里左右移动分为两步，先用 margin
+将左右元素移动到同一行，然后分别向左右移动一个自身宽度。我们也可以用
+<code>calc()</code> 来实现。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.left</span> { <span class="kw">width</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span> <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span> <span class="kw">background-color</span>: <span class="cn">blue</span><span class="op">;</span> <span class="kw">margin-left</span>: <span class="fu">calc(</span><span class="dv">-100</span><span class="dt">%</span> <span class="op">-</span> <span class="dv">100</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span> }</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.right</span> { <span class="kw">width</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span> <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span> <span class="kw">background-color</span>: <span class="cn">pink</span><span class="op">;</span> <span class="kw">margin-right</span>: <span class="dv">-100</span><span class="dt">px</span><span class="op">;</span>  }</span></code></pre></div>
+<p>这样，我们可以完全不用 <code>position</code>
+属性了。其实主要是左元素移动会比较麻烦，右元素移动都比较通用。</p>
+<h2 id="双飞翼布局">双飞翼布局</h2>
+<p>双飞翼布局主要使用外边距撑开内容。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;header&#34;</span><span class="kw">&gt;</span>header<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;middle&#34;</span><span class="kw">&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;inside&#34;</span><span class="kw">&gt;</span>inside<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;left&#34;</span><span class="kw">&gt;</span>left<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;right&#34;</span><span class="kw">&gt;</span>right<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;footer&#34;</span><span class="kw">&gt;</span>footer<span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<p>双飞翼的布局，主要部分放在 <code>inside</code> 中，而原来的
+<code>middle</code> 主要起到了一个容器的作用。</p>
+<p>基本思路是这样的：</p>
+<ol type="1">
+<li>设置 <code>middle</code> 容器宽度为 <code>100%</code> ，并设置
+<code>float: left</code> ，让中间容器上浮一行。</li>
+<li>设置 <code>inside</code> 的外边距与左右容器同宽，因为
+<code>inside</code> 此时高度为 0 ，需设置 <code>inside</code>
+高度。</li>
+<li>将 <code>left</code> 向左边移动一个 <code>container</code>
+的宽度。</li>
+<li>将 <code>right</code> 向左移动一个 <code>right</code> 的宽度。</li>
+</ol>
+<p>最后效果如下：</p>
+<div>
+<div class="header-2">
+header
+</div>
+<div class="middle-2">
+<div class="inside">
+inside
+</div>
+</div>
+<div class="left-2">
+left
+</div>
+<div class="right-2">
+right
+</div>
+<div class="footer-2">
+footer
+</div>
+</div>
+<style type="text/css">
+.header-2,.footer-2,.middle-2,.left-2,.right-2 { height: 50px; }
+.header-2 { background-color: red; }
+.inside { margin: 0 100px; height: 50px; }
+.middle-2 { width: 100%; float: left; background-color: green; }
+.left-2 { width: 100px; float: left; background-color: blue; margin-left: -100%; }
+.right-2 { width: 100px; float: left; background-color: pink; margin-left: -100px; }
+.footer-2 { clear: both; background-color: red; }
+</style>
+<p>css 源码如下：</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.header</span><span class="op">,</span><span class="fu">.footer</span><span class="op">,</span><span class="fu">.middle</span><span class="op">,</span><span class="fu">.left</span><span class="op">,</span><span class="fu">.right</span> { <span class="kw">height</span>: <span class="dv">50</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.header</span> { <span class="kw">background-color</span>: <span class="cn">red</span><span class="op">;</span> }</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">.inside</span> { <span class="kw">margin</span>: <span class="dv">0</span> <span class="dv">100</span><span class="dt">px</span><span class="op">;</span> <span class="kw">height</span>: <span class="dv">50</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">.middle</span> { <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span> <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span> <span class="kw">background-color</span>: <span class="cn">green</span><span class="op">;</span> }</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">.left</span> { <span class="kw">width</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span> <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span> <span class="kw">background-color</span>: <span class="cn">blue</span><span class="op">;</span> <span class="kw">margin-left</span>: <span class="dv">-100</span><span class="dt">%</span><span class="op">;</span> }</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">.right</span> { <span class="kw">width</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span> <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span> <span class="kw">background-color</span>: <span class="cn">pink</span><span class="op">;</span> <span class="kw">margin-left</span>: <span class="dv">-100</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.footer</span> { <span class="kw">clear</span>: <span class="dv">both</span><span class="op">;</span> <span class="kw">background-color</span>: <span class="cn">red</span><span class="op">;</span> }</span></code></pre></div>
+<p>其实与圣杯布局相差不多，但 <code>middle</code>
+占满了单独一行，还是有很多可以操作的空间的。</p>
+<h2 id="flex-实现三栏布局">flex 实现三栏布局</h2>
+<p><code>flex</code> 可以很轻松的实现三栏布局。</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;header&#34;</span><span class="kw">&gt;</span>header<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;container&#34;</span><span class="kw">&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;middle&#34;</span><span class="kw">&gt;</span>middle<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;left&#34;</span><span class="kw">&gt;</span>left<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;right&#34;</span><span class="kw">&gt;</span>right<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#34;footer&#34;</span><span class="kw">&gt;</span>footer<span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<p>DOM 结构与圣杯布局类似。</p>
+<p>基本思路是这样的：</p>
+<ol type="1">
+<li>通过 <code>order</code> 设置三栏的顺序。</li>
+<li>将三栏排布到同一行。</li>
+<li>设置左右元素定宽，并设置左右元素的伸缩能力为 0 。</li>
+<li>设置中间元素不定宽，并将所有伸缩空间赋予给它。</li>
+</ol>
+<p>最后效果如下：</p>
+<div>
+<div class="header-1">
+header
+</div>
+<div class="container-3">
+<div class="middle-3">
+middle
+</div>
+<div class="left-3">
+left
+</div>
+<div class="right-3">
+right
+</div>
+</div>
+<div class="footer-1">
+footer
+</div>
+</div>
+<style type="text/css">
+.middle-3,.left-3,.right-3 { height: 50px; }
+.container-3 { display: flex; }
+.middle-3 { width: 100%; background-color: green; order: 2; flex: 1; }
+.left-3 { width: 100px; background-color: blue; order: 1; flex: 0 0 100px; }
+.right-3 { width: 100px; background-color: pink; order: 3; flex: 0 0 100px; }
+</style>
+<p>css 源码如下：</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.header</span><span class="op">,</span><span class="fu">.footer</span><span class="op">,</span><span class="fu">.middle</span><span class="op">,</span><span class="fu">.left</span><span class="op">,</span><span class="fu">.right</span> { <span class="kw">height</span>: <span class="dv">50</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.header</span> { <span class="kw">background-color</span>: <span class="cn">red</span><span class="op">;</span> }</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">.container</span> { <span class="kw">display</span>: <span class="dv">flex</span><span class="op">;</span> }</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">.middle</span> { <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span> <span class="kw">background-color</span>: <span class="cn">green</span><span class="op">;</span> <span class="kw">order</span>: <span class="dv">2</span><span class="op">;</span> <span class="kw">flex</span>: <span class="dv">1</span><span class="op">;</span> }</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">.left</span> { <span class="kw">width</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span> <span class="kw">background-color</span>: <span class="cn">blue</span><span class="op">;</span> <span class="kw">order</span>: <span class="dv">1</span><span class="op">;</span> <span class="kw">flex</span>: <span class="dv">0</span> <span class="dv">0</span> <span class="dv">100</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">.right</span> { <span class="kw">width</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span> <span class="kw">background-color</span>: <span class="cn">pink</span><span class="op">;</span> <span class="kw">order</span>: <span class="dv">3</span><span class="op">;</span> <span class="kw">flex</span>: <span class="dv">0</span> <span class="dv">0</span> <span class="dv">100</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.footer</span> { <span class="kw">clear</span>: <span class="dv">both</span><span class="op">;</span> <span class="kw">background-color</span>: <span class="cn">red</span><span class="op">;</span> }</span></code></pre></div>
+<p><code>flex: 1</code> 是 <code>flex: 1 1 auto</code>
+的缩写。具体可以看我之前的文章<a href="../flex">flex 布局简说</a>。</p>
+<p>三者具体的区别，你可以通过调整窗口大小看到。</p>
+
+
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2023-01-10
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/css/">css</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E5%A4%87%E5%BF%98%E5%BD%95/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[置顶] 备忘录</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/vuejs%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+            <span class="next-text nav-default">《Vuejs设计与实现》读书笔记</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+  <div style="font-size: 12px; margin-left: 10px">
+    This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+  </div>
+  </div>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

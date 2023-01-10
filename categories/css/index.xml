@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 03 Dec 2021 16:32:50 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jan 2023 09:27:35 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS 三栏布局</title>
+      <link>https://bigshans.github.io/post/css%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/</link>
+      <pubDate>Tue, 10 Jan 2023 09:27:35 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/css%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/</guid>
+      <description>三栏布局是比较经典的 CSS 布局，特点就是中间内容自适应，首先渲染，其次左右内容大小保持不变分布两旁。结构上打破了一般意义上的左中右的顺序，变成了</description>
+    </item>
+    
     <item>
       <title>drop-shadow 隐藏原始图像</title>
       <link>https://bigshans.github.io/post/drop-shadow-hidden-origin-image/</link>
