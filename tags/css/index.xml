@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 10 Jan 2023 09:27:35 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Jan 2023 09:27:13 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS 盒子模型</title>
+      <link>https://bigshans.github.io/post/css-box/</link>
+      <pubDate>Fri, 13 Jan 2023 09:27:13 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/css-box/</guid>
+      <description>一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。 标准盒</description>
+    </item>
+    
     <item>
       <title>CSS 三栏布局</title>
       <link>https://bigshans.github.io/post/css%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/</link>

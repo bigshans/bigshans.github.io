@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 10 Jan 2023 09:27:35 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Jan 2023 09:27:13 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+    </item>
+    
+    <item>
+      <title>CSS 盒子模型</title>
+      <link>https://bigshans.github.io/post/css-box/</link>
+      <pubDate>Fri, 13 Jan 2023 09:27:13 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/css-box/</guid>
+      <description>一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。 标准盒</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/%E7%8E%B0%E5%9C%A8%E4%B8%8D%E8%80%83%E8%99%91%E6%8A%80%E6%9C%AF%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%80%83%E8%99%91/</guid>
       <description>技术情结总是一个可以批判的东西，可以被用来批判任何不合时宜的技术优化思想，然而，此种批判也存在着滥用。对于小公司来说，还没有达到可以随意不谈</description>
-    </item>
-    
-    <item>
-      <title>sort 在 Chrome 和 Firefox 表现不同</title>
-      <link>https://bigshans.github.io/post/different-sort-between-firefox-and-chrome/</link>
-      <pubDate>Thu, 31 Mar 2022 10:18:10 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/different-sort-between-firefox-and-chrome/</guid>
-      <description>首先，这个区别不算 BUG ，因为标准并没有规定该怎么排，但这个细微区别在实现一些特殊需求时需要被注意到。 注意下面一段代码： var a = [1, 1, 1, 1, 1]; a = a.map((k, i)</description>
     </item>
     
   </channel>

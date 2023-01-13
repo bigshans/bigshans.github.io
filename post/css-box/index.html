@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>CSS 盒子模型 - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" /><meta name="description" content="一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。 标准盒" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.105.0-DEV with theme even" />
+
+
+<link rel="canonical" href="https://bigshans.github.io/post/css-box/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.1b2933a7ee723b638c17c3755f0d1ec2e9b847712dfd79463e53552beda4628f.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+<meta property="og:title" content="CSS 盒子模型" />
+<meta property="og:description" content="一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。 标准盒" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/css-box/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-01-13T09:27:13+08:00" />
+<meta property="article:modified_time" content="2023-01-13T09:27:13+08:00" />
+
+<meta itemprop="name" content="CSS 盒子模型">
+<meta itemprop="description" content="一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。 标准盒"><meta itemprop="datePublished" content="2023-01-13T09:27:13+08:00" />
+<meta itemprop="dateModified" content="2023-01-13T09:27:13+08:00" />
+<meta itemprop="wordCount" content="972">
+<meta itemprop="keywords" content="css," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSS 盒子模型"/>
+<meta name="twitter:description" content="一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。 标准盒"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">CSS 盒子模型</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-01-13 </span>
+        <div class="post-category">
+            <a href="/categories/css/"> css </a>
+            </div>
+          <span class="more-meta"> 约 972 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#标准盒型">标准盒型</a></li>
+        <li><a href="#box-sizing"><code>box-sizing</code></a></li>
+        <li><a href="#direction-属性对行内元素的影响"><code>direction</code>
+属性对行内元素的影响</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+    <div class="post-content">
+      
+
+<p>一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS
+的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS
+布局排版的基础。</p>
+<h2 id="标准盒型">标准盒型</h2>
+<figure>
+<img src="https://www.w3.org/TR/2016/WD-CSS22-20160412/images/boxdim.png" alt="盒子模型示意图"/>
+<figcaption aria-hidden="true">盒子模型示意图</figcaption>
+</figure>
+<p>每一个盒子都一块内容（content）区域，围绕内容从内向外分别是内边距、边框和外边距（padding
+、 border 、 margin）。</p>
+<p>内容、内边距、边框和外边距这四块区域，每一块区域的边缘被叫做边界，因此，一个盒型有如下四个边界：</p>
+<ul>
+<li><strong>content edge</strong> 或 <strong>inner edge</strong>
+<ul>
+<li>即环绕于内容区域的矩形，它定义了内容区域。它有宽和高，一般由元素内容来决定。四个内容边缘确定一块内容盒子（<strong>content
+box</strong>）。</li>
+</ul></li>
+<li><strong>padding edge</strong>
+<ul>
+<li>填充边界环绕于盒子的填充区域，如果填充区域的宽度为 0
+，则填充边界与内容边界相同。四个填充边界定义了一个填充盒子（<strong>padding
+box</strong>）。</li>
+</ul></li>
+<li><strong>border edge</strong>
+<ul>
+<li>边框边界环绕与盒子的边框，如果边框宽度为 0
+，则边框边界与填充边界相同。四个边框边界定义了一个边框盒子（<strong>border
+box</strong>）。</li>
+</ul></li>
+<li><strong>margin edge</strong> 或 <strong>outer edge</strong>
+<ul>
+<li>外边距边界环绕于盒子的外边距，如果外边距宽度为 0
+，则外边距边界与填充边界相同。四个外边距边界定义了一个外边距盒子（<strong>margin
+box</strong>）。</li>
+</ul></li>
+</ul>
+<p>每一个边界都存在着上边界、右边界、下边界和左边界。</p>
+<p>内容、内边距和边框的背景由背景属性生成。外边距的背景默认为透明。</p>
+<p>内容盒子的宽高通常由多种因素决定，比如说：生成的盒子是否允许设置
+<code>width</code> 和 <code>height</code>
+，生成的盒子是否包含文本或其他盒子，盒子是否是表格等等。具体的这些内容，将由视觉格式上下文（visiual
+formatting context）来做具体的规定。</p>
+<h2 id="box-sizing"><code>box-sizing</code></h2>
+<p>以上对盒型的讨论，是基于 CSS2 的，但在 CSS3 中，因为
+<code>box-sizing</code> 的出现而有了些变化。</p>
+<p><code>box-sizing</code>
+允许我们设置盒子的固定尺寸是会被设定到内容盒子上还是边框盒子上。具体有两个值，一个是
+<code>content-box</code> ，即设定到内容盒子上，另一个是
+<code>border-box</code> ，即设定到边框盒子上。前者与 CSS2
+所设定的宽高关联相一致，默认的盒子尺寸采用 <code>content-box</code>
+。</p>
+<p>设定为 <code>border-box</code> 的盒子，其
+<code>内容元素的宽高 = max(0, 元素固定大小 - 内边距大小 - 边框大小)</code>
+，内容盒子的尺寸将由计算决定，相当于我们设定标准盒型的内容宽高为对应的计算属性。
+<code>border-box</code>
+的好处还是很明显的，当我们不清楚盒子具体内容的大小，但知道盒子整体大小时，设置为
+<code>border-box</code>
+可以防止盒子的最终大小因内容的变动而引起盒子尺寸的变动。</p>
+<h2 id="direction-属性对行内元素的影响"><code>direction</code>
+属性对行内元素的影响</h2>
+<p>当 <code>direction</code> 为 <code>ltr</code>
+时，即从左到右阅读文本，元素将从左到右生成内容。</p>
+<p>当 <code>direction</code> 为 <code>rtl</code>
+时，即从右到左阅读文本，元素将从右到左生成内容。</p>
+
+
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2023-01-13
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/css/">css</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E5%A4%87%E5%BF%98%E5%BD%95/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[置顶] 备忘录</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/css%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/">
+            <span class="next-text nav-default">CSS 三栏布局</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+  <div style="font-size: 12px; margin-left: 10px">
+    This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+  </div>
+  </div>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
