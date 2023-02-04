@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 04 Feb 2023 20:22:00 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Feb 2023 03:27:39 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+    </item>
+    
+    <item>
+      <title>小公司的狂妄自大</title>
+      <link>https://bigshans.github.io/post/%E5%B0%8F%E5%85%AC%E5%8F%B8%E7%9A%84%E7%8B%82%E5%A6%84%E8%87%AA%E5%A4%A7/</link>
+      <pubDate>Sun, 05 Feb 2023 03:27:39 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E5%B0%8F%E5%85%AC%E5%8F%B8%E7%9A%84%E7%8B%82%E5%A6%84%E8%87%AA%E5%A4%A7/</guid>
+      <description>一些大厂出来的人会一种错觉，以为自己离开了大厂仍能干一番事业。尤其是一些领导层，以为自己有一些人脉，似乎就可以登天。殊不知自己离开了大厂什么</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/learn-deno-by-example/</guid>
       <description>Deno 算是一个新的 TypeScript 运行时，个人简单看了一下，感觉还可以。用来简单写一些东西还是很方便的。但网络上 Deno 相关的教程都很老了， Deno 都出正式了，但相关的教</description>
-    </item>
-    
-    <item>
-      <title>可能 lua 不是配置 nvim 的最佳解决方案</title>
-      <link>https://bigshans.github.io/post/maybe-lua-is-not-the-solution/</link>
-      <pubDate>Mon, 04 Apr 2022 21:55:06 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/maybe-lua-is-not-the-solution/</guid>
-      <description>这几天折腾 nvim ，折腾的过程中也发现各个插件可能并不一定如我意，于是我就修改一部分插件并 fork 为己所用。不知不觉过去好久了，我积累下来的好多配置，以</description>
     </item>
     
   </channel>
