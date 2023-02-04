@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>如何放大 Krunner 的字体 - Bigshans&#39; Blog</title>
+  <title>修复plasma全局快捷键无法设置 - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。 Krunner 的字体在 Plasma 下表现不错，但在 Xfce 下" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="起因是不知道什么时候，我打开 Plasma 的快捷键设置时，全局设置总是报错，但虽然报错，全局快捷键亦然很好使。 经过我一番努力的探索，我终于发现了问题所在" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.105.0-DEV with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/how-to-increase-krunner-font/" />
+<link rel="canonical" href="https://bigshans.github.io/post/%E4%BF%AE%E5%A4%8Dplasma%E5%85%A8%E5%B1%80%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%97%A0%E6%B3%95%E8%AE%BE%E7%BD%AE/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,20 +42,20 @@
 
 
 
-<meta property="og:title" content="如何放大 Krunner 的字体" />
-<meta property="og:description" content="最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。 Krunner 的字体在 Plasma 下表现不错，但在 Xfce 下" />
+<meta property="og:title" content="修复plasma全局快捷键无法设置" />
+<meta property="og:description" content="起因是不知道什么时候，我打开 Plasma 的快捷键设置时，全局设置总是报错，但虽然报错，全局快捷键亦然很好使。 经过我一番努力的探索，我终于发现了问题所在" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/how-to-increase-krunner-font/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-11-13T23:16:38+08:00" />
-<meta property="article:modified_time" content="2022-11-13T23:16:38+08:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/%E4%BF%AE%E5%A4%8Dplasma%E5%85%A8%E5%B1%80%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%97%A0%E6%B3%95%E8%AE%BE%E7%BD%AE/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-02-04T20:22:00+08:00" />
+<meta property="article:modified_time" content="2023-02-04T20:22:00+08:00" />
 
-<meta itemprop="name" content="如何放大 Krunner 的字体">
-<meta itemprop="description" content="最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。 Krunner 的字体在 Plasma 下表现不错，但在 Xfce 下"><meta itemprop="datePublished" content="2022-11-13T23:16:38+08:00" />
-<meta itemprop="dateModified" content="2022-11-13T23:16:38+08:00" />
-<meta itemprop="wordCount" content="208">
-<meta itemprop="keywords" content="HACK," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="如何放大 Krunner 的字体"/>
-<meta name="twitter:description" content="最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。 Krunner 的字体在 Plasma 下表现不错，但在 Xfce 下"/>
+<meta itemprop="name" content="修复plasma全局快捷键无法设置">
+<meta itemprop="description" content="起因是不知道什么时候，我打开 Plasma 的快捷键设置时，全局设置总是报错，但虽然报错，全局快捷键亦然很好使。 经过我一番努力的探索，我终于发现了问题所在"><meta itemprop="datePublished" content="2023-02-04T20:22:00+08:00" />
+<meta itemprop="dateModified" content="2023-02-04T20:22:00+08:00" />
+<meta itemprop="wordCount" content="168">
+<meta itemprop="keywords" content="linux," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="修复plasma全局快捷键无法设置"/>
+<meta name="twitter:description" content="起因是不知道什么时候，我打开 Plasma 的快捷键设置时，全局设置总是报错，但虽然报错，全局快捷键亦然很好使。 经过我一番努力的探索，我终于发现了问题所在"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -172,14 +172,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">如何放大 Krunner 的字体</h1>
+      <h1 class="post-title">修复plasma全局快捷键无法设置</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2022-11-13 </span>
+        <span class="post-time"> 2023-02-04 </span>
         <div class="post-category">
-            <a href="/categories/hack/"> HACK </a>
+            <a href="/categories/linux/"> linux </a>
             </div>
-          <span class="more-meta"> 约 208 字 </span>
+          <span class="more-meta"> 约 168 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         
       </div>
@@ -192,24 +192,15 @@
 
     <div class="post-content">
       
-<p>最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是
-Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。</p>
-<p>Krunner 的字体在 Plasma 下表现不错，但在 Xfce
-下显得过小。但改变系统字体似乎并不影响 Krunner
-自己的字体，经过一番搜索，终于知道了要修改位于
-<code>~/.config/krunnerrc</code> 位置的文件。但在修改前要提前将 Krunner
-退出，不然重启时会自动覆盖文件，使用如下命令：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">kquitapp5</span> krunner</span></code></pre></div>
-<p>然后做如下两个修改：</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode toml"><code class="sourceCode toml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">General</span><span class="kw">]</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">font</span><span class="op">=</span><span class="dt">Noto</span> <span class="dt">Sans</span><span class="er">,</span><span class="dt">20</span><span class="er">,</span><span class="dt">-1</span><span class="er">,</span><span class="dt">5</span><span class="er">,</span><span class="dt">50</span><span class="er">,</span><span class="dt">0</span><span class="er">,</span><span class="dt">0</span><span class="er">,</span><span class="dt">0</span><span class="er">,</span><span class="dt">0</span><span class="er">,</span><span class="dt">0</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">PlasmaRunnerManager</span><span class="kw">]</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">migrated</span><span class="op">=</span><span class="cn">false</span></span></code></pre></div>
-<p>没有的自己添加，有的就改。</p>
-<p>然后重新启动，使用如下命令：</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">kstart5</span> krunner</span></code></pre></div>
-<p>字体的设置就生效了。</p>
+<p>起因是不知道什么时候，我打开 Plasma
+的快捷键设置时，全局设置总是报错，但虽然报错，全局快捷键亦然很好使。</p>
+<p>经过我一番努力的探索，我终于发现了问题所在。</p>
+<p>可以参考以下的帖子：
+https://forum.ubuntu.org.cn/viewtopic.php?t=491267 。</p>
+<p>首先运行以下命令查看输出：</p>
+<pre><code>systemctl restart --user plasma-kglobalaccel.service</code></pre>
+<p>你会发现有黄色的 warning 输出，但是不报错。它会告诉你有 dekstop
+文件有问题，你需要修改自己的配置，把有问题的配置全部删掉。然后重启服务，问题就解决了。</p>
 
 
 
@@ -223,7 +214,7 @@ Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常�
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2022-11-13
+        2023-02-04
         
     </span>
   </p>
@@ -232,16 +223,16 @@ Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常�
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/hack/">HACK</a>
+          <a href="/tags/linux/">linux</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/%E4%B8%AD%E6%96%87%E7%BC%96%E7%A8%8B%E4%B8%8D%E8%BF%87%E6%98%AF%E5%8F%A6%E4%B8%80%E7%A7%8D%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E6%96%87%E5%AD%A6%E5%8C%96/">
+        <a class="prev" href="/post/%E5%A4%87%E5%BF%98%E5%BD%95/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">中文编程不过是另一种编程语言文学化</span>
+            <span class="prev-text nav-default">[置顶] 备忘录</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/post/%E5%AF%B9%E6%84%8F%E8%A7%81%E7%9A%84%E5%81%8F%E8%A7%81/">
-            <span class="next-text nav-default">对意见的偏见</span>
+        <a class="next" href="/post/css-box/">
+            <span class="next-text nav-default">CSS 盒子模型</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

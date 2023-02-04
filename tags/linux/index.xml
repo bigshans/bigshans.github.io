@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 09 Sep 2022 14:31:52 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Feb 2023 20:22:00 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>修复plasma全局快捷键无法设置</title>
+      <link>https://bigshans.github.io/post/%E4%BF%AE%E5%A4%8Dplasma%E5%85%A8%E5%B1%80%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%97%A0%E6%B3%95%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Sat, 04 Feb 2023 20:22:00 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E4%BF%AE%E5%A4%8Dplasma%E5%85%A8%E5%B1%80%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%97%A0%E6%B3%95%E8%AE%BE%E7%BD%AE/</guid>
+      <description>起因是不知道什么时候，我打开 Plasma 的快捷键设置时，全局设置总是报错，但虽然报错，全局快捷键亦然很好使。 经过我一番努力的探索，我终于发现了问题所在</description>
+    </item>
+    
     <item>
       <title>将 snap 打包成 AUR</title>
       <link>https://bigshans.github.io/post/package-snap-to-pkg/</link>
