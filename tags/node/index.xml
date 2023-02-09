@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 07 Aug 2022 20:42:17 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/node/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Feb 2023 13:35:35 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/node/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Node 事件循环</title>
+      <link>https://bigshans.github.io/post/node%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</link>
+      <pubDate>Thu, 09 Feb 2023 13:35:35 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/node%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</guid>
+      <description>JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去</description>
+    </item>
+    
     <item>
       <title>NodeJs 上的大文件问题</title>
       <link>https://bigshans.github.io/post/bigfile-problem-for-node/</link>

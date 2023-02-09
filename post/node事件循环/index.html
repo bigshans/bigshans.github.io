@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>[置顶] 备忘录 - Bigshans&#39; Blog</title>
+  <title>Node 事件循环 - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.105.0-DEV with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/" />
+<link rel="canonical" href="https://bigshans.github.io/post/node%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,20 +42,20 @@
 
 
 
-<meta property="og:title" content="[置顶] 备忘录" />
-<meta property="og:description" content="文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup" />
+<meta property="og:title" content="Node 事件循环" />
+<meta property="og:description" content="JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-05-18T09:07:16+08:00" />
-<meta property="article:modified_time" content="2022-05-18T09:07:16+08:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/node%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-02-09T13:35:35+08:00" />
+<meta property="article:modified_time" content="2023-02-09T13:35:35+08:00" />
 
-<meta itemprop="name" content="[置顶] 备忘录">
-<meta itemprop="description" content="文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup"><meta itemprop="datePublished" content="2022-05-18T09:07:16+08:00" />
-<meta itemprop="dateModified" content="2022-05-18T09:07:16+08:00" />
-<meta itemprop="wordCount" content="43">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[置顶] 备忘录"/>
-<meta name="twitter:description" content="文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup"/>
+<meta itemprop="name" content="Node 事件循环">
+<meta itemprop="description" content="JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去"><meta itemprop="datePublished" content="2023-02-09T13:35:35+08:00" />
+<meta itemprop="dateModified" content="2023-02-09T13:35:35+08:00" />
+<meta itemprop="wordCount" content="874">
+<meta itemprop="keywords" content="node," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Node 事件循环"/>
+<meta name="twitter:description" content="JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -172,13 +172,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">[置顶] 备忘录</h1>
+      <h1 class="post-title">Node 事件循环</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2022-05-18 </span>
-        
-          <span class="more-meta"> 约 43 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        <span class="post-time"> 2023-02-09 </span>
+        <div class="post-category">
+            <a href="/categories/node/"> node </a>
+            </div>
+          <span class="more-meta"> 约 874 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
     </header>
@@ -189,15 +191,56 @@
 </div>
 
     <div class="post-content">
-      <p>文章备忘录：</p>
-<ol>
-<li><a href="../arch-pack-memo">Arch 打包备忘录</a></li>
-<li><a href="../trivial">琐碎备录</a></li>
-<li><a href="../git-merge-unrealted-histories">如何合并 Git 无关历史</a></li>
-<li><a href="../latex">latex 部分常用公式代码</a></li>
-<li><a href="../critical-outline">批判纲要</a></li>
-<li><a href="../how-to-use-wine-wechat-setup">如何使用 wine-wechat-setup</a></li>
+      
+<p>JavaScript
+是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为
+JavaScript 为了保持 DOM
+与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去处理，这个总线就是事件循环。
+ES
+标准并没有规定事件循环应该如何编写，因为这很明显取决于运行时，所以各个
+Runtime 之间的事件循环存在较大的差别，比如说，之前浏览器和 Node
+的事件循环机制就存在较大的差别。最新版的 Node
+在事件循环上的表现，基本与浏览器类似了。</p>
+<p>Node 的事件循环机制基于 libuv ，当你去阅读 Node 源码时，你会发现 Node
+用的基本就是 libuv 默认的事件循环机制。可以说 Node 是 libuv
+实践的一大例子。 Node 的事件循环与 libuv 没有本质的差别。</p>
+<p>Node 的事件循环的顺序为：</p>
+<ol type="1">
+<li>更新循环事件，判断队列是否存活。</li>
+<li>运行到期定时器。</li>
+<li>回调回调函数。</li>
+<li>运行 idle 句柄回调。</li>
+<li>运行 prepare 句柄回调。</li>
+<li>Poll 进行 IO 循环。</li>
+<li>运行 check 句柄回调。</li>
+<li>回调关闭函数。</li>
 </ol>
+<p>其中，最难被理解的是 idle 、 prepare 和 check
+部分。这部分代码的主体结构是一样的，都是用宏生成的三个句柄。</p>
+<p>idle 部分写入的回调将会在每次循环到达时调用，虽然它的名字叫 “idle”
+（空闲），但实际上是非常忙碌的，因此有人也提议叫“spin”。</p>
+<p>prepare 和 check 部分其实相对类似，那么 idle 、 prepare 和 check
+有什么用？</p>
+<p>idle 、 prepare 和 check 在事实上组成而观察者模式，由 idle
+进行监听，比如说监听到需要 IO 了，就交给 prepare 进行准备，此时 prepare
+将会准备好回调，并准备好下一步的 poll 。如果 poll 成功了，将会在 check
+时挂载上回调函数，等到下一个循环 pending 时调用。 libuv
+在阐述这部分的时候，讲得并不详细，因为这部分内容在它过去的“老父亲” ——
+libev 身上。</p>
+<p>至于 libev 为什么要分阶段，这就涉及到 libevent 和 libev/libuv
+设计思想上的区别， libevent
+给予了编程人员更大的编程自由，但同时也大大增加了处理事件循环时的心智负担。
+libev 和 libuv 则简化了这个模型，而 libuv
+进一步简化，放弃了优先级，改为顺序处理。</p>
+<p>从 Node 的事件循环模型我们可以发现一个问题，就是在 Node
+的设计下，我们很难对 IO 进行扩展，因为这部分被 libuv
+封死了，由于封装得太好，反而没有太多底层的空间，即使你用 C++
+也难改变。由于 libuv，使得 Node
+的并发只能考虑多进程，而多个进程沟通其实非常困难，且效率低下，充分利用
+CPU 也只能在一个非常低的层次，只能说 Node
+在大型应用上面潜力确实不高。</p>
+
+
 
     </div>
 
@@ -209,7 +252,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2022-05-18
+        2023-02-09
         
     </span>
   </p>
@@ -217,15 +260,17 @@
   
 </div>
 <footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/node/">node</a>
+          </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/top-blog/">
+        <a class="prev" href="/post/%E5%A4%87%E5%BF%98%E5%BD%95/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">[置顶] 关于本博客</span>
+            <span class="prev-text nav-default">[置顶] 备忘录</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/post/node%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/">
-            <span class="next-text nav-default">Node 事件循环</span>
+        <a class="next" href="/post/%E5%B0%8F%E5%85%AC%E5%8F%B8%E7%9A%84%E7%8B%82%E5%A6%84%E8%87%AA%E5%A4%A7/">
+            <span class="next-text nav-default">小公司的狂妄自大</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
