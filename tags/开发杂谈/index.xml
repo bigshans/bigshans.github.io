@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 19 Nov 2022 14:29:40 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Feb 2023 18:27:32 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>谈谈 RPA</title>
+      <link>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88rpa/</link>
+      <pubDate>Wed, 15 Feb 2023 18:27:32 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88rpa/</guid>
+      <description>最近 RPA 用得比较多，我谈一下这个。 RPA 在办公室自动化方面应用极广，而对应的软件在 Windows 上也是遍地开花。为什么是在 Windows 上呢？原因也很好理解，因为 Windows 在办公</description>
+    </item>
+    
     <item>
       <title>中文编程不过是另一种编程语言文学化</title>
       <link>https://bigshans.github.io/post/%E4%B8%AD%E6%96%87%E7%BC%96%E7%A8%8B%E4%B8%8D%E8%BF%87%E6%98%AF%E5%8F%A6%E4%B8%80%E7%A7%8D%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E6%96%87%E5%AD%A6%E5%8C%96/</link>

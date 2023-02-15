@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 09 Feb 2023 13:35:35 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Feb 2023 18:27:32 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+    </item>
+    
+    <item>
+      <title>谈谈 RPA</title>
+      <link>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88rpa/</link>
+      <pubDate>Wed, 15 Feb 2023 18:27:32 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88rpa/</guid>
+      <description>最近 RPA 用得比较多，我谈一下这个。 RPA 在办公室自动化方面应用极广，而对应的软件在 Windows 上也是遍地开花。为什么是在 Windows 上呢？原因也很好理解，因为 Windows 在办公</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8Eip%E6%89%80%E5%B1%9E%E5%9C%B0%E7%9A%84%E5%85%AC%E5%BC%80/</guid>
       <description>不得不说李彦宏确实是懂中国人的，现在中国互联网市场上隐私权被严重侵犯的现状，有很大一部分原因也是因为国人自己不重视的缘故。有的人会抗辩说，这</description>
-    </item>
-    
-    <item>
-      <title>配置 bufferline.nvim</title>
-      <link>https://bigshans.github.io/post/config-bufline-nvim/</link>
-      <pubDate>Wed, 20 Apr 2022 15:55:27 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/config-bufline-nvim/</guid>
-      <description>眼馋这个 bufferline 很久了，最近想尝试一下。 安装 首先，安装就是很简单的使用 vim-plug 。 Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。 require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了</description>
     </item>
     
   </channel>
