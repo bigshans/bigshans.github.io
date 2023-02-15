@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>谈谈 RPA - Bigshans&#39; Blog</title>
+  <title>core-js 的公地悲剧 - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="最近 RPA 用得比较多，我谈一下这个。 RPA 在办公室自动化方面应用极广，而对应的软件在 Windows 上也是遍地开花。为什么是在 Windows 上呢？原因也很好理解，因为 Windows 在办公" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" /><meta name="description" content="看完 core-js 作者的长文后，有感而发，写一点文字。 core-js 面临的问题是典型的公地悲剧，由大多数人共享的东西，得到越少人的照顾。我现在依旧可以看到一些言论，" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.105.0-DEV with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/%E8%B0%88%E8%B0%88rpa/" />
+<link rel="canonical" href="https://bigshans.github.io/post/core-js%E7%9A%84%E5%85%AC%E5%9C%B0%E6%82%B2%E5%89%A7/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,20 +42,20 @@
 
 
 
-<meta property="og:title" content="谈谈 RPA" />
-<meta property="og:description" content="最近 RPA 用得比较多，我谈一下这个。 RPA 在办公室自动化方面应用极广，而对应的软件在 Windows 上也是遍地开花。为什么是在 Windows 上呢？原因也很好理解，因为 Windows 在办公" />
+<meta property="og:title" content="core-js 的公地悲剧" />
+<meta property="og:description" content="看完 core-js 作者的长文后，有感而发，写一点文字。 core-js 面临的问题是典型的公地悲剧，由大多数人共享的东西，得到越少人的照顾。我现在依旧可以看到一些言论，" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/%E8%B0%88%E8%B0%88rpa/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-02-15T18:27:32+08:00" />
-<meta property="article:modified_time" content="2023-02-15T18:27:32+08:00" />
+<meta property="og:url" content="https://bigshans.github.io/post/core-js%E7%9A%84%E5%85%AC%E5%9C%B0%E6%82%B2%E5%89%A7/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-02-16T00:34:50+08:00" />
+<meta property="article:modified_time" content="2023-02-16T00:34:50+08:00" />
 
-<meta itemprop="name" content="谈谈 RPA">
-<meta itemprop="description" content="最近 RPA 用得比较多，我谈一下这个。 RPA 在办公室自动化方面应用极广，而对应的软件在 Windows 上也是遍地开花。为什么是在 Windows 上呢？原因也很好理解，因为 Windows 在办公"><meta itemprop="datePublished" content="2023-02-15T18:27:32+08:00" />
-<meta itemprop="dateModified" content="2023-02-15T18:27:32+08:00" />
-<meta itemprop="wordCount" content="643">
+<meta itemprop="name" content="core-js 的公地悲剧">
+<meta itemprop="description" content="看完 core-js 作者的长文后，有感而发，写一点文字。 core-js 面临的问题是典型的公地悲剧，由大多数人共享的东西，得到越少人的照顾。我现在依旧可以看到一些言论，"><meta itemprop="datePublished" content="2023-02-16T00:34:50+08:00" />
+<meta itemprop="dateModified" content="2023-02-16T00:34:50+08:00" />
+<meta itemprop="wordCount" content="464">
 <meta itemprop="keywords" content="开发杂谈," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="谈谈 RPA"/>
-<meta name="twitter:description" content="最近 RPA 用得比较多，我谈一下这个。 RPA 在办公室自动化方面应用极广，而对应的软件在 Windows 上也是遍地开花。为什么是在 Windows 上呢？原因也很好理解，因为 Windows 在办公"/>
+<meta name="twitter:title" content="core-js 的公地悲剧"/>
+<meta name="twitter:description" content="看完 core-js 作者的长文后，有感而发，写一点文字。 core-js 面临的问题是典型的公地悲剧，由大多数人共享的东西，得到越少人的照顾。我现在依旧可以看到一些言论，"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -172,15 +172,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">谈谈 RPA</h1>
+      <h1 class="post-title">core-js 的公地悲剧</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2023-02-15 </span>
+        <span class="post-time"> 2023-02-16 </span>
         <div class="post-category">
             <a href="/categories/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/"> 开发杂谈 </a>
             </div>
-          <span class="more-meta"> 约 643 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
+          <span class="more-meta"> 约 464 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
         
       </div>
     </header>
@@ -192,23 +192,16 @@
 
     <div class="post-content">
       
-<p>最近 RPA 用得比较多，我谈一下这个。</p>
-<p>RPA 在办公室自动化方面应用极广，而对应的软件在 Windows
-上也是遍地开花。为什么是在 Windows 上呢？原因也很好理解，因为 Windows
-在办公方面用得最多，一方面需求旺盛，另一方面对应的 API
-和相关的控制微软也提供了很多。比如，微软自己就提供了一个 RPA 的软件，叫
-Power Automate 。这些 RPA
-基本都会给你一个图形化编程的界面，但底层仍然是一门具体的编程语言，比如
-Power Automate 用得是 VB ，影刀用得是 Python
-。但一些厂家并不会提供对应的脚本书写的地方，原因倒不在于，脚本编写会加深用户的使用难度，而是在于，这会缩窄
-RPA
-软件的盈利范围。不过微软倒是大气些，提供一个能写入脚本的地方，可惜太小了点，而且做得也不太好。</p>
-<p>如果 RPA 厂商提供了对应的脚本执行，那么 RPA
-软件则更像一个自动化的库了。用户提出需求，然后厂家再提供对应操作，形成一项服务，如此才能“长治久安”。但对于用户来说，这就痛苦了，因为图形化编程真的没有想象的直观。而且，一旦超出了目前的服务范围，想要不付钱去克服，其实是相当难的。</p>
-<p>RPA 工程化其实是一个议题，我指的是对用户。用户面临的问题是 RPA
-脚本过于零散，难以组织，且受限于软件本身。如果不工程化，那么 RPA
-的项目管理将会是一个巨大的难题。一切根源其实在于“受制于人”，如果这方面能自主的话，问题就迎刃而解了。但众多中小公司并没有这样的能力，花钱是这种问题唯一的可行解。</p>
-<p>办公室自动化这个议题本身就过于个性，你难以找到一个可行的通用解。通用等于难用，而个性化又开销巨大，所以只好维持现状，等到实在不行了，再应付一下，这基本上是一些公司的现状了。</p>
+<p>看完 core-js 作者的长文后，有感而发，写一点文字。</p>
+<p>core-js
+面临的问题是典型的公地悲剧，由大多数人共享的东西，得到越少人的照顾。我现在依旧可以看到一些言论，对于作者这样讨钱，当初就不应该开源，或者协议选得不对。在
+fakejs
+的事件，我就试图反驳这样的言论，现在我想我应该能够更充分的反驳。</p>
+<p>最大的问题在于时间，如果一个人花费大量精力投入到开源，而开源又没有为他们获利，那么开源仅仅是消磨他们的工具。因为，唯有物质才能赋予人生存的基础，开源获得的名声，不过是锦上添花的筹码。一个人在开源中投入大量精力，那么他就必须牺牲他的工作，反之亦然。这跟协议选择没有任何关系，即使你选择了
+AGPL
+之类的协议，也从不代表你全力投入开源而不会牺牲工作，二者是无关的。</p>
+<p>开源工作者讨钱，就像马克思生活的贫困一样，那些伟大的人却注定面临艰难，这是这个社会的问题。</p>
+<p>如果开源只是玩玩的话，那么开源就会简单许多，但公共的事务是很严肃的，开源无法成为公共事业，这是人类的损失。捐赠是最简单的途径，但实际上支持者甚少，如果开源最后也不得不依赖商业化存活，公共事业落入公司之手，那这也是人类的损失。</p>
 
 
 
@@ -222,7 +215,7 @@ RPA
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2023-02-15
+        2023-02-16
         
     </span>
   </p>
@@ -234,13 +227,13 @@ RPA
           <a href="/tags/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/">开发杂谈</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/core-js%E7%9A%84%E5%85%AC%E5%9C%B0%E6%82%B2%E5%89%A7/">
+        <a class="prev" href="/post/%E5%A4%87%E5%BF%98%E5%BD%95/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">core-js 的公地悲剧</span>
+            <span class="prev-text nav-default">[置顶] 备忘录</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/post/node%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/">
-            <span class="next-text nav-default">Node 事件循环</span>
+        <a class="next" href="/post/%E8%B0%88%E8%B0%88rpa/">
+            <span class="next-text nav-default">谈谈 RPA</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

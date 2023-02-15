@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 15 Feb 2023 18:27:32 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Feb 2023 00:34:50 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+    </item>
+    
+    <item>
+      <title>core-js 的公地悲剧</title>
+      <link>https://bigshans.github.io/post/core-js%E7%9A%84%E5%85%AC%E5%9C%B0%E6%82%B2%E5%89%A7/</link>
+      <pubDate>Thu, 16 Feb 2023 00:34:50 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/core-js%E7%9A%84%E5%85%AC%E5%9C%B0%E6%82%B2%E5%89%A7/</guid>
+      <description>看完 core-js 作者的长文后，有感而发，写一点文字。 core-js 面临的问题是典型的公地悲剧，由大多数人共享的东西，得到越少人的照顾。我现在依旧可以看到一些言论，</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/</guid>
       <description>NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //</description>
-    </item>
-    
-    <item>
-      <title>关于 IP 所属地的公开</title>
-      <link>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8Eip%E6%89%80%E5%B1%9E%E5%9C%B0%E7%9A%84%E5%85%AC%E5%BC%80/</link>
-      <pubDate>Wed, 04 May 2022 16:54:26 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8Eip%E6%89%80%E5%B1%9E%E5%9C%B0%E7%9A%84%E5%85%AC%E5%BC%80/</guid>
-      <description>不得不说李彦宏确实是懂中国人的，现在中国互联网市场上隐私权被严重侵犯的现状，有很大一部分原因也是因为国人自己不重视的缘故。有的人会抗辩说，这</description>
     </item>
     
   </channel>
