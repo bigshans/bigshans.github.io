@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 17 Feb 2023 12:00:54 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Feb 2023 12:05:15 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -33,11 +33,11 @@
     <item>
       <title>Test</title>
       <link>https://bigshans.github.io/post/private/test/</link>
-      <pubDate>Fri, 17 Feb 2023 12:00:54 +0800</pubDate>
+      <pubDate>Fri, 17 Feb 2023 12:05:15 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/private/test/</guid>
       
-      <description>Test</description>
+      <description>私人文章</description>
       
     </item>
     
