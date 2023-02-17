@@ -16,7 +16,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" />
+<meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+
+
 
 
 
@@ -44,6 +47,7 @@
 
 
 
+
 <meta property="og:title" content="Bigshans&#39; Blog" />
 <meta property="og:description" content="Hugo theme even example site." />
 <meta property="og:type" content="website" />
@@ -53,6 +57,8 @@
 <meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bigshans&#39; Blog"/>
 <meta name="twitter:description" content="Hugo theme even example site."/>
+
+
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -169,6 +175,31 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/yuzu-setup/">使用 yuzu 模拟器玩《月姬R》</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2021-09-12 </span>
+      <div class="post-category">
+          <a href="/categories/linux/"> linux </a>
+          </div>
+        <span class="more-meta"> 约 475 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+    
+      最近想要玩《月姬R》。目前，《月姬R》发布在了 PS4 和 Switch 上面，所以我在想能不能用模拟器去运行《月姬R》。简单查找了一下，发现了 yuzu ，嗯， Linux 下可运行
+    
+    </div>
+    <div class="read-more">
+      <a href="/post/yuzu-setup/" class="read-more-link">阅读更多 »</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/vue3_2-setup/">Vue 3.2 &lt;script setup&gt; 摘要</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2021-08-26 </span>
@@ -183,7 +214,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       在 Vue 3.2 发布的内容中，最主要内容就是 &amp;lt;script setup&amp;gt; 。 &amp;lt;script setup&amp;gt; 想必大家都有使用过，跟当初作为实验特性不同，这次正式发布还是有很多的修改的。 废除 useContext() 原先获取全局 ctx
+    
     </div>
     <div class="read-more">
       <a href="/post/vue3_2-setup/" class="read-more-link">阅读更多 »</a>
@@ -206,7 +239,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       因为业务需要就写了个图片压缩服务，顺带改变大小，因为用的是 nodejs ，于是我就选择了 sharp ，基于 libvips。 代码非常好写： function resize(input, x, y) { return sharp(input) .resize(x, y, { fit: &#39;inside&#39; })
+    
     </div>
     <div class="read-more">
       <a href="/post/sharp/" class="read-more-link">阅读更多 »</a>
@@ -229,7 +264,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       最近读了点 rambda 的源码。函数式是个很诱人的概念，借助函数式，你可以以十分数学的方式解决一些问题。虽然如此，函数式对于现实来说仍然过于抽象，如果我
+    
     </div>
     <div class="read-more">
       <a href="/post/function-comment/" class="read-more-link">阅读更多 »</a>
@@ -252,7 +289,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       跟小伙伴们讨论的时候发现，es6 的解构其实和 Object.assign 一样属于是浅拷贝。那么一个深拷贝到底该怎么写呢？我个人阅读了一下 lodash 、 rambda 、 rfdc 的实现，发现思想其实
+    
     </div>
     <div class="read-more">
       <a href="/post/how-to-write-a-deep-copy-function/" class="read-more-link">阅读更多 »</a>
@@ -275,7 +314,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       最近工作需要用到 Chrome 扩展，于是就特意学习了一下。起初，我以为 Chrome 扩展权限挺大，操作起来应该挺方便的，但是，实际情况各种权限需要申请，而且有些操作
+    
     </div>
     <div class="read-more">
       <a href="/post/chrome-extensions/" class="read-more-link">阅读更多 »</a>
@@ -298,7 +339,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       台风天写这篇文章。 最近更新了 Linux 的内核，然后日常发布合并，日常逛 Issues 的时候，发现有人提出要 Anbox 的需求。Anbox 我试着安装过几次，然后每次装上都因
+    
     </div>
     <div class="read-more">
       <a href="/post/anbox-install-guide/" class="read-more-link">阅读更多 »</a>
@@ -321,33 +364,12 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       想要学习一下 v8 ，于是就尝试了一下编译 v8 源码，说实话，以国内的网络去做这件事超级麻烦。在折腾一番后，最后决定直接在我的海外服务器上进行编译。 安
+    
     </div>
     <div class="read-more">
       <a href="/post/v8-study-1/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/flex/">flex 布局简说</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2021-07-10 </span>
-      <div class="post-category">
-          <a href="/categories/css/"> css </a>
-          </div>
-        <span class="more-meta"> 约 1760 字 </span>
-        <span class="more-meta"> 预计阅读 4 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      最近同事开分享会讲到了一点 flex 布局相关的东西，但是讲得很仓促，于是决定私下里整理一下，也算是对 flex 知识的总结。内容基本参考了 MDN 还有 W3C 文档的内容，
-    </div>
-    <div class="read-more">
-      <a href="/post/flex/" class="read-more-link">阅读更多 »</a>
     </div>
   </div>
 </article>

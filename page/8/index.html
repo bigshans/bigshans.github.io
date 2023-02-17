@@ -16,7 +16,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" />
+<meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+
+
 
 
 
@@ -44,6 +47,7 @@
 
 
 
+
 <meta property="og:title" content="Bigshans&#39; Blog" />
 <meta property="og:description" content="Hugo theme even example site." />
 <meta property="og:type" content="website" />
@@ -53,6 +57,8 @@
 <meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bigshans&#39; Blog"/>
 <meta name="twitter:description" content="Hugo theme even example site."/>
+
+
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -169,6 +175,31 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/different-sort-between-firefox-and-chrome/">sort 在 Chrome 和 Firefox 表现不同</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-03-31 </span>
+      <div class="post-category">
+          <a href="/categories/javascript/"> javascript </a>
+          </div>
+        <span class="more-meta"> 约 527 字 </span>
+        <span class="more-meta"> 预计阅读 2 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+    
+      首先，这个区别不算 BUG ，因为标准并没有规定该怎么排，但这个细微区别在实现一些特殊需求时需要被注意到。 注意下面一段代码： var a = [1, 1, 1, 1, 1]; a = a.map((k, i)
+    
+    </div>
+    <div class="read-more">
+      <a href="/post/different-sort-between-firefox-and-chrome/" class="read-more-link">阅读更多 »</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/god-is-dead/">已死的上帝</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2022-03-29 </span>
@@ -182,7 +213,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       上帝已死，具有两个意思。一个表面的基督是虚无的，人心中的上帝轰然倒坍。另一个是一切规律、信仰，或死或活的，仿上帝的，这些主宰着人们思想的大他
+    
     </div>
     <div class="read-more">
       <a href="/post/god-is-dead/" class="read-more-link">阅读更多 »</a>
@@ -205,7 +238,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       最近在听 One Last Kiss ，我很喜欢，甚至现在也在听，因为很好哭。然而我现在哭不出来，明明之前我难过得想要嚎啕，然而在一阵不可抑制的掩面后，痛苦减轻了。
+    
     </div>
     <div class="read-more">
       <a href="/post/onset-diary/" class="read-more-link">阅读更多 »</a>
@@ -228,7 +263,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       现代创作者们面对关于自己接广告的行为，有一套统一的辩解，即是他们的创作本身并不赚钱，而创作却过多的影响了他们的谋生，如果创作本身不能盈利，那
+    
     </div>
     <div class="read-more">
       <a href="/post/modern-creator/" class="read-more-link">阅读更多 »</a>
@@ -251,7 +288,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       Gitea 可以同步 Github 仓库之后，让我觉得仓库管理有很大的便利。因为我的很多代码毕竟保存在 Github 上，允许同步 Github 免去了我很多两头跑的工作。 但是有几个我还是不太
+    
     </div>
     <div class="read-more">
       <a href="/post/gitea-config/" class="read-more-link">阅读更多 »</a>
@@ -274,7 +313,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       话说 Keychron 这个软件系统兼容做的真差，没想到基础的 Fn 键也能出岔子。 虽然我已经将键盘布局改为 Windows 布局，但 Fn &#43; F1~F12 仍然处于完全不能用的状态。 Windows 用户也不能幸
+    
     </div>
     <div class="read-more">
       <a href="/post/keychron-k2-fn-fixed/" class="read-more-link">阅读更多 »</a>
@@ -297,7 +338,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。 经过查找我发现了 pipeware ，一个 pulseaudio 的替代方
+    
     </div>
     <div class="read-more">
       <a href="/post/bluetooth-erabuds-on-linux/" class="read-more-link">阅读更多 »</a>
@@ -320,33 +363,12 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       之前淘宝卖的 JB 帐号又失效了，连带着服务器也失效了，感觉店家是跑路了。 JB 家的东西是不错的，不过就是一个客户端套多个皮，当成多个 IDE ，让我觉得有点
+    
     </div>
     <div class="read-more">
       <a href="/post/how-to-use-ja-netfilter/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/fixed-conflicts-between-coc-and-indentline/">修复 coc.nvim 和 indentLines 的冲突</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-02-23 </span>
-      <div class="post-category">
-          <a href="/categories/vim/"> vim </a>
-          </div>
-        <span class="more-meta"> 约 294 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      我用的是 indentLines 是 Yggdrot/indentLine ，与 coc.nvim 存在冲突，主要是诊断的高亮覆盖了 indentLine 的高亮导致 indentLine 无法显示。当然，并不是所有的 buffer 里都会这样，但是需要诊断的 FileType 都是这样。 使用的
-    </div>
-    <div class="read-more">
-      <a href="/post/fixed-conflicts-between-coc-and-indentline/" class="read-more-link">阅读更多 »</a>
     </div>
   </div>
 </article>

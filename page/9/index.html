@@ -16,7 +16,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" />
+<meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+
+
 
 
 
@@ -44,6 +47,7 @@
 
 
 
+
 <meta property="og:title" content="Bigshans&#39; Blog" />
 <meta property="og:description" content="Hugo theme even example site." />
 <meta property="og:type" content="website" />
@@ -53,6 +57,8 @@
 <meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bigshans&#39; Blog"/>
 <meta name="twitter:description" content="Hugo theme even example site."/>
+
+
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -169,6 +175,31 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/fixed-conflicts-between-coc-and-indentline/">修复 coc.nvim 和 indentLines 的冲突</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-02-23 </span>
+      <div class="post-category">
+          <a href="/categories/vim/"> vim </a>
+          </div>
+        <span class="more-meta"> 约 294 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+    
+      我用的是 indentLines 是 Yggdrot/indentLine ，与 coc.nvim 存在冲突，主要是诊断的高亮覆盖了 indentLine 的高亮导致 indentLine 无法显示。当然，并不是所有的 buffer 里都会这样，但是需要诊断的 FileType 都是这样。 使用的
+    
+    </div>
+    <div class="read-more">
+      <a href="/post/fixed-conflicts-between-coc-and-indentline/" class="read-more-link">阅读更多 »</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/sed-quickly-note/">sed 速记</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2022-02-16 </span>
@@ -182,7 +213,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       sed 命令是一个强大的、基于行的文本处理命令，它仍被广泛使用。 sed 借助正则表达式对文本的某行进行增删改查。 基本格式 sed [options] {script} [input file] 增 cat pets.txt # output: # This is my cat #
+    
     </div>
     <div class="read-more">
       <a href="/post/sed-quickly-note/" class="read-more-link">阅读更多 »</a>
@@ -205,7 +238,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       因为从来没用过机械键盘，一直用的薄膜和静电容，所以想尝试玩玩，入手了一块 K2 。怎么说呢？因为是随便选的，而且也没有深入了解，这块键盘真的是让我
+    
     </div>
     <div class="read-more">
       <a href="/post/keyboard-experience-keychron-k2/" class="read-more-link">阅读更多 »</a>
@@ -228,7 +263,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       读完那厮的文章后，本来想写点驳斥的内容的。但细细想了想，他通篇像是说了什么东西，又似乎什么都没说，除了满口独断论式的发言之外，也没有别的东西
+    
     </div>
     <div class="read-more">
       <a href="/post/%E8%AF%BB%E4%B8%8A%E6%B5%B7%E6%88%BF%E5%9C%B0%E4%BA%A7%E7%A0%94%E7%A9%B6%E6%81%B6%E6%96%87%E6%9C%89%E6%84%9F/" class="read-more-link">阅读更多 »</a>
@@ -251,7 +288,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       最近在尝试 AI complete ，主要是 TabNine 和 Kite ，两者可以基于本地代码作出较好的智能推测。在 VSCode 上，两者都有对应的插件，但在 Vim 上时，情况就不同了。我使用的是 coc.nvim ，作
+    
     </div>
     <div class="read-more">
       <a href="/post/coc-kite-cmp-publish/" class="read-more-link">阅读更多 »</a>
@@ -274,7 +313,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       最近随笔确实有点多，但生活其实不能只有代码，回头看看也需要将随笔分分类了。说回正题， BDFL 像是个政治名词，但实际上是用来指代某些开源软件的开发者
+    
     </div>
     <div class="read-more">
       <a href="/post/does-open-sources-need-bdfl/" class="read-more-link">阅读更多 »</a>
@@ -298,7 +339,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C&#43;&#43; 和
+    
     </div>
     <div class="read-more">
       <a href="/post/php-study-1/" class="read-more-link">阅读更多 »</a>
@@ -321,34 +364,12 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       开源正在死亡，或者说，已经死亡。 起因是 Faker.js 作者破坏代码的行为，本来这种行为按我以前的肯定是会批判作者的，但我想想不对，为什么每次遇上这样的问题
+    
     </div>
     <div class="read-more">
       <a href="/post/open-source-is-dying/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lua-quickly-begin/">lua 快速入门</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-01-09 </span>
-      <div class="post-category">
-          <a href="/categories/lua/"> lua </a>
-          <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/"> 编程语言学习 </a>
-          </div>
-        <span class="more-meta"> 约 2588 字 </span>
-        <span class="more-meta"> 预计阅读 6 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      lua 是一门用标准 C 语言编写的、轻量小巧的脚本语言，它常常被嵌入到各种 C 语言项目中做扩展语言。它与 C 的兼容性不必多说，本身也是用 C 写的，速度也是
-    </div>
-    <div class="read-more">
-      <a href="/post/lua-quickly-begin/" class="read-more-link">阅读更多 »</a>
     </div>
   </div>
 </article>

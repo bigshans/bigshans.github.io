@@ -16,7 +16,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" />
+<meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+
+
 
 
 
@@ -44,6 +47,7 @@
 
 
 
+
 <meta property="og:title" content="Bigshans&#39; Blog" />
 <meta property="og:description" content="Hugo theme even example site." />
 <meta property="og:type" content="website" />
@@ -53,6 +57,8 @@
 <meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bigshans&#39; Blog"/>
 <meta name="twitter:description" content="Hugo theme even example site."/>
+
+
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -169,6 +175,32 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/nginx-pixiv/">nginx 反向代理上 Pixiv</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-09-24 </span>
+      <div class="post-category">
+          <a href="/categories/nginx/"> nginx </a>
+          </div>
+        <span class="more-meta"> 约 450 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+    
+      Pixiv 被墙了，上不了。我上了 Pixiv 的贴吧，刚好发现有人发帖说如何再上 P 站（ https://tieba.baidu.com/p/5882385726 ） 。使用 nginx 做反向代理，看着比较简单，于是自己试了试，由于 nginx 自己不太熟，所以是尽量完成。
+
+    
+    </div>
+    <div class="read-more">
+      <a href="/post/nginx-pixiv/" class="read-more-link">阅读更多 »</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/linux-deb-package/">deb 打包指北</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2018-09-09 </span>
@@ -182,8 +214,10 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       最近几天在给我的一些软件打包，原本打算建立一个私人仓库，不过没有云还是算了。本地打包的话貌似空间不太够，不过首先还是要学习一下 debian 的相关知识的。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/linux-deb-package/" class="read-more-link">阅读更多 »</a>
@@ -206,8 +240,10 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       终于终于把双显卡整好了，该死的 NVIDIA 。为了双显卡我的桌面崩溃了几次，不过终于整好了。下面讲讲我处理这些的一些过程。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/linux-nvidia-bumblebee/" class="read-more-link">阅读更多 »</a>
@@ -230,8 +266,10 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       不得不说百度跟谷歌比还差的远啊。我从官网上下载 struts 的最小包，布置到 idea 上不能正常使用，百度不行上谷歌，终于解决了。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/java-struts-idea/" class="read-more-link">阅读更多 »</a>
@@ -254,8 +292,10 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       一个小问题，困扰很久了，最近解决掉了，就是不能以 root 打开任何 GUI ，打开之后不显示。 问题在于我的 hostname 取成 localhost 了，所以打不开。。（下次不这样了）改个 hostname 就行。
 hostnamectl set-hostname &amp;quot;myhostname&amp;quot; 
+    
     </div>
     <div class="read-more">
       <a href="/post/linux-hostname/" class="read-more-link">阅读更多 »</a>
@@ -278,8 +318,10 @@ hostnamectl set-hostname &amp;quot;myhostname&amp;quot;
   
   <div class="post-content">
     <div class="post-summary">
+    
       推荐一个软件， graph-easy 。如果你查看文档的话，经常能看到一些 ascii 码流程画，个人觉得非常酷，于是去查找了一下，发现了这个软件。下面我将做一些简单的介绍。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/software-graph-easy/" class="read-more-link">阅读更多 »</a>
@@ -302,8 +344,10 @@ hostnamectl set-hostname &amp;quot;myhostname&amp;quot;
   
   <div class="post-content">
     <div class="post-summary">
+    
       我尝试了一下 deepin-wine-ubuntu 项目，不过无法正常装上。所以我自己尝试了一下安装 deepin-wine 并尝试了一下 deepin 的 QQ 和 TIM 。效果还不错。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/software-deepin-wine/" class="read-more-link">阅读更多 »</a>
@@ -326,36 +370,13 @@ hostnamectl set-hostname &amp;quot;myhostname&amp;quot;
   
   <div class="post-content">
     <div class="post-summary">
+    
       vim 的文本对象是个很有趣的东西，使用它可以大幅提升效率，因此学习它还是很有必要的，如果想要在 vim 上进一步提高自己就必须学习这个。
 a 和 i
+    
     </div>
     <div class="read-more">
       <a href="/post/vim-learn-textobject/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/python-bilibili-cover/">python 爬虫获取 bilibili 封面</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-08-29 </span>
-      <div class="post-category">
-          <a href="/categories/python/"> python </a>
-          </div>
-        <span class="more-meta"> 约 542 字 </span>
-        <span class="more-meta"> 预计阅读 2 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      以前写的一个脚本，获取 B 站视频封面的脚本，使用了 urllib 来爬虫，用 feh 来打开图片。
-以下是代码：
-
-    </div>
-    <div class="read-more">
-      <a href="/post/python-bilibili-cover/" class="read-more-link">阅读更多 »</a>
     </div>
   </div>
 </article>

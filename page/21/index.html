@@ -16,7 +16,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" />
+<meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+
+
 
 
 
@@ -44,6 +47,7 @@
 
 
 
+
 <meta property="og:title" content="Bigshans&#39; Blog" />
 <meta property="og:description" content="Hugo theme even example site." />
 <meta property="og:type" content="website" />
@@ -53,6 +57,8 @@
 <meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bigshans&#39; Blog"/>
 <meta name="twitter:description" content="Hugo theme even example site."/>
+
+
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -169,6 +175,32 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/">分布式锁的简单实现</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-10-20 </span>
+      <div class="post-category">
+          <a href="/categories/javascript/"> javascript </a>
+          </div>
+        <span class="more-meta"> 约 384 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+    
+      打算每周写一篇博客，希望每周都能有新的收获。本周写的博客是我在工作中应用写的一个有趣的东西。 我们采用 pm2 进行进程管理，我们开启了多个进程，但各个进程之间并没有交流，所以，我想要全局操作某个变量时，就会出现数据安全问题，虽然在 redis 里面单个操作是原子，但我也要保证复合操作也是原子的。但我并不使用 redis 的事务，是因为这个事务会阻塞其他操作，所以，不如在应用层上实现锁，从而不阻塞 redis 。我们虽然不是分布式系统，但是是分布式进程，所以实现也参考分布式锁。
+
+    
+    </div>
+    <div class="read-more">
+      <a href="/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/" class="read-more-link">阅读更多 »</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/src-java-hashmap/">Java 源码阅读之 HashMap</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2019-10-04 </span>
@@ -182,8 +214,10 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       对以下一段代码进行 Debug，阅读建议边 Debug 边看。
 import java.util.HashMap; public class Collec { public static void main(String[] args) { HashMap a = new HashMap(); a.put(&amp;quot;sd&amp;quot;, &amp;quot;54&amp;quot;); a.put(&amp;quot;sd&amp;quot;, &amp;quot;125&amp;quot;); } } 
+    
     </div>
     <div class="read-more">
       <a href="/post/src-java-hashmap/" class="read-more-link">阅读更多 »</a>
@@ -206,8 +240,10 @@ import java.util.HashMap; public class Collec { public static void main(String[]
   
   <div class="post-content">
     <div class="post-summary">
+    
       我自高中以后便没有写过什么作文了，一来是没有什么闲心，二来是没有什么动力。同样的情况，我从高三开始便没有再读书了，就是那些闲书，以前我最爱看的，什么小说啊，社科啊，哲学之类的。在我高三开始，为了省下复习的时间，于是便戒了书瘾。结果是，书瘾戒了，学习却没有好，高中时候花了大量时间去读闲书，到头来却是得到了最差的结果。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/%E9%9A%8F%E7%AC%94-readingback/" class="read-more-link">阅读更多 »</a>
@@ -230,8 +266,10 @@ import java.util.HashMap; public class Collec { public static void main(String[]
   
   <div class="post-content">
     <div class="post-summary">
+    
       公司后端采用了 nodejs &#43; express 环境，最近在看，现在记录一点笔记。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/nodejs-express-1/" class="read-more-link">阅读更多 »</a>
@@ -254,8 +292,10 @@ import java.util.HashMap; public class Collec { public static void main(String[]
   
   <div class="post-content">
     <div class="post-summary">
+    
       仅仅使用 Debian 源里的软件包并不是很够，所以不可避免的，我们会使用一些第三方的软件源，比如 Arch 下的 aur ， Ubuntu 的 PPA ，等等。由于 Ubuntu 是 Debian 系的发行版，两者的包管理是相通的，所以我们可以借用一下 Ubuntu 的 PPA 来扩充我们的软件库。然而，两者毕竟不是同一发行版，所以还是会有很多的差别，我们并不能保证两者的软件包一定能通用，毕竟打包并不是针对 Debian 的，不过， Ubuntu 能用的， Debian 基本能用，所以，把 Ubuntu 的 ppa 拉过来还是很有意义的。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/linux-ppa-add/" class="read-more-link">阅读更多 »</a>
@@ -278,8 +318,10 @@ import java.util.HashMap; public class Collec { public static void main(String[]
   
   <div class="post-content">
     <div class="post-summary">
+    
       最长上升子序列模板。以 poj 3903 为例。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/algorithm-lic/" class="read-more-link">阅读更多 »</a>
@@ -302,8 +344,10 @@ import java.util.HashMap; public class Collec { public static void main(String[]
   
   <div class="post-content">
     <div class="post-summary">
+    
       rmq 即是区间最值问题，这里是动态规划模板的讲解。所谓 dp 的方法，就是区间 dp 的方法，如果采用原始的区间 dp 方法，那么当数据量很大时会出现时间和空间的双重爆破。这里我们采用了倍增法。我们通过这个模板来观察这个的实现以及思想。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/algorithm-rmq-segdp/" class="read-more-link">阅读更多 »</a>
@@ -326,34 +370,13 @@ import java.util.HashMap; public class Collec { public static void main(String[]
   
   <div class="post-content">
     <div class="post-summary">
+    
       我的 ACM 线段树模板。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/algorithm-segtree/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/vim-rime/">在 vim 下修改自然码码表</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-01-31 </span>
-      <div class="post-category">
-          <a href="/categories/vim/"> vim </a>
-          </div>
-        <span class="more-meta"> 约 1341 字 </span>
-        <span class="more-meta"> 预计阅读 3 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添
-    </div>
-    <div class="read-more">
-      <a href="/post/vim-rime/" class="read-more-link">阅读更多 »</a>
     </div>
   </div>
 </article>

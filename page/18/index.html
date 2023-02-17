@@ -16,7 +16,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" />
+<meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+
+
 
 
 
@@ -44,6 +47,7 @@
 
 
 
+
 <meta property="og:title" content="Bigshans&#39; Blog" />
 <meta property="og:description" content="Hugo theme even example site." />
 <meta property="og:type" content="website" />
@@ -53,6 +57,8 @@
 <meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bigshans&#39; Blog"/>
 <meta name="twitter:description" content="Hugo theme even example site."/>
+
+
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -169,6 +175,31 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/jest-api-test-supertest/">使用 jest 和 supertest 进行接口测试</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2021-02-28 </span>
+      <div class="post-category">
+          <a href="/categories/nodejs/"> nodejs </a>
+          </div>
+        <span class="more-meta"> 约 352 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+    
+      最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。 登录测试 有些
+    
+    </div>
+    <div class="read-more">
+      <a href="/post/jest-api-test-supertest/" class="read-more-link">阅读更多 »</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/rn-android-docker/">在 Docker 内编译 React Native</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2021-02-21 </span>
@@ -182,7 +213,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。 选择 Docker 镜像 其实 React Native
+    
     </div>
     <div class="read-more">
       <a href="/post/rn-android-docker/" class="read-more-link">阅读更多 »</a>
@@ -203,7 +236,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       官网： https://svelte.dev/ Svelte 是个新的前端框架，发展强劲。与目前主流的三大框架不同的是，Svelte 不采用 vdom ，而是借助 complier 的能力，打包出最小化的包，不附带更多的 runtime
+    
     </div>
     <div class="read-more">
       <a href="/post/svelte-todo/" class="read-more-link">阅读更多 »</a>
@@ -226,7 +261,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       最近事情发生的蛮多的，我想写一点表达一下，发泄一下。 新冠 当新冠从一种病毒，演变到一种政治表达时，一切都开始不对味儿了。 去年，西方国家以一系列
+    
     </div>
     <div class="read-more">
       <a href="/post/for-recent-things/" class="read-more-link">阅读更多 »</a>
@@ -249,7 +286,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       2020 年真的是多灾多难的一年。我在年初主动辞退了在墨墨的工作，然后回到温州，准备到杭州找工作，然后历经四个月的磨难，终于平安落地。现在也找到了房
+    
     </div>
     <div class="read-more">
       <a href="/post/2020-summary/" class="read-more-link">阅读更多 »</a>
@@ -272,7 +311,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       公司目前在用 RN 在开发 PDA 上的项目，我来来回回也写了很多次，虽然说也不是很清楚 RN 到底是个什么玩意儿，但摸得差不多了。今天我们就来正式认识认识 RN 。
+    
     </div>
     <div class="read-more">
       <a href="/post/react-native-begin/" class="read-more-link">阅读更多 »</a>
@@ -295,7 +336,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。 在上家公司我也体验过自
+    
     </div>
     <div class="read-more">
       <a href="/post/how-to-use-webhook-to-deploy-project/" class="read-more-link">阅读更多 »</a>
@@ -318,35 +361,12 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       好久没有写博客了。 这次我终于把 Hexo 换掉，换成 Hugo 了。其实 Hexo 有很多主题挺不错，相较之下，Hugo 很多主题我都不是很满意。不过我还是选择了 Hugo ，一是 Hexo
+    
     </div>
     <div class="read-more">
       <a href="/post/move-to-hugo/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/elasticsearch-update/">elasticsearch 频繁更新问题</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-04-07 </span>
-      <div class="post-category">
-          <a href="/categories/elasticsearch/"> elasticsearch </a>
-          </div>
-        <span class="more-meta"> 约 361 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      我一开始并没有发现这个问题，到后面 Debug 的时候猜想并与社区的小伙伴得到验证。
-我们的问题是 elasticsearch 返回成功但是却并没有发生更新。
-
-    </div>
-    <div class="read-more">
-      <a href="/post/elasticsearch-update/" class="read-more-link">阅读更多 »</a>
     </div>
   </div>
 </article>

@@ -16,7 +16,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" />
+<meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+
+
 
 
 
@@ -44,6 +47,7 @@
 
 
 
+
 <meta property="og:title" content="Bigshans&#39; Blog" />
 <meta property="og:description" content="Hugo theme even example site." />
 <meta property="og:type" content="website" />
@@ -53,6 +57,8 @@
 <meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bigshans&#39; Blog"/>
 <meta name="twitter:description" content="Hugo theme even example site."/>
+
+
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -169,6 +175,33 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/python-bilibili-cover/">python 爬虫获取 bilibili 封面</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-08-29 </span>
+      <div class="post-category">
+          <a href="/categories/python/"> python </a>
+          </div>
+        <span class="more-meta"> 约 542 字 </span>
+        <span class="more-meta"> 预计阅读 2 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+    
+      以前写的一个脚本，获取 B 站视频封面的脚本，使用了 urllib 来爬虫，用 feh 来打开图片。
+以下是代码：
+
+    
+    </div>
+    <div class="read-more">
+      <a href="/post/python-bilibili-cover/" class="read-more-link">阅读更多 »</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/software-netease-linux/">网易云音乐 for linux 不用 root 打开</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2018-08-29 </span>
@@ -182,9 +215,11 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       从知乎上看到这个，非常感谢 Fancy 的努力。
 点击此处前往。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/software-netease-linux/" class="read-more-link">阅读更多 »</a>
@@ -207,9 +242,11 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       看了一下 《 Python 简明教程》，发现了一个很有意思的项目，它推荐了这个项目来练手。这个项目是一份列表，关于用任何语言都可以实现的程序的项目。有兴趣可以实现一下。
 我在这里写一下简单的斐波那契数列。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/python-learn/" class="read-more-link">阅读更多 »</a>
@@ -232,8 +269,10 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       这些篇主要是记录 python 的一些知识，有些可能很基础，不过我总是忘记，以此备忘。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/python-bak-1/" class="read-more-link">阅读更多 »</a>
@@ -256,8 +295,10 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       NeteaseCloudMusicApi 得重构，首先得把 router 目录下的一大堆给归拢为一个 js 方便 exports 。然而下面有九十多个文件，所以一个个复制粘贴是不现实的，更何况未来这些文件有改动，于上游一 merge ，这代码得改得老痛苦了。所以决定自己写一个小工具解决这个问题。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/net-musicvue-problem-set2/" class="read-more-link">阅读更多 »</a>
@@ -280,8 +321,10 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       nodejs 对 es 6 的支持目前并不完全，直接使用 import 不行，exports 也不行，可以用 babel 之类的编译， nodejs 10 可以尝试加上 flag ： &amp;ndash;experimental-modules。
 node --experimental-modules my-app.mjs 
+    
     </div>
     <div class="read-more">
       <a href="/post/nodejs-es6-import/" class="read-more-link">阅读更多 »</a>
@@ -304,8 +347,10 @@ node --experimental-modules my-app.mjs
   
   <div class="post-content">
     <div class="post-summary">
+    
       一直想写一个个人关于 linux desktop 的文章，算是个人在 linux 桌面上体验的总结。主要是 gnome 3 、 DDE 、KDE 、 i3wm 、 xfce4 、 cinnamon 等。陆续会写一下我在这些桌面上体验的一些总结，希望内给予你们一些帮助。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/linux-desktop/" class="read-more-link">阅读更多 »</a>
@@ -328,36 +373,13 @@ node --experimental-modules my-app.mjs
   
   <div class="post-content">
     <div class="post-summary">
+    
       今天继续用 electron-vue 写 NeteaseCloudMusic 的第三方 app， 用的 NeteaseCloudMusicApi 使用起来却很麻烦。不知道为什么之前可以正常使用，现在却不行了，摸索了好久，还是没能解决。不过还是有点收获的，接下来讲一讲。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/net-musicvue-problem-set1/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E5%85%B3%E4%BA%8E%E6%9A%91%E5%81%87%E7%9A%84%E6%80%BB%E7%BB%93/">关于暑假的总结</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-08-25 </span>
-      <div class="post-category">
-          <a href="/categories/%E6%80%BB%E7%BB%93/"> 总结 </a>
-          </div>
-        <span class="more-meta"> 约 419 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      最终使用了 hexo 搭建自己的博客，而不是闲得蛋疼非得自己写。
-这个暑假原本打算写一个网易云音乐的第三方客户端，然而最终还是弃了，UI 过于蛋疼，于是改用现有的主题。自己写了大半天发现主题并不好用=。= ，html 和 css 真的不太懂啊。
-
-    </div>
-    <div class="read-more">
-      <a href="/post/%E5%85%B3%E4%BA%8E%E6%9A%91%E5%81%87%E7%9A%84%E6%80%BB%E7%BB%93/" class="read-more-link">阅读更多 »</a>
     </div>
   </div>
 </article>

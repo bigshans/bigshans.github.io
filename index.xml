@@ -7,14 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 16 Feb 2023 00:34:50 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Feb 2023 11:25:09 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
       <pubDate>Sat, 12 Feb 2022 09:21:31 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/top-blog/</guid>
+      
       <description>本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义</description>
+      
     </item>
     
     <item>
@@ -23,7 +25,20 @@
       <pubDate>Wed, 18 May 2022 09:07:16 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
+      
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+      
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>https://bigshans.github.io/post/private/test/</link>
+      <pubDate>Fri, 17 Feb 2023 11:25:09 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/private/test/</guid>
+      
+      <description>私人文章</description>
+      
     </item>
     
     <item>
@@ -32,7 +47,9 @@
       <pubDate>Thu, 16 Feb 2023 00:34:50 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/core-js%E7%9A%84%E5%85%AC%E5%9C%B0%E6%82%B2%E5%89%A7/</guid>
+      
       <description>看完 core-js 作者的长文后，有感而发，写一点文字。 core-js 面临的问题是，由大多数人共享的东西，得到越少人的照顾。我现在依旧可以看到一些言论，对于作者这样讨</description>
+      
     </item>
     
     <item>
@@ -41,7 +58,9 @@
       <pubDate>Wed, 15 Feb 2023 18:27:32 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88rpa/</guid>
+      
       <description>最近 RPA 用得比较多，我谈一下这个。 RPA 在办公室自动化方面应用极广，而对应的软件在 Windows 上也是遍地开花。为什么是在 Windows 上呢？原因也很好理解，因为 Windows 在办公</description>
+      
     </item>
     
     <item>
@@ -50,7 +69,9 @@
       <pubDate>Thu, 09 Feb 2023 13:35:35 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/node%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</guid>
+      
       <description>JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去</description>
+      
     </item>
     
     <item>
@@ -59,7 +80,9 @@
       <pubDate>Sun, 05 Feb 2023 03:27:39 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E5%B0%8F%E5%85%AC%E5%8F%B8%E7%9A%84%E7%8B%82%E5%A6%84%E8%87%AA%E5%A4%A7/</guid>
+      
       <description>一些大厂出来的人会一种错觉，以为自己离开了大厂仍能干一番事业。尤其是一些领导层，以为自己有一些人脉，似乎就可以登天。殊不知自己离开了大厂什么</description>
+      
     </item>
     
     <item>
@@ -68,7 +91,9 @@
       <pubDate>Sat, 04 Feb 2023 20:22:00 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E4%BF%AE%E5%A4%8Dplasma%E5%85%A8%E5%B1%80%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%97%A0%E6%B3%95%E8%AE%BE%E7%BD%AE/</guid>
+      
       <description>起因是不知道什么时候，我打开 Plasma 的快捷键设置时，全局设置总是报错，但虽然报错，全局快捷键亦然很好使。 经过我一番努力的探索，我终于发现了问题所在</description>
+      
     </item>
     
     <item>
@@ -77,7 +102,9 @@
       <pubDate>Fri, 13 Jan 2023 09:27:13 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/css-box/</guid>
+      
       <description>一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。 标准盒</description>
+      
     </item>
     
     <item>
@@ -86,7 +113,9 @@
       <pubDate>Tue, 10 Jan 2023 09:27:35 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/css%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/</guid>
+      
       <description>三栏布局是比较经典的 CSS 布局，特点就是中间内容自适应，首先渲染，其次左右内容大小保持不变分布两旁。结构上打破了一般意义上的左中右的顺序，变成了</description>
+      
     </item>
     
     <item>
@@ -95,7 +124,9 @@
       <pubDate>Sun, 08 Jan 2023 13:37:21 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/vuejs%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+      
       <description>第二篇 响应系统 第四章 响应系统的作用与实现 设计完善的响应式系统 借助 Proxy ，我们实现一个基本的响应式系统。书中代码我改成可以在 Node 中运行的代码了。 const bucket</description>
+      
     </item>
     
     <item>
@@ -104,7 +135,9 @@
       <pubDate>Sat, 07 Jan 2023 23:11:40 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E8%B0%88%E8%AE%B8%E7%AB%8B%E5%BF%97/</guid>
+      
       <description>最近在读许立志的诗，他的诗集《新的一天》。他离去的太早了，诗集还很粗糙，来不及打磨，但纵使如此，也有些诗的力量仍力透纸背，字字泣血。我最喜欢</description>
+      
     </item>
     
     <item>
@@ -113,7 +146,9 @@
       <pubDate>Wed, 28 Dec 2022 16:39:17 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/2022%E5%B9%B4%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</guid>
+      
       <description>看看去年写年终总结的时间，差不多是同一时刻。年末国内终于放开封控了，我也“有幸”感染了新冠，过去差不多一周了，咳嗽鼻塞还没好。现在感觉其实有</description>
+      
     </item>
     
     <item>
@@ -122,7 +157,9 @@
       <pubDate>Tue, 27 Dec 2022 18:31:00 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E9%98%B3%E4%BA%86%E4%B9%8B%E5%90%8E/</guid>
+      
       <description>大约是在上周三晚上，感觉鼻子喉咙不大对劲儿，然后推测大抵是阳了。第二天硬着头皮去上班，上午还没结束就撑不住了，感觉回家去休息。同时给了我两粒</description>
+      
     </item>
     
     <item>
@@ -131,7 +168,9 @@
       <pubDate>Fri, 16 Dec 2022 10:49:05 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/tagged-template-string/</guid>
+      
       <description>标签模板是个看起来很 Magic 的语法，写起来像是这样。 console.log`Hello, World!`; // Output: [&amp;#34;Hello, World!&amp;#34;] 实际上，这里的模板标签被转换成这样的一句调用。 console.log.call(console, [&amp;#39;Hello, World!&amp;#39;]); 如果我们有用变量的话， const name = &amp;#39;world&amp;#39;;</description>
+      
     </item>
     
     <item>
@@ -140,7 +179,9 @@
       <pubDate>Thu, 15 Dec 2022 21:49:39 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/await%E7%9A%84%E8%83%8C%E5%90%8E/</guid>
+      
       <description>我们一般会认为 async/await 是 Promise 的语法糖，实际上也没有错。但在 Node 10 的时候，一个 await 会产生三个微任务，导致单个 await 的性能远不如 Promise ，但在 Node 12 时， V8 团队称，其性能</description>
+      
     </item>
     
     <item>
@@ -149,7 +190,9 @@
       <pubDate>Mon, 12 Dec 2022 22:52:19 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</guid>
+      
       <description>http 代理可分为两种，一种是普通的代理，作为中间人传递两边的信息；另一种则是隧道的方式。 普通代理 const http = require(&amp;#39;http&amp;#39;); const url = require(&amp;#39;url&amp;#39;); function request(cReq, cRes) { const u = url.parse(cReq.url); const options = { host: u.hostname, port: u.port</description>
+      
     </item>
     
     <item>
@@ -158,7 +201,9 @@
       <pubDate>Mon, 21 Nov 2022 10:12:06 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E8%AF%97/</guid>
+      
       <description>一些无题诗。 一 世界，把我杀了吧！ 把我的血 我的内脏，还有骨骼 哦，我的心，我的心哟！ 喂给尚还在腐烂的泥土 喂给尚还在饥饿的蛆虫 喂给尚已死去，已干净</description>
+      
     </item>
     
     <item>
@@ -167,7 +212,9 @@
       <pubDate>Sat, 19 Nov 2022 14:29:40 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E4%B8%AD%E6%96%87%E7%BC%96%E7%A8%8B%E4%B8%8D%E8%BF%87%E6%98%AF%E5%8F%A6%E4%B8%80%E7%A7%8D%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E6%96%87%E5%AD%A6%E5%8C%96/</guid>
+      
       <description>中文编程不过是另一种编程语言文学化。 首先，中文编程强调用中文是为了解决代码的可读性问题，这与编程语言文学化的思路不谋而合。 英语母语者在用英语</description>
+      
     </item>
     
     <item>
@@ -176,7 +223,9 @@
       <pubDate>Sun, 13 Nov 2022 23:16:38 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/how-to-increase-krunner-font/</guid>
+      
       <description>最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。 Krunner 的字体在 Plasma 下表现不错，但在 Xfce 下</description>
+      
     </item>
     
     <item>
@@ -185,7 +234,9 @@
       <pubDate>Mon, 17 Oct 2022 00:18:38 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E5%AF%B9%E6%84%8F%E8%A7%81%E7%9A%84%E5%81%8F%E8%A7%81/</guid>
+      
       <description>鄙夷意见的传统从巴门尼德就开始了，认为“存在者存在，不存在者不存在”。但这里显然有一个元认识问题，为什么存在者可以被意识，而不存在者也被意识</description>
+      
     </item>
     
     <item>
@@ -194,7 +245,9 @@
       <pubDate>Sun, 02 Oct 2022 23:31:50 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/a-critique-of-gnu/</guid>
+      
       <description>谈及 GNU ，我们总是称赞他们在过去，铸就了现代互联网的基础，但至于现在，则成了一种小众的趣味。这个问题比较复杂，简单来说，就是个人自由主义在面对</description>
+      
     </item>
     
     <item>
@@ -203,7 +256,9 @@
       <pubDate>Thu, 29 Sep 2022 01:10:10 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/postgre-inheritance/</guid>
+      
       <description>PostgreSQL 的继承一般都被用来分区。 PostgreSQL 的分区实际上就是用继承实现的，硬要对比起来，就是继承要比单纯分区要灵活很多。 PostgreSQL 继承之后，子表和父表是两张表，仅仅</description>
+      
     </item>
     
     <item>
@@ -212,7 +267,9 @@
       <pubDate>Fri, 09 Sep 2022 14:54:41 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/konsole-emoji-show/</guid>
+      
       <description>解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。 这里借助 Noto Emoji 来处理。 Arch 下安装 noto-fonts-emoji 包，然后将下面内容</description>
+      
     </item>
     
     <item>
@@ -221,7 +278,9 @@
       <pubDate>Fri, 09 Sep 2022 14:31:52 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/package-snap-to-pkg/</guid>
+      
       <description>masscode 仅仅提供了 snap 包给 Linux 版，但我并不想使用 snap ，所以就想单独打包。由于 masscode 是 electron 应用，所以理论上只需要拿到 resources/app.asar 就万事大吉了。 snap 包实际上是一个 squashfs ，所以打包</description>
+      
     </item>
     
     <item>
@@ -230,7 +289,9 @@
       <pubDate>Sun, 04 Sep 2022 19:32:36 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/firefox-pwa/</guid>
+      
       <description>Firefox 很久之前就停止支持 PWA 了，但现在 SPA 蓬勃发展，很多所谓的应用不过是网页套壳罢了， PWA 能够更简单的将网页安装为应用，比起要在系统里塞数个 Electron ，我觉得</description>
+      
     </item>
     
     <item>
@@ -239,7 +300,9 @@
       <pubDate>Sat, 03 Sep 2022 22:39:44 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E6%9C%BA%E5%99%A8%E4%B8%8E%E4%BA%BA/</guid>
+      
       <description>当 AI 将触手伸向人类引以为傲的艺术创作时，人类又一次陷入到类似当年机器大生产的时候。机器与人的对立似乎是近代才有的议题，人们认为，机器高超而稳</description>
+      
     </item>
     
     <item>
@@ -248,7 +311,9 @@
       <pubDate>Wed, 31 Aug 2022 15:21:43 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/top-down-acid/</guid>
+      
       <description>ACID ，即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability），只要你接</description>
+      
     </item>
     
     <item>
@@ -257,7 +322,9 @@
       <pubDate>Fri, 26 Aug 2022 17:53:27 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E7%90%A2%E8%AF%8D%E9%9B%95%E5%8F%A5/</guid>
+      
       <description>本文是对遣词造句的一些浅薄研究，未来必定会长久更新。 中文不爱从句，因此复杂的从句要少用。凡可用从句的地方，都可拆成多个分句，并依前后逻辑缀连</description>
+      
     </item>
     
     <item>
@@ -266,7 +333,9 @@
       <pubDate>Thu, 18 Aug 2022 03:42:04 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/</guid>
+      
       <description>最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。 许多 Golang 的拥护者会称 Golang 是一门工程</description>
+      
     </item>
     
     <item>
@@ -275,7 +344,9 @@
       <pubDate>Sun, 14 Aug 2022 17:56:49 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/userchrome-usage/</guid>
+      
       <description>userChrome.js 是 Firefox 的一种玩法，可以高度自定义 Firefox 的界面、样式、功能。虽然 XUL 很早就死掉了，但所幸 userChrome.js 仍然是可用的。需要注意的是， userChrome.js 是非正式且冷门的自定义玩法，</description>
+      
     </item>
     
     <item>
@@ -284,7 +355,9 @@
       <pubDate>Sun, 07 Aug 2022 20:42:17 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/bigfile-problem-for-node/</guid>
+      
       <description>大文件的读取与写入问题，一般使用流（stream）就可以很好的处理了。但大文件的问题并不单单是这样，如果仅仅是单纯的读取或写入，那么解决方案</description>
+      
     </item>
     
     <item>
@@ -293,7 +366,9 @@
       <pubDate>Fri, 05 Aug 2022 16:46:36 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/trivial/</guid>
+      
       <description>Makefile .PHONY 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。 Joi joi.string().allow(&#39;&#39;).allow(null).empty(&#39;&#39;).optional() ，允许字符串为空。 pacman 以前记录过一遍，但太隐慝了，在此特意提出。 pacman -Ql &amp;lt;package-name&amp;gt;</description>
+      
     </item>
     
     <item>
@@ -302,7 +377,9 @@
       <pubDate>Sat, 30 Jul 2022 23:26:25 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/</guid>
+      
       <description>因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方</description>
+      
     </item>
     
     <item>
@@ -311,7 +388,9 @@
       <pubDate>Wed, 27 Jul 2022 14:05:02 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/how-to-use-wine-wechat-setup/</guid>
+      
       <description>最近升级了一下微信，好久没有这个脚本好像都不会用了。此脚本是依云姐写的，在 Archlinuxcn 源上，需要配合 wine-for-wechat 。 wine-wechat-setup 提供了一个 wechat 命令，如果你已经在本地安装了微信</description>
+      
     </item>
     
     <item>
@@ -320,7 +399,9 @@
       <pubDate>Sat, 23 Jul 2022 23:26:42 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E5%AD%98%E5%9C%A8%E8%AE%BA%E6%8F%90%E7%BA%B2/</guid>
+      
       <description>人在世界上，如同水在水中。 意识不等于主体，人的主体就是整个人本身。因为在认识之中，整个人都投入到了认识之中。 人是不可分割的。 意识是人的一种官</description>
+      
     </item>
     
     <item>
@@ -329,7 +410,9 @@
       <pubDate>Thu, 07 Jul 2022 16:21:41 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E4%BA%BA-%E7%AE%A1%E7%90%86%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</guid>
+      
       <description>敏捷开发本质上是后福特主义在软件工程方面的实践，两者在组织管理方面的理念简直如出一辙。事实上，在欧美企业大量转向后福特的管理制度之后，敏捷的</description>
+      
     </item>
     
     <item>
@@ -338,7 +421,9 @@
       <pubDate>Thu, 07 Jul 2022 00:27:31 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E8%A7%A3%E4%B8%8D%E6%82%A3%E5%AF%A1%E8%80%8C%E6%82%A3%E4%B8%8D%E5%9D%87/</guid>
+      
       <description>现代人按照平均主义去或者公平公正去理解，会觉得这句话很怪，因为“寡”与“均”似乎没有什么关联，而应该作“不患贫而患不均”才对。 但古代经学家并</description>
+      
     </item>
     
     <item>
@@ -347,7 +432,9 @@
       <pubDate>Sat, 02 Jul 2022 20:07:05 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/notion-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
+      
       <description>以前我其实听说过 Notion ，也注册帐号尝试了一下，但由于过于复杂所以放弃了。不过最近我又开始使用了，而且发现上手之后感觉还不错，所以在此讲一下我的使</description>
+      
     </item>
     
     <item>
@@ -356,7 +443,9 @@
       <pubDate>Fri, 24 Jun 2022 13:49:09 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/critical-outline/</guid>
+      
       <description>因为经常性会有思想在我的头脑里出现但理不出文章，草率写文章也不太好，所以就一个地方单独记录。 开发杂谈 关于规范，如果我们指定了一个规范，就要考</description>
+      
     </item>
     
     <item>
@@ -365,7 +454,9 @@
       <pubDate>Thu, 23 Jun 2022 21:29:23 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E5%AE%9E%E7%94%A8%E4%B8%8E%E5%AE%9E%E8%B7%B5/</guid>
+      
       <description>对实用主义实用的批判 对于实用性的反思我们可以窥见所谓实用主义的反实践内核。 实用主义带给我们最大的不满在于，实用这个概念本身。我们如何得出一个</description>
+      
     </item>
     
     <item>
@@ -374,7 +465,9 @@
       <pubDate>Wed, 22 Jun 2022 23:09:18 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/grpc-vs-restful/</guid>
+      
       <description>gRPC 和 RESTful 的比较是两套 API 风格的比较。虽然 gRPC 采取了 HTTP2 ，但这并不代表 RESTful 不能基于 HTTP2 ，但 RESTful 也可以采用 HTTP1 ，这是因为二者的着眼点有所不同。 gRPC 采用了二进制的方</description>
+      
     </item>
     
     <item>
@@ -383,7 +476,9 @@
       <pubDate>Sat, 11 Jun 2022 02:53:15 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8E%E5%94%90%E5%B1%B1%E6%89%93%E4%BA%BA%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%B8%80%E7%82%B9%E8%AF%84%E8%AE%BA/</guid>
+      
       <description>有两件事情是可以进行判断的： 性骚扰是不对的。 打人是不对的。 对于施暴者的定性，毫无疑问是犯罪，两人也已经被抓获。关于本案，对于第二点我觉得没有</description>
+      
     </item>
     
     <item>
@@ -392,7 +487,9 @@
       <pubDate>Thu, 02 Jun 2022 11:09:26 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88%E5%A2%A8%E5%AD%90/</guid>
+      
       <description>以前我以为墨子思想的核心是兼爱非攻，但我读了十批判书后得到了一点有趣的观点，墨子的核心是天志明鬼。郭沫若的文章显得过于尊孔了，导致墨子的立场</description>
+      
     </item>
     
     <item>
@@ -401,7 +498,9 @@
       <pubDate>Tue, 31 May 2022 10:55:31 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/the-go-scheduler/</guid>
+      
       <description>译前序 本文翻译自 The Go Scheduler ，虽然时间有点久了，但只是阐释思想的话并没有太大问题。由于我个人翻译水平有限，若有纰漏，敬请谅解。 序 由 Dmitry Vyukov 贡献的新调度</description>
+      
     </item>
     
     <item>
@@ -410,7 +509,9 @@
       <pubDate>Mon, 30 May 2022 10:14:24 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88%E7%8E%8B%E5%9E%A0/</guid>
+      
       <description>王垠是个精英主义很重的人，偏爱理论多过实践。 我以前读过一些他的文章，现在又读了一些，发现我与过去对他的评价不同了。现实是参差、复杂且匮乏的，</description>
+      
     </item>
     
     <item>
@@ -419,7 +520,9 @@
       <pubDate>Sun, 22 May 2022 11:41:54 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E6%89%B9%E5%88%A4/</guid>
+      
       <description>正文 现代经济学是从古典经济学上发展过来的，现代经济学完成了古典经济学所要达成的目标，即一切价值的量化。而这种量化，正是通过消灭传统价值理论达</description>
+      
     </item>
     
     <item>
@@ -428,7 +531,9 @@
       <pubDate>Tue, 17 May 2022 10:46:28 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/</guid>
+      
       <description>阅读的文章是关于事件捕获与事件冒泡先后执行顺序 ，写得挺好的，就是我读的时候漏了一点。 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width&amp;quot;&amp;gt; &amp;lt;title&amp;gt;DOM 冒泡&amp;lt;/title&amp;gt; &amp;lt;style type=&amp;quot;text/css&amp;quot;</description>
+      
     </item>
     
     <item>
@@ -437,7 +542,9 @@
       <pubDate>Sun, 15 May 2022 11:24:14 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E7%AE%80%E8%B0%88%E5%A5%B3%E6%80%A7%E4%B8%BB%E4%B9%89%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      
       <description>最近在思考女性主义的问题，查找了很多资料，只能说有一些了解。女性主义目前的现状更类似于黑人运动，而很多方面也面临了跟黑人运动一样的困境。 女性</description>
+      
     </item>
     
     <item>
@@ -446,16 +553,9 @@
       <pubDate>Mon, 09 May 2022 23:18:35 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2%E7%9A%84%E7%AC%AC%E4%BA%8C%E6%9D%A1/</guid>
-      <description>这是我在读实践论的时候发现的。传统马克思主义者对于实践和真理的认识很片面，其来源是费尔巴哈提纲的第二条。我觉得很荒诞。 如何理解费尔巴哈提纲的</description>
-    </item>
-    
-    <item>
-      <title>NodeJs 启动代码解析（一）</title>
-      <link>https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/</link>
-      <pubDate>Fri, 06 May 2022 10:04:22 +0800</pubDate>
       
-      <guid>https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/</guid>
-      <description>NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //</description>
+      <description>这是我在读实践论的时候发现的。传统马克思主义者对于实践和真理的认识很片面，其来源是费尔巴哈提纲的第二条。我觉得很荒诞。 如何理解费尔巴哈提纲的</description>
+      
     </item>
     
   </channel>

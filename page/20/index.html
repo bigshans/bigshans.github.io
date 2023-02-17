@@ -16,7 +16,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" />
+<meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+
+
 
 
 
@@ -44,6 +47,7 @@
 
 
 
+
 <meta property="og:title" content="Bigshans&#39; Blog" />
 <meta property="og:description" content="Hugo theme even example site." />
 <meta property="og:type" content="website" />
@@ -53,6 +57,8 @@
 <meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bigshans&#39; Blog"/>
 <meta name="twitter:description" content="Hugo theme even example site."/>
+
+
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -169,6 +175,32 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/angular-virtual-scroll/">angular 虚拟滚动的一些坑</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-12-08 </span>
+      <div class="post-category">
+          <a href="/categories/angular/"> angular </a>
+          </div>
+        <span class="more-meta"> 约 218 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+    
+      最近被赶过去写前端了。
+
+    
+    </div>
+    <div class="read-more">
+      <a href="/post/angular-virtual-scroll/" class="read-more-link">阅读更多 »</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/node-express-source-read/">Express 源码阅读（一）</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2019-12-01 </span>
@@ -182,9 +214,11 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       我们写一个简单的程序。
 const express = require(&#39;express&#39;); const app = express(); app.get(&#39;/&#39;, (req, res) =&amp;gt; { res.end(&#39;&amp;lt;h1&amp;gt;Hello&amp;lt;/h1&amp;gt;&#39;); }); app.listen(3000, () =&amp;gt; console.log(&#39;Connected!&#39;)); 我们对这段代码进行 Debug 。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/node-express-source-read/" class="read-more-link">阅读更多 »</a>
@@ -207,8 +241,10 @@ const express = require(&#39;express&#39;); const app = express(); app.get(&#39;
   
   <div class="post-content">
     <div class="post-summary">
+    
       systemd-nspawn 是 docker 与一样的 container 应用，只不过 docker 相比，跟类似于 chroot 。个人还是比较喜欢 chroot 这样的，这样有种子系统的感觉，与 docker 的 container 相比， chroot 下的操作是会被保留下来的， docker 和 chroot 还是两种不同情况，不可同语。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/linux-systemdnspawn/" class="read-more-link">阅读更多 »</a>
@@ -231,8 +267,10 @@ const express = require(&#39;express&#39;); const app = express(); app.get(&#39;
   
   <div class="post-content">
     <div class="post-summary">
+    
       新买的移动硬盘到了，着手做新的启动盘。在硬盘上分了一个 G ，然后用 Deepin 的启动盘制作工具做了一个启动盘。然后重启，启动 Deepin live cd ，然后还备份还是失败了。没办法，只能另寻他路。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/linux-backup/" class="read-more-link">阅读更多 »</a>
@@ -255,8 +293,10 @@ const express = require(&#39;express&#39;); const app = express(); app.get(&#39;
   
   <div class="post-content">
     <div class="post-summary">
+    
       最近倒腾公司电脑，结果装不上 emacs 26，我的很多配置无法启用，在这里我要批评一下 deepin 。我真的是很少有听过降系统升级的。 deepin 还在 Debian stretch 上，如今 Debian 都上 buster 了。 deepin 为了稳定系统搞这个我觉得真是不行，至少软件也要新的嘛！
 
+    
     </div>
     <div class="read-more">
       <a href="/post/docker-emacs/" class="read-more-link">阅读更多 »</a>
@@ -277,9 +317,11 @@ const express = require(&#39;express&#39;); const app = express(); app.get(&#39;
   
   <div class="post-content">
     <div class="post-summary">
+    
       最近在工作电脑上安装了 deepin ，发现字体渲染很糟糕，于是在想起了 infinality 补丁，由于我个人电脑上是 manjaro ， arch 源里就有该包，所以我查找一下，发现 Debian 系的也有打包，成功安装之后，特此记录一下。
 原文链接：https://www.linuxdashen.com/debian8安装infinality改善字体渲染，安装ubuntu字体
 
+    
     </div>
     <div class="read-more">
       <a href="/post/infinality-font/" class="read-more-link">阅读更多 »</a>
@@ -302,8 +344,10 @@ const express = require(&#39;express&#39;); const app = express(); app.get(&#39;
   
   <div class="post-content">
     <div class="post-summary">
+    
       最近在折腾 emacs ，不得不说这个曲线真的是非常陡峭啊！但有些有趣的东西的确让人欲罢不能。今天就在这里跟大家分享一下折腾过程中出现的问题，希望能能给大家带来一点帮助。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/emacs-hacking/" class="read-more-link">阅读更多 »</a>
@@ -326,36 +370,14 @@ const express = require(&#39;express&#39;); const app = express(); app.get(&#39;
   
   <div class="post-content">
     <div class="post-summary">
+    
       公司想要做一个聊天系统，原本打算上 Websocket ，我例程都写了，老板又不想弄长连接了，认为短连接就符合需求了，无奈。
 Websocket 还是值得说一说的，我们是使用 node 开发的。
 
+    
     </div>
     <div class="read-more">
       <a href="/post/websocket/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/">分布式锁的简单实现</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-10-20 </span>
-      <div class="post-category">
-          <a href="/categories/javascript/"> javascript </a>
-          </div>
-        <span class="more-meta"> 约 384 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      打算每周写一篇博客，希望每周都能有新的收获。本周写的博客是我在工作中应用写的一个有趣的东西。 我们采用 pm2 进行进程管理，我们开启了多个进程，但各个进程之间并没有交流，所以，我想要全局操作某个变量时，就会出现数据安全问题，虽然在 redis 里面单个操作是原子，但我也要保证复合操作也是原子的。但我并不使用 redis 的事务，是因为这个事务会阻塞其他操作，所以，不如在应用层上实现锁，从而不阻塞 redis 。我们虽然不是分布式系统，但是是分布式进程，所以实现也参考分布式锁。
-
-    </div>
-    <div class="read-more">
-      <a href="/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/" class="read-more-link">阅读更多 »</a>
     </div>
   </div>
 </article>

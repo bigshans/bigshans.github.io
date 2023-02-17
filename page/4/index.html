@@ -16,7 +16,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigshans" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="bigshans" />
+<meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+
+
 
 
 
@@ -44,6 +47,7 @@
 
 
 
+
 <meta property="og:title" content="Bigshans&#39; Blog" />
 <meta property="og:description" content="Hugo theme even example site." />
 <meta property="og:type" content="website" />
@@ -53,6 +57,8 @@
 <meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bigshans&#39; Blog"/>
 <meta name="twitter:description" content="Hugo theme even example site."/>
+
+
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -169,6 +175,31 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/package-snap-to-pkg/">将 snap 打包成 AUR</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-09-09 </span>
+      <div class="post-category">
+          <a href="/categories/linux/"> linux </a>
+          </div>
+        <span class="more-meta"> 约 312 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+    
+      masscode 仅仅提供了 snap 包给 Linux 版，但我并不想使用 snap ，所以就想单独打包。由于 masscode 是 electron 应用，所以理论上只需要拿到 resources/app.asar 就万事大吉了。 snap 包实际上是一个 squashfs ，所以打包
+    
+    </div>
+    <div class="read-more">
+      <a href="/post/package-snap-to-pkg/" class="read-more-link">阅读更多 »</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/firefox-pwa/">使用 Firefox PWA</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2022-09-04 </span>
@@ -182,7 +213,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       Firefox 很久之前就停止支持 PWA 了，但现在 SPA 蓬勃发展，很多所谓的应用不过是网页套壳罢了， PWA 能够更简单的将网页安装为应用，比起要在系统里塞数个 Electron ，我觉得
+    
     </div>
     <div class="read-more">
       <a href="/post/firefox-pwa/" class="read-more-link">阅读更多 »</a>
@@ -205,7 +238,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       当 AI 将触手伸向人类引以为傲的艺术创作时，人类又一次陷入到类似当年机器大生产的时候。机器与人的对立似乎是近代才有的议题，人们认为，机器高超而稳
+    
     </div>
     <div class="read-more">
       <a href="/post/%E6%9C%BA%E5%99%A8%E4%B8%8E%E4%BA%BA/" class="read-more-link">阅读更多 »</a>
@@ -228,7 +263,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       ACID ，即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability），只要你接
+    
     </div>
     <div class="read-more">
       <a href="/post/top-down-acid/" class="read-more-link">阅读更多 »</a>
@@ -251,7 +288,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       本文是对遣词造句的一些浅薄研究，未来必定会长久更新。 中文不爱从句，因此复杂的从句要少用。凡可用从句的地方，都可拆成多个分句，并依前后逻辑缀连
+    
     </div>
     <div class="read-more">
       <a href="/post/%E7%90%A2%E8%AF%8D%E9%9B%95%E5%8F%A5/" class="read-more-link">阅读更多 »</a>
@@ -274,7 +313,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。 许多 Golang 的拥护者会称 Golang 是一门工程
+    
     </div>
     <div class="read-more">
       <a href="/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/" class="read-more-link">阅读更多 »</a>
@@ -297,7 +338,9 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       userChrome.js 是 Firefox 的一种玩法，可以高度自定义 Firefox 的界面、样式、功能。虽然 XUL 很早就死掉了，但所幸 userChrome.js 仍然是可用的。需要注意的是， userChrome.js 是非正式且冷门的自定义玩法，
+    
     </div>
     <div class="read-more">
       <a href="/post/userchrome-usage/" class="read-more-link">阅读更多 »</a>
@@ -320,31 +363,12 @@
   
   <div class="post-content">
     <div class="post-summary">
+    
       大文件的读取与写入问题，一般使用流（stream）就可以很好的处理了。但大文件的问题并不单单是这样，如果仅仅是单纯的读取或写入，那么解决方案
+    
     </div>
     <div class="read-more">
       <a href="/post/bigfile-problem-for-node/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/trivial/">琐碎备录</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-08-05 </span>
-      
-        <span class="more-meta"> 约 276 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Makefile .PHONY 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。 Joi joi.string().allow(&#39;&#39;).allow(null).empty(&#39;&#39;).optional() ，允许字符串为空。 pacman 以前记录过一遍，但太隐慝了，在此特意提出。 pacman -Ql &amp;lt;package-name&amp;gt;
-    </div>
-    <div class="read-more">
-      <a href="/post/trivial/" class="read-more-link">阅读更多 »</a>
     </div>
   </div>
 </article>
