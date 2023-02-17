@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 17 Feb 2023 11:25:09 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Feb 2023 12:00:54 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -29,10 +29,19 @@
     <item>
       <title>Test</title>
       <link>https://bigshans.github.io/post/private/test/</link>
-      <pubDate>Fri, 17 Feb 2023 11:25:09 +0800</pubDate>
+      <pubDate>Fri, 17 Feb 2023 12:00:54 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/private/test/</guid>
       <description>Test</description>
+    </item>
+    
+    <item>
+      <title>Private Page.md</title>
+      <link>https://bigshans.github.io/post/private-page.md/</link>
+      <pubDate>Fri, 17 Feb 2023 11:56:25 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/private-page.md/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/%E7%AE%80%E8%B0%88%E5%A5%B3%E6%80%A7%E4%B8%BB%E4%B9%89%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
       <description>最近在思考女性主义的问题，查找了很多资料，只能说有一些了解。女性主义目前的现状更类似于黑人运动，而很多方面也面临了跟黑人运动一样的困境。 女性</description>
-    </item>
-    
-    <item>
-      <title>费尔巴哈提纲的第二条</title>
-      <link>https://bigshans.github.io/post/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2%E7%9A%84%E7%AC%AC%E4%BA%8C%E6%9D%A1/</link>
-      <pubDate>Mon, 09 May 2022 23:18:35 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2%E7%9A%84%E7%AC%AC%E4%BA%8C%E6%9D%A1/</guid>
-      <description>这是我在读实践论的时候发现的。传统马克思主义者对于实践和真理的认识很片面，其来源是费尔巴哈提纲的第二条。我觉得很荒诞。 如何理解费尔巴哈提纲的</description>
     </item>
     
   </channel>
