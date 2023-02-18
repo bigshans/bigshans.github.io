@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 30 Nov 2021 14:04:23 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Feb 2023 14:08:26 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何正确的替换 HTML</title>
+      <link>https://bigshans.github.io/post/sethtml/</link>
+      <pubDate>Sat, 18 Feb 2023 14:08:26 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/sethtml/</guid>
+      <description>算是私人页的一个 BUG ，之前没有注意到。使用 innerHTML 进行替换后，替换内容内所有的 script 都失效了，这是符合浏览器预期的，可见 MDN 。 Although this may look like a cross-site scripting attack, the result is harmless. HTML</description>
+    </item>
+    
     <item>
       <title>Nginx 按路由分流请求</title>
       <link>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</link>

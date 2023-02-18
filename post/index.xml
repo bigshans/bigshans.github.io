@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 18 Feb 2023 09:26:22 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Feb 2023 14:08:26 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup</description>
+    </item>
+    
+    <item>
+      <title>如何正确的替换 HTML</title>
+      <link>https://bigshans.github.io/post/sethtml/</link>
+      <pubDate>Sat, 18 Feb 2023 14:08:26 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/sethtml/</guid>
+      <description>算是私人页的一个 BUG ，之前没有注意到。使用 innerHTML 进行替换后，替换内容内所有的 script 都失效了，这是符合浏览器预期的，可见 MDN 。 Although this may look like a cross-site scripting attack, the result is harmless. HTML</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88%E7%8E%8B%E5%9E%A0/</guid>
       <description>王垠是个精英主义很重的人，偏爱理论多过实践。 我以前读过一些他的文章，现在又读了一些，发现我与过去对他的评价不同了。现实是参差、复杂且匮乏的，</description>
-    </item>
-    
-    <item>
-      <title>现代经济学批判</title>
-      <link>https://bigshans.github.io/post/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E6%89%B9%E5%88%A4/</link>
-      <pubDate>Sun, 22 May 2022 11:41:54 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E6%89%B9%E5%88%A4/</guid>
-      <description>正文 现代经济学是从古典经济学上发展过来的，现代经济学完成了古典经济学所要达成的目标，即一切价值的量化。而这种量化，正是通过消灭传统价值理论达</description>
     </item>
     
   </channel>
