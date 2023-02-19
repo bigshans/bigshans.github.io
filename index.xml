@@ -8,6 +8,7 @@
     <language>en</language>
     <copyright>bigshans</copyright>
     <lastBuildDate>Sun, 19 Feb 2023 11:17:50 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -18,6 +19,8 @@
       <description>本博客所有文章，采取 CC BY-NC-SA 4.0 形式发布，禁止任何形式商业发布。本人在 B 站与公众号有号，有部分发布文章，但第一发布地点仍在此博客。 本人受安那其主义</description>
       
     </item>
+    
+    
     
     <item>
       <title>[置顶] 备忘录</title>
@@ -30,16 +33,9 @@
       
     </item>
     
-    <item>
-      <title>碎片</title>
-      <link>https://bigshans.github.io/post/private/%E7%A2%8E%E7%89%87/</link>
-      <pubDate>Sun, 19 Feb 2023 11:17:50 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/private/%E7%A2%8E%E7%89%87/</guid>
-      
-      <description>私人文章</description>
-      
-    </item>
+    
+    
+    
     
     <item>
       <title>如何正确的替换 HTML</title>
@@ -52,27 +48,11 @@
       
     </item>
     
-    <item>
-      <title>如何破解 Gitkraken</title>
-      <link>https://bigshans.github.io/post/private/%E5%A6%82%E4%BD%95%E7%A0%B4%E8%A7%A3gitkraken/</link>
-      <pubDate>Sat, 18 Feb 2023 09:26:22 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/private/%E5%A6%82%E4%BD%95%E7%A0%B4%E8%A7%A3gitkraken/</guid>
-      
-      <description>私人文章</description>
-      
-    </item>
     
-    <item>
-      <title>渺小的人</title>
-      <link>https://bigshans.github.io/post/private/%E6%B8%BA%E5%B0%8F%E7%9A%84%E4%BA%BA/</link>
-      <pubDate>Fri, 17 Feb 2023 16:58:36 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/private/%E6%B8%BA%E5%B0%8F%E7%9A%84%E4%BA%BA/</guid>
-      
-      <description>私人文章</description>
-      
-    </item>
+    
+    
+    
+    
     
     <item>
       <title>如何在 Hugo 上实现私人加密页</title>
@@ -85,16 +65,9 @@
       
     </item>
     
-    <item>
-      <title>Test</title>
-      <link>https://bigshans.github.io/post/private/test/</link>
-      <pubDate>Fri, 17 Feb 2023 12:05:15 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/private/test/</guid>
-      
-      <description>私人文章</description>
-      
-    </item>
+    
+    
+    
     
     <item>
       <title>core-js 的公地悲剧</title>
@@ -107,6 +80,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>谈谈 RPA</title>
       <link>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88rpa/</link>
@@ -117,6 +92,8 @@
       <description>最近 RPA 用得比较多，我谈一下这个。 RPA 在办公室自动化方面应用极广，而对应的软件在 Windows 上也是遍地开花。为什么是在 Windows 上呢？原因也很好理解，因为 Windows 在办公</description>
       
     </item>
+    
+    
     
     <item>
       <title>Node 事件循环</title>
@@ -129,6 +106,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>小公司的狂妄自大</title>
       <link>https://bigshans.github.io/post/%E5%B0%8F%E5%85%AC%E5%8F%B8%E7%9A%84%E7%8B%82%E5%A6%84%E8%87%AA%E5%A4%A7/</link>
@@ -139,6 +118,8 @@
       <description>一些大厂出来的人会一种错觉，以为自己离开了大厂仍能干一番事业。尤其是一些领导层，以为自己有一些人脉，似乎就可以登天。殊不知自己离开了大厂什么</description>
       
     </item>
+    
+    
     
     <item>
       <title>修复plasma全局快捷键无法设置</title>
@@ -151,6 +132,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>CSS 盒子模型</title>
       <link>https://bigshans.github.io/post/css-box/</link>
@@ -161,6 +144,8 @@
       <description>一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。 标准盒</description>
       
     </item>
+    
+    
     
     <item>
       <title>CSS 三栏布局</title>
@@ -173,6 +158,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>《Vuejs设计与实现》读书笔记</title>
       <link>https://bigshans.github.io/post/vuejs%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
@@ -183,6 +170,8 @@
       <description>第二篇 响应系统 第四章 响应系统的作用与实现 设计完善的响应式系统 借助 Proxy ，我们实现一个基本的响应式系统。书中代码我改成可以在 Node 中运行的代码了。 const bucket</description>
       
     </item>
+    
+    
     
     <item>
       <title>谈许立志</title>
@@ -195,6 +184,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>2022 年年终总结</title>
       <link>https://bigshans.github.io/post/2022%E5%B9%B4%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
@@ -205,6 +196,8 @@
       <description>看看去年写年终总结的时间，差不多是同一时刻。年末国内终于放开封控了，我也“有幸”感染了新冠，过去差不多一周了，咳嗽鼻塞还没好。现在感觉其实有</description>
       
     </item>
+    
+    
     
     <item>
       <title>阳了之后</title>
@@ -217,6 +210,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>JavaScript 的标签模板字符串</title>
       <link>https://bigshans.github.io/post/tagged-template-string/</link>
@@ -227,6 +222,8 @@
       <description>标签模板是个看起来很 Magic 的语法，写起来像是这样。 console.log`Hello, World!`; // Output: [&amp;#34;Hello, World!&amp;#34;] 实际上，这里的模板标签被转换成这样的一句调用。 console.log.call(console, [&amp;#39;Hello, World!&amp;#39;]); 如果我们有用变量的话， const name = &amp;#39;world&amp;#39;;</description>
       
     </item>
+    
+    
     
     <item>
       <title>await 的背后</title>
@@ -239,6 +236,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>用 node 实现一个简单的 http 代理</title>
       <link>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</link>
@@ -249,6 +248,8 @@
       <description>http 代理可分为两种，一种是普通的代理，作为中间人传递两边的信息；另一种则是隧道的方式。 普通代理 const http = require(&amp;#39;http&amp;#39;); const url = require(&amp;#39;url&amp;#39;); function request(cReq, cRes) { const u = url.parse(cReq.url); const options = { host: u.hostname, port: u.port</description>
       
     </item>
+    
+    
     
     <item>
       <title>诗</title>
@@ -261,6 +262,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>中文编程不过是另一种编程语言文学化</title>
       <link>https://bigshans.github.io/post/%E4%B8%AD%E6%96%87%E7%BC%96%E7%A8%8B%E4%B8%8D%E8%BF%87%E6%98%AF%E5%8F%A6%E4%B8%80%E7%A7%8D%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E6%96%87%E5%AD%A6%E5%8C%96/</link>
@@ -271,6 +274,8 @@
       <description>中文编程不过是另一种编程语言文学化。 首先，中文编程强调用中文是为了解决代码的可读性问题，这与编程语言文学化的思路不谋而合。 英语母语者在用英语</description>
       
     </item>
+    
+    
     
     <item>
       <title>如何放大 Krunner 的字体</title>
@@ -283,6 +288,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>对意见的偏见</title>
       <link>https://bigshans.github.io/post/%E5%AF%B9%E6%84%8F%E8%A7%81%E7%9A%84%E5%81%8F%E8%A7%81/</link>
@@ -293,6 +300,8 @@
       <description>鄙夷意见的传统从巴门尼德就开始了，认为“存在者存在，不存在者不存在”。但这里显然有一个元认识问题，为什么存在者可以被意识，而不存在者也被意识</description>
       
     </item>
+    
+    
     
     <item>
       <title>对 GNU 的批判</title>
@@ -305,6 +314,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>PostgreSQL 继承的实现</title>
       <link>https://bigshans.github.io/post/postgre-inheritance/</link>
@@ -315,6 +326,8 @@
       <description>PostgreSQL 的继承一般都被用来分区。 PostgreSQL 的分区实际上就是用继承实现的，硬要对比起来，就是继承要比单纯分区要灵活很多。 PostgreSQL 继承之后，子表和父表是两张表，仅仅</description>
       
     </item>
+    
+    
     
     <item>
       <title>解决在 Konsole 下的 Emoji 展示问题</title>
@@ -327,6 +340,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>将 snap 打包成 AUR</title>
       <link>https://bigshans.github.io/post/package-snap-to-pkg/</link>
@@ -337,6 +352,8 @@
       <description>masscode 仅仅提供了 snap 包给 Linux 版，但我并不想使用 snap ，所以就想单独打包。由于 masscode 是 electron 应用，所以理论上只需要拿到 resources/app.asar 就万事大吉了。 snap 包实际上是一个 squashfs ，所以打包</description>
       
     </item>
+    
+    
     
     <item>
       <title>使用 Firefox PWA</title>
@@ -349,6 +366,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>机器与人</title>
       <link>https://bigshans.github.io/post/%E6%9C%BA%E5%99%A8%E4%B8%8E%E4%BA%BA/</link>
@@ -359,6 +378,8 @@
       <description>当 AI 将触手伸向人类引以为傲的艺术创作时，人类又一次陷入到类似当年机器大生产的时候。机器与人的对立似乎是近代才有的议题，人们认为，机器高超而稳</description>
       
     </item>
+    
+    
     
     <item>
       <title>自顶向下的 ACID</title>
@@ -371,6 +392,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>琢词雕句</title>
       <link>https://bigshans.github.io/post/%E7%90%A2%E8%AF%8D%E9%9B%95%E5%8F%A5/</link>
@@ -381,6 +404,8 @@
       <description>本文是对遣词造句的一些浅薄研究，未来必定会长久更新。 中文不爱从句，因此复杂的从句要少用。凡可用从句的地方，都可拆成多个分句，并依前后逻辑缀连</description>
       
     </item>
+    
+    
     
     <item>
       <title>对 Golang 的批评</title>
@@ -393,6 +418,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>userChrome.js 的使用</title>
       <link>https://bigshans.github.io/post/userchrome-usage/</link>
@@ -403,6 +430,8 @@
       <description>userChrome.js 是 Firefox 的一种玩法，可以高度自定义 Firefox 的界面、样式、功能。虽然 XUL 很早就死掉了，但所幸 userChrome.js 仍然是可用的。需要注意的是， userChrome.js 是非正式且冷门的自定义玩法，</description>
       
     </item>
+    
+    
     
     <item>
       <title>NodeJs 上的大文件问题</title>
@@ -415,6 +444,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>琐碎备录</title>
       <link>https://bigshans.github.io/post/trivial/</link>
@@ -425,6 +456,8 @@
       <description>Makefile .PHONY 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。 Joi joi.string().allow(&#39;&#39;).allow(null).empty(&#39;&#39;).optional() ，允许字符串为空。 pacman 以前记录过一遍，但太隐慝了，在此特意提出。 pacman -Ql &amp;lt;package-name&amp;gt;</description>
       
     </item>
+    
+    
     
     <item>
       <title>在 Linux 上用 C 写一个守护进程</title>
@@ -437,6 +470,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>如何使用 wine-wechat-setup</title>
       <link>https://bigshans.github.io/post/how-to-use-wine-wechat-setup/</link>
@@ -447,6 +482,8 @@
       <description>最近升级了一下微信，好久没有这个脚本好像都不会用了。此脚本是依云姐写的，在 Archlinuxcn 源上，需要配合 wine-for-wechat 。 wine-wechat-setup 提供了一个 wechat 命令，如果你已经在本地安装了微信</description>
       
     </item>
+    
+    
     
     <item>
       <title>存在论提纲</title>
@@ -459,6 +496,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>人、管理与软件开发——从敏捷开发谈起</title>
       <link>https://bigshans.github.io/post/%E4%BA%BA-%E7%AE%A1%E7%90%86%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
@@ -469,6 +508,8 @@
       <description>敏捷开发本质上是后福特主义在软件工程方面的实践，两者在组织管理方面的理念简直如出一辙。事实上，在欧美企业大量转向后福特的管理制度之后，敏捷的</description>
       
     </item>
+    
+    
     
     <item>
       <title>解“不患寡而患不均”</title>
@@ -481,6 +522,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>Notion 使用体验</title>
       <link>https://bigshans.github.io/post/notion-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
@@ -491,6 +534,8 @@
       <description>以前我其实听说过 Notion ，也注册帐号尝试了一下，但由于过于复杂所以放弃了。不过最近我又开始使用了，而且发现上手之后感觉还不错，所以在此讲一下我的使</description>
       
     </item>
+    
+    
     
     <item>
       <title>批判纲要</title>
@@ -503,6 +548,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>实用与实践</title>
       <link>https://bigshans.github.io/post/%E5%AE%9E%E7%94%A8%E4%B8%8E%E5%AE%9E%E8%B7%B5/</link>
@@ -513,6 +560,8 @@
       <description>对实用主义实用的批判 对于实用性的反思我们可以窥见所谓实用主义的反实践内核。 实用主义带给我们最大的不满在于，实用这个概念本身。我们如何得出一个</description>
       
     </item>
+    
+    
     
     <item>
       <title>gRPC vs RESTful</title>
@@ -525,6 +574,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>关于唐山打人事件的一点评论</title>
       <link>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8E%E5%94%90%E5%B1%B1%E6%89%93%E4%BA%BA%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%B8%80%E7%82%B9%E8%AF%84%E8%AE%BA/</link>
@@ -535,6 +586,8 @@
       <description>有两件事情是可以进行判断的： 性骚扰是不对的。 打人是不对的。 对于施暴者的定性，毫无疑问是犯罪，两人也已经被抓获。关于本案，对于第二点我觉得没有</description>
       
     </item>
+    
+    
     
     <item>
       <title>谈谈墨子</title>
@@ -547,6 +600,8 @@
       
     </item>
     
+    
+    
     <item>
       <title>GO 的调度器</title>
       <link>https://bigshans.github.io/post/the-go-scheduler/</link>
@@ -557,6 +612,7 @@
       <description>译前序 本文翻译自 The Go Scheduler ，虽然时间有点久了，但只是阐释思想的话并没有太大问题。由于我个人翻译水平有限，若有纰漏，敬请谅解。 序 由 Dmitry Vyukov 贡献的新调度</description>
       
     </item>
+    
     
   </channel>
 </rss>
