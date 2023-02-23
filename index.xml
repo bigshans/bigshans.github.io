@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 19 Feb 2023 11:17:50 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Feb 2023 10:46:04 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[置顶] 关于本博客</title>
@@ -30,6 +30,19 @@
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗</description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>TCP 的握手和挥手</title>
+      <link>https://bigshans.github.io/post/tcp%E7%9A%84%E6%8F%A1%E6%89%8B%E5%92%8C%E6%8C%A5%E6%89%8B/</link>
+      <pubDate>Thu, 23 Feb 2023 10:46:04 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/tcp%E7%9A%84%E6%8F%A1%E6%89%8B%E5%92%8C%E6%8C%A5%E6%89%8B/</guid>
+      
+      <description>TCP 的握手和挥手想必很多人都已经很熟悉了，“三次握手”和“四次挥手”在面试的时候几乎都是八股文了。光是背这个的话，着实了无趣味。我们可以通过 tcpdump</description>
       
     </item>
     
@@ -597,19 +610,6 @@
       <guid>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88%E5%A2%A8%E5%AD%90/</guid>
       
       <description>以前我以为墨子思想的核心是兼爱非攻，但我读了十批判书后得到了一点有趣的观点，墨子的核心是天志明鬼。郭沫若的文章显得过于尊孔了，导致墨子的立场</description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>GO 的调度器</title>
-      <link>https://bigshans.github.io/post/the-go-scheduler/</link>
-      <pubDate>Tue, 31 May 2022 10:55:31 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/the-go-scheduler/</guid>
-      
-      <description>译前序 本文翻译自 The Go Scheduler ，虽然时间有点久了，但只是阐释思想的话并没有太大问题。由于我个人翻译水平有限，若有纰漏，敬请谅解。 序 由 Dmitry Vyukov 贡献的新调度</description>
       
     </item>
     

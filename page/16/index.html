@@ -179,6 +179,31 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/sharp/">使用 Sharp 压缩图片、改变图片大小</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2021-08-24 </span>
+      <div class="post-category">
+          <a href="/categories/nodejs/"> nodejs </a>
+          </div>
+        <span class="more-meta"> 约 264 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+    
+      因为业务需要就写了个图片压缩服务，顺带改变大小，因为用的是 nodejs ，于是我就选择了 sharp ，基于 libvips。 代码非常好写： function resize(input, x, y) { return sharp(input) .resize(x, y, { fit: &#39;inside&#39; })
+    
+    </div>
+    <div class="read-more">
+      <a href="/post/sharp/" class="read-more-link">阅读更多 »</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/function-comment/">函数式的骨感</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2021-08-24 </span>
@@ -348,31 +373,6 @@
     </div>
     <div class="read-more">
       <a href="/post/postgresql-tricks-1/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/whoogle-self-host/">使用 Whoogle 自建搜索网站</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2021-05-30 </span>
-      <div class="post-category">
-          <a href="/categories/whoogle/"> whoogle </a>
-          </div>
-        <span class="more-meta"> 约 694 字 </span>
-        <span class="more-meta"> 预计阅读 2 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-    
-      准确来说，Whoogle 是一个元搜索引擎，他主要将 Google 的搜索结果过滤，并去除掉其中的隐私追踪部分。与 Whoogle 差不多的另一个网站框架是 SearX ，两者都是自建
-    
-    </div>
-    <div class="read-more">
-      <a href="/post/whoogle-self-host/" class="read-more-link">阅读更多 »</a>
     </div>
   </div>
 </article>

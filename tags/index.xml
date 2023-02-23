@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 19 Feb 2023 11:17:50 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Feb 2023 10:46:04 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网络</title>
+      <link>https://bigshans.github.io/tags/%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Thu, 23 Feb 2023 10:46:04 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/%E7%BD%91%E7%BB%9C/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>私人</title>
       <link>https://bigshans.github.io/tags/%E7%A7%81%E4%BA%BA/</link>
@@ -446,15 +455,6 @@
       <pubDate>Tue, 30 Nov 2021 14:04:23 +0800</pubDate>
       
       <guid>https://bigshans.github.io/tags/%E8%BF%90%E7%BB%B4/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CI</title>
-      <link>https://bigshans.github.io/tags/ci/</link>
-      <pubDate>Tue, 23 Nov 2021 18:07:24 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/ci/</guid>
       <description></description>
     </item>
     
