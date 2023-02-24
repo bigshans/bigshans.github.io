@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 23 Feb 2023 10:46:04 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Feb 2023 00:21:15 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[置顶] 关于本博客</title>
@@ -30,6 +30,19 @@
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗</description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>一心愁谢如枯兰</title>
+      <link>https://bigshans.github.io/post/%E4%B8%80%E5%BF%83%E6%84%81%E8%B0%A2%E5%A6%82%E6%9E%AF%E5%85%B0/</link>
+      <pubDate>Sat, 25 Feb 2023 00:21:15 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E4%B8%80%E5%BF%83%E6%84%81%E8%B0%A2%E5%A6%82%E6%9E%AF%E5%85%B0/</guid>
+      
+      <description>说来也不怕别人笑话，我这个就是很容易被别人好意欺骗，到头来总是被当作枪。来这家公司三年，感觉自己当初要是能再明白点，再决绝点，不至于在此痛苦</description>
       
     </item>
     
@@ -597,19 +610,6 @@
       <guid>https://bigshans.github.io/post/%E5%85%B3%E4%BA%8E%E5%94%90%E5%B1%B1%E6%89%93%E4%BA%BA%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%B8%80%E7%82%B9%E8%AF%84%E8%AE%BA/</guid>
       
       <description>有两件事情是可以进行判断的： 性骚扰是不对的。 打人是不对的。 对于施暴者的定性，毫无疑问是犯罪，两人也已经被抓获。关于本案，对于第二点我觉得没有</description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>谈谈墨子</title>
-      <link>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88%E5%A2%A8%E5%AD%90/</link>
-      <pubDate>Thu, 02 Jun 2022 11:09:26 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88%E5%A2%A8%E5%AD%90/</guid>
-      
-      <description>以前我以为墨子思想的核心是兼爱非攻，但我读了十批判书后得到了一点有趣的观点，墨子的核心是天志明鬼。郭沫若的文章显得过于尊孔了，导致墨子的立场</description>
       
     </item>
     
