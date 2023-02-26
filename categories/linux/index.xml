@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 04 Feb 2023 20:22:00 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Feb 2023 14:01:31 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>重装 arch</title>
+      <link>https://bigshans.github.io/post/%E9%87%8D%E8%A3%85arch/</link>
+      <pubDate>Sun, 26 Feb 2023 14:01:31 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E9%87%8D%E8%A3%85arch/</guid>
+      <description>昨天 KDE 不知道什么原因滚挂了，于是我决定重装系统。最近 KDE 在我的机子上经常崩溃，我也不想修了，因为真的修不起来。距离上一次重装不知道什么时候了，</description>
+    </item>
+    
     <item>
       <title>修复plasma全局快捷键无法设置</title>
       <link>https://bigshans.github.io/post/%E4%BF%AE%E5%A4%8Dplasma%E5%85%A8%E5%B1%80%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%97%A0%E6%B3%95%E8%AE%BE%E7%BD%AE/</link>
