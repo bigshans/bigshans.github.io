@@ -56,7 +56,7 @@
 <meta itemprop="name" content="重装 arch">
 <meta itemprop="description" content="昨天 KDE 不知道什么原因滚挂了，于是我决定重装系统。最近 KDE 在我的机子上经常崩溃，我也不想修了，因为真的修不起来。距离上一次重装不知道什么时候了，"><meta itemprop="datePublished" content="2023-02-26T14:01:31+08:00" />
 <meta itemprop="dateModified" content="2023-02-26T14:01:31+08:00" />
-<meta itemprop="wordCount" content="971">
+<meta itemprop="wordCount" content="985">
 <meta itemprop="keywords" content="linux," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="重装 arch"/>
 <meta name="twitter:description" content="昨天 KDE 不知道什么原因滚挂了，于是我决定重装系统。最近 KDE 在我的机子上经常崩溃，我也不想修了，因为真的修不起来。距离上一次重装不知道什么时候了，"/>
@@ -189,7 +189,7 @@
         <div class="post-category">
             <a href="/categories/linux/"> linux </a>
             </div>
-          <span class="more-meta"> 约 971 字 </span>
+          <span class="more-meta"> 约 985 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
@@ -223,6 +223,7 @@ bootloader</a></li>
         <li><a href="#添加日常用户">添加日常用户</a></li>
         <li><a href="#修复-nextcloud-每次都要登录的问题">修复 nextcloud
 每次都要登录的问题</a></li>
+        <li><a href="#备份软件列表">备份软件列表</a></li>
       </ul>
     </li>
   </ul>
@@ -324,6 +325,8 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch</code></pre>
 每次都要登录的问题</h2>
 <p>删除 kwallet 之前的钱包数据。在 <code>~/.local/share/kwalletd</code>
 下，删除重启。你只需要最后再授权一下，后面就不用再登录了。</p>
+<h2 id="备份软件列表">备份软件列表</h2>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">comm</span> <span class="at">-23</span> <span class="op">&lt;(</span><span class="ex">pacman</span> <span class="at">-Qeq</span><span class="kw">|</span><span class="fu">sort</span><span class="op">)</span> <span class="op">&lt;(</span><span class="ex">pacman</span> <span class="at">-Qmq</span><span class="kw">|</span><span class="fu">sort</span><span class="op">)</span> <span class="op">&gt;</span> pkglist</span></code></pre></div>
 
 
 
