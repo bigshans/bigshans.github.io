@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 17 Feb 2023 14:41:01 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Feb 2023 17:57:44 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Lazada App 里面打开链接</title>
+      <link>https://bigshans.github.io/post/open-link-in-lazada-app/</link>
+      <pubDate>Tue, 28 Feb 2023 17:57:44 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/open-link-in-lazada-app/</guid>
+      <description>由于需要爬 Lazada 的销量信息，所以我不得不在手机上进行爬虫。麻烦的是，PC 的链接虽然可以在移动端打开，但不能跳转进 App ， App 分享的链接虽然可以跳转，但</description>
+    </item>
+    
     <item>
       <title>如何在 Hugo 上实现私人加密页</title>
       <link>https://bigshans.github.io/post/private-blog-page/</link>

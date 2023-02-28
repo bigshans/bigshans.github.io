@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 26 Feb 2023 14:01:31 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Feb 2023 17:57:44 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[置顶] 关于本博客</title>
@@ -30,6 +30,19 @@
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch</description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>在 Lazada App 里面打开链接</title>
+      <link>https://bigshans.github.io/post/open-link-in-lazada-app/</link>
+      <pubDate>Tue, 28 Feb 2023 17:57:44 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/open-link-in-lazada-app/</guid>
+      
+      <description>由于需要爬 Lazada 的销量信息，所以我不得不在手机上进行爬虫。麻烦的是，PC 的链接虽然可以在移动端打开，但不能跳转进 App ， App 分享的链接虽然可以跳转，但</description>
       
     </item>
     
@@ -597,19 +610,6 @@
       <guid>https://bigshans.github.io/post/%E5%AE%9E%E7%94%A8%E4%B8%8E%E5%AE%9E%E8%B7%B5/</guid>
       
       <description>对实用主义实用的批判 对于实用性的反思我们可以窥见所谓实用主义的反实践内核。 实用主义带给我们最大的不满在于，实用这个概念本身。我们如何得出一个</description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>gRPC vs RESTful</title>
-      <link>https://bigshans.github.io/post/grpc-vs-restful/</link>
-      <pubDate>Wed, 22 Jun 2022 23:09:18 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/grpc-vs-restful/</guid>
-      
-      <description>gRPC 和 RESTful 的比较是两套 API 风格的比较。虽然 gRPC 采取了 HTTP2 ，但这并不代表 RESTful 不能基于 HTTP2 ，但 RESTful 也可以采用 HTTP1 ，这是因为二者的着眼点有所不同。 gRPC 采用了二进制的方</description>
       
     </item>
     
