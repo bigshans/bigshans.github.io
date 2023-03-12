@@ -179,6 +179,31 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/tagged-template-string/">JavaScript 的标签模板字符串</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-12-16 </span>
+      <div class="post-category">
+          <a href="/categories/javascript/"> JavaScript </a>
+          </div>
+        <span class="more-meta"> 约 381 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+    
+      标签模板是个看起来很 Magic 的语法，写起来像是这样。 console.log`Hello, World!`; // Output: [&amp;#34;Hello, World!&amp;#34;] 实际上，这里的模板标签被转换成这样的一句调用。 console.log.call(console, [&amp;#39;Hello, World!&amp;#39;]); 如果我们有用变量的话， const name = &amp;#39;world&amp;#39;;
+    
+    </div>
+    <div class="read-more">
+      <a href="/post/tagged-template-string/" class="read-more-link">阅读更多 »</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/await%E7%9A%84%E8%83%8C%E5%90%8E/">await 的背后</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2022-12-15 </span>
@@ -348,31 +373,6 @@
     </div>
     <div class="read-more">
       <a href="/post/a-critique-of-gnu/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/postgre-inheritance/">PostgreSQL 继承的实现</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-09-29 </span>
-      <div class="post-category">
-          <a href="/categories/postgresql/"> PostgreSQL </a>
-          </div>
-        <span class="more-meta"> 约 273 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-    
-      PostgreSQL 的继承一般都被用来分区。 PostgreSQL 的分区实际上就是用继承实现的，硬要对比起来，就是继承要比单纯分区要灵活很多。 PostgreSQL 继承之后，子表和父表是两张表，仅仅
-    
-    </div>
-    <div class="read-more">
-      <a href="/post/postgre-inheritance/" class="read-more-link">阅读更多 »</a>
     </div>
   </div>
 </article>

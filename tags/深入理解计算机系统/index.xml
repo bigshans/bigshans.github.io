@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>深入理解计算机系统 on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</link>
+    <description>Recent content in 深入理解计算机系统 on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Sun, 12 Mar 2023 22:15:45 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Attack Lab 一二题题解</title>
+      <link>https://bigshans.github.io/post/attack-lab%E4%B8%80%E4%BA%8C%E9%A2%98%E9%A2%98%E8%A7%A3/</link>
+      <pubDate>Sun, 12 Mar 2023 22:15:45 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/attack-lab%E4%B8%80%E4%BA%8C%E9%A2%98%E9%A2%98%E8%A7%A3/</guid>
+      <description>最近看深入理解计算机系统的视频，对他们的 Attack Lab 非常感兴趣，于是就找到程序做了一下，感觉还是蛮有意思的。代码和程序需要在 cmu 的网站上下载。下载后解</description>
+    </item>
+    
+  </channel>
+</rss>

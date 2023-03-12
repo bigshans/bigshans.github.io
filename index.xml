@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 28 Feb 2023 17:57:44 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Mar 2023 22:15:45 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[置顶] 关于本博客</title>
@@ -30,6 +30,19 @@
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch</description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Attack Lab 一二题题解</title>
+      <link>https://bigshans.github.io/post/attack-lab%E4%B8%80%E4%BA%8C%E9%A2%98%E9%A2%98%E8%A7%A3/</link>
+      <pubDate>Sun, 12 Mar 2023 22:15:45 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/attack-lab%E4%B8%80%E4%BA%8C%E9%A2%98%E9%A2%98%E8%A7%A3/</guid>
+      
+      <description>最近看深入理解计算机系统的视频，对他们的 Attack Lab 非常感兴趣，于是就找到程序做了一下，感觉还是蛮有意思的。代码和程序需要在 cmu 的网站上下载。下载后解</description>
       
     </item>
     
@@ -597,19 +610,6 @@
       <guid>https://bigshans.github.io/post/critical-outline/</guid>
       
       <description>因为经常性会有思想在我的头脑里出现但理不出文章，草率写文章也不太好，所以就一个地方单独记录。 开发杂谈 关于规范，如果我们指定了一个规范，就要考</description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>实用与实践</title>
-      <link>https://bigshans.github.io/post/%E5%AE%9E%E7%94%A8%E4%B8%8E%E5%AE%9E%E8%B7%B5/</link>
-      <pubDate>Thu, 23 Jun 2022 21:29:23 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E5%AE%9E%E7%94%A8%E4%B8%8E%E5%AE%9E%E8%B7%B5/</guid>
-      
-      <description>对实用主义实用的批判 对于实用性的反思我们可以窥见所谓实用主义的反实践内核。 实用主义带给我们最大的不满在于，实用这个概念本身。我们如何得出一个</description>
       
     </item>
     
