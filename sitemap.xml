@@ -16,35 +16,56 @@
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/post/attack-lab%E4%B8%80%E4%BA%8C%E9%A2%98%E9%A2%98%E8%A7%A3/</loc>
-    <lastmod>2023-03-12T22:15:45+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2023-03-12T22:15:45+08:00</lastmod>
+    <lastmod>2023-03-13T14:34:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2023-03-12T22:15:45+08:00</lastmod>
+    <lastmod>2023-03-13T14:34:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2023-03-12T22:15:45+08:00</lastmod>
+    <lastmod>2023-03-13T14:34:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/tags/</loc>
+    <lastmod>2023-03-13T14:34:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/dont-optimize-requirements-too-early/</loc>
+    <lastmod>2023-03-13T14:34:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/</loc>
+    <lastmod>2023-03-13T14:34:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/</loc>
+    <lastmod>2023-03-13T14:34:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/attack-lab%E4%B8%80%E4%BA%8C%E9%A2%98%E9%A2%98%E8%A7%A3/</loc>
     <lastmod>2023-03-12T22:15:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -67,20 +88,6 @@
   <url>
     <loc>https://bigshans.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2023-03-12T22:15:45+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/</loc>
-    <lastmod>2023-02-28T17:57:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/</loc>
-    <lastmod>2023-02-28T17:57:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

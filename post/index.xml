@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 12 Mar 2023 22:15:45 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Mar 2023 14:34:09 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch</description>
+    </item>
+    
+    <item>
+      <title>不要过早地优化需求</title>
+      <link>https://bigshans.github.io/post/dont-optimize-requirements-too-early/</link>
+      <pubDate>Mon, 13 Mar 2023 14:34:09 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/dont-optimize-requirements-too-early/</guid>
+      <description>开发界有一句话：“不要做过早优化。”这句话同样适用于产品经理。 我们不应当认为用户的需求背后总存在一个根本性的需求，这会我把我们引入误区。比如</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/notion-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
       <description>以前我其实听说过 Notion ，也注册帐号尝试了一下，但由于过于复杂所以放弃了。不过最近我又开始使用了，而且发现上手之后感觉还不错，所以在此讲一下我的使</description>
-    </item>
-    
-    <item>
-      <title>批判纲要</title>
-      <link>https://bigshans.github.io/post/critical-outline/</link>
-      <pubDate>Fri, 24 Jun 2022 13:49:09 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/critical-outline/</guid>
-      <description>因为经常性会有思想在我的头脑里出现但理不出文章，草率写文章也不太好，所以就一个地方单独记录。 开发杂谈 关于规范，如果我们指定了一个规范，就要考</description>
     </item>
     
   </channel>
