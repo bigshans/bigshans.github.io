@@ -51,12 +51,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigshans.github.io/post/node%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2023-02-09T13:35:35+08:00" />
-<meta property="article:modified_time" content="2023-02-09T13:35:35+08:00" />
+<meta property="article:modified_time" content="2023-03-16T02:58:06+00:00" />
 
 <meta itemprop="name" content="Node 事件循环">
 <meta itemprop="description" content="JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去"><meta itemprop="datePublished" content="2023-02-09T13:35:35+08:00" />
-<meta itemprop="dateModified" content="2023-02-09T13:35:35+08:00" />
-<meta itemprop="wordCount" content="874">
+<meta itemprop="dateModified" content="2023-03-16T02:58:06+00:00" />
+<meta itemprop="wordCount" content="972">
 <meta itemprop="keywords" content="node," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Node 事件循环"/>
 <meta name="twitter:description" content="JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去"/>
@@ -189,7 +189,7 @@
         <div class="post-category">
             <a href="/categories/node/"> node </a>
             </div>
-          <span class="more-meta"> 约 874 字 </span>
+          <span class="more-meta"> 约 972 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
@@ -231,24 +231,33 @@ Runtime 之间的事件循环存在较大的差别，比如说，之前浏览器
 （空闲），但实际上是非常忙碌的，因此有人也提议叫“spin”。</p>
 <p>prepare 和 check 部分其实相对类似，那么 idle 、 prepare 和 check
 有什么用？</p>
-<p>idle 、 prepare 和 check 在事实上组成而观察者模式，由 idle
-进行监听，比如说监听到需要 IO 了，就交给 prepare 进行准备，此时 prepare
-将会准备好回调，并准备好下一步的 poll 。如果 poll 成功了，将会在 check
-时挂载上回调函数，等到下一个循环 pending 时调用。 libuv
-在阐述这部分的时候，讲得并不详细，因为这部分内容在它过去的“老父亲” ——
-libev 身上。</p>
-<p>至于 libev 为什么要分阶段，这就涉及到 libevent 和 libev/libuv
-设计思想上的区别， libevent
-给予了编程人员更大的编程自由，但同时也大大增加了处理事件循环时的心智负担。
-libev 和 libuv 则简化了这个模型，而 libuv
-进一步简化，放弃了优先级，改为顺序处理。</p>
-<p>从 Node 的事件循环模型我们可以发现一个问题，就是在 Node
-的设计下，我们很难对 IO 进行扩展，因为这部分被 libuv
-封死了，由于封装得太好，反而没有太多底层的空间，即使你用 C++
-也难改变。由于 libuv，使得 Node
-的并发只能考虑多进程，而多个进程沟通其实非常困难，且效率低下，充分利用
-CPU 也只能在一个非常低的层次，只能说 Node
-在大型应用上面潜力确实不高。</p>
+<p>我们直接观察 Node 的实现大概就能知道一些。</p>
+<p><code>idle</code> 阶段放在回调函数之后， Node 在这一阶段主要放了诸如
+GC 之类的事情，这部分是内部的，且每次都会被调用。之所以叫
+<code>idle</code>
+也是因为这里执行的回调是每次都执行但不知道放哪里好，就放在了一切回调完成之后。但这个也不是一个好的命名。</p>
+<p><code>prepare</code> 主要是处理在 <code>poll</code>
+阶段之前的一些准备工作，有回调函数到这里了就会立刻执行完成，如果有 I/O
+事件需要执行，就做一些准备工作。</p>
+<p><code>check</code> 主要是处理 I/O 完成之后，收集 <code>poll</code>
+的结果，绑定到回调函数上的。</p>
+<p><code>idle</code> 、 <code>prepare</code> 和 <code>check</code>
+三者都是观察者，这一点也可以从 libev 的文档里知道。</p>
+<blockquote>
+<p>ev_idle 观察者已经确定你没有更好的事情要做。</p>
+</blockquote>
+<blockquote>
+<p>所有 ev_prepare 观察者都在 ev_run 开始收集新事件之前调用，并且所有
+ev_check 观察者在 ev_run
+收集它们之后排队（未调用），但在它排队任何接收到的事件的回调之前。这意味着
+ev_prepare
+观察者是在事件循环休眠或轮询新事件之前调用的最后一个观察者，并且
+ev_check
+观察者将在事件循环迭代中的任何其他具有相同或较低优先级的观察者之前被调用。</p>
+<p>两种观察者类型的回调可以像他们想要的那样开始和停止所有观察者，并且所有观察者都将被考虑在内（例如，ev_prepare
+观察者可能启动空闲观察者以防止 ev_run 阻止）。</p>
+</blockquote>
+<p>把 ev 换成 uv 也是一样的，毕竟 <code>libev</code> 是老父亲嘛！</p>
 
 
 
@@ -262,7 +271,7 @@ CPU 也只能在一个非常低的层次，只能说 Node
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2023-02-09
+        2023-03-16
         
     </span>
   </p>
