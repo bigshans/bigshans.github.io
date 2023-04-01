@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 13 Mar 2023 14:34:09 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Apr 2023 00:15:40 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[置顶] 关于本博客</title>
@@ -30,6 +30,19 @@
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch</description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>仇男和厌女</title>
+      <link>https://bigshans.github.io/post/%E4%BB%87%E7%94%B7%E5%92%8C%E5%8E%8C%E5%A5%B3/</link>
+      <pubDate>Sat, 01 Apr 2023 00:15:40 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E4%BB%87%E7%94%B7%E5%92%8C%E5%8E%8C%E5%A5%B3/</guid>
+      
+      <description>关于女性主义的问题，我本来是不想提的，一方面我一直在避免身份政治，另一方面我对这方面也是了解有限。但现在我还是讲一点吧，表达一些我自己的看法</description>
       
     </item>
     
@@ -597,19 +610,6 @@
       <guid>https://bigshans.github.io/post/%E8%A7%A3%E4%B8%8D%E6%82%A3%E5%AF%A1%E8%80%8C%E6%82%A3%E4%B8%8D%E5%9D%87/</guid>
       
       <description>现代人按照平均主义去或者公平公正去理解，会觉得这句话很怪，因为“寡”与“均”似乎没有什么关联，而应该作“不患贫而患不均”才对。 但古代经学家并</description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>Notion 使用体验</title>
-      <link>https://bigshans.github.io/post/notion-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
-      <pubDate>Sat, 02 Jul 2022 20:07:05 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/notion-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
-      
-      <description>以前我其实听说过 Notion ，也注册帐号尝试了一下，但由于过于复杂所以放弃了。不过最近我又开始使用了，而且发现上手之后感觉还不错，所以在此讲一下我的使</description>
       
     </item>
     
