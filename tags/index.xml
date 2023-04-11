@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 13 Mar 2023 14:34:09 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Apr 2023 23:46:02 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>思辨</title>
+      <link>https://bigshans.github.io/tags/%E6%80%9D%E8%BE%A8/</link>
+      <pubDate>Tue, 11 Apr 2023 23:46:02 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/%E6%80%9D%E8%BE%A8/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>开发杂谈</title>
       <link>https://bigshans.github.io/tags/%E5%BC%80%E5%8F%91%E6%9D%82%E8%B0%88/</link>
@@ -158,15 +167,6 @@
       <pubDate>Sun, 13 Nov 2022 23:16:38 +0800</pubDate>
       
       <guid>https://bigshans.github.io/tags/hack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>思辨</title>
-      <link>https://bigshans.github.io/tags/%E6%80%9D%E8%BE%A8/</link>
-      <pubDate>Mon, 17 Oct 2022 00:18:38 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/%E6%80%9D%E8%BE%A8/</guid>
       <description></description>
     </item>
     
