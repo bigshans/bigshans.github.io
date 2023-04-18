@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 11 Apr 2023 23:46:02 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Apr 2023 01:30:05 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[置顶] 关于本博客</title>
@@ -32,6 +32,8 @@
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch</description>
       
     </item>
+    
+    
     
     
     
@@ -597,19 +599,6 @@
       <guid>https://bigshans.github.io/post/%E4%BA%BA-%E7%AE%A1%E7%90%86%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</guid>
       
       <description>敏捷开发本质上是后福特主义在软件工程方面的实践，两者在组织管理方面的理念简直如出一辙。事实上，在欧美企业大量转向后福特的管理制度之后，敏捷的</description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>解“不患寡而患不均”</title>
-      <link>https://bigshans.github.io/post/%E8%A7%A3%E4%B8%8D%E6%82%A3%E5%AF%A1%E8%80%8C%E6%82%A3%E4%B8%8D%E5%9D%87/</link>
-      <pubDate>Thu, 07 Jul 2022 00:27:31 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E8%A7%A3%E4%B8%8D%E6%82%A3%E5%AF%A1%E8%80%8C%E6%82%A3%E4%B8%8D%E5%9D%87/</guid>
-      
-      <description>现代人按照平均主义去或者公平公正去理解，会觉得这句话很怪，因为“寡”与“均”似乎没有什么关联，而应该作“不患贫而患不均”才对。 但古代经学家并</description>
       
     </item>
     
