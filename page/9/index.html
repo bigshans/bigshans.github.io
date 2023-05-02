@@ -178,6 +178,31 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/">NodeJs 启动代码解析（一）</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-05-06 </span>
+      <div class="post-category">
+          <a href="/categories/nodejs/"> nodejs </a>
+          </div>
+        <span class="more-meta"> 约 1100 字 </span>
+        <span class="more-meta"> 预计阅读 3 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+    
+      NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //
+    
+    </div>
+    <div class="read-more">
+      <a href="/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/" class="read-more-link">阅读更多 »</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/%E5%85%B3%E4%BA%8Eip%E6%89%80%E5%B1%9E%E5%9C%B0%E7%9A%84%E5%85%AC%E5%BC%80/">关于 IP 所属地的公开</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2022-05-04 </span>
@@ -347,31 +372,6 @@
     </div>
     <div class="read-more">
       <a href="/post/god-is-dead/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/onset-diary/">发病日记</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-03-29 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%8F%91%E7%97%85%E6%97%A5%E8%AE%B0/"> 发病日记 </a>
-          </div>
-        <span class="more-meta"> 约 850 字 </span>
-        <span class="more-meta"> 预计阅读 2 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-    
-      最近在听 One Last Kiss ，我很喜欢，甚至现在也在听，因为很好哭。然而我现在哭不出来，明明之前我难过得想要嚎啕，然而在一阵不可抑制的掩面后，痛苦减轻了。
-    
-    </div>
-    <div class="read-more">
-      <a href="/post/onset-diary/" class="read-more-link">阅读更多 »</a>
     </div>
   </div>
 </article>

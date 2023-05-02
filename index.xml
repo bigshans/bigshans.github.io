@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 19 Apr 2023 01:30:05 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 May 2023 16:37:34 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[置顶] 关于本博客</title>
@@ -30,6 +30,19 @@
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch</description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>目前为止的生活</title>
+      <link>https://bigshans.github.io/post/%E7%9B%AE%E5%89%8D%E4%B8%BA%E6%AD%A2%E7%9A%84%E7%94%9F%E6%B4%BB/</link>
+      <pubDate>Tue, 02 May 2023 16:37:34 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E7%9B%AE%E5%89%8D%E4%B8%BA%E6%AD%A2%E7%9A%84%E7%94%9F%E6%B4%BB/</guid>
+      
+      <description>真是好久没有在电脑上码字了。最近下腰部莫名的疼痛，去医院看了一下，说问题不大，开了一些药让我回去吃。现在差不多一周多了，好也是好得差不多了。</description>
       
     </item>
     
@@ -586,19 +599,6 @@
       <guid>https://bigshans.github.io/post/%E5%AD%98%E5%9C%A8%E8%AE%BA%E6%8F%90%E7%BA%B2/</guid>
       
       <description>人在世界上，如同水在水中。 意识不等于主体，人的主体就是整个人本身。因为在认识之中，整个人都投入到了认识之中。 人是不可分割的。 意识是人的一种官</description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>人、管理与软件开发——从敏捷开发谈起</title>
-      <link>https://bigshans.github.io/post/%E4%BA%BA-%E7%AE%A1%E7%90%86%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
-      <pubDate>Thu, 07 Jul 2022 16:21:41 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E4%BA%BA-%E7%AE%A1%E7%90%86%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</guid>
-      
-      <description>敏捷开发本质上是后福特主义在软件工程方面的实践，两者在组织管理方面的理念简直如出一辙。事实上，在欧美企业大量转向后福特的管理制度之后，敏捷的</description>
       
     </item>
     
