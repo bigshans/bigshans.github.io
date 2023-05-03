@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 02 May 2023 16:37:34 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 May 2023 22:20:02 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>社会</title>
+      <link>https://bigshans.github.io/categories/%E7%A4%BE%E4%BC%9A/</link>
+      <pubDate>Wed, 03 May 2023 22:20:02 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/%E7%A4%BE%E4%BC%9A/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>随笔</title>
       <link>https://bigshans.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
@@ -446,15 +455,6 @@
       <pubDate>Thu, 26 Aug 2021 15:43:34 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/vue/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>v8</title>
-      <link>https://bigshans.github.io/categories/v8/</link>
-      <pubDate>Sun, 11 Jul 2021 15:14:22 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/v8/</guid>
       <description></description>
     </item>
     
