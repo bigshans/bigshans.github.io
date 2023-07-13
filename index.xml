@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 17 Jun 2023 11:48:41 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Jul 2023 17:16:02 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[置顶] 关于本博客</title>
@@ -30,6 +30,19 @@
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch</description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Obsidian 使用体验</title>
+      <link>https://bigshans.github.io/post/obsidian-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Thu, 13 Jul 2023 17:16:02 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/obsidian-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
+      
+      <description>因为已经用了一段时间的 Obsidian ，所以整体说一下，包括使用的手感和我自己的 workflow 。 Obsidian 与 Logseq 同属于双链编辑器，我最早使用的是 Logseq ，因为 Obsidian 总是脱手，用起来很别扭</description>
       
     </item>
     
@@ -586,19 +599,6 @@
       <guid>https://bigshans.github.io/post/trivial/</guid>
       
       <description>Makefile .PHONY 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。 Joi joi.string().allow(&#39;&#39;).allow(null).empty(&#39;&#39;).optional() ，允许字符串为空。 pacman 以前记录过一遍，但太隐慝了，在此特意提出。 pacman -Ql &amp;lt;package-name&amp;gt;</description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>在 Linux 上用 C 写一个守护进程</title>
-      <link>https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/</link>
-      <pubDate>Sat, 30 Jul 2022 23:26:25 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/</guid>
-      
-      <description>因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方</description>
       
     </item>
     

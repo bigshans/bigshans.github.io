@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 04 Sep 2022 19:32:36 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Jul 2023 17:16:02 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Obsidian 使用体验</title>
+      <link>https://bigshans.github.io/post/obsidian-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Thu, 13 Jul 2023 17:16:02 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/obsidian-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
+      <description>因为已经用了一段时间的 Obsidian ，所以整体说一下，包括使用的手感和我自己的 workflow 。 Obsidian 与 Logseq 同属于双链编辑器，我最早使用的是 Logseq ，因为 Obsidian 总是脱手，用起来很别扭</description>
+    </item>
+    
     <item>
       <title>使用 Firefox PWA</title>
       <link>https://bigshans.github.io/post/firefox-pwa/</link>
