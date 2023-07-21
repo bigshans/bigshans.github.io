@@ -140,7 +140,7 @@
       <pubDate>Fri, 17 Feb 2023 14:41:01 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/private-blog-page/</guid>
-      <description>之前我看过某位的博客，发现他的有些博文是前端加密处理的。简单来说，就是后端提前将页面加密好，由前端输入密码来进行解密，如果密码解开失败就会报</description>
+      <description>做了一些更新，现在把 private 单独放到一个路径下面，同时把私人也从 post 列表移除，从另一个地址进去。如此页面的观感就好多了。同时也对整个处理的过程进行了</description>
     </item>
     
     <item>
