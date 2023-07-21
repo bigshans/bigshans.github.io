@@ -1,40 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>nodejs on Bigshans&#39; Blog</title>
+    <title>Nodejs on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/nodejs/</link>
-    <description>Recent content in nodejs on Bigshans&#39; Blog</description>
+    <description>Recent content in Nodejs on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 15 Dec 2022 21:49:39 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>await 的背后</title>
-      <link>https://bigshans.github.io/post/await%E7%9A%84%E8%83%8C%E5%90%8E/</link>
-      <pubDate>Thu, 15 Dec 2022 21:49:39 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/await%E7%9A%84%E8%83%8C%E5%90%8E/</guid>
-      <description>我们一般会认为 async/await 是 Promise 的语法糖，实际上也没有错。但在 Node 10 的时候，一个 await 会产生三个微任务，导致单个 await 的性能远不如 Promise ，但在 Node 12 时， V8 团队称，其性能</description>
-    </item>
-    
-    <item>
-      <title>用 node 实现一个简单的 http 代理</title>
-      <link>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</link>
-      <pubDate>Mon, 12 Dec 2022 22:52:19 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</guid>
-      <description>http 代理可分为两种，一种是普通的代理，作为中间人传递两边的信息；另一种则是隧道的方式。 普通代理 const http = require(&amp;#39;http&amp;#39;); const url = require(&amp;#39;url&amp;#39;); function request(cReq, cRes) { const u = url.parse(cReq.url); const options = { host: u.hostname, port: u.port</description>
-    </item>
-    
-    <item>
-      <title>NodeJs 启动代码解析（一）</title>
-      <link>https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/</link>
-      <pubDate>Fri, 06 May 2022 10:04:22 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/</guid>
-      <description>NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //</description>
-    </item>
-    
+    <lastBuildDate>Tue, 24 Aug 2021 18:20:53 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Sharp 压缩图片、改变图片大小</title>
       <link>https://bigshans.github.io/post/sharp/</link>
@@ -42,62 +15,6 @@
       
       <guid>https://bigshans.github.io/post/sharp/</guid>
       <description>因为业务需要就写了个图片压缩服务，顺带改变大小，因为用的是 nodejs ，于是我就选择了 sharp ，基于 libvips。 代码非常好写： function resize(input, x, y) { return sharp(input) .resize(x, y, { fit: &#39;inside&#39; })</description>
-    </item>
-    
-    <item>
-      <title>npm 打包指南</title>
-      <link>https://bigshans.github.io/post/npm-pack-guide/</link>
-      <pubDate>Sun, 21 Mar 2021 11:53:14 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/npm-pack-guide/</guid>
-      <description>最近在修改一些很长时间无人维护的包，估计包作者都不维护了，于是我重新搞了一份传到了 npm 上，有兴趣的可以看一下：log4js-rabbitmq-</description>
-    </item>
-    
-    <item>
-      <title>使用 jest 和 supertest 进行接口测试</title>
-      <link>https://bigshans.github.io/post/jest-api-test-supertest/</link>
-      <pubDate>Sun, 28 Feb 2021 17:04:24 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/jest-api-test-supertest/</guid>
-      <description>最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。 登录测试 有些</description>
-    </item>
-    
-    <item>
-      <title>写个简单的 QOS</title>
-      <link>https://bigshans.github.io/post/qosnodejs/</link>
-      <pubDate>Mon, 27 Jan 2020 21:58:14 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/qosnodejs/</guid>
-      <description>&lt;p&gt;最近客户端发生了 bug ，导致我们的服务被疯狂请求， QPS 高达 1000 ！数据压力很大，tjt 让我写个 qos ，就是限制接口访问次数，我粗略写了个，还可以。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>服务器故障日志</title>
-      <link>https://bigshans.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97/</link>
-      <pubDate>Sun, 15 Dec 2019 21:12:21 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97/</guid>
-      <description>&lt;p&gt;小公司的后端有时候就不得不兼任多职，既是后端又是运维。现在又差不多是全栈了，这样下去说不定会怎么样呢！说回正题，这回我负责的客服系统出了故障，虽然对用户影响不大，但对客服影响很大（亲爱的客服小姐姐，对不起），客服无法正常工作了。全靠 CTO 调试数据库发现问题所在。虽然在公司的 wiki 上小记一笔，但公司上写得还是严肃许多的。这里我就说话随意多了。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Express 学习(一)</title>
-      <link>https://bigshans.github.io/post/nodejs-express-1/</link>
-      <pubDate>Thu, 27 Jun 2019 13:48:27 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/nodejs-express-1/</guid>
-      <description>&lt;p&gt;公司后端采用了 nodejs + express 环境，最近在看，现在记录一点笔记。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>nodejs 的 import</title>
-      <link>https://bigshans.github.io/post/nodejs-es6-import/</link>
-      <pubDate>Sun, 26 Aug 2018 20:29:41 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/nodejs-es6-import/</guid>
-      <description>&lt;p&gt;nodejs 对 es 6 的支持目前并不完全，直接使用 import 不行，exports 也不行，可以用 babel 之类的编译， nodejs 10 可以尝试加上 flag ： &amp;ndash;experimental-modules。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;node --experimental-modules my-app.mjs
-&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>

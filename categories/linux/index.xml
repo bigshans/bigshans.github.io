@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on Bigshans&#39; Blog</title>
+    <title>Linux on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/linux/</link>
-    <description>Recent content in linux on Bigshans&#39; Blog</description>
+    <description>Recent content in Linux on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
@@ -36,12 +36,21 @@
     </item>
     
     <item>
-      <title>搞定了几个 Gitea 相关的问题</title>
-      <link>https://bigshans.github.io/post/gitea-config/</link>
-      <pubDate>Sat, 19 Mar 2022 00:52:32 +0800</pubDate>
+      <title>琐碎备录</title>
+      <link>https://bigshans.github.io/post/trivial/</link>
+      <pubDate>Fri, 05 Aug 2022 16:46:36 +0800</pubDate>
       
-      <guid>https://bigshans.github.io/post/gitea-config/</guid>
-      <description>Gitea 可以同步 Github 仓库之后，让我觉得仓库管理有很大的便利。因为我的很多代码毕竟保存在 Github 上，允许同步 Github 免去了我很多两头跑的工作。 但是有几个我还是不太</description>
+      <guid>https://bigshans.github.io/post/trivial/</guid>
+      <description>Makefile .PHONY 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。 Joi joi.string().allow(&#39;&#39;).allow(null).empty(&#39;&#39;).optional() ，允许字符串为空。 pacman 以前记录过一遍，但太隐慝了，在此特意提出。 pacman -Ql &amp;lt;package-name&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>在 Linux 上用 C 写一个守护进程</title>
+      <link>https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/</link>
+      <pubDate>Sat, 30 Jul 2022 23:26:25 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/</guid>
+      <description>因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方</description>
     </item>
     
     <item>
@@ -90,33 +99,6 @@
     </item>
     
     <item>
-      <title>给 Hugo 增加一些 Pandoc 支持增强</title>
-      <link>https://bigshans.github.io/post/hugo-patch-with-pandoc/</link>
-      <pubDate>Fri, 22 Oct 2021 13:46:00 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/hugo-patch-with-pandoc/</guid>
-      <description>Hugo 可以使用不同的 markdown 引擎来解析 md ，pandoc 就是其中之一。不过问题在于，使用 pandoc 就不会有 TOC ，如果在意这个的话使用起来还是挺麻烦的。 缘起 我个人使</description>
-    </item>
-    
-    <item>
-      <title>安装 Collabora Office</title>
-      <link>https://bigshans.github.io/post/collabora-install/</link>
-      <pubDate>Thu, 14 Oct 2021 09:47:19 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/collabora-install/</guid>
-      <description>最近在配置 Nextcloud 的 Office 功能，尝试了一下 OnlyOffice ，实在是太不稳定了。我最终选择了 Collabora Office 作为替代。 首先，极其不推荐使用 Docker 部署，因为 Docker 版已经好久没维护了，其次，</description>
-    </item>
-    
-    <item>
-      <title>Minikube 简介</title>
-      <link>https://bigshans.github.io/post/minikube-introduction/</link>
-      <pubDate>Wed, 22 Sep 2021 15:47:06 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/minikube-introduction/</guid>
-      <description>k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未</description>
-    </item>
-    
-    <item>
       <title>为什么使用 zsh 以及为什么这样使用</title>
       <link>https://bigshans.github.io/post/why-and-how-use-zsh-this-way/</link>
       <pubDate>Wed, 22 Sep 2021 01:08:35 +0800</pubDate>
@@ -135,21 +117,21 @@
     </item>
     
     <item>
-      <title>使用 yuzu 模拟器玩《月姬R》</title>
-      <link>https://bigshans.github.io/post/yuzu-setup/</link>
-      <pubDate>Sun, 12 Sep 2021 10:53:17 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/yuzu-setup/</guid>
-      <description>最近想要玩《月姬R》。目前，《月姬R》发布在了 PS4 和 Switch 上面，所以我在想能不能用模拟器去运行《月姬R》。简单查找了一下，发现了 yuzu ，嗯， Linux 下可运行</description>
-    </item>
-    
-    <item>
       <title>安装 Anbox for Arch</title>
       <link>https://bigshans.github.io/post/anbox-install-guide/</link>
       <pubDate>Sat, 24 Jul 2021 10:47:29 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/anbox-install-guide/</guid>
       <description>台风天写这篇文章。 最近更新了 Linux 的内核，然后日常发布合并，日常逛 Issues 的时候，发现有人提出要 Anbox 的需求。Anbox 我试着安装过几次，然后每次装上都因</description>
+    </item>
+    
+    <item>
+      <title>为什么选择 Linux 桌面</title>
+      <link>https://bigshans.github.io/post/why-choose-linux-desktop/</link>
+      <pubDate>Sun, 11 Apr 2021 18:18:57 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/why-choose-linux-desktop/</guid>
+      <description>今天算是创作欲爆棚了，想到了一点东西就又写一点。今天来探讨一下这个话题，为什么选择 Linux 桌面。 为什么选择 Linux 市面上日用消费者最多的操作系统，主要是</description>
     </item>
     
     <item>
@@ -180,12 +162,31 @@
     </item>
     
     <item>
+      <title>infinality font 字体渲染安装</title>
+      <link>https://bigshans.github.io/post/infinality-font/</link>
+      <pubDate>Sun, 03 Nov 2019 10:23:43 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/infinality-font/</guid>
+      <description>&lt;p&gt;最近在工作电脑上安装了 deepin ，发现字体渲染很糟糕，于是在想起了 infinality 补丁，由于我个人电脑上是 manjaro ， arch 源里就有该包，所以我查找一下，发现 Debian 系的也有打包，成功安装之后，特此记录一下。&lt;/p&gt;
+&lt;p&gt;原文链接：&lt;a href=&#34;https://www.linuxdashen.com/debian8%E5%AE%89%E8%A3%85infinality%E6%94%B9%E5%96%84%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%EF%BC%8C%E5%AE%89%E8%A3%85ubuntu%E5%AD%97%E4%BD%93&#34;&gt;https://www.linuxdashen.com/debian8安装infinality改善字体渲染，安装ubuntu字体&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>在 Debian 下使用 PPA</title>
       <link>https://bigshans.github.io/post/linux-ppa-add/</link>
       <pubDate>Wed, 26 Jun 2019 11:24:44 +0000</pubDate>
       
       <guid>https://bigshans.github.io/post/linux-ppa-add/</guid>
       <description>&lt;p&gt;仅仅使用 Debian 源里的软件包并不是很够，所以不可避免的，我们会使用一些第三方的软件源，比如 Arch 下的 aur ， Ubuntu 的 PPA ，等等。由于 Ubuntu 是 Debian 系的发行版，两者的包管理是相通的，所以我们可以借用一下 Ubuntu 的 PPA 来扩充我们的软件库。然而，两者毕竟不是同一发行版，所以还是会有很多的差别，我们并不能保证两者的软件包一定能通用，毕竟打包并不是针对 Debian 的，不过， Ubuntu 能用的， Debian 基本能用，所以，把 Ubuntu 的 ppa 拉过来还是很有意义的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在linux 上安装 ssr</title>
+      <link>https://bigshans.github.io/post/ssr-install/</link>
+      <pubDate>Wed, 28 Nov 2018 15:03:05 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/ssr-install/</guid>
+      <description>&lt;p&gt;一直以来我都是用谷歌访问助手来访问谷歌的，不过有时候我还想要上推特和 YouTube ，虽然不经常吧，但一旦想要翻墙的时候还是很麻烦的。翻墙的方法有很多，借住 chrome 的插件可以完成一些，但是不完全，而且我要想白嫖的，那些收费的也未必有免费的好用。不过最近我的几个插件都不好用，于是我决定再增加一些方法。我安装了 ss 来翻墙。我用的是 Debian 的社区源，里面有 ss-qt5 可以用。我从 google+ 上找到了一个 ss 的账号尝试了一下，挺快的。不过只有这样一个账号我并不放心，于是有尝试找了找各种白嫖机场。虽然机场都有但是大多是 ssr 的，于是我决定下个 ssr 装上。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -216,6 +217,15 @@
 问题在于我的 hostname 取成 localhost 了，所以打不开。。（下次不这样了）改个 hostname 就行。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hostnamectl set-hostname &amp;quot;myhostname&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>安装 deepin-wine 到 debian 上</title>
+      <link>https://bigshans.github.io/post/software-deepin-wine/</link>
+      <pubDate>Sun, 02 Sep 2018 19:21:21 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/software-deepin-wine/</guid>
+      <description>&lt;p&gt;我尝试了一下 &lt;a href=&#34;https://github.com/wszqkzqk/deepin-wine-ubuntu&#34;&gt;deepin-wine-ubuntu&lt;/a&gt; 项目，不过无法正常装上。所以我自己尝试了一下安装 deepin-wine 并尝试了一下 deepin 的 QQ 和 TIM 。效果还不错。&lt;/p&gt;</description>
     </item>
     
     <item>

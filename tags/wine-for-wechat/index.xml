@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wine-for-wechat on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/wine-for-wechat/</link>
+    <description>Recent content in wine-for-wechat on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Wed, 27 Jul 2022 14:05:02 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/wine-for-wechat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何使用 wine-wechat-setup</title>
+      <link>https://bigshans.github.io/post/how-to-use-wine-wechat-setup/</link>
+      <pubDate>Wed, 27 Jul 2022 14:05:02 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/how-to-use-wine-wechat-setup/</guid>
+      <description>最近升级了一下微信，好久没有这个脚本好像都不会用了。此脚本是依云姐写的，在 Archlinuxcn 源上，需要配合 wine-for-wechat 。 wine-wechat-setup 提供了一个 wechat 命令，如果你已经在本地安装了微信</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编程随笔 on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/%E7%BC%96%E7%A8%8B%E9%9A%8F%E7%AC%94/</link>
+    <description>Recent content in 编程随笔 on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Mon, 13 Mar 2023 14:34:09 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E7%BC%96%E7%A8%8B%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>不要过早地优化需求</title>
+      <link>https://bigshans.github.io/post/dont-optimize-requirements-too-early/</link>
+      <pubDate>Mon, 13 Mar 2023 14:34:09 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/dont-optimize-requirements-too-early/</guid>
+      <description>开发界有一句话：“不要做过早优化。”这句话同样适用于产品经理。 我们不应当认为用户的需求背后总存在一个根本性的需求，这会我把我们引入误区。比如</description>
+    </item>
+    
+    <item>
+      <title>core-js 的公地悲剧</title>
+      <link>https://bigshans.github.io/post/core-js%E7%9A%84%E5%85%AC%E5%9C%B0%E6%82%B2%E5%89%A7/</link>
+      <pubDate>Thu, 16 Feb 2023 00:34:50 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/core-js%E7%9A%84%E5%85%AC%E5%9C%B0%E6%82%B2%E5%89%A7/</guid>
+      <description>看完 core-js 作者的长文后，有感而发，写一点文字。 core-js 面临的问题是，由大多数人共享的东西，得到越少人的照顾。我现在依旧可以看到一些言论，对于作者这样讨</description>
+    </item>
+    
+    <item>
+      <title>谈谈 RPA</title>
+      <link>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88rpa/</link>
+      <pubDate>Wed, 15 Feb 2023 18:27:32 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88rpa/</guid>
+      <description>最近 RPA 用得比较多，我谈一下这个。 RPA 在办公室自动化方面应用极广，而对应的软件在 Windows 上也是遍地开花。为什么是在 Windows 上呢？原因也很好理解，因为 Windows 在办公</description>
+    </item>
+    
+    <item>
+      <title>中文编程不过是另一种编程语言文学化</title>
+      <link>https://bigshans.github.io/post/%E4%B8%AD%E6%96%87%E7%BC%96%E7%A8%8B%E4%B8%8D%E8%BF%87%E6%98%AF%E5%8F%A6%E4%B8%80%E7%A7%8D%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E6%96%87%E5%AD%A6%E5%8C%96/</link>
+      <pubDate>Sat, 19 Nov 2022 14:29:40 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E4%B8%AD%E6%96%87%E7%BC%96%E7%A8%8B%E4%B8%8D%E8%BF%87%E6%98%AF%E5%8F%A6%E4%B8%80%E7%A7%8D%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E6%96%87%E5%AD%A6%E5%8C%96/</guid>
+      <description>中文编程不过是另一种编程语言文学化。 首先，中文编程强调用中文是为了解决代码的可读性问题，这与编程语言文学化的思路不谋而合。 英语母语者在用英语</description>
+    </item>
+    
+    <item>
+      <title>对 GNU 的批判</title>
+      <link>https://bigshans.github.io/post/a-critique-of-gnu/</link>
+      <pubDate>Sun, 02 Oct 2022 23:31:50 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/a-critique-of-gnu/</guid>
+      <description>谈及 GNU ，我们总是称赞他们在过去，铸就了现代互联网的基础，但至于现在，则成了一种小众的趣味。这个问题比较复杂，简单来说，就是个人自由主义在面对</description>
+    </item>
+    
+    <item>
+      <title>自顶向下的 ACID</title>
+      <link>https://bigshans.github.io/post/top-down-acid/</link>
+      <pubDate>Wed, 31 Aug 2022 15:21:43 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/top-down-acid/</guid>
+      <description>ACID ，即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability），只要你接</description>
+    </item>
+    
+    <item>
+      <title>人、管理与软件开发——从敏捷开发谈起</title>
+      <link>https://bigshans.github.io/post/%E4%BA%BA-%E7%AE%A1%E7%90%86%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Thu, 07 Jul 2022 16:21:41 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E4%BA%BA-%E7%AE%A1%E7%90%86%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</guid>
+      <description>敏捷开发本质上是后福特主义在软件工程方面的实践，两者在组织管理方面的理念简直如出一辙。事实上，在欧美企业大量转向后福特的管理制度之后，敏捷的</description>
+    </item>
+    
+    <item>
+      <title>gRPC vs RESTful</title>
+      <link>https://bigshans.github.io/post/grpc-vs-restful/</link>
+      <pubDate>Wed, 22 Jun 2022 23:09:18 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/grpc-vs-restful/</guid>
+      <description>gRPC 和 RESTful 的比较是两套 API 风格的比较。虽然 gRPC 采取了 HTTP2 ，但这并不代表 RESTful 不能基于 HTTP2 ，但 RESTful 也可以采用 HTTP1 ，这是因为二者的着眼点有所不同。 gRPC 采用了二进制的方</description>
+    </item>
+    
+    <item>
+      <title>现在不考虑技术什么时候考虑</title>
+      <link>https://bigshans.github.io/post/%E7%8E%B0%E5%9C%A8%E4%B8%8D%E8%80%83%E8%99%91%E6%8A%80%E6%9C%AF%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%80%83%E8%99%91/</link>
+      <pubDate>Thu, 31 Mar 2022 20:44:21 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E7%8E%B0%E5%9C%A8%E4%B8%8D%E8%80%83%E8%99%91%E6%8A%80%E6%9C%AF%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%80%83%E8%99%91/</guid>
+      <description>技术情结总是一个可以批判的东西，可以被用来批判任何不合时宜的技术优化思想，然而，此种批判也存在着滥用。对于小公司来说，还没有达到可以随意不谈</description>
+    </item>
+    
+    <item>
+      <title>开源社区需要终身仁慈的独裁者吗？</title>
+      <link>https://bigshans.github.io/post/does-open-sources-need-bdfl/</link>
+      <pubDate>Thu, 20 Jan 2022 11:31:19 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/does-open-sources-need-bdfl/</guid>
+      <description>最近随笔确实有点多，但生活其实不能只有代码，回头看看也需要将随笔分分类了。说回正题， BDFL 像是个政治名词，但实际上是用来指代某些开源软件的开发者</description>
+    </item>
+    
+    <item>
+      <title>开源正在死亡</title>
+      <link>https://bigshans.github.io/post/open-source-is-dying/</link>
+      <pubDate>Tue, 11 Jan 2022 22:50:29 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/open-source-is-dying/</guid>
+      <description>开源正在死亡，或者说，已经死亡。 起因是 Faker.js 作者破坏代码的行为，本来这种行为按我以前的肯定是会批判作者的，但我想想不对，为什么每次遇上这样的问题</description>
+    </item>
+    
+    <item>
+      <title>广为流传的程序员语录摘抄</title>
+      <link>https://bigshans.github.io/post/programer-quotes/</link>
+      <pubDate>Tue, 28 Dec 2021 11:14:45 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/programer-quotes/</guid>
+      <description>这些网上传得到处都是，一些语录真是犀利，一针见血。我在这里也是简单吐槽一下，放松放松身心。 程序员编程语录 一个好的程序员是那种过单行线马路都要</description>
+    </item>
+    
+    <item>
+      <title>函数式的骨感</title>
+      <link>https://bigshans.github.io/post/function-comment/</link>
+      <pubDate>Tue, 24 Aug 2021 17:22:43 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/function-comment/</guid>
+      <description>最近读了点 rambda 的源码。函数式是个很诱人的概念，借助函数式，你可以以十分数学的方式解决一些问题。虽然如此，函数式对于现实来说仍然过于抽象，如果我</description>
+    </item>
+    
+    <item>
+      <title>在 root 下去除 MIUI 锁屏密码</title>
+      <link>https://bigshans.github.io/post/unlock-screen-sercet/</link>
+      <pubDate>Tue, 27 Apr 2021 20:20:24 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/unlock-screen-sercet/</guid>
+      <description>因为 root 手机忘了锁屏密码，所以想要破解掉。因为手机已经提前 root 了，我本以为这个问题只需要搜一下就可以了，然而搜索的结果却让我大跌眼镜。使用 adb 删除</description>
+    </item>
+    
+  </channel>
+</rss>

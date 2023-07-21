@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fish on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/fish/</link>
+    <description>Recent content in Fish on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Wed, 22 Sep 2021 01:08:35 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/fish/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为什么使用 zsh 以及为什么这样使用</title>
+      <link>https://bigshans.github.io/post/why-and-how-use-zsh-this-way/</link>
+      <pubDate>Wed, 22 Sep 2021 01:08:35 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/why-and-how-use-zsh-this-way/</guid>
+      <description>我使用 zsh 作为我的默认 shell 已经很长时间了，大概是从我使用 Debian 就开始了。当初的原因其实很简单，因为强大的 Oh My Zsh ，如今我用了这么久，想要重新疏理一下，</description>
+    </item>
+    
+  </channel>
+</rss>

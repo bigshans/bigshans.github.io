@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chrome 插件 on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/chrome-%E6%8F%92%E4%BB%B6/</link>
+    <description>Recent content in Chrome 插件 on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Sun, 15 Aug 2021 14:48:54 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/chrome-%E6%8F%92%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何编写一个 Chrome 扩展</title>
+      <link>https://bigshans.github.io/post/chrome-extensions/</link>
+      <pubDate>Sun, 15 Aug 2021 14:48:54 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/chrome-extensions/</guid>
+      <description>最近工作需要用到 Chrome 扩展，于是就特意学习了一下。起初，我以为 Chrome 扩展权限挺大，操作起来应该挺方便的，但是，实际情况各种权限需要申请，而且有些操作</description>
+    </item>
+    
+  </channel>
+</rss>

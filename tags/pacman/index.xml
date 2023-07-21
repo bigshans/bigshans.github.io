@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pacman on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/pacman/</link>
+    <description>Recent content in Pacman on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Fri, 05 Aug 2022 16:46:36 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/pacman/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>琐碎备录</title>
+      <link>https://bigshans.github.io/post/trivial/</link>
+      <pubDate>Fri, 05 Aug 2022 16:46:36 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/trivial/</guid>
+      <description>Makefile .PHONY 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。 Joi joi.string().allow(&#39;&#39;).allow(null).empty(&#39;&#39;).optional() ，允许字符串为空。 pacman 以前记录过一遍，但太隐慝了，在此特意提出。 pacman -Ql &amp;lt;package-name&amp;gt;</description>
+    </item>
+    
+  </channel>
+</rss>

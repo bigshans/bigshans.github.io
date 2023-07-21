@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Svelte on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/svelte/</link>
+    <description>Recent content in Svelte on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Tue, 16 Feb 2021 20:30:32 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/svelte/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用 Svelte 写个简单的 Todo</title>
+      <link>https://bigshans.github.io/post/svelte-todo/</link>
+      <pubDate>Tue, 16 Feb 2021 20:30:32 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/svelte-todo/</guid>
+      <description>官网： https://svelte.dev/ Svelte 是个新的前端框架，发展强劲。与目前主流的三大框架不同的是，Svelte 不采用 vdom ，而是借助 complier 的能力，打包出最小化的包，不附带更多的 runtime</description>
+    </item>
+    
+  </channel>
+</rss>

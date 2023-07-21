@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>后端 on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/categories/%E5%90%8E%E7%AB%AF/</link>
+    <description>Recent content in 后端 on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Mon, 12 Dec 2022 22:52:19 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E5%90%8E%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用 node 实现一个简单的 http 代理</title>
+      <link>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Mon, 12 Dec 2022 22:52:19 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</guid>
+      <description>http 代理可分为两种，一种是普通的代理，作为中间人传递两边的信息；另一种则是隧道的方式。 普通代理 const http = require(&amp;#39;http&amp;#39;); const url = require(&amp;#39;url&amp;#39;); function request(cReq, cRes) { const u = url.parse(cReq.url); const options = { host: u.hostname, port: u.port</description>
+    </item>
+    
+    <item>
+      <title>Minikube 简介</title>
+      <link>https://bigshans.github.io/post/minikube-introduction/</link>
+      <pubDate>Wed, 22 Sep 2021 15:47:06 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/minikube-introduction/</guid>
+      <description>k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未</description>
+    </item>
+    
+    <item>
+      <title>使用 Sharp 压缩图片、改变图片大小</title>
+      <link>https://bigshans.github.io/post/sharp/</link>
+      <pubDate>Tue, 24 Aug 2021 18:20:53 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/sharp/</guid>
+      <description>因为业务需要就写了个图片压缩服务，顺带改变大小，因为用的是 nodejs ，于是我就选择了 sharp ，基于 libvips。 代码非常好写： function resize(input, x, y) { return sharp(input) .resize(x, y, { fit: &#39;inside&#39; })</description>
+    </item>
+    
+    <item>
+      <title>使用 Whoogle 自建搜索网站</title>
+      <link>https://bigshans.github.io/post/whoogle-self-host/</link>
+      <pubDate>Sun, 30 May 2021 03:40:00 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/whoogle-self-host/</guid>
+      <description>准确来说，Whoogle 是一个元搜索引擎，他主要将 Google 的搜索结果过滤，并去除掉其中的隐私追踪部分。与 Whoogle 差不多的另一个网站框架是 SearX ，两者都是自建</description>
+    </item>
+    
+    <item>
+      <title>使用 jest 和 supertest 进行接口测试</title>
+      <link>https://bigshans.github.io/post/jest-api-test-supertest/</link>
+      <pubDate>Sun, 28 Feb 2021 17:04:24 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/jest-api-test-supertest/</guid>
+      <description>最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。 登录测试 有些</description>
+    </item>
+    
+    <item>
+      <title>如何使用 Webhook 来实现自动部署项目</title>
+      <link>https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/</link>
+      <pubDate>Sun, 15 Nov 2020 18:30:45 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/</guid>
+      <description>自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。 在上家公司我也体验过自</description>
+    </item>
+    
+    <item>
+      <title>写个简单的 QOS</title>
+      <link>https://bigshans.github.io/post/qosnodejs/</link>
+      <pubDate>Mon, 27 Jan 2020 21:58:14 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/qosnodejs/</guid>
+      <description>&lt;p&gt;最近客户端发生了 bug ，导致我们的服务被疯狂请求， QPS 高达 1000 ！数据压力很大，tjt 让我写个 qos ，就是限制接口访问次数，我粗略写了个，还可以。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>解决 mysql 进程无法启动的问题</title>
+      <link>https://bigshans.github.io/post/mysqlfix/</link>
+      <pubDate>Sat, 18 Jan 2020 18:05:52 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/mysqlfix/</guid>
+      <description>&lt;p&gt;最近想写一点小东西，就发现自己电脑上的 mysql 出了点问题，解决之后做个小记录。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>服务器故障日志</title>
+      <link>https://bigshans.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Sun, 15 Dec 2019 21:12:21 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97/</guid>
+      <description>&lt;p&gt;小公司的后端有时候就不得不兼任多职，既是后端又是运维。现在又差不多是全栈了，这样下去说不定会怎么样呢！说回正题，这回我负责的客服系统出了故障，虽然对用户影响不大，但对客服影响很大（亲爱的客服小姐姐，对不起），客服无法正常工作了。全靠 CTO 调试数据库发现问题所在。虽然在公司的 wiki 上小记一笔，但公司上写得还是严肃许多的。这里我就说话随意多了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Express 源码阅读（一）</title>
+      <link>https://bigshans.github.io/post/node-express-source-read/</link>
+      <pubDate>Sun, 01 Dec 2019 14:55:32 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/node-express-source-read/</guid>
+      <description>&lt;p&gt;我们写一个简单的程序。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const express = require(&#39;express&#39;);
+const app = express();
+
+app.get(&#39;/&#39;, (req, res) =&amp;gt; {
+    res.end(&#39;&amp;lt;h1&amp;gt;Hello&amp;lt;/h1&amp;gt;&#39;);
+});
+
+app.listen(3000, () =&amp;gt; console.log(&#39;Connected!&#39;));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们对这段代码进行 Debug 。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>分布式锁的简单实现</title>
+      <link>https://bigshans.github.io/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/</link>
+      <pubDate>Sun, 20 Oct 2019 10:11:38 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/</guid>
+      <description>&lt;p&gt;打算每周写一篇博客，希望每周都能有新的收获。本周写的博客是我在工作中应用写的一个有趣的东西。
+我们采用 pm2 进行进程管理，我们开启了多个进程，但各个进程之间并没有交流，所以，我想要全局操作某个变量时，就会出现数据安全问题，虽然在 redis 里面单个操作是原子，但我也要保证复合操作也是原子的。但我并不使用 redis 的事务，是因为这个事务会阻塞其他操作，所以，不如在应用层上实现锁，从而不阻塞 redis 。我们虽然不是分布式系统，但是是分布式进程，所以实现也参考分布式锁。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Express 学习(一)</title>
+      <link>https://bigshans.github.io/post/nodejs-express-1/</link>
+      <pubDate>Thu, 27 Jun 2019 13:48:27 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/nodejs-express-1/</guid>
+      <description>&lt;p&gt;公司后端采用了 nodejs + express 环境，最近在看，现在记录一点笔记。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Flask 入门项目 Flaskr（二）</title>
+      <link>https://bigshans.github.io/post/python-flask-flaskr-2/</link>
+      <pubDate>Fri, 07 Dec 2018 20:47:45 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/python-flask-flaskr-2/</guid>
+      <description>&lt;p&gt;今天身体不太舒服，感冒了。不过还是照着官网大概打了一下。这个项目的主体是完成了，改天写写测试。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Flask 入门项目 Flaskr（一）</title>
+      <link>https://bigshans.github.io/post/python-flask-flaskr/</link>
+      <pubDate>Thu, 06 Dec 2018 20:31:55 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/python-flask-flaskr/</guid>
+      <description>&lt;p&gt;昨天看了看 flask ，感觉很有意思，于是上官网看看文档，文档的 quickly started 很精简，讲述了基本用法。在 1.0.2 的文档下有一个小项目，很适合拿来练手。于是尝试跟着写了一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用 OpenSSL 自建 CA</title>
+      <link>https://bigshans.github.io/post/nginx-openssl/</link>
+      <pubDate>Sat, 13 Oct 2018 12:32:10 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/nginx-openssl/</guid>
+      <description>&lt;p&gt;谷歌上找了半天终于找到了，https://www.cnblogs.com/luo630/p/9534734.html 。&lt;/p&gt;
+&lt;p&gt;当然自己动手就有点不太一样了。这个主要是为了将 pixiv nginx 的 ca 证书进行替换，不依赖于他人，也防止其他的各种问题。&lt;/p&gt;
+&lt;p&gt;下面是一些步骤总结：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>nginx 反向代理上 Pixiv（二）</title>
+      <link>https://bigshans.github.io/post/nginx-pixiv-2/</link>
+      <pubDate>Fri, 12 Oct 2018 19:02:22 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/nginx-pixiv-2/</guid>
+      <description>&lt;p&gt;这篇文章我发在 B 站了，地址是 &lt;a href=&#34;https://www.bilibili.com/read/cv1317348&#34;&gt;https://www.bilibili.com/read/cv1317348&lt;/a&gt; 。当然，这里我要讲细一点。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>nginx 反向代理上 Pixiv</title>
+      <link>https://bigshans.github.io/post/nginx-pixiv/</link>
+      <pubDate>Mon, 24 Sep 2018 15:40:34 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/nginx-pixiv/</guid>
+      <description>&lt;p&gt;Pixiv 被墙了，上不了。我上了 Pixiv 的贴吧，刚好发现有人发帖说如何再上 P 站（ &lt;a href=&#34;https://tieba.baidu.com/p/5882385726&#34;&gt;https://tieba.baidu.com/p/5882385726&lt;/a&gt; ） 。使用 nginx 做反向代理，看着比较简单，于是自己试了试，由于 nginx 自己不太熟，所以是尽量完成。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

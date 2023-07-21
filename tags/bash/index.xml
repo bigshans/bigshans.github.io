@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>bash on Bigshans&#39; Blog</title>
+    <title>Bash on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/bash/</link>
-    <description>Recent content in bash on Bigshans&#39; Blog</description>
+    <description>Recent content in Bash on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 20 Sep 2021 01:33:29 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Oct 2021 14:13:51 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>read 在 zsh 和 bash 下的不同</title>
+      <link>https://bigshans.github.io/post/different-command-read-between-zsh-and-bash/</link>
+      <pubDate>Fri, 22 Oct 2021 14:13:51 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/different-command-read-between-zsh-and-bash/</guid>
+      <description>不实际进行使用我还注意不到这个区别，就是 read 这个命令在 zsh 和 bash 下是不同的。 缘起 起因是我在脚本里写的两个命令同时都用了 read ，区别在于一个是封装在 bash 脚</description>
+    </item>
+    
+    <item>
+      <title>为什么使用 zsh 以及为什么这样使用</title>
+      <link>https://bigshans.github.io/post/why-and-how-use-zsh-this-way/</link>
+      <pubDate>Wed, 22 Sep 2021 01:08:35 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/why-and-how-use-zsh-this-way/</guid>
+      <description>我使用 zsh 作为我的默认 shell 已经很长时间了，大概是从我使用 Debian 就开始了。当初的原因其实很简单，因为强大的 Oh My Zsh ，如今我用了这么久，想要重新疏理一下，</description>
+    </item>
+    
     <item>
       <title>写一个 Bash 补全函数</title>
       <link>https://bigshans.github.io/post/write-a-bash-complete/</link>

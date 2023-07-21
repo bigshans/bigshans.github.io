@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>software on Bigshans&#39; Blog</title>
+    <title>Software on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/software/</link>
-    <description>Recent content in software on Bigshans&#39; Blog</description>
+    <description>Recent content in Software on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 13 Jul 2023 17:16:02 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/software/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Obsidian 使用体验</title>
-      <link>https://bigshans.github.io/post/obsidian-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
-      <pubDate>Thu, 13 Jul 2023 17:16:02 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/obsidian-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
-      <description>因为已经用了一段时间的 Obsidian ，所以整体说一下，包括使用的手感和我自己的 workflow 。 Obsidian 与 Logseq 同属于双链编辑器，我最早使用的是 Logseq ，因为 Obsidian 总是脱手，用起来很别扭</description>
-    </item>
-    
+    <lastBuildDate>Sun, 04 Sep 2022 19:32:36 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Firefox PWA</title>
       <link>https://bigshans.github.io/post/firefox-pwa/</link>
@@ -27,31 +18,102 @@
     </item>
     
     <item>
+      <title>userChrome.js 的使用</title>
+      <link>https://bigshans.github.io/post/userchrome-usage/</link>
+      <pubDate>Sun, 14 Aug 2022 17:56:49 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/userchrome-usage/</guid>
+      <description>userChrome.js 是 Firefox 的一种玩法，可以高度自定义 Firefox 的界面、样式、功能。虽然 XUL 很早就死掉了，但所幸 userChrome.js 仍然是可用的。需要注意的是， userChrome.js 是非正式且冷门的自定义玩法，</description>
+    </item>
+    
+    <item>
+      <title>琐碎备录</title>
+      <link>https://bigshans.github.io/post/trivial/</link>
+      <pubDate>Fri, 05 Aug 2022 16:46:36 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/trivial/</guid>
+      <description>Makefile .PHONY 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。 Joi joi.string().allow(&#39;&#39;).allow(null).empty(&#39;&#39;).optional() ，允许字符串为空。 pacman 以前记录过一遍，但太隐慝了，在此特意提出。 pacman -Ql &amp;lt;package-name&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>如何使用 wine-wechat-setup</title>
+      <link>https://bigshans.github.io/post/how-to-use-wine-wechat-setup/</link>
+      <pubDate>Wed, 27 Jul 2022 14:05:02 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/how-to-use-wine-wechat-setup/</guid>
+      <description>最近升级了一下微信，好久没有这个脚本好像都不会用了。此脚本是依云姐写的，在 Archlinuxcn 源上，需要配合 wine-for-wechat 。 wine-wechat-setup 提供了一个 wechat 命令，如果你已经在本地安装了微信</description>
+    </item>
+    
+    <item>
+      <title>搞定了几个 Gitea 相关的问题</title>
+      <link>https://bigshans.github.io/post/gitea-config/</link>
+      <pubDate>Sat, 19 Mar 2022 00:52:32 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/gitea-config/</guid>
+      <description>Gitea 可以同步 Github 仓库之后，让我觉得仓库管理有很大的便利。因为我的很多代码毕竟保存在 Github 上，允许同步 Github 免去了我很多两头跑的工作。 但是有几个我还是不太</description>
+    </item>
+    
+    <item>
+      <title>如何使用 ja-netfilter</title>
+      <link>https://bigshans.github.io/post/how-to-use-ja-netfilter/</link>
+      <pubDate>Wed, 02 Mar 2022 21:29:21 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/how-to-use-ja-netfilter/</guid>
+      <description>之前淘宝卖的 JB 帐号又失效了，连带着服务器也失效了，感觉店家是跑路了。 JB 家的东西是不错的，不过就是一个客户端套多个皮，当成多个 IDE ，让我觉得有点</description>
+    </item>
+    
+    <item>
+      <title>修复 coc.nvim 和 indentLines 的冲突</title>
+      <link>https://bigshans.github.io/post/fixed-conflicts-between-coc-and-indentline/</link>
+      <pubDate>Wed, 23 Feb 2022 16:47:18 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/fixed-conflicts-between-coc-and-indentline/</guid>
+      <description>我用的是 indentLines 是 Yggdrot/indentLine ，与 coc.nvim 存在冲突，主要是诊断的高亮覆盖了 indentLine 的高亮导致 indentLine 无法显示。当然，并不是所有的 buffer 里都会这样，但是需要诊断的 FileType 都是这样。 使用的</description>
+    </item>
+    
+    <item>
+      <title>安装 Collabora Office</title>
+      <link>https://bigshans.github.io/post/collabora-install/</link>
+      <pubDate>Thu, 14 Oct 2021 09:47:19 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/collabora-install/</guid>
+      <description>最近在配置 Nextcloud 的 Office 功能，尝试了一下 OnlyOffice ，实在是太不稳定了。我最终选择了 Collabora Office 作为替代。 首先，极其不推荐使用 Docker 部署，因为 Docker 版已经好久没维护了，其次，</description>
+    </item>
+    
+    <item>
+      <title>使用 yuzu 模拟器玩《月姬R》</title>
+      <link>https://bigshans.github.io/post/yuzu-setup/</link>
+      <pubDate>Sun, 12 Sep 2021 10:53:17 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/yuzu-setup/</guid>
+      <description>最近想要玩《月姬R》。目前，《月姬R》发布在了 PS4 和 Switch 上面，所以我在想能不能用模拟器去运行《月姬R》。简单查找了一下，发现了 yuzu ，嗯， Linux 下可运行</description>
+    </item>
+    
+    <item>
+      <title>Pleroma 安装排雷</title>
+      <link>https://bigshans.github.io/post/troubleshoot-pleroma/</link>
+      <pubDate>Fri, 21 May 2021 22:04:17 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/troubleshoot-pleroma/</guid>
+      <description>安装 Pleroma 倒也不是什么特别难的事，只要照着文档自己安装即可，但是，事情往往并没有你想的那么简单。 Pleroma 是一款基于 Elixir 开发的轻量级的微博系统，而且还支持</description>
+    </item>
+    
+    <item>
+      <title>idea 一直加载 maven</title>
+      <link>https://bigshans.github.io/post/java-idea-maven/</link>
+      <pubDate>Sun, 28 Oct 2018 21:16:08 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/java-idea-maven/</guid>
+      <description>之前遇到过一次 idea 无法正常加载 maven ，那时 hosts 里设置有问题，将 127.0.0.1 loacalhost 加入 hosts 里就行。现在又有新的问题，于是试了试在 import 里的 VMoption 改为 1024 就行了。</description>
+    </item>
+    
+    <item>
       <title>安装 graph-easy</title>
       <link>https://bigshans.github.io/post/software-graph-easy/</link>
       <pubDate>Mon, 03 Sep 2018 17:34:16 +0000</pubDate>
       
       <guid>https://bigshans.github.io/post/software-graph-easy/</guid>
       <description>&lt;p&gt;推荐一个软件， graph-easy  。如果你查看文档的话，经常能看到一些 ascii 码流程画，个人觉得非常酷，于是去查找了一下，发现了这个软件。下面我将做一些简单的介绍。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>安装 deepin-wine 到 debian 上</title>
-      <link>https://bigshans.github.io/post/software-deepin-wine/</link>
-      <pubDate>Sun, 02 Sep 2018 19:21:21 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/software-deepin-wine/</guid>
-      <description>&lt;p&gt;我尝试了一下 &lt;a href=&#34;https://github.com/wszqkzqk/deepin-wine-ubuntu&#34;&gt;deepin-wine-ubuntu&lt;/a&gt; 项目，不过无法正常装上。所以我自己尝试了一下安装 deepin-wine 并尝试了一下 deepin 的 QQ 和 TIM 。效果还不错。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>网易云音乐 for linux 不用 root 打开</title>
-      <link>https://bigshans.github.io/post/software-netease-linux/</link>
-      <pubDate>Wed, 29 Aug 2018 16:42:55 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/software-netease-linux/</guid>
-      <description>&lt;p&gt;从知乎上看到这个，非常感谢 Fancy 的努力。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/277330447/answer/478510195&#34;&gt;点击此处前往&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
     
   </channel>

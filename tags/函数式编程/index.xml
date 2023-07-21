@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>函数式编程 on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in 函数式编程 on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Tue, 24 Aug 2021 17:22:43 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>函数式的骨感</title>
+      <link>https://bigshans.github.io/post/function-comment/</link>
+      <pubDate>Tue, 24 Aug 2021 17:22:43 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/function-comment/</guid>
+      <description>最近读了点 rambda 的源码。函数式是个很诱人的概念，借助函数式，你可以以十分数学的方式解决一些问题。虽然如此，函数式对于现实来说仍然过于抽象，如果我</description>
+    </item>
+    
+  </channel>
+</rss>

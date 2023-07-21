@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>月姬 R on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/%E6%9C%88%E5%A7%AC-r/</link>
+    <description>Recent content in 月姬 R on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Sun, 12 Sep 2021 10:53:17 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E6%9C%88%E5%A7%AC-r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 yuzu 模拟器玩《月姬R》</title>
+      <link>https://bigshans.github.io/post/yuzu-setup/</link>
+      <pubDate>Sun, 12 Sep 2021 10:53:17 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/yuzu-setup/</guid>
+      <description>最近想要玩《月姬R》。目前，《月姬R》发布在了 PS4 和 Switch 上面，所以我在想能不能用模拟器去运行《月姬R》。简单查找了一下，发现了 yuzu ，嗯， Linux 下可运行</description>
+    </item>
+    
+  </channel>
+</rss>

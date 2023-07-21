@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vim on Bigshans&#39; Blog</title>
+    <title>Vim on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/vim/</link>
-    <description>Recent content in vim on Bigshans&#39; Blog</description>
+    <description>Recent content in Vim on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 23 Feb 2022 16:47:18 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/vim/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>修复 coc.nvim 和 indentLines 的冲突</title>
-      <link>https://bigshans.github.io/post/fixed-conflicts-between-coc-and-indentline/</link>
-      <pubDate>Wed, 23 Feb 2022 16:47:18 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/fixed-conflicts-between-coc-and-indentline/</guid>
-      <description>我用的是 indentLines 是 Yggdrot/indentLine ，与 coc.nvim 存在冲突，主要是诊断的高亮覆盖了 indentLine 的高亮导致 indentLine 无法显示。当然，并不是所有的 buffer 里都会这样，但是需要诊断的 FileType 都是这样。 使用的</description>
-    </item>
-    
+    <lastBuildDate>Sun, 23 Jan 2022 19:10:42 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/vim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>coc-kite-cmp 发布</title>
       <link>https://bigshans.github.io/post/coc-kite-cmp-publish/</link>
@@ -24,15 +15,6 @@
       
       <guid>https://bigshans.github.io/post/coc-kite-cmp-publish/</guid>
       <description>最近在尝试 AI complete ，主要是 TabNine 和 Kite ，两者可以基于本地代码作出较好的智能推测。在 VSCode 上，两者都有对应的插件，但在 Vim 上时，情况就不同了。我使用的是 coc.nvim ，作</description>
-    </item>
-    
-    <item>
-      <title>在 vim 下修改自然码码表</title>
-      <link>https://bigshans.github.io/post/vim-rime/</link>
-      <pubDate>Thu, 31 Jan 2019 11:27:53 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/vim-rime/</guid>
-      <description>最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添</description>
     </item>
     
     <item>

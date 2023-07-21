@@ -18,6 +18,60 @@
     </item>
     
     <item>
+      <title>CSS 盒子模型</title>
+      <link>https://bigshans.github.io/post/css-box/</link>
+      <pubDate>Fri, 13 Jan 2023 09:27:13 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/css-box/</guid>
+      <description>一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。 标准盒</description>
+    </item>
+    
+    <item>
+      <title>CSS 三栏布局</title>
+      <link>https://bigshans.github.io/post/css%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/</link>
+      <pubDate>Tue, 10 Jan 2023 09:27:35 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/css%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/</guid>
+      <description>三栏布局是比较经典的 CSS 布局，特点就是中间内容自适应，首先渲染，其次左右内容大小保持不变分布两旁。结构上打破了一般意义上的左中右的顺序，变成了</description>
+    </item>
+    
+    <item>
+      <title>《事件捕获与事件冒泡》补遗</title>
+      <link>https://bigshans.github.io/post/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/</link>
+      <pubDate>Tue, 17 May 2022 10:46:28 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/</guid>
+      <description>阅读的文章是关于事件捕获与事件冒泡先后执行顺序 ，写得挺好的，就是我读的时候漏了一点。 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width&amp;quot;&amp;gt; &amp;lt;title&amp;gt;DOM 冒泡&amp;lt;/title&amp;gt; &amp;lt;style type=&amp;quot;text/css&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>sort 在 Chrome 和 Firefox 表现不同</title>
+      <link>https://bigshans.github.io/post/different-sort-between-firefox-and-chrome/</link>
+      <pubDate>Thu, 31 Mar 2022 10:18:10 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/different-sort-between-firefox-and-chrome/</guid>
+      <description>首先，这个区别不算 BUG ，因为标准并没有规定该怎么排，但这个细微区别在实现一些特殊需求时需要被注意到。 注意下面一段代码： var a = [1, 1, 1, 1, 1]; a = a.map((k, i)</description>
+    </item>
+    
+    <item>
+      <title>Angular 简易入门</title>
+      <link>https://bigshans.github.io/post/getting-started-with-angular/</link>
+      <pubDate>Mon, 06 Dec 2021 09:29:04 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/getting-started-with-angular/</guid>
+      <description>因为最近重新用了用 Angular ，在有了 Vue 和 React 的使用经验之后，对 Angular 又有了新的理解。 Angular 是真正意义上与 Vue 和 React 区分的框架，因为其思想与二者截然不同。不过我不讨</description>
+    </item>
+    
+    <item>
+      <title>drop-shadow 隐藏原始图像</title>
+      <link>https://bigshans.github.io/post/drop-shadow-hidden-origin-image/</link>
+      <pubDate>Fri, 03 Dec 2021 16:32:50 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/drop-shadow-hidden-origin-image/</guid>
+      <description>看到张鑫大佬的这篇文章很有意思。 张鑫大佬讲述了如何使用 filter 中的 drop-shadow 实现 png 图标改颜色的技巧，本质上是利用阴影偏移实现的。不过我有一点我一直没有搞明</description>
+    </item>
+    
+    <item>
       <title>Nginx 按路由分流请求</title>
       <link>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</link>
       <pubDate>Tue, 30 Nov 2021 14:04:23 +0800</pubDate>
@@ -27,12 +81,103 @@
     </item>
     
     <item>
+      <title>为什么 overflow 能够清除 float</title>
+      <link>https://bigshans.github.io/post/why-bfc-can-clear-flow/</link>
+      <pubDate>Sun, 07 Nov 2021 17:27:40 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/why-bfc-can-clear-flow/</guid>
+      <description>有些学问还是自己研究最为靠谱，像是 overflow 为什么能清 float ，都知道是 BFC ，但是为什么呢？因为在文档流中，普通的 div 其实也是 BFC ，所以，理论上添加 overflow 为非 visible 的时</description>
+    </item>
+    
+    <item>
+      <title>Vue 3.2 &lt;script setup&gt; 摘要</title>
+      <link>https://bigshans.github.io/post/vue3_2-setup/</link>
+      <pubDate>Thu, 26 Aug 2021 15:43:34 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/vue3_2-setup/</guid>
+      <description>在 Vue 3.2 发布的内容中，最主要内容就是 &amp;lt;script setup&amp;gt; 。 &amp;lt;script setup&amp;gt; 想必大家都有使用过，跟当初作为实验特性不同，这次正式发布还是有很多的修改的。 废除 useContext() 原先获取全局 ctx</description>
+    </item>
+    
+    <item>
+      <title>如何编写一个 Chrome 扩展</title>
+      <link>https://bigshans.github.io/post/chrome-extensions/</link>
+      <pubDate>Sun, 15 Aug 2021 14:48:54 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/chrome-extensions/</guid>
+      <description>最近工作需要用到 Chrome 扩展，于是就特意学习了一下。起初，我以为 Chrome 扩展权限挺大，操作起来应该挺方便的，但是，实际情况各种权限需要申请，而且有些操作</description>
+    </item>
+    
+    <item>
+      <title>flex 布局简说</title>
+      <link>https://bigshans.github.io/post/flex/</link>
+      <pubDate>Sat, 10 Jul 2021 22:35:25 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/flex/</guid>
+      <description>最近同事开分享会讲到了一点 flex 布局相关的东西，但是讲得很仓促，于是决定私下里整理一下，也算是对 flex 知识的总结。内容基本参考了 MDN 还有 W3C 文档的内容，</description>
+    </item>
+    
+    <item>
+      <title>写了一个基于 art 的静态网页模块化项目</title>
+      <link>https://bigshans.github.io/post/art-html/</link>
+      <pubDate>Mon, 24 May 2021 22:19:11 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/art-html/</guid>
+      <description>最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。 背景 公司的主页是用静态网页写的，主要是用来展示，但是分很</description>
+    </item>
+    
+    <item>
       <title>前端学习之路</title>
       <link>https://bigshans.github.io/post/study-front-end-way/</link>
       <pubDate>Sun, 11 Apr 2021 15:58:45 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/study-front-end-way/</guid>
       <description>我在大学里面学的还是 Java ，然后工作之后，就一直在用 Node ，从一开始的 Node 后端，到现在的 Node 全栈，可以说是学习了不少，今天就在这里与大家分享一下我前端学</description>
+    </item>
+    
+    <item>
+      <title>用 Svelte 写个简单的 Todo</title>
+      <link>https://bigshans.github.io/post/svelte-todo/</link>
+      <pubDate>Tue, 16 Feb 2021 20:30:32 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/svelte-todo/</guid>
+      <description>官网： https://svelte.dev/ Svelte 是个新的前端框架，发展强劲。与目前主流的三大框架不同的是，Svelte 不采用 vdom ，而是借助 complier 的能力，打包出最小化的包，不附带更多的 runtime</description>
+    </item>
+    
+    <item>
+      <title>css绘制三角形</title>
+      <link>https://bigshans.github.io/post/css%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/</link>
+      <pubDate>Sun, 22 Dec 2019 21:21:47 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/css%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/</guid>
+      <description>&lt;p&gt;最近写前端要一个下拉箭头，所以选择用 css 画一个三角形来用，话不多说，看代码：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>angular 虚拟滚动的一些坑</title>
+      <link>https://bigshans.github.io/post/angular-virtual-scroll/</link>
+      <pubDate>Sun, 08 Dec 2019 20:23:42 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/angular-virtual-scroll/</guid>
+      <description>&lt;p&gt;最近被赶过去写前端了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>js 实现 DOM 监视</title>
+      <link>https://bigshans.github.io/post/js-dom-watch/</link>
+      <pubDate>Sun, 07 Oct 2018 15:53:19 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/js-dom-watch/</guid>
+      <description>&lt;p&gt;花了点时间做了 b 站评论区地址链接化，比较麻烦的是 DOM 监视。找了很多，最后还是采用了 Muatation 来进行事件监视。&lt;/p&gt;
+&lt;p&gt;给个文档地址：http://javascript.ruanyifeng.com/dom/mutationobserver.html 。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>新写了两个油猴脚本</title>
+      <link>https://bigshans.github.io/post/js-tampermonkey-user-script/</link>
+      <pubDate>Fri, 05 Oct 2018 13:35:27 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/js-tampermonkey-user-script/</guid>
+      <description>&lt;p&gt;新写了两个油猴脚本针对 bilibili 。具体可以到我的 gist 上看，一个是针对番剧更新的，原本有一个番剧更新的脚本，但只是加了个标签而已，我又加了一些东西，方便查看，不过具体效果一般，而且番剧状态不能很好的体现，现没有找到好的 api 。另一个是针对 bilibili 动态的，动态不能点击链接很麻烦，于是简单写了脚本来实现将地址转换为链接。要点击进去才能有效，不过去除了带中文的链接。 bilibili 动态不能很好的选中也是一个问题，不过已经有脚本很好的实现了这个问题，所以我就不多写了。&lt;/p&gt;</description>
     </item>
     
   </channel>

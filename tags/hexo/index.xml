@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hexo on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/hexo/</link>
+    <description>Recent content in Hexo on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Sat, 14 Nov 2020 21:38:31 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>迁移到 Hugo 上</title>
+      <link>https://bigshans.github.io/post/move-to-hugo/</link>
+      <pubDate>Sat, 14 Nov 2020 21:38:31 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/move-to-hugo/</guid>
+      <description>好久没有写博客了。 这次我终于把 Hexo 换掉，换成 Hugo 了。其实 Hexo 有很多主题挺不错，相较之下，Hugo 很多主题我都不是很满意。不过我还是选择了 Hugo ，一是 Hexo</description>
+    </item>
+    
+  </channel>
+</rss>

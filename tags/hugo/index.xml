@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hugo on Bigshans&#39; Blog</title>
+    <title>Hugo on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/hugo/</link>
-    <description>Recent content in hugo on Bigshans&#39; Blog</description>
+    <description>Recent content in Hugo on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 22 Oct 2021 13:46:00 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Feb 2023 14:41:01 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在 Hugo 上实现私人加密页</title>
+      <link>https://bigshans.github.io/post/private-blog-page/</link>
+      <pubDate>Fri, 17 Feb 2023 14:41:01 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/private-blog-page/</guid>
+      <description>做了一些更新，现在把 private 单独放到一个路径下面，同时把私人也从 post 列表移除，从另一个地址进去。如此页面的观感就好多了。同时也对整个处理的过程进行了</description>
+    </item>
+    
     <item>
       <title>给 Hugo 增加一些 Pandoc 支持增强</title>
       <link>https://bigshans.github.io/post/hugo-patch-with-pandoc/</link>

@@ -17,14 +17,5 @@
       <description>因为我手头也没有便于支付 Gitkraken 的银行卡，所以只好用破解凑合一下。之前发现了 Gitkraken 的破解项目，但因为违反了版权协议，所以被 ban 了，其实只是转移到了 TG 里去</description>
     </item>
     
-    <item>
-      <title>如何使用 ja-netfilter</title>
-      <link>https://bigshans.github.io/post/how-to-use-ja-netfilter/</link>
-      <pubDate>Wed, 02 Mar 2022 21:29:21 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/how-to-use-ja-netfilter/</guid>
-      <description>之前淘宝卖的 JB 帐号又失效了，连带着服务器也失效了，感觉店家是跑路了。 JB 家的东西是不错的，不过就是一个客户端套多个皮，当成多个 IDE ，让我觉得有点</description>
-    </item>
-    
   </channel>
 </rss>

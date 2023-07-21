@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 29 Aug 2018 17:01:17 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Feb 2023 17:57:44 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Lazada App 里面打开链接</title>
+      <link>https://bigshans.github.io/post/open-link-in-lazada-app/</link>
+      <pubDate>Tue, 28 Feb 2023 17:57:44 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/open-link-in-lazada-app/</guid>
+      <description>由于需要爬 Lazada 的销量信息，所以我不得不在手机上进行爬虫。麻烦的是，PC 的链接虽然可以在移动端打开，但不能跳转进 App ， App 分享的链接虽然可以跳转，但</description>
+    </item>
+    
     <item>
       <title>python 爬虫获取 bilibili 封面</title>
       <link>https://bigshans.github.io/post/python-bilibili-cover/</link>

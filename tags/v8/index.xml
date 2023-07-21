@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>v8 on Bigshans&#39; Blog</title>
+    <title>V8 on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/v8/</link>
-    <description>Recent content in v8 on Bigshans&#39; Blog</description>
+    <description>Recent content in V8 on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 11 Jul 2021 15:14:22 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/v8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Dec 2022 21:49:39 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/v8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>await 的背后</title>
+      <link>https://bigshans.github.io/post/await%E7%9A%84%E8%83%8C%E5%90%8E/</link>
+      <pubDate>Thu, 15 Dec 2022 21:49:39 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/await%E7%9A%84%E8%83%8C%E5%90%8E/</guid>
+      <description>我们一般会认为 async/await 是 Promise 的语法糖，实际上也没有错。但在 Node 10 的时候，一个 await 会产生三个微任务，导致单个 await 的性能远不如 Promise ，但在 Node 12 时， V8 团队称，其性能</description>
+    </item>
+    
     <item>
       <title>v8 学习（一）——编译个v8 好麻烦啊！</title>
       <link>https://bigshans.github.io/post/v8-study-1/</link>

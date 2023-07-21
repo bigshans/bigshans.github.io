@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>使用体验 on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/categories/%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
+    <description>Recent content in 使用体验 on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Thu, 13 Jul 2023 17:16:02 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Obsidian 使用体验</title>
+      <link>https://bigshans.github.io/post/obsidian-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Thu, 13 Jul 2023 17:16:02 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/obsidian-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
+      <description>因为已经用了一段时间的 Obsidian ，所以整体说一下，包括使用的手感和我自己的 workflow 。 Obsidian 与 Logseq 同属于双链编辑器，我最早使用的是 Logseq ，因为 Obsidian 总是脱手，用起来很别扭</description>
+    </item>
+    
+    <item>
+      <title>Notion 使用体验</title>
+      <link>https://bigshans.github.io/post/notion-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Sat, 02 Jul 2022 20:07:05 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/notion-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
+      <description>以前我其实听说过 Notion ，也注册帐号尝试了一下，但由于过于复杂所以放弃了。不过最近我又开始使用了，而且发现上手之后感觉还不错，所以在此讲一下我的使</description>
+    </item>
+    
+    <item>
+      <title>Keychron K2 使用体验</title>
+      <link>https://bigshans.github.io/post/keyboard-experience-keychron-k2/</link>
+      <pubDate>Sun, 13 Feb 2022 10:53:18 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/keyboard-experience-keychron-k2/</guid>
+      <description>因为从来没用过机械键盘，一直用的薄膜和静电容，所以想尝试玩玩，入手了一块 K2 。怎么说呢？因为是随便选的，而且也没有深入了解，这块键盘真的是让我</description>
+    </item>
+    
+  </channel>
+</rss>

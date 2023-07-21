@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>node on Bigshans&#39; Blog</title>
+    <title>Node on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/node/</link>
-    <description>Recent content in node on Bigshans&#39; Blog</description>
+    <description>Recent content in Node on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
@@ -18,6 +18,15 @@
     </item>
     
     <item>
+      <title>await 的背后</title>
+      <link>https://bigshans.github.io/post/await%E7%9A%84%E8%83%8C%E5%90%8E/</link>
+      <pubDate>Thu, 15 Dec 2022 21:49:39 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/await%E7%9A%84%E8%83%8C%E5%90%8E/</guid>
+      <description>我们一般会认为 async/await 是 Promise 的语法糖，实际上也没有错。但在 Node 10 的时候，一个 await 会产生三个微任务，导致单个 await 的性能远不如 Promise ，但在 Node 12 时， V8 团队称，其性能</description>
+    </item>
+    
+    <item>
       <title>NodeJs 上的大文件问题</title>
       <link>https://bigshans.github.io/post/bigfile-problem-for-node/</link>
       <pubDate>Sun, 07 Aug 2022 20:42:17 +0800</pubDate>
@@ -27,31 +36,32 @@
     </item>
     
     <item>
-      <title>写了一个基于 art 的静态网页模块化项目</title>
-      <link>https://bigshans.github.io/post/art-html/</link>
-      <pubDate>Mon, 24 May 2021 22:19:11 +0800</pubDate>
+      <title>NodeJs 启动代码解析（一）</title>
+      <link>https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/</link>
+      <pubDate>Fri, 06 May 2022 10:04:22 +0800</pubDate>
       
-      <guid>https://bigshans.github.io/post/art-html/</guid>
-      <description>最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。 背景 公司的主页是用静态网页写的，主要是用来展示，但是分很</description>
+      <guid>https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/</guid>
+      <description>NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //</description>
     </item>
     
     <item>
-      <title>Express 源码阅读（一）</title>
-      <link>https://bigshans.github.io/post/node-express-source-read/</link>
-      <pubDate>Sun, 01 Dec 2019 14:55:32 +0000</pubDate>
+      <title>npm 打包指南</title>
+      <link>https://bigshans.github.io/post/npm-pack-guide/</link>
+      <pubDate>Sun, 21 Mar 2021 11:53:14 +0800</pubDate>
       
-      <guid>https://bigshans.github.io/post/node-express-source-read/</guid>
-      <description>&lt;p&gt;我们写一个简单的程序。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const express = require(&#39;express&#39;);
-const app = express();
-
-app.get(&#39;/&#39;, (req, res) =&amp;gt; {
-    res.end(&#39;&amp;lt;h1&amp;gt;Hello&amp;lt;/h1&amp;gt;&#39;);
-});
-
-app.listen(3000, () =&amp;gt; console.log(&#39;Connected!&#39;));
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;我们对这段代码进行 Debug 。&lt;/p&gt;</description>
+      <guid>https://bigshans.github.io/post/npm-pack-guide/</guid>
+      <description>最近在修改一些很长时间无人维护的包，估计包作者都不维护了，于是我重新搞了一份传到了 npm 上，有兴趣的可以看一下：log4js-rabbitmq-</description>
+    </item>
+    
+    <item>
+      <title>nodejs 的 import</title>
+      <link>https://bigshans.github.io/post/nodejs-es6-import/</link>
+      <pubDate>Sun, 26 Aug 2018 20:29:41 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/nodejs-es6-import/</guid>
+      <description>&lt;p&gt;nodejs 对 es 6 的支持目前并不完全，直接使用 import 不行，exports 也不行，可以用 babel 之类的编译， nodejs 10 可以尝试加上 flag ： &amp;ndash;experimental-modules。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;node --experimental-modules my-app.mjs
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>

@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>golang on Bigshans&#39; Blog</title>
+    <title>Golang on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/golang/</link>
-    <description>Recent content in golang on Bigshans&#39; Blog</description>
+    <description>Recent content in Golang on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 31 May 2022 10:55:31 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Aug 2022 03:42:04 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>对 Golang 的批评</title>
+      <link>https://bigshans.github.io/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/</link>
+      <pubDate>Thu, 18 Aug 2022 03:42:04 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/</guid>
+      <description>最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。 许多 Golang 的拥护者会称 Golang 是一门工程</description>
+    </item>
+    
     <item>
       <title>GO 的调度器</title>
       <link>https://bigshans.github.io/post/the-go-scheduler/</link>

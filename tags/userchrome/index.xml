@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>userChrome on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/userchrome/</link>
+    <description>Recent content in userChrome on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Sun, 14 Aug 2022 17:56:49 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/userchrome/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>userChrome.js 的使用</title>
+      <link>https://bigshans.github.io/post/userchrome-usage/</link>
+      <pubDate>Sun, 14 Aug 2022 17:56:49 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/userchrome-usage/</guid>
+      <description>userChrome.js 是 Firefox 的一种玩法，可以高度自定义 Firefox 的界面、样式、功能。虽然 XUL 很早就死掉了，但所幸 userChrome.js 仍然是可用的。需要注意的是， userChrome.js 是非正式且冷门的自定义玩法，</description>
+    </item>
+    
+  </channel>
+</rss>

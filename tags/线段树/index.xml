@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>线段树 on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
+    <description>Recent content in 线段树 on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Fri, 08 Mar 2019 20:50:55 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>线段树算法</title>
+      <link>https://bigshans.github.io/post/algorithm-segtree/</link>
+      <pubDate>Fri, 08 Mar 2019 20:50:55 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/algorithm-segtree/</guid>
+      <description>&lt;p&gt;我的 ACM 线段树模板。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

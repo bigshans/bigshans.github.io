@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rime on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/categories/rime/</link>
+    <description>Recent content in Rime on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Thu, 31 Jan 2019 11:27:53 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/categories/rime/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 vim 下修改自然码码表</title>
+      <link>https://bigshans.github.io/post/vim-rime/</link>
+      <pubDate>Thu, 31 Jan 2019 11:27:53 +0000</pubDate>
+      
+      <guid>https://bigshans.github.io/post/vim-rime/</guid>
+      <description>最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>javascript on Bigshans&#39; Blog</title>
+    <title>Javascript on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/javascript/</link>
-    <description>Recent content in javascript on Bigshans&#39; Blog</description>
+    <description>Recent content in Javascript on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
@@ -18,39 +18,12 @@
     </item>
     
     <item>
-      <title>《事件捕获与事件冒泡》补遗</title>
-      <link>https://bigshans.github.io/post/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/</link>
-      <pubDate>Tue, 17 May 2022 10:46:28 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/</guid>
-      <description>阅读的文章是关于事件捕获与事件冒泡先后执行顺序 ，写得挺好的，就是我读的时候漏了一点。 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width&amp;quot;&amp;gt; &amp;lt;title&amp;gt;DOM 冒泡&amp;lt;/title&amp;gt; &amp;lt;style type=&amp;quot;text/css&amp;quot;</description>
-    </item>
-    
-    <item>
-      <title>sort 在 Chrome 和 Firefox 表现不同</title>
-      <link>https://bigshans.github.io/post/different-sort-between-firefox-and-chrome/</link>
-      <pubDate>Thu, 31 Mar 2022 10:18:10 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/different-sort-between-firefox-and-chrome/</guid>
-      <description>首先，这个区别不算 BUG ，因为标准并没有规定该怎么排，但这个细微区别在实现一些特殊需求时需要被注意到。 注意下面一段代码： var a = [1, 1, 1, 1, 1]; a = a.map((k, i)</description>
-    </item>
-    
-    <item>
       <title>RxJs 初探 —— 基于事件为中心的编程</title>
       <link>https://bigshans.github.io/post/rxjs-exploration/</link>
       <pubDate>Sat, 02 Oct 2021 22:19:12 +0800</pubDate>
       
       <guid>https://bigshans.github.io/post/rxjs-exploration/</guid>
       <description>这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始</description>
-    </item>
-    
-    <item>
-      <title>Vue 3.2 &lt;script setup&gt; 摘要</title>
-      <link>https://bigshans.github.io/post/vue3_2-setup/</link>
-      <pubDate>Thu, 26 Aug 2021 15:43:34 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/vue3_2-setup/</guid>
-      <description>在 Vue 3.2 发布的内容中，最主要内容就是 &amp;lt;script setup&amp;gt; 。 &amp;lt;script setup&amp;gt; 想必大家都有使用过，跟当初作为实验特性不同，这次正式发布还是有很多的修改的。 废除 useContext() 原先获取全局 ctx</description>
     </item>
     
     <item>
@@ -63,41 +36,12 @@
     </item>
     
     <item>
-      <title>如何编写一个 Chrome 扩展</title>
-      <link>https://bigshans.github.io/post/chrome-extensions/</link>
-      <pubDate>Sun, 15 Aug 2021 14:48:54 +0800</pubDate>
+      <title>webpack 的 require 和 import 相关的一点问题</title>
+      <link>https://bigshans.github.io/post/net-musicvue-problem-set1/</link>
+      <pubDate>Sun, 26 Aug 2018 12:41:45 +0000</pubDate>
       
-      <guid>https://bigshans.github.io/post/chrome-extensions/</guid>
-      <description>最近工作需要用到 Chrome 扩展，于是就特意学习了一下。起初，我以为 Chrome 扩展权限挺大，操作起来应该挺方便的，但是，实际情况各种权限需要申请，而且有些操作</description>
-    </item>
-    
-    <item>
-      <title>分布式锁的简单实现</title>
-      <link>https://bigshans.github.io/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/</link>
-      <pubDate>Sun, 20 Oct 2019 10:11:38 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/src-node-%E7%AE%80%E5%8D%95%E7%9A%84%E9%94%81%E5%AE%9E%E7%8E%B0-js/</guid>
-      <description>&lt;p&gt;打算每周写一篇博客，希望每周都能有新的收获。本周写的博客是我在工作中应用写的一个有趣的东西。
-我们采用 pm2 进行进程管理，我们开启了多个进程，但各个进程之间并没有交流，所以，我想要全局操作某个变量时，就会出现数据安全问题，虽然在 redis 里面单个操作是原子，但我也要保证复合操作也是原子的。但我并不使用 redis 的事务，是因为这个事务会阻塞其他操作，所以，不如在应用层上实现锁，从而不阻塞 redis 。我们虽然不是分布式系统，但是是分布式进程，所以实现也参考分布式锁。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>js 实现 DOM 监视</title>
-      <link>https://bigshans.github.io/post/js-dom-watch/</link>
-      <pubDate>Sun, 07 Oct 2018 15:53:19 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/js-dom-watch/</guid>
-      <description>&lt;p&gt;花了点时间做了 b 站评论区地址链接化，比较麻烦的是 DOM 监视。找了很多，最后还是采用了 Muatation 来进行事件监视。&lt;/p&gt;
-&lt;p&gt;给个文档地址：http://javascript.ruanyifeng.com/dom/mutationobserver.html 。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>新写了两个油猴脚本</title>
-      <link>https://bigshans.github.io/post/js-tampermonkey-user-script/</link>
-      <pubDate>Fri, 05 Oct 2018 13:35:27 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/js-tampermonkey-user-script/</guid>
-      <description>&lt;p&gt;新写了两个油猴脚本针对 bilibili 。具体可以到我的 gist 上看，一个是针对番剧更新的，原本有一个番剧更新的脚本，但只是加了个标签而已，我又加了一些东西，方便查看，不过具体效果一般，而且番剧状态不能很好的体现，现没有找到好的 api 。另一个是针对 bilibili 动态的，动态不能点击链接很麻烦，于是简单写了脚本来实现将地址转换为链接。要点击进去才能有效，不过去除了带中文的链接。 bilibili 动态不能很好的选中也是一个问题，不过已经有脚本很好的实现了这个问题，所以我就不多写了。&lt;/p&gt;</description>
+      <guid>https://bigshans.github.io/post/net-musicvue-problem-set1/</guid>
+      <description>&lt;p&gt;今天继续用 electron-vue 写 NeteaseCloudMusic 的第三方 app， 用的 NeteaseCloudMusicApi 使用起来却很麻烦。不知道为什么之前可以正常使用，现在却不行了，摸索了好久，还是没能解决。不过还是有点收获的，接下来讲一讲。&lt;/p&gt;</description>
     </item>
     
   </channel>

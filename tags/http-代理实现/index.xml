@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTTP 代理实现 on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/http-%E4%BB%A3%E7%90%86%E5%AE%9E%E7%8E%B0/</link>
+    <description>Recent content in HTTP 代理实现 on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Mon, 12 Dec 2022 22:52:19 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/http-%E4%BB%A3%E7%90%86%E5%AE%9E%E7%8E%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用 node 实现一个简单的 http 代理</title>
+      <link>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Mon, 12 Dec 2022 22:52:19 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</guid>
+      <description>http 代理可分为两种，一种是普通的代理，作为中间人传递两边的信息；另一种则是隧道的方式。 普通代理 const http = require(&amp;#39;http&amp;#39;); const url = require(&amp;#39;url&amp;#39;); function request(cReq, cRes) { const u = url.parse(cReq.url); const options = { host: u.hostname, port: u.port</description>
+    </item>
+    
+  </channel>
+</rss>
