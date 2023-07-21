@@ -65,7 +65,14 @@
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/post/%E5%86%B0%E5%86%BB%E7%9A%84%E6%B4%8B%E8%91%B1/</loc>
+    <loc>https://bigshans.github.io/private/</loc>
+    <lastmod>2023-06-17T11:48:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/private/%E5%86%B0%E5%86%BB%E7%9A%84%E6%B4%8B%E8%91%B1/</loc>
     <lastmod>2023-06-17T11:48:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -108,13 +115,6 @@
   
   <url>
     <loc>https://bigshans.github.io/categories/private/</loc>
-    <lastmod>2023-04-19T01:30:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/private/</loc>
     <lastmod>2023-04-19T01:30:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
