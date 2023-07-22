@@ -144,15 +144,6 @@
     </item>
     
     <item>
-      <title>远程连接 Windows 开发的诸多尝试</title>
-      <link>https://bigshans.github.io/post/remote-windows/</link>
-      <pubDate>Sun, 12 Sep 2021 22:04:52 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/remote-windows/</guid>
-      <description>由于最近要用到 uniapp 进行开发，但是，由于项目不是 CLI 项目，所以最终还是要用到 HBuilderX 进行开发，然而，它没有 Linux 版 Orz 。不过好在公司给了我一台 Windows 电脑，所以我就</description>
-    </item>
-    
-    <item>
       <title>函数式的骨感</title>
       <link>https://bigshans.github.io/post/function-comment/</link>
       <pubDate>Tue, 24 Aug 2021 17:22:43 +0800</pubDate>
@@ -168,15 +159,6 @@
       
       <guid>https://bigshans.github.io/post/cognitive-complexity/</guid>
       <description>Cognitive Complexity ，即认知复杂度，是来自于 Sonar 官方的一个概念。认知复杂度主要是以可测量的方式，将代码估算成一个数字，用以衡量代码的理解难度的。它基于一下三条</description>
-    </item>
-    
-    <item>
-      <title>在 root 下去除 MIUI 锁屏密码</title>
-      <link>https://bigshans.github.io/post/unlock-screen-sercet/</link>
-      <pubDate>Tue, 27 Apr 2021 20:20:24 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/unlock-screen-sercet/</guid>
-      <description>因为 root 手机忘了锁屏密码，所以想要破解掉。因为手机已经提前 root 了，我本以为这个问题只需要搜一下就可以了，然而搜索的结果却让我大跌眼镜。使用 adb 删除</description>
     </item>
     
     <item>
@@ -196,15 +178,6 @@
       <guid>https://bigshans.github.io/post/websocket/</guid>
       <description>&lt;p&gt;公司想要做一个聊天系统，原本打算上 Websocket ，我例程都写了，老板又不想弄长连接了，认为短连接就符合需求了，无奈。&lt;/p&gt;
 &lt;p&gt;Websocket 还是值得说一说的，我们是使用 node 开发的。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>将 router 的 js 混成一个</title>
-      <link>https://bigshans.github.io/post/net-musicvue-problem-set2/</link>
-      <pubDate>Mon, 27 Aug 2018 17:53:56 +0000</pubDate>
-      
-      <guid>https://bigshans.github.io/post/net-musicvue-problem-set2/</guid>
-      <description>&lt;p&gt;NeteaseCloudMusicApi 得重构，首先得把 router 目录下的一大堆给归拢为一个 js 方便 exports 。然而下面有九十多个文件，所以一个个复制粘贴是不现实的，更何况未来这些文件有改动，于上游一 merge ，这代码得改得老痛苦了。所以决定自己写一个小工具解决这个问题。&lt;/p&gt;</description>
     </item>
     
   </channel>

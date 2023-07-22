@@ -7,14 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 12 Dec 2022 22:52:19 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E5%90%8E%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Nov 2021 14:04:23 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E5%90%8E%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>用 node 实现一个简单的 http 代理</title>
-      <link>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</link>
-      <pubDate>Mon, 12 Dec 2022 22:52:19 +0800</pubDate>
+      <title>Nginx 按路由分流请求</title>
+      <link>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</link>
+      <pubDate>Tue, 30 Nov 2021 14:04:23 +0800</pubDate>
       
-      <guid>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</guid>
-      <description>http 代理可分为两种，一种是普通的代理，作为中间人传递两边的信息；另一种则是隧道的方式。 普通代理 const http = require(&amp;#39;http&amp;#39;); const url = require(&amp;#39;url&amp;#39;); function request(cReq, cRes) { const u = url.parse(cReq.url); const options = { host: u.hostname, port: u.port</description>
+      <guid>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</guid>
+      <description>一个很恶心的需求，到部署最后部署的时候才发现问题很大，但只好死马当活马医了。 我们目前搞了两个项目，其中一个项目是传统 Vue 项目，另一个是 Angular SSR ，刚</description>
     </item>
     
     <item>
@@ -42,15 +42,6 @@
       
       <guid>https://bigshans.github.io/post/whoogle-self-host/</guid>
       <description>准确来说，Whoogle 是一个元搜索引擎，他主要将 Google 的搜索结果过滤，并去除掉其中的隐私追踪部分。与 Whoogle 差不多的另一个网站框架是 SearX ，两者都是自建</description>
-    </item>
-    
-    <item>
-      <title>使用 jest 和 supertest 进行接口测试</title>
-      <link>https://bigshans.github.io/post/jest-api-test-supertest/</link>
-      <pubDate>Sun, 28 Feb 2021 17:04:24 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/jest-api-test-supertest/</guid>
-      <description>最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。 登录测试 有些</description>
     </item>
     
     <item>

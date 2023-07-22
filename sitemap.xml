@@ -107,20 +107,6 @@
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/tags/private/</loc>
-    <lastmod>2023-04-19T01:30:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/private/</loc>
-    <lastmod>2023-04-19T01:30:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigshans.github.io/private/%E5%A4%8F%E5%A4%A9%E5%B0%86%E8%87%B3%E8%9C%B7%E7%BC%A9%E5%9C%A8%E5%AF%92%E5%86%AC%E4%B9%8B%E4%B8%AD/</loc>
     <lastmod>2023-04-19T01:30:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -277,20 +263,6 @@
   <url>
     <loc>https://bigshans.github.io/categories/%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2023-02-23T10:46:04+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/%E7%A7%81%E4%BA%BA/</loc>
-    <lastmod>2023-02-19T11:17:50+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/%E7%A7%81%E4%BA%BA/</loc>
-    <lastmod>2023-02-19T11:17:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -556,13 +528,6 @@
   
   <url>
     <loc>https://bigshans.github.io/tags/http-%E4%BB%A3%E7%90%86%E5%AE%9E%E7%8E%B0/</loc>
-    <lastmod>2022-12-15T03:59:33+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/%E5%90%8E%E7%AB%AF/</loc>
     <lastmod>2022-12-15T03:59:33+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1066,6 +1031,13 @@
   </url>
   
   <url>
+    <loc>https://bigshans.github.io/categories/deno/</loc>
+    <lastmod>2022-04-14T17:30:03+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bigshans.github.io/tags/typescript/</loc>
     <lastmod>2022-04-14T17:30:03+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1074,13 +1046,6 @@
   
   <url>
     <loc>https://bigshans.github.io/post/learn-deno-by-example/</loc>
-    <lastmod>2022-04-14T17:30:03+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-04-14T17:30:03+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1430,6 +1395,13 @@
   </url>
   
   <url>
+    <loc>https://bigshans.github.io/categories/angular/</loc>
+    <lastmod>2021-12-06T09:29:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bigshans.github.io/post/getting-started-with-angular/</loc>
     <lastmod>2021-12-06T09:29:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1466,6 +1438,13 @@
   
   <url>
     <loc>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</loc>
+    <lastmod>2021-11-30T14:04:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/%E5%90%8E%E7%AB%AF/</loc>
     <lastmod>2021-11-30T14:04:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1871,6 +1850,13 @@
   </url>
   
   <url>
+    <loc>https://bigshans.github.io/categories/vue/</loc>
+    <lastmod>2021-08-26T15:43:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bigshans.github.io/post/vue3_2-setup/</loc>
     <lastmod>2021-08-26T15:43:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -2243,6 +2229,13 @@
   
   <url>
     <loc>https://bigshans.github.io/tags/svelte/</loc>
+    <lastmod>2021-02-16T20:30:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/svelte/</loc>
     <lastmod>2021-02-16T20:30:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

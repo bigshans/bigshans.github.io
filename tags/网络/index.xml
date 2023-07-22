@@ -17,5 +17,14 @@
       <description>TCP 的握手和挥手想必很多人都已经很熟悉了，“三次握手”和“四次挥手”在面试的时候几乎都是八股文了。光是背这个的话，着实了无趣味。我们可以通过 tcpdump</description>
     </item>
     
+    <item>
+      <title>用 node 实现一个简单的 http 代理</title>
+      <link>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Mon, 12 Dec 2022 22:52:19 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</guid>
+      <description>http 代理可分为两种，一种是普通的代理，作为中间人传递两边的信息；另一种则是隧道的方式。 普通代理 const http = require(&amp;#39;http&amp;#39;); const url = require(&amp;#39;url&amp;#39;); function request(cReq, cRes) { const u = url.parse(cReq.url); const options = { host: u.hostname, port: u.port</description>
+    </item>
+    
   </channel>
 </rss>

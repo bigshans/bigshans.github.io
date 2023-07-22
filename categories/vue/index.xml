@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vue on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/categories/vue/</link>
+    <description>Recent content in Vue on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Thu, 26 Aug 2021 15:43:34 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue 3.2 &lt;script setup&gt; 摘要</title>
+      <link>https://bigshans.github.io/post/vue3_2-setup/</link>
+      <pubDate>Thu, 26 Aug 2021 15:43:34 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/vue3_2-setup/</guid>
+      <description>在 Vue 3.2 发布的内容中，最主要内容就是 &amp;lt;script setup&amp;gt; 。 &amp;lt;script setup&amp;gt; 想必大家都有使用过，跟当初作为实验特性不同，这次正式发布还是有很多的修改的。 废除 useContext() 原先获取全局 ctx</description>
+    </item>
+    
+  </channel>
+</rss>

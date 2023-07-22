@@ -27,6 +27,15 @@
     </item>
     
     <item>
+      <title>用 node 实现一个简单的 http 代理</title>
+      <link>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Mon, 12 Dec 2022 22:52:19 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</guid>
+      <description>http 代理可分为两种，一种是普通的代理，作为中间人传递两边的信息；另一种则是隧道的方式。 普通代理 const http = require(&amp;#39;http&amp;#39;); const url = require(&amp;#39;url&amp;#39;); function request(cReq, cRes) { const u = url.parse(cReq.url); const options = { host: u.hostname, port: u.port</description>
+    </item>
+    
+    <item>
       <title>NodeJs 上的大文件问题</title>
       <link>https://bigshans.github.io/post/bigfile-problem-for-node/</link>
       <pubDate>Sun, 07 Aug 2022 20:42:17 +0800</pubDate>
@@ -51,6 +60,15 @@
       
       <guid>https://bigshans.github.io/post/npm-pack-guide/</guid>
       <description>最近在修改一些很长时间无人维护的包，估计包作者都不维护了，于是我重新搞了一份传到了 npm 上，有兴趣的可以看一下：log4js-rabbitmq-</description>
+    </item>
+    
+    <item>
+      <title>使用 jest 和 supertest 进行接口测试</title>
+      <link>https://bigshans.github.io/post/jest-api-test-supertest/</link>
+      <pubDate>Sun, 28 Feb 2021 17:04:24 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/jest-api-test-supertest/</guid>
+      <description>最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。 登录测试 有些</description>
     </item>
     
     <item>
