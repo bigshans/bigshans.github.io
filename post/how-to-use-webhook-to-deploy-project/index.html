@@ -232,7 +232,7 @@
 }
 </code></pre>
 <p>访问一下我们的服务器应该出现 <code>phpinfo</code> 的信息。</p>
-<p><img src="/post/img/phpinfo.png" alt="这是我本地的图片"></p>
+<p><img src="../img/phpinfo.png" alt="这是我本地的图片"></p>
 <p>然我我们编写正式的 deploy.php 。</p>
 <pre><code class="language-php">&lt;?php
 $secret = &quot;Your Secret&quot;;
@@ -255,7 +255,7 @@ http_response_code(404);
 <p>首先我们得有个仓库，我们到设置里去。</p>
 <p>首先先配个 Deploy Key ，因为我是私人仓库， pull 和 push 都有限制。基本上与添加自己的 key 一致，我就不多赘述了。</p>
 <p>然后开始配置 Webhook ，点击 Webhooks ，再点击添加 <code>Add Webhook</code> ，进入到如下页面。</p>
-<p><img src="/post/img/add-webhook.png" alt=""></p>
+<p><img src="../img/add-webhook.png" alt=""></p>
 <p>Payload URL 就填写我们自己的 deploy.php 的请求地址即可。Secret 要与我们在 deploy.php 里的保持一致。</p>
 <p>其他的你可以按需配置一下。然后，点击 <code>Add webhook</code> 就大功告成了。此时的 Webhook 就会发一个请求跑一下，如果返回结果没有问题，我们的配置就成功了。</p>
 <h2 id="enjoy-it">Enjoy it!</h2>
