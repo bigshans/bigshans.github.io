@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BUUCFT on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/buucft/</link>
+    <description>Recent content in BUUCFT on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Sun, 23 Jul 2023 08:19:53 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/buucft/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BUUCFT 题解</title>
+      <link>https://bigshans.github.io/post/buucft/</link>
+      <pubDate>Sun, 23 Jul 2023 08:19:53 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/buucft/</guid>
+      <description>娱乐性质，玩一玩。 Linux Lab 使用 ssh 连接到靶机即可。 ssh root@address -p port flag.txt 就放在根目录下面。 BUUCFT 打开页面，首先给了一段代码。 &amp;lt;?php /** * Created by PhpStorm. * User: jinzhao * Date: 2019/7/9 * Time: 7:07 AM */ highlight_file(__FILE__); if(isset($_GET[&amp;#39;file&amp;#39;]))</description>
+    </item>
+    
+  </channel>
+</rss>

