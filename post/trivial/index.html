@@ -55,7 +55,7 @@
 <meta itemprop="name" content="琐碎备录">
 <meta itemprop="description" content="Makefile .PHONY 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。 Joi joi.string().allow(&#39;&#39;).allow(null).empty(&#39;&#39;).optional() ，允许字符串为空。 pacman 以前记录过一遍，但太隐慝了，在此特意提出。 pacman -Ql &lt;package-name&gt;"><meta itemprop="datePublished" content="2022-08-05T16:46:36+08:00" />
 <meta itemprop="dateModified" content="2022-08-05T16:46:36+08:00" />
-<meta itemprop="wordCount" content="276">
+<meta itemprop="wordCount" content="287">
 <meta itemprop="keywords" content="Git,Make,Pacman," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="琐碎备录"/>
 <meta name="twitter:description" content="Makefile .PHONY 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。 Joi joi.string().allow(&#39;&#39;).allow(null).empty(&#39;&#39;).optional() ，允许字符串为空。 pacman 以前记录过一遍，但太隐慝了，在此特意提出。 pacman -Ql &lt;package-name&gt;"/>
@@ -189,7 +189,7 @@
             <a href="/categories/software/"> Software </a>
             <a href="/categories/linux/"> Linux </a>
             </div>
-          <span class="more-meta"> 约 276 字 </span>
+          <span class="more-meta"> 约 287 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         
       </div>
@@ -208,6 +208,7 @@
         <li><a href="#配色">配色</a></li>
         <li><a href="#ln">ln</a></li>
         <li><a href="#软件">软件</a></li>
+        <li><a href="#dmesg"><code>dmesg</code></a></li>
       </ul>
     </li>
   </ul>
@@ -237,6 +238,10 @@ git push origin master
 <p><code>ln</code> 命令的两个地址，第一个是<strong>源地址</strong>，第二个是<strong>目标地址</strong>，我经常搞混。如果只输入一个地址，就是在当前目录下创建一个链接，连到目标地址上去。</p>
 <h2 id="软件">软件</h2>
 <p><code>screenkey</code> 录制屏幕快捷键的软件。</p>
+<h2 id="dmesg"><code>dmesg</code></h2>
+<p>打印内核日志。</p>
+<pre><code class="language-shell">sudo dmesg -w
+</code></pre>
 
     </div>
 
