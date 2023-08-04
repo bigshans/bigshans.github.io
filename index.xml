@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 23 Jul 2023 08:19:53 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Aug 2023 09:06:08 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[置顶] 关于本博客</title>
@@ -30,6 +30,19 @@
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch</description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>d8 编译要点</title>
+      <link>https://bigshans.github.io/post/d8%E7%BC%96%E8%AF%91%E8%A6%81%E7%82%B9/</link>
+      <pubDate>Fri, 04 Aug 2023 09:06:08 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/d8%E7%BC%96%E8%AF%91%E8%A6%81%E7%82%B9/</guid>
+      
+      <description>d8 是 v8 提供的用以 debug v8 的 shell ，因为 v8 自身就是一个库，不提供 console 的实现。d8 会在编译 v8 时顺便实现，不过我只想编译 d8 。 主要参考了 v81 文档和一篇博文2。 代</description>
       
     </item>
     
@@ -575,19 +588,6 @@
       <guid>https://bigshans.github.io/post/userchrome-usage/</guid>
       
       <description>userChrome.js 是 Firefox 的一种玩法，可以高度自定义 Firefox 的界面、样式、功能。虽然 XUL 很早就死掉了，但所幸 userChrome.js 仍然是可用的。需要注意的是， userChrome.js 是非正式且冷门的自定义玩法，</description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>NodeJs 上的大文件问题</title>
-      <link>https://bigshans.github.io/post/bigfile-problem-for-node/</link>
-      <pubDate>Sun, 07 Aug 2022 20:42:17 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/bigfile-problem-for-node/</guid>
-      
-      <description>大文件的读取与写入问题，一般使用流（stream）就可以很好的处理了。但大文件的问题并不单单是这样，如果仅仅是单纯的读取或写入，那么解决方案</description>
       
     </item>
     

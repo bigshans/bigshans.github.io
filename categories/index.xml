@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 23 Jul 2023 08:19:53 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Aug 2023 09:06:08 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>V8</title>
+      <link>https://bigshans.github.io/categories/v8/</link>
+      <pubDate>Fri, 04 Aug 2023 09:06:08 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/v8/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>BUUCFT</title>
       <link>https://bigshans.github.io/categories/buucft/</link>
@@ -302,15 +311,6 @@
       <pubDate>Thu, 26 Aug 2021 15:43:34 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/vue/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>V8</title>
-      <link>https://bigshans.github.io/categories/v8/</link>
-      <pubDate>Sun, 11 Jul 2021 15:14:22 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/v8/</guid>
       <description></description>
     </item>
     
