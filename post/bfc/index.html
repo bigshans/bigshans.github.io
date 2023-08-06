@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>d8 编译要点 - Bigshans&#39; Blog</title>
+  <title>BFC 简述 - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="d8 是 v8 提供的用以 debug v8 的 shell ，因为 v8 自身就是一个库，不提供 console 的实现。d8 会在编译 v8 时顺便实现，不过我只想编译 d8 。 主要参考了 v81 文档和一篇博文2。 代" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="BFC 指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC 即定义了块元素的格式上下文。 默认情况下，&amp;lt;ht" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -29,7 +29,7 @@
 <meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/d8%E7%BC%96%E8%AF%91%E8%A6%81%E7%82%B9/" />
+<link rel="canonical" href="https://bigshans.github.io/post/bfc/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -46,19 +46,19 @@
 
 
 
-<meta property="og:title" content="d8 编译要点" />
-<meta property="og:description" content="d8 是 v8 提供的用以 debug v8 的 shell ，因为 v8 自身就是一个库，不提供 console 的实现。d8 会在编译 v8 时顺便实现，不过我只想编译 d8 。 主要参考了 v81 文档和一篇博文2。 代" />
+<meta property="og:title" content="BFC 简述" />
+<meta property="og:description" content="BFC 指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC 即定义了块元素的格式上下文。 默认情况下，&lt;ht" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/d8%E7%BC%96%E8%AF%91%E8%A6%81%E7%82%B9/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-08-04T09:06:08+08:00" />
-<meta property="article:modified_time" content="2023-08-04T09:06:08+08:00" />
-<meta itemprop="name" content="d8 编译要点">
-<meta itemprop="description" content="d8 是 v8 提供的用以 debug v8 的 shell ，因为 v8 自身就是一个库，不提供 console 的实现。d8 会在编译 v8 时顺便实现，不过我只想编译 d8 。 主要参考了 v81 文档和一篇博文2。 代"><meta itemprop="datePublished" content="2023-08-04T09:06:08+08:00" />
-<meta itemprop="dateModified" content="2023-08-04T09:06:08+08:00" />
-<meta itemprop="wordCount" content="386">
-<meta itemprop="keywords" content="V8," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="d8 编译要点"/>
-<meta name="twitter:description" content="d8 是 v8 提供的用以 debug v8 的 shell ，因为 v8 自身就是一个库，不提供 console 的实现。d8 会在编译 v8 时顺便实现，不过我只想编译 d8 。 主要参考了 v81 文档和一篇博文2。 代"/>
+<meta property="og:url" content="https://bigshans.github.io/post/bfc/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-08-06T19:09:10+08:00" />
+<meta property="article:modified_time" content="2023-08-06T19:09:10+08:00" />
+<meta itemprop="name" content="BFC 简述">
+<meta itemprop="description" content="BFC 指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC 即定义了块元素的格式上下文。 默认情况下，&lt;ht"><meta itemprop="datePublished" content="2023-08-06T19:09:10+08:00" />
+<meta itemprop="dateModified" content="2023-08-06T19:09:10+08:00" />
+<meta itemprop="wordCount" content="328">
+<meta itemprop="keywords" content="前端," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="BFC 简述"/>
+<meta name="twitter:description" content="BFC 指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC 即定义了块元素的格式上下文。 默认情况下，&lt;ht"/>
 
 
 
@@ -181,14 +181,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">d8 编译要点</h1>
+      <h1 class="post-title">BFC 简述</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2023-08-04 </span>
+        <span class="post-time"> 2023-08-06 </span>
         <div class="post-category">
-            <a href="/categories/v8/"> V8 </a>
+            <a href="/categories/%E5%89%8D%E7%AB%AF/"> 前端 </a>
             </div>
-          <span class="more-meta"> 约 386 字 </span>
+          <span class="more-meta"> 约 328 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         
       </div>
@@ -196,71 +196,34 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#代理工具">代理工具</a></li>
-        <li><a href="#获取仓库">获取仓库</a></li>
-        <li><a href="#编译-d8">编译 d8</a></li>
-        <li><a href="#生成-compile_commands.json">生成
-<code>compile_commands.json</code></a></li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
+  <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
 </div>
 
     <div class="post-content">
       
-
-<p>d8 是 v8 提供的用以 debug v8 的 shell ，因为 v8
-自身就是一个库，不提供 console 的实现。d8 会在编译 v8
-时顺便实现，不过我只想编译 d8 。</p>
-<p>主要参考了 v8<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> 文档和一篇博文<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>。</p>
-<h2 id="代理工具">代理工具</h2>
-<p>使用 <code>tscoks</code> 。</p>
-<p>我平常喜欢用 <code>proxychains</code> ，但谷歌的工具在
-<code>proxychains</code>
-下都无法生效(动态库注入失败)。<code>tsocks</code> 相对较好(但比
-<code>proxychains</code> 慢)。</p>
-<h2 id="获取仓库">获取仓库</h2>
-<p>首先要拉取 <code>depot_tools</code> ，然后把 <code>depot_tools</code>
-仓库地址追加到 <code>PATH</code> 里。</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://chromium.googlesource.com/chromium/tools/depot_tools.git</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="va">PATH</span><span class="op">=</span>PATH:/path/to/depot_tools</span></code></pre></div>
-<p>编译 v8 需要使用 <code>ninja</code>
-，建议使用包管理器下载，因为各个系统都有。</p>
-<p>完成上述工作我们便可以开始尝试获取 v8 的代码了。</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gclient</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">fetch</span> v8 <span class="co"># 获取v8 源码</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">gclient</span> sync</span></code></pre></div>
-<p>记住用 <code>tsocks</code> 做代理，如果做了透明代理也行。</p>
-<h2 id="编译-d8">编译 d8</h2>
-<p>首先生成编译配置，</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tools/dev/v8gen.py</span> x64.debug</span></code></pre></div>
-<p>然后使用 <code>ninja</code> 进行编译，</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ninja</span> <span class="at">-C</span> out.gn/x64.debug d8</span></code></pre></div>
-<p>此处我们只编译 d8 。</p>
-<p>完成后，我们的 d8 在 <code>./out.gn/x64.debug</code> 下。</p>
-<h2 id="生成-compile_commands.json">生成
-<code>compile_commands.json</code></h2>
-<p>借助 <code>ninja</code> 完成。<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ninja</span> <span class="at">-C</span> ./out.gn/x64.debug d8 <span class="at">-t</span> compdb <span class="op">&gt;</span> compile_commands.json</span></code></pre></div>
-<p><code>compile_commands.json</code> 主要是为了更方便阅读代码。C++ 的
-LSP 都支持这个。</p>
-<p>我个人建议使用 <code>clangd</code> 做 LS ，比 <code>ccls</code>
-好太多了。</p>
-<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr/>
-<ol>
-<li id="fn1"><p><a href="https://v8.dev/docs/build#building-v8">Building
-V8 from source</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p><a href="https://mem2019.github.io/jekyll/update/2019/07/18/V8-Env-Config.html">V8环境搭建，100%成功版</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p><a href="https://sarcasm.github.io/notes/dev/compilation-database.html#ninja">Compilation
-database</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<p>BFC
+指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC
+即定义了块元素的格式上下文。</p>
+<p>默认情况下，<code>&lt;html&gt;</code>
+为块格式上下文。块元素的子元素将按块排布，或者按行排布，如果出现混合排布的情况，则回将内联元素用匿名块包裹起来，然后按块排布。同时，匿名块不能被
+CSS 指定，不受 CSS 样式影响。</p>
+<p>在一些情况下，浏览器将会为元素创建新的独立 BFC ：</p>
+<ol type="1">
+<li>使用了 <code>float</code> 。</li>
+<li>使 <code>position</code> 为绝对定位。</li>
+<li><code>display: inline-block</code> ，或者表格布局，<code>flex</code>
+，<code>flow-root</code> 等。</li>
+<li><code>overflow</code> 不是 <code>visible</code> 。</li>
+<li><code>contain</code> 为 <code>layout</code> 、<code>content</code>
+、 <code>strict</code> 。</li>
+<li>flex 。</li>
+<li>grid 。</li>
+<li>multicol containers ，多列布局。</li>
+<li><code>column-span</code> 为 <code>all</code> 。</li>
 </ol>
-</aside>
+<p>我们一般通过给父元素添加 CSS 来创建 BFC
+来清除浮动。虽然子元素是独立的 BFC ，但父元素也是独立 BFC ，同样属于独立
+BFC 的情况下，就按父子元素的原则正常包含了。</p>
 
 
 
@@ -274,7 +237,7 @@ database</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2023-08-04
+        2023-08-06
         
     </span>
   </p>
@@ -283,16 +246,16 @@ database</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/v8/">V8</a>
+          <a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/bfc/">
+        <a class="prev" href="/post/%E5%A4%87%E5%BF%98%E5%BD%95/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">BFC 简述</span>
+            <span class="prev-text nav-default">[置顶] 备忘录</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/post/buucft/">
-            <span class="next-text nav-default">BUUCFT 题解</span>
+        <a class="next" href="/post/d8%E7%BC%96%E8%AF%91%E8%A6%81%E7%82%B9/">
+            <span class="next-text nav-default">d8 编译要点</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

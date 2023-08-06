@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 18 Feb 2023 14:08:26 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Aug 2023 19:09:10 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BFC 简述</title>
+      <link>https://bigshans.github.io/post/bfc/</link>
+      <pubDate>Sun, 06 Aug 2023 19:09:10 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/bfc/</guid>
+      <description>BFC 指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC 即定义了块元素的格式上下文。 默认情况下，&amp;lt;ht</description>
+    </item>
+    
     <item>
       <title>如何正确的替换 HTML</title>
       <link>https://bigshans.github.io/post/sethtml/</link>
