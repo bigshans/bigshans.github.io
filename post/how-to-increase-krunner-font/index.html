@@ -210,10 +210,10 @@ Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常�
 退出，不然重启时会自动覆盖文件，使用如下命令：</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">kquitapp5</span> krunner</span></code></pre></div>
 <p>然后做如下两个修改：</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode toml"><code class="sourceCode toml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">General</span><span class="kw">]</span></span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode toml"><code class="sourceCode toml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[General]</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">font</span><span class="op">=</span><span class="dt">Noto</span> <span class="dt">Sans</span><span class="er">,</span><span class="dt">20</span><span class="er">,</span><span class="dt">-1</span><span class="er">,</span><span class="dt">5</span><span class="er">,</span><span class="dt">50</span><span class="er">,</span><span class="dt">0</span><span class="er">,</span><span class="dt">0</span><span class="er">,</span><span class="dt">0</span><span class="er">,</span><span class="dt">0</span><span class="er">,</span><span class="dt">0</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">PlasmaRunnerManager</span><span class="kw">]</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">[PlasmaRunnerManager]</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">migrated</span><span class="op">=</span><span class="cn">false</span></span></code></pre></div>
 <p>没有的自己添加，有的就改。</p>
 <p>然后重新启动，使用如下命令：</p>
