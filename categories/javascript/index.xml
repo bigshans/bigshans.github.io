@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Javascript on Bigshans&#39; Blog</title>
+    <title>JavaScript on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/javascript/</link>
-    <description>Recent content in Javascript on Bigshans&#39; Blog</description>
+    <description>Recent content in JavaScript on Bigshans&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 16 Dec 2022 10:49:05 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Oct 2023 11:52:10 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>函数柯里化</title>
+      <link>https://bigshans.github.io/post/curry/</link>
+      <pubDate>Sat, 14 Oct 2023 11:52:10 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/curry/</guid>
+      <description>函数柯里化是一种可以将函数转换为另一个函数的技巧，通常是用来减少函数参数的。 用一个简单的例子以表示这种使用: function sum(a, b) { return a + b; } const add1 = curry((b) =&amp;gt; sum(1, b));</description>
+    </item>
+    
     <item>
       <title>JavaScript 的标签模板字符串</title>
       <link>https://bigshans.github.io/post/tagged-template-string/</link>

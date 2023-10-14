@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 29 Sep 2023 19:20:36 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Oct 2023 11:52:10 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[置顶] 关于本博客</title>
@@ -30,6 +30,19 @@
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch</description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>函数柯里化</title>
+      <link>https://bigshans.github.io/post/curry/</link>
+      <pubDate>Sat, 14 Oct 2023 11:52:10 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/curry/</guid>
+      
+      <description>函数柯里化是一种可以将函数转换为另一个函数的技巧，通常是用来减少函数参数的。 用一个简单的例子以表示这种使用: function sum(a, b) { return a + b; } const add1 = curry((b) =&amp;gt; sum(1, b));</description>
       
     </item>
     
@@ -575,19 +588,6 @@
       <guid>https://bigshans.github.io/post/top-down-acid/</guid>
       
       <description>ACID ，即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability），只要你接</description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>琢词雕句</title>
-      <link>https://bigshans.github.io/post/%E7%90%A2%E8%AF%8D%E9%9B%95%E5%8F%A5/</link>
-      <pubDate>Fri, 26 Aug 2022 17:53:27 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E7%90%A2%E8%AF%8D%E9%9B%95%E5%8F%A5/</guid>
-      
-      <description>本文是对遣词造句的一些浅薄研究，未来必定会长久更新。 中文不爱从句，因此复杂的从句要少用。凡可用从句的地方，都可拆成多个分句，并依前后逻辑缀连</description>
       
     </item>
     
