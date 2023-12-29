@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 14 Dec 2023 00:32:57 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Dec 2023 21:02:43 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>firefox</title>
+      <link>https://bigshans.github.io/tags/firefox/</link>
+      <pubDate>Fri, 29 Dec 2023 21:02:43 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/tags/firefox/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>年终总结</title>
       <link>https://bigshans.github.io/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
@@ -320,15 +329,6 @@
       <pubDate>Thu, 18 Aug 2022 03:42:04 +0800</pubDate>
       
       <guid>https://bigshans.github.io/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Firefox</title>
-      <link>https://bigshans.github.io/tags/firefox/</link>
-      <pubDate>Sun, 14 Aug 2022 17:56:49 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/tags/firefox/</guid>
       <description></description>
     </item>
     

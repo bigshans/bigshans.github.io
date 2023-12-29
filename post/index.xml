@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 14 Dec 2023 00:32:57 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Dec 2023 21:02:43 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch</description>
+    </item>
+    
+    <item>
+      <title>如何使用 adb 将 Betterfox 安装到 Firefox Android 上</title>
+      <link>https://bigshans.github.io/post/how-to-install-betterfox-on-android-firefox-using-adb/</link>
+      <pubDate>Fri, 29 Dec 2023 21:02:43 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/how-to-install-betterfox-on-android-firefox-using-adb/</guid>
+      <description>最近使用了 Betterfox 优化了我的 Firefox 效果相当不错。在性能上表现得比之前默认的配置好。在 Betterfox 的 issue 里，有人提到了可以安装 Betterfox 到安卓手机的 Firefox 上。我也尝试了，效果还</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/trivial/</guid>
       <description>Makefile .PHONY 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。 Joi joi.string().allow(&#39;&#39;).allow(null).empty(&#39;&#39;).optional() ，允许字符串为空。 pacman 以前记录过一遍，但太隐慝了，在此特意提出。 pacman -Ql &amp;lt;package-name&amp;gt;</description>
-    </item>
-    
-    <item>
-      <title>在 Linux 上用 C 写一个守护进程</title>
-      <link>https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/</link>
-      <pubDate>Sat, 30 Jul 2022 23:26:25 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/</guid>
-      <description>因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方</description>
     </item>
     
   </channel>
