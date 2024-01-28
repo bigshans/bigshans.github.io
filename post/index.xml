@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 29 Dec 2023 21:02:43 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Jan 2024 21:38:15 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch</description>
+    </item>
+    
+    <item>
+      <title>修改 hosts 加速访问 dl.google.com</title>
+      <link>https://bigshans.github.io/post/dl-google-host/</link>
+      <pubDate>Sun, 28 Jan 2024 21:38:15 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/dl-google-host/</guid>
+      <description>https://dl.google.com 是 Android Studio 下载 Android SDK 的网站，国内有个镜像可以用。我们通过修改 hosts 文件让 Android Studio 去镜像站下载。 首先是获取 IP ，可以在这里 IP 访问情况，根据地区择优选择。 然后</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/bigfile-problem-for-node/</guid>
       <description>大文件的读取与写入问题，一般使用流（stream）就可以很好的处理了。但大文件的问题并不单单是这样，如果仅仅是单纯的读取或写入，那么解决方案</description>
-    </item>
-    
-    <item>
-      <title>琐碎备录</title>
-      <link>https://bigshans.github.io/post/trivial/</link>
-      <pubDate>Fri, 05 Aug 2022 16:46:36 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/trivial/</guid>
-      <description>Makefile .PHONY 可以用来重复编译，本意是将对应的对象视为虚假，从而强制执行编译。 Joi joi.string().allow(&#39;&#39;).allow(null).empty(&#39;&#39;).optional() ，允许字符串为空。 pacman 以前记录过一遍，但太隐慝了，在此特意提出。 pacman -Ql &amp;lt;package-name&amp;gt;</description>
     </item>
     
   </channel>

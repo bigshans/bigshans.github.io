@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/android/</link>
+    <description>Recent content in Android on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Sun, 28 Jan 2024 21:38:15 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>修改 hosts 加速访问 dl.google.com</title>
+      <link>https://bigshans.github.io/post/dl-google-host/</link>
+      <pubDate>Sun, 28 Jan 2024 21:38:15 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/dl-google-host/</guid>
+      <description>https://dl.google.com 是 Android Studio 下载 Android SDK 的网站，国内有个镜像可以用。我们通过修改 hosts 文件让 Android Studio 去镜像站下载。 首先是获取 IP ，可以在这里 IP 访问情况，根据地区择优选择。 然后</description>
+    </item>
+    
+  </channel>
+</rss>
