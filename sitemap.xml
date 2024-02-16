@@ -16,28 +16,42 @@
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/tags/android/</loc>
-    <lastmod>2024-01-28T21:38:15+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2024-01-28T21:38:15+08:00</lastmod>
+    <lastmod>2024-02-16T10:16:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2024-01-28T21:38:15+08:00</lastmod>
+    <lastmod>2024-02-16T10:16:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/tags/</loc>
+    <lastmod>2024-02-16T10:16:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/vim/</loc>
+    <lastmod>2024-02-16T10:16:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/coc-delance/</loc>
+    <lastmod>2024-02-16T10:16:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/android/</loc>
     <lastmod>2024-01-28T21:38:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1151,13 +1165,6 @@
   
   <url>
     <loc>https://bigshans.github.io/tags/lua/</loc>
-    <lastmod>2022-04-04T21:55:06+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/vim/</loc>
     <lastmod>2022-04-04T21:55:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

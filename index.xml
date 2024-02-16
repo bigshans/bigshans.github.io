@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 28 Jan 2024 21:38:15 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Feb 2024 10:16:38 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[置顶] 关于本博客</title>
@@ -30,6 +30,19 @@
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch</description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>使用 coc 配置 @delance/runtime</title>
+      <link>https://bigshans.github.io/post/coc-delance/</link>
+      <pubDate>Fri, 16 Feb 2024 10:16:38 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/coc-delance/</guid>
+      
+      <description>首先需要安装 delance-langserver。 npm install @delance/runtime 安装完成，第一次使用时报错，通过阅读源码发现是因为第一次安装需要连接网络。由于需要翻</description>
       
     </item>
     
@@ -553,19 +566,6 @@
       <guid>https://bigshans.github.io/post/postgre-inheritance/</guid>
       
       <description>PostgreSQL 的继承一般都被用来分区。 PostgreSQL 的分区实际上就是用继承实现的，硬要对比起来，就是继承要比单纯分区要灵活很多。 PostgreSQL 继承之后，子表和父表是两张表，仅仅</description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>解决在 Konsole 下的 Emoji 展示问题</title>
-      <link>https://bigshans.github.io/post/konsole-emoji-show/</link>
-      <pubDate>Fri, 09 Sep 2022 14:54:41 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/konsole-emoji-show/</guid>
-      
-      <description>解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。 这里借助 Noto Emoji 来处理。 Arch 下安装 noto-fonts-emoji 包，然后将下面内容</description>
       
     </item>
     
