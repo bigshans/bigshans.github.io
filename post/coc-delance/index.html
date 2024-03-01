@@ -51,11 +51,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigshans.github.io/post/coc-delance/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2024-02-16T10:16:38+08:00" />
-<meta property="article:modified_time" content="2024-02-16T10:16:38+08:00" />
+<meta property="article:modified_time" content="2024-03-01T15:33:27+00:00" />
 <meta itemprop="name" content="使用 coc 配置 @delance/runtime">
 <meta itemprop="description" content="首先需要安装 delance-langserver。 npm install @delance/runtime 安装完成，第一次使用时报错，通过阅读源码发现是因为第一次安装需要连接网络。由于需要翻"><meta itemprop="datePublished" content="2024-02-16T10:16:38+08:00" />
-<meta itemprop="dateModified" content="2024-02-16T10:16:38+08:00" />
-<meta itemprop="wordCount" content="164">
+<meta itemprop="dateModified" content="2024-03-01T15:33:27+00:00" />
+<meta itemprop="wordCount" content="203">
 <meta itemprop="keywords" content="vim," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="使用 coc 配置 @delance/runtime"/>
 <meta name="twitter:description" content="首先需要安装 delance-langserver。 npm install @delance/runtime 安装完成，第一次使用时报错，通过阅读源码发现是因为第一次安装需要连接网络。由于需要翻"/>
@@ -186,7 +186,7 @@
       <div class="post-meta">
         <span class="post-time"> 2024-02-16 </span>
         
-          <span class="more-meta"> 约 164 字 </span>
+          <span class="more-meta"> 约 203 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         
       </div>
@@ -229,6 +229,11 @@
     }
 }</code></pre>
 <p>按 <code>pyright</code> 或者 <code>pylance</code> 配置即可。</p>
+<hr/>
+<p>自 <code>v2024.2.105</code> 之后，接受环境变量
+<code>DELANCE_VSIX</code> 传入本地的 vsix 文件。</p>
+<pre class="shell"><code>DELANCE_VSIX=/path/to/pylance-visx npm install @delance/runtime</code></pre>
+<p>安装完成后直接运行 <code>delance-langserver --sdtio</code> 即可。</p>
 
 
 
@@ -242,7 +247,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2024-02-16
+        2024-03-01
         
     </span>
   </p>
