@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 16 Feb 2024 10:16:38 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Mar 2024 23:18:40 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[置顶] 关于本博客</title>
@@ -30,6 +30,19 @@
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch</description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>在 Node 上使用 FabricJs</title>
+      <link>https://bigshans.github.io/post/fabric-on-node/</link>
+      <pubDate>Sun, 24 Mar 2024 23:18:40 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/fabric-on-node/</guid>
+      
+      <description>最近开发项目用到 FabricJs ，记录一下使用的坑点。FabricJs 的文档非常难用，许多关键的点都没有讲。FabricJs 的 TypeScript 类型标注也非常难用，经常货</description>
       
     </item>
     
@@ -553,19 +566,6 @@
       <guid>https://bigshans.github.io/post/a-critique-of-gnu/</guid>
       
       <description>谈及 GNU ，我们总是称赞他们在过去，铸就了现代互联网的基础，但至于现在，则成了一种小众的趣味。这个问题比较复杂，简单来说，就是个人自由主义在面对</description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>PostgreSQL 继承的实现</title>
-      <link>https://bigshans.github.io/post/postgre-inheritance/</link>
-      <pubDate>Thu, 29 Sep 2022 01:10:10 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/postgre-inheritance/</guid>
-      
-      <description>PostgreSQL 的继承一般都被用来分区。 PostgreSQL 的分区实际上就是用继承实现的，硬要对比起来，就是继承要比单纯分区要灵活很多。 PostgreSQL 继承之后，子表和父表是两张表，仅仅</description>
       
     </item>
     

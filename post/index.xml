@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 16 Feb 2024 10:16:38 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Mar 2024 23:18:40 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch</description>
+    </item>
+    
+    <item>
+      <title>在 Node 上使用 FabricJs</title>
+      <link>https://bigshans.github.io/post/fabric-on-node/</link>
+      <pubDate>Sun, 24 Mar 2024 23:18:40 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/fabric-on-node/</guid>
+      <description>最近开发项目用到 FabricJs ，记录一下使用的坑点。FabricJs 的文档非常难用，许多关键的点都没有讲。FabricJs 的 TypeScript 类型标注也非常难用，经常货</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/</guid>
       <description>最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。 许多 Golang 的拥护者会称 Golang 是一门工程</description>
-    </item>
-    
-    <item>
-      <title>userChrome.js 的使用</title>
-      <link>https://bigshans.github.io/post/userchrome-usage/</link>
-      <pubDate>Sun, 14 Aug 2022 17:56:49 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/userchrome-usage/</guid>
-      <description>userChrome.js 是 Firefox 的一种玩法，可以高度自定义 Firefox 的界面、样式、功能。虽然 XUL 很早就死掉了，但所幸 userChrome.js 仍然是可用的。需要注意的是， userChrome.js 是非正式且冷门的自定义玩法，</description>
     </item>
     
   </channel>

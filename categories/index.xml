@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 14 Dec 2023 00:32:57 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Mar 2024 23:18:40 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Node</title>
+      <link>https://bigshans.github.io/categories/node/</link>
+      <pubDate>Sun, 24 Mar 2024 23:18:40 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/node/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>年终总结</title>
       <link>https://bigshans.github.io/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
@@ -131,15 +140,6 @@
       <pubDate>Fri, 17 Feb 2023 14:41:01 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Node</title>
-      <link>https://bigshans.github.io/categories/node/</link>
-      <pubDate>Thu, 09 Feb 2023 13:35:35 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/node/</guid>
       <description></description>
     </item>
     

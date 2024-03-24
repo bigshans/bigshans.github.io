@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 23 Feb 2023 10:46:04 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/node/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Mar 2024 23:18:40 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/node/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Node 上使用 FabricJs</title>
+      <link>https://bigshans.github.io/post/fabric-on-node/</link>
+      <pubDate>Sun, 24 Mar 2024 23:18:40 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/fabric-on-node/</guid>
+      <description>最近开发项目用到 FabricJs ，记录一下使用的坑点。FabricJs 的文档非常难用，许多关键的点都没有讲。FabricJs 的 TypeScript 类型标注也非常难用，经常货</description>
+    </item>
+    
     <item>
       <title>TCP 的握手和挥手</title>
       <link>https://bigshans.github.io/post/tcp%E7%9A%84%E6%8F%A1%E6%89%8B%E5%92%8C%E6%8C%A5%E6%89%8B/</link>

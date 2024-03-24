@@ -17,21 +17,56 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2024-03-01T15:33:27+00:00</lastmod>
+    <lastmod>2024-03-24T23:18:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/</loc>
+    <lastmod>2024-03-24T23:18:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/fabricjs/</loc>
+    <lastmod>2024-03-24T23:18:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/node/</loc>
+    <lastmod>2024-03-24T23:18:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/node/</loc>
+    <lastmod>2024-03-24T23:18:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2024-03-01T15:33:27+00:00</lastmod>
+    <lastmod>2024-03-24T23:18:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/tags/</loc>
-    <lastmod>2024-03-01T15:33:27+00:00</lastmod>
+    <lastmod>2024-03-24T23:18:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/fabric-on-node/</loc>
+    <lastmod>2024-03-24T23:18:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -74,13 +109,6 @@
   <url>
     <loc>https://bigshans.github.io/post/how-to-install-betterfox-on-android-firefox-using-adb/</loc>
     <lastmod>2023-12-29T21:02:43+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2023-12-14T00:32:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -401,13 +429,6 @@
   </url>
   
   <url>
-    <loc>https://bigshans.github.io/tags/node/</loc>
-    <lastmod>2023-03-16T02:58:06+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigshans.github.io/tags/tcp/</loc>
     <lastmod>2023-02-23T10:46:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -529,13 +550,6 @@
   <url>
     <loc>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88rpa/</loc>
     <lastmod>2023-02-15T18:27:32+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/node/</loc>
-    <lastmod>2023-03-16T02:58:06+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

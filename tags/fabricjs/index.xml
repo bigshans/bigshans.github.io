@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FabricJs on Bigshans&#39; Blog</title>
+    <link>https://bigshans.github.io/tags/fabricjs/</link>
+    <description>Recent content in FabricJs on Bigshans&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>bigshans</copyright>
+    <lastBuildDate>Sun, 24 Mar 2024 23:18:40 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/fabricjs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Node 上使用 FabricJs</title>
+      <link>https://bigshans.github.io/post/fabric-on-node/</link>
+      <pubDate>Sun, 24 Mar 2024 23:18:40 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/fabric-on-node/</guid>
+      <description>最近开发项目用到 FabricJs ，记录一下使用的坑点。FabricJs 的文档非常难用，许多关键的点都没有讲。FabricJs 的 TypeScript 类型标注也非常难用，经常货</description>
+    </item>
+    
+  </channel>
+</rss>
