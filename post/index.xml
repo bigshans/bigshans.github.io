@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 24 Mar 2024 23:18:40 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 May 2024 13:50:38 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,24 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch</description>
+    </item>
+    
+    <item>
+      <title>使用 pnpm 管理 monorepo</title>
+      <link>https://bigshans.github.io/post/pnpm-with-monorepo/</link>
+      <pubDate>Fri, 03 May 2024 13:50:38 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/pnpm-with-monorepo/</guid>
+      <description>心血来潮使用 pnpm 将项目改为了 monorepo 的结构。最重要的是 pnpm-workspace.yaml 文件，我们可以简单写一个放到根目录下面： packages: - packages/** 这代表在目录 packages 下寻找子仓库，且深度只有一层。如</description>
+    </item>
+    
+    <item>
+      <title>在 plasma 上使用 Meta 打开开始菜单</title>
+      <link>https://bigshans.github.io/post/use-meta-only-for-plasma/</link>
+      <pubDate>Fri, 03 May 2024 13:38:44 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/use-meta-only-for-plasma/</guid>
+      <description>使用 Meta 打开开始菜单是一个非常方便的功能，最早在 Plasma 上，可以使用 ksuperkey 来实现。不过 ksuperkey 仅支持 X11 ，在 Plasma on Wayland 就失去作用了。不过 Plasma 很早之前就将这个功能内置了</description>
     </item>
     
     <item>
@@ -438,24 +456,6 @@
       
       <guid>https://bigshans.github.io/post/top-down-acid/</guid>
       <description>ACID ，即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability），只要你接</description>
-    </item>
-    
-    <item>
-      <title>琢词雕句</title>
-      <link>https://bigshans.github.io/post/%E7%90%A2%E8%AF%8D%E9%9B%95%E5%8F%A5/</link>
-      <pubDate>Fri, 26 Aug 2022 17:53:27 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E7%90%A2%E8%AF%8D%E9%9B%95%E5%8F%A5/</guid>
-      <description>本文是对遣词造句的一些浅薄研究，未来必定会长久更新。 中文不爱从句，因此复杂的从句要少用。凡可用从句的地方，都可拆成多个分句，并依前后逻辑缀连</description>
-    </item>
-    
-    <item>
-      <title>对 Golang 的批评</title>
-      <link>https://bigshans.github.io/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/</link>
-      <pubDate>Thu, 18 Aug 2022 03:42:04 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/</guid>
-      <description>最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。 许多 Golang 的拥护者会称 Golang 是一门工程</description>
     </item>
     
   </channel>

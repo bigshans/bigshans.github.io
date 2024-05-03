@@ -17,14 +17,70 @@
   
   <url>
     <loc>https://bigshans.github.io/</loc>
-    <lastmod>2024-03-24T23:18:40+08:00</lastmod>
+    <lastmod>2024-05-03T13:50:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigshans.github.io/categories/</loc>
-    <lastmod>2024-03-24T23:18:40+08:00</lastmod>
+    <lastmod>2024-05-03T13:50:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/pnpm/</loc>
+    <lastmod>2024-05-03T13:50:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/</loc>
+    <lastmod>2024-05-03T13:50:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/</loc>
+    <lastmod>2024-05-03T13:50:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</loc>
+    <lastmod>2024-05-03T13:50:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/pnpm-with-monorepo/</loc>
+    <lastmod>2024-05-03T13:50:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/tags/linux/</loc>
+    <lastmod>2024-05-03T13:38:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/categories/linux/</loc>
+    <lastmod>2024-05-03T13:38:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigshans.github.io/post/use-meta-only-for-plasma/</loc>
+    <lastmod>2024-05-03T13:38:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -45,20 +101,6 @@
   
   <url>
     <loc>https://bigshans.github.io/categories/node/</loc>
-    <lastmod>2024-03-24T23:18:40+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/post/</loc>
-    <lastmod>2024-03-24T23:18:40+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/</loc>
     <lastmod>2024-03-24T23:18:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -389,20 +431,6 @@
   <url>
     <loc>https://bigshans.github.io/post/open-link-in-lazada-app/</loc>
     <lastmod>2023-02-28T17:57:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/tags/linux/</loc>
-    <lastmod>2023-02-26T14:01:31+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigshans.github.io/categories/linux/</loc>
-    <lastmod>2023-02-26T14:01:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

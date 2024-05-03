@@ -178,6 +178,58 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/rinted/">rinted 做端口转发</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-02-15 </span>
+      <div class="post-category">
+          <a href="/categories/linux/"> Linux </a>
+          </div>
+        <span class="more-meta"> 约 118 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+    
+      因为腾讯云的 Mongo 和 Redis 都是内网的地址，不能访问，官方说内网进行内网转发就行，于是就用 rinted 做了一个内网转发。
+
+    
+    </div>
+    <div class="read-more">
+      <a href="/post/rinted/" class="read-more-link">阅读更多 »</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/qosnodejs/">写个简单的 QOS</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-01-27 </span>
+      <div class="post-category">
+          <a href="/categories/%E5%90%8E%E7%AB%AF/"> 后端 </a>
+          </div>
+        <span class="more-meta"> 约 119 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+    
+      最近客户端发生了 bug ，导致我们的服务被疯狂请求， QPS 高达 1000 ！数据压力很大，tjt 让我写个 qos ，就是限制接口访问次数，我粗略写了个，还可以。
+
+    
+    </div>
+    <div class="read-more">
+      <a href="/post/qosnodejs/" class="read-more-link">阅读更多 »</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/mysqlfix/">解决 mysql 进程无法启动的问题</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2020-01-18 </span>
@@ -329,58 +381,6 @@ const express = require(&#39;express&#39;); const app = express(); app.get(&#39;
     </div>
     <div class="read-more">
       <a href="/post/node-express-source-read/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/linux-systemdnspawn/">systemd-nspawn 的简单使用</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-11-24 </span>
-      <div class="post-category">
-          <a href="/categories/linux/"> Linux </a>
-          </div>
-        <span class="more-meta"> 约 352 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-    
-      systemd-nspawn 是 docker 与一样的 container 应用，只不过 docker 相比，跟类似于 chroot 。个人还是比较喜欢 chroot 这样的，这样有种子系统的感觉，与 docker 的 container 相比， chroot 下的操作是会被保留下来的， docker 和 chroot 还是两种不同情况，不可同语。
-
-    
-    </div>
-    <div class="read-more">
-      <a href="/post/linux-systemdnspawn/" class="read-more-link">阅读更多 »</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/linux-backup/">在 linux 下备份系统</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-11-17 </span>
-      <div class="post-category">
-          <a href="/categories/linux/"> Linux </a>
-          </div>
-        <span class="more-meta"> 约 212 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-    
-      新买的移动硬盘到了，着手做新的启动盘。在硬盘上分了一个 G ，然后用 Deepin 的启动盘制作工具做了一个启动盘。然后重启，启动 Deepin live cd ，然后还备份还是失败了。没办法，只能另寻他路。
-
-    
-    </div>
-    <div class="read-more">
-      <a href="/post/linux-backup/" class="read-more-link">阅读更多 »</a>
     </div>
   </div>
 </article>

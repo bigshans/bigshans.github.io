@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>[置顶] 备忘录 - Bigshans&#39; Blog</title>
+  <title>使用 pnpm 管理 monorepo - Bigshans&#39; Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="心血来潮使用 pnpm 将项目改为了 monorepo 的结构。最重要的是 pnpm-workspace.yaml 文件，我们可以简单写一个放到根目录下面： packages: - packages/** 这代表在目录 packages 下寻找子仓库，且深度只有一层。如" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -29,7 +29,7 @@
 <meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
 
 
-<link rel="canonical" href="https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/" />
+<link rel="canonical" href="https://bigshans.github.io/post/pnpm-with-monorepo/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -46,19 +46,19 @@
 
 
 
-<meta property="og:title" content="[置顶] 备忘录" />
-<meta property="og:description" content="文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch" />
+<meta property="og:title" content="使用 pnpm 管理 monorepo" />
+<meta property="og:description" content="心血来潮使用 pnpm 将项目改为了 monorepo 的结构。最重要的是 pnpm-workspace.yaml 文件，我们可以简单写一个放到根目录下面： packages: - packages/** 这代表在目录 packages 下寻找子仓库，且深度只有一层。如" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-05-18T09:07:16+08:00" />
-<meta property="article:modified_time" content="2022-05-18T09:07:16+08:00" />
-<meta itemprop="name" content="[置顶] 备忘录">
-<meta itemprop="description" content="文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch"><meta itemprop="datePublished" content="2022-05-18T09:07:16+08:00" />
-<meta itemprop="dateModified" content="2022-05-18T09:07:16+08:00" />
-<meta itemprop="wordCount" content="47">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[置顶] 备忘录"/>
-<meta name="twitter:description" content="文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch"/>
+<meta property="og:url" content="https://bigshans.github.io/post/pnpm-with-monorepo/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-03T13:50:38+08:00" />
+<meta property="article:modified_time" content="2024-05-03T13:50:38+08:00" />
+<meta itemprop="name" content="使用 pnpm 管理 monorepo">
+<meta itemprop="description" content="心血来潮使用 pnpm 将项目改为了 monorepo 的结构。最重要的是 pnpm-workspace.yaml 文件，我们可以简单写一个放到根目录下面： packages: - packages/** 这代表在目录 packages 下寻找子仓库，且深度只有一层。如"><meta itemprop="datePublished" content="2024-05-03T13:50:38+08:00" />
+<meta itemprop="dateModified" content="2024-05-03T13:50:38+08:00" />
+<meta itemprop="wordCount" content="522">
+<meta itemprop="keywords" content="pnpm," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用 pnpm 管理 monorepo"/>
+<meta name="twitter:description" content="心血来潮使用 pnpm 将项目改为了 monorepo 的结构。最重要的是 pnpm-workspace.yaml 文件，我们可以简单写一个放到根目录下面： packages: - packages/** 这代表在目录 packages 下寻找子仓库，且深度只有一层。如"/>
 
 
 
@@ -181,34 +181,81 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">[置顶] 备忘录</h1>
+      <h1 class="post-title">使用 pnpm 管理 monorepo</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2022-05-18 </span>
-        
-          <span class="more-meta"> 约 47 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        <span class="post-time"> 2024-05-03 </span>
+        <div class="post-category">
+            <a href="/categories/%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/"> 包管理器 </a>
+            </div>
+          <span class="more-meta"> 约 522 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
     </header>
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#依赖安装">依赖安装</a></li>
+        <li><a href="#多包构建">多包构建</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 </div>
 
     <div class="post-content">
-      <p>文章备忘录：</p>
-<ol>
-<li><a href="../arch-pack-memo">Arch 打包备忘录</a></li>
-<li><a href="../trivial">琐碎备录</a></li>
-<li><a href="../git-merge-unrealted-histories">如何合并 Git 无关历史</a></li>
-<li><a href="../latex">latex 部分常用公式代码</a></li>
-<li><a href="../critical-outline">批判纲要</a></li>
-<li><a href="../how-to-use-wine-wechat-setup">如何使用 wine-wechat-setup</a></li>
-<li><a href="../%E8%AF%97">诗</a></li>
-<li><a href="../%E9%87%8D%E8%A3%85arch">重装 arch</a></li>
-</ol>
+      
+
+<p>心血来潮使用 <code>pnpm</code> 将项目改为了 monorepo
+的结构。最重要的是 <code>pnpm-workspace.yaml</code>
+文件，我们可以简单写一个放到根目录下面：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packages</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> packages/**</span></span></code></pre></div>
+<p>这代表在目录 <code>packages</code>
+下寻找子仓库，且深度只有一层。如果你的包结构是多层嵌套的，那你需要将每个嵌套的父层级也写进去。比如说我的：</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packages</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> packages/**</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> packages/@shared/**</span></span></code></pre></div>
+<p>举个例子，目录结构为：</p>
+<pre><code>├── package.json
+├── packages
+│   ├── pkg1
+│   │   └── package.json
+│   └── @shared
+│       └── toolkit
+│           └── package.json
+└── pnpm-workspace.yaml</code></pre>
+<p>那么被识别的仓库，除了根目录外，分别是 <code>pkg1</code>
+、<code>toolkit</code> 。</p>
+<h2 id="依赖安装">依赖安装</h2>
+<p>依赖可以只安装给单独的子包，也可以安装给根目录。给根目录安装的包可以供全局使用。给子目录安装只需要到对应的子包路径下安装即可，根目录安装需要多加一个
+<code>-w</code> 参数。</p>
+<pre class="shell"><code>pnpm add -w @types/node -D</code></pre>
+<p>如何在子包里引用其他包呢？举个例子，我需要在 <code>pkg1</code> 包添加
+<code>toolkit</code> 这个包，包名为 <code>@shared/toolkit</code>
+，就需要到 <code>pkg1</code> 包下添加依赖：</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&#34;dependencies&#34;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&#34;@shared/toolkit&#34;</span><span class="fu">:</span> <span class="st">&#34;workspace:*&#34;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p>然后 <code>pnpm install</code> 一下就好了。</p>
+<h2 id="多包构建">多包构建</h2>
+<p>多包构建需要自己手动处理，我个人的方法是写一个脚本进行编译。如果你的包之间的编译顺序并不直接影响你的编译结果，可直接递归运行各个子包的编译脚本。</p>
+<p><code>-r</code> 选项将会递归运行脚本到各个子包内，比如说
+<code>pnpm -r run ts:check</code> 就会依次在各个子包内运行
+<code>pnpm run ts:check</code> 。我们也可以通过 <code>--filter</code>
+参数来对我们作用的子包进行筛选，比如说
+<code>pnpm -r --filter @shared/toolkit run build</code> 就是对包名为
+<code>@shared/toolkit</code> 的包执行 <code>pnpm run build</code>
+，<code>--filter</code> 接受模糊匹配。</p>
+
+
 
     </div>
 
@@ -220,7 +267,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2022-05-18
+        2024-05-03
         
     </span>
   </p>
@@ -228,15 +275,17 @@
   
 </div>
 <footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/pnpm/">pnpm</a>
+          </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/top-blog/">
+        <a class="prev" href="/post/%E5%A4%87%E5%BF%98%E5%BD%95/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">[置顶] 关于本博客</span>
+            <span class="prev-text nav-default">[置顶] 备忘录</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/post/pnpm-with-monorepo/">
-            <span class="next-text nav-default">使用 pnpm 管理 monorepo</span>
+        <a class="next" href="/post/use-meta-only-for-plasma/">
+            <span class="next-text nav-default">在 plasma 上使用 Meta 打开开始菜单</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

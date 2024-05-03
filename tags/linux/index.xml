@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 26 Feb 2023 14:01:31 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 May 2024 13:38:44 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 plasma 上使用 Meta 打开开始菜单</title>
+      <link>https://bigshans.github.io/post/use-meta-only-for-plasma/</link>
+      <pubDate>Fri, 03 May 2024 13:38:44 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/use-meta-only-for-plasma/</guid>
+      <description>使用 Meta 打开开始菜单是一个非常方便的功能，最早在 Plasma 上，可以使用 ksuperkey 来实现。不过 ksuperkey 仅支持 X11 ，在 Plasma on Wayland 就失去作用了。不过 Plasma 很早之前就将这个功能内置了</description>
+    </item>
+    
     <item>
       <title>重装 arch</title>
       <link>https://bigshans.github.io/post/%E9%87%8D%E8%A3%85arch/</link>
