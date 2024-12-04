@@ -311,8 +311,8 @@ arch 的话，难点几乎就在分区上，你可以选择提前用 gparted
 <div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pacman</span> <span class="at">-S</span> plasma-meta plasma-desktop xfce4 sddm xorg-server noto-fonts-cjk noto-fonts-emoji</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> enable sddm</span></code></pre></div>
 <p>把 archlinuxcn 源添加进去。</p>
-<pre class="conf"><code>[archlinuxcn]
-Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode conf"><code class="sourceCode toml"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[archlinuxcn]</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="dt">Server</span> <span class="op">=</span> <span class="dt">https</span><span class="er">://</span><span class="dt">mirrors.ustc.edu.cn</span><span class="er">/</span><span class="dt">archlinuxcn</span><span class="er">/$</span><span class="dt">arch</span></span></code></pre></div>
 <p>安装 paru 。</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pacman</span> <span class="at">-S</span> <span class="at">--needed</span> paru base-devel</span></code></pre></div>
 <p>安装 wine-for-wechat 。</p>
@@ -330,7 +330,7 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch</code></pre>
 <p>取消掉 <code>%wheel ALL=(ALL:ALL) ALL</code> 这一行前面的
 <code>#</code> 即可。</p>
 <p>添加一下内容可以保持用户的环境变量应用到 root 去。</p>
-<pre class="conf"><code>Defaults !env_reset</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode conf"><code class="sourceCode toml"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="dt">Defaults</span> <span class="er">!</span><span class="dt">env_reset</span></span></code></pre></div>
 <p>等于你每次运行使用 <code>sudo -E</code> 。但不介意使用
 <code>alias</code> 改变原生行为。</p>
 <h2 id="修复-nextcloud-每次都要登录的问题">修复 nextcloud
