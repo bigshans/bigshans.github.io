@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 03 May 2024 13:50:38 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Dec 2024 22:56:17 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>年终总结</title>
+      <link>https://bigshans.github.io/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sun, 29 Dec 2024 22:56:17 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>包管理器</title>
       <link>https://bigshans.github.io/categories/%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</link>
@@ -32,15 +41,6 @@
       <pubDate>Sun, 24 Mar 2024 23:18:40 +0800</pubDate>
       
       <guid>https://bigshans.github.io/categories/node/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>年终总结</title>
-      <link>https://bigshans.github.io/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Thu, 14 Dec 2023 00:32:57 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</guid>
       <description></description>
     </item>
     

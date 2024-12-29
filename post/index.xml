@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 03 May 2024 13:50:38 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Dec 2024 22:56:17 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[置顶] 关于本博客</title>
       <link>https://bigshans.github.io/post/top-blog/</link>
@@ -24,6 +24,15 @@
       
       <guid>https://bigshans.github.io/post/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
       <description>文章备忘录： Arch 打包备忘录 琐碎备录 如何合并 Git 无关历史 latex 部分常用公式代码 批判纲要 如何使用 wine-wechat-setup 诗 重装 arch</description>
+    </item>
+    
+    <item>
+      <title>2024 年年终总结</title>
+      <link>https://bigshans.github.io/post/2024%E5%B9%B4%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sun, 29 Dec 2024 22:56:17 +0800</pubDate>
+      
+      <guid>https://bigshans.github.io/post/2024%E5%B9%B4%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</guid>
+      <description>距离上一次写博客已经有半年之久了，没写也无别的原因，纯粹是没动力。 今年过得并不好，原本以为去年是最糟的，没想到今年开年还能给我惊喜。从正泰离</description>
     </item>
     
     <item>
@@ -447,15 +456,6 @@
       
       <guid>https://bigshans.github.io/post/%E6%9C%BA%E5%99%A8%E4%B8%8E%E4%BA%BA/</guid>
       <description>当 AI 将触手伸向人类引以为傲的艺术创作时，人类又一次陷入到类似当年机器大生产的时候。机器与人的对立似乎是近代才有的议题，人们认为，机器高超而稳</description>
-    </item>
-    
-    <item>
-      <title>自顶向下的 ACID</title>
-      <link>https://bigshans.github.io/post/top-down-acid/</link>
-      <pubDate>Wed, 31 Aug 2022 15:21:43 +0800</pubDate>
-      
-      <guid>https://bigshans.github.io/post/top-down-acid/</guid>
-      <description>ACID ，即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability），只要你接</description>
     </item>
     
   </channel>
