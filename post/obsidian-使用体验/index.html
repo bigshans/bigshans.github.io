@@ -325,9 +325,19 @@ Templater ，但 Templater 对我言有些重了。最后我找到了 QuickAdd
   <span class="copyright-year">
     &copy; 
     2020 - 
-    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigshans</span>
   </span>
 </div>
+
+<script src="https://unpkg.com/mermaid@8.14.0/dist/mermaid.min.js"></script>
+<script>
+  
+  Array.from(document.getElementsByClassName("language-mermaid")).forEach(
+    (el) => {
+      el.parentElement.outerHTML = `<div class="mermaid">${el.innerText}</div>`;
+    }
+  );
+</script>
 
 
     </footer>

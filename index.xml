@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+      
+      <follow_challenge>
+          <feedId>65055941591270423</feedId>
+          <userId>108704711297507328</userId>
+      </follow_challenge>
+      
     <title>Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/</link>
     <description>Recent content on Bigshans&#39; Blog</description>
