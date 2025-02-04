@@ -4,28 +4,24 @@
     <title>爬虫 on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/%E7%88%AC%E8%99%AB/</link>
     <description>Recent content in 爬虫 on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 28 Feb 2023 17:57:44 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Feb 2023 17:57:44 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/categories/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在 Lazada App 里面打开链接</title>
       <link>https://bigshans.github.io/post/open-link-in-lazada-app/</link>
       <pubDate>Tue, 28 Feb 2023 17:57:44 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/open-link-in-lazada-app/</guid>
-      <description>由于需要爬 Lazada 的销量信息，所以我不得不在手机上进行爬虫。麻烦的是，PC 的链接虽然可以在移动端打开，但不能跳转进 App ， App 分享的链接虽然可以跳转，但</description>
+      <description>&lt;p&gt;由于需要爬 Lazada&#xA;的销量信息，所以我不得不在手机上进行爬虫。麻烦的是，PC&#xA;的链接虽然可以在移动端打开，但不能跳转进 App ， App&#xA;分享的链接虽然可以跳转，但让业务方在手机端复制分享链接再给到我，对他们而言也是不小的工作量。做&#xA;RPA&#xA;数据爬取本来就是为了帮他们减少负担，这样反倒适得其反。所以，还是得研究研究，能否直接从&#xA;PC 端的链接，直接跳转到 App 内部。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>python 爬虫获取 bilibili 封面</title>
       <link>https://bigshans.github.io/post/python-bilibili-cover/</link>
       <pubDate>Wed, 29 Aug 2018 17:01:17 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/python-bilibili-cover/</guid>
-      <description>&lt;p&gt;以前写的一个脚本，获取 B 站视频封面的脚本，使用了 urllib 来爬虫，用 feh 来打开图片。&lt;/p&gt;
-&lt;p&gt;以下是代码：&lt;/p&gt;</description>
+      <description>&lt;p&gt;以前写的一个脚本，获取 B 站视频封面的脚本，使用了 urllib 来爬虫，用 feh 来打开图片。&lt;/p&gt;&#xA;&lt;p&gt;以下是代码：&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

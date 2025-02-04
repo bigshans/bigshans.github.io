@@ -4,18 +4,17 @@
     <title>包管理器 on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</link>
     <description>Recent content in 包管理器 on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 03 May 2024 13:50:38 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 May 2024 13:50:38 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/categories/%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 pnpm 管理 monorepo</title>
       <link>https://bigshans.github.io/post/pnpm-with-monorepo/</link>
       <pubDate>Fri, 03 May 2024 13:50:38 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/pnpm-with-monorepo/</guid>
-      <description>心血来潮使用 pnpm 将项目改为了 monorepo 的结构。最重要的是 pnpm-workspace.yaml 文件，我们可以简单写一个放到根目录下面： packages: - packages/** 这代表在目录 packages 下寻找子仓库，且深度只有一层。如</description>
+      <description>&lt;p&gt;心血来潮使用 &lt;code&gt;pnpm&lt;/code&gt; 将项目改为了 monorepo&#xA;的结构。最重要的是 &lt;code&gt;pnpm-workspace.yaml&lt;/code&gt;&#xA;文件，我们可以简单写一个放到根目录下面：&lt;/p&gt;&#xA;&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre&#xA;class=&#34;sourceCode yaml&#34;&gt;&lt;code class=&#34;sourceCode yaml&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;fu&#34;&gt;packages&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;:&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-2&#34;&gt;&lt;a href=&#34;#cb1-2&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;at&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;at&#34;&gt; packages/**&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;p&gt;这代表在目录 &lt;code&gt;packages&lt;/code&gt;&#xA;下寻找子仓库，且深度只有一层。如果你的包结构是多层嵌套的，那你需要将每个嵌套的父层级也写进去。比如说我的：&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

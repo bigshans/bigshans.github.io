@@ -4,45 +4,38 @@
     <title>Algorithm on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/algorithm/</link>
     <description>Recent content in Algorithm on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 27 Sep 2021 17:41:12 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Sep 2021 17:41:12 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sku 算法浅讲</title>
       <link>https://bigshans.github.io/post/sku-algorithm/</link>
       <pubDate>Mon, 27 Sep 2021 17:41:12 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/sku-algorithm/</guid>
-      <description>一个重复写过几次的老算法了，今天总结一下大体思路。这是一个在电商领域非常常见的算法，就是选择商品 Sku 时的算法。 这个算法的写法非常只多，往往需要</description>
+      <description>&lt;p&gt;一个重复写过几次的老算法了，今天总结一下大体思路。这是一个在电商领域非常常见的算法，就是选择商品 Sku 时的算法。&lt;/p&gt;&#xA;&lt;p&gt;这个算法的写法非常只多，往往需要根据你自己的数据结构，还有业务的各种奇怪的需求。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>最长上升子序列模板</title>
       <link>https://bigshans.github.io/post/algorithm-lic/</link>
       <pubDate>Fri, 22 Mar 2019 20:40:40 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/algorithm-lic/</guid>
       <description>&lt;p&gt;最长上升子序列模板。以 poj 3903 为例。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>动态规划求解 RMQ 问题</title>
       <link>https://bigshans.github.io/post/algorithm-rmq-segdp/</link>
       <pubDate>Fri, 22 Mar 2019 19:37:15 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/algorithm-rmq-segdp/</guid>
       <description>&lt;p&gt;rmq 即是区间最值问题，这里是动态规划模板的讲解。所谓 dp 的方法，就是区间 dp 的方法，如果采用原始的区间 dp 方法，那么当数据量很大时会出现时间和空间的双重爆破。这里我们采用了倍增法。我们通过这个模板来观察这个的实现以及思想。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>线段树算法</title>
       <link>https://bigshans.github.io/post/algorithm-segtree/</link>
       <pubDate>Fri, 08 Mar 2019 20:50:55 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/algorithm-segtree/</guid>
       <description>&lt;p&gt;我的 ACM 线段树模板。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

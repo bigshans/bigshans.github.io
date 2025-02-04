@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/" />
@@ -48,14 +48,20 @@
 
 
 
-<meta property="og:title" content="Bigshans&#39; Blog" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://bigshans.github.io/" />
-<meta itemprop="name" content="Bigshans&#39; Blog">
-<meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Bigshans&#39; Blog"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
+<meta property="og:url" content="https://bigshans.github.io/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="Bigshans&#39; Blog">
+  <meta property="og:description" content="Hugo theme even example site.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Bigshans&#39; Blog">
+  <meta itemprop="description" content="Hugo theme even example site.">
+  <meta itemprop="datePublished" content="2024-12-29T22:56:17+08:00">
+  <meta itemprop="dateModified" content="2024-12-29T22:56:17+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bigshans&#39; Blog">
+  <meta name="twitter:description" content="Hugo theme even example site.">
 
 
 
@@ -192,7 +198,9 @@
   <div class="post-content">
     <div class="post-summary">
     
-      这是我在读实践论的时候发现的。传统马克思主义者对于实践和真理的认识很片面，其来源是费尔巴哈提纲的第二条。我觉得很荒诞。 如何理解费尔巴哈提纲的
+      这是我在读实践论的时候发现的。传统马克思主义者对于实践和真理的认识很片面，其来源是费尔巴哈提纲的第二条。我觉得很荒诞。
+如何理解费尔巴哈提纲的第二条 人的思维是否具有客观的［gegenständliche］真理性，这不是一个理论的问题，而是一个实践的问题。人应该在实践中证明自己思维的真理性，即自己思维的现实性和力量，自己思维的此岸性。关于思维——离开实践的思维——的现实性或非现实性的争论，是一个纯粹经院哲学的问题。
+
     
     </div>
     <div class="read-more">
@@ -217,7 +225,10 @@
   <div class="post-content">
     <div class="post-summary">
     
-      NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //
+      NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。
+简化一下代码，我们得到 main 函数的主要代码。
+int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() // calls elsewhere in the program (e.g., any logging from V8.) setvbuf(stdout, nullptr, _IONBF, 0); setvbuf(stderr, nullptr, _IONBF, 0); return node::Start(argc, argv); } node 是 NodeJs 部分的 namespace ，与 V8 的相区分。
+
     
     </div>
     <div class="read-more">
@@ -242,7 +253,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      不得不说李彦宏确实是懂中国人的，现在中国互联网市场上隐私权被严重侵犯的现状，有很大一部分原因也是因为国人自己不重视的缘故。有的人会抗辩说，这
+      不得不说李彦宏确实是懂中国人的，现在中国互联网市场上隐私权被严重侵犯的现状，有很大一部分原因也是因为国人自己不重视的缘故。有的人会抗辩说，这难道不是厂家造的孽吗？不给权限就不给使用。但这只是抗辩，嘴上说着不满，但实际用的时候却甘之如饴了，用一部分隐私权换取利益，损着利益去肥别人，还真的像是李彦宏所说那样。
+
     
     </div>
     <div class="read-more">
@@ -267,7 +279,12 @@
   <div class="post-content">
     <div class="post-summary">
     
-      眼馋这个 bufferline 很久了，最近想尝试一下。 安装 首先，安装就是很简单的使用 vim-plug 。 Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。 require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了
+      眼馋这个 bufferline 很久了，最近想尝试一下。
+安装 首先，安装就是很简单的使用 vim-plug 。
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' } 然后需要在 lua 的配置文件中再次 setup 一下。
+require('bufferline').setup{} 如此，安装就安装完成了。
+配置 bufferline 默认的配置对我来说有些不太适应，应为之前我更习惯使用 tab ，不过纯 tab 弊病也挺多的，于是我改变了一下思维方式。
+
     
     </div>
     <div class="read-more">
@@ -292,7 +309,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      Deno 算是一个新的 TypeScript 运行时，个人简单看了一下，感觉还可以。用来简单写一些东西还是很方便的。但网络上 Deno 相关的教程都很老了， Deno 都出正式了，但相关的教
+      Deno 算是一个新的 TypeScript 运行时，个人简单看了一下，感觉还可以。用来简单写一些东西还是很方便的。但网络上 Deno 相关的教程都很老了， Deno 都出正式了，但相关的教程大多还是尝鲜，所以找例子的时候遇到了很大的问题。
+
     
     </div>
     <div class="read-more">
@@ -317,7 +335,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      这几天折腾 nvim ，折腾的过程中也发现各个插件可能并不一定如我意，于是我就修改一部分插件并 fork 为己所用。不知不觉过去好久了，我积累下来的好多配置，以
+      这几天折腾 nvim ，折腾的过程中也发现各个插件可能并不一定如我意，于是我就修改一部分插件并 fork 为己所用。不知不觉过去好久了，我积累下来的好多配置，以及好多插件都需要更换了，一些是无人维护了，一些是不兼容了。除此之外，还有另外一件事情，要不要用 lua 替换我原来 vimScript 的配置？
+
     
     </div>
     <div class="read-more">
@@ -342,7 +361,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      技术情结总是一个可以批判的东西，可以被用来批判任何不合时宜的技术优化思想，然而，此种批判也存在着滥用。对于小公司来说，还没有达到可以随意不谈
+      技术情结总是一个可以批判的东西，可以被用来批判任何不合时宜的技术优化思想，然而，此种批判也存在着滥用。对于小公司来说，还没有达到可以随意不谈技术，只谈业务的地步。事实上，很多公司的业务短板就是技术短板，然而这些公司的领导往往并不这么认为。他们视此种技术上的需求归为技术人员的一种技术情结，并斥责技术人员“不切实际”。
+
     
     </div>
     <div class="read-more">
@@ -367,7 +387,10 @@
   <div class="post-content">
     <div class="post-summary">
     
-      首先，这个区别不算 BUG ，因为标准并没有规定该怎么排，但这个细微区别在实现一些特殊需求时需要被注意到。 注意下面一段代码： var a = [1, 1, 1, 1, 1]; a = a.map((k, i)
+      首先，这个区别不算 BUG ，因为标准并没有规定该怎么排，但这个细微区别在实现一些特殊需求时需要被注意到。
+注意下面一段代码：
+var a = [1, 1, 1, 1, 1]; a = a.map((k, i) =&gt; ({ a: k, i: i })); function cmp(a, b) { console.log(a.index, b.index); return a.a - b.a; } a.sort(cmp); Firefox 的结果：
+
     
     </div>
     <div class="read-more">
@@ -397,7 +420,9 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
+    <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

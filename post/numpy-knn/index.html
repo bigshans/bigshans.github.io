@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。
+kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的 kNN ， kNN 的缺点还是比较大的，在有更好算法的前提下我们并不用它。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/numpy-knn/" />
@@ -46,19 +48,32 @@
 
 
 
-<meta property="og:title" content="纯 numpy 实现 KNN" />
-<meta property="og:description" content="首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/numpy-knn/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-11-08T15:16:47+08:00" />
-<meta property="article:modified_time" content="2021-11-08T15:16:47+08:00" />
-<meta itemprop="name" content="纯 numpy 实现 KNN">
-<meta itemprop="description" content="首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的"><meta itemprop="datePublished" content="2021-11-08T15:16:47+08:00" />
-<meta itemprop="dateModified" content="2021-11-08T15:16:47+08:00" />
-<meta itemprop="wordCount" content="451">
-<meta itemprop="keywords" content="python,numpy,机器学习,kNN," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="纯 numpy 实现 KNN"/>
-<meta name="twitter:description" content="首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的"/>
+<meta property="og:url" content="https://bigshans.github.io/post/numpy-knn/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="纯 numpy 实现 KNN">
+  <meta property="og:description" content="首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。
+kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的 kNN ， kNN 的缺点还是比较大的，在有更好算法的前提下我们并不用它。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-11-08T15:16:47+08:00">
+    <meta property="article:modified_time" content="2021-11-08T15:16:47+08:00">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Numpy">
+    <meta property="article:tag" content="机器学习">
+    <meta property="article:tag" content="KNN">
+
+  <meta itemprop="name" content="纯 numpy 实现 KNN">
+  <meta itemprop="description" content="首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。
+kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的 kNN ， kNN 的缺点还是比较大的，在有更好算法的前提下我们并不用它。">
+  <meta itemprop="datePublished" content="2021-11-08T15:16:47+08:00">
+  <meta itemprop="dateModified" content="2021-11-08T15:16:47+08:00">
+  <meta itemprop="wordCount" content="451">
+  <meta itemprop="keywords" content="Python,Numpy,机器学习,KNN">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="纯 numpy 实现 KNN">
+  <meta name="twitter:description" content="首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。
+kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的 kNN ， kNN 的缺点还是比较大的，在有更好算法的前提下我们并不用它。">
 
 
 
@@ -325,7 +340,7 @@ print(knn.predict(Xte) == Yte)
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。 登录测试 有些" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。
+登录测试 有些接口需要登录测试，而这些登录测试往往需要前后一致的 session ，这里我们可以通过取 cookie 解决。当然，如果是 token 直接取 token 就行了。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/jest-api-test-supertest/" />
@@ -46,19 +48,31 @@
 
 
 
-<meta property="og:title" content="使用 jest 和 supertest 进行接口测试" />
-<meta property="og:description" content="最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。 登录测试 有些" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/jest-api-test-supertest/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-02-28T17:04:24+08:00" />
-<meta property="article:modified_time" content="2021-02-28T17:04:24+08:00" />
-<meta itemprop="name" content="使用 jest 和 supertest 进行接口测试">
-<meta itemprop="description" content="最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。 登录测试 有些"><meta itemprop="datePublished" content="2021-02-28T17:04:24+08:00" />
-<meta itemprop="dateModified" content="2021-02-28T17:04:24+08:00" />
-<meta itemprop="wordCount" content="352">
-<meta itemprop="keywords" content="Jest,Supertest,Node," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="使用 jest 和 supertest 进行接口测试"/>
-<meta name="twitter:description" content="最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。 登录测试 有些"/>
+<meta property="og:url" content="https://bigshans.github.io/post/jest-api-test-supertest/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="使用 jest 和 supertest 进行接口测试">
+  <meta property="og:description" content="最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。
+登录测试 有些接口需要登录测试，而这些登录测试往往需要前后一致的 session ，这里我们可以通过取 cookie 解决。当然，如果是 token 直接取 token 就行了。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-02-28T17:04:24+08:00">
+    <meta property="article:modified_time" content="2021-02-28T17:04:24+08:00">
+    <meta property="article:tag" content="Jest">
+    <meta property="article:tag" content="Supertest">
+    <meta property="article:tag" content="Node">
+
+  <meta itemprop="name" content="使用 jest 和 supertest 进行接口测试">
+  <meta itemprop="description" content="最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。
+登录测试 有些接口需要登录测试，而这些登录测试往往需要前后一致的 session ，这里我们可以通过取 cookie 解决。当然，如果是 token 直接取 token 就行了。">
+  <meta itemprop="datePublished" content="2021-02-28T17:04:24+08:00">
+  <meta itemprop="dateModified" content="2021-02-28T17:04:24+08:00">
+  <meta itemprop="wordCount" content="352">
+  <meta itemprop="keywords" content="Jest,Supertest,Node">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="使用 jest 和 supertest 进行接口测试">
+  <meta name="twitter:description" content="最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。
+登录测试 有些接口需要登录测试，而这些登录测试往往需要前后一致的 session ，这里我们可以通过取 cookie 解决。当然，如果是 token 直接取 token 就行了。">
 
 
 
@@ -299,7 +313,7 @@ expect(true).toBeTruthy(); // 判断事都为真，不在乎是否是 true 值
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

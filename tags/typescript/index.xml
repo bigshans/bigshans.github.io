@@ -1,48 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Typescript on Bigshans&#39; Blog</title>
+    <title>TypeScript on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/typescript/</link>
-    <description>Recent content in Typescript on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in TypeScript on Bigshans&#39; Blog</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 14 Apr 2022 17:30:03 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Apr 2022 17:30:03 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从例子开始学习 Deno</title>
       <link>https://bigshans.github.io/post/learn-deno-by-example/</link>
       <pubDate>Thu, 14 Apr 2022 17:30:03 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/learn-deno-by-example/</guid>
-      <description>Deno 算是一个新的 TypeScript 运行时，个人简单看了一下，感觉还可以。用来简单写一些东西还是很方便的。但网络上 Deno 相关的教程都很老了， Deno 都出正式了，但相关的教</description>
+      <description>&lt;p&gt;Deno 算是一个新的 TypeScript 运行时，个人简单看了一下，感觉还可以。用来简单写一些东西还是很方便的。但网络上 Deno 相关的教程都很老了， Deno 都出正式了，但相关的教程大多还是尝鲜，所以找例子的时候遇到了很大的问题。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>coc-kite-cmp 发布</title>
       <link>https://bigshans.github.io/post/coc-kite-cmp-publish/</link>
       <pubDate>Sun, 23 Jan 2022 19:10:42 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/coc-kite-cmp-publish/</guid>
-      <description>最近在尝试 AI complete ，主要是 TabNine 和 Kite ，两者可以基于本地代码作出较好的智能推测。在 VSCode 上，两者都有对应的插件，但在 Vim 上时，情况就不同了。我使用的是 coc.nvim ，作</description>
+      <description>&lt;p&gt;最近在尝试 AI complete ，主要是 TabNine 和 Kite ，两者可以基于本地代码作出较好的智能推测。在 VSCode 上，两者都有对应的插件，但在 Vim 上时，情况就不同了。我使用的是 coc.nvim ，作为我的补全框架， TabNine 有 coc-tabnine ，但 Kite 的 coc-kite 与 VSCode 上的不一致。于是我决定手动解决这个问题。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>TypeScript 类型体操之斐波那契</title>
       <link>https://bigshans.github.io/post/type-gymnastics-for-typescript/</link>
       <pubDate>Fri, 17 Dec 2021 15:26:50 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/type-gymnastics-for-typescript/</guid>
-      <description>类型体操如果不是写库的话，基本上是屠龙技。 TypeScript 的类型系统本质上是一个小函数式语言，通过类型体操能够更清晰的感受到这一点。不过 TypeScript 类型系统有限制，</description>
+      <description>&lt;p&gt;类型体操如果不是写库的话，基本上是屠龙技。 TypeScript 的类型系统本质上是一个小函数式语言，通过类型体操能够更清晰的感受到这一点。不过 TypeScript 类型系统有限制，并不能跟真正的函数式相媲美。但我们仍然可以写一个斐波那契数列小试牛刀。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>为什么使用或为什么不用 TypeScript</title>
       <link>https://bigshans.github.io/post/why-use-or-why-not-use-ts/</link>
       <pubDate>Mon, 29 Nov 2021 15:38:55 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/why-use-or-why-not-use-ts/</guid>
-      <description>最近在写 Angular ，众所周知，现在要写 Angular 基本上是除了 TypeScript 就没得跑了。不得不说， Angular 真是前端规范化的练兵场，前端三大框架中，唯 Angular 严格控制了编写的方式，从环</description>
+      <description>&lt;p&gt;最近在写 Angular ，众所周知，现在要写 Angular 基本上是除了 TypeScript 就没得跑了。不得不说， Angular 真是前端规范化的练兵场，前端三大框架中，唯 Angular 严格控制了编写的方式，从环境搭建到部署发布， Angular 很省心地处理了其中的大部分问题，使得你可以专心业务，在这一点上，学习 Angular 的 NestJS 还是差很多的。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

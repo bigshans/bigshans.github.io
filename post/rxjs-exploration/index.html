@@ -17,7 +17,8 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始讲，把函数式放到一边，然而这个其实也是 FRP 的重点——事件建模。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/rxjs-exploration/" />
@@ -46,19 +47,27 @@
 
 
 
-<meta property="og:title" content="RxJs 初探 —— 基于事件为中心的编程" />
-<meta property="og:description" content="这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/rxjs-exploration/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-10-02T22:19:12+08:00" />
-<meta property="article:modified_time" content="2021-10-02T22:19:12+08:00" />
-<meta itemprop="name" content="RxJs 初探 —— 基于事件为中心的编程">
-<meta itemprop="description" content="这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始"><meta itemprop="datePublished" content="2021-10-02T22:19:12+08:00" />
-<meta itemprop="dateModified" content="2021-10-02T22:19:12+08:00" />
-<meta itemprop="wordCount" content="4276">
-<meta itemprop="keywords" content="Rxjs,Javascript," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="RxJs 初探 —— 基于事件为中心的编程"/>
-<meta name="twitter:description" content="这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始"/>
+<meta property="og:url" content="https://bigshans.github.io/post/rxjs-exploration/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="RxJs 初探 —— 基于事件为中心的编程">
+  <meta property="og:description" content="这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始讲，把函数式放到一边，然而这个其实也是 FRP 的重点——事件建模。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-10-02T22:19:12+08:00">
+    <meta property="article:modified_time" content="2021-10-02T22:19:12+08:00">
+    <meta property="article:tag" content="Rxjs">
+    <meta property="article:tag" content="Javascript">
+
+  <meta itemprop="name" content="RxJs 初探 —— 基于事件为中心的编程">
+  <meta itemprop="description" content="这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始讲，把函数式放到一边，然而这个其实也是 FRP 的重点——事件建模。">
+  <meta itemprop="datePublished" content="2021-10-02T22:19:12+08:00">
+  <meta itemprop="dateModified" content="2021-10-02T22:19:12+08:00">
+  <meta itemprop="wordCount" content="4276">
+  <meta itemprop="keywords" content="Rxjs,Javascript">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="RxJs 初探 —— 基于事件为中心的编程">
+  <meta name="twitter:description" content="这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始讲，把函数式放到一边，然而这个其实也是 FRP 的重点——事件建模。">
 
 
 
@@ -240,8 +249,7 @@
 <hr>
 <p>RxJs 是以事件为核心的库，正如它官网所说的那样：</p>
 <blockquote>
-<p>RxJS is a library for composing asynchronous and event-based programs by using observable sequences.</p>
-</blockquote>
+<p>RxJS is a library for composing asynchronous and event-based programs by using observable sequences.</p></blockquote>
 <p>初学者学习的时候很多会被函数式给唬住，而网上的诸多教程基本上也是对函数式大吹特吹，而不讲 RxJs 实际要处理的核心问题：事件。如果要我为  RxJs 的风格命名的话，我会命名为“面向事件编程”（OEP）（实际上不是，方便法门而已）。我接下来的叙述也会按照这个理解去处理。</p>
 <h2 id="rxjs-的基本方法">RxJs 的基本方法</h2>
 <p>RxJs 基本概念很多，像什么 <code>Observable</code> 啦， <code>Observer</code> 啦， <code>Subject</code> 啦，但这些实际上都是处理工具， RxJs 的处理方法主要有三个：观察者模式、迭代器模式和函数式编程。</p>
@@ -440,8 +448,7 @@ of(1, 2, 3)
 <h2 id="subject"><code>Subject</code></h2>
 <p><code>Subject</code> 对象是什么呢？官方是这么描述的：</p>
 <blockquote>
-<p>A Subject is like an Observable, but can multicast to many Observers. Subjects are like EventEmitters: they maintain a registry of many listeners.</p>
-</blockquote>
+<p>A Subject is like an Observable, but can multicast to many Observers. Subjects are like EventEmitters: they maintain a registry of many listeners.</p></blockquote>
 <p>挺玄乎的。 <code>subject</code> 这个词在这里并不好翻译，这里翻译成主体。主体意味着两层意思，一是它是主动的，强调它的主动性，二是它是被动的，强调它的中介性。综合起来更像是 <code>agent</code> ，这里 <code>Subject</code> 对象也更像是一个代理层。</p>
 <p>首先， <code>Subject</code> 可以像 <code>Observable</code> 使用。</p>
 <pre><code class="language-javascript">const { Subject } = require('rxjs');
@@ -803,7 +810,7 @@ console.log('just after subscribe');
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

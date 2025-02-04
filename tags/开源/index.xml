@@ -4,18 +4,17 @@
     <title>开源 on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/%E5%BC%80%E6%BA%90/</link>
     <description>Recent content in 开源 on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 11 Jan 2022 22:50:29 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E5%BC%80%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Jan 2022 22:50:29 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/%E5%BC%80%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>开源正在死亡</title>
       <link>https://bigshans.github.io/post/open-source-is-dying/</link>
       <pubDate>Tue, 11 Jan 2022 22:50:29 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/open-source-is-dying/</guid>
-      <description>开源正在死亡，或者说，已经死亡。 起因是 Faker.js 作者破坏代码的行为，本来这种行为按我以前的肯定是会批判作者的，但我想想不对，为什么每次遇上这样的问题</description>
+      <description>&lt;p&gt;开源正在死亡，或者说，已经死亡。&lt;/p&gt;&#xA;&lt;p&gt;起因是 Faker.js 作者破坏代码的行为，本来这种行为按我以前的肯定是会批判作者的，但我想想不对，为什么每次遇上这样的问题都是作者的错？那么作为始作俑者的商业公司，不就在这样的指责声中遁逃了吗？作者去进行他错误的行为的原因，就是因为那些吸血的商业公司，不去批判根本原因，而去批判作者，本质上就是挑软柿子捏，甚至是宽他人之容。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

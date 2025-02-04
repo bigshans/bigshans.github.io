@@ -17,7 +17,8 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去处理，这个总线就是事件循环。 ES 标准并没有规定事件循环应该如何编写，因为这很明显取决于运行时，所以各个 Runtime 之间的事件循环存在较大的差别，比如说，之前浏览器和 Node 的事件循环机制就存在较大的差别。最新版的 Node 在事件循环上的表现，基本与浏览器类似了。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/node%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/" />
@@ -46,19 +47,26 @@
 
 
 
-<meta property="og:title" content="Node 事件循环" />
-<meta property="og:description" content="JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/node%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-02-09T13:35:35+08:00" />
-<meta property="article:modified_time" content="2023-03-16T02:58:06+00:00" />
-<meta itemprop="name" content="Node 事件循环">
-<meta itemprop="description" content="JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去"><meta itemprop="datePublished" content="2023-02-09T13:35:35+08:00" />
-<meta itemprop="dateModified" content="2023-03-16T02:58:06+00:00" />
-<meta itemprop="wordCount" content="972">
-<meta itemprop="keywords" content="Node," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Node 事件循环"/>
-<meta name="twitter:description" content="JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去"/>
+<meta property="og:url" content="https://bigshans.github.io/post/node%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="Node 事件循环">
+  <meta property="og:description" content="JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去处理，这个总线就是事件循环。 ES 标准并没有规定事件循环应该如何编写，因为这很明显取决于运行时，所以各个 Runtime 之间的事件循环存在较大的差别，比如说，之前浏览器和 Node 的事件循环机制就存在较大的差别。最新版的 Node 在事件循环上的表现，基本与浏览器类似了。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-02-09T13:35:35+08:00">
+    <meta property="article:modified_time" content="2023-03-16T02:58:06+00:00">
+    <meta property="article:tag" content="Node">
+
+  <meta itemprop="name" content="Node 事件循环">
+  <meta itemprop="description" content="JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去处理，这个总线就是事件循环。 ES 标准并没有规定事件循环应该如何编写，因为这很明显取决于运行时，所以各个 Runtime 之间的事件循环存在较大的差别，比如说，之前浏览器和 Node 的事件循环机制就存在较大的差别。最新版的 Node 在事件循环上的表现，基本与浏览器类似了。">
+  <meta itemprop="datePublished" content="2023-02-09T13:35:35+08:00">
+  <meta itemprop="dateModified" content="2023-03-16T02:58:06+00:00">
+  <meta itemprop="wordCount" content="972">
+  <meta itemprop="keywords" content="Node">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Node 事件循环">
+  <meta name="twitter:description" content="JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去处理，这个总线就是事件循环。 ES 标准并没有规定事件循环应该如何编写，因为这很明显取决于运行时，所以各个 Runtime 之间的事件循环存在较大的差别，比如说，之前浏览器和 Node 的事件循环机制就存在较大的差别。最新版的 Node 在事件循环上的表现，基本与浏览器类似了。">
 
 
 
@@ -196,12 +204,11 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
+  <div class="post-toc-content"></div>
 </div>
 
     <div class="post-content">
-      
-<p>JavaScript
+      <p>JavaScript
 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为
 JavaScript 为了保持 DOM
 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去处理，这个总线就是事件循环。
@@ -258,8 +265,6 @@ ev_check
 </blockquote>
 <p>把 ev 换成 uv 也是一样的，毕竟 <code>libev</code> 是老父亲嘛！</p>
 
-
-
     </div>
 
     <div class="post-copyright">
@@ -314,7 +319,7 @@ ev_check
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

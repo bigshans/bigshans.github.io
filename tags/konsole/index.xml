@@ -4,18 +4,17 @@
     <title>Konsole on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/konsole/</link>
     <description>Recent content in Konsole on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 09 Sep 2022 14:54:41 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/konsole/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Sep 2022 14:54:41 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/konsole/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>解决在 Konsole 下的 Emoji 展示问题</title>
       <link>https://bigshans.github.io/post/konsole-emoji-show/</link>
       <pubDate>Fri, 09 Sep 2022 14:54:41 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/konsole-emoji-show/</guid>
-      <description>解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。 这里借助 Noto Emoji 来处理。 Arch 下安装 noto-fonts-emoji 包，然后将下面内容</description>
+      <description>&lt;p&gt;解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。&lt;/p&gt;&#xA;&lt;p&gt;这里借助 Noto Emoji 来处理。 Arch 下安装 &lt;code&gt;noto-fonts-emoji&lt;/code&gt; 包，然后将下面内容保存到 &lt;code&gt;~/.config/fontconfig/conf.d/99-noto-mono-color-emoji.conf&lt;/code&gt; 中去。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

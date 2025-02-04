@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。 Krunner 的字体在 Plasma 下表现不错，但在 Xfce 下" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。
+Krunner 的字体在 Plasma 下表现不错，但在 Xfce 下显得过小。但改变系统字体似乎并不影响 Krunner 自己的字体，经过一番搜索，终于知道了要修改位于 ~/.config/krunnerrc 位置的文件。但在修改前要提前将 Krunner 退出，不然重启时会自动覆盖文件，使用如下命令：
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/how-to-increase-krunner-font/" />
@@ -46,19 +48,30 @@
 
 
 
-<meta property="og:title" content="如何放大 Krunner 的字体" />
-<meta property="og:description" content="最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。 Krunner 的字体在 Plasma 下表现不错，但在 Xfce 下" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/how-to-increase-krunner-font/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-11-13T23:16:38+08:00" />
-<meta property="article:modified_time" content="2022-11-13T23:16:38+08:00" />
-<meta itemprop="name" content="如何放大 Krunner 的字体">
-<meta itemprop="description" content="最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。 Krunner 的字体在 Plasma 下表现不错，但在 Xfce 下"><meta itemprop="datePublished" content="2022-11-13T23:16:38+08:00" />
-<meta itemprop="dateModified" content="2022-11-13T23:16:38+08:00" />
-<meta itemprop="wordCount" content="208">
-<meta itemprop="keywords" content="Krunner,字体," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="如何放大 Krunner 的字体"/>
-<meta name="twitter:description" content="最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。 Krunner 的字体在 Plasma 下表现不错，但在 Xfce 下"/>
+<meta property="og:url" content="https://bigshans.github.io/post/how-to-increase-krunner-font/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="如何放大 Krunner 的字体">
+  <meta property="og:description" content="最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。
+Krunner 的字体在 Plasma 下表现不错，但在 Xfce 下显得过小。但改变系统字体似乎并不影响 Krunner 自己的字体，经过一番搜索，终于知道了要修改位于 ~/.config/krunnerrc 位置的文件。但在修改前要提前将 Krunner 退出，不然重启时会自动覆盖文件，使用如下命令：">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-11-13T23:16:38+08:00">
+    <meta property="article:modified_time" content="2022-11-13T23:16:38+08:00">
+    <meta property="article:tag" content="Krunner">
+    <meta property="article:tag" content="字体">
+
+  <meta itemprop="name" content="如何放大 Krunner 的字体">
+  <meta itemprop="description" content="最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。
+Krunner 的字体在 Plasma 下表现不错，但在 Xfce 下显得过小。但改变系统字体似乎并不影响 Krunner 自己的字体，经过一番搜索，终于知道了要修改位于 ~/.config/krunnerrc 位置的文件。但在修改前要提前将 Krunner 退出，不然重启时会自动覆盖文件，使用如下命令：">
+  <meta itemprop="datePublished" content="2022-11-13T23:16:38+08:00">
+  <meta itemprop="dateModified" content="2022-11-13T23:16:38+08:00">
+  <meta itemprop="wordCount" content="208">
+  <meta itemprop="keywords" content="Krunner,字体">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="如何放大 Krunner 的字体">
+  <meta name="twitter:description" content="最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。
+Krunner 的字体在 Plasma 下表现不错，但在 Xfce 下显得过小。但改变系统字体似乎并不影响 Krunner 自己的字体，经过一番搜索，终于知道了要修改位于 ~/.config/krunnerrc 位置的文件。但在修改前要提前将 Krunner 退出，不然重启时会自动覆盖文件，使用如下命令：">
 
 
 
@@ -196,12 +209,11 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
+  <div class="post-toc-content"></div>
 </div>
 
     <div class="post-content">
-      
-<p>最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是
+      <p>最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是
 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。</p>
 <p>Krunner 的字体在 Plasma 下表现不错，但在 Xfce
 下显得过小。但改变系统字体似乎并不影响 Krunner
@@ -210,7 +222,8 @@ Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常�
 退出，不然重启时会自动覆盖文件，使用如下命令：</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">kquitapp5</span> krunner</span></code></pre></div>
 <p>然后做如下两个修改：</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode toml"><code class="sourceCode toml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[General]</span></span>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode toml"><code class="sourceCode toml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[General]</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">font</span><span class="op">=</span><span class="dt">Noto</span> <span class="dt">Sans</span><span class="er">,</span><span class="dt">20</span><span class="er">,</span><span class="dt">-1</span><span class="er">,</span><span class="dt">5</span><span class="er">,</span><span class="dt">50</span><span class="er">,</span><span class="dt">0</span><span class="er">,</span><span class="dt">0</span><span class="er">,</span><span class="dt">0</span><span class="er">,</span><span class="dt">0</span><span class="er">,</span><span class="dt">0</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">[PlasmaRunnerManager]</span></span>
@@ -219,8 +232,6 @@ Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常�
 <p>然后重新启动，使用如下命令：</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">kstart5</span> krunner</span></code></pre></div>
 <p>字体的设置就生效了。</p>
-
-
 
     </div>
 
@@ -277,7 +288,7 @@ Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常�
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

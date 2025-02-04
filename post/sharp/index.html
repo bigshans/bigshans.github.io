@@ -17,7 +17,10 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="因为业务需要就写了个图片压缩服务，顺带改变大小，因为用的是 nodejs ，于是我就选择了 sharp ，基于 libvips。 代码非常好写： function resize(input, x, y) { return sharp(input) .resize(x, y, { fit: &#39;inside&#39; })" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="因为业务需要就写了个图片压缩服务，顺带改变大小，因为用的是 nodejs ，于是我就选择了 sharp ，基于 libvips。
+代码非常好写：
+function resize(input, x, y) { return sharp(input) .resize(x, y, { fit: &#39;inside&#39; }) .toBuffer(); } 默认是裁剪模式，但我们要保持比例，因此用 “inside” 。因为我们还要调整一下质量，因为原始文件太大了。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/sharp/" />
@@ -46,19 +49,35 @@
 
 
 
-<meta property="og:title" content="使用 Sharp 压缩图片、改变图片大小" />
-<meta property="og:description" content="因为业务需要就写了个图片压缩服务，顺带改变大小，因为用的是 nodejs ，于是我就选择了 sharp ，基于 libvips。 代码非常好写： function resize(input, x, y) { return sharp(input) .resize(x, y, { fit: &#39;inside&#39; })" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/sharp/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-08-24T18:20:53+08:00" />
-<meta property="article:modified_time" content="2021-08-24T18:20:53+08:00" />
-<meta itemprop="name" content="使用 Sharp 压缩图片、改变图片大小">
-<meta itemprop="description" content="因为业务需要就写了个图片压缩服务，顺带改变大小，因为用的是 nodejs ，于是我就选择了 sharp ，基于 libvips。 代码非常好写： function resize(input, x, y) { return sharp(input) .resize(x, y, { fit: &#39;inside&#39; })"><meta itemprop="datePublished" content="2021-08-24T18:20:53+08:00" />
-<meta itemprop="dateModified" content="2021-08-24T18:20:53+08:00" />
-<meta itemprop="wordCount" content="264">
-<meta itemprop="keywords" content="Sharp,Nodejs,Javascript,服务端图片处理," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="使用 Sharp 压缩图片、改变图片大小"/>
-<meta name="twitter:description" content="因为业务需要就写了个图片压缩服务，顺带改变大小，因为用的是 nodejs ，于是我就选择了 sharp ，基于 libvips。 代码非常好写： function resize(input, x, y) { return sharp(input) .resize(x, y, { fit: &#39;inside&#39; })"/>
+<meta property="og:url" content="https://bigshans.github.io/post/sharp/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="使用 Sharp 压缩图片、改变图片大小">
+  <meta property="og:description" content="因为业务需要就写了个图片压缩服务，顺带改变大小，因为用的是 nodejs ，于是我就选择了 sharp ，基于 libvips。
+代码非常好写：
+function resize(input, x, y) { return sharp(input) .resize(x, y, { fit: &#39;inside&#39; }) .toBuffer(); } 默认是裁剪模式，但我们要保持比例，因此用 “inside” 。因为我们还要调整一下质量，因为原始文件太大了。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-08-24T18:20:53+08:00">
+    <meta property="article:modified_time" content="2021-08-24T18:20:53+08:00">
+    <meta property="article:tag" content="Sharp">
+    <meta property="article:tag" content="Nodejs">
+    <meta property="article:tag" content="Javascript">
+    <meta property="article:tag" content="服务端图片处理">
+
+  <meta itemprop="name" content="使用 Sharp 压缩图片、改变图片大小">
+  <meta itemprop="description" content="因为业务需要就写了个图片压缩服务，顺带改变大小，因为用的是 nodejs ，于是我就选择了 sharp ，基于 libvips。
+代码非常好写：
+function resize(input, x, y) { return sharp(input) .resize(x, y, { fit: &#39;inside&#39; }) .toBuffer(); } 默认是裁剪模式，但我们要保持比例，因此用 “inside” 。因为我们还要调整一下质量，因为原始文件太大了。">
+  <meta itemprop="datePublished" content="2021-08-24T18:20:53+08:00">
+  <meta itemprop="dateModified" content="2021-08-24T18:20:53+08:00">
+  <meta itemprop="wordCount" content="264">
+  <meta itemprop="keywords" content="Sharp,Nodejs,Javascript,服务端图片处理">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="使用 Sharp 压缩图片、改变图片大小">
+  <meta name="twitter:description" content="因为业务需要就写了个图片压缩服务，顺带改变大小，因为用的是 nodejs ，于是我就选择了 sharp ，基于 libvips。
+代码非常好写：
+function resize(input, x, y) { return sharp(input) .resize(x, y, { fit: &#39;inside&#39; }) .toBuffer(); } 默认是裁剪模式，但我们要保持比例，因此用 “inside” 。因为我们还要调整一下质量，因为原始文件太大了。">
 
 
 
@@ -291,7 +310,7 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

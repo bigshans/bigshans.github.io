@@ -27,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97/" />
@@ -47,19 +47,27 @@
 
 
 
-<meta property="og:title" content="服务器故障日志" />
-<meta property="og:description" content="小公司的后端有时候就不得不兼任多职，既是后端又是运维。现在又差不多是全栈了，这样下去说不定会怎么样呢！说回正题，这回我负责的客服系统出了故障，虽然对用户影响不大，但对客服影响很大（亲爱的客服小姐姐，对不起），客服无法正常工作了。全靠 CTO 调试数据库发现问题所在。虽然在公司的 wiki 上小记一笔，但公司上写得还是严肃许多的。这里我就说话随意多了。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-12-15T21:12:21+00:00" />
-<meta property="article:modified_time" content="2019-12-15T21:12:21+00:00" />
-<meta itemprop="name" content="服务器故障日志">
-<meta itemprop="description" content="小公司的后端有时候就不得不兼任多职，既是后端又是运维。现在又差不多是全栈了，这样下去说不定会怎么样呢！说回正题，这回我负责的客服系统出了故障，虽然对用户影响不大，但对客服影响很大（亲爱的客服小姐姐，对不起），客服无法正常工作了。全靠 CTO 调试数据库发现问题所在。虽然在公司的 wiki 上小记一笔，但公司上写得还是严肃许多的。这里我就说话随意多了。"><meta itemprop="datePublished" content="2019-12-15T21:12:21+00:00" />
-<meta itemprop="dateModified" content="2019-12-15T21:12:21+00:00" />
-<meta itemprop="wordCount" content="805">
-<meta itemprop="keywords" content="Node,Mongodb," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="服务器故障日志"/>
-<meta name="twitter:description" content="小公司的后端有时候就不得不兼任多职，既是后端又是运维。现在又差不多是全栈了，这样下去说不定会怎么样呢！说回正题，这回我负责的客服系统出了故障，虽然对用户影响不大，但对客服影响很大（亲爱的客服小姐姐，对不起），客服无法正常工作了。全靠 CTO 调试数据库发现问题所在。虽然在公司的 wiki 上小记一笔，但公司上写得还是严肃许多的。这里我就说话随意多了。"/>
+<meta property="og:url" content="https://bigshans.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="服务器故障日志">
+  <meta property="og:description" content="小公司的后端有时候就不得不兼任多职，既是后端又是运维。现在又差不多是全栈了，这样下去说不定会怎么样呢！说回正题，这回我负责的客服系统出了故障，虽然对用户影响不大，但对客服影响很大（亲爱的客服小姐姐，对不起），客服无法正常工作了。全靠 CTO 调试数据库发现问题所在。虽然在公司的 wiki 上小记一笔，但公司上写得还是严肃许多的。这里我就说话随意多了。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2019-12-15T21:12:21+00:00">
+    <meta property="article:modified_time" content="2019-12-15T21:12:21+00:00">
+    <meta property="article:tag" content="Node">
+    <meta property="article:tag" content="Mongodb">
+
+  <meta itemprop="name" content="服务器故障日志">
+  <meta itemprop="description" content="小公司的后端有时候就不得不兼任多职，既是后端又是运维。现在又差不多是全栈了，这样下去说不定会怎么样呢！说回正题，这回我负责的客服系统出了故障，虽然对用户影响不大，但对客服影响很大（亲爱的客服小姐姐，对不起），客服无法正常工作了。全靠 CTO 调试数据库发现问题所在。虽然在公司的 wiki 上小记一笔，但公司上写得还是严肃许多的。这里我就说话随意多了。">
+  <meta itemprop="datePublished" content="2019-12-15T21:12:21+00:00">
+  <meta itemprop="dateModified" content="2019-12-15T21:12:21+00:00">
+  <meta itemprop="wordCount" content="805">
+  <meta itemprop="keywords" content="Node,Mongodb">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="服务器故障日志">
+  <meta name="twitter:description" content="小公司的后端有时候就不得不兼任多职，既是后端又是运维。现在又差不多是全栈了，这样下去说不定会怎么样呢！说回正题，这回我负责的客服系统出了故障，虽然对用户影响不大，但对客服影响很大（亲爱的客服小姐姐，对不起），客服无法正常工作了。全靠 CTO 调试数据库发现问题所在。虽然在公司的 wiki 上小记一笔，但公司上写得还是严肃许多的。这里我就说话随意多了。">
 
 
 
@@ -263,7 +271,7 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

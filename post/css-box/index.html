@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。 标准盒" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。
+标准盒型 盒子模型示意图 每一个盒子都一块内容（content）区域，围绕内容从内向外分别是内边距、边框和外边距（padding 、 border 、 margin）。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/css-box/" />
@@ -46,19 +48,30 @@
 
 
 
-<meta property="og:title" content="CSS 盒子模型" />
-<meta property="og:description" content="一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。 标准盒" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/css-box/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-01-13T09:27:13+08:00" />
-<meta property="article:modified_time" content="2023-01-13T09:27:13+08:00" />
-<meta itemprop="name" content="CSS 盒子模型">
-<meta itemprop="description" content="一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。 标准盒"><meta itemprop="datePublished" content="2023-01-13T09:27:13+08:00" />
-<meta itemprop="dateModified" content="2023-01-13T09:27:13+08:00" />
-<meta itemprop="wordCount" content="972">
-<meta itemprop="keywords" content="CSS,前端," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="CSS 盒子模型"/>
-<meta name="twitter:description" content="一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。 标准盒"/>
+<meta property="og:url" content="https://bigshans.github.io/post/css-box/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="CSS 盒子模型">
+  <meta property="og:description" content="一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。
+标准盒型 盒子模型示意图 每一个盒子都一块内容（content）区域，围绕内容从内向外分别是内边距、边框和外边距（padding 、 border 、 margin）。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-01-13T09:27:13+08:00">
+    <meta property="article:modified_time" content="2023-01-13T09:27:13+08:00">
+    <meta property="article:tag" content="CSS">
+    <meta property="article:tag" content="前端">
+
+  <meta itemprop="name" content="CSS 盒子模型">
+  <meta itemprop="description" content="一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。
+标准盒型 盒子模型示意图 每一个盒子都一块内容（content）区域，围绕内容从内向外分别是内边距、边框和外边距（padding 、 border 、 margin）。">
+  <meta itemprop="datePublished" content="2023-01-13T09:27:13+08:00">
+  <meta itemprop="dateModified" content="2023-01-13T09:27:13+08:00">
+  <meta itemprop="wordCount" content="972">
+  <meta itemprop="keywords" content="CSS,前端">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CSS 盒子模型">
+  <meta name="twitter:description" content="一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。
+标准盒型 盒子模型示意图 每一个盒子都一块内容（content）区域，围绕内容从内向外分别是内边距、边框和外边距（padding 、 border 、 margin）。">
 
 
 
@@ -196,29 +209,18 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#标准盒型">标准盒型</a></li>
-        <li><a href="#box-sizing"><code>box-sizing</code></a></li>
-        <li><a href="#direction-属性对行内元素的影响"><code>direction</code>
-属性对行内元素的影响</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
+  <div class="post-toc-content"></div>
 </div>
 
     <div class="post-content">
-      
-
-<p>一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS
+      <p>一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS
 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS
 布局排版的基础。</p>
 <h2 id="标准盒型">标准盒型</h2>
 <figure>
-<img src="https://www.w3.org/TR/2016/WD-CSS22-20160412/images/boxdim.png" alt="盒子模型示意图"/>
+<img
+src="https://www.w3.org/TR/2016/WD-CSS22-20160412/images/boxdim.png"
+alt="盒子模型示意图" />
 <figcaption aria-hidden="true">盒子模型示意图</figcaption>
 </figure>
 <p>每一个盒子都一块内容（content）区域，围绕内容从内向外分别是内边距、边框和外边距（padding
@@ -278,8 +280,6 @@ formatting context）来做具体的规定。</p>
 <p>当 <code>direction</code> 为 <code>rtl</code>
 时，即从右到左阅读文本，元素将从右到左生成内容。</p>
 
-
-
     </div>
 
     <div class="post-copyright">
@@ -335,7 +335,7 @@ formatting context）来做具体的规定。</p>
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

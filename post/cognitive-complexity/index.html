@@ -17,7 +17,8 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="Cognitive Complexity ，即认知复杂度，是来自于 Sonar 官方的一个概念。认知复杂度主要是以可测量的方式，将代码估算成一个数字，用以衡量代码的理解难度的。它基于一下三条" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="Cognitive Complexity ，即认知复杂度，是来自于 Sonar 官方的一个概念。认知复杂度主要是以可测量的方式，将代码估算成一个数字，用以衡量代码的理解难度的。它基于一下三条准则：
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/cognitive-complexity/" />
@@ -46,19 +47,28 @@
 
 
 
-<meta property="og:title" content="认知复杂度——代码质量初探" />
-<meta property="og:description" content="Cognitive Complexity ，即认知复杂度，是来自于 Sonar 官方的一个概念。认知复杂度主要是以可测量的方式，将代码估算成一个数字，用以衡量代码的理解难度的。它基于一下三条" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/cognitive-complexity/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-05-06T11:51:53+08:00" />
-<meta property="article:modified_time" content="2021-05-06T11:51:53+08:00" />
-<meta itemprop="name" content="认知复杂度——代码质量初探">
-<meta itemprop="description" content="Cognitive Complexity ，即认知复杂度，是来自于 Sonar 官方的一个概念。认知复杂度主要是以可测量的方式，将代码估算成一个数字，用以衡量代码的理解难度的。它基于一下三条"><meta itemprop="datePublished" content="2021-05-06T11:51:53+08:00" />
-<meta itemprop="dateModified" content="2021-05-06T11:51:53+08:00" />
-<meta itemprop="wordCount" content="2681">
-<meta itemprop="keywords" content="认知复杂度,代码质量,Sonar," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="认知复杂度——代码质量初探"/>
-<meta name="twitter:description" content="Cognitive Complexity ，即认知复杂度，是来自于 Sonar 官方的一个概念。认知复杂度主要是以可测量的方式，将代码估算成一个数字，用以衡量代码的理解难度的。它基于一下三条"/>
+<meta property="og:url" content="https://bigshans.github.io/post/cognitive-complexity/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="认知复杂度——代码质量初探">
+  <meta property="og:description" content="Cognitive Complexity ，即认知复杂度，是来自于 Sonar 官方的一个概念。认知复杂度主要是以可测量的方式，将代码估算成一个数字，用以衡量代码的理解难度的。它基于一下三条准则：">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-05-06T11:51:53+08:00">
+    <meta property="article:modified_time" content="2021-05-06T11:51:53+08:00">
+    <meta property="article:tag" content="认知复杂度">
+    <meta property="article:tag" content="代码质量">
+    <meta property="article:tag" content="Sonar">
+
+  <meta itemprop="name" content="认知复杂度——代码质量初探">
+  <meta itemprop="description" content="Cognitive Complexity ，即认知复杂度，是来自于 Sonar 官方的一个概念。认知复杂度主要是以可测量的方式，将代码估算成一个数字，用以衡量代码的理解难度的。它基于一下三条准则：">
+  <meta itemprop="datePublished" content="2021-05-06T11:51:53+08:00">
+  <meta itemprop="dateModified" content="2021-05-06T11:51:53+08:00">
+  <meta itemprop="wordCount" content="2681">
+  <meta itemprop="keywords" content="认知复杂度,代码质量,Sonar">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="认知复杂度——代码质量初探">
+  <meta name="twitter:description" content="Cognitive Complexity ，即认知复杂度，是来自于 Sonar 官方的一个概念。认知复杂度主要是以可测量的方式，将代码估算成一个数字，用以衡量代码的理解难度的。它基于一下三条准则：">
 
 
 
@@ -231,8 +241,7 @@
 <p>A. Nesting：把一段代码逻辑嵌套在另一段逻辑中；
 B. Structural：被嵌套的控制流结构；
 C. Fundamental：不受嵌套影响的语句；
-D. Hybrid：一些控制流结构，但不包含在嵌套中；</p>
-</blockquote>
+D. Hybrid：一些控制流结构，但不包含在嵌套中；</p></blockquote>
 <p>具体的内容解释有点抽象，我们将结合后续代码进行理解。</p>
 <h2 id="复杂度的具体评估">复杂度的具体评估</h2>
 <h3 id="忽略语法糖带来的简写">忽略语法糖带来的简写</h3>
@@ -309,8 +318,7 @@ a || b &amp;&amp; c || d
 <p>认知复杂性不同于使用数学模型评估软件可维护性的实践。 它从圈复杂度设定的先例开始，但是使用人工判断来评估应如何对结构进行计数，并决定应向模型整体添加哪些内容。 结果，它得出的方法复杂性得分比以前的模型更能吸引程序员，因为它们是对可理解性的更公平的相对评估。 此外，由于认知复杂性不收取任何方法的“入门成本”，因此它不仅在方法级别，而且在类和服务级别，都产生了更加准确的评估结果。</p>
 <h2 id="表驱动编程法">表驱动编程法</h2>
 <blockquote>
-<p>数据比程序逻辑更易驾驭。尽可能把设计的复杂度从代码转移至数据是个好实践。——《 Unix 编程艺术》</p>
-</blockquote>
+<p>数据比程序逻辑更易驾驭。尽可能把设计的复杂度从代码转移至数据是个好实践。——《 Unix 编程艺术》</p></blockquote>
 <p>最后讲一下表驱动编程法，这是一个很好的降低认知复杂度的方法，但第一眼往往不太直观。</p>
 <p>我们举个例子：</p>
 <pre><code class="language-javascript">const { id, name, status, address } = res.body;
@@ -401,7 +409,7 @@ for (const field of ['id', 'name', 'status', 'address']) {
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

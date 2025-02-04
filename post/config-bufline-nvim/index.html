@@ -17,7 +17,12 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="眼馋这个 bufferline 很久了，最近想尝试一下。 安装 首先，安装就是很简单的使用 vim-plug 。 Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。 require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="眼馋这个 bufferline 很久了，最近想尝试一下。
+安装 首先，安装就是很简单的使用 vim-plug 。
+Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。
+require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了。
+配置 bufferline 默认的配置对我来说有些不太适应，应为之前我更习惯使用 tab ，不过纯 tab 弊病也挺多的，于是我改变了一下思维方式。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/config-bufline-nvim/" />
@@ -46,19 +51,39 @@
 
 
 
-<meta property="og:title" content="配置 bufferline.nvim" />
-<meta property="og:description" content="眼馋这个 bufferline 很久了，最近想尝试一下。 安装 首先，安装就是很简单的使用 vim-plug 。 Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。 require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/config-bufline-nvim/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-04-20T15:55:27+08:00" />
-<meta property="article:modified_time" content="2022-04-20T15:55:27+08:00" />
-<meta itemprop="name" content="配置 bufferline.nvim">
-<meta itemprop="description" content="眼馋这个 bufferline 很久了，最近想尝试一下。 安装 首先，安装就是很简单的使用 vim-plug 。 Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。 require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了"><meta itemprop="datePublished" content="2022-04-20T15:55:27+08:00" />
-<meta itemprop="dateModified" content="2022-04-20T15:55:27+08:00" />
-<meta itemprop="wordCount" content="748">
-<meta itemprop="keywords" content="NVim,bufferline.nvim," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="配置 bufferline.nvim"/>
-<meta name="twitter:description" content="眼馋这个 bufferline 很久了，最近想尝试一下。 安装 首先，安装就是很简单的使用 vim-plug 。 Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。 require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了"/>
+<meta property="og:url" content="https://bigshans.github.io/post/config-bufline-nvim/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="配置 bufferline.nvim">
+  <meta property="og:description" content="眼馋这个 bufferline 很久了，最近想尝试一下。
+安装 首先，安装就是很简单的使用 vim-plug 。
+Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。
+require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了。
+配置 bufferline 默认的配置对我来说有些不太适应，应为之前我更习惯使用 tab ，不过纯 tab 弊病也挺多的，于是我改变了一下思维方式。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-04-20T15:55:27+08:00">
+    <meta property="article:modified_time" content="2022-04-20T15:55:27+08:00">
+    <meta property="article:tag" content="NVim">
+    <meta property="article:tag" content="Bufferline.nvim">
+
+  <meta itemprop="name" content="配置 bufferline.nvim">
+  <meta itemprop="description" content="眼馋这个 bufferline 很久了，最近想尝试一下。
+安装 首先，安装就是很简单的使用 vim-plug 。
+Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。
+require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了。
+配置 bufferline 默认的配置对我来说有些不太适应，应为之前我更习惯使用 tab ，不过纯 tab 弊病也挺多的，于是我改变了一下思维方式。">
+  <meta itemprop="datePublished" content="2022-04-20T15:55:27+08:00">
+  <meta itemprop="dateModified" content="2022-04-20T15:55:27+08:00">
+  <meta itemprop="wordCount" content="748">
+  <meta itemprop="keywords" content="NVim,Bufferline.nvim">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="配置 bufferline.nvim">
+  <meta name="twitter:description" content="眼馋这个 bufferline 很久了，最近想尝试一下。
+安装 首先，安装就是很简单的使用 vim-plug 。
+Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。
+require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了。
+配置 bufferline 默认的配置对我来说有些不太适应，应为之前我更习惯使用 tab ，不过纯 tab 弊病也挺多的，于是我改变了一下思维方式。">
 
 
 
@@ -408,7 +433,7 @@ endfunction
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

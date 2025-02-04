@@ -4,126 +4,101 @@
     <title>编程随笔 on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/%E7%BC%96%E7%A8%8B%E9%9A%8F%E7%AC%94/</link>
     <description>Recent content in 编程随笔 on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 13 Mar 2023 14:34:09 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E7%BC%96%E7%A8%8B%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Mar 2023 14:34:09 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/%E7%BC%96%E7%A8%8B%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>不要过早地优化需求</title>
       <link>https://bigshans.github.io/post/dont-optimize-requirements-too-early/</link>
       <pubDate>Mon, 13 Mar 2023 14:34:09 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/dont-optimize-requirements-too-early/</guid>
-      <description>开发界有一句话：“不要做过早优化。”这句话同样适用于产品经理。 我们不应当认为用户的需求背后总存在一个根本性的需求，这会我把我们引入误区。比如</description>
+      <description>&lt;p&gt;开发界有一句话：“不要做过早优化。”这句话同样适用于产品经理。&lt;/p&gt;&#xA;&lt;p&gt;我们不应当认为用户的需求背后总存在一个根本性的需求，这会我把我们引入误区。比如我就要一份西红柿炒鸡蛋，你非要给我推销全自动做菜机器人，认为它符合我的需求，没必要。用户的根本性需求应当是体现在一系列需求的变更之中的。在那些关于用户需求的根本需求的例子中，无一不是需要产品与用户密切沟通，不停地变更原始需求。如果这种需求没有发生任何变动，就不应当认为那种根本性的需求存在。每一个产品经理都渴望能有一个超越用户需求的需求，以满足用户的任意需求，但用户的需求是什么那它就是什么，一旦确定就不会随着后面的交流而变动。且需求是层次化的，它必然以一个历史的结构出现，换句话说，是必须要走弯路的，任何企图越过这些弯路的需求必然会面临用户的审判。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>core-js 的公地悲剧</title>
       <link>https://bigshans.github.io/post/core-js%E7%9A%84%E5%85%AC%E5%9C%B0%E6%82%B2%E5%89%A7/</link>
       <pubDate>Thu, 16 Feb 2023 00:34:50 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/core-js%E7%9A%84%E5%85%AC%E5%9C%B0%E6%82%B2%E5%89%A7/</guid>
-      <description>看完 core-js 作者的长文后，有感而发，写一点文字。 core-js 面临的问题是，由大多数人共享的东西，得到越少人的照顾。我现在依旧可以看到一些言论，对于作者这样讨</description>
+      <description>&lt;p&gt;看完 core-js 作者的长文后，有感而发，写一点文字。&lt;/p&gt;&#xA;&lt;p&gt;core-js&#xA;面临的问题是，由大多数人共享的东西，得到越少人的照顾。我现在依旧可以看到一些言论，对于作者这样讨钱，当初就不应该开源，或者协议选得不对。在&#xA;fakejs&#xA;的事件，我就试图反驳这样的言论，现在我想我应该能够更充分的反驳。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>谈谈 RPA</title>
       <link>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88rpa/</link>
       <pubDate>Wed, 15 Feb 2023 18:27:32 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/%E8%B0%88%E8%B0%88rpa/</guid>
-      <description>最近 RPA 用得比较多，我谈一下这个。 RPA 在办公室自动化方面应用极广，而对应的软件在 Windows 上也是遍地开花。为什么是在 Windows 上呢？原因也很好理解，因为 Windows 在办公</description>
+      <description>&lt;p&gt;最近 RPA 用得比较多，我谈一下这个。&lt;/p&gt;&#xA;&lt;p&gt;RPA 在办公室自动化方面应用极广，而对应的软件在 Windows&#xA;上也是遍地开花。为什么是在 Windows 上呢？原因也很好理解，因为 Windows&#xA;在办公方面用得最多，一方面需求旺盛，另一方面对应的 API&#xA;和相关的控制微软也提供了很多。比如，微软自己就提供了一个 RPA 的软件，叫&#xA;Power Automate 。这些 RPA&#xA;基本都会给你一个图形化编程的界面，但底层仍然是一门具体的编程语言，比如&#xA;Power Automate 用得是 VB ，影刀用得是 Python&#xA;。但一些厂家并不会提供对应的脚本书写的地方，原因倒不在于，脚本编写会加深用户的使用难度，而是在于，这会缩窄&#xA;RPA&#xA;软件的盈利范围。不过微软倒是大气些，提供一个能写入脚本的地方，可惜太小了点，而且做得也不太好。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>中文编程不过是另一种编程语言文学化</title>
       <link>https://bigshans.github.io/post/%E4%B8%AD%E6%96%87%E7%BC%96%E7%A8%8B%E4%B8%8D%E8%BF%87%E6%98%AF%E5%8F%A6%E4%B8%80%E7%A7%8D%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E6%96%87%E5%AD%A6%E5%8C%96/</link>
       <pubDate>Sat, 19 Nov 2022 14:29:40 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/%E4%B8%AD%E6%96%87%E7%BC%96%E7%A8%8B%E4%B8%8D%E8%BF%87%E6%98%AF%E5%8F%A6%E4%B8%80%E7%A7%8D%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E6%96%87%E5%AD%A6%E5%8C%96/</guid>
-      <description>中文编程不过是另一种编程语言文学化。 首先，中文编程强调用中文是为了解决代码的可读性问题，这与编程语言文学化的思路不谋而合。 英语母语者在用英语</description>
+      <description>&lt;p&gt;中文编程不过是另一种编程语言文学化。&lt;/p&gt;&#xA;&lt;p&gt;首先，中文编程强调用中文是为了解决代码的可读性问题，这与编程语言文学化的思路不谋而合。&lt;/p&gt;&#xA;&lt;p&gt;英语母语者在用英语编程时，可能并不像某些中文编程爱好者所想的那么容易。首先，所谓的英文编程，也不过是拿英文单词，按工程目的进行再造的类英语语言。比如说，&lt;code&gt;isBook&lt;/code&gt;&#xA;可以用来表示是否是书本，但 “is book” 其实并不符合英语语法，应该是 “is a&#xA;book” ；又比如说， &lt;code&gt;isBooks&lt;/code&gt; 用来表示是否是书本列表，但 “is&#xA;books”&#xA;连复数都不注意。英语母语者能读懂这些，但认真去思考的话，肯定是十分便扭的。但是，他们为什么仍然要用这样一套命名法呢？因为这样命名比较规整，而且，抛弃一部分语法的完整性，能让短命名能够成立，从而大大降低编码的输出。虽然有自动补全等工具，但不用补全，全看心流其实速度更快。而且，不完整的英语语法其实降低了对英语学习的要求，对于他们而言，也没有什么母语障碍，这方面其实是一碗水端平的。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>对 GNU 的批判</title>
       <link>https://bigshans.github.io/post/a-critique-of-gnu/</link>
       <pubDate>Sun, 02 Oct 2022 23:31:50 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/a-critique-of-gnu/</guid>
-      <description>谈及 GNU ，我们总是称赞他们在过去，铸就了现代互联网的基础，但至于现在，则成了一种小众的趣味。这个问题比较复杂，简单来说，就是个人自由主义在面对</description>
+      <description>&lt;p&gt;谈及 GNU ，我们总是称赞他们在过去，铸就了现代互联网的基础，但至于现在，则成了一种小众的趣味。这个问题比较复杂，简单来说，就是个人自由主义在面对资本主义的妥协性。虽然，我们不能整体说，是因为 GNU 的问题，但这并不代表 GNU 毫无问题。所谓为了“为了理想”，不过个人自由主义用以妥协的遮羞布。众人谈论 GNU 时的行为，很容易让我想到鲁迅的话：“中落之胄，故家荒矣，则喋喋语人，谓厥祖在时，其为智慧武怒者何似，尝有闳宇崇楼，珠玉犬马，尊显胜于凡人。有闻其言，孰不腾笑？”&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>自顶向下的 ACID</title>
       <link>https://bigshans.github.io/post/top-down-acid/</link>
       <pubDate>Wed, 31 Aug 2022 15:21:43 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/top-down-acid/</guid>
-      <description>ACID ，即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability），只要你接</description>
+      <description>&lt;p&gt;ACID ，即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability），只要你接触数据库总是逃不掉的。现在，我问你一个问题，如果现在数据库不提供 ACID 保证，你如何在应用程序层面实现 ACID 呢？&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>人、管理与软件开发——从敏捷开发谈起</title>
       <link>https://bigshans.github.io/post/%E4%BA%BA-%E7%AE%A1%E7%90%86%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
       <pubDate>Thu, 07 Jul 2022 16:21:41 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/%E4%BA%BA-%E7%AE%A1%E7%90%86%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</guid>
-      <description>敏捷开发本质上是后福特主义在软件工程方面的实践，两者在组织管理方面的理念简直如出一辙。事实上，在欧美企业大量转向后福特的管理制度之后，敏捷的</description>
+      <description>&lt;p&gt;敏捷开发本质上是后福特主义在软件工程方面的实践，两者在组织管理方面的理念简直如出一辙。事实上，在欧美企业大量转向后福特的管理制度之后，敏捷的出现只不过是时间问题。甚至说，敏捷开发与管理制度关系如此紧密，以至于敏捷开发本身就是一种管理制度。由此，我们就可以明白，为什么国内大多数企业的敏捷开发都失败了。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>gRPC vs RESTful</title>
       <link>https://bigshans.github.io/post/grpc-vs-restful/</link>
       <pubDate>Wed, 22 Jun 2022 23:09:18 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/grpc-vs-restful/</guid>
-      <description>gRPC 和 RESTful 的比较是两套 API 风格的比较。虽然 gRPC 采取了 HTTP2 ，但这并不代表 RESTful 不能基于 HTTP2 ，但 RESTful 也可以采用 HTTP1 ，这是因为二者的着眼点有所不同。 gRPC 采用了二进制的方</description>
+      <description>&lt;p&gt;gRPC 和 RESTful 的比较是两套 API 风格的比较。虽然 gRPC 采取了 HTTP2 ，但这并不代表 RESTful 不能基于 HTTP2 ，但 RESTful 也可以采用 HTTP1 ，这是因为二者的着眼点有所不同。 gRPC 采用了二进制的方式进行传输，目的是为了更快、更多样化的传输数据，而 RESTful 采用 JSON 作为传输数据的格式，相应的也就牺牲了速度与传输数据的多样化，但同时收获了数据的可读性。我们深入进去就会发现，为了数据的可读性， RESTful 必须对数据进行冗余，以此来保证传输数据的可读性，而 gRPC 则对数据进行压缩，以保证大数据能够被更快的传输过去，但同时加深了调试的难度。因此，当我们传输的数据越大的时候， gRPC 就越具有优势，因为当数据量过大是，可读性反而成了拖累，速度会反向影响调试和可读性。且二进制对于计算机来说是比 JSON 结构好读的， JSON 解析必然是一大负担，当 JSON 足够大时，解析也会变得十分困难，而栈帧的结构对于计算机来说更好。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>现在不考虑技术什么时候考虑</title>
       <link>https://bigshans.github.io/post/%E7%8E%B0%E5%9C%A8%E4%B8%8D%E8%80%83%E8%99%91%E6%8A%80%E6%9C%AF%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%80%83%E8%99%91/</link>
       <pubDate>Thu, 31 Mar 2022 20:44:21 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/%E7%8E%B0%E5%9C%A8%E4%B8%8D%E8%80%83%E8%99%91%E6%8A%80%E6%9C%AF%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%80%83%E8%99%91/</guid>
-      <description>技术情结总是一个可以批判的东西，可以被用来批判任何不合时宜的技术优化思想，然而，此种批判也存在着滥用。对于小公司来说，还没有达到可以随意不谈</description>
+      <description>&lt;p&gt;技术情结总是一个可以批判的东西，可以被用来批判任何不合时宜的技术优化思想，然而，此种批判也存在着滥用。对于小公司来说，还没有达到可以随意不谈技术，只谈业务的地步。事实上，&lt;strong&gt;很多公司的业务短板就是技术短板&lt;/strong&gt;，然而这些公司的领导往往并不这么认为。他们视此种技术上的需求归为技术人员的一种技术情结，并斥责技术人员“不切实际”。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>开源社区需要终身仁慈的独裁者吗？</title>
       <link>https://bigshans.github.io/post/does-open-sources-need-bdfl/</link>
       <pubDate>Thu, 20 Jan 2022 11:31:19 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/does-open-sources-need-bdfl/</guid>
-      <description>最近随笔确实有点多，但生活其实不能只有代码，回头看看也需要将随笔分分类了。说回正题， BDFL 像是个政治名词，但实际上是用来指代某些开源软件的开发者</description>
+      <description>&lt;p&gt;最近随笔确实有点多，但生活其实不能只有代码，回头看看也需要将随笔分分类了。说回正题， BDFL 像是个政治名词，但实际上是用来指代某些开源软件的开发者，比如 Linus 、 Python 之父。说起开源，人们印象里会是更加民主的感觉，甚至是直接民主。但直接民主的开源是有问题的，用户提出的想法不能等同于需求，也未必合适于项目，因此筛选是必须的，而仁慈的独裁者在这其中拥有绝对的主导权。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>开源正在死亡</title>
       <link>https://bigshans.github.io/post/open-source-is-dying/</link>
       <pubDate>Tue, 11 Jan 2022 22:50:29 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/open-source-is-dying/</guid>
-      <description>开源正在死亡，或者说，已经死亡。 起因是 Faker.js 作者破坏代码的行为，本来这种行为按我以前的肯定是会批判作者的，但我想想不对，为什么每次遇上这样的问题</description>
+      <description>&lt;p&gt;开源正在死亡，或者说，已经死亡。&lt;/p&gt;&#xA;&lt;p&gt;起因是 Faker.js 作者破坏代码的行为，本来这种行为按我以前的肯定是会批判作者的，但我想想不对，为什么每次遇上这样的问题都是作者的错？那么作为始作俑者的商业公司，不就在这样的指责声中遁逃了吗？作者去进行他错误的行为的原因，就是因为那些吸血的商业公司，不去批判根本原因，而去批判作者，本质上就是挑软柿子捏，甚至是宽他人之容。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>广为流传的程序员语录摘抄</title>
       <link>https://bigshans.github.io/post/programer-quotes/</link>
       <pubDate>Tue, 28 Dec 2021 11:14:45 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/programer-quotes/</guid>
-      <description>这些网上传得到处都是，一些语录真是犀利，一针见血。我在这里也是简单吐槽一下，放松放松身心。 程序员编程语录 一个好的程序员是那种过单行线马路都要</description>
+      <description>&lt;p&gt;这些网上传得到处都是，一些语录真是犀利，一针见血。我在这里也是简单吐槽一下，放松放松身心。&lt;/p&gt;&#xA;&lt;h2 id=&#34;程序员编程语录&#34;&gt;程序员编程语录&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;一个好的程序员是那种过单行线马路都要往两边看的人。(Doug Linder)&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>函数式的骨感</title>
       <link>https://bigshans.github.io/post/function-comment/</link>
       <pubDate>Tue, 24 Aug 2021 17:22:43 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/function-comment/</guid>
-      <description>最近读了点 rambda 的源码。函数式是个很诱人的概念，借助函数式，你可以以十分数学的方式解决一些问题。虽然如此，函数式对于现实来说仍然过于抽象，如果我</description>
+      <description>&lt;p&gt;最近读了点 rambda 的源码。函数式是个很诱人的概念，借助函数式，你可以以十分数学的方式解决一些问题。虽然如此，函数式对于现实来说仍然过于抽象，如果我们不去关注底层，那他确实是好的，然而一旦我们逼视其实现，我们就会发现它的窘迫与骨感，对于 js 来说尤是。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

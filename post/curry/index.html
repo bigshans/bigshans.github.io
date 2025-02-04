@@ -17,7 +17,10 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="函数柯里化是一种可以将函数转换为另一个函数的技巧，通常是用来减少函数参数的。 用一个简单的例子以表示这种使用: function sum(a, b) { return a &#43; b; } const add1 = curry((b) =&amp;gt; sum(1, b));" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="函数柯里化是一种可以将函数转换为另一个函数的技巧，通常是用来减少函数参数的。
+用一个简单的例子以表示这种使用:
+function sum(a, b) { return a &#43; b; } const add1 = curry((b) =&gt; sum(1, b)); console.log(add1(10)); 这里我们实际上固定了 sum 的参数，但这里我只被允许加上 1 ，我们可以更灵活一些。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/curry/" />
@@ -46,19 +49,32 @@
 
 
 
-<meta property="og:title" content="函数柯里化" />
-<meta property="og:description" content="函数柯里化是一种可以将函数转换为另一个函数的技巧，通常是用来减少函数参数的。 用一个简单的例子以表示这种使用: function sum(a, b) { return a &#43; b; } const add1 = curry((b) =&gt; sum(1, b));" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/curry/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-10-14T11:52:10+08:00" />
-<meta property="article:modified_time" content="2023-10-14T11:52:10+08:00" />
-<meta itemprop="name" content="函数柯里化">
-<meta itemprop="description" content="函数柯里化是一种可以将函数转换为另一个函数的技巧，通常是用来减少函数参数的。 用一个简单的例子以表示这种使用: function sum(a, b) { return a &#43; b; } const add1 = curry((b) =&gt; sum(1, b));"><meta itemprop="datePublished" content="2023-10-14T11:52:10+08:00" />
-<meta itemprop="dateModified" content="2023-10-14T11:52:10+08:00" />
-<meta itemprop="wordCount" content="351">
-<meta itemprop="keywords" content="JavaScript," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="函数柯里化"/>
-<meta name="twitter:description" content="函数柯里化是一种可以将函数转换为另一个函数的技巧，通常是用来减少函数参数的。 用一个简单的例子以表示这种使用: function sum(a, b) { return a &#43; b; } const add1 = curry((b) =&gt; sum(1, b));"/>
+<meta property="og:url" content="https://bigshans.github.io/post/curry/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="函数柯里化">
+  <meta property="og:description" content="函数柯里化是一种可以将函数转换为另一个函数的技巧，通常是用来减少函数参数的。
+用一个简单的例子以表示这种使用:
+function sum(a, b) { return a &#43; b; } const add1 = curry((b) =&gt; sum(1, b)); console.log(add1(10)); 这里我们实际上固定了 sum 的参数，但这里我只被允许加上 1 ，我们可以更灵活一些。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-10-14T11:52:10+08:00">
+    <meta property="article:modified_time" content="2023-10-14T11:52:10+08:00">
+    <meta property="article:tag" content="Javascript">
+
+  <meta itemprop="name" content="函数柯里化">
+  <meta itemprop="description" content="函数柯里化是一种可以将函数转换为另一个函数的技巧，通常是用来减少函数参数的。
+用一个简单的例子以表示这种使用:
+function sum(a, b) { return a &#43; b; } const add1 = curry((b) =&gt; sum(1, b)); console.log(add1(10)); 这里我们实际上固定了 sum 的参数，但这里我只被允许加上 1 ，我们可以更灵活一些。">
+  <meta itemprop="datePublished" content="2023-10-14T11:52:10+08:00">
+  <meta itemprop="dateModified" content="2023-10-14T11:52:10+08:00">
+  <meta itemprop="wordCount" content="351">
+  <meta itemprop="keywords" content="Javascript">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="函数柯里化">
+  <meta name="twitter:description" content="函数柯里化是一种可以将函数转换为另一个函数的技巧，通常是用来减少函数参数的。
+用一个简单的例子以表示这种使用:
+function sum(a, b) { return a &#43; b; } const add1 = curry((b) =&gt; sum(1, b)); console.log(add1(10)); 这里我们实际上固定了 sum 的参数，但这里我只被允许加上 1 ，我们可以更灵活一些。">
 
 
 
@@ -196,14 +212,14 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
+  <div class="post-toc-content"></div>
 </div>
 
     <div class="post-content">
-      
-<p>函数柯里化是一种可以将函数转换为另一个函数的技巧，通常是用来减少函数参数的。</p>
+      <p>函数柯里化是一种可以将函数转换为另一个函数的技巧，通常是用来减少函数参数的。</p>
 <p>用一个简单的例子以表示这种使用:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sum</span>(a<span class="op">,</span> b) {</span>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sum</span>(a<span class="op">,</span> b) {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> a <span class="op">+</span> b<span class="op">;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -211,7 +227,8 @@
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="fu">add1</span>(<span class="dv">10</span>))<span class="op">;</span></span></code></pre></div>
 <p>这里我们实际上固定了 <code>sum</code> 的参数，但这里我只被允许加上 1
 ，我们可以更灵活一些。</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sum</span>(a<span class="op">,</span> b) {</span>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sum</span>(a<span class="op">,</span> b) {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> a <span class="op">+</span> b<span class="op">;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -228,7 +245,8 @@
 <p>我们首先需要知道传入函数 <code>fx</code>
 的形参数，这就要求传入函数的形参数是固定的。我们输入一个函数并输出一个函数，输出的函数接收剩余的函数参数，当总的形参数大于等于传入函数
 <code>fx</code> 的形参数时，我们直接执行该函数。</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">curry</span>(fx) {</span>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">curry</span>(fx) {</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 获取实际形参数</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> pLen <span class="op">=</span> fx<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> fn1 <span class="op">=</span> (<span class="op">...</span>args) <span class="kw">=&gt;</span> {</span>
@@ -240,8 +258,6 @@
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> fn1<span class="op">;</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-
-
 
     </div>
 
@@ -297,7 +313,7 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

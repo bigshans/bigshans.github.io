@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。 许多 Golang 的拥护者会称 Golang 是一门工程" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。
+许多 Golang 的拥护者会称 Golang 是一门工程语言，他们有一种误解，即是工程问题是代码问题。但事实是，工程问题是一个现实的逻辑问题，而代码问题是代码的管理问题。 Golang 并没有解决很多逻辑问题，它是砍去了很多特性，比如说循环依赖，它觉得不好，砍了； try catch 机制；不好，砍了，泛型，不好，砍了，现在又偷工减料的加回来了。如果一个特性将会带来很多，一般的处理方法有两种，一种是引导人们更好的使用它，另一种是砍掉。Rust 选择了前者，而 Golang 则选择了后者。这固然是一种解决办法，但解决不了实际问题，更何况砍掉特性只会让语言的表达能力变弱，最终，语言会变得简陋而不是简单。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/" />
@@ -46,19 +48,29 @@
 
 
 
-<meta property="og:title" content="对 Golang 的批评" />
-<meta property="og:description" content="最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。 许多 Golang 的拥护者会称 Golang 是一门工程" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-08-18T03:42:04+08:00" />
-<meta property="article:modified_time" content="2022-08-18T03:42:04+08:00" />
-<meta itemprop="name" content="对 Golang 的批评">
-<meta itemprop="description" content="最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。 许多 Golang 的拥护者会称 Golang 是一门工程"><meta itemprop="datePublished" content="2022-08-18T03:42:04+08:00" />
-<meta itemprop="dateModified" content="2022-08-18T03:42:04+08:00" />
-<meta itemprop="wordCount" content="1313">
-<meta itemprop="keywords" content="Golang," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="对 Golang 的批评"/>
-<meta name="twitter:description" content="最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。 许多 Golang 的拥护者会称 Golang 是一门工程"/>
+<meta property="og:url" content="https://bigshans.github.io/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="对 Golang 的批评">
+  <meta property="og:description" content="最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。
+许多 Golang 的拥护者会称 Golang 是一门工程语言，他们有一种误解，即是工程问题是代码问题。但事实是，工程问题是一个现实的逻辑问题，而代码问题是代码的管理问题。 Golang 并没有解决很多逻辑问题，它是砍去了很多特性，比如说循环依赖，它觉得不好，砍了； try catch 机制；不好，砍了，泛型，不好，砍了，现在又偷工减料的加回来了。如果一个特性将会带来很多，一般的处理方法有两种，一种是引导人们更好的使用它，另一种是砍掉。Rust 选择了前者，而 Golang 则选择了后者。这固然是一种解决办法，但解决不了实际问题，更何况砍掉特性只会让语言的表达能力变弱，最终，语言会变得简陋而不是简单。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-08-18T03:42:04+08:00">
+    <meta property="article:modified_time" content="2022-08-18T03:42:04+08:00">
+    <meta property="article:tag" content="Golang">
+
+  <meta itemprop="name" content="对 Golang 的批评">
+  <meta itemprop="description" content="最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。
+许多 Golang 的拥护者会称 Golang 是一门工程语言，他们有一种误解，即是工程问题是代码问题。但事实是，工程问题是一个现实的逻辑问题，而代码问题是代码的管理问题。 Golang 并没有解决很多逻辑问题，它是砍去了很多特性，比如说循环依赖，它觉得不好，砍了； try catch 机制；不好，砍了，泛型，不好，砍了，现在又偷工减料的加回来了。如果一个特性将会带来很多，一般的处理方法有两种，一种是引导人们更好的使用它，另一种是砍掉。Rust 选择了前者，而 Golang 则选择了后者。这固然是一种解决办法，但解决不了实际问题，更何况砍掉特性只会让语言的表达能力变弱，最终，语言会变得简陋而不是简单。">
+  <meta itemprop="datePublished" content="2022-08-18T03:42:04+08:00">
+  <meta itemprop="dateModified" content="2022-08-18T03:42:04+08:00">
+  <meta itemprop="wordCount" content="1313">
+  <meta itemprop="keywords" content="Golang">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="对 Golang 的批评">
+  <meta name="twitter:description" content="最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。
+许多 Golang 的拥护者会称 Golang 是一门工程语言，他们有一种误解，即是工程问题是代码问题。但事实是，工程问题是一个现实的逻辑问题，而代码问题是代码的管理问题。 Golang 并没有解决很多逻辑问题，它是砍去了很多特性，比如说循环依赖，它觉得不好，砍了； try catch 机制；不好，砍了，泛型，不好，砍了，现在又偷工减料的加回来了。如果一个特性将会带来很多，一般的处理方法有两种，一种是引导人们更好的使用它，另一种是砍掉。Rust 选择了前者，而 Golang 则选择了后者。这固然是一种解决办法，但解决不了实际问题，更何况砍掉特性只会让语言的表达能力变弱，最终，语言会变得简陋而不是简单。">
 
 
 
@@ -262,7 +274,7 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

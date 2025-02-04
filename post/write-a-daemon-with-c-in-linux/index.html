@@ -17,7 +17,8 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方法。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/" />
@@ -46,19 +47,27 @@
 
 
 
-<meta property="og:title" content="在 Linux 上用 C 写一个守护进程" />
-<meta property="og:description" content="因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-07-30T23:26:25+08:00" />
-<meta property="article:modified_time" content="2022-07-30T23:26:25+08:00" />
-<meta itemprop="name" content="在 Linux 上用 C 写一个守护进程">
-<meta itemprop="description" content="因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方"><meta itemprop="datePublished" content="2022-07-30T23:26:25+08:00" />
-<meta itemprop="dateModified" content="2022-07-30T23:26:25+08:00" />
-<meta itemprop="wordCount" content="401">
-<meta itemprop="keywords" content="C,Linux," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="在 Linux 上用 C 写一个守护进程"/>
-<meta name="twitter:description" content="因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方"/>
+<meta property="og:url" content="https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="在 Linux 上用 C 写一个守护进程">
+  <meta property="og:description" content="因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方法。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-07-30T23:26:25+08:00">
+    <meta property="article:modified_time" content="2022-07-30T23:26:25+08:00">
+    <meta property="article:tag" content="C">
+    <meta property="article:tag" content="Linux">
+
+  <meta itemprop="name" content="在 Linux 上用 C 写一个守护进程">
+  <meta itemprop="description" content="因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方法。">
+  <meta itemprop="datePublished" content="2022-07-30T23:26:25+08:00">
+  <meta itemprop="dateModified" content="2022-07-30T23:26:25+08:00">
+  <meta itemprop="wordCount" content="401">
+  <meta itemprop="keywords" content="C,Linux">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="在 Linux 上用 C 写一个守护进程">
+  <meta name="twitter:description" content="因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方法。">
 
 
 
@@ -307,7 +316,7 @@ int main(int argc, char *argv[])
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

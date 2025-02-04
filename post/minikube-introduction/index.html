@@ -17,7 +17,8 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未免失于实务，逐于稍末了，故 k8s 团队开发了 minikube 以方便用户学习和开发。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/minikube-introduction/" />
@@ -46,19 +47,27 @@
 
 
 
-<meta property="og:title" content="Minikube 简介" />
-<meta property="og:description" content="k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/minikube-introduction/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-09-22T15:47:06+08:00" />
-<meta property="article:modified_time" content="2021-09-22T15:47:06+08:00" />
-<meta itemprop="name" content="Minikube 简介">
-<meta itemprop="description" content="k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未"><meta itemprop="datePublished" content="2021-09-22T15:47:06+08:00" />
-<meta itemprop="dateModified" content="2021-09-22T15:47:06+08:00" />
-<meta itemprop="wordCount" content="1684">
-<meta itemprop="keywords" content="Minikube,运维," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Minikube 简介"/>
-<meta name="twitter:description" content="k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未"/>
+<meta property="og:url" content="https://bigshans.github.io/post/minikube-introduction/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="Minikube 简介">
+  <meta property="og:description" content="k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未免失于实务，逐于稍末了，故 k8s 团队开发了 minikube 以方便用户学习和开发。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-09-22T15:47:06+08:00">
+    <meta property="article:modified_time" content="2021-09-22T15:47:06+08:00">
+    <meta property="article:tag" content="Minikube">
+    <meta property="article:tag" content="运维">
+
+  <meta itemprop="name" content="Minikube 简介">
+  <meta itemprop="description" content="k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未免失于实务，逐于稍末了，故 k8s 团队开发了 minikube 以方便用户学习和开发。">
+  <meta itemprop="datePublished" content="2021-09-22T15:47:06+08:00">
+  <meta itemprop="dateModified" content="2021-09-22T15:47:06+08:00">
+  <meta itemprop="wordCount" content="1684">
+  <meta itemprop="keywords" content="Minikube,运维">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Minikube 简介">
+  <meta name="twitter:description" content="k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未免失于实务，逐于稍末了，故 k8s 团队开发了 minikube 以方便用户学习和开发。">
 
 
 
@@ -516,7 +525,7 @@ spec:
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

@@ -4,27 +4,24 @@
     <title>V8 on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/v8/</link>
     <description>Recent content in V8 on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 04 Aug 2023 09:06:08 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/v8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Aug 2023 09:06:08 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/categories/v8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>d8 编译要点</title>
       <link>https://bigshans.github.io/post/d8%E7%BC%96%E8%AF%91%E8%A6%81%E7%82%B9/</link>
       <pubDate>Fri, 04 Aug 2023 09:06:08 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/d8%E7%BC%96%E8%AF%91%E8%A6%81%E7%82%B9/</guid>
-      <description>d8 是 v8 提供的用以 debug v8 的 shell ，因为 v8 自身就是一个库，不提供 console 的实现。d8 会在编译 v8 时顺便实现，不过我只想编译 d8 。 主要参考了 v81 文档和一篇博文2。 代</description>
+      <description>&lt;p&gt;d8 是 v8 提供的用以 debug v8 的 shell ，因为 v8&#xA;自身就是一个库，不提供 console 的实现。d8 会在编译 v8&#xA;时顺便实现，不过我只想编译 d8 。&lt;/p&gt;&#xA;&lt;p&gt;主要参考了 v8&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&#xA;role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; 文档和一篇博文&lt;a href=&#34;#fn2&#34;&#xA;class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&#xA;role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;h2 id=&#34;代理工具&#34;&gt;代理工具&lt;/h2&gt;&#xA;&lt;p&gt;使用 &lt;code&gt;tscoks&lt;/code&gt; 。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>v8 学习（一）——编译个v8 好麻烦啊！</title>
       <link>https://bigshans.github.io/post/v8-study-1/</link>
       <pubDate>Sun, 11 Jul 2021 15:14:22 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/v8-study-1/</guid>
-      <description>想要学习一下 v8 ，于是就尝试了一下编译 v8 源码，说实话，以国内的网络去做这件事超级麻烦。在折腾一番后，最后决定直接在我的海外服务器上进行编译。 安</description>
+      <description>&lt;p&gt;想要学习一下 v8 ，于是就尝试了一下编译 v8 源码，说实话，以国内的网络去做这件事超级麻烦。在折腾一番后，最后决定直接在我的海外服务器上进行编译。&lt;/p&gt;&#xA;&lt;h2 id=&#34;安装-depot_tools&#34;&gt;安装 &lt;code&gt;depot_tools&lt;/code&gt;&lt;/h2&gt;&#xA;&lt;p&gt;你不能直接拉 v8 源码编译，你得用 &lt;code&gt;depot_tools&lt;/code&gt; 下来拉取代码，安装依赖。建议不要用 root 安装，切到有 sudo 权限的用户为好。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

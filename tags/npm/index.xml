@@ -4,18 +4,17 @@
     <title>NPM on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/npm/</link>
     <description>Recent content in NPM on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 21 Mar 2021 11:53:14 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/npm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Mar 2021 11:53:14 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/npm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>npm 打包指南</title>
       <link>https://bigshans.github.io/post/npm-pack-guide/</link>
       <pubDate>Sun, 21 Mar 2021 11:53:14 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/npm-pack-guide/</guid>
-      <description>最近在修改一些很长时间无人维护的包，估计包作者都不维护了，于是我重新搞了一份传到了 npm 上，有兴趣的可以看一下：log4js-rabbitmq-</description>
+      <description>&lt;p&gt;最近在修改一些很长时间无人维护的包，估计包作者都不维护了，于是我重新搞了一份传到了 npm 上，有兴趣的可以看一下：&lt;a href=&#34;https://www.npmjs.com/package/log4js-rabbitmq-appenders&#34;&gt;log4js-rabbitmq-appenders&lt;/a&gt; 。&lt;/p&gt;&#xA;&lt;p&gt;关于如何打包一个库，其实网上已经有很多教程了，核心其实就是两句命令：&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

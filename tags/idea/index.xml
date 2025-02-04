@@ -4,27 +4,24 @@
     <title>Idea on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/idea/</link>
     <description>Recent content in Idea on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 28 Oct 2018 21:16:08 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/idea/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Oct 2018 21:16:08 +0000</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/idea/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>idea 一直加载 maven</title>
       <link>https://bigshans.github.io/post/java-idea-maven/</link>
       <pubDate>Sun, 28 Oct 2018 21:16:08 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/java-idea-maven/</guid>
-      <description>之前遇到过一次 idea 无法正常加载 maven ，那时 hosts 里设置有问题，将 127.0.0.1 loacalhost 加入 hosts 里就行。现在又有新的问题，于是试了试在 import 里的 VMoption 改为 1024 就行了。</description>
+      <description>&lt;p&gt;之前遇到过一次 idea 无法正常加载 maven ，那时 hosts 里设置有问题，将 127.0.0.1 loacalhost 加入 hosts 里就行。现在又有新的问题，于是试了试在 import 里的 VMoption 改为 1024 就行了。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>在 idea 中布置 struts 2.5</title>
       <link>https://bigshans.github.io/post/java-struts-idea/</link>
       <pubDate>Thu, 06 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/java-struts-idea/</guid>
       <description>&lt;p&gt;不得不说百度跟谷歌比还差的远啊。我从官网上下载 struts 的最小包，布置到 idea 上不能正常使用，百度不行上谷歌，终于解决了。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

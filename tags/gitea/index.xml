@@ -4,18 +4,17 @@
     <title>Gitea on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/gitea/</link>
     <description>Recent content in Gitea on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 19 Mar 2022 00:52:32 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/gitea/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Mar 2022 00:52:32 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/gitea/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>搞定了几个 Gitea 相关的问题</title>
       <link>https://bigshans.github.io/post/gitea-config/</link>
       <pubDate>Sat, 19 Mar 2022 00:52:32 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/gitea-config/</guid>
-      <description>Gitea 可以同步 Github 仓库之后，让我觉得仓库管理有很大的便利。因为我的很多代码毕竟保存在 Github 上，允许同步 Github 免去了我很多两头跑的工作。 但是有几个我还是不太</description>
+      <description>&lt;p&gt;Gitea 可以同步 Github 仓库之后，让我觉得仓库管理有很大的便利。因为我的很多代码毕竟保存在 Github 上，允许同步 Github 免去了我很多两头跑的工作。&lt;/p&gt;&#xA;&lt;p&gt;但是有几个我还是不太爽的地方，主要是之前没有配置好。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

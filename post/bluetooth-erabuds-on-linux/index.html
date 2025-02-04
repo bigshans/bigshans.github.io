@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。 经过查找我发现了 pipeware ，一个 pulseaudio 的替代方" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。
+经过查找我发现了 pipeware ，一个 pulseaudio 的替代方案。根据 ArchWiki 的步骤，我装了 pipeware-pulse ，然而蓝牙还是没有正常检测到。然后我根据 ArchWiki 提供的配置，添加了一个文件。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/bluetooth-erabuds-on-linux/" />
@@ -46,19 +48,29 @@
 
 
 
-<meta property="og:title" content="在 Arch 上启用 QCY-T8 蓝牙耳机" />
-<meta property="og:description" content="突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。 经过查找我发现了 pipeware ，一个 pulseaudio 的替代方" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/bluetooth-erabuds-on-linux/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-03-05T15:57:05+08:00" />
-<meta property="article:modified_time" content="2022-03-05T15:57:05+08:00" />
-<meta itemprop="name" content="在 Arch 上启用 QCY-T8 蓝牙耳机">
-<meta itemprop="description" content="突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。 经过查找我发现了 pipeware ，一个 pulseaudio 的替代方"><meta itemprop="datePublished" content="2022-03-05T15:57:05+08:00" />
-<meta itemprop="dateModified" content="2022-03-05T15:57:05+08:00" />
-<meta itemprop="wordCount" content="276">
-<meta itemprop="keywords" content="Linux," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="在 Arch 上启用 QCY-T8 蓝牙耳机"/>
-<meta name="twitter:description" content="突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。 经过查找我发现了 pipeware ，一个 pulseaudio 的替代方"/>
+<meta property="og:url" content="https://bigshans.github.io/post/bluetooth-erabuds-on-linux/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="在 Arch 上启用 QCY-T8 蓝牙耳机">
+  <meta property="og:description" content="突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。
+经过查找我发现了 pipeware ，一个 pulseaudio 的替代方案。根据 ArchWiki 的步骤，我装了 pipeware-pulse ，然而蓝牙还是没有正常检测到。然后我根据 ArchWiki 提供的配置，添加了一个文件。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-03-05T15:57:05+08:00">
+    <meta property="article:modified_time" content="2022-03-05T15:57:05+08:00">
+    <meta property="article:tag" content="Linux">
+
+  <meta itemprop="name" content="在 Arch 上启用 QCY-T8 蓝牙耳机">
+  <meta itemprop="description" content="突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。
+经过查找我发现了 pipeware ，一个 pulseaudio 的替代方案。根据 ArchWiki 的步骤，我装了 pipeware-pulse ，然而蓝牙还是没有正常检测到。然后我根据 ArchWiki 提供的配置，添加了一个文件。">
+  <meta itemprop="datePublished" content="2022-03-05T15:57:05+08:00">
+  <meta itemprop="dateModified" content="2022-03-05T15:57:05+08:00">
+  <meta itemprop="wordCount" content="276">
+  <meta itemprop="keywords" content="Linux">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="在 Arch 上启用 QCY-T8 蓝牙耳机">
+  <meta name="twitter:description" content="突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。
+经过查找我发现了 pipeware ，一个 pulseaudio 的替代方案。根据 ArchWiki 的步骤，我装了 pipeware-pulse ，然而蓝牙还是没有正常检测到。然后我根据 ArchWiki 提供的配置，添加了一个文件。">
 
 
 
@@ -270,7 +282,7 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

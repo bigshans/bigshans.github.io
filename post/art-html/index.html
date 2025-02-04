@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。 背景 公司的主页是用静态网页写的，主要是用来展示，但是分很" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。
+背景 公司的主页是用静态网页写的，主要是用来展示，但是分很多个页面，页面间有几个公用的组件。首先不考虑用 Vue 或者 React ，杀鸡焉用牛刀是其一，其二是首页需要做 SEO ，但是特意用一个 Nuxtjs 的又不太想（不需要那么多东西），我的 Leader 不太想再弄一个服务去跑这个东西，因为原来就直接丢到 OSS 上不需要管，根本不用考虑它对服务器的影响（反正又是找阿里就行了）。考虑了几种方案，感觉还是用传统的模板引擎最好，因为返回给前端的时候直接是生成好的页面，SEO 肯定没问题，问题是不开一个服务怎么弄呢？那就提前生成好就行了。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/art-html/" />
@@ -46,19 +48,30 @@
 
 
 
-<meta property="og:title" content="写了一个基于 art 的静态网页模块化项目" />
-<meta property="og:description" content="最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。 背景 公司的主页是用静态网页写的，主要是用来展示，但是分很" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/art-html/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-05-24T22:19:11+08:00" />
-<meta property="article:modified_time" content="2021-05-24T22:19:11+08:00" />
-<meta itemprop="name" content="写了一个基于 art 的静态网页模块化项目">
-<meta itemprop="description" content="最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。 背景 公司的主页是用静态网页写的，主要是用来展示，但是分很"><meta itemprop="datePublished" content="2021-05-24T22:19:11+08:00" />
-<meta itemprop="dateModified" content="2021-05-24T22:19:11+08:00" />
-<meta itemprop="wordCount" content="674">
-<meta itemprop="keywords" content="art-html,前端," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="写了一个基于 art 的静态网页模块化项目"/>
-<meta name="twitter:description" content="最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。 背景 公司的主页是用静态网页写的，主要是用来展示，但是分很"/>
+<meta property="og:url" content="https://bigshans.github.io/post/art-html/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="写了一个基于 art 的静态网页模块化项目">
+  <meta property="og:description" content="最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。
+背景 公司的主页是用静态网页写的，主要是用来展示，但是分很多个页面，页面间有几个公用的组件。首先不考虑用 Vue 或者 React ，杀鸡焉用牛刀是其一，其二是首页需要做 SEO ，但是特意用一个 Nuxtjs 的又不太想（不需要那么多东西），我的 Leader 不太想再弄一个服务去跑这个东西，因为原来就直接丢到 OSS 上不需要管，根本不用考虑它对服务器的影响（反正又是找阿里就行了）。考虑了几种方案，感觉还是用传统的模板引擎最好，因为返回给前端的时候直接是生成好的页面，SEO 肯定没问题，问题是不开一个服务怎么弄呢？那就提前生成好就行了。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-05-24T22:19:11+08:00">
+    <meta property="article:modified_time" content="2021-05-24T22:19:11+08:00">
+    <meta property="article:tag" content="Art-Html">
+    <meta property="article:tag" content="前端">
+
+  <meta itemprop="name" content="写了一个基于 art 的静态网页模块化项目">
+  <meta itemprop="description" content="最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。
+背景 公司的主页是用静态网页写的，主要是用来展示，但是分很多个页面，页面间有几个公用的组件。首先不考虑用 Vue 或者 React ，杀鸡焉用牛刀是其一，其二是首页需要做 SEO ，但是特意用一个 Nuxtjs 的又不太想（不需要那么多东西），我的 Leader 不太想再弄一个服务去跑这个东西，因为原来就直接丢到 OSS 上不需要管，根本不用考虑它对服务器的影响（反正又是找阿里就行了）。考虑了几种方案，感觉还是用传统的模板引擎最好，因为返回给前端的时候直接是生成好的页面，SEO 肯定没问题，问题是不开一个服务怎么弄呢？那就提前生成好就行了。">
+  <meta itemprop="datePublished" content="2021-05-24T22:19:11+08:00">
+  <meta itemprop="dateModified" content="2021-05-24T22:19:11+08:00">
+  <meta itemprop="wordCount" content="674">
+  <meta itemprop="keywords" content="Art-Html,前端">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="写了一个基于 art 的静态网页模块化项目">
+  <meta name="twitter:description" content="最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。
+背景 公司的主页是用静态网页写的，主要是用来展示，但是分很多个页面，页面间有几个公用的组件。首先不考虑用 Vue 或者 React ，杀鸡焉用牛刀是其一，其二是首页需要做 SEO ，但是特意用一个 Nuxtjs 的又不太想（不需要那么多东西），我的 Leader 不太想再弄一个服务去跑这个东西，因为原来就直接丢到 OSS 上不需要管，根本不用考虑它对服务器的影响（反正又是找阿里就行了）。考虑了几种方案，感觉还是用传统的模板引擎最好，因为返回给前端的时候直接是生成好的页面，SEO 肯定没问题，问题是不开一个服务怎么弄呢？那就提前生成好就行了。">
 
 
 
@@ -282,7 +295,7 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>rust on Bigshans&#39; Blog</title>
+    <title>Rust on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/rust/</link>
-    <description>Recent content in rust on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Rust on Bigshans&#39; Blog</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 31 Oct 2021 17:13:41 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/rust/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Oct 2021 17:13:41 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/categories/rust/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>简单谈一谈 Rust 的内存管理</title>
       <link>https://bigshans.github.io/post/talk-about-rust-memory/</link>
       <pubDate>Sun, 31 Oct 2021 17:13:41 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/talk-about-rust-memory/</guid>
-      <description>本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复</description>
+      <description>&lt;p&gt;本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复返工意义不大，不如当作笔记，学完了然后自己再重新写一篇。本篇文章主要就是来讲一讲 Rust 的内存所有权机制，这部分其实不难，但与我们平常代码的编码有很大不同。本文主要也是将学习 Rust 过程中的一些见解进行发布，内容比较单独，可以独立成篇。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

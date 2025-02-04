@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。 Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。
+Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需要 Objective-C front-end for GCC ，Arch 下面直接安装 gcc-objc 这个包就可以了。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/write-hello-world-by-objective-c/" />
@@ -46,19 +48,30 @@
 
 
 
-<meta property="og:title" content="在 Linux 下使用 Objective-C 编程" />
-<meta property="og:description" content="GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。 Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/write-hello-world-by-objective-c/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-09-12T20:33:41+08:00" />
-<meta property="article:modified_time" content="2021-09-12T20:33:41+08:00" />
-<meta itemprop="name" content="在 Linux 下使用 Objective-C 编程">
-<meta itemprop="description" content="GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。 Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需"><meta itemprop="datePublished" content="2021-09-12T20:33:41+08:00" />
-<meta itemprop="dateModified" content="2021-09-12T20:33:41+08:00" />
-<meta itemprop="wordCount" content="430">
-<meta itemprop="keywords" content="Linux,Objective-C," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="在 Linux 下使用 Objective-C 编程"/>
-<meta name="twitter:description" content="GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。 Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需"/>
+<meta property="og:url" content="https://bigshans.github.io/post/write-hello-world-by-objective-c/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="在 Linux 下使用 Objective-C 编程">
+  <meta property="og:description" content="GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。
+Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需要 Objective-C front-end for GCC ，Arch 下面直接安装 gcc-objc 这个包就可以了。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-09-12T20:33:41+08:00">
+    <meta property="article:modified_time" content="2021-09-12T20:33:41+08:00">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Objective-C">
+
+  <meta itemprop="name" content="在 Linux 下使用 Objective-C 编程">
+  <meta itemprop="description" content="GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。
+Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需要 Objective-C front-end for GCC ，Arch 下面直接安装 gcc-objc 这个包就可以了。">
+  <meta itemprop="datePublished" content="2021-09-12T20:33:41+08:00">
+  <meta itemprop="dateModified" content="2021-09-12T20:33:41+08:00">
+  <meta itemprop="wordCount" content="430">
+  <meta itemprop="keywords" content="Linux,Objective-C">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="在 Linux 下使用 Objective-C 编程">
+  <meta name="twitter:description" content="GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。
+Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需要 Objective-C front-end for GCC ，Arch 下面直接安装 gcc-objc 这个包就可以了。">
 
 
 
@@ -277,7 +290,7 @@ int main (int argc, const char * argv[]) {
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

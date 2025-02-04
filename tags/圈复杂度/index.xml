@@ -4,18 +4,17 @@
     <title>圈复杂度 on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/</link>
     <description>Recent content in 圈复杂度 on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 28 Dec 2021 13:41:37 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Dec 2021 13:41:37 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>圈复杂度</title>
       <link>https://bigshans.github.io/post/cc/</link>
       <pubDate>Tue, 28 Dec 2021 13:41:37 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/cc/</guid>
-      <description>eslint 有个圈复杂度底配置，于是就顺便看了看。圈复杂度（Cyclomatic, CC），又称条件复杂度，是一种衡量代码复杂度底标准，其标记为 V(G) 。 相比</description>
+      <description>&lt;p&gt;eslint 有个圈复杂度底配置，于是就顺便看了看。圈复杂度（Cyclomatic, CC），又称条件复杂度，是一种衡量代码复杂度底标准，其标记为 V(G) 。&lt;/p&gt;&#xA;&lt;p&gt;相比于认知复杂度，圈复杂度更倾向于用数学模型来构建对代码复杂度底描述。与认知复杂度类似的是，圈复杂度越越高，程序出错底风险也就越大，其缺陷个数也可能越多。圈复杂度的说明程序代码底判断逻辑复杂，可能质量低，且难于测试和维护。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

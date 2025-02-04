@@ -4,18 +4,17 @@
     <title>Whoogle on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/whoogle/</link>
     <description>Recent content in Whoogle on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 30 May 2021 03:40:00 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/whoogle/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 May 2021 03:40:00 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/whoogle/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Whoogle 自建搜索网站</title>
       <link>https://bigshans.github.io/post/whoogle-self-host/</link>
       <pubDate>Sun, 30 May 2021 03:40:00 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/whoogle-self-host/</guid>
-      <description>准确来说，Whoogle 是一个元搜索引擎，他主要将 Google 的搜索结果过滤，并去除掉其中的隐私追踪部分。与 Whoogle 差不多的另一个网站框架是 SearX ，两者都是自建</description>
+      <description>&lt;p&gt;准确来说，Whoogle 是一个元搜索引擎，他主要将 Google 的搜索结果过滤，并去除掉其中的隐私追踪部分。与 Whoogle 差不多的另一个网站框架是 SearX ，两者都是自建的元搜索引擎，二者代码都开源到了 Github 上。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -4,27 +4,24 @@
     <title>Numpy on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/numpy/</link>
     <description>Recent content in Numpy on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 08 Nov 2021 15:16:47 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/numpy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Nov 2021 15:16:47 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/numpy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>纯 numpy 实现 KNN</title>
       <link>https://bigshans.github.io/post/numpy-knn/</link>
       <pubDate>Mon, 08 Nov 2021 15:16:47 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/numpy-knn/</guid>
-      <description>首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的</description>
+      <description>&lt;p&gt;首先，感谢知乎文章 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/59755939&#34;&gt;https://zhuanlan.zhihu.com/p/59755939&lt;/a&gt; 提供了&lt;strong&gt;纯 numpy&lt;/strong&gt; 的写法，我这个也基本上是抄他的。&lt;/p&gt;&#xA;&lt;p&gt;kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的 kNN ， kNN 的缺点还是比较大的，在有更好算法的前提下我们并不用它。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>numpy 基础</title>
       <link>https://bigshans.github.io/post/numpy-basic/</link>
       <pubDate>Fri, 22 Oct 2021 16:12:26 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/numpy-basic/</guid>
-      <description>numpy 几乎可以说是 python 矩阵计算的基础库了，众多大数据处理框架都引用了它。因此，如果我们有意向大数据前进，我们必不可不面对它。 预备前提 如果你想要学习</description>
+      <description>&lt;p&gt;numpy 几乎可以说是 python 矩阵计算的基础库了，众多大数据处理框架都引用了它。因此，如果我们有意向大数据前进，我们必不可不面对它。&lt;/p&gt;&#xA;&lt;h2 id=&#34;预备前提&#34;&gt;预备前提&lt;/h2&gt;&#xA;&lt;p&gt;如果你想要学习 numpy ，你至少需要具备以下基础：&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -4,18 +4,17 @@
     <title>LIS on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/lis/</link>
     <description>Recent content in LIS on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 22 Mar 2019 20:40:40 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/tags/lis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Mar 2019 20:40:40 +0000</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/lis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>最长上升子序列模板</title>
       <link>https://bigshans.github.io/post/algorithm-lic/</link>
       <pubDate>Fri, 22 Mar 2019 20:40:40 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/algorithm-lic/</guid>
       <description>&lt;p&gt;最长上升子序列模板。以 poj 3903 为例。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

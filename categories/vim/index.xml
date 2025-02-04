@@ -4,37 +4,31 @@
     <title>Vim on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/vim/</link>
     <description>Recent content in Vim on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 23 Jan 2022 19:10:42 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/vim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Jan 2022 19:10:42 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/categories/vim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>coc-kite-cmp 发布</title>
       <link>https://bigshans.github.io/post/coc-kite-cmp-publish/</link>
       <pubDate>Sun, 23 Jan 2022 19:10:42 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/coc-kite-cmp-publish/</guid>
-      <description>最近在尝试 AI complete ，主要是 TabNine 和 Kite ，两者可以基于本地代码作出较好的智能推测。在 VSCode 上，两者都有对应的插件，但在 Vim 上时，情况就不同了。我使用的是 coc.nvim ，作</description>
+      <description>&lt;p&gt;最近在尝试 AI complete ，主要是 TabNine 和 Kite ，两者可以基于本地代码作出较好的智能推测。在 VSCode 上，两者都有对应的插件，但在 Vim 上时，情况就不同了。我使用的是 coc.nvim ，作为我的补全框架， TabNine 有 coc-tabnine ，但 Kite 的 coc-kite 与 VSCode 上的不一致。于是我决定手动解决这个问题。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>写一个 vim 窗口跳转</title>
       <link>https://bigshans.github.io/post/vimscript-windowscmd/</link>
       <pubDate>Thu, 17 Jan 2019 21:37:36 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/vimscript-windowscmd/</guid>
       <description>&lt;p&gt;spacemacs 的 which-key 可以实现 &lt;leader&gt; &lt;number&gt; 选择对应窗口，这个功能在 spacevim 上面都有，我挺喜欢的，不过不知道怎么实现的。之前我安装了 space-vim 项目的 vim-which-key 插件，根据 vim-leader-guide 改的，跟 which-key 很像，可以拿来用了。于是我这几天将我原来的 vim 配置做了一个大幅度的调整，并把这个功能给实现了。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>vim 学习笔记（一）</title>
       <link>https://bigshans.github.io/post/vim-learn-textobject/</link>
       <pubDate>Thu, 30 Aug 2018 20:43:19 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/vim-learn-textobject/</guid>
-      <description>&lt;p&gt;vim 的文本对象是个很有趣的东西，使用它可以大幅提升效率，因此学习它还是很有必要的，如果想要在 vim 上进一步提高自己就必须学习这个。&lt;/p&gt;
-&lt;h2 id=&#34;a-和-i&#34;&gt;a 和 i&lt;/h2&gt;</description>
+      <description>&lt;p&gt;vim 的文本对象是个很有趣的东西，使用它可以大幅提升效率，因此学习它还是很有必要的，如果想要在 vim 上进一步提高自己就必须学习这个。&lt;/p&gt;&#xA;&lt;h2 id=&#34;a-和-i&#34;&gt;a 和 i&lt;/h2&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -17,7 +17,8 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="我的配置文件里面有我以前封装的、用于管理博客文章的命令，只不过之前是用 Hexo ，而现在迁移到了 Hugo 上，已经好久没有了，现在发现，拂拂灰尘用起来还是很" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="我的配置文件里面有我以前封装的、用于管理博客文章的命令，只不过之前是用 Hexo ，而现在迁移到了 Hugo 上，已经好久没有了，现在发现，拂拂灰尘用起来还是很带感的，但是没有自动补全总是欠缺点味道，于是我自己写了一个自动补全。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/write-a-bash-complete/" />
@@ -46,19 +47,28 @@
 
 
 
-<meta property="og:title" content="写一个 Bash 补全函数" />
-<meta property="og:description" content="我的配置文件里面有我以前封装的、用于管理博客文章的命令，只不过之前是用 Hexo ，而现在迁移到了 Hugo 上，已经好久没有了，现在发现，拂拂灰尘用起来还是很" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/write-a-bash-complete/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-09-20T01:33:29+08:00" />
-<meta property="article:modified_time" content="2021-09-20T01:33:29+08:00" />
-<meta itemprop="name" content="写一个 Bash 补全函数">
-<meta itemprop="description" content="我的配置文件里面有我以前封装的、用于管理博客文章的命令，只不过之前是用 Hexo ，而现在迁移到了 Hugo 上，已经好久没有了，现在发现，拂拂灰尘用起来还是很"><meta itemprop="datePublished" content="2021-09-20T01:33:29+08:00" />
-<meta itemprop="dateModified" content="2021-09-20T01:33:29+08:00" />
-<meta itemprop="wordCount" content="653">
-<meta itemprop="keywords" content="Bash,Complete,Linux," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="写一个 Bash 补全函数"/>
-<meta name="twitter:description" content="我的配置文件里面有我以前封装的、用于管理博客文章的命令，只不过之前是用 Hexo ，而现在迁移到了 Hugo 上，已经好久没有了，现在发现，拂拂灰尘用起来还是很"/>
+<meta property="og:url" content="https://bigshans.github.io/post/write-a-bash-complete/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="写一个 Bash 补全函数">
+  <meta property="og:description" content="我的配置文件里面有我以前封装的、用于管理博客文章的命令，只不过之前是用 Hexo ，而现在迁移到了 Hugo 上，已经好久没有了，现在发现，拂拂灰尘用起来还是很带感的，但是没有自动补全总是欠缺点味道，于是我自己写了一个自动补全。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-09-20T01:33:29+08:00">
+    <meta property="article:modified_time" content="2021-09-20T01:33:29+08:00">
+    <meta property="article:tag" content="Bash">
+    <meta property="article:tag" content="Complete">
+    <meta property="article:tag" content="Linux">
+
+  <meta itemprop="name" content="写一个 Bash 补全函数">
+  <meta itemprop="description" content="我的配置文件里面有我以前封装的、用于管理博客文章的命令，只不过之前是用 Hexo ，而现在迁移到了 Hugo 上，已经好久没有了，现在发现，拂拂灰尘用起来还是很带感的，但是没有自动补全总是欠缺点味道，于是我自己写了一个自动补全。">
+  <meta itemprop="datePublished" content="2021-09-20T01:33:29+08:00">
+  <meta itemprop="dateModified" content="2021-09-20T01:33:29+08:00">
+  <meta itemprop="wordCount" content="653">
+  <meta itemprop="keywords" content="Bash,Complete,Linux">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="写一个 Bash 补全函数">
+  <meta name="twitter:description" content="我的配置文件里面有我以前封装的、用于管理博客文章的命令，只不过之前是用 Hexo ，而现在迁移到了 Hugo 上，已经好久没有了，现在发现，拂拂灰尘用起来还是很带感的，但是没有自动补全总是欠缺点味道，于是我自己写了一个自动补全。">
 
 
 
@@ -216,30 +226,30 @@
 <p>想要实现自动补全，我们需要借助 <code>complete</code> 。 <code>complete</code> 可以让我们为某以命令添加、删除、修改自动补全。</p>
 <p><code>complete</code> 最重要的参数是下面四个：</p>
 <table>
-<thead>
-<tr>
-<th>参数</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-F</td>
-<td>执行 shell 函数，函数中生成 <code>COMPREPLY</code> 作为候选的补全结果</td>
-</tr>
-<tr>
-<td>-C</td>
-<td>将 command 命令的执行结果作为候选的补全结果</td>
-</tr>
-<tr>
-<td>-G</td>
-<td>将匹配 pattern 的文件名作为候选的补全结果</td>
-</tr>
-<tr>
-<td>-W</td>
-<td>分割 wordlist 中的单词，作为候选的补全结果</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>参数</th>
+          <th>功能</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>-F</td>
+          <td>执行 shell 函数，函数中生成 <code>COMPREPLY</code> 作为候选的补全结果</td>
+      </tr>
+      <tr>
+          <td>-C</td>
+          <td>将 command 命令的执行结果作为候选的补全结果</td>
+      </tr>
+      <tr>
+          <td>-G</td>
+          <td>将匹配 pattern 的文件名作为候选的补全结果</td>
+      </tr>
+      <tr>
+          <td>-W</td>
+          <td>分割 wordlist 中的单词，作为候选的补全结果</td>
+      </tr>
+  </tbody>
 </table>
 <p>这里，我们需要动态生成参数，所以使用 <code>-F</code> ，写一个补全函数。</p>
 <h2 id="关于-compgen">关于 <code>compgen</code></h2>
@@ -356,7 +366,7 @@ complete -F _gitpage gitpage
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

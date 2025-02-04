@@ -4,18 +4,17 @@
     <title>PHP on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/php/</link>
     <description>Recent content in PHP on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 12 Jan 2022 11:51:08 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/php/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Jan 2022 11:51:08 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/categories/php/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PHP学习（一）—— 面向过程的 PHP</title>
       <link>https://bigshans.github.io/post/php-study-1/</link>
       <pubDate>Wed, 12 Jan 2022 11:51:08 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/php-study-1/</guid>
-      <description>PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C++ 和</description>
+      <description>&lt;p&gt;PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C++ 和 Java 的杂交，而且 PHP 虽然兼容，但如果尽量用上新特性的话，都觉得是两门语言。我并不打算学过去 PHP 5 那种语法，当初学得恶心，最新的 PHP 语法其实好很多。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -17,7 +17,10 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。
+简化一下代码，我们得到 main 函数的主要代码。
+int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() // calls elsewhere in the program (e.g., any logging from V8.) setvbuf(stdout, nullptr, _IONBF, 0); setvbuf(stderr, nullptr, _IONBF, 0); return node::Start(argc, argv); } node 是 NodeJs 部分的 namespace ，与 V8 的相区分。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/" />
@@ -46,19 +49,32 @@
 
 
 
-<meta property="og:title" content="NodeJs 启动代码解析（一）" />
-<meta property="og:description" content="NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-05-06T10:04:22+08:00" />
-<meta property="article:modified_time" content="2022-05-06T10:04:22+08:00" />
-<meta itemprop="name" content="NodeJs 启动代码解析（一）">
-<meta itemprop="description" content="NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //"><meta itemprop="datePublished" content="2022-05-06T10:04:22+08:00" />
-<meta itemprop="dateModified" content="2022-05-06T10:04:22+08:00" />
-<meta itemprop="wordCount" content="1100">
-<meta itemprop="keywords" content="Node," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="NodeJs 启动代码解析（一）"/>
-<meta name="twitter:description" content="NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //"/>
+<meta property="og:url" content="https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="NodeJs 启动代码解析（一）">
+  <meta property="og:description" content="NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。
+简化一下代码，我们得到 main 函数的主要代码。
+int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() // calls elsewhere in the program (e.g., any logging from V8.) setvbuf(stdout, nullptr, _IONBF, 0); setvbuf(stderr, nullptr, _IONBF, 0); return node::Start(argc, argv); } node 是 NodeJs 部分的 namespace ，与 V8 的相区分。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-05-06T10:04:22+08:00">
+    <meta property="article:modified_time" content="2022-05-06T10:04:22+08:00">
+    <meta property="article:tag" content="Node">
+
+  <meta itemprop="name" content="NodeJs 启动代码解析（一）">
+  <meta itemprop="description" content="NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。
+简化一下代码，我们得到 main 函数的主要代码。
+int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() // calls elsewhere in the program (e.g., any logging from V8.) setvbuf(stdout, nullptr, _IONBF, 0); setvbuf(stderr, nullptr, _IONBF, 0); return node::Start(argc, argv); } node 是 NodeJs 部分的 namespace ，与 V8 的相区分。">
+  <meta itemprop="datePublished" content="2022-05-06T10:04:22+08:00">
+  <meta itemprop="dateModified" content="2022-05-06T10:04:22+08:00">
+  <meta itemprop="wordCount" content="1100">
+  <meta itemprop="keywords" content="Node">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="NodeJs 启动代码解析（一）">
+  <meta name="twitter:description" content="NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。
+简化一下代码，我们得到 main 函数的主要代码。
+int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() // calls elsewhere in the program (e.g., any logging from V8.) setvbuf(stdout, nullptr, _IONBF, 0); setvbuf(stderr, nullptr, _IONBF, 0); return node::Start(argc, argv); } node 是 NodeJs 部分的 namespace ，与 V8 的相区分。">
 
 
 
@@ -505,7 +521,7 @@ if (result.early_return) {
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

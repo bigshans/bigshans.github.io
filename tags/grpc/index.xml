@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>gRPC on Bigshans&#39; Blog</title>
+    <title>GRPC on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/grpc/</link>
-    <description>Recent content in gRPC on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in GRPC on Bigshans&#39; Blog</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 22 Jun 2022 23:09:18 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/grpc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Jun 2022 23:09:18 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/grpc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>gRPC vs RESTful</title>
       <link>https://bigshans.github.io/post/grpc-vs-restful/</link>
       <pubDate>Wed, 22 Jun 2022 23:09:18 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/grpc-vs-restful/</guid>
-      <description>gRPC 和 RESTful 的比较是两套 API 风格的比较。虽然 gRPC 采取了 HTTP2 ，但这并不代表 RESTful 不能基于 HTTP2 ，但 RESTful 也可以采用 HTTP1 ，这是因为二者的着眼点有所不同。 gRPC 采用了二进制的方</description>
+      <description>&lt;p&gt;gRPC 和 RESTful 的比较是两套 API 风格的比较。虽然 gRPC 采取了 HTTP2 ，但这并不代表 RESTful 不能基于 HTTP2 ，但 RESTful 也可以采用 HTTP1 ，这是因为二者的着眼点有所不同。 gRPC 采用了二进制的方式进行传输，目的是为了更快、更多样化的传输数据，而 RESTful 采用 JSON 作为传输数据的格式，相应的也就牺牲了速度与传输数据的多样化，但同时收获了数据的可读性。我们深入进去就会发现，为了数据的可读性， RESTful 必须对数据进行冗余，以此来保证传输数据的可读性，而 gRPC 则对数据进行压缩，以保证大数据能够被更快的传输过去，但同时加深了调试的难度。因此，当我们传输的数据越大的时候， gRPC 就越具有优势，因为当数据量过大是，可读性反而成了拖累，速度会反向影响调试和可读性。且二进制对于计算机来说是比 JSON 结构好读的， JSON 解析必然是一大负担，当 JSON 足够大时，解析也会变得十分困难，而栈帧的结构对于计算机来说更好。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

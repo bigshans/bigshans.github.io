@@ -4,18 +4,17 @@
     <title>打包 on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/%E6%89%93%E5%8C%85/</link>
     <description>Recent content in 打包 on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 30 Oct 2021 01:08:44 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E6%89%93%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Oct 2021 01:08:44 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/%E6%89%93%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Arch 打包备忘录</title>
       <link>https://bigshans.github.io/post/arch-pack-memo/</link>
       <pubDate>Sat, 30 Oct 2021 01:08:44 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/arch-pack-memo/</guid>
-      <description>最近又写了一个 PKGBUILD 传到了 AUR 。不过距离上一次打包已经过去很久了，这些包其实许久没有更新了，就到我自己都忘了要怎么打包了。因为一些常用命令经常记不</description>
+      <description>&lt;p&gt;最近又写了一个 PKGBUILD 传到了 AUR 。不过距离上一次打包已经过去很久了，这些包其实许久没有更新了，就到我自己都忘了要怎么打包了。因为一些常用命令经常记不住，所以就简单写一篇记录一下。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

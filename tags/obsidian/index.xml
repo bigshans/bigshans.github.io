@@ -4,18 +4,17 @@
     <title>Obsidian on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/obsidian/</link>
     <description>Recent content in Obsidian on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 13 Jul 2023 17:16:02 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Jul 2023 17:16:02 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Obsidian 使用体验</title>
       <link>https://bigshans.github.io/post/obsidian-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
       <pubDate>Thu, 13 Jul 2023 17:16:02 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/obsidian-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
-      <description>因为已经用了一段时间的 Obsidian ，所以整体说一下，包括使用的手感和我自己的 workflow 。 Obsidian 与 Logseq 同属于双链编辑器，我最早使用的是 Logseq ，因为 Obsidian 总是脱手，用起来很别扭</description>
+      <description>&lt;p&gt;因为已经用了一段时间的 Obsidian&#xA;，所以整体说一下，包括使用的手感和我自己的 workflow 。&lt;/p&gt;&#xA;&lt;p&gt;Obsidian 与 Logseq 同属于双链编辑器，我最早使用的是 Logseq ，因为&#xA;Obsidian 总是脱手，用起来很别扭。但 Logseq&#xA;我本来也不满意，因为它是基于行使用的，导致我要写多行笔记时很不方便。而我使用&#xA;Obsidian 的缘起是因为我要写小说，早先用 Logseq&#xA;写设定时，多行编辑的体验糟糕透了，于是我尝试转移到 Obsidian 。 Obsidian&#xA;需要装很多插件才好用，默认的 Obsidian&#xA;配置其实没有什么优势。那个漂亮的、一个节点一个节点蹦跳出来的关系图谱其实一点用也没有，比起它被宣传为什么，我更在乎我该怎么用。双链的最大好处是可以随意跳转，即使不跳转也能&#xA;preview ，这点非常不错（其实 preview 这点，Logseq&#xA;做得好些）。写小说时的感觉还可以，但不足以扭转我对它的看法，真正改变我对&#xA;Obsidian 看法的，是当我用它写日记做各种笔记的时候。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="话说 Keychron 这个软件系统兼容做的真差，没想到基础的 Fn 键也能出岔子。 虽然我已经将键盘布局改为 Windows 布局，但 Fn &#43; F1~F12 仍然处于完全不能用的状态。 Windows 用户也不能幸" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="话说 Keychron 这个软件系统兼容做的真差，没想到基础的 Fn 键也能出岔子。
+虽然我已经将键盘布局改为 Windows 布局，但 Fn &#43; F1~F12 仍然处于完全不能用的状态。 Windows 用户也不能幸免。主要问题还是在于 Keychron 被识别为 Apple 键盘，导致 F1 到 F12 全被认为是媒体键。而 Mac 用户没有这个问题。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/keychron-k2-fn-fixed/" />
@@ -46,19 +48,29 @@
 
 
 
-<meta property="og:title" content="修复 Keychron K2 的 Fn 键在 Arch 上不好使的问题" />
-<meta property="og:description" content="话说 Keychron 这个软件系统兼容做的真差，没想到基础的 Fn 键也能出岔子。 虽然我已经将键盘布局改为 Windows 布局，但 Fn &#43; F1~F12 仍然处于完全不能用的状态。 Windows 用户也不能幸" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/keychron-k2-fn-fixed/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-03-06T14:24:56+08:00" />
-<meta property="article:modified_time" content="2022-03-06T14:24:56+08:00" />
-<meta itemprop="name" content="修复 Keychron K2 的 Fn 键在 Arch 上不好使的问题">
-<meta itemprop="description" content="话说 Keychron 这个软件系统兼容做的真差，没想到基础的 Fn 键也能出岔子。 虽然我已经将键盘布局改为 Windows 布局，但 Fn &#43; F1~F12 仍然处于完全不能用的状态。 Windows 用户也不能幸"><meta itemprop="datePublished" content="2022-03-06T14:24:56+08:00" />
-<meta itemprop="dateModified" content="2022-03-06T14:24:56+08:00" />
-<meta itemprop="wordCount" content="206">
-<meta itemprop="keywords" content="Linux," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="修复 Keychron K2 的 Fn 键在 Arch 上不好使的问题"/>
-<meta name="twitter:description" content="话说 Keychron 这个软件系统兼容做的真差，没想到基础的 Fn 键也能出岔子。 虽然我已经将键盘布局改为 Windows 布局，但 Fn &#43; F1~F12 仍然处于完全不能用的状态。 Windows 用户也不能幸"/>
+<meta property="og:url" content="https://bigshans.github.io/post/keychron-k2-fn-fixed/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="修复 Keychron K2 的 Fn 键在 Arch 上不好使的问题">
+  <meta property="og:description" content="话说 Keychron 这个软件系统兼容做的真差，没想到基础的 Fn 键也能出岔子。
+虽然我已经将键盘布局改为 Windows 布局，但 Fn &#43; F1~F12 仍然处于完全不能用的状态。 Windows 用户也不能幸免。主要问题还是在于 Keychron 被识别为 Apple 键盘，导致 F1 到 F12 全被认为是媒体键。而 Mac 用户没有这个问题。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-03-06T14:24:56+08:00">
+    <meta property="article:modified_time" content="2022-03-06T14:24:56+08:00">
+    <meta property="article:tag" content="Linux">
+
+  <meta itemprop="name" content="修复 Keychron K2 的 Fn 键在 Arch 上不好使的问题">
+  <meta itemprop="description" content="话说 Keychron 这个软件系统兼容做的真差，没想到基础的 Fn 键也能出岔子。
+虽然我已经将键盘布局改为 Windows 布局，但 Fn &#43; F1~F12 仍然处于完全不能用的状态。 Windows 用户也不能幸免。主要问题还是在于 Keychron 被识别为 Apple 键盘，导致 F1 到 F12 全被认为是媒体键。而 Mac 用户没有这个问题。">
+  <meta itemprop="datePublished" content="2022-03-06T14:24:56+08:00">
+  <meta itemprop="dateModified" content="2022-03-06T14:24:56+08:00">
+  <meta itemprop="wordCount" content="206">
+  <meta itemprop="keywords" content="Linux">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="修复 Keychron K2 的 Fn 键在 Arch 上不好使的问题">
+  <meta name="twitter:description" content="话说 Keychron 这个软件系统兼容做的真差，没想到基础的 Fn 键也能出岔子。
+虽然我已经将键盘布局改为 Windows 布局，但 Fn &#43; F1~F12 仍然处于完全不能用的状态。 Windows 用户也不能幸免。主要问题还是在于 Keychron 被识别为 Apple 键盘，导致 F1 到 F12 全被认为是媒体键。而 Mac 用户没有这个问题。">
 
 
 
@@ -265,7 +277,7 @@ sudo mkinitcpio -P
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

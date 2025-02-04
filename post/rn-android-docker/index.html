@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。 选择 Docker 镜像 其实 React Native" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。
+选择 Docker 镜像 其实 React Native 的镜像已经有人搭建好了，并上传到 Docker Hub 上了。我看了看目前热度比较高的几个镜像，并尝试了一下，最终在 reactnativecommunity 和 theanam 中进行抉择。其实前者更新更频繁一些，但 pull 下来镜像有 5G 多，所以最后选择了 theanam 的镜像。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/rn-android-docker/" />
@@ -46,19 +48,28 @@
 
 
 
-<meta property="og:title" content="在 Docker 内编译 React Native" />
-<meta property="og:description" content="每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。 选择 Docker 镜像 其实 React Native" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/rn-android-docker/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-02-21T18:57:43+08:00" />
-<meta property="article:modified_time" content="2021-02-21T18:57:43+08:00" />
-<meta itemprop="name" content="在 Docker 内编译 React Native">
-<meta itemprop="description" content="每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。 选择 Docker 镜像 其实 React Native"><meta itemprop="datePublished" content="2021-02-21T18:57:43+08:00" />
-<meta itemprop="dateModified" content="2021-02-21T18:57:43+08:00" />
-<meta itemprop="wordCount" content="373">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="在 Docker 内编译 React Native"/>
-<meta name="twitter:description" content="每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。 选择 Docker 镜像 其实 React Native"/>
+<meta property="og:url" content="https://bigshans.github.io/post/rn-android-docker/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="在 Docker 内编译 React Native">
+  <meta property="og:description" content="每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。
+选择 Docker 镜像 其实 React Native 的镜像已经有人搭建好了，并上传到 Docker Hub 上了。我看了看目前热度比较高的几个镜像，并尝试了一下，最终在 reactnativecommunity 和 theanam 中进行抉择。其实前者更新更频繁一些，但 pull 下来镜像有 5G 多，所以最后选择了 theanam 的镜像。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-02-21T18:57:43+08:00">
+    <meta property="article:modified_time" content="2021-02-21T18:57:43+08:00">
+
+  <meta itemprop="name" content="在 Docker 内编译 React Native">
+  <meta itemprop="description" content="每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。
+选择 Docker 镜像 其实 React Native 的镜像已经有人搭建好了，并上传到 Docker Hub 上了。我看了看目前热度比较高的几个镜像，并尝试了一下，最终在 reactnativecommunity 和 theanam 中进行抉择。其实前者更新更频繁一些，但 pull 下来镜像有 5G 多，所以最后选择了 theanam 的镜像。">
+  <meta itemprop="datePublished" content="2021-02-21T18:57:43+08:00">
+  <meta itemprop="dateModified" content="2021-02-21T18:57:43+08:00">
+  <meta itemprop="wordCount" content="373">
+  <meta itemprop="keywords" content="React Native">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="在 Docker 内编译 React Native">
+  <meta name="twitter:description" content="每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。
+选择 Docker 镜像 其实 React Native 的镜像已经有人搭建好了，并上传到 Docker Hub 上了。我看了看目前热度比较高的几个镜像，并尝试了一下，最终在 reactnativecommunity 和 theanam 中进行抉择。其实前者更新更频繁一些，但 pull 下来镜像有 5G 多，所以最后选择了 theanam 的镜像。">
 
 
 
@@ -273,7 +284,7 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

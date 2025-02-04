@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。 在上家公司我也体验过自" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。
+在上家公司我也体验过自动部署，本质上是推代码时自动触发脚本运行。他们是使用 K8S 实现的，而我现在一台可怜巴巴的服务器，这样的配置太重了。于是， Webhook 就很适合我的场景。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/" />
@@ -46,19 +48,31 @@
 
 
 
-<meta property="og:title" content="如何使用 Webhook 来实现自动部署项目" />
-<meta property="og:description" content="自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。 在上家公司我也体验过自" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-11-15T18:30:45+08:00" />
-<meta property="article:modified_time" content="2020-11-15T18:30:45+08:00" />
-<meta itemprop="name" content="如何使用 Webhook 来实现自动部署项目">
-<meta itemprop="description" content="自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。 在上家公司我也体验过自"><meta itemprop="datePublished" content="2020-11-15T18:30:45+08:00" />
-<meta itemprop="dateModified" content="2020-11-15T18:30:45+08:00" />
-<meta itemprop="wordCount" content="752">
-<meta itemprop="keywords" content="Webhooks,Nginx,PHP," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="如何使用 Webhook 来实现自动部署项目"/>
-<meta name="twitter:description" content="自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。 在上家公司我也体验过自"/>
+<meta property="og:url" content="https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="如何使用 Webhook 来实现自动部署项目">
+  <meta property="og:description" content="自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。
+在上家公司我也体验过自动部署，本质上是推代码时自动触发脚本运行。他们是使用 K8S 实现的，而我现在一台可怜巴巴的服务器，这样的配置太重了。于是， Webhook 就很适合我的场景。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2020-11-15T18:30:45+08:00">
+    <meta property="article:modified_time" content="2020-11-15T18:30:45+08:00">
+    <meta property="article:tag" content="Webhooks">
+    <meta property="article:tag" content="Nginx">
+    <meta property="article:tag" content="PHP">
+
+  <meta itemprop="name" content="如何使用 Webhook 来实现自动部署项目">
+  <meta itemprop="description" content="自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。
+在上家公司我也体验过自动部署，本质上是推代码时自动触发脚本运行。他们是使用 K8S 实现的，而我现在一台可怜巴巴的服务器，这样的配置太重了。于是， Webhook 就很适合我的场景。">
+  <meta itemprop="datePublished" content="2020-11-15T18:30:45+08:00">
+  <meta itemprop="dateModified" content="2020-11-15T18:30:45+08:00">
+  <meta itemprop="wordCount" content="752">
+  <meta itemprop="keywords" content="Webhooks,Nginx,PHP">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="如何使用 Webhook 来实现自动部署项目">
+  <meta name="twitter:description" content="自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。
+在上家公司我也体验过自动部署，本质上是推代码时自动触发脚本运行。他们是使用 K8S 实现的，而我现在一台可怜巴巴的服务器，这样的配置太重了。于是， Webhook 就很适合我的场景。">
 
 
 
@@ -317,7 +331,7 @@ http_response_code(404);
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

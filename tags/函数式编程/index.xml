@@ -4,18 +4,17 @@
     <title>函数式编程 on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</link>
     <description>Recent content in 函数式编程 on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 24 Aug 2021 17:22:43 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Aug 2021 17:22:43 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>函数式的骨感</title>
       <link>https://bigshans.github.io/post/function-comment/</link>
       <pubDate>Tue, 24 Aug 2021 17:22:43 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/function-comment/</guid>
-      <description>最近读了点 rambda 的源码。函数式是个很诱人的概念，借助函数式，你可以以十分数学的方式解决一些问题。虽然如此，函数式对于现实来说仍然过于抽象，如果我</description>
+      <description>&lt;p&gt;最近读了点 rambda 的源码。函数式是个很诱人的概念，借助函数式，你可以以十分数学的方式解决一些问题。虽然如此，函数式对于现实来说仍然过于抽象，如果我们不去关注底层，那他确实是好的，然而一旦我们逼视其实现，我们就会发现它的窘迫与骨感，对于 js 来说尤是。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

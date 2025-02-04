@@ -4,18 +4,17 @@
     <title>手机 on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/%E6%89%8B%E6%9C%BA/</link>
     <description>Recent content in 手机 on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 27 Apr 2021 20:20:24 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E6%89%8B%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Apr 2021 20:20:24 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/%E6%89%8B%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在 root 下去除 MIUI 锁屏密码</title>
       <link>https://bigshans.github.io/post/unlock-screen-sercet/</link>
       <pubDate>Tue, 27 Apr 2021 20:20:24 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/unlock-screen-sercet/</guid>
-      <description>因为 root 手机忘了锁屏密码，所以想要破解掉。因为手机已经提前 root 了，我本以为这个问题只需要搜一下就可以了，然而搜索的结果却让我大跌眼镜。使用 adb 删除</description>
+      <description>&lt;p&gt;因为 root 手机忘了锁屏密码，所以想要破解掉。因为手机已经提前 root 了，我本以为这个问题只需要搜一下就可以了，然而搜索的结果却让我大跌眼镜。使用 adb 删除 password.key 或者 gesture.key ，问题是根本没有这几个文件！我把几个 key 文件删了根本没有效果，然后我仔细研究了一下在 /data/system 下的文件，发现有几个名为 locksetting 的 db 文件，怀疑这个才是真正的屏幕锁文件，因为这几个文件看着像是 Sqlite 数据库。于是在 recovery 模式下我删除了这几个文件，重启之后，锁屏密码就去掉了。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -4,18 +4,17 @@
     <title>Pleroma on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/pleroma/</link>
     <description>Recent content in Pleroma on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 21 May 2021 22:04:17 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/pleroma/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 May 2021 22:04:17 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/pleroma/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pleroma 安装排雷</title>
       <link>https://bigshans.github.io/post/troubleshoot-pleroma/</link>
       <pubDate>Fri, 21 May 2021 22:04:17 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/troubleshoot-pleroma/</guid>
-      <description>安装 Pleroma 倒也不是什么特别难的事，只要照着文档自己安装即可，但是，事情往往并没有你想的那么简单。 Pleroma 是一款基于 Elixir 开发的轻量级的微博系统，而且还支持</description>
+      <description>&lt;p&gt;安装 Pleroma 倒也不是什么特别难的事，只要照着&lt;a href=&#34;https://docs-develop.pleroma.social/backend/&#34;&gt;文档&lt;/a&gt;自己安装即可，但是，事情往往并没有你想的那么简单。&lt;/p&gt;&#xA;&lt;p&gt;Pleroma 是一款基于 Elixir 开发的轻量级的微博系统，而且还支持 Activity Pub 。提到 Activity Pub 大家第一时间会想起 Mastodon ，Mastodon 是基于 Ruby 开发的去中心化的微博系统，在功能上，它比 Pleroma 强上太多，但是最终我为什么没有选择它呢？因为它太吃资源了，我的服务器连最低配置要求都达不到，因此我用 Pleroma 替换了它。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

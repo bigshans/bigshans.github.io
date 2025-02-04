@@ -4,54 +4,45 @@
     <title>JavaScript on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/javascript/</link>
     <description>Recent content in JavaScript on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 14 Oct 2023 11:52:10 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Oct 2023 11:52:10 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>函数柯里化</title>
       <link>https://bigshans.github.io/post/curry/</link>
       <pubDate>Sat, 14 Oct 2023 11:52:10 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/curry/</guid>
-      <description>函数柯里化是一种可以将函数转换为另一个函数的技巧，通常是用来减少函数参数的。 用一个简单的例子以表示这种使用: function sum(a, b) { return a + b; } const add1 = curry((b) =&amp;gt; sum(1, b));</description>
+      <description>&lt;p&gt;函数柯里化是一种可以将函数转换为另一个函数的技巧，通常是用来减少函数参数的。&lt;/p&gt;&#xA;&lt;p&gt;用一个简单的例子以表示这种使用:&lt;/p&gt;&#xA;&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre&#xA;class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;fu&#34;&gt;sum&lt;/span&gt;(a&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt; b) {&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-2&#34;&gt;&lt;a href=&#34;#cb1-2&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;  &lt;span class=&#34;cf&#34;&gt;return&lt;/span&gt; a &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt; b&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-3&#34;&gt;&lt;a href=&#34;#cb1-3&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;}&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-4&#34;&gt;&lt;a href=&#34;#cb1-4&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-5&#34;&gt;&lt;a href=&#34;#cb1-5&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;const&lt;/span&gt; add1 &lt;span class=&#34;op&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;fu&#34;&gt;curry&lt;/span&gt;((b) &lt;span class=&#34;kw&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;fu&#34;&gt;sum&lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt; b))&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-6&#34;&gt;&lt;a href=&#34;#cb1-6&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;bu&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;fu&#34;&gt;add1&lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;10&lt;/span&gt;))&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;p&gt;这里我们实际上固定了 &lt;code&gt;sum&lt;/code&gt; 的参数，但这里我只被允许加上 1&#xA;，我们可以更灵活一些。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>JavaScript 的标签模板字符串</title>
       <link>https://bigshans.github.io/post/tagged-template-string/</link>
       <pubDate>Fri, 16 Dec 2022 10:49:05 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/tagged-template-string/</guid>
-      <description>标签模板是个看起来很 Magic 的语法，写起来像是这样。 console.log`Hello, World!`; // Output: [&amp;#34;Hello, World!&amp;#34;] 实际上，这里的模板标签被转换成这样的一句调用。 console.log.call(console, [&amp;#39;Hello, World!&amp;#39;]); 如果我们有用变量的话， const name = &amp;#39;world&amp;#39;;</description>
+      <description>&lt;p&gt;标签模板是个看起来很 Magic 的语法，写起来像是这样。&lt;/p&gt;&#xA;&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre&#xA;class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;bu&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;vs&#34;&gt;`Hello, World!`&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-2&#34;&gt;&lt;a href=&#34;#cb1-2&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;co&#34;&gt;// Output: [&amp;quot;Hello, World!&amp;quot;]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;p&gt;实际上，这里的模板标签被转换成这样的一句调用。&lt;/p&gt;&#xA;&lt;div class=&#34;sourceCode&#34; id=&#34;cb2&#34;&gt;&lt;pre&#xA;class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb2-1&#34;&gt;&lt;a href=&#34;#cb2-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;bu&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;call&lt;/span&gt;(&lt;span class=&#34;bu&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt; [&lt;span class=&#34;st&#34;&gt;&amp;#39;Hello, World!&amp;#39;&lt;/span&gt;])&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;p&gt;如果我们有用变量的话，&lt;/p&gt;&#xA;&lt;div class=&#34;sourceCode&#34; id=&#34;cb3&#34;&gt;&lt;pre&#xA;class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb3-1&#34;&gt;&lt;a href=&#34;#cb3-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;const&lt;/span&gt; name &lt;span class=&#34;op&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;#39;world&amp;#39;&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb3-2&#34;&gt;&lt;a href=&#34;#cb3-2&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;bu&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;vs&#34;&gt;`Hello, &lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;${&lt;/span&gt;name&lt;span class=&#34;sc&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;vs&#34;&gt;!`&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb3-3&#34;&gt;&lt;a href=&#34;#cb3-3&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;co&#34;&gt;// Output: [ &amp;#39;Hello, &amp;#39;, &amp;#39;!&amp;#39; ] world&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;p&gt;就会被转换成这样一句调用。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>RxJs 初探 —— 基于事件为中心的编程</title>
       <link>https://bigshans.github.io/post/rxjs-exploration/</link>
       <pubDate>Sat, 02 Oct 2021 22:19:12 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/rxjs-exploration/</guid>
-      <description>这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始</description>
+      <description>&lt;p&gt;这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始讲，把函数式放到一边，然而这个其实也是 FRP 的重点——事件建模。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>如何写一个深拷贝函数</title>
       <link>https://bigshans.github.io/post/how-to-write-a-deep-copy-function/</link>
       <pubDate>Sun, 22 Aug 2021 14:52:42 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/how-to-write-a-deep-copy-function/</guid>
-      <description>跟小伙伴们讨论的时候发现，es6 的解构其实和 Object.assign 一样属于是浅拷贝。那么一个深拷贝到底该怎么写呢？我个人阅读了一下 lodash 、 rambda 、 rfdc 的实现，发现思想其实</description>
+      <description>&lt;p&gt;跟小伙伴们讨论的时候发现，es6 的解构其实和 &lt;code&gt;Object.assign&lt;/code&gt; 一样属于是浅拷贝。那么一个深拷贝到底该怎么写呢？我个人阅读了一下 lodash 、 rambda 、 rfdc 的实现，发现思想其实都是一样，由于 rfdc 放弃了对一些内容的支持，使得它的速度飞快，但这些内容实际上我是需要的，所以 rfdc 不考虑。剩下两个实现思想基本上是一样的，但是 lodash 的实现内容很多，没有 rambda 简洁，所以我以 rambda 为蓝本自己写了一个深拷贝函数。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>webpack 的 require 和 import 相关的一点问题</title>
       <link>https://bigshans.github.io/post/net-musicvue-problem-set1/</link>
       <pubDate>Sun, 26 Aug 2018 12:41:45 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/net-musicvue-problem-set1/</guid>
       <description>&lt;p&gt;今天继续用 electron-vue 写 NeteaseCloudMusic 的第三方 app， 用的 NeteaseCloudMusicApi 使用起来却很麻烦。不知道为什么之前可以正常使用，现在却不行了，摸索了好久，还是没能解决。不过还是有点收获的，接下来讲一讲。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

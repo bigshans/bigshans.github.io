@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>art-html on Bigshans&#39; Blog</title>
+    <title>Art-Html on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/art-html/</link>
-    <description>Recent content in art-html on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Art-Html on Bigshans&#39; Blog</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 24 May 2021 22:19:11 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/art-html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 May 2021 22:19:11 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/art-html/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>写了一个基于 art 的静态网页模块化项目</title>
       <link>https://bigshans.github.io/post/art-html/</link>
       <pubDate>Mon, 24 May 2021 22:19:11 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/art-html/</guid>
-      <description>最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。 背景 公司的主页是用静态网页写的，主要是用来展示，但是分很</description>
+      <description>&lt;p&gt;最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 &lt;a href=&#34;https://github.com/bigshans/art-html&#34;&gt;https://github.com/bigshans/art-html&lt;/a&gt; 。&lt;/p&gt;&#xA;&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;&#xA;&lt;p&gt;公司的主页是用静态网页写的，主要是用来展示，但是分很多个页面，页面间有几个公用的组件。首先不考虑用 Vue 或者 React ，杀鸡焉用牛刀是其一，其二是首页需要做 SEO ，但是特意用一个 Nuxtjs 的又不太想（不需要那么多东西），我的 Leader 不太想再弄一个服务去跑这个东西，因为原来就直接丢到 OSS 上不需要管，根本不用考虑它对服务器的影响（反正又是找阿里就行了）。考虑了几种方案，感觉还是用传统的模板引擎最好，因为返回给前端的时候直接是生成好的页面，SEO 肯定没问题，问题是不开一个服务怎么弄呢？那就提前生成好就行了。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

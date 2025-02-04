@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="eslint 有个圈复杂度底配置，于是就顺便看了看。圈复杂度（Cyclomatic, CC），又称条件复杂度，是一种衡量代码复杂度底标准，其标记为 V(G) 。 相比" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="eslint 有个圈复杂度底配置，于是就顺便看了看。圈复杂度（Cyclomatic, CC），又称条件复杂度，是一种衡量代码复杂度底标准，其标记为 V(G) 。
+相比于认知复杂度，圈复杂度更倾向于用数学模型来构建对代码复杂度底描述。与认知复杂度类似的是，圈复杂度越越高，程序出错底风险也就越大，其缺陷个数也可能越多。圈复杂度的说明程序代码底判断逻辑复杂，可能质量低，且难于测试和维护。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/cc/" />
@@ -46,19 +48,30 @@
 
 
 
-<meta property="og:title" content="圈复杂度" />
-<meta property="og:description" content="eslint 有个圈复杂度底配置，于是就顺便看了看。圈复杂度（Cyclomatic, CC），又称条件复杂度，是一种衡量代码复杂度底标准，其标记为 V(G) 。 相比" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/cc/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-12-28T13:41:37+08:00" />
-<meta property="article:modified_time" content="2021-12-28T13:41:37+08:00" />
-<meta itemprop="name" content="圈复杂度">
-<meta itemprop="description" content="eslint 有个圈复杂度底配置，于是就顺便看了看。圈复杂度（Cyclomatic, CC），又称条件复杂度，是一种衡量代码复杂度底标准，其标记为 V(G) 。 相比"><meta itemprop="datePublished" content="2021-12-28T13:41:37+08:00" />
-<meta itemprop="dateModified" content="2021-12-28T13:41:37+08:00" />
-<meta itemprop="wordCount" content="1152">
-<meta itemprop="keywords" content="代码质量,圈复杂度," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="圈复杂度"/>
-<meta name="twitter:description" content="eslint 有个圈复杂度底配置，于是就顺便看了看。圈复杂度（Cyclomatic, CC），又称条件复杂度，是一种衡量代码复杂度底标准，其标记为 V(G) 。 相比"/>
+<meta property="og:url" content="https://bigshans.github.io/post/cc/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="圈复杂度">
+  <meta property="og:description" content="eslint 有个圈复杂度底配置，于是就顺便看了看。圈复杂度（Cyclomatic, CC），又称条件复杂度，是一种衡量代码复杂度底标准，其标记为 V(G) 。
+相比于认知复杂度，圈复杂度更倾向于用数学模型来构建对代码复杂度底描述。与认知复杂度类似的是，圈复杂度越越高，程序出错底风险也就越大，其缺陷个数也可能越多。圈复杂度的说明程序代码底判断逻辑复杂，可能质量低，且难于测试和维护。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-12-28T13:41:37+08:00">
+    <meta property="article:modified_time" content="2021-12-28T13:41:37+08:00">
+    <meta property="article:tag" content="代码质量">
+    <meta property="article:tag" content="圈复杂度">
+
+  <meta itemprop="name" content="圈复杂度">
+  <meta itemprop="description" content="eslint 有个圈复杂度底配置，于是就顺便看了看。圈复杂度（Cyclomatic, CC），又称条件复杂度，是一种衡量代码复杂度底标准，其标记为 V(G) 。
+相比于认知复杂度，圈复杂度更倾向于用数学模型来构建对代码复杂度底描述。与认知复杂度类似的是，圈复杂度越越高，程序出错底风险也就越大，其缺陷个数也可能越多。圈复杂度的说明程序代码底判断逻辑复杂，可能质量低，且难于测试和维护。">
+  <meta itemprop="datePublished" content="2021-12-28T13:41:37+08:00">
+  <meta itemprop="dateModified" content="2021-12-28T13:41:37+08:00">
+  <meta itemprop="wordCount" content="1152">
+  <meta itemprop="keywords" content="代码质量,圈复杂度">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="圈复杂度">
+  <meta name="twitter:description" content="eslint 有个圈复杂度底配置，于是就顺便看了看。圈复杂度（Cyclomatic, CC），又称条件复杂度，是一种衡量代码复杂度底标准，其标记为 V(G) 。
+相比于认知复杂度，圈复杂度更倾向于用数学模型来构建对代码复杂度底描述。与认知复杂度类似的是，圈复杂度越越高，程序出错底风险也就越大，其缺陷个数也可能越多。圈复杂度的说明程序代码底判断逻辑复杂，可能质量低，且难于测试和维护。">
 
 
 
@@ -215,40 +228,40 @@
 <p>相比于认知复杂度，圈复杂度更倾向于用数学模型来构建对代码复杂度底描述。与认知复杂度类似的是，圈复杂度越越高，程序出错底风险也就越大，其缺陷个数也可能越多。圈复杂度的说明程序代码底判断逻辑复杂，可能质量低，且难于测试和维护。</p>
 <h2 id="圈复杂度与出错风险">圈复杂度与出错风险</h2>
 <table>
-<thead>
-<tr>
-<th>圈复杂度</th>
-<th>代码情况</th>
-<th>可测性</th>
-<th>维护成本</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1 ~ 10</td>
-<td>清晰</td>
-<td>高</td>
-<td>低</td>
-</tr>
-<tr>
-<td>10 ~ 20</td>
-<td>复杂</td>
-<td>中</td>
-<td>中</td>
-</tr>
-<tr>
-<td>20 ~ 30</td>
-<td>非常复杂</td>
-<td>低</td>
-<td>高</td>
-</tr>
-<tr>
-<td>&gt; 30</td>
-<td>不可读</td>
-<td>不可测</td>
-<td>非常高</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>圈复杂度</th>
+          <th>代码情况</th>
+          <th>可测性</th>
+          <th>维护成本</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1 ~ 10</td>
+          <td>清晰</td>
+          <td>高</td>
+          <td>低</td>
+      </tr>
+      <tr>
+          <td>10 ~ 20</td>
+          <td>复杂</td>
+          <td>中</td>
+          <td>中</td>
+      </tr>
+      <tr>
+          <td>20 ~ 30</td>
+          <td>非常复杂</td>
+          <td>低</td>
+          <td>高</td>
+      </tr>
+      <tr>
+          <td>&gt; 30</td>
+          <td>不可读</td>
+          <td>不可测</td>
+          <td>非常高</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>一般来说，圈复杂度大于 10 底方法存在很大的出错风险。</strong></p>
 <h2 id="计算方法">计算方法</h2>
@@ -429,7 +442,7 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

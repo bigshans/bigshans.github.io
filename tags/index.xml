@@ -4,459 +4,360 @@
     <title>Tags on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/</link>
     <description>Recent content in Tags on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 29 Dec 2024 22:56:17 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Dec 2024 22:56:17 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>年终总结</title>
       <link>https://bigshans.github.io/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
       <pubDate>Sun, 29 Dec 2024 22:56:17 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>pnpm</title>
+      <title>Pnpm</title>
       <link>https://bigshans.github.io/tags/pnpm/</link>
       <pubDate>Fri, 03 May 2024 13:50:38 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/pnpm/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Linux</title>
       <link>https://bigshans.github.io/tags/linux/</link>
       <pubDate>Fri, 03 May 2024 13:38:44 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/linux/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>FabricJs</title>
       <link>https://bigshans.github.io/tags/fabricjs/</link>
       <pubDate>Sun, 24 Mar 2024 23:18:40 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/fabricjs/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Node</title>
       <link>https://bigshans.github.io/tags/node/</link>
       <pubDate>Sun, 24 Mar 2024 23:18:40 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/node/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>vim</title>
+      <title>Vim</title>
       <link>https://bigshans.github.io/tags/vim/</link>
       <pubDate>Fri, 16 Feb 2024 10:16:38 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/vim/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Android</title>
       <link>https://bigshans.github.io/tags/android/</link>
       <pubDate>Sun, 28 Jan 2024 21:38:15 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/android/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>firefox</title>
+      <title>Firefox</title>
       <link>https://bigshans.github.io/tags/firefox/</link>
       <pubDate>Fri, 29 Dec 2023 21:02:43 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/firefox/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Javascript</title>
       <link>https://bigshans.github.io/tags/javascript/</link>
       <pubDate>Sat, 14 Oct 2023 11:52:10 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/javascript/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>前端</title>
       <link>https://bigshans.github.io/tags/%E5%89%8D%E7%AB%AF/</link>
       <pubDate>Sun, 06 Aug 2023 19:09:10 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E5%89%8D%E7%AB%AF/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>V8</title>
       <link>https://bigshans.github.io/tags/v8/</link>
       <pubDate>Fri, 04 Aug 2023 09:06:08 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/v8/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>BUUCFT</title>
       <link>https://bigshans.github.io/tags/buucft/</link>
       <pubDate>Sun, 23 Jul 2023 08:19:53 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/buucft/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>题解</title>
       <link>https://bigshans.github.io/tags/%E9%A2%98%E8%A7%A3/</link>
       <pubDate>Sun, 23 Jul 2023 08:19:53 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E9%A2%98%E8%A7%A3/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Obsidian</title>
       <link>https://bigshans.github.io/tags/obsidian/</link>
       <pubDate>Thu, 13 Jul 2023 17:16:02 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/obsidian/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>随笔</title>
       <link>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</link>
       <pubDate>Wed, 03 May 2023 22:20:02 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E9%9A%8F%E7%AC%94/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>思辨</title>
       <link>https://bigshans.github.io/tags/%E6%80%9D%E8%BE%A8/</link>
       <pubDate>Tue, 11 Apr 2023 23:46:02 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E6%80%9D%E8%BE%A8/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>编程随笔</title>
       <link>https://bigshans.github.io/tags/%E7%BC%96%E7%A8%8B%E9%9A%8F%E7%AC%94/</link>
       <pubDate>Mon, 13 Mar 2023 14:34:09 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E7%BC%96%E7%A8%8B%E9%9A%8F%E7%AC%94/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>堆栈溢出</title>
       <link>https://bigshans.github.io/tags/%E5%A0%86%E6%A0%88%E6%BA%A2%E5%87%BA/</link>
       <pubDate>Sun, 12 Mar 2023 22:15:45 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E5%A0%86%E6%A0%88%E6%BA%A2%E5%87%BA/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>深入理解计算机系统</title>
       <link>https://bigshans.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Sun, 12 Mar 2023 22:15:45 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>爬虫</title>
       <link>https://bigshans.github.io/tags/%E7%88%AC%E8%99%AB/</link>
       <pubDate>Tue, 28 Feb 2023 17:57:44 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E7%88%AC%E8%99%AB/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>重装 Arch</title>
       <link>https://bigshans.github.io/tags/%E9%87%8D%E8%A3%85-arch/</link>
       <pubDate>Sun, 26 Feb 2023 14:01:31 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E9%87%8D%E8%A3%85-arch/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>TCP</title>
       <link>https://bigshans.github.io/tags/tcp/</link>
       <pubDate>Thu, 23 Feb 2023 10:46:04 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/tcp/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>网络</title>
       <link>https://bigshans.github.io/tags/%E7%BD%91%E7%BB%9C/</link>
       <pubDate>Thu, 23 Feb 2023 10:46:04 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E7%BD%91%E7%BB%9C/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>破解</title>
       <link>https://bigshans.github.io/tags/%E7%A0%B4%E8%A7%A3/</link>
       <pubDate>Sat, 18 Feb 2023 09:26:22 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E7%A0%B4%E8%A7%A3/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Hugo</title>
       <link>https://bigshans.github.io/tags/hugo/</link>
       <pubDate>Fri, 17 Feb 2023 14:41:01 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/hugo/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>加密</title>
       <link>https://bigshans.github.io/tags/%E5%8A%A0%E5%AF%86/</link>
       <pubDate>Fri, 17 Feb 2023 14:41:01 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E5%8A%A0%E5%AF%86/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>开发总结</title>
       <link>https://bigshans.github.io/tags/%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/</link>
       <pubDate>Fri, 17 Feb 2023 14:41:01 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>CSS</title>
       <link>https://bigshans.github.io/tags/css/</link>
       <pubDate>Fri, 13 Jan 2023 09:27:13 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/css/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Vue</title>
       <link>https://bigshans.github.io/tags/vue/</link>
       <pubDate>Sun, 08 Jan 2023 13:37:21 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/vue/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>笔记</title>
       <link>https://bigshans.github.io/tags/%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Sun, 08 Jan 2023 13:37:21 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E7%AC%94%E8%AE%B0/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>HTTP 代理实现</title>
       <link>https://bigshans.github.io/tags/http-%E4%BB%A3%E7%90%86%E5%AE%9E%E7%8E%B0/</link>
       <pubDate>Mon, 12 Dec 2022 22:52:19 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/http-%E4%BB%A3%E7%90%86%E5%AE%9E%E7%8E%B0/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>诗</title>
       <link>https://bigshans.github.io/tags/%E8%AF%97/</link>
       <pubDate>Mon, 21 Nov 2022 10:12:06 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E8%AF%97/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Krunner</title>
       <link>https://bigshans.github.io/tags/krunner/</link>
       <pubDate>Sun, 13 Nov 2022 23:16:38 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/krunner/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>字体</title>
       <link>https://bigshans.github.io/tags/%E5%AD%97%E4%BD%93/</link>
       <pubDate>Sun, 13 Nov 2022 23:16:38 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E5%AD%97%E4%BD%93/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>PostgreSQL</title>
+      <title>Postgresql</title>
       <link>https://bigshans.github.io/tags/postgresql/</link>
       <pubDate>Thu, 29 Sep 2022 01:10:10 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/postgresql/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Konsole</title>
       <link>https://bigshans.github.io/tags/konsole/</link>
       <pubDate>Fri, 09 Sep 2022 14:54:41 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/konsole/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>AUR</title>
       <link>https://bigshans.github.io/tags/aur/</link>
       <pubDate>Fri, 09 Sep 2022 14:31:52 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/aur/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Masscode</title>
       <link>https://bigshans.github.io/tags/masscode/</link>
       <pubDate>Fri, 09 Sep 2022 14:31:52 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/masscode/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Firefox PWA</title>
       <link>https://bigshans.github.io/tags/firefox-pwa/</link>
       <pubDate>Sun, 04 Sep 2022 19:32:36 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/firefox-pwa/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Golang</title>
       <link>https://bigshans.github.io/tags/golang/</link>
       <pubDate>Thu, 18 Aug 2022 03:42:04 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/golang/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>userChrome</title>
+      <title>UserChrome</title>
       <link>https://bigshans.github.io/tags/userchrome/</link>
       <pubDate>Sun, 14 Aug 2022 17:56:49 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/userchrome/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Git</title>
       <link>https://bigshans.github.io/tags/git/</link>
       <pubDate>Fri, 05 Aug 2022 16:46:36 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/git/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Make</title>
       <link>https://bigshans.github.io/tags/make/</link>
       <pubDate>Fri, 05 Aug 2022 16:46:36 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/make/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Pacman</title>
       <link>https://bigshans.github.io/tags/pacman/</link>
       <pubDate>Fri, 05 Aug 2022 16:46:36 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/pacman/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>C</title>
       <link>https://bigshans.github.io/tags/c/</link>
       <pubDate>Sat, 30 Jul 2022 23:26:25 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/c/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>wine-for-wechat</title>
+      <title>Wine-for-Wechat</title>
       <link>https://bigshans.github.io/tags/wine-for-wechat/</link>
       <pubDate>Wed, 27 Jul 2022 14:05:02 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/wine-for-wechat/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>wine-wechat-setup</title>
+      <title>Wine-Wechat-Setup</title>
       <link>https://bigshans.github.io/tags/wine-wechat-setup/</link>
       <pubDate>Wed, 27 Jul 2022 14:05:02 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/wine-wechat-setup/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>敏捷开发</title>
       <link>https://bigshans.github.io/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</link>
       <pubDate>Thu, 07 Jul 2022 16:21:41 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Notion</title>
       <link>https://bigshans.github.io/tags/notion/</link>
       <pubDate>Sat, 02 Jul 2022 20:07:05 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/notion/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>实用主义</title>
       <link>https://bigshans.github.io/tags/%E5%AE%9E%E7%94%A8%E4%B8%BB%E4%B9%89/</link>
       <pubDate>Thu, 23 Jun 2022 21:29:23 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/tags/%E5%AE%9E%E7%94%A8%E4%B8%BB%E4%B9%89/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。 这里借助 Noto Emoji 来处理。 Arch 下安装 noto-fonts-emoji 包，然后将下面内容" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。
+这里借助 Noto Emoji 来处理。 Arch 下安装 noto-fonts-emoji 包，然后将下面内容保存到 ~/.config/fontconfig/conf.d/99-noto-mono-color-emoji.conf 中去。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/konsole-emoji-show/" />
@@ -46,19 +48,30 @@
 
 
 
-<meta property="og:title" content="解决在 Konsole 下的 Emoji 展示问题" />
-<meta property="og:description" content="解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。 这里借助 Noto Emoji 来处理。 Arch 下安装 noto-fonts-emoji 包，然后将下面内容" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/konsole-emoji-show/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-09-09T14:54:41+08:00" />
-<meta property="article:modified_time" content="2022-09-09T14:54:41+08:00" />
-<meta itemprop="name" content="解决在 Konsole 下的 Emoji 展示问题">
-<meta itemprop="description" content="解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。 这里借助 Noto Emoji 来处理。 Arch 下安装 noto-fonts-emoji 包，然后将下面内容"><meta itemprop="datePublished" content="2022-09-09T14:54:41+08:00" />
-<meta itemprop="dateModified" content="2022-09-09T14:54:41+08:00" />
-<meta itemprop="wordCount" content="204">
-<meta itemprop="keywords" content="Linux,Konsole," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="解决在 Konsole 下的 Emoji 展示问题"/>
-<meta name="twitter:description" content="解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。 这里借助 Noto Emoji 来处理。 Arch 下安装 noto-fonts-emoji 包，然后将下面内容"/>
+<meta property="og:url" content="https://bigshans.github.io/post/konsole-emoji-show/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="解决在 Konsole 下的 Emoji 展示问题">
+  <meta property="og:description" content="解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。
+这里借助 Noto Emoji 来处理。 Arch 下安装 noto-fonts-emoji 包，然后将下面内容保存到 ~/.config/fontconfig/conf.d/99-noto-mono-color-emoji.conf 中去。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-09-09T14:54:41+08:00">
+    <meta property="article:modified_time" content="2022-09-09T14:54:41+08:00">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Konsole">
+
+  <meta itemprop="name" content="解决在 Konsole 下的 Emoji 展示问题">
+  <meta itemprop="description" content="解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。
+这里借助 Noto Emoji 来处理。 Arch 下安装 noto-fonts-emoji 包，然后将下面内容保存到 ~/.config/fontconfig/conf.d/99-noto-mono-color-emoji.conf 中去。">
+  <meta itemprop="datePublished" content="2022-09-09T14:54:41+08:00">
+  <meta itemprop="dateModified" content="2022-09-09T14:54:41+08:00">
+  <meta itemprop="wordCount" content="204">
+  <meta itemprop="keywords" content="Linux,Konsole">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="解决在 Konsole 下的 Emoji 展示问题">
+  <meta name="twitter:description" content="解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。
+这里借助 Noto Emoji 来处理。 Arch 下安装 noto-fonts-emoji 包，然后将下面内容保存到 ~/.config/fontconfig/conf.d/99-noto-mono-color-emoji.conf 中去。">
 
 
 
@@ -281,7 +294,7 @@ Usage:
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

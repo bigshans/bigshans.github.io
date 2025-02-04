@@ -4,18 +4,17 @@
     <title>Masscode on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/masscode/</link>
     <description>Recent content in Masscode on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 09 Sep 2022 14:31:52 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/masscode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Sep 2022 14:31:52 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/masscode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>将 snap 打包成 AUR</title>
       <link>https://bigshans.github.io/post/package-snap-to-pkg/</link>
       <pubDate>Fri, 09 Sep 2022 14:31:52 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/package-snap-to-pkg/</guid>
-      <description>masscode 仅仅提供了 snap 包给 Linux 版，但我并不想使用 snap ，所以就想单独打包。由于 masscode 是 electron 应用，所以理论上只需要拿到 resources/app.asar 就万事大吉了。 snap 包实际上是一个 squashfs ，所以打包</description>
+      <description>&lt;p&gt;masscode 仅仅提供了 snap 包给 Linux 版，但我并不想使用 snap ，所以就想单独打包。由于 masscode 是 electron 应用，所以理论上只需要拿到 &lt;code&gt;resources/app.asar&lt;/code&gt; 就万事大吉了。&lt;/p&gt;&#xA;&lt;p&gt;snap 包实际上是一个 squashfs ，所以打包需要使用 squashfs-tools 。解包直接运行命令 &lt;code&gt;unsquashfs &amp;lt;snap-name&amp;gt;&lt;/code&gt; 即可，包的内容放在当前目录的 &lt;code&gt;squashfs-root&lt;/code&gt; 文件夹下。进入文件夹就会发现与一般的 electron 应用无异了。接着可以按照一般的 electron 应用打包。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -17,7 +17,8 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="大文件的读取与写入问题，一般使用流（stream）就可以很好的处理了。但大文件的问题并不单单是这样，如果仅仅是单纯的读取或写入，那么解决方案" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="大文件的读取与写入问题，一般使用流（stream）就可以很好的处理了。但大文件的问题并不单单是这样，如果仅仅是单纯的读取或写入，那么解决方案到此为止确实也就可以了。一旦涉及到读写组合，大文件问题并不是一个简单的读取与写入的问题，其问题的更广泛形式，是生产者和消费者问题。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/bigfile-problem-for-node/" />
@@ -46,19 +47,26 @@
 
 
 
-<meta property="og:title" content="NodeJs 上的大文件问题" />
-<meta property="og:description" content="大文件的读取与写入问题，一般使用流（stream）就可以很好的处理了。但大文件的问题并不单单是这样，如果仅仅是单纯的读取或写入，那么解决方案" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/bigfile-problem-for-node/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-08-07T20:42:17+08:00" />
-<meta property="article:modified_time" content="2022-08-07T20:42:17+08:00" />
-<meta itemprop="name" content="NodeJs 上的大文件问题">
-<meta itemprop="description" content="大文件的读取与写入问题，一般使用流（stream）就可以很好的处理了。但大文件的问题并不单单是这样，如果仅仅是单纯的读取或写入，那么解决方案"><meta itemprop="datePublished" content="2022-08-07T20:42:17+08:00" />
-<meta itemprop="dateModified" content="2022-08-07T20:42:17+08:00" />
-<meta itemprop="wordCount" content="1445">
-<meta itemprop="keywords" content="Node," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="NodeJs 上的大文件问题"/>
-<meta name="twitter:description" content="大文件的读取与写入问题，一般使用流（stream）就可以很好的处理了。但大文件的问题并不单单是这样，如果仅仅是单纯的读取或写入，那么解决方案"/>
+<meta property="og:url" content="https://bigshans.github.io/post/bigfile-problem-for-node/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="NodeJs 上的大文件问题">
+  <meta property="og:description" content="大文件的读取与写入问题，一般使用流（stream）就可以很好的处理了。但大文件的问题并不单单是这样，如果仅仅是单纯的读取或写入，那么解决方案到此为止确实也就可以了。一旦涉及到读写组合，大文件问题并不是一个简单的读取与写入的问题，其问题的更广泛形式，是生产者和消费者问题。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-08-07T20:42:17+08:00">
+    <meta property="article:modified_time" content="2022-08-07T20:42:17+08:00">
+    <meta property="article:tag" content="Node">
+
+  <meta itemprop="name" content="NodeJs 上的大文件问题">
+  <meta itemprop="description" content="大文件的读取与写入问题，一般使用流（stream）就可以很好的处理了。但大文件的问题并不单单是这样，如果仅仅是单纯的读取或写入，那么解决方案到此为止确实也就可以了。一旦涉及到读写组合，大文件问题并不是一个简单的读取与写入的问题，其问题的更广泛形式，是生产者和消费者问题。">
+  <meta itemprop="datePublished" content="2022-08-07T20:42:17+08:00">
+  <meta itemprop="dateModified" content="2022-08-07T20:42:17+08:00">
+  <meta itemprop="wordCount" content="1445">
+  <meta itemprop="keywords" content="Node">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="NodeJs 上的大文件问题">
+  <meta name="twitter:description" content="大文件的读取与写入问题，一般使用流（stream）就可以很好的处理了。但大文件的问题并不单单是这样，如果仅仅是单纯的读取或写入，那么解决方案到此为止确实也就可以了。一旦涉及到读写组合，大文件问题并不是一个简单的读取与写入的问题，其问题的更广泛形式，是生产者和消费者问题。">
 
 
 
@@ -454,7 +462,7 @@ write.on('close', () =&gt; {
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

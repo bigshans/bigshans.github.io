@@ -4,64 +4,52 @@
     <title>解决方案 on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
     <description>Recent content in 解决方案 on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 13 Nov 2022 23:16:38 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Nov 2022 23:16:38 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何放大 Krunner 的字体</title>
       <link>https://bigshans.github.io/post/how-to-increase-krunner-font/</link>
       <pubDate>Sun, 13 Nov 2022 23:16:38 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/how-to-increase-krunner-font/</guid>
-      <description>最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。 Krunner 的字体在 Plasma 下表现不错，但在 Xfce 下</description>
+      <description>&lt;p&gt;最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是&#xA;Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。&lt;/p&gt;&#xA;&lt;p&gt;Krunner 的字体在 Plasma 下表现不错，但在 Xfce&#xA;下显得过小。但改变系统字体似乎并不影响 Krunner&#xA;自己的字体，经过一番搜索，终于知道了要修改位于&#xA;&lt;code&gt;~/.config/krunnerrc&lt;/code&gt; 位置的文件。但在修改前要提前将 Krunner&#xA;退出，不然重启时会自动覆盖文件，使用如下命令：&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>解决在 Konsole 下的 Emoji 展示问题</title>
       <link>https://bigshans.github.io/post/konsole-emoji-show/</link>
       <pubDate>Fri, 09 Sep 2022 14:54:41 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/konsole-emoji-show/</guid>
-      <description>解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。 这里借助 Noto Emoji 来处理。 Arch 下安装 noto-fonts-emoji 包，然后将下面内容</description>
+      <description>&lt;p&gt;解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。&lt;/p&gt;&#xA;&lt;p&gt;这里借助 Noto Emoji 来处理。 Arch 下安装 &lt;code&gt;noto-fonts-emoji&lt;/code&gt; 包，然后将下面内容保存到 &lt;code&gt;~/.config/fontconfig/conf.d/99-noto-mono-color-emoji.conf&lt;/code&gt; 中去。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>远程连接 Windows 开发的诸多尝试</title>
       <link>https://bigshans.github.io/post/remote-windows/</link>
       <pubDate>Sun, 12 Sep 2021 22:04:52 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/remote-windows/</guid>
-      <description>由于最近要用到 uniapp 进行开发，但是，由于项目不是 CLI 项目，所以最终还是要用到 HBuilderX 进行开发，然而，它没有 Linux 版 Orz 。不过好在公司给了我一台 Windows 电脑，所以我就</description>
+      <description>&lt;p&gt;由于最近要用到 uniapp 进行开发，但是，由于项目不是 CLI 项目，所以最终还是要用到 HBuilderX 进行开发，然而，它没有 Linux 版 Orz 。不过好在公司给了我一台 Windows 电脑，所以我就想着，能不能远程连接 Windows 进行开发，因为我实在不想两台电脑换来换去。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>在 root 下去除 MIUI 锁屏密码</title>
       <link>https://bigshans.github.io/post/unlock-screen-sercet/</link>
       <pubDate>Tue, 27 Apr 2021 20:20:24 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/unlock-screen-sercet/</guid>
-      <description>因为 root 手机忘了锁屏密码，所以想要破解掉。因为手机已经提前 root 了，我本以为这个问题只需要搜一下就可以了，然而搜索的结果却让我大跌眼镜。使用 adb 删除</description>
+      <description>&lt;p&gt;因为 root 手机忘了锁屏密码，所以想要破解掉。因为手机已经提前 root 了，我本以为这个问题只需要搜一下就可以了，然而搜索的结果却让我大跌眼镜。使用 adb 删除 password.key 或者 gesture.key ，问题是根本没有这几个文件！我把几个 key 文件删了根本没有效果，然后我仔细研究了一下在 /data/system 下的文件，发现有几个名为 locksetting 的 db 文件，怀疑这个才是真正的屏幕锁文件，因为这几个文件看着像是 Sqlite 数据库。于是在 recovery 模式下我删除了这几个文件，重启之后，锁屏密码就去掉了。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>网易云音乐 for linux 不用 root 打开</title>
       <link>https://bigshans.github.io/post/software-netease-linux/</link>
       <pubDate>Wed, 29 Aug 2018 16:42:55 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/software-netease-linux/</guid>
-      <description>&lt;p&gt;从知乎上看到这个，非常感谢 Fancy 的努力。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/277330447/answer/478510195&#34;&gt;点击此处前往&lt;/a&gt;。&lt;/p&gt;</description>
+      <description>&lt;p&gt;从知乎上看到这个，非常感谢 Fancy 的努力。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/277330447/answer/478510195&#34;&gt;点击此处前往&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>将 router 的 js 混成一个</title>
       <link>https://bigshans.github.io/post/net-musicvue-problem-set2/</link>
       <pubDate>Mon, 27 Aug 2018 17:53:56 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/net-musicvue-problem-set2/</guid>
       <description>&lt;p&gt;NeteaseCloudMusicApi 得重构，首先得把 router 目录下的一大堆给归拢为一个 js 方便 exports 。然而下面有九十多个文件，所以一个个复制粘贴是不现实的，更何况未来这些文件有改动，于上游一 merge ，这代码得改得老痛苦了。所以决定自己写一个小工具解决这个问题。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

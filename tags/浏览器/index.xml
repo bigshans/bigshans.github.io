@@ -4,18 +4,17 @@
     <title>浏览器 on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/</link>
     <description>Recent content in 浏览器 on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 17 May 2022 10:46:28 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 May 2022 10:46:28 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>《事件捕获与事件冒泡》补遗</title>
       <link>https://bigshans.github.io/post/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/</link>
       <pubDate>Tue, 17 May 2022 10:46:28 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/</guid>
-      <description>阅读的文章是关于事件捕获与事件冒泡先后执行顺序 ，写得挺好的，就是我读的时候漏了一点。 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width&amp;quot;&amp;gt; &amp;lt;title&amp;gt;DOM 冒泡&amp;lt;/title&amp;gt; &amp;lt;style type=&amp;quot;text/css&amp;quot;</description>
+      <description>&lt;p&gt;阅读的文章是&lt;a href=&#34;https://juejin.cn/post/6931631885135118350&#34;&gt;关于事件捕获与事件冒泡先后执行顺序 &lt;/a&gt; ，写得挺好的，就是我读的时候漏了一点。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&#xA;&amp;lt;html&amp;gt;&#xA;  &amp;lt;head&amp;gt;&#xA;    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;&#xA;    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width&amp;quot;&amp;gt;&#xA;    &amp;lt;title&amp;gt;DOM 冒泡&amp;lt;/title&amp;gt;&#xA;    &amp;lt;style type=&amp;quot;text/css&amp;quot; media=&amp;quot;all&amp;quot;&amp;gt;&#xA;#parent {&#xA;  height: 100px;&#xA;  width: 100%;&#xA;  background: green;&#xA;}&#xA;        #child {&#xA;          height: 50px;&#xA;          width: 50%;&#xA;          background: yellow;&#xA;        }&#xA;        #button {&#xA;          height: 30px;&#xA;          width: 10%;&#xA;          background: white;&#xA;        }&#xA;    &amp;lt;/style&amp;gt;&#xA;  &amp;lt;/head&amp;gt;&#xA;  &amp;lt;body&amp;gt;&#xA;    &amp;lt;div id=&amp;quot;parent&amp;quot;&amp;gt;&#xA;      &amp;lt;div id=&amp;quot;child&amp;quot;&amp;gt;&#xA;      &amp;lt;div id=&amp;quot;button&amp;quot;&amp;gt;按钮&amp;lt;/div&amp;gt;&#xA;      &amp;lt;/div&amp;gt;&#xA;    &amp;lt;/div&amp;gt;&#xA;    &amp;lt;script&amp;gt;&#xA;      window.onload = function() {&#xA;        const qId = (name) =&amp;gt; document.getElementById(name);&#xA;        const qTg = (name) =&amp;gt; document.getElementsByTagName(name)[0];&#xA;        const parent = qId(&#39;parent&#39;);&#xA;        const child = qId(&#39;child&#39;);&#xA;        const button = qId(&#39;button&#39;);&#xA;&#xA;        parent.addEventListener(&#39;click&#39;, () =&amp;gt; console.log(&#39;parent click 事件&#39;), true);&#xA;        child.addEventListener(&#39;click&#39;, () =&amp;gt; console.log(&#39;child click 事件&#39;), true);&#xA;        button.onclick = () =&amp;gt; console.log(&#39;button click 冒泡&#39;);&#xA;        button.addEventListener(&#39;click&#39;, () =&amp;gt; console.log(&#39;button click 事件&#39;), true);&#xA;&#xA;        parent.onclick = () =&amp;gt; console.log(&#39;parent click 冒泡&#39;);&#xA;        child.onclick = () =&amp;gt; console.log(&#39;child click 冒泡&#39;);&#xA;      }&#xA;    &amp;lt;/script&amp;gt;&#xA;  &amp;lt;/body&amp;gt;&#xA;&amp;lt;/html&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;首先结论是对的。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

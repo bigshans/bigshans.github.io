@@ -4,18 +4,17 @@
     <title>Anbox on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/anbox/</link>
     <description>Recent content in Anbox on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sat, 24 Jul 2021 10:47:29 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/anbox/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Jul 2021 10:47:29 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/anbox/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>安装 Anbox for Arch</title>
       <link>https://bigshans.github.io/post/anbox-install-guide/</link>
       <pubDate>Sat, 24 Jul 2021 10:47:29 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/anbox-install-guide/</guid>
-      <description>台风天写这篇文章。 最近更新了 Linux 的内核，然后日常发布合并，日常逛 Issues 的时候，发现有人提出要 Anbox 的需求。Anbox 我试着安装过几次，然后每次装上都因</description>
+      <description>&lt;p&gt;台风天写这篇文章。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;最近更新了 Linux 的内核，然后日常发布合并，日常逛 Issues 的时候，发现有人提出要 Anbox 的需求。Anbox 我试着安装过几次，然后每次装上都因为各种问题而失败。然后这次我就想顺便把它成功装上。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -4,111 +4,87 @@
     <title>Python on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/python/</link>
     <description>Recent content in Python on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Mon, 08 Nov 2021 15:16:47 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Nov 2021 15:16:47 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>纯 numpy 实现 KNN</title>
       <link>https://bigshans.github.io/post/numpy-knn/</link>
       <pubDate>Mon, 08 Nov 2021 15:16:47 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/numpy-knn/</guid>
-      <description>首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的</description>
+      <description>&lt;p&gt;首先，感谢知乎文章 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/59755939&#34;&gt;https://zhuanlan.zhihu.com/p/59755939&lt;/a&gt; 提供了&lt;strong&gt;纯 numpy&lt;/strong&gt; 的写法，我这个也基本上是抄他的。&lt;/p&gt;&#xA;&lt;p&gt;kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的 kNN ， kNN 的缺点还是比较大的，在有更好算法的前提下我们并不用它。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>numpy 基础</title>
       <link>https://bigshans.github.io/post/numpy-basic/</link>
       <pubDate>Fri, 22 Oct 2021 16:12:26 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/numpy-basic/</guid>
-      <description>numpy 几乎可以说是 python 矩阵计算的基础库了，众多大数据处理框架都引用了它。因此，如果我们有意向大数据前进，我们必不可不面对它。 预备前提 如果你想要学习</description>
+      <description>&lt;p&gt;numpy 几乎可以说是 python 矩阵计算的基础库了，众多大数据处理框架都引用了它。因此，如果我们有意向大数据前进，我们必不可不面对它。&lt;/p&gt;&#xA;&lt;h2 id=&#34;预备前提&#34;&gt;预备前提&lt;/h2&gt;&#xA;&lt;p&gt;如果你想要学习 numpy ，你至少需要具备以下基础：&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Tensorflow 入门之数学基础</title>
       <link>https://bigshans.github.io/post/tensorflow-tutorial-math-basis/</link>
       <pubDate>Mon, 18 Oct 2021 16:06:11 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/tensorflow-tutorial-math-basis/</guid>
-      <description>数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。本篇以 d2l 第二版所提供的数学知识作为阅读内容进行学习。换而言之，本篇是 d2l 的读书笔记。我</description>
+      <description>&lt;p&gt;数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。本篇以 d2l&#xA;第二版所提供的数学知识作为阅读内容进行学习。换而言之，本篇是 d2l&#xA;的读书笔记。我尽量把我能弄懂弄清楚，所以，开始吧！&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Flask 入门项目 Flaskr（二）</title>
       <link>https://bigshans.github.io/post/python-flask-flaskr-2/</link>
       <pubDate>Fri, 07 Dec 2018 20:47:45 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/python-flask-flaskr-2/</guid>
       <description>&lt;p&gt;今天身体不太舒服，感冒了。不过还是照着官网大概打了一下。这个项目的主体是完成了，改天写写测试。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Flask 入门项目 Flaskr（一）</title>
       <link>https://bigshans.github.io/post/python-flask-flaskr/</link>
       <pubDate>Thu, 06 Dec 2018 20:31:55 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/python-flask-flaskr/</guid>
       <description>&lt;p&gt;昨天看了看 flask ，感觉很有意思，于是上官网看看文档，文档的 quickly started 很精简，讲述了基本用法。在 1.0.2 的文档下有一个小项目，很适合拿来练手。于是尝试跟着写了一下。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>python3 在不同目录下 import 其他py 文件</title>
       <link>https://bigshans.github.io/post/python-import/</link>
       <pubDate>Fri, 26 Oct 2018 21:15:40 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/python-import/</guid>
-      <description>&lt;p&gt;python 的 import 机制实在是太弱。。&lt;/p&gt;
-&lt;p&gt;今天我将不同目录下的 python 文件导入，试了半天快要吐血，虽然说最后解决了，但是我还是要说真的是 shit 啊！&lt;/p&gt;</description>
+      <description>&lt;p&gt;python 的 import 机制实在是太弱。。&lt;/p&gt;&#xA;&lt;p&gt;今天我将不同目录下的 python 文件导入，试了半天快要吐血，虽然说最后解决了，但是我还是要说真的是 shit 啊！&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>python3 下使用 base64</title>
       <link>https://bigshans.github.io/post/python-base64/</link>
       <pubDate>Wed, 17 Oct 2018 17:23:44 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/python-base64/</guid>
-      <description>用自带库 base64 。 import base64 encode = base64.b64encode(b&#39;i love python&#39;) # 加密 print(str(encode, &#39;utf-8&#39;)) # aSBsb3ZlIHB5dGhvbg== encode = base64.b64decode(b&#39;aSBsb3ZlIHB5dGhvbg==&#39;) print(encode) #解密</description>
+      <description>&lt;p&gt;用自带库 base64 。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import base64&#xA;encode = base64.b64encode(b&#39;i love python&#39;) # 加密&#xA;print(str(encode, &#39;utf-8&#39;)) # aSBsb3ZlIHB5dGhvbg==&#xA;encode = base64.b64decode(b&#39;aSBsb3ZlIHB5dGhvbg==&#39;)&#xA;print(encode) #解密&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
     <item>
       <title>python 爬虫获取 bilibili 封面</title>
       <link>https://bigshans.github.io/post/python-bilibili-cover/</link>
       <pubDate>Wed, 29 Aug 2018 17:01:17 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/python-bilibili-cover/</guid>
-      <description>&lt;p&gt;以前写的一个脚本，获取 B 站视频封面的脚本，使用了 urllib 来爬虫，用 feh 来打开图片。&lt;/p&gt;
-&lt;p&gt;以下是代码：&lt;/p&gt;</description>
+      <description>&lt;p&gt;以前写的一个脚本，获取 B 站视频封面的脚本，使用了 urllib 来爬虫，用 feh 来打开图片。&lt;/p&gt;&#xA;&lt;p&gt;以下是代码：&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>python 实现尾递归斐波那契数列</title>
       <link>https://bigshans.github.io/post/python-learn/</link>
       <pubDate>Tue, 28 Aug 2018 16:30:17 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/python-learn/</guid>
-      <description>&lt;p&gt;看了一下 &lt;a href=&#34;https://pythoncaff.com/docs/byte-of-python/2018&#34;&gt;《 Python 简明教程》&lt;/a&gt;，发现了一个很有意思的项目，它推荐了这个&lt;a href=&#34;https://github.com/karan/Projects&#34;&gt;项目&lt;/a&gt;来练手。这个项目是一份列表，关于用任何语言都可以实现的程序的项目。有兴趣可以实现一下。&lt;/p&gt;
-&lt;p&gt;我在这里写一下简单的斐波那契数列。&lt;/p&gt;</description>
+      <description>&lt;p&gt;看了一下 &lt;a href=&#34;https://pythoncaff.com/docs/byte-of-python/2018&#34;&gt;《 Python 简明教程》&lt;/a&gt;，发现了一个很有意思的项目，它推荐了这个&lt;a href=&#34;https://github.com/karan/Projects&#34;&gt;项目&lt;/a&gt;来练手。这个项目是一份列表，关于用任何语言都可以实现的程序的项目。有兴趣可以实现一下。&lt;/p&gt;&#xA;&lt;p&gt;我在这里写一下简单的斐波那契数列。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>python 备忘录（一）</title>
       <link>https://bigshans.github.io/post/python-bak-1/</link>
       <pubDate>Mon, 27 Aug 2018 18:17:48 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/python-bak-1/</guid>
       <description>&lt;p&gt;这些篇主要是记录 python 的一些知识，有些可能很基础，不过我总是忘记，以此备忘。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>将 router 的 js 混成一个</title>
       <link>https://bigshans.github.io/post/net-musicvue-problem-set2/</link>
       <pubDate>Mon, 27 Aug 2018 17:53:56 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/net-musicvue-problem-set2/</guid>
       <description>&lt;p&gt;NeteaseCloudMusicApi 得重构，首先得把 router 目录下的一大堆给归拢为一个 js 方便 exports 。然而下面有九十多个文件，所以一个个复制粘贴是不现实的，更何况未来这些文件有改动，于上游一 merge ，这代码得改得老痛苦了。所以决定自己写一个小工具解决这个问题。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

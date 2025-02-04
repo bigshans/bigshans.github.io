@@ -4,18 +4,17 @@
     <title>重装 Arch on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/%E9%87%8D%E8%A3%85-arch/</link>
     <description>Recent content in 重装 Arch on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 26 Feb 2023 14:01:31 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E9%87%8D%E8%A3%85-arch/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Feb 2023 14:01:31 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/%E9%87%8D%E8%A3%85-arch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>重装 arch</title>
       <link>https://bigshans.github.io/post/%E9%87%8D%E8%A3%85arch/</link>
       <pubDate>Sun, 26 Feb 2023 14:01:31 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/%E9%87%8D%E8%A3%85arch/</guid>
-      <description>昨天 KDE 不知道什么原因滚挂了，于是我决定重装系统。最近 KDE 在我的机子上经常崩溃，我也不想修了，因为真的修不起来。距离上一次重装不知道什么时候了，</description>
+      <description>&lt;p&gt;昨天 KDE 不知道什么原因滚挂了，于是我决定重装系统。最近 KDE&#xA;在我的机子上经常崩溃，我也不想修了，因为真的修不起来。距离上一次重装不知道什么时候了，但&#xA;Arch 的稳定程度其实是可以的，只要你不是故意去 Arch Testing 。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

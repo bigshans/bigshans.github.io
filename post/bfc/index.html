@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="BFC 指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC 即定义了块元素的格式上下文。 默认情况下，&amp;lt;ht" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="BFC 指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC 即定义了块元素的格式上下文。
+默认情况下，&lt;html&gt; 为块格式上下文。块元素的子元素将按块排布，或者按行排布，如果出现混合排布的情况，则会将内联元素用匿名块包裹起来，然后按块排布。同时，匿名块不能被 CSS 指定，不受 CSS 样式影响。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/bfc/" />
@@ -46,19 +48,29 @@
 
 
 
-<meta property="og:title" content="BFC 简述" />
-<meta property="og:description" content="BFC 指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC 即定义了块元素的格式上下文。 默认情况下，&lt;ht" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/bfc/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-08-06T19:09:10+08:00" />
-<meta property="article:modified_time" content="2023-08-06T19:09:10+08:00" />
-<meta itemprop="name" content="BFC 简述">
-<meta itemprop="description" content="BFC 指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC 即定义了块元素的格式上下文。 默认情况下，&lt;ht"><meta itemprop="datePublished" content="2023-08-06T19:09:10+08:00" />
-<meta itemprop="dateModified" content="2023-08-06T19:09:10+08:00" />
-<meta itemprop="wordCount" content="328">
-<meta itemprop="keywords" content="前端," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="BFC 简述"/>
-<meta name="twitter:description" content="BFC 指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC 即定义了块元素的格式上下文。 默认情况下，&lt;ht"/>
+<meta property="og:url" content="https://bigshans.github.io/post/bfc/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="BFC 简述">
+  <meta property="og:description" content="BFC 指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC 即定义了块元素的格式上下文。
+默认情况下，&lt;html&gt; 为块格式上下文。块元素的子元素将按块排布，或者按行排布，如果出现混合排布的情况，则会将内联元素用匿名块包裹起来，然后按块排布。同时，匿名块不能被 CSS 指定，不受 CSS 样式影响。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-08-06T19:09:10+08:00">
+    <meta property="article:modified_time" content="2023-08-06T19:09:10+08:00">
+    <meta property="article:tag" content="前端">
+
+  <meta itemprop="name" content="BFC 简述">
+  <meta itemprop="description" content="BFC 指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC 即定义了块元素的格式上下文。
+默认情况下，&lt;html&gt; 为块格式上下文。块元素的子元素将按块排布，或者按行排布，如果出现混合排布的情况，则会将内联元素用匿名块包裹起来，然后按块排布。同时，匿名块不能被 CSS 指定，不受 CSS 样式影响。">
+  <meta itemprop="datePublished" content="2023-08-06T19:09:10+08:00">
+  <meta itemprop="dateModified" content="2023-08-06T19:09:10+08:00">
+  <meta itemprop="wordCount" content="328">
+  <meta itemprop="keywords" content="前端">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BFC 简述">
+  <meta name="twitter:description" content="BFC 指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC 即定义了块元素的格式上下文。
+默认情况下，&lt;html&gt; 为块格式上下文。块元素的子元素将按块排布，或者按行排布，如果出现混合排布的情况，则会将内联元素用匿名块包裹起来，然后按块排布。同时，匿名块不能被 CSS 指定，不受 CSS 样式影响。">
 
 
 
@@ -196,12 +208,11 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents"></nav></div>
+  <div class="post-toc-content"></div>
 </div>
 
     <div class="post-content">
-      
-<p>BFC
+      <p>BFC
 指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC
 即定义了块元素的格式上下文。</p>
 <p>默认情况下，<code>&lt;html&gt;</code>
@@ -224,8 +235,6 @@ CSS 指定，不受 CSS 样式影响。</p>
 <p>我们一般通过给父元素添加 CSS 来创建 BFC
 来清除浮动。虽然子元素是独立的 BFC ，但父元素也是独立 BFC ，同样属于独立
 BFC 的情况下，就按父子元素的原则正常包含了。</p>
-
-
 
     </div>
 
@@ -281,7 +290,7 @@ BFC 的情况下，就按父子元素的原则正常包含了。</p>
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

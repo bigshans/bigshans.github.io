@@ -17,7 +17,8 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="类型体操如果不是写库的话，基本上是屠龙技。 TypeScript 的类型系统本质上是一个小函数式语言，通过类型体操能够更清晰的感受到这一点。不过 TypeScript 类型系统有限制，" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="类型体操如果不是写库的话，基本上是屠龙技。 TypeScript 的类型系统本质上是一个小函数式语言，通过类型体操能够更清晰的感受到这一点。不过 TypeScript 类型系统有限制，并不能跟真正的函数式相媲美。但我们仍然可以写一个斐波那契数列小试牛刀。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/type-gymnastics-for-typescript/" />
@@ -46,19 +47,27 @@
 
 
 
-<meta property="og:title" content="TypeScript 类型体操之斐波那契" />
-<meta property="og:description" content="类型体操如果不是写库的话，基本上是屠龙技。 TypeScript 的类型系统本质上是一个小函数式语言，通过类型体操能够更清晰的感受到这一点。不过 TypeScript 类型系统有限制，" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/type-gymnastics-for-typescript/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-12-17T15:26:50+08:00" />
-<meta property="article:modified_time" content="2021-12-17T15:26:50+08:00" />
-<meta itemprop="name" content="TypeScript 类型体操之斐波那契">
-<meta itemprop="description" content="类型体操如果不是写库的话，基本上是屠龙技。 TypeScript 的类型系统本质上是一个小函数式语言，通过类型体操能够更清晰的感受到这一点。不过 TypeScript 类型系统有限制，"><meta itemprop="datePublished" content="2021-12-17T15:26:50+08:00" />
-<meta itemprop="dateModified" content="2021-12-17T15:26:50+08:00" />
-<meta itemprop="wordCount" content="801">
-<meta itemprop="keywords" content="Typescript,元编程," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="TypeScript 类型体操之斐波那契"/>
-<meta name="twitter:description" content="类型体操如果不是写库的话，基本上是屠龙技。 TypeScript 的类型系统本质上是一个小函数式语言，通过类型体操能够更清晰的感受到这一点。不过 TypeScript 类型系统有限制，"/>
+<meta property="og:url" content="https://bigshans.github.io/post/type-gymnastics-for-typescript/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="TypeScript 类型体操之斐波那契">
+  <meta property="og:description" content="类型体操如果不是写库的话，基本上是屠龙技。 TypeScript 的类型系统本质上是一个小函数式语言，通过类型体操能够更清晰的感受到这一点。不过 TypeScript 类型系统有限制，并不能跟真正的函数式相媲美。但我们仍然可以写一个斐波那契数列小试牛刀。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-12-17T15:26:50+08:00">
+    <meta property="article:modified_time" content="2021-12-17T15:26:50+08:00">
+    <meta property="article:tag" content="TypeScript">
+    <meta property="article:tag" content="元编程">
+
+  <meta itemprop="name" content="TypeScript 类型体操之斐波那契">
+  <meta itemprop="description" content="类型体操如果不是写库的话，基本上是屠龙技。 TypeScript 的类型系统本质上是一个小函数式语言，通过类型体操能够更清晰的感受到这一点。不过 TypeScript 类型系统有限制，并不能跟真正的函数式相媲美。但我们仍然可以写一个斐波那契数列小试牛刀。">
+  <meta itemprop="datePublished" content="2021-12-17T15:26:50+08:00">
+  <meta itemprop="dateModified" content="2021-12-17T15:26:50+08:00">
+  <meta itemprop="wordCount" content="801">
+  <meta itemprop="keywords" content="TypeScript,元编程">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TypeScript 类型体操之斐波那契">
+  <meta name="twitter:description" content="类型体操如果不是写库的话，基本上是屠龙技。 TypeScript 的类型系统本质上是一个小函数式语言，通过类型体操能够更清晰的感受到这一点。不过 TypeScript 类型系统有限制，并不能跟真正的函数式相媲美。但我们仍然可以写一个斐波那契数列小试牛刀。">
 
 
 
@@ -345,7 +354,7 @@ type T = Gt&lt;ToNum&lt;0&gt;, ToNum&lt;3&gt;&gt;;
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

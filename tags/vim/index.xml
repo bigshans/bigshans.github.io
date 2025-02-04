@@ -1,76 +1,62 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vim on Bigshans&#39; Blog</title>
+    <title>Vim on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/vim/</link>
-    <description>Recent content in vim on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Vim on Bigshans&#39; Blog</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 16 Feb 2024 10:16:38 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Mar 2024 15:33:27 +0000</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 coc 配置 @delance/runtime</title>
       <link>https://bigshans.github.io/post/coc-delance/</link>
       <pubDate>Fri, 16 Feb 2024 10:16:38 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/coc-delance/</guid>
-      <description>首先需要安装 delance-langserver。 npm install @delance/runtime 安装完成，第一次使用时报错，通过阅读源码发现是因为第一次安装需要连接网络。由于需要翻</description>
+      <description>&lt;p&gt;首先需要安装 &lt;code&gt;delance-langserver&lt;/code&gt;。&lt;/p&gt;&#xA;&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;npm install @delance/runtime&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;安装完成，第一次使用时报错，通过阅读源码发现是因为第一次安装需要连接网络。由于需要翻墙，所以加个代理即可。直接运行&#xA;&lt;code&gt;delance-langserver --sdtio&lt;/code&gt;&#xA;就会自动去下载内容，然后就会正常运行。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>可能 lua 不是配置 nvim 的最佳解决方案</title>
       <link>https://bigshans.github.io/post/maybe-lua-is-not-the-solution/</link>
       <pubDate>Mon, 04 Apr 2022 21:55:06 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/maybe-lua-is-not-the-solution/</guid>
-      <description>这几天折腾 nvim ，折腾的过程中也发现各个插件可能并不一定如我意，于是我就修改一部分插件并 fork 为己所用。不知不觉过去好久了，我积累下来的好多配置，以</description>
+      <description>&lt;p&gt;这几天折腾 nvim ，折腾的过程中也发现各个插件可能并不一定如我意，于是我就修改一部分插件并 fork 为己所用。不知不觉过去好久了，我积累下来的好多配置，以及好多插件都需要更换了，一些是无人维护了，一些是不兼容了。除此之外，还有另外一件事情，要不要用 lua 替换我原来 vimScript 的配置？&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>修复 coc.nvim 和 indentLines 的冲突</title>
       <link>https://bigshans.github.io/post/fixed-conflicts-between-coc-and-indentline/</link>
       <pubDate>Wed, 23 Feb 2022 16:47:18 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/fixed-conflicts-between-coc-and-indentline/</guid>
-      <description>我用的是 indentLines 是 Yggdrot/indentLine ，与 coc.nvim 存在冲突，主要是诊断的高亮覆盖了 indentLine 的高亮导致 indentLine 无法显示。当然，并不是所有的 buffer 里都会这样，但是需要诊断的 FileType 都是这样。 使用的</description>
+      <description>&lt;p&gt;我用的是 indentLines 是 &lt;a href=&#34;https://github.com/Yggdroot/indentLine&#34;&gt;Yggdrot/indentLine&lt;/a&gt; ，与 &lt;a href=&#34;https://github.com/Yggdroot/neoclide/coc.nvim&#34;&gt;coc.nvim&lt;/a&gt; 存在冲突，主要是诊断的高亮覆盖了 indentLine 的高亮导致 indentLine 无法显示。当然，并不是所有的 buffer 里都会这样，但是需要诊断的 FileType 都是这样。&lt;/p&gt;&#xA;&lt;p&gt;使用的时候我发现在启动后再运行 &lt;code&gt;IndentLinesEnable&lt;/code&gt; 代码仍然生效，说明是可以再覆盖的。于是我就想到了一个 workaround ，只要在所有文件打开后再运行 &lt;code&gt;IndentLinesEnable&lt;/code&gt; 就没有问题。经过几次修改，代码如下：&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>coc-kite-cmp 发布</title>
       <link>https://bigshans.github.io/post/coc-kite-cmp-publish/</link>
       <pubDate>Sun, 23 Jan 2022 19:10:42 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/coc-kite-cmp-publish/</guid>
-      <description>最近在尝试 AI complete ，主要是 TabNine 和 Kite ，两者可以基于本地代码作出较好的智能推测。在 VSCode 上，两者都有对应的插件，但在 Vim 上时，情况就不同了。我使用的是 coc.nvim ，作</description>
+      <description>&lt;p&gt;最近在尝试 AI complete ，主要是 TabNine 和 Kite ，两者可以基于本地代码作出较好的智能推测。在 VSCode 上，两者都有对应的插件，但在 Vim 上时，情况就不同了。我使用的是 coc.nvim ，作为我的补全框架， TabNine 有 coc-tabnine ，但 Kite 的 coc-kite 与 VSCode 上的不一致。于是我决定手动解决这个问题。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>在 vim 下修改自然码码表</title>
       <link>https://bigshans.github.io/post/vim-rime/</link>
       <pubDate>Thu, 31 Jan 2019 11:27:53 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/vim-rime/</guid>
-      <description>最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添</description>
+      <description>&lt;p&gt;最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添加一些字，所以我决定换用别的输入法。 fcitx-sunpinyin 可以添加用户词典，但添加新的单词的时候会严重卡顿，而且打某些字的时候也会卡顿，体验极其糟糕，所以我决定尝试一下 fcitx-rime 。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>写一个 vim 窗口跳转</title>
       <link>https://bigshans.github.io/post/vimscript-windowscmd/</link>
       <pubDate>Thu, 17 Jan 2019 21:37:36 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/vimscript-windowscmd/</guid>
       <description>&lt;p&gt;spacemacs 的 which-key 可以实现 &lt;leader&gt; &lt;number&gt; 选择对应窗口，这个功能在 spacevim 上面都有，我挺喜欢的，不过不知道怎么实现的。之前我安装了 space-vim 项目的 vim-which-key 插件，根据 vim-leader-guide 改的，跟 which-key 很像，可以拿来用了。于是我这几天将我原来的 vim 配置做了一个大幅度的调整，并把这个功能给实现了。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>vim 学习笔记（一）</title>
       <link>https://bigshans.github.io/post/vim-learn-textobject/</link>
       <pubDate>Thu, 30 Aug 2018 20:43:19 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/vim-learn-textobject/</guid>
-      <description>&lt;p&gt;vim 的文本对象是个很有趣的东西，使用它可以大幅提升效率，因此学习它还是很有必要的，如果想要在 vim 上进一步提高自己就必须学习这个。&lt;/p&gt;
-&lt;h2 id=&#34;a-和-i&#34;&gt;a 和 i&lt;/h2&gt;</description>
+      <description>&lt;p&gt;vim 的文本对象是个很有趣的东西，使用它可以大幅提升效率，因此学习它还是很有必要的，如果想要在 vim 上进一步提高自己就必须学习这个。&lt;/p&gt;&#xA;&lt;h2 id=&#34;a-和-i&#34;&gt;a 和 i&lt;/h2&gt;</description>
     </item>
-    
   </channel>
 </rss>

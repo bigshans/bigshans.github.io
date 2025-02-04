@@ -4,27 +4,24 @@
     <title>Linux Desktop on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/linux-desktop/</link>
     <description>Recent content in Linux Desktop on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 11 Apr 2021 18:18:57 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/linux-desktop/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Apr 2021 18:18:57 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/linux-desktop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>为什么选择 Linux 桌面</title>
       <link>https://bigshans.github.io/post/why-choose-linux-desktop/</link>
       <pubDate>Sun, 11 Apr 2021 18:18:57 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/why-choose-linux-desktop/</guid>
-      <description>今天算是创作欲爆棚了，想到了一点东西就又写一点。今天来探讨一下这个话题，为什么选择 Linux 桌面。 为什么选择 Linux 市面上日用消费者最多的操作系统，主要是</description>
+      <description>&lt;p&gt;今天算是创作欲爆棚了，想到了一点东西就又写一点。今天来探讨一下这个话题，为什么选择 Linux 桌面。&lt;/p&gt;&#xA;&lt;h2 id=&#34;为什么选择-linux&#34;&gt;为什么选择 Linux&lt;/h2&gt;&#xA;&lt;p&gt;市面上日用消费者最多的操作系统，主要是 Windows 和 MacOS ，你要把 Android 、 iOS 拉进来比也不是不可以，但是这里至少 GNU/Linux 不是主流。注意，这里我们说的 Linux 主要是 GNU/Linux ，我们指代最广的也是它。所以，我们为什么要用 Linux 呢？这就要看 Linux 与其它操作系统一个最重要的区别—— Libre 。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>linux 桌面简单体验（一） ———— 关于 linux desktop 使用的总结</title>
       <link>https://bigshans.github.io/post/linux-desktop/</link>
       <pubDate>Sun, 26 Aug 2018 17:34:37 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/linux-desktop/</guid>
       <description>&lt;p&gt;一直想写一个个人关于 linux desktop 的文章，算是个人在 linux 桌面上体验的总结。主要是 gnome 3 、 DDE 、KDE 、 i3wm 、 xfce4 、 cinnamon 等。陆续会写一下我在这些桌面上体验的一些总结，希望内给予你们一些帮助。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

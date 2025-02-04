@@ -4,56 +4,45 @@
     <title>Nginx on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/nginx/</link>
     <description>Recent content in Nginx on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Tue, 30 Nov 2021 14:04:23 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Nov 2021 14:04:23 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nginx 按路由分流请求</title>
       <link>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</link>
       <pubDate>Tue, 30 Nov 2021 14:04:23 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/nginx-route-to-different-items-by-address/</guid>
-      <description>一个很恶心的需求，到部署最后部署的时候才发现问题很大，但只好死马当活马医了。 我们目前搞了两个项目，其中一个项目是传统 Vue 项目，另一个是 Angular SSR ，刚</description>
+      <description>&lt;p&gt;一个很恶心的需求，到部署最后部署的时候才发现问题很大，但只好死马当活马医了。&lt;/p&gt;&#xA;&lt;p&gt;我们目前搞了两个项目，其中一个项目是传统 Vue 项目，另一个是 Angular SSR ，刚开始的时候，我们设想两个项目会由 Nginx 根据路由进行分流请求到不同项目，这样我们就可以不用将全部项目改造为 SSR 。设想很美好，但是我们漏考虑了一个点，我接下来就会说。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>如何使用 Webhook 来实现自动部署项目</title>
       <link>https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/</link>
       <pubDate>Sun, 15 Nov 2020 18:30:45 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/how-to-use-webhook-to-deploy-project/</guid>
-      <description>自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。 在上家公司我也体验过自</description>
+      <description>&lt;p&gt;自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。&lt;/p&gt;&#xA;&lt;p&gt;在上家公司我也体验过自动部署，本质上是推代码时自动触发脚本运行。他们是使用 &lt;code&gt;K8S&lt;/code&gt; 实现的，而我现在一台可怜巴巴的服务器，这样的配置太重了。于是， Webhook 就很适合我的场景。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>使用 OpenSSL 自建 CA</title>
       <link>https://bigshans.github.io/post/nginx-openssl/</link>
       <pubDate>Sat, 13 Oct 2018 12:32:10 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/nginx-openssl/</guid>
-      <description>&lt;p&gt;谷歌上找了半天终于找到了，https://www.cnblogs.com/luo630/p/9534734.html 。&lt;/p&gt;
-&lt;p&gt;当然自己动手就有点不太一样了。这个主要是为了将 pixiv nginx 的 ca 证书进行替换，不依赖于他人，也防止其他的各种问题。&lt;/p&gt;
-&lt;p&gt;下面是一些步骤总结：&lt;/p&gt;</description>
+      <description>&lt;p&gt;谷歌上找了半天终于找到了，https://www.cnblogs.com/luo630/p/9534734.html 。&lt;/p&gt;&#xA;&lt;p&gt;当然自己动手就有点不太一样了。这个主要是为了将 pixiv nginx 的 ca 证书进行替换，不依赖于他人，也防止其他的各种问题。&lt;/p&gt;&#xA;&lt;p&gt;下面是一些步骤总结：&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>nginx 反向代理上 Pixiv（二）</title>
       <link>https://bigshans.github.io/post/nginx-pixiv-2/</link>
       <pubDate>Fri, 12 Oct 2018 19:02:22 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/nginx-pixiv-2/</guid>
       <description>&lt;p&gt;这篇文章我发在 B 站了，地址是 &lt;a href=&#34;https://www.bilibili.com/read/cv1317348&#34;&gt;https://www.bilibili.com/read/cv1317348&lt;/a&gt; 。当然，这里我要讲细一点。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>nginx 反向代理上 Pixiv</title>
       <link>https://bigshans.github.io/post/nginx-pixiv/</link>
       <pubDate>Mon, 24 Sep 2018 15:40:34 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/nginx-pixiv/</guid>
       <description>&lt;p&gt;Pixiv 被墙了，上不了。我上了 Pixiv 的贴吧，刚好发现有人发帖说如何再上 P 站（ &lt;a href=&#34;https://tieba.baidu.com/p/5882385726&#34;&gt;https://tieba.baidu.com/p/5882385726&lt;/a&gt; ） 。使用 nginx 做反向代理，看着比较简单，于是自己试了试，由于 nginx 自己不太熟，所以是尽量完成。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

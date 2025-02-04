@@ -4,27 +4,24 @@
     <title>NVim on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/nvim/</link>
     <description>Recent content in NVim on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Wed, 20 Apr 2022 15:55:27 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/nvim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Apr 2022 15:55:27 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/nvim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>配置 bufferline.nvim</title>
       <link>https://bigshans.github.io/post/config-bufline-nvim/</link>
       <pubDate>Wed, 20 Apr 2022 15:55:27 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/config-bufline-nvim/</guid>
-      <description>眼馋这个 bufferline 很久了，最近想尝试一下。 安装 首先，安装就是很简单的使用 vim-plug 。 Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; } 然后需要在 lua 的配置文件中再次 setup 一下。 require(&#39;bufferline&#39;).setup{} 如此，安装就安装完成了</description>
+      <description>&lt;p&gt;眼馋这个 bufferline 很久了，最近想尝试一下。&lt;/p&gt;&#xA;&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;&#xA;&lt;p&gt;首先，安装就是很简单的使用 vim-plug 。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-vimscript&#34;&gt;Plug &#39;akinsho/bufferline.nvim&#39;, { &#39;tag&#39;: &#39;*&#39; }&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;然后需要在 lua 的配置文件中再次 setup 一下。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-lua&#34;&gt;require(&#39;bufferline&#39;).setup{}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;如此，安装就安装完成了。&lt;/p&gt;&#xA;&lt;h2 id=&#34;配置&#34;&gt;配置&lt;/h2&gt;&#xA;&lt;p&gt;bufferline 默认的配置对我来说有些不太适应，应为之前我更习惯使用 tab ，不过纯 tab 弊病也挺多的，于是我改变了一下思维方式。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>可能 lua 不是配置 nvim 的最佳解决方案</title>
       <link>https://bigshans.github.io/post/maybe-lua-is-not-the-solution/</link>
       <pubDate>Mon, 04 Apr 2022 21:55:06 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/maybe-lua-is-not-the-solution/</guid>
-      <description>这几天折腾 nvim ，折腾的过程中也发现各个插件可能并不一定如我意，于是我就修改一部分插件并 fork 为己所用。不知不觉过去好久了，我积累下来的好多配置，以</description>
+      <description>&lt;p&gt;这几天折腾 nvim ，折腾的过程中也发现各个插件可能并不一定如我意，于是我就修改一部分插件并 fork 为己所用。不知不觉过去好久了，我积累下来的好多配置，以及好多插件都需要更换了，一些是无人维护了，一些是不兼容了。除此之外，还有另外一件事情，要不要用 lua 替换我原来 vimScript 的配置？&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

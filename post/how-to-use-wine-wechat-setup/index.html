@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="最近升级了一下微信，好久没有这个脚本好像都不会用了。此脚本是依云姐写的，在 Archlinuxcn 源上，需要配合 wine-for-wechat 。 wine-wechat-setup 提供了一个 wechat 命令，如果你已经在本地安装了微信" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="最近升级了一下微信，好久没有这个脚本好像都不会用了。此脚本是依云姐写的，在 Archlinuxcn 源上，需要配合 wine-for-wechat 。
+wine-wechat-setup 提供了一个 wechat 命令，如果你已经在本地安装了微信就会直接启动。 wechat -h 查看具体用法。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/how-to-use-wine-wechat-setup/" />
@@ -46,19 +48,30 @@
 
 
 
-<meta property="og:title" content="如何使用 wine-wechat-setup" />
-<meta property="og:description" content="最近升级了一下微信，好久没有这个脚本好像都不会用了。此脚本是依云姐写的，在 Archlinuxcn 源上，需要配合 wine-for-wechat 。 wine-wechat-setup 提供了一个 wechat 命令，如果你已经在本地安装了微信" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/how-to-use-wine-wechat-setup/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-07-27T14:05:02+08:00" />
-<meta property="article:modified_time" content="2022-07-27T14:05:02+08:00" />
-<meta itemprop="name" content="如何使用 wine-wechat-setup">
-<meta itemprop="description" content="最近升级了一下微信，好久没有这个脚本好像都不会用了。此脚本是依云姐写的，在 Archlinuxcn 源上，需要配合 wine-for-wechat 。 wine-wechat-setup 提供了一个 wechat 命令，如果你已经在本地安装了微信"><meta itemprop="datePublished" content="2022-07-27T14:05:02+08:00" />
-<meta itemprop="dateModified" content="2022-07-27T14:05:02+08:00" />
-<meta itemprop="wordCount" content="193">
-<meta itemprop="keywords" content="wine-for-wechat,wine-wechat-setup," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="如何使用 wine-wechat-setup"/>
-<meta name="twitter:description" content="最近升级了一下微信，好久没有这个脚本好像都不会用了。此脚本是依云姐写的，在 Archlinuxcn 源上，需要配合 wine-for-wechat 。 wine-wechat-setup 提供了一个 wechat 命令，如果你已经在本地安装了微信"/>
+<meta property="og:url" content="https://bigshans.github.io/post/how-to-use-wine-wechat-setup/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="如何使用 wine-wechat-setup">
+  <meta property="og:description" content="最近升级了一下微信，好久没有这个脚本好像都不会用了。此脚本是依云姐写的，在 Archlinuxcn 源上，需要配合 wine-for-wechat 。
+wine-wechat-setup 提供了一个 wechat 命令，如果你已经在本地安装了微信就会直接启动。 wechat -h 查看具体用法。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-07-27T14:05:02+08:00">
+    <meta property="article:modified_time" content="2022-07-27T14:05:02+08:00">
+    <meta property="article:tag" content="Wine-for-Wechat">
+    <meta property="article:tag" content="Wine-Wechat-Setup">
+
+  <meta itemprop="name" content="如何使用 wine-wechat-setup">
+  <meta itemprop="description" content="最近升级了一下微信，好久没有这个脚本好像都不会用了。此脚本是依云姐写的，在 Archlinuxcn 源上，需要配合 wine-for-wechat 。
+wine-wechat-setup 提供了一个 wechat 命令，如果你已经在本地安装了微信就会直接启动。 wechat -h 查看具体用法。">
+  <meta itemprop="datePublished" content="2022-07-27T14:05:02+08:00">
+  <meta itemprop="dateModified" content="2022-07-27T14:05:02+08:00">
+  <meta itemprop="wordCount" content="193">
+  <meta itemprop="keywords" content="Wine-for-Wechat,Wine-Wechat-Setup">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="如何使用 wine-wechat-setup">
+  <meta name="twitter:description" content="最近升级了一下微信，好久没有这个脚本好像都不会用了。此脚本是依云姐写的，在 Archlinuxcn 源上，需要配合 wine-for-wechat 。
+wine-wechat-setup 提供了一个 wechat 命令，如果你已经在本地安装了微信就会直接启动。 wechat -h 查看具体用法。">
 
 
 
@@ -276,7 +289,7 @@ options:
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

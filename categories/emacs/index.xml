@@ -4,36 +4,31 @@
     <title>Emacs on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/emacs/</link>
     <description>Recent content in Emacs on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 10 Nov 2019 20:35:36 +0000</lastBuildDate><atom:link href="https://bigshans.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Nov 2019 20:35:36 +0000</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>玩玩 docker emacs</title>
       <link>https://bigshans.github.io/post/docker-emacs/</link>
       <pubDate>Sun, 10 Nov 2019 20:35:36 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/docker-emacs/</guid>
       <description>&lt;p&gt;最近倒腾公司电脑，结果装不上 emacs 26，我的很多配置无法启用，在这里我要批评一下 deepin 。我真的是很少有听过降系统升级的。 deepin 还在 Debian stretch 上，如今 Debian 都上 buster 了。 deepin 为了稳定系统搞这个我觉得真是不行，至少软件也要新的嘛！&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>happy hacking emacs</title>
       <link>https://bigshans.github.io/post/emacs-hacking/</link>
       <pubDate>Thu, 31 Oct 2019 19:16:23 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/emacs-hacking/</guid>
       <description>&lt;p&gt;最近在折腾 emacs ，不得不说这个曲线真的是非常陡峭啊！但有些有趣的东西的确让人欲罢不能。今天就在这里跟大家分享一下折腾过程中出现的问题，希望能能给大家带来一点帮助。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>org-mode 个人常用快捷键</title>
       <link>https://bigshans.github.io/post/emacs-org-mode/</link>
       <pubDate>Wed, 26 Dec 2018 14:46:48 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/emacs-org-mode/</guid>
       <description>&lt;p&gt;最近在用 emacs 的 org-mode 来做一些笔记和 agenda ，个人觉得挺好用的。不认默认的 emacs 快捷键用 ctrl ，用了四天结果我小拇指贼疼，虽然将 ctrl 与 caps 进行交换了，但最后将 ralt 与 rctrl 进行交换，现在稍微好一点。不过我用的是 spacemacs ，用 spacemacs 的快捷键还是很好用的，也能保护好小拇指。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

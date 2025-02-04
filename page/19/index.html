@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/" />
@@ -48,14 +48,20 @@
 
 
 
-<meta property="og:title" content="Bigshans&#39; Blog" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://bigshans.github.io/" />
-<meta itemprop="name" content="Bigshans&#39; Blog">
-<meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Bigshans&#39; Blog"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
+<meta property="og:url" content="https://bigshans.github.io/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="Bigshans&#39; Blog">
+  <meta property="og:description" content="Hugo theme even example site.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Bigshans&#39; Blog">
+  <meta itemprop="description" content="Hugo theme even example site.">
+  <meta itemprop="datePublished" content="2024-12-29T22:56:17+08:00">
+  <meta itemprop="dateModified" content="2024-12-29T22:56:17+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bigshans&#39; Blog">
+  <meta name="twitter:description" content="Hugo theme even example site.">
 
 
 
@@ -192,7 +198,9 @@
   <div class="post-content">
     <div class="post-summary">
     
-      由于我经常忘记这个该怎么写了（因为不经常用），所以特地记录誊写一篇用来记忆。 创建新的数据库用户 先进入到 postgres 用户下，然后用运行 psql 进入数据库的命令
+      由于我经常忘记这个该怎么写了（因为不经常用），所以特地记录誊写一篇用来记忆。
+创建新的数据库用户 先进入到 postgres 用户下，然后用运行 psql 进入数据库的命令行下。
+创建数据库新用户的命令为： CREATE USER dbuser WITH PASSWORD '&lt;CUSTOM PASSWORD&gt;'; 创建数据库： CREATE DATABASE exampledb OWNER dbuser; 将 exampledb 数据库的搜索权限都赋予给 dbuser ： GRANT ALL PRIVILEGES ON DATABASE exampledb TO dbuser. 
     
     </div>
     <div class="read-more">
@@ -217,7 +225,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      准确来说，Whoogle 是一个元搜索引擎，他主要将 Google 的搜索结果过滤，并去除掉其中的隐私追踪部分。与 Whoogle 差不多的另一个网站框架是 SearX ，两者都是自建
+      准确来说，Whoogle 是一个元搜索引擎，他主要将 Google 的搜索结果过滤，并去除掉其中的隐私追踪部分。与 Whoogle 差不多的另一个网站框架是 SearX ，两者都是自建的元搜索引擎，二者代码都开源到了 Github 上。
+
     
     </div>
     <div class="read-more">
@@ -242,7 +251,9 @@
   <div class="post-content">
     <div class="post-summary">
     
-      最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。 背景 公司的主页是用静态网页写的，主要是用来展示，但是分很
+      最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。
+背景 公司的主页是用静态网页写的，主要是用来展示，但是分很多个页面，页面间有几个公用的组件。首先不考虑用 Vue 或者 React ，杀鸡焉用牛刀是其一，其二是首页需要做 SEO ，但是特意用一个 Nuxtjs 的又不太想（不需要那么多东西），我的 Leader 不太想再弄一个服务去跑这个东西，因为原来就直接丢到 OSS 上不需要管，根本不用考虑它对服务器的影响（反正又是找阿里就行了）。考虑了几种方案，感觉还是用传统的模板引擎最好，因为返回给前端的时候直接是生成好的页面，SEO 肯定没问题，问题是不开一个服务怎么弄呢？那就提前生成好就行了。
+
     
     </div>
     <div class="read-more">
@@ -267,7 +278,9 @@
   <div class="post-content">
     <div class="post-summary">
     
-      安装 Pleroma 倒也不是什么特别难的事，只要照着文档自己安装即可，但是，事情往往并没有你想的那么简单。 Pleroma 是一款基于 Elixir 开发的轻量级的微博系统，而且还支持
+      安装 Pleroma 倒也不是什么特别难的事，只要照着文档自己安装即可，但是，事情往往并没有你想的那么简单。
+Pleroma 是一款基于 Elixir 开发的轻量级的微博系统，而且还支持 Activity Pub 。提到 Activity Pub 大家第一时间会想起 Mastodon ，Mastodon 是基于 Ruby 开发的去中心化的微博系统，在功能上，它比 Pleroma 强上太多，但是最终我为什么没有选择它呢？因为它太吃资源了，我的服务器连最低配置要求都达不到，因此我用 Pleroma 替换了它。
+
     
     </div>
     <div class="read-more">
@@ -292,7 +305,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      Cognitive Complexity ，即认知复杂度，是来自于 Sonar 官方的一个概念。认知复杂度主要是以可测量的方式，将代码估算成一个数字，用以衡量代码的理解难度的。它基于一下三条
+      Cognitive Complexity ，即认知复杂度，是来自于 Sonar 官方的一个概念。认知复杂度主要是以可测量的方式，将代码估算成一个数字，用以衡量代码的理解难度的。它基于一下三条准则：
+
     
     </div>
     <div class="read-more">
@@ -317,7 +331,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      在这里我们重新确立一下标准，并重新订立一下我们所要讨论的目标。我们要讨论的是行为，而不是理论。当然，我们不希望孤立的讨论行为，因为这会让我们
+      在这里我们重新确立一下标准，并重新订立一下我们所要讨论的目标。我们要讨论的是行为，而不是理论。当然，我们不希望孤立的讨论行为，因为这会让我们的讨论变得空泛，但在此之前，我们只谈论行为确保我们讨论的纯粹性。
+
     
     </div>
     <div class="read-more">
@@ -342,7 +357,9 @@
   <div class="post-content">
     <div class="post-summary">
     
-      批判的武器当然不能代替武器的批判。——马克思 我对于一般的政治理论的探索缺乏兴趣，因为这些争论往往流于立场，成了屁股决定脑袋的「政治先验决定论
+       批判的武器当然不能代替武器的批判。——马克思
+我对于一般的政治理论的探索缺乏兴趣，因为这些争论往往流于立场，成了屁股决定脑袋的「政治先验决定论」。比起一般的理论，我更关心行为，因为无论理论如何，一个成功的政治活动往往空有理论的。现实中往往不是理论指导行动，而是行动找上了理论的。在这里我就简单做了一份坐标系仅供娱乐。
+
     
     </div>
     <div class="read-more">
@@ -367,7 +384,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      因为 root 手机忘了锁屏密码，所以想要破解掉。因为手机已经提前 root 了，我本以为这个问题只需要搜一下就可以了，然而搜索的结果却让我大跌眼镜。使用 adb 删除
+      因为 root 手机忘了锁屏密码，所以想要破解掉。因为手机已经提前 root 了，我本以为这个问题只需要搜一下就可以了，然而搜索的结果却让我大跌眼镜。使用 adb 删除 password.key 或者 gesture.key ，问题是根本没有这几个文件！我把几个 key 文件删了根本没有效果，然后我仔细研究了一下在 /data/system 下的文件，发现有几个名为 locksetting 的 db 文件，怀疑这个才是真正的屏幕锁文件，因为这几个文件看着像是 Sqlite 数据库。于是在 recovery 模式下我删除了这几个文件，重启之后，锁屏密码就去掉了。
+
     
     </div>
     <div class="read-more">
@@ -397,7 +415,9 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
+    <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

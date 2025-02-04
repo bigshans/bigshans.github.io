@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="由于我经常忘记这个该怎么写了（因为不经常用），所以特地记录誊写一篇用来记忆。 创建新的数据库用户 先进入到 postgres 用户下，然后用运行 psql 进入数据库的命令" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="由于我经常忘记这个该怎么写了（因为不经常用），所以特地记录誊写一篇用来记忆。
+创建新的数据库用户 先进入到 postgres 用户下，然后用运行 psql 进入数据库的命令行下。
+创建数据库新用户的命令为： CREATE USER dbuser WITH PASSWORD &#39;&lt;CUSTOM PASSWORD&gt;&#39;; 创建数据库： CREATE DATABASE exampledb OWNER dbuser; 将 exampledb 数据库的搜索权限都赋予给 dbuser ： GRANT ALL PRIVILEGES ON DATABASE exampledb TO dbuser. " /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/postgresql-tricks-1/" />
@@ -46,19 +48,32 @@
 
 
 
-<meta property="og:title" content="Postgresql 创建用户和数据库并赋权" />
-<meta property="og:description" content="由于我经常忘记这个该怎么写了（因为不经常用），所以特地记录誊写一篇用来记忆。 创建新的数据库用户 先进入到 postgres 用户下，然后用运行 psql 进入数据库的命令" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/postgresql-tricks-1/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-06-08T09:04:01+08:00" />
-<meta property="article:modified_time" content="2021-06-08T09:04:01+08:00" />
-<meta itemprop="name" content="Postgresql 创建用户和数据库并赋权">
-<meta itemprop="description" content="由于我经常忘记这个该怎么写了（因为不经常用），所以特地记录誊写一篇用来记忆。 创建新的数据库用户 先进入到 postgres 用户下，然后用运行 psql 进入数据库的命令"><meta itemprop="datePublished" content="2021-06-08T09:04:01+08:00" />
-<meta itemprop="dateModified" content="2021-06-08T09:04:01+08:00" />
-<meta itemprop="wordCount" content="128">
-<meta itemprop="keywords" content="Postgresql," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Postgresql 创建用户和数据库并赋权"/>
-<meta name="twitter:description" content="由于我经常忘记这个该怎么写了（因为不经常用），所以特地记录誊写一篇用来记忆。 创建新的数据库用户 先进入到 postgres 用户下，然后用运行 psql 进入数据库的命令"/>
+<meta property="og:url" content="https://bigshans.github.io/post/postgresql-tricks-1/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="Postgresql 创建用户和数据库并赋权">
+  <meta property="og:description" content="由于我经常忘记这个该怎么写了（因为不经常用），所以特地记录誊写一篇用来记忆。
+创建新的数据库用户 先进入到 postgres 用户下，然后用运行 psql 进入数据库的命令行下。
+创建数据库新用户的命令为： CREATE USER dbuser WITH PASSWORD &#39;&lt;CUSTOM PASSWORD&gt;&#39;; 创建数据库： CREATE DATABASE exampledb OWNER dbuser; 将 exampledb 数据库的搜索权限都赋予给 dbuser ： GRANT ALL PRIVILEGES ON DATABASE exampledb TO dbuser.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-06-08T09:04:01+08:00">
+    <meta property="article:modified_time" content="2021-06-08T09:04:01+08:00">
+    <meta property="article:tag" content="Postgresql">
+
+  <meta itemprop="name" content="Postgresql 创建用户和数据库并赋权">
+  <meta itemprop="description" content="由于我经常忘记这个该怎么写了（因为不经常用），所以特地记录誊写一篇用来记忆。
+创建新的数据库用户 先进入到 postgres 用户下，然后用运行 psql 进入数据库的命令行下。
+创建数据库新用户的命令为： CREATE USER dbuser WITH PASSWORD &#39;&lt;CUSTOM PASSWORD&gt;&#39;; 创建数据库： CREATE DATABASE exampledb OWNER dbuser; 将 exampledb 数据库的搜索权限都赋予给 dbuser ： GRANT ALL PRIVILEGES ON DATABASE exampledb TO dbuser.">
+  <meta itemprop="datePublished" content="2021-06-08T09:04:01+08:00">
+  <meta itemprop="dateModified" content="2021-06-08T09:04:01+08:00">
+  <meta itemprop="wordCount" content="128">
+  <meta itemprop="keywords" content="Postgresql">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Postgresql 创建用户和数据库并赋权">
+  <meta name="twitter:description" content="由于我经常忘记这个该怎么写了（因为不经常用），所以特地记录誊写一篇用来记忆。
+创建新的数据库用户 先进入到 postgres 用户下，然后用运行 psql 进入数据库的命令行下。
+创建数据库新用户的命令为： CREATE USER dbuser WITH PASSWORD &#39;&lt;CUSTOM PASSWORD&gt;&#39;; 创建数据库： CREATE DATABASE exampledb OWNER dbuser; 将 exampledb 数据库的搜索权限都赋予给 dbuser ： GRANT ALL PRIVILEGES ON DATABASE exampledb TO dbuser.">
 
 
 
@@ -281,7 +296,7 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

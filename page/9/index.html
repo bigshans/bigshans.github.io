@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/" />
@@ -48,14 +48,20 @@
 
 
 
-<meta property="og:title" content="Bigshans&#39; Blog" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://bigshans.github.io/" />
-<meta itemprop="name" content="Bigshans&#39; Blog">
-<meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Bigshans&#39; Blog"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
+<meta property="og:url" content="https://bigshans.github.io/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="Bigshans&#39; Blog">
+  <meta property="og:description" content="Hugo theme even example site.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Bigshans&#39; Blog">
+  <meta itemprop="description" content="Hugo theme even example site.">
+  <meta itemprop="datePublished" content="2024-12-29T22:56:17+08:00">
+  <meta itemprop="dateModified" content="2024-12-29T22:56:17+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bigshans&#39; Blog">
+  <meta name="twitter:description" content="Hugo theme even example site.">
 
 
 
@@ -192,7 +198,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      gRPC 和 RESTful 的比较是两套 API 风格的比较。虽然 gRPC 采取了 HTTP2 ，但这并不代表 RESTful 不能基于 HTTP2 ，但 RESTful 也可以采用 HTTP1 ，这是因为二者的着眼点有所不同。 gRPC 采用了二进制的方
+      gRPC 和 RESTful 的比较是两套 API 风格的比较。虽然 gRPC 采取了 HTTP2 ，但这并不代表 RESTful 不能基于 HTTP2 ，但 RESTful 也可以采用 HTTP1 ，这是因为二者的着眼点有所不同。 gRPC 采用了二进制的方式进行传输，目的是为了更快、更多样化的传输数据，而 RESTful 采用 JSON 作为传输数据的格式，相应的也就牺牲了速度与传输数据的多样化，但同时收获了数据的可读性。我们深入进去就会发现，为了数据的可读性， RESTful 必须对数据进行冗余，以此来保证传输数据的可读性，而 gRPC 则对数据进行压缩，以保证大数据能够被更快的传输过去，但同时加深了调试的难度。因此，当我们传输的数据越大的时候， gRPC 就越具有优势，因为当数据量过大是，可读性反而成了拖累，速度会反向影响调试和可读性。且二进制对于计算机来说是比 JSON 结构好读的， JSON 解析必然是一大负担，当 JSON 足够大时，解析也会变得十分困难，而栈帧的结构对于计算机来说更好。
+
     
     </div>
     <div class="read-more">
@@ -217,7 +224,11 @@
   <div class="post-content">
     <div class="post-summary">
     
-      有两件事情是可以进行判断的： 性骚扰是不对的。 打人是不对的。 对于施暴者的定性，毫无疑问是犯罪，两人也已经被抓获。关于本案，对于第二点我觉得没有
+      有两件事情是可以进行判断的：
+性骚扰是不对的。
+打人是不对的。
+对于施暴者的定性，毫无疑问是犯罪，两人也已经被抓获。关于本案，对于第二点我觉得没有什么好说的，但第一点就有很多人延伸了。
+
     
     </div>
     <div class="read-more">
@@ -242,7 +253,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      以前我以为墨子思想的核心是兼爱非攻，但我读了十批判书后得到了一点有趣的观点，墨子的核心是天志明鬼。郭沫若的文章显得过于尊孔了，导致墨子的立场
+      以前我以为墨子思想的核心是兼爱非攻，但我读了十批判书后得到了一点有趣的观点，墨子的核心是天志明鬼。郭沫若的文章显得过于尊孔了，导致墨子的立场一开始就被固定，所以很难跳脱地思考一些东西。所以我们从天志开始考察。
+
     
     </div>
     <div class="read-more">
@@ -267,7 +279,9 @@
   <div class="post-content">
     <div class="post-summary">
     
-      译前序 本文翻译自 The Go Scheduler ，虽然时间有点久了，但只是阐释思想的话并没有太大问题。由于我个人翻译水平有限，若有纰漏，敬请谅解。 序 由 Dmitry Vyukov 贡献的新调度
+      译前序 本文翻译自 The Go Scheduler ，虽然时间有点久了，但只是阐释思想的话并没有太大问题。由于我个人翻译水平有限，若有纰漏，敬请谅解。
+序 由 Dmitry Vyukov 贡献的新调度器是 Go 1.1 版本中的一个重大功能。新的调度器大幅提高了 Go 程序的并发性能，没有什么比这更好的事了，我想我会写一些关于调度器的东西。
+
     
     </div>
     <div class="read-more">
@@ -292,7 +306,9 @@
   <div class="post-content">
     <div class="post-summary">
     
-      王垠是个精英主义很重的人，偏爱理论多过实践。 我以前读过一些他的文章，现在又读了一些，发现我与过去对他的评价不同了。现实是参差、复杂且匮乏的，
+      王垠是个精英主义很重的人，偏爱理论多过实践。
+我以前读过一些他的文章，现在又读了一些，发现我与过去对他的评价不同了。现实是参差、复杂且匮乏的，理论上，理论符合现实，但现实中不是。他对别人的批评稍加修改也可以应用到他自己身上。
+
     
     </div>
     <div class="read-more">
@@ -317,7 +333,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      正文 现代经济学是从古典经济学上发展过来的，现代经济学完成了古典经济学所要达成的目标，即一切价值的量化。而这种量化，正是通过消灭传统价值理论达
+      正文 现代经济学是从古典经济学上发展过来的，现代经济学完成了古典经济学所要达成的目标，即一切价值的量化。而这种量化，正是通过消灭传统价值理论达成的。
+
     
     </div>
     <div class="read-more">
@@ -342,7 +359,9 @@
   <div class="post-content">
     <div class="post-summary">
     
-      阅读的文章是关于事件捕获与事件冒泡先后执行顺序 ，写得挺好的，就是我读的时候漏了一点。 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width&amp;quot;&amp;gt; &amp;lt;title&amp;gt;DOM 冒泡&amp;lt;/title&amp;gt; &amp;lt;style type=&amp;quot;text/css&amp;quot;
+      阅读的文章是关于事件捕获与事件冒泡先后执行顺序 ，写得挺好的，就是我读的时候漏了一点。
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt; &lt;title&gt;DOM 冒泡&lt;/title&gt; &lt;style type=&quot;text/css&quot; media=&quot;all&quot;&gt; #parent { height: 100px; width: 100%; background: green; } #child { height: 50px; width: 50%; background: yellow; } #button { height: 30px; width: 10%; background: white; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&quot;parent&quot;&gt; &lt;div id=&quot;child&quot;&gt; &lt;div id=&quot;button&quot;&gt;按钮&lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;script&gt; window.onload = function() { const qId = (name) =&gt; document.getElementById(name); const qTg = (name) =&gt; document.getElementsByTagName(name)[0]; const parent = qId('parent'); const child = qId('child'); const button = qId('button'); parent.addEventListener('click', () =&gt; console.log('parent click 事件'), true); child.addEventListener('click', () =&gt; console.log('child click 事件'), true); button.onclick = () =&gt; console.log('button click 冒泡'); button.addEventListener('click', () =&gt; console.log('button click 事件'), true); parent.onclick = () =&gt; console.log('parent click 冒泡'); child.onclick = () =&gt; console.log('child click 冒泡'); } &lt;/script&gt; &lt;/body&gt; &lt;/html&gt; 首先结论是对的。
+
     
     </div>
     <div class="read-more">
@@ -367,7 +386,9 @@
   <div class="post-content">
     <div class="post-summary">
     
-      最近在思考女性主义的问题，查找了很多资料，只能说有一些了解。女性主义目前的现状更类似于黑人运动，而很多方面也面临了跟黑人运动一样的困境。 女性
+      最近在思考女性主义的问题，查找了很多资料，只能说有一些了解。女性主义目前的现状更类似于黑人运动，而很多方面也面临了跟黑人运动一样的困境。
+女性主义的仇恨政治 仇恨政治是这类主义中最常出现的问题，比如在女性主义中出现的仇男问题，最后会演变成极端女权主义，我称之为“女性纳粹主义”。只有消灭男性才能完成女性的独立这一想法，不仅将男性作为敌人而对立起来，也将女性从人的范围内划分出去——只有女性才能称之为人，只有被女性奴隶的才能称之为人。与之对应的就是黑人至上主义。这不叫女性独立，更何况，光是承认女性这一点就已经承认了很多东西。
+
     
     </div>
     <div class="read-more">
@@ -397,7 +418,9 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
+    <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

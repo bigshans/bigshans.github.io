@@ -4,145 +4,115 @@
     <title>前端 on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/%E5%89%8D%E7%AB%AF/</link>
     <description>Recent content in 前端 on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 06 Aug 2023 19:09:10 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Aug 2023 19:09:10 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BFC 简述</title>
       <link>https://bigshans.github.io/post/bfc/</link>
       <pubDate>Sun, 06 Aug 2023 19:09:10 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/bfc/</guid>
-      <description>BFC 指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC 即定义了块元素的格式上下文。 默认情况下，&amp;lt;ht</description>
+      <description>&lt;p&gt;BFC&#xA;指块格式上下文。格式上下文定义了一个元素内部如何排布，以及与外部元素间如何排布。BFC&#xA;即定义了块元素的格式上下文。&lt;/p&gt;&#xA;&lt;p&gt;默认情况下，&lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt;&#xA;为块格式上下文。块元素的子元素将按块排布，或者按行排布，如果出现混合排布的情况，则会将内联元素用匿名块包裹起来，然后按块排布。同时，匿名块不能被&#xA;CSS 指定，不受 CSS 样式影响。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>如何正确的替换 HTML</title>
       <link>https://bigshans.github.io/post/sethtml/</link>
       <pubDate>Sat, 18 Feb 2023 14:08:26 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/sethtml/</guid>
-      <description>算是私人页的一个 BUG ，之前没有注意到。使用 innerHTML 进行替换后，替换内容内所有的 script 都失效了，这是符合浏览器预期的，可见 MDN 。 Although this may look like a cross-site scripting attack, the result is harmless. HTML</description>
+      <description>&lt;p&gt;算是私人页的一个 BUG ，之前没有注意到。使用 &lt;code&gt;innerHTML&lt;/code&gt; 进行替换后，替换内容内所有的 &lt;code&gt;script&lt;/code&gt; 都失效了，这是符合浏览器预期的，可见 MDN 。&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Although this may look like a cross-site scripting attack, the result is harmless. HTML specifies that a &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; tag inserted with innerHTML should not execute.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>CSS 盒子模型</title>
       <link>https://bigshans.github.io/post/css-box/</link>
       <pubDate>Fri, 13 Jan 2023 09:27:13 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/css-box/</guid>
-      <description>一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。 标准盒</description>
+      <description>&lt;p&gt;一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS&#xA;的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS&#xA;布局排版的基础。&lt;/p&gt;&#xA;&lt;h2 id=&#34;标准盒型&#34;&gt;标准盒型&lt;/h2&gt;&#xA;&lt;figure&gt;&#xA;&lt;img&#xA;src=&#34;https://www.w3.org/TR/2016/WD-CSS22-20160412/images/boxdim.png&#34;&#xA;alt=&#34;盒子模型示意图&#34; /&gt;&#xA;&lt;figcaption aria-hidden=&#34;true&#34;&gt;盒子模型示意图&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;p&gt;每一个盒子都一块内容（content）区域，围绕内容从内向外分别是内边距、边框和外边距（padding&#xA;、 border 、 margin）。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>CSS 三栏布局</title>
       <link>https://bigshans.github.io/post/css%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/</link>
       <pubDate>Tue, 10 Jan 2023 09:27:35 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/css%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/</guid>
-      <description>三栏布局是比较经典的 CSS 布局，特点就是中间内容自适应，首先渲染，其次左右内容大小保持不变分布两旁。结构上打破了一般意义上的左中右的顺序，变成了</description>
+      <description>&lt;p&gt;三栏布局是比较经典的 CSS&#xA;布局，特点就是中间内容自适应，首先渲染，其次左右内容大小保持不变分布两旁。结构上打破了一般意义上的左中右的顺序，变成了中左右的顺序，但视觉展示仍然要求是左中右的布局，于是，如何将中间内容放回到中间，并重新分布左右则是此类技术的核心所在。在&#xA;&lt;code&gt;flex&lt;/code&gt; 之前，前端多用 &lt;code&gt;float&lt;/code&gt;&#xA;实现，出现了双飞翼和圣杯布局两种实现，现在我们可以用 &lt;code&gt;flex&lt;/code&gt;&#xA;来很简单的实现。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>《事件捕获与事件冒泡》补遗</title>
       <link>https://bigshans.github.io/post/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/</link>
       <pubDate>Tue, 17 May 2022 10:46:28 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/</guid>
-      <description>阅读的文章是关于事件捕获与事件冒泡先后执行顺序 ，写得挺好的，就是我读的时候漏了一点。 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width&amp;quot;&amp;gt; &amp;lt;title&amp;gt;DOM 冒泡&amp;lt;/title&amp;gt; &amp;lt;style type=&amp;quot;text/css&amp;quot;</description>
+      <description>&lt;p&gt;阅读的文章是&lt;a href=&#34;https://juejin.cn/post/6931631885135118350&#34;&gt;关于事件捕获与事件冒泡先后执行顺序 &lt;/a&gt; ，写得挺好的，就是我读的时候漏了一点。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&#xA;&amp;lt;html&amp;gt;&#xA;  &amp;lt;head&amp;gt;&#xA;    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;&#xA;    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width&amp;quot;&amp;gt;&#xA;    &amp;lt;title&amp;gt;DOM 冒泡&amp;lt;/title&amp;gt;&#xA;    &amp;lt;style type=&amp;quot;text/css&amp;quot; media=&amp;quot;all&amp;quot;&amp;gt;&#xA;#parent {&#xA;  height: 100px;&#xA;  width: 100%;&#xA;  background: green;&#xA;}&#xA;        #child {&#xA;          height: 50px;&#xA;          width: 50%;&#xA;          background: yellow;&#xA;        }&#xA;        #button {&#xA;          height: 30px;&#xA;          width: 10%;&#xA;          background: white;&#xA;        }&#xA;    &amp;lt;/style&amp;gt;&#xA;  &amp;lt;/head&amp;gt;&#xA;  &amp;lt;body&amp;gt;&#xA;    &amp;lt;div id=&amp;quot;parent&amp;quot;&amp;gt;&#xA;      &amp;lt;div id=&amp;quot;child&amp;quot;&amp;gt;&#xA;      &amp;lt;div id=&amp;quot;button&amp;quot;&amp;gt;按钮&amp;lt;/div&amp;gt;&#xA;      &amp;lt;/div&amp;gt;&#xA;    &amp;lt;/div&amp;gt;&#xA;    &amp;lt;script&amp;gt;&#xA;      window.onload = function() {&#xA;        const qId = (name) =&amp;gt; document.getElementById(name);&#xA;        const qTg = (name) =&amp;gt; document.getElementsByTagName(name)[0];&#xA;        const parent = qId(&#39;parent&#39;);&#xA;        const child = qId(&#39;child&#39;);&#xA;        const button = qId(&#39;button&#39;);&#xA;&#xA;        parent.addEventListener(&#39;click&#39;, () =&amp;gt; console.log(&#39;parent click 事件&#39;), true);&#xA;        child.addEventListener(&#39;click&#39;, () =&amp;gt; console.log(&#39;child click 事件&#39;), true);&#xA;        button.onclick = () =&amp;gt; console.log(&#39;button click 冒泡&#39;);&#xA;        button.addEventListener(&#39;click&#39;, () =&amp;gt; console.log(&#39;button click 事件&#39;), true);&#xA;&#xA;        parent.onclick = () =&amp;gt; console.log(&#39;parent click 冒泡&#39;);&#xA;        child.onclick = () =&amp;gt; console.log(&#39;child click 冒泡&#39;);&#xA;      }&#xA;    &amp;lt;/script&amp;gt;&#xA;  &amp;lt;/body&amp;gt;&#xA;&amp;lt;/html&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;首先结论是对的。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>sort 在 Chrome 和 Firefox 表现不同</title>
       <link>https://bigshans.github.io/post/different-sort-between-firefox-and-chrome/</link>
       <pubDate>Thu, 31 Mar 2022 10:18:10 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/different-sort-between-firefox-and-chrome/</guid>
-      <description>首先，这个区别不算 BUG ，因为标准并没有规定该怎么排，但这个细微区别在实现一些特殊需求时需要被注意到。 注意下面一段代码： var a = [1, 1, 1, 1, 1]; a = a.map((k, i)</description>
+      <description>&lt;p&gt;首先，这个区别不算 BUG ，因为标准并没有规定该怎么排，但这个细微区别在实现一些特殊需求时需要被注意到。&lt;/p&gt;&#xA;&lt;p&gt;注意下面一段代码：&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var a = [1, 1, 1, 1, 1];&#xA;a = a.map((k, i) =&amp;gt; ({ a: k, i: i }));&#xA;function cmp(a, b) {&#xA;  console.log(a.index, b.index);&#xA;  return a.a - b.a;&#xA;}&#xA;a.sort(cmp);&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Firefox 的结果：&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>drop-shadow 隐藏原始图像</title>
       <link>https://bigshans.github.io/post/drop-shadow-hidden-origin-image/</link>
       <pubDate>Fri, 03 Dec 2021 16:32:50 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/drop-shadow-hidden-origin-image/</guid>
-      <description>看到张鑫大佬的这篇文章很有意思。 张鑫大佬讲述了如何使用 filter 中的 drop-shadow 实现 png 图标改颜色的技巧，本质上是利用阴影偏移实现的。不过我有一点我一直没有搞明</description>
+      <description>&lt;p&gt;看到张鑫大佬的&lt;a href=&#34;https://www.zhangxinxu.com/wordpress/2016/06/png-icon-change-color-by-css/&#34;&gt;这篇文章&lt;/a&gt;很有意思。&lt;/p&gt;&#xA;&lt;p&gt;张鑫大佬讲述了如何使用 &lt;code&gt;filter&lt;/code&gt; 中的 &lt;code&gt;drop-shadow&lt;/code&gt; 实现 png 图标改颜色的技巧，本质上是利用阴影偏移实现的。不过我有一点我一直没有搞明白就是如何将原始图像遮住。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>为什么 overflow 能够清除 float</title>
       <link>https://bigshans.github.io/post/why-bfc-can-clear-flow/</link>
       <pubDate>Sun, 07 Nov 2021 17:27:40 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/why-bfc-can-clear-flow/</guid>
-      <description>有些学问还是自己研究最为靠谱，像是 overflow 为什么能清 float ，都知道是 BFC ，但是为什么呢？因为在文档流中，普通的 div 其实也是 BFC ，所以，理论上添加 overflow 为非 visible 的时</description>
+      <description>&lt;p&gt;有些学问还是自己研究最为靠谱，像是 &lt;code&gt;overflow&lt;/code&gt; 为什么能清 &lt;code&gt;float&lt;/code&gt; ，都知道是 BFC ，但是为什么呢？因为在文档流中，普通的 &lt;code&gt;div&lt;/code&gt; 其实也是 &lt;code&gt;BFC&lt;/code&gt; ，所以，理论上添加 &lt;code&gt;overflow&lt;/code&gt; 为非 &lt;code&gt;visible&lt;/code&gt; 的时候，它也仍然是 BFC 啊？所以，问题在哪里呢？&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>如何编写一个 Chrome 扩展</title>
       <link>https://bigshans.github.io/post/chrome-extensions/</link>
       <pubDate>Sun, 15 Aug 2021 14:48:54 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/chrome-extensions/</guid>
-      <description>最近工作需要用到 Chrome 扩展，于是就特意学习了一下。起初，我以为 Chrome 扩展权限挺大，操作起来应该挺方便的，但是，实际情况各种权限需要申请，而且有些操作</description>
+      <description>&lt;p&gt;最近工作需要用到 Chrome 扩展，于是就特意学习了一下。起初，我以为 Chrome 扩展权限挺大，操作起来应该挺方便的，但是，实际情况各种权限需要申请，而且有些操作还要不停的绕过，写起来也是挺烦的。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>flex 布局简说</title>
       <link>https://bigshans.github.io/post/flex/</link>
       <pubDate>Sat, 10 Jul 2021 22:35:25 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/flex/</guid>
-      <description>最近同事开分享会讲到了一点 flex 布局相关的东西，但是讲得很仓促，于是决定私下里整理一下，也算是对 flex 知识的总结。内容基本参考了 MDN 还有 W3C 文档的内容，</description>
+      <description>&lt;p&gt;最近同事开分享会讲到了一点 flex 布局相关的东西，但是讲得很仓促，于是决定私下里整理一下，也算是对 flex 知识的总结。内容基本参考了 MDN 还有 W3C 文档的内容，当然，并不是面向初学者的内容，是知识整合。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>写了一个基于 art 的静态网页模块化项目</title>
       <link>https://bigshans.github.io/post/art-html/</link>
       <pubDate>Mon, 24 May 2021 22:19:11 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/art-html/</guid>
-      <description>最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。 背景 公司的主页是用静态网页写的，主要是用来展示，但是分很</description>
+      <description>&lt;p&gt;最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 &lt;a href=&#34;https://github.com/bigshans/art-html&#34;&gt;https://github.com/bigshans/art-html&lt;/a&gt; 。&lt;/p&gt;&#xA;&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;&#xA;&lt;p&gt;公司的主页是用静态网页写的，主要是用来展示，但是分很多个页面，页面间有几个公用的组件。首先不考虑用 Vue 或者 React ，杀鸡焉用牛刀是其一，其二是首页需要做 SEO ，但是特意用一个 Nuxtjs 的又不太想（不需要那么多东西），我的 Leader 不太想再弄一个服务去跑这个东西，因为原来就直接丢到 OSS 上不需要管，根本不用考虑它对服务器的影响（反正又是找阿里就行了）。考虑了几种方案，感觉还是用传统的模板引擎最好，因为返回给前端的时候直接是生成好的页面，SEO 肯定没问题，问题是不开一个服务怎么弄呢？那就提前生成好就行了。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>前端学习之路</title>
       <link>https://bigshans.github.io/post/study-front-end-way/</link>
       <pubDate>Sun, 11 Apr 2021 15:58:45 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/study-front-end-way/</guid>
-      <description>我在大学里面学的还是 Java ，然后工作之后，就一直在用 Node ，从一开始的 Node 后端，到现在的 Node 全栈，可以说是学习了不少，今天就在这里与大家分享一下我前端学</description>
+      <description>&lt;p&gt;我在大学里面学的还是 Java ，然后工作之后，就一直在用 Node ，从一开始的 Node 后端，到现在的 Node 全栈，可以说是学习了不少，今天就在这里与大家分享一下我前端学习的一些经验之说，希望能对大家有帮助。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>css绘制三角形</title>
       <link>https://bigshans.github.io/post/css%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/</link>
       <pubDate>Sun, 22 Dec 2019 21:21:47 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/css%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/</guid>
       <description>&lt;p&gt;最近写前端要一个下拉箭头，所以选择用 css 画一个三角形来用，话不多说，看代码：&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>js 实现 DOM 监视</title>
       <link>https://bigshans.github.io/post/js-dom-watch/</link>
       <pubDate>Sun, 07 Oct 2018 15:53:19 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/js-dom-watch/</guid>
-      <description>&lt;p&gt;花了点时间做了 b 站评论区地址链接化，比较麻烦的是 DOM 监视。找了很多，最后还是采用了 Muatation 来进行事件监视。&lt;/p&gt;
-&lt;p&gt;给个文档地址：http://javascript.ruanyifeng.com/dom/mutationobserver.html 。&lt;/p&gt;</description>
+      <description>&lt;p&gt;花了点时间做了 b 站评论区地址链接化，比较麻烦的是 DOM 监视。找了很多，最后还是采用了 Muatation 来进行事件监视。&lt;/p&gt;&#xA;&lt;p&gt;给个文档地址：http://javascript.ruanyifeng.com/dom/mutationobserver.html 。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>新写了两个油猴脚本</title>
       <link>https://bigshans.github.io/post/js-tampermonkey-user-script/</link>
       <pubDate>Fri, 05 Oct 2018 13:35:27 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/js-tampermonkey-user-script/</guid>
       <description>&lt;p&gt;新写了两个油猴脚本针对 bilibili 。具体可以到我的 gist 上看，一个是针对番剧更新的，原本有一个番剧更新的脚本，但只是加了个标签而已，我又加了一些东西，方便查看，不过具体效果一般，而且番剧状态不能很好的体现，现没有找到好的 api 。另一个是针对 bilibili 动态的，动态不能点击链接很麻烦，于是简单写了脚本来实现将地址转换为链接。要点击进去才能有效，不过去除了带中文的链接。 bilibili 动态不能很好的选中也是一个问题，不过已经有脚本很好的实现了这个问题，所以我就不多写了。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

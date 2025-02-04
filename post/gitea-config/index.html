@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="Gitea 可以同步 Github 仓库之后，让我觉得仓库管理有很大的便利。因为我的很多代码毕竟保存在 Github 上，允许同步 Github 免去了我很多两头跑的工作。 但是有几个我还是不太" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="Gitea 可以同步 Github 仓库之后，让我觉得仓库管理有很大的便利。因为我的很多代码毕竟保存在 Github 上，允许同步 Github 免去了我很多两头跑的工作。
+但是有几个我还是不太爽的地方，主要是之前没有配置好。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/gitea-config/" />
@@ -46,19 +48,29 @@
 
 
 
-<meta property="og:title" content="搞定了几个 Gitea 相关的问题" />
-<meta property="og:description" content="Gitea 可以同步 Github 仓库之后，让我觉得仓库管理有很大的便利。因为我的很多代码毕竟保存在 Github 上，允许同步 Github 免去了我很多两头跑的工作。 但是有几个我还是不太" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/gitea-config/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-03-19T00:52:32+08:00" />
-<meta property="article:modified_time" content="2022-03-19T00:52:32+08:00" />
-<meta itemprop="name" content="搞定了几个 Gitea 相关的问题">
-<meta itemprop="description" content="Gitea 可以同步 Github 仓库之后，让我觉得仓库管理有很大的便利。因为我的很多代码毕竟保存在 Github 上，允许同步 Github 免去了我很多两头跑的工作。 但是有几个我还是不太"><meta itemprop="datePublished" content="2022-03-19T00:52:32+08:00" />
-<meta itemprop="dateModified" content="2022-03-19T00:52:32+08:00" />
-<meta itemprop="wordCount" content="298">
-<meta itemprop="keywords" content="Gitea," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="搞定了几个 Gitea 相关的问题"/>
-<meta name="twitter:description" content="Gitea 可以同步 Github 仓库之后，让我觉得仓库管理有很大的便利。因为我的很多代码毕竟保存在 Github 上，允许同步 Github 免去了我很多两头跑的工作。 但是有几个我还是不太"/>
+<meta property="og:url" content="https://bigshans.github.io/post/gitea-config/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="搞定了几个 Gitea 相关的问题">
+  <meta property="og:description" content="Gitea 可以同步 Github 仓库之后，让我觉得仓库管理有很大的便利。因为我的很多代码毕竟保存在 Github 上，允许同步 Github 免去了我很多两头跑的工作。
+但是有几个我还是不太爽的地方，主要是之前没有配置好。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-03-19T00:52:32+08:00">
+    <meta property="article:modified_time" content="2022-03-19T00:52:32+08:00">
+    <meta property="article:tag" content="Gitea">
+
+  <meta itemprop="name" content="搞定了几个 Gitea 相关的问题">
+  <meta itemprop="description" content="Gitea 可以同步 Github 仓库之后，让我觉得仓库管理有很大的便利。因为我的很多代码毕竟保存在 Github 上，允许同步 Github 免去了我很多两头跑的工作。
+但是有几个我还是不太爽的地方，主要是之前没有配置好。">
+  <meta itemprop="datePublished" content="2022-03-19T00:52:32+08:00">
+  <meta itemprop="dateModified" content="2022-03-19T00:52:32+08:00">
+  <meta itemprop="wordCount" content="298">
+  <meta itemprop="keywords" content="Gitea">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="搞定了几个 Gitea 相关的问题">
+  <meta name="twitter:description" content="Gitea 可以同步 Github 仓库之后，让我觉得仓库管理有很大的便利。因为我的很多代码毕竟保存在 Github 上，允许同步 Github 免去了我很多两头跑的工作。
+但是有几个我还是不太爽的地方，主要是之前没有配置好。">
 
 
 
@@ -271,7 +283,7 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

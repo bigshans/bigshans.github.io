@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="最近在配置 Nextcloud 的 Office 功能，尝试了一下 OnlyOffice ，实在是太不稳定了。我最终选择了 Collabora Office 作为替代。 首先，极其不推荐使用 Docker 部署，因为 Docker 版已经好久没维护了，其次，" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="最近在配置 Nextcloud 的 Office 功能，尝试了一下 OnlyOffice ，实在是太不稳定了。我最终选择了 Collabora Office 作为替代。
+首先，极其不推荐使用 Docker 部署，因为 Docker 版已经好久没维护了，其次，如果你使用的是 Debian 、 CentOS 、 OpenSUSE 一系的话，应该是比较好安装的。在这里，我们使用软件包安装。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/collabora-install/" />
@@ -46,19 +48,30 @@
 
 
 
-<meta property="og:title" content="安装 Collabora Office" />
-<meta property="og:description" content="最近在配置 Nextcloud 的 Office 功能，尝试了一下 OnlyOffice ，实在是太不稳定了。我最终选择了 Collabora Office 作为替代。 首先，极其不推荐使用 Docker 部署，因为 Docker 版已经好久没维护了，其次，" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/collabora-install/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-10-14T09:47:19+08:00" />
-<meta property="article:modified_time" content="2021-10-14T09:47:19+08:00" />
-<meta itemprop="name" content="安装 Collabora Office">
-<meta itemprop="description" content="最近在配置 Nextcloud 的 Office 功能，尝试了一下 OnlyOffice ，实在是太不稳定了。我最终选择了 Collabora Office 作为替代。 首先，极其不推荐使用 Docker 部署，因为 Docker 版已经好久没维护了，其次，"><meta itemprop="datePublished" content="2021-10-14T09:47:19+08:00" />
-<meta itemprop="dateModified" content="2021-10-14T09:47:19+08:00" />
-<meta itemprop="wordCount" content="216">
-<meta itemprop="keywords" content="Nextcloud,Collabora Office," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="安装 Collabora Office"/>
-<meta name="twitter:description" content="最近在配置 Nextcloud 的 Office 功能，尝试了一下 OnlyOffice ，实在是太不稳定了。我最终选择了 Collabora Office 作为替代。 首先，极其不推荐使用 Docker 部署，因为 Docker 版已经好久没维护了，其次，"/>
+<meta property="og:url" content="https://bigshans.github.io/post/collabora-install/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="安装 Collabora Office">
+  <meta property="og:description" content="最近在配置 Nextcloud 的 Office 功能，尝试了一下 OnlyOffice ，实在是太不稳定了。我最终选择了 Collabora Office 作为替代。
+首先，极其不推荐使用 Docker 部署，因为 Docker 版已经好久没维护了，其次，如果你使用的是 Debian 、 CentOS 、 OpenSUSE 一系的话，应该是比较好安装的。在这里，我们使用软件包安装。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-10-14T09:47:19+08:00">
+    <meta property="article:modified_time" content="2021-10-14T09:47:19+08:00">
+    <meta property="article:tag" content="Nextcloud">
+    <meta property="article:tag" content="Collabora Office">
+
+  <meta itemprop="name" content="安装 Collabora Office">
+  <meta itemprop="description" content="最近在配置 Nextcloud 的 Office 功能，尝试了一下 OnlyOffice ，实在是太不稳定了。我最终选择了 Collabora Office 作为替代。
+首先，极其不推荐使用 Docker 部署，因为 Docker 版已经好久没维护了，其次，如果你使用的是 Debian 、 CentOS 、 OpenSUSE 一系的话，应该是比较好安装的。在这里，我们使用软件包安装。">
+  <meta itemprop="datePublished" content="2021-10-14T09:47:19+08:00">
+  <meta itemprop="dateModified" content="2021-10-14T09:47:19+08:00">
+  <meta itemprop="wordCount" content="216">
+  <meta itemprop="keywords" content="Nextcloud,Collabora Office">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="安装 Collabora Office">
+  <meta name="twitter:description" content="最近在配置 Nextcloud 的 Office 功能，尝试了一下 OnlyOffice ，实在是太不稳定了。我最终选择了 Collabora Office 作为替代。
+首先，极其不推荐使用 Docker 部署，因为 Docker 版已经好久没维护了，其次，如果你使用的是 Debian 、 CentOS 、 OpenSUSE 一系的话，应该是比较好安装的。在这里，我们使用软件包安装。">
 
 
 
@@ -265,7 +278,7 @@ sudo systemctl restart loolwsd
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

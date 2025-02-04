@@ -17,7 +17,8 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复返工意义不大，不如当作笔记，学完了然后自己再重新写一篇。本篇文章主要就是来讲一讲 Rust 的内存所有权机制，这部分其实不难，但与我们平常代码的编码有很大不同。本文主要也是将学习 Rust 过程中的一些见解进行发布，内容比较单独，可以独立成篇。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/talk-about-rust-memory/" />
@@ -46,19 +47,26 @@
 
 
 
-<meta property="og:title" content="简单谈一谈 Rust 的内存管理" />
-<meta property="og:description" content="本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/talk-about-rust-memory/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-10-31T17:13:41+08:00" />
-<meta property="article:modified_time" content="2021-10-31T17:13:41+08:00" />
-<meta itemprop="name" content="简单谈一谈 Rust 的内存管理">
-<meta itemprop="description" content="本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复"><meta itemprop="datePublished" content="2021-10-31T17:13:41+08:00" />
-<meta itemprop="dateModified" content="2021-10-31T17:13:41+08:00" />
-<meta itemprop="wordCount" content="1212">
-<meta itemprop="keywords" content="rust," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="简单谈一谈 Rust 的内存管理"/>
-<meta name="twitter:description" content="本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复"/>
+<meta property="og:url" content="https://bigshans.github.io/post/talk-about-rust-memory/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="简单谈一谈 Rust 的内存管理">
+  <meta property="og:description" content="本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复返工意义不大，不如当作笔记，学完了然后自己再重新写一篇。本篇文章主要就是来讲一讲 Rust 的内存所有权机制，这部分其实不难，但与我们平常代码的编码有很大不同。本文主要也是将学习 Rust 过程中的一些见解进行发布，内容比较单独，可以独立成篇。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-10-31T17:13:41+08:00">
+    <meta property="article:modified_time" content="2021-10-31T17:13:41+08:00">
+    <meta property="article:tag" content="Rust">
+
+  <meta itemprop="name" content="简单谈一谈 Rust 的内存管理">
+  <meta itemprop="description" content="本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复返工意义不大，不如当作笔记，学完了然后自己再重新写一篇。本篇文章主要就是来讲一讲 Rust 的内存所有权机制，这部分其实不难，但与我们平常代码的编码有很大不同。本文主要也是将学习 Rust 过程中的一些见解进行发布，内容比较单独，可以独立成篇。">
+  <meta itemprop="datePublished" content="2021-10-31T17:13:41+08:00">
+  <meta itemprop="dateModified" content="2021-10-31T17:13:41+08:00">
+  <meta itemprop="wordCount" content="1212">
+  <meta itemprop="keywords" content="Rust">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="简单谈一谈 Rust 的内存管理">
+  <meta name="twitter:description" content="本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复返工意义不大，不如当作笔记，学完了然后自己再重新写一篇。本篇文章主要就是来讲一讲 Rust 的内存所有权机制，这部分其实不难，但与我们平常代码的编码有很大不同。本文主要也是将学习 Rust 过程中的一些见解进行发布，内容比较单独，可以独立成篇。">
 
 
 
@@ -301,7 +309,7 @@ fn len(s: String) -&gt; (String, usize) {
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

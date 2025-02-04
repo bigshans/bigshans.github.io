@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="阅读的文章是关于事件捕获与事件冒泡先后执行顺序 ，写得挺好的，就是我读的时候漏了一点。 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width&amp;quot;&amp;gt; &amp;lt;title&amp;gt;DOM 冒泡&amp;lt;/title&amp;gt; &amp;lt;style type=&amp;quot;text/css&amp;quot;" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="阅读的文章是关于事件捕获与事件冒泡先后执行顺序 ，写得挺好的，就是我读的时候漏了一点。
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt; &lt;title&gt;DOM 冒泡&lt;/title&gt; &lt;style type=&quot;text/css&quot; media=&quot;all&quot;&gt; #parent { height: 100px; width: 100%; background: green; } #child { height: 50px; width: 50%; background: yellow; } #button { height: 30px; width: 10%; background: white; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&quot;parent&quot;&gt; &lt;div id=&quot;child&quot;&gt; &lt;div id=&quot;button&quot;&gt;按钮&lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;script&gt; window.onload = function() { const qId = (name) =&gt; document.getElementById(name); const qTg = (name) =&gt; document.getElementsByTagName(name)[0]; const parent = qId(&#39;parent&#39;); const child = qId(&#39;child&#39;); const button = qId(&#39;button&#39;); parent.addEventListener(&#39;click&#39;, () =&gt; console.log(&#39;parent click 事件&#39;), true); child.addEventListener(&#39;click&#39;, () =&gt; console.log(&#39;child click 事件&#39;), true); button.onclick = () =&gt; console.log(&#39;button click 冒泡&#39;); button.addEventListener(&#39;click&#39;, () =&gt; console.log(&#39;button click 事件&#39;), true); parent.onclick = () =&gt; console.log(&#39;parent click 冒泡&#39;); child.onclick = () =&gt; console.log(&#39;child click 冒泡&#39;); } &lt;/script&gt; &lt;/body&gt; &lt;/html&gt; 首先结论是对的。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/" />
@@ -46,19 +48,30 @@
 
 
 
-<meta property="og:title" content="《事件捕获与事件冒泡》补遗" />
-<meta property="og:description" content="阅读的文章是关于事件捕获与事件冒泡先后执行顺序 ，写得挺好的，就是我读的时候漏了一点。 &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt; &lt;title&gt;DOM 冒泡&lt;/title&gt; &lt;style type=&quot;text/css&quot;" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-05-17T10:46:28+08:00" />
-<meta property="article:modified_time" content="2022-05-17T10:46:28+08:00" />
-<meta itemprop="name" content="《事件捕获与事件冒泡》补遗">
-<meta itemprop="description" content="阅读的文章是关于事件捕获与事件冒泡先后执行顺序 ，写得挺好的，就是我读的时候漏了一点。 &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt; &lt;title&gt;DOM 冒泡&lt;/title&gt; &lt;style type=&quot;text/css&quot;"><meta itemprop="datePublished" content="2022-05-17T10:46:28+08:00" />
-<meta itemprop="dateModified" content="2022-05-17T10:46:28+08:00" />
-<meta itemprop="wordCount" content="438">
-<meta itemprop="keywords" content="Javascript,浏览器," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="《事件捕获与事件冒泡》补遗"/>
-<meta name="twitter:description" content="阅读的文章是关于事件捕获与事件冒泡先后执行顺序 ，写得挺好的，就是我读的时候漏了一点。 &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt; &lt;title&gt;DOM 冒泡&lt;/title&gt; &lt;style type=&quot;text/css&quot;"/>
+<meta property="og:url" content="https://bigshans.github.io/post/%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="《事件捕获与事件冒泡》补遗">
+  <meta property="og:description" content="阅读的文章是关于事件捕获与事件冒泡先后执行顺序 ，写得挺好的，就是我读的时候漏了一点。
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&#34;utf-8&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width&#34;&gt; &lt;title&gt;DOM 冒泡&lt;/title&gt; &lt;style type=&#34;text/css&#34; media=&#34;all&#34;&gt; #parent { height: 100px; width: 100%; background: green; } #child { height: 50px; width: 50%; background: yellow; } #button { height: 30px; width: 10%; background: white; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#34;parent&#34;&gt; &lt;div id=&#34;child&#34;&gt; &lt;div id=&#34;button&#34;&gt;按钮&lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;script&gt; window.onload = function() { const qId = (name) =&gt; document.getElementById(name); const qTg = (name) =&gt; document.getElementsByTagName(name)[0]; const parent = qId(&#39;parent&#39;); const child = qId(&#39;child&#39;); const button = qId(&#39;button&#39;); parent.addEventListener(&#39;click&#39;, () =&gt; console.log(&#39;parent click 事件&#39;), true); child.addEventListener(&#39;click&#39;, () =&gt; console.log(&#39;child click 事件&#39;), true); button.onclick = () =&gt; console.log(&#39;button click 冒泡&#39;); button.addEventListener(&#39;click&#39;, () =&gt; console.log(&#39;button click 事件&#39;), true); parent.onclick = () =&gt; console.log(&#39;parent click 冒泡&#39;); child.onclick = () =&gt; console.log(&#39;child click 冒泡&#39;); } &lt;/script&gt; &lt;/body&gt; &lt;/html&gt; 首先结论是对的。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-05-17T10:46:28+08:00">
+    <meta property="article:modified_time" content="2022-05-17T10:46:28+08:00">
+    <meta property="article:tag" content="Javascript">
+    <meta property="article:tag" content="浏览器">
+
+  <meta itemprop="name" content="《事件捕获与事件冒泡》补遗">
+  <meta itemprop="description" content="阅读的文章是关于事件捕获与事件冒泡先后执行顺序 ，写得挺好的，就是我读的时候漏了一点。
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&#34;utf-8&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width&#34;&gt; &lt;title&gt;DOM 冒泡&lt;/title&gt; &lt;style type=&#34;text/css&#34; media=&#34;all&#34;&gt; #parent { height: 100px; width: 100%; background: green; } #child { height: 50px; width: 50%; background: yellow; } #button { height: 30px; width: 10%; background: white; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#34;parent&#34;&gt; &lt;div id=&#34;child&#34;&gt; &lt;div id=&#34;button&#34;&gt;按钮&lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;script&gt; window.onload = function() { const qId = (name) =&gt; document.getElementById(name); const qTg = (name) =&gt; document.getElementsByTagName(name)[0]; const parent = qId(&#39;parent&#39;); const child = qId(&#39;child&#39;); const button = qId(&#39;button&#39;); parent.addEventListener(&#39;click&#39;, () =&gt; console.log(&#39;parent click 事件&#39;), true); child.addEventListener(&#39;click&#39;, () =&gt; console.log(&#39;child click 事件&#39;), true); button.onclick = () =&gt; console.log(&#39;button click 冒泡&#39;); button.addEventListener(&#39;click&#39;, () =&gt; console.log(&#39;button click 事件&#39;), true); parent.onclick = () =&gt; console.log(&#39;parent click 冒泡&#39;); child.onclick = () =&gt; console.log(&#39;child click 冒泡&#39;); } &lt;/script&gt; &lt;/body&gt; &lt;/html&gt; 首先结论是对的。">
+  <meta itemprop="datePublished" content="2022-05-17T10:46:28+08:00">
+  <meta itemprop="dateModified" content="2022-05-17T10:46:28+08:00">
+  <meta itemprop="wordCount" content="438">
+  <meta itemprop="keywords" content="Javascript,浏览器">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="《事件捕获与事件冒泡》补遗">
+  <meta name="twitter:description" content="阅读的文章是关于事件捕获与事件冒泡先后执行顺序 ，写得挺好的，就是我读的时候漏了一点。
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&#34;utf-8&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width&#34;&gt; &lt;title&gt;DOM 冒泡&lt;/title&gt; &lt;style type=&#34;text/css&#34; media=&#34;all&#34;&gt; #parent { height: 100px; width: 100%; background: green; } #child { height: 50px; width: 50%; background: yellow; } #button { height: 30px; width: 10%; background: white; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#34;parent&#34;&gt; &lt;div id=&#34;child&#34;&gt; &lt;div id=&#34;button&#34;&gt;按钮&lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;script&gt; window.onload = function() { const qId = (name) =&gt; document.getElementById(name); const qTg = (name) =&gt; document.getElementsByTagName(name)[0]; const parent = qId(&#39;parent&#39;); const child = qId(&#39;child&#39;); const button = qId(&#39;button&#39;); parent.addEventListener(&#39;click&#39;, () =&gt; console.log(&#39;parent click 事件&#39;), true); child.addEventListener(&#39;click&#39;, () =&gt; console.log(&#39;child click 事件&#39;), true); button.onclick = () =&gt; console.log(&#39;button click 冒泡&#39;); button.addEventListener(&#39;click&#39;, () =&gt; console.log(&#39;button click 事件&#39;), true); parent.onclick = () =&gt; console.log(&#39;parent click 冒泡&#39;); child.onclick = () =&gt; console.log(&#39;child click 冒泡&#39;); } &lt;/script&gt; &lt;/body&gt; &lt;/html&gt; 首先结论是对的。">
 
 
 
@@ -255,8 +268,7 @@
 <blockquote>
 <p>在捕获阶段，先由外向内执行捕获事件；</p>
 <p>当事件触发在目标阶段时，会根据事件注册的先后顺序执行。也就是说如果该处既注册了冒泡事件，也注册了捕获事件，则按照注册顺序执行；</p>
-<p>在冒泡阶段，由内向外冒泡到根节点上。</p>
-</blockquote>
+<p>在冒泡阶段，由内向外冒泡到根节点上。</p></blockquote>
 <p>但我忘了 <code>addEventListener</code> 还有一个 <code>useCapture</code> 的参数。 <code>useCapture</code> 决定了添加的事件是冒泡还是捕获，而默认为 <code>false</code> ，所以是冒泡。 <code>onclick</code> 之类的都是冒泡。</p>
 <p>阻止事件冒泡和事件捕获都使用 <code>stopPropagation()</code> 。 <code>preventDefault()</code> 是用于取消事件，而不是阻止事件。</p>
 
@@ -315,7 +327,7 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

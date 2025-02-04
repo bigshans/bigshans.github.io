@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="一个很恶心的需求，到部署最后部署的时候才发现问题很大，但只好死马当活马医了。 我们目前搞了两个项目，其中一个项目是传统 Vue 项目，另一个是 Angular SSR ，刚" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="一个很恶心的需求，到部署最后部署的时候才发现问题很大，但只好死马当活马医了。
+我们目前搞了两个项目，其中一个项目是传统 Vue 项目，另一个是 Angular SSR ，刚开始的时候，我们设想两个项目会由 Nginx 根据路由进行分流请求到不同项目，这样我们就可以不用将全部项目改造为 SSR 。设想很美好，但是我们漏考虑了一个点，我接下来就会说。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/nginx-route-to-different-items-by-address/" />
@@ -46,19 +48,31 @@
 
 
 
-<meta property="og:title" content="Nginx 按路由分流请求" />
-<meta property="og:description" content="一个很恶心的需求，到部署最后部署的时候才发现问题很大，但只好死马当活马医了。 我们目前搞了两个项目，其中一个项目是传统 Vue 项目，另一个是 Angular SSR ，刚" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/nginx-route-to-different-items-by-address/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-11-30T14:04:23+08:00" />
-<meta property="article:modified_time" content="2021-11-30T14:04:23+08:00" />
-<meta itemprop="name" content="Nginx 按路由分流请求">
-<meta itemprop="description" content="一个很恶心的需求，到部署最后部署的时候才发现问题很大，但只好死马当活马医了。 我们目前搞了两个项目，其中一个项目是传统 Vue 项目，另一个是 Angular SSR ，刚"><meta itemprop="datePublished" content="2021-11-30T14:04:23+08:00" />
-<meta itemprop="dateModified" content="2021-11-30T14:04:23+08:00" />
-<meta itemprop="wordCount" content="609">
-<meta itemprop="keywords" content="Nginx,前端,运维," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Nginx 按路由分流请求"/>
-<meta name="twitter:description" content="一个很恶心的需求，到部署最后部署的时候才发现问题很大，但只好死马当活马医了。 我们目前搞了两个项目，其中一个项目是传统 Vue 项目，另一个是 Angular SSR ，刚"/>
+<meta property="og:url" content="https://bigshans.github.io/post/nginx-route-to-different-items-by-address/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="Nginx 按路由分流请求">
+  <meta property="og:description" content="一个很恶心的需求，到部署最后部署的时候才发现问题很大，但只好死马当活马医了。
+我们目前搞了两个项目，其中一个项目是传统 Vue 项目，另一个是 Angular SSR ，刚开始的时候，我们设想两个项目会由 Nginx 根据路由进行分流请求到不同项目，这样我们就可以不用将全部项目改造为 SSR 。设想很美好，但是我们漏考虑了一个点，我接下来就会说。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-11-30T14:04:23+08:00">
+    <meta property="article:modified_time" content="2021-11-30T14:04:23+08:00">
+    <meta property="article:tag" content="Nginx">
+    <meta property="article:tag" content="前端">
+    <meta property="article:tag" content="运维">
+
+  <meta itemprop="name" content="Nginx 按路由分流请求">
+  <meta itemprop="description" content="一个很恶心的需求，到部署最后部署的时候才发现问题很大，但只好死马当活马医了。
+我们目前搞了两个项目，其中一个项目是传统 Vue 项目，另一个是 Angular SSR ，刚开始的时候，我们设想两个项目会由 Nginx 根据路由进行分流请求到不同项目，这样我们就可以不用将全部项目改造为 SSR 。设想很美好，但是我们漏考虑了一个点，我接下来就会说。">
+  <meta itemprop="datePublished" content="2021-11-30T14:04:23+08:00">
+  <meta itemprop="dateModified" content="2021-11-30T14:04:23+08:00">
+  <meta itemprop="wordCount" content="609">
+  <meta itemprop="keywords" content="Nginx,前端,运维">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Nginx 按路由分流请求">
+  <meta name="twitter:description" content="一个很恶心的需求，到部署最后部署的时候才发现问题很大，但只好死马当活马医了。
+我们目前搞了两个项目，其中一个项目是传统 Vue 项目，另一个是 Angular SSR ，刚开始的时候，我们设想两个项目会由 Nginx 根据路由进行分流请求到不同项目，这样我们就可以不用将全部项目改造为 SSR 。设想很美好，但是我们漏考虑了一个点，我接下来就会说。">
 
 
 
@@ -278,7 +292,7 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

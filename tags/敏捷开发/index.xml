@@ -4,18 +4,17 @@
     <title>敏捷开发 on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</link>
     <description>Recent content in 敏捷开发 on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 07 Jul 2022 16:21:41 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Jul 2022 16:21:41 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>人、管理与软件开发——从敏捷开发谈起</title>
       <link>https://bigshans.github.io/post/%E4%BA%BA-%E7%AE%A1%E7%90%86%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
       <pubDate>Thu, 07 Jul 2022 16:21:41 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/%E4%BA%BA-%E7%AE%A1%E7%90%86%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</guid>
-      <description>敏捷开发本质上是后福特主义在软件工程方面的实践，两者在组织管理方面的理念简直如出一辙。事实上，在欧美企业大量转向后福特的管理制度之后，敏捷的</description>
+      <description>&lt;p&gt;敏捷开发本质上是后福特主义在软件工程方面的实践，两者在组织管理方面的理念简直如出一辙。事实上，在欧美企业大量转向后福特的管理制度之后，敏捷的出现只不过是时间问题。甚至说，敏捷开发与管理制度关系如此紧密，以至于敏捷开发本身就是一种管理制度。由此，我们就可以明白，为什么国内大多数企业的敏捷开发都失败了。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

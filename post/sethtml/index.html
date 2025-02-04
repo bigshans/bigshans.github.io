@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="算是私人页的一个 BUG ，之前没有注意到。使用 innerHTML 进行替换后，替换内容内所有的 script 都失效了，这是符合浏览器预期的，可见 MDN 。 Although this may look like a cross-site scripting attack, the result is harmless. HTML" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="算是私人页的一个 BUG ，之前没有注意到。使用 innerHTML 进行替换后，替换内容内所有的 script 都失效了，这是符合浏览器预期的，可见 MDN 。
+Although this may look like a cross-site scripting attack, the result is harmless. HTML specifies that a &lt;script&gt; tag inserted with innerHTML should not execute.
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/sethtml/" />
@@ -46,19 +48,29 @@
 
 
 
-<meta property="og:title" content="如何正确的替换 HTML" />
-<meta property="og:description" content="算是私人页的一个 BUG ，之前没有注意到。使用 innerHTML 进行替换后，替换内容内所有的 script 都失效了，这是符合浏览器预期的，可见 MDN 。 Although this may look like a cross-site scripting attack, the result is harmless. HTML" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/sethtml/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-02-18T14:08:26+08:00" />
-<meta property="article:modified_time" content="2023-02-18T14:08:26+08:00" />
-<meta itemprop="name" content="如何正确的替换 HTML">
-<meta itemprop="description" content="算是私人页的一个 BUG ，之前没有注意到。使用 innerHTML 进行替换后，替换内容内所有的 script 都失效了，这是符合浏览器预期的，可见 MDN 。 Although this may look like a cross-site scripting attack, the result is harmless. HTML"><meta itemprop="datePublished" content="2023-02-18T14:08:26+08:00" />
-<meta itemprop="dateModified" content="2023-02-18T14:08:26+08:00" />
-<meta itemprop="wordCount" content="356">
-<meta itemprop="keywords" content="前端," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="如何正确的替换 HTML"/>
-<meta name="twitter:description" content="算是私人页的一个 BUG ，之前没有注意到。使用 innerHTML 进行替换后，替换内容内所有的 script 都失效了，这是符合浏览器预期的，可见 MDN 。 Although this may look like a cross-site scripting attack, the result is harmless. HTML"/>
+<meta property="og:url" content="https://bigshans.github.io/post/sethtml/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="如何正确的替换 HTML">
+  <meta property="og:description" content="算是私人页的一个 BUG ，之前没有注意到。使用 innerHTML 进行替换后，替换内容内所有的 script 都失效了，这是符合浏览器预期的，可见 MDN 。
+Although this may look like a cross-site scripting attack, the result is harmless. HTML specifies that a &lt;script&gt; tag inserted with innerHTML should not execute.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-02-18T14:08:26+08:00">
+    <meta property="article:modified_time" content="2023-02-18T14:08:26+08:00">
+    <meta property="article:tag" content="前端">
+
+  <meta itemprop="name" content="如何正确的替换 HTML">
+  <meta itemprop="description" content="算是私人页的一个 BUG ，之前没有注意到。使用 innerHTML 进行替换后，替换内容内所有的 script 都失效了，这是符合浏览器预期的，可见 MDN 。
+Although this may look like a cross-site scripting attack, the result is harmless. HTML specifies that a &lt;script&gt; tag inserted with innerHTML should not execute.">
+  <meta itemprop="datePublished" content="2023-02-18T14:08:26+08:00">
+  <meta itemprop="dateModified" content="2023-02-18T14:08:26+08:00">
+  <meta itemprop="wordCount" content="356">
+  <meta itemprop="keywords" content="前端">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="如何正确的替换 HTML">
+  <meta name="twitter:description" content="算是私人页的一个 BUG ，之前没有注意到。使用 innerHTML 进行替换后，替换内容内所有的 script 都失效了，这是符合浏览器预期的，可见 MDN 。
+Although this may look like a cross-site scripting attack, the result is harmless. HTML specifies that a &lt;script&gt; tag inserted with innerHTML should not execute.">
 
 
 
@@ -202,8 +214,7 @@
     <div class="post-content">
       <p>算是私人页的一个 BUG ，之前没有注意到。使用 <code>innerHTML</code> 进行替换后，替换内容内所有的 <code>script</code> 都失效了，这是符合浏览器预期的，可见 MDN 。</p>
 <blockquote>
-<p>Although this may look like a cross-site scripting attack, the result is harmless. HTML specifies that a <code>&lt;script&gt;</code> tag inserted with innerHTML should not execute.</p>
-</blockquote>
+<p>Although this may look like a cross-site scripting attack, the result is harmless. HTML specifies that a <code>&lt;script&gt;</code> tag inserted with innerHTML should not execute.</p></blockquote>
 <p>换句话说，如果你不是插入 <code>&lt;script&gt;</code> 标签的话，<code>innerHTML</code> 是不执行的。但现状是，我需要它执行。我也不想要一个个去插入 <code>&lt;script&gt;</code> ，这不现实。因此，我想到的办法是 <code>eval()</code> 。</p>
 <p>虽然 <code>eval()</code> 挺脏的，但在这种情景下是可预期的。步骤可以分为两步，第一步替换 HTML ，第二步获取脚本执行。脚本分为两种，一种是内嵌的 JavaScript 代码，另一种则需要我去手动拉取。我个人直接用了 <code>fetch</code> 。 <code>fetch</code> 基本上主流的浏览器都兼容了，并不需要太多的思考。</p>
 <p>代码如下：</p>
@@ -278,7 +289,7 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

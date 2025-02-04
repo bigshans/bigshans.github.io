@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/" />
@@ -48,14 +48,20 @@
 
 
 
-<meta property="og:title" content="Bigshans&#39; Blog" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://bigshans.github.io/" />
-<meta itemprop="name" content="Bigshans&#39; Blog">
-<meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Bigshans&#39; Blog"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
+<meta property="og:url" content="https://bigshans.github.io/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="Bigshans&#39; Blog">
+  <meta property="og:description" content="Hugo theme even example site.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Bigshans&#39; Blog">
+  <meta itemprop="description" content="Hugo theme even example site.">
+  <meta itemprop="datePublished" content="2024-12-29T22:56:17+08:00">
+  <meta itemprop="dateModified" content="2024-12-29T22:56:17+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bigshans&#39; Blog">
+  <meta name="twitter:description" content="Hugo theme even example site.">
 
 
 
@@ -192,7 +198,9 @@
   <div class="post-content">
     <div class="post-summary">
     
-      首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。 kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的
+      首先，感谢知乎文章 https://zhuanlan.zhihu.com/p/59755939 提供了纯 numpy 的写法，我这个也基本上是抄他的。
+kNN 算法算是非常简单的了，但越是简单就越是要自己实现一下子。这里实现的是最基础的 kNN ， kNN 的缺点还是比较大的，在有更好算法的前提下我们并不用它。
+
     
     </div>
     <div class="read-more">
@@ -217,7 +225,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      有些学问还是自己研究最为靠谱，像是 overflow 为什么能清 float ，都知道是 BFC ，但是为什么呢？因为在文档流中，普通的 div 其实也是 BFC ，所以，理论上添加 overflow 为非 visible 的时
+      有些学问还是自己研究最为靠谱，像是 overflow 为什么能清 float ，都知道是 BFC ，但是为什么呢？因为在文档流中，普通的 div 其实也是 BFC ，所以，理论上添加 overflow 为非 visible 的时候，它也仍然是 BFC 啊？所以，问题在哪里呢？
+
     
     </div>
     <div class="read-more">
@@ -242,7 +251,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      应工作之要，最近在看机器学习。虽然机器学习挺火的，然而好的机器学习教程真的少，不少是掐住了人们急功近利的心态，提供各种“一口吃成个胖子”的“
+      应工作之要，最近在看机器学习。虽然机器学习挺火的，然而好的机器学习教程真的少，不少是掐住了人们急功近利的心态，提供各种“一口吃成个胖子”的“食谱”。我也是品尝了许多，现在隐隐约约看出点门道来。入门机器学习，不等于入门深度学习，初学者没必要一开始深扎到学术前沿去，而且不少像我这样的开发者更习惯从用出发，像机器学习这种原理性较强的工程，我们就很吃亏了。比起如何提供更好的算法，我们更关心如何针对现有问题利用现有算法解决问题。虽然相关的包已经很多了，但一些特殊需求还是驱使我们去学习 Tensorflow 以特异化我们的工程。
+
     
     </div>
     <div class="read-more">
@@ -267,7 +277,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复
+      本来是准备发一篇非常长的 Rust 入门文章的，但是坚持了很多次，实在是受不了了。主要是边学边写完全是一直在打脸，非要等到全部学完了才行，那篇反反复复返工意义不大，不如当作笔记，学完了然后自己再重新写一篇。本篇文章主要就是来讲一讲 Rust 的内存所有权机制，这部分其实不难，但与我们平常代码的编码有很大不同。本文主要也是将学习 Rust 过程中的一些见解进行发布，内容比较单独，可以独立成篇。
+
     
     </div>
     <div class="read-more">
@@ -292,7 +303,10 @@
   <div class="post-content">
     <div class="post-summary">
     
-      关于死亡，最让我触动的一句话莫过于加缪在西西弗斯神话里的那句： 唯一严肃的哲学问题，就是自杀。 这个讨论十分有趣，我曾深深陷入到自杀的逻辑里面不
+      关于死亡，最让我触动的一句话莫过于加缪在西西弗斯神话里的那句：
+唯一严肃的哲学问题，就是自杀。
+这个讨论十分有趣，我曾深深陷入到自杀的逻辑里面不可自拔。事实上，加缪正是要反对自杀，试图以哲学的方式赋予活著以必然性，然而他失败了。加缪在自杀上的问题是，仍然需要依靠“信仰的飞跃”来完成对自杀的否定。
+
     
     </div>
     <div class="read-more">
@@ -317,7 +331,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      最近又写了一个 PKGBUILD 传到了 AUR 。不过距离上一次打包已经过去很久了，这些包其实许久没有更新了，就到我自己都忘了要怎么打包了。因为一些常用命令经常记不
+      最近又写了一个 PKGBUILD 传到了 AUR 。不过距离上一次打包已经过去很久了，这些包其实许久没有更新了，就到我自己都忘了要怎么打包了。因为一些常用命令经常记不住，所以就简单写一篇记录一下。
+
     
     </div>
     <div class="read-more">
@@ -342,7 +357,9 @@
   <div class="post-content">
     <div class="post-summary">
     
-      numpy 几乎可以说是 python 矩阵计算的基础库了，众多大数据处理框架都引用了它。因此，如果我们有意向大数据前进，我们必不可不面对它。 预备前提 如果你想要学习
+      numpy 几乎可以说是 python 矩阵计算的基础库了，众多大数据处理框架都引用了它。因此，如果我们有意向大数据前进，我们必不可不面对它。
+预备前提 如果你想要学习 numpy ，你至少需要具备以下基础：
+
     
     </div>
     <div class="read-more">
@@ -367,7 +384,9 @@
   <div class="post-content">
     <div class="post-summary">
     
-      不实际进行使用我还注意不到这个区别，就是 read 这个命令在 zsh 和 bash 下是不同的。 缘起 起因是我在脚本里写的两个命令同时都用了 read ，区别在于一个是封装在 bash 脚
+      不实际进行使用我还注意不到这个区别，就是 read 这个命令在 zsh 和 bash 下是不同的。
+缘起 起因是我在脚本里写的两个命令同时都用了 read ，区别在于一个是封装在 bash 脚本里的，另一个是封装成 zsh 函数。因而当我使用 -p 参数的时候， zsh 就会报错给我 read: -p: no coprocess 。
+
     
     </div>
     <div class="read-more">
@@ -397,7 +416,9 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
+    <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

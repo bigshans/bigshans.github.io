@@ -4,266 +4,206 @@
     <title>Linux on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/tags/linux/</link>
     <description>Recent content in Linux on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Fri, 03 May 2024 13:38:44 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 May 2024 13:38:44 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在 plasma 上使用 Meta 打开开始菜单</title>
       <link>https://bigshans.github.io/post/use-meta-only-for-plasma/</link>
       <pubDate>Fri, 03 May 2024 13:38:44 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/use-meta-only-for-plasma/</guid>
-      <description>使用 Meta 打开开始菜单是一个非常方便的功能，最早在 Plasma 上，可以使用 ksuperkey 来实现。不过 ksuperkey 仅支持 X11 ，在 Plasma on Wayland 就失去作用了。不过 Plasma 很早之前就将这个功能内置了</description>
+      <description>&lt;p&gt;使用 &lt;code&gt;Meta&lt;/code&gt; 打开开始菜单是一个非常方便的功能，最早在&#xA;Plasma 上，可以使用 &lt;code&gt;ksuperkey&lt;/code&gt; 来实现。不过&#xA;&lt;code&gt;ksuperkey&lt;/code&gt; 仅支持 X11 ，在 Plasma on Wayland&#xA;就失去作用了。不过 Plasma 很早之前就将这个功能内置了，详见&lt;a&#xA;href=&#34;https://zren.github.io/kde/#windowsmeta-key&#34;&gt;此处&lt;/a&gt; 。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>重装 arch</title>
       <link>https://bigshans.github.io/post/%E9%87%8D%E8%A3%85arch/</link>
       <pubDate>Sun, 26 Feb 2023 14:01:31 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/%E9%87%8D%E8%A3%85arch/</guid>
-      <description>昨天 KDE 不知道什么原因滚挂了，于是我决定重装系统。最近 KDE 在我的机子上经常崩溃，我也不想修了，因为真的修不起来。距离上一次重装不知道什么时候了，</description>
+      <description>&lt;p&gt;昨天 KDE 不知道什么原因滚挂了，于是我决定重装系统。最近 KDE&#xA;在我的机子上经常崩溃，我也不想修了，因为真的修不起来。距离上一次重装不知道什么时候了，但&#xA;Arch 的稳定程度其实是可以的，只要你不是故意去 Arch Testing 。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>修复plasma全局快捷键无法设置</title>
       <link>https://bigshans.github.io/post/%E4%BF%AE%E5%A4%8Dplasma%E5%85%A8%E5%B1%80%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%97%A0%E6%B3%95%E8%AE%BE%E7%BD%AE/</link>
       <pubDate>Sat, 04 Feb 2023 20:22:00 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/%E4%BF%AE%E5%A4%8Dplasma%E5%85%A8%E5%B1%80%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%97%A0%E6%B3%95%E8%AE%BE%E7%BD%AE/</guid>
-      <description>起因是不知道什么时候，我打开 Plasma 的快捷键设置时，全局设置总是报错，但虽然报错，全局快捷键亦然很好使。 经过我一番努力的探索，我终于发现了问题所在</description>
+      <description>&lt;p&gt;起因是不知道什么时候，我打开 Plasma&#xA;的快捷键设置时，全局设置总是报错，但虽然报错，全局快捷键亦然很好使。&lt;/p&gt;&#xA;&lt;p&gt;经过我一番努力的探索，我终于发现了问题所在。&lt;/p&gt;&#xA;&lt;p&gt;可以参考以下的帖子：&#xA;https://forum.ubuntu.org.cn/viewtopic.php?t=491267 。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>解决在 Konsole 下的 Emoji 展示问题</title>
       <link>https://bigshans.github.io/post/konsole-emoji-show/</link>
       <pubDate>Fri, 09 Sep 2022 14:54:41 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/konsole-emoji-show/</guid>
-      <description>解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。 这里借助 Noto Emoji 来处理。 Arch 下安装 noto-fonts-emoji 包，然后将下面内容</description>
+      <description>&lt;p&gt;解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。&lt;/p&gt;&#xA;&lt;p&gt;这里借助 Noto Emoji 来处理。 Arch 下安装 &lt;code&gt;noto-fonts-emoji&lt;/code&gt; 包，然后将下面内容保存到 &lt;code&gt;~/.config/fontconfig/conf.d/99-noto-mono-color-emoji.conf&lt;/code&gt; 中去。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>将 snap 打包成 AUR</title>
       <link>https://bigshans.github.io/post/package-snap-to-pkg/</link>
       <pubDate>Fri, 09 Sep 2022 14:31:52 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/package-snap-to-pkg/</guid>
-      <description>masscode 仅仅提供了 snap 包给 Linux 版，但我并不想使用 snap ，所以就想单独打包。由于 masscode 是 electron 应用，所以理论上只需要拿到 resources/app.asar 就万事大吉了。 snap 包实际上是一个 squashfs ，所以打包</description>
+      <description>&lt;p&gt;masscode 仅仅提供了 snap 包给 Linux 版，但我并不想使用 snap ，所以就想单独打包。由于 masscode 是 electron 应用，所以理论上只需要拿到 &lt;code&gt;resources/app.asar&lt;/code&gt; 就万事大吉了。&lt;/p&gt;&#xA;&lt;p&gt;snap 包实际上是一个 squashfs ，所以打包需要使用 squashfs-tools 。解包直接运行命令 &lt;code&gt;unsquashfs &amp;lt;snap-name&amp;gt;&lt;/code&gt; 即可，包的内容放在当前目录的 &lt;code&gt;squashfs-root&lt;/code&gt; 文件夹下。进入文件夹就会发现与一般的 electron 应用无异了。接着可以按照一般的 electron 应用打包。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>在 Linux 上用 C 写一个守护进程</title>
       <link>https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/</link>
       <pubDate>Sat, 30 Jul 2022 23:26:25 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/write-a-daemon-with-c-in-linux/</guid>
-      <description>因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 fork() 方</description>
+      <description>&lt;p&gt;因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 &lt;code&gt;fork()&lt;/code&gt; 方法。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>修复 Keychron K2 的 Fn 键在 Arch 上不好使的问题</title>
       <link>https://bigshans.github.io/post/keychron-k2-fn-fixed/</link>
       <pubDate>Sun, 06 Mar 2022 14:24:56 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/keychron-k2-fn-fixed/</guid>
-      <description>话说 Keychron 这个软件系统兼容做的真差，没想到基础的 Fn 键也能出岔子。 虽然我已经将键盘布局改为 Windows 布局，但 Fn + F1~F12 仍然处于完全不能用的状态。 Windows 用户也不能幸</description>
+      <description>&lt;p&gt;话说 Keychron 这个软件系统兼容做的真差，没想到基础的 Fn 键也能出岔子。&lt;/p&gt;&#xA;&lt;p&gt;虽然我已经将键盘布局改为 Windows 布局，但 Fn + F1~F12 仍然处于完全不能用的状态。 Windows 用户也不能幸免。主要问题还是在于 Keychron 被识别为 Apple 键盘，导致 F1 到 F12 全被认为是媒体键。而 Mac 用户没有这个问题。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>在 Arch 上启用 QCY-T8 蓝牙耳机</title>
       <link>https://bigshans.github.io/post/bluetooth-erabuds-on-linux/</link>
       <pubDate>Sat, 05 Mar 2022 15:57:05 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/bluetooth-erabuds-on-linux/</guid>
-      <description>突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。 经过查找我发现了 pipeware ，一个 pulseaudio 的替代方</description>
+      <description>&lt;p&gt;突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。&lt;/p&gt;&#xA;&lt;p&gt;经过查找我发现了 pipeware ，一个 pulseaudio 的替代方案。根据 ArchWiki 的步骤，我装了 pipeware-pulse ，然而蓝牙还是没有正常检测到。然后我根据 ArchWiki 提供的配置，添加了一个文件。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Arch 打包备忘录</title>
       <link>https://bigshans.github.io/post/arch-pack-memo/</link>
       <pubDate>Sat, 30 Oct 2021 01:08:44 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/arch-pack-memo/</guid>
-      <description>最近又写了一个 PKGBUILD 传到了 AUR 。不过距离上一次打包已经过去很久了，这些包其实许久没有更新了，就到我自己都忘了要怎么打包了。因为一些常用命令经常记不</description>
+      <description>&lt;p&gt;最近又写了一个 PKGBUILD 传到了 AUR 。不过距离上一次打包已经过去很久了，这些包其实许久没有更新了，就到我自己都忘了要怎么打包了。因为一些常用命令经常记不住，所以就简单写一篇记录一下。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>为什么使用 zsh 以及为什么这样使用</title>
       <link>https://bigshans.github.io/post/why-and-how-use-zsh-this-way/</link>
       <pubDate>Wed, 22 Sep 2021 01:08:35 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/why-and-how-use-zsh-this-way/</guid>
-      <description>我使用 zsh 作为我的默认 shell 已经很长时间了，大概是从我使用 Debian 就开始了。当初的原因其实很简单，因为强大的 Oh My Zsh ，如今我用了这么久，想要重新疏理一下，</description>
+      <description>&lt;p&gt;我使用 zsh 作为我的默认 shell 已经很长时间了，大概是从我使用 Debian 就开始了。当初的原因其实很简单，因为强大的 Oh My Zsh ，如今我用了这么久，想要重新疏理一下，向你推荐这样使用 zsh 。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>写一个 Bash 补全函数</title>
       <link>https://bigshans.github.io/post/write-a-bash-complete/</link>
       <pubDate>Mon, 20 Sep 2021 01:33:29 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/write-a-bash-complete/</guid>
-      <description>我的配置文件里面有我以前封装的、用于管理博客文章的命令，只不过之前是用 Hexo ，而现在迁移到了 Hugo 上，已经好久没有了，现在发现，拂拂灰尘用起来还是很</description>
+      <description>&lt;p&gt;我的配置文件里面有我以前封装的、用于管理博客文章的命令，只不过之前是用 Hexo ，而现在迁移到了 Hugo 上，已经好久没有了，现在发现，拂拂灰尘用起来还是很带感的，但是没有自动补全总是欠缺点味道，于是我自己写了一个自动补全。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>在 Linux 下使用 Objective-C 编程</title>
       <link>https://bigshans.github.io/post/write-hello-world-by-objective-c/</link>
       <pubDate>Sun, 12 Sep 2021 20:33:41 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/write-hello-world-by-objective-c/</guid>
-      <description>GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。 Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需</description>
+      <description>&lt;p&gt;GCC 本来就可以编译 Objective-C ，以前我虽然尝试过，但是并没有成功。不过最近又想要弄着玩一下，学习一下 Objective-C 。&lt;/p&gt;&#xA;&lt;p&gt;Linux 是没有 XCode 这样的环境的，而如果想要使用 GCC 编译 Objective-C 需要 Objective-C front-end for GCC ，Arch 下面直接安装 gcc-objc 这个包就可以了。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>安装 Anbox for Arch</title>
       <link>https://bigshans.github.io/post/anbox-install-guide/</link>
       <pubDate>Sat, 24 Jul 2021 10:47:29 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/anbox-install-guide/</guid>
-      <description>台风天写这篇文章。 最近更新了 Linux 的内核，然后日常发布合并，日常逛 Issues 的时候，发现有人提出要 Anbox 的需求。Anbox 我试着安装过几次，然后每次装上都因</description>
+      <description>&lt;p&gt;台风天写这篇文章。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;最近更新了 Linux 的内核，然后日常发布合并，日常逛 Issues 的时候，发现有人提出要 Anbox 的需求。Anbox 我试着安装过几次，然后每次装上都因为各种问题而失败。然后这次我就想顺便把它成功装上。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>修复 Broken 了的 locale</title>
       <link>https://bigshans.github.io/post/fix-locale/</link>
       <pubDate>Mon, 26 Apr 2021 18:07:20 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/fix-locale/</guid>
-      <description>昨天做了一件非常错误的事情，就是使用 Bleachbit 清理了一下系统。 Bleachbit 直接把我的 locale 给直接删掉了，然而当时我并没有关注到这一点，关上电脑就睡觉了，然后第二天</description>
+      <description>&lt;p&gt;昨天做了一件非常错误的事情，就是使用 Bleachbit 清理了一下系统。 Bleachbit 直接把我的 locale 给直接删掉了，然而当时我并没有关注到这一点，关上电脑就睡觉了，然后第二天，中文就炸了。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>为什么选择 Linux 桌面</title>
       <link>https://bigshans.github.io/post/why-choose-linux-desktop/</link>
       <pubDate>Sun, 11 Apr 2021 18:18:57 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/why-choose-linux-desktop/</guid>
-      <description>今天算是创作欲爆棚了，想到了一点东西就又写一点。今天来探讨一下这个话题，为什么选择 Linux 桌面。 为什么选择 Linux 市面上日用消费者最多的操作系统，主要是</description>
+      <description>&lt;p&gt;今天算是创作欲爆棚了，想到了一点东西就又写一点。今天来探讨一下这个话题，为什么选择 Linux 桌面。&lt;/p&gt;&#xA;&lt;h2 id=&#34;为什么选择-linux&#34;&gt;为什么选择 Linux&lt;/h2&gt;&#xA;&lt;p&gt;市面上日用消费者最多的操作系统，主要是 Windows 和 MacOS ，你要把 Android 、 iOS 拉进来比也不是不可以，但是这里至少 GNU/Linux 不是主流。注意，这里我们说的 Linux 主要是 GNU/Linux ，我们指代最广的也是它。所以，我们为什么要用 Linux 呢？这就要看 Linux 与其它操作系统一个最重要的区别—— Libre 。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>rinted 做端口转发</title>
       <link>https://bigshans.github.io/post/rinted/</link>
       <pubDate>Sat, 15 Feb 2020 12:49:19 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/rinted/</guid>
       <description>&lt;p&gt;因为腾讯云的 Mongo 和 Redis 都是内网的地址，不能访问，官方说内网进行内网转发就行，于是就用 rinted 做了一个内网转发。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>systemd-nspawn 的简单使用</title>
       <link>https://bigshans.github.io/post/linux-systemdnspawn/</link>
       <pubDate>Sun, 24 Nov 2019 23:23:03 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/linux-systemdnspawn/</guid>
       <description>&lt;p&gt;systemd-nspawn 是 docker 与一样的 container 应用，只不过 docker 相比，跟类似于 chroot 。个人还是比较喜欢 chroot 这样的，这样有种子系统的感觉，与 docker 的 container 相比， chroot 下的操作是会被保留下来的， docker 和 chroot 还是两种不同情况，不可同语。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>在 linux 下备份系统</title>
       <link>https://bigshans.github.io/post/linux-backup/</link>
       <pubDate>Sun, 17 Nov 2019 22:13:03 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/linux-backup/</guid>
       <description>&lt;p&gt;新买的移动硬盘到了，着手做新的启动盘。在硬盘上分了一个 G ，然后用 Deepin 的启动盘制作工具做了一个启动盘。然后重启，启动 Deepin live cd ，然后还备份还是失败了。没办法，只能另寻他路。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>infinality font 字体渲染安装</title>
       <link>https://bigshans.github.io/post/infinality-font/</link>
       <pubDate>Sun, 03 Nov 2019 10:23:43 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/infinality-font/</guid>
-      <description>&lt;p&gt;最近在工作电脑上安装了 deepin ，发现字体渲染很糟糕，于是在想起了 infinality 补丁，由于我个人电脑上是 manjaro ， arch 源里就有该包，所以我查找一下，发现 Debian 系的也有打包，成功安装之后，特此记录一下。&lt;/p&gt;
-&lt;p&gt;原文链接：&lt;a href=&#34;https://www.linuxdashen.com/debian8%E5%AE%89%E8%A3%85infinality%E6%94%B9%E5%96%84%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%EF%BC%8C%E5%AE%89%E8%A3%85ubuntu%E5%AD%97%E4%BD%93&#34;&gt;https://www.linuxdashen.com/debian8安装infinality改善字体渲染，安装ubuntu字体&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;最近在工作电脑上安装了 deepin ，发现字体渲染很糟糕，于是在想起了 infinality 补丁，由于我个人电脑上是 manjaro ， arch 源里就有该包，所以我查找一下，发现 Debian 系的也有打包，成功安装之后，特此记录一下。&lt;/p&gt;&#xA;&lt;p&gt;原文链接：&lt;a href=&#34;https://www.linuxdashen.com/debian8%E5%AE%89%E8%A3%85infinality%E6%94%B9%E5%96%84%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%EF%BC%8C%E5%AE%89%E8%A3%85ubuntu%E5%AD%97%E4%BD%93&#34;&gt;https://www.linuxdashen.com/debian8安装infinality改善字体渲染，安装ubuntu字体&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>在 Debian 下使用 PPA</title>
       <link>https://bigshans.github.io/post/linux-ppa-add/</link>
       <pubDate>Wed, 26 Jun 2019 11:24:44 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/linux-ppa-add/</guid>
       <description>&lt;p&gt;仅仅使用 Debian 源里的软件包并不是很够，所以不可避免的，我们会使用一些第三方的软件源，比如 Arch 下的 aur ， Ubuntu 的 PPA ，等等。由于 Ubuntu 是 Debian 系的发行版，两者的包管理是相通的，所以我们可以借用一下 Ubuntu 的 PPA 来扩充我们的软件库。然而，两者毕竟不是同一发行版，所以还是会有很多的差别，我们并不能保证两者的软件包一定能通用，毕竟打包并不是针对 Debian 的，不过， Ubuntu 能用的， Debian 基本能用，所以，把 Ubuntu 的 ppa 拉过来还是很有意义的。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>nginx 反向代理上 Pixiv（二）</title>
       <link>https://bigshans.github.io/post/nginx-pixiv-2/</link>
       <pubDate>Fri, 12 Oct 2018 19:02:22 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/nginx-pixiv-2/</guid>
       <description>&lt;p&gt;这篇文章我发在 B 站了，地址是 &lt;a href=&#34;https://www.bilibili.com/read/cv1317348&#34;&gt;https://www.bilibili.com/read/cv1317348&lt;/a&gt; 。当然，这里我要讲细一点。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>nginx 反向代理上 Pixiv</title>
       <link>https://bigshans.github.io/post/nginx-pixiv/</link>
       <pubDate>Mon, 24 Sep 2018 15:40:34 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/nginx-pixiv/</guid>
       <description>&lt;p&gt;Pixiv 被墙了，上不了。我上了 Pixiv 的贴吧，刚好发现有人发帖说如何再上 P 站（ &lt;a href=&#34;https://tieba.baidu.com/p/5882385726&#34;&gt;https://tieba.baidu.com/p/5882385726&lt;/a&gt; ） 。使用 nginx 做反向代理，看着比较简单，于是自己试了试，由于 nginx 自己不太熟，所以是尽量完成。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>deb 打包指北</title>
       <link>https://bigshans.github.io/post/linux-deb-package/</link>
       <pubDate>Sun, 09 Sep 2018 19:18:52 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/linux-deb-package/</guid>
       <description>&lt;p&gt;最近几天在给我的一些软件打包，原本打算建立一个私人仓库，不过没有云还是算了。本地打包的话貌似空间不太够，不过首先还是要学习一下 debian 的相关知识的。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>在 linux 下搞定 nvidia 双显卡</title>
       <link>https://bigshans.github.io/post/linux-nvidia-bumblebee/</link>
       <pubDate>Sat, 08 Sep 2018 09:22:39 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/linux-nvidia-bumblebee/</guid>
       <description>&lt;p&gt;终于终于把双显卡整好了，该死的 NVIDIA 。为了双显卡我的桌面崩溃了几次，不过终于整好了。下面讲讲我处理这些的一些过程。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>hostname 也不要随便取</title>
       <link>https://bigshans.github.io/post/linux-hostname/</link>
       <pubDate>Wed, 05 Sep 2018 18:11:35 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/linux-hostname/</guid>
-      <description>&lt;p&gt;一个小问题，困扰很久了，最近解决掉了，就是不能以 root 打开任何 GUI ，打开之后不显示。
-问题在于我的 hostname 取成 localhost 了，所以打不开。。（下次不这样了）改个 hostname 就行。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hostnamectl set-hostname &amp;quot;myhostname&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>&lt;p&gt;一个小问题，困扰很久了，最近解决掉了，就是不能以 root 打开任何 GUI ，打开之后不显示。&#xA;问题在于我的 hostname 取成 localhost 了，所以打不开。。（下次不这样了）改个 hostname 就行。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hostnamectl set-hostname &amp;quot;myhostname&amp;quot;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
     <item>
       <title>安装 graph-easy</title>
       <link>https://bigshans.github.io/post/software-graph-easy/</link>
       <pubDate>Mon, 03 Sep 2018 17:34:16 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/software-graph-easy/</guid>
       <description>&lt;p&gt;推荐一个软件， graph-easy  。如果你查看文档的话，经常能看到一些 ascii 码流程画，个人觉得非常酷，于是去查找了一下，发现了这个软件。下面我将做一些简单的介绍。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>安装 deepin-wine 到 debian 上</title>
       <link>https://bigshans.github.io/post/software-deepin-wine/</link>
       <pubDate>Sun, 02 Sep 2018 19:21:21 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/software-deepin-wine/</guid>
       <description>&lt;p&gt;我尝试了一下 &lt;a href=&#34;https://github.com/wszqkzqk/deepin-wine-ubuntu&#34;&gt;deepin-wine-ubuntu&lt;/a&gt; 项目，不过无法正常装上。所以我自己尝试了一下安装 deepin-wine 并尝试了一下 deepin 的 QQ 和 TIM 。效果还不错。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>网易云音乐 for linux 不用 root 打开</title>
       <link>https://bigshans.github.io/post/software-netease-linux/</link>
       <pubDate>Wed, 29 Aug 2018 16:42:55 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/software-netease-linux/</guid>
-      <description>&lt;p&gt;从知乎上看到这个，非常感谢 Fancy 的努力。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/277330447/answer/478510195&#34;&gt;点击此处前往&lt;/a&gt;。&lt;/p&gt;</description>
+      <description>&lt;p&gt;从知乎上看到这个，非常感谢 Fancy 的努力。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/277330447/answer/478510195&#34;&gt;点击此处前往&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

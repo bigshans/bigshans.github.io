@@ -4,27 +4,24 @@
     <title>Golang on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/golang/</link>
     <description>Recent content in Golang on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Thu, 18 Aug 2022 03:42:04 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Aug 2022 03:42:04 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>对 Golang 的批评</title>
       <link>https://bigshans.github.io/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/</link>
       <pubDate>Thu, 18 Aug 2022 03:42:04 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/%E5%AF%B9golang%E7%9A%84%E6%89%B9%E8%AF%84/</guid>
-      <description>最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。 许多 Golang 的拥护者会称 Golang 是一门工程</description>
+      <description>&lt;p&gt;最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。&lt;/p&gt;&#xA;&lt;p&gt;许多 Golang 的拥护者会称 Golang 是一门工程语言，他们有一种误解，即是工程问题是代码问题。但事实是，工程问题是一个现实的逻辑问题，而代码问题是代码的管理问题。 Golang 并没有解决很多逻辑问题，它是砍去了很多特性，比如说循环依赖，它觉得不好，砍了； try catch 机制；不好，砍了，泛型，不好，砍了，现在又偷工减料的加回来了。如果一个特性将会带来很多，一般的处理方法有两种，一种是引导人们更好的使用它，另一种是砍掉。Rust 选择了前者，而 Golang 则选择了后者。这固然是一种解决办法，但解决不了实际问题，更何况砍掉特性只会让语言的表达能力变弱，最终，语言会变得简陋而不是简单。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>GO 的调度器</title>
       <link>https://bigshans.github.io/post/the-go-scheduler/</link>
       <pubDate>Tue, 31 May 2022 10:55:31 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/the-go-scheduler/</guid>
-      <description>译前序 本文翻译自 The Go Scheduler ，虽然时间有点久了，但只是阐释思想的话并没有太大问题。由于我个人翻译水平有限，若有纰漏，敬请谅解。 序 由 Dmitry Vyukov 贡献的新调度</description>
+      <description>&lt;h2 id=&#34;译前序&#34;&gt;译前序&lt;/h2&gt;&#xA;&lt;p&gt;本文翻译自 &lt;a href=&#34;https://morsmachine.dk/go-scheduler&#34;&gt;The Go Scheduler&lt;/a&gt; ，虽然时间有点久了，但只是阐释思想的话并没有太大问题。由于我个人翻译水平有限，若有纰漏，敬请谅解。&lt;/p&gt;&#xA;&lt;h2 id=&#34;序&#34;&gt;序&lt;/h2&gt;&#xA;&lt;p&gt;由 Dmitry Vyukov 贡献的新调度器是 Go 1.1 版本中的一个重大功能。新的调度器大幅提高了 Go 程序的并发性能，没有什么比这更好的事了，我想我会写一些关于调度器的东西。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

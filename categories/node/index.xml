@@ -4,92 +4,73 @@
     <title>Node on Bigshans&#39; Blog</title>
     <link>https://bigshans.github.io/categories/node/</link>
     <description>Recent content in Node on Bigshans&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>bigshans</copyright>
-    <lastBuildDate>Sun, 24 Mar 2024 23:18:40 +0800</lastBuildDate><atom:link href="https://bigshans.github.io/categories/node/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Mar 2024 23:18:40 +0800</lastBuildDate>
+    <atom:link href="https://bigshans.github.io/categories/node/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在 Node 上使用 FabricJs</title>
       <link>https://bigshans.github.io/post/fabric-on-node/</link>
       <pubDate>Sun, 24 Mar 2024 23:18:40 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/fabric-on-node/</guid>
-      <description>最近开发项目用到 FabricJs ，记录一下使用的坑点。FabricJs 的文档非常难用，许多关键的点都没有讲。FabricJs 的 TypeScript 类型标注也非常难用，经常货</description>
+      <description>&lt;p&gt;最近开发项目用到 FabricJs ，记录一下使用的坑点。FabricJs&#xA;的文档非常难用，许多关键的点都没有讲。FabricJs 的 TypeScript&#xA;类型标注也非常难用，经常货不对板，跟文档不一致，跟用例也不一致，不知道他们怎么处理的。但还是选择&#xA;FabricJs ，主要原因还是 FabricJs 的 SVG 到 Canvas 的操作非常舒服。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Node 事件循环</title>
       <link>https://bigshans.github.io/post/node%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</link>
       <pubDate>Thu, 09 Feb 2023 13:35:35 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/node%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</guid>
-      <description>JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去</description>
+      <description>&lt;p&gt;JavaScript&#xA;是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为&#xA;JavaScript 为了保持 DOM&#xA;与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去处理，这个总线就是事件循环。&#xA;ES&#xA;标准并没有规定事件循环应该如何编写，因为这很明显取决于运行时，所以各个&#xA;Runtime 之间的事件循环存在较大的差别，比如说，之前浏览器和 Node&#xA;的事件循环机制就存在较大的差别。最新版的 Node&#xA;在事件循环上的表现，基本与浏览器类似了。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>await 的背后</title>
       <link>https://bigshans.github.io/post/await%E7%9A%84%E8%83%8C%E5%90%8E/</link>
       <pubDate>Thu, 15 Dec 2022 21:49:39 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/await%E7%9A%84%E8%83%8C%E5%90%8E/</guid>
-      <description>我们一般会认为 async/await 是 Promise 的语法糖，实际上也没有错。但在 Node 10 的时候，一个 await 会产生三个微任务，导致单个 await 的性能远不如 Promise ，但在 Node 12 时， V8 团队称，其性能</description>
+      <description>&lt;p&gt;我们一般会认为 &lt;code&gt;async/await&lt;/code&gt; 是 &lt;code&gt;Promise&lt;/code&gt;&#xA;的语法糖，实际上也没有错。但在 Node 10 的时候，一个 &lt;code&gt;await&lt;/code&gt;&#xA;会产生三个微任务，导致单个 &lt;code&gt;await&lt;/code&gt; 的性能远不如&#xA;&lt;code&gt;Promise&lt;/code&gt; ，但在 Node 12 时， V8&#xA;团队称，其性能已经比一般手动创建处理的 &lt;code&gt;Promise&lt;/code&gt; 好了。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>用 node 实现一个简单的 http 代理</title>
       <link>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</link>
       <pubDate>Mon, 12 Dec 2022 22:52:19 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/%E7%94%A8node%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E4%BB%A3%E7%90%86/</guid>
-      <description>http 代理可分为两种，一种是普通的代理，作为中间人传递两边的信息；另一种则是隧道的方式。 普通代理 const http = require(&amp;#39;http&amp;#39;); const url = require(&amp;#39;url&amp;#39;); function request(cReq, cRes) { const u = url.parse(cReq.url); const options = { host: u.hostname, port: u.port</description>
+      <description>&lt;p&gt;http&#xA;代理可分为两种，一种是普通的代理，作为中间人传递两边的信息；另一种则是隧道的方式。&lt;/p&gt;&#xA;&lt;h2 id=&#34;普通代理&#34;&gt;普通代理&lt;/h2&gt;&#xA;&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre&#xA;class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;const&lt;/span&gt; http &lt;span class=&#34;op&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;pp&#34;&gt;require&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;#39;http&amp;#39;&lt;/span&gt;)&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-2&#34;&gt;&lt;a href=&#34;#cb1-2&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;const&lt;/span&gt; url &lt;span class=&#34;op&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;pp&#34;&gt;require&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;)&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-3&#34;&gt;&lt;a href=&#34;#cb1-3&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-4&#34;&gt;&lt;a href=&#34;#cb1-4&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;fu&#34;&gt;request&lt;/span&gt;(cReq&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt; cRes) {&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-5&#34;&gt;&lt;a href=&#34;#cb1-5&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;  &lt;span class=&#34;kw&#34;&gt;const&lt;/span&gt; u &lt;span class=&#34;op&#34;&gt;=&lt;/span&gt; url&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;parse&lt;/span&gt;(cReq&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;at&#34;&gt;url&lt;/span&gt;)&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-6&#34;&gt;&lt;a href=&#34;#cb1-6&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;  &lt;span class=&#34;kw&#34;&gt;const&lt;/span&gt; options &lt;span class=&#34;op&#34;&gt;=&lt;/span&gt; {&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-7&#34;&gt;&lt;a href=&#34;#cb1-7&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;:&lt;/span&gt; u&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;at&#34;&gt;hostname&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-8&#34;&gt;&lt;a href=&#34;#cb1-8&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;:&lt;/span&gt; u&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;at&#34;&gt;port&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-9&#34;&gt;&lt;a href=&#34;#cb1-9&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;:&lt;/span&gt; u&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;at&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-10&#34;&gt;&lt;a href=&#34;#cb1-10&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;method&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;:&lt;/span&gt; cReq&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;at&#34;&gt;method&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-11&#34;&gt;&lt;a href=&#34;#cb1-11&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;headers&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;:&lt;/span&gt; cReq&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;at&#34;&gt;headers&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-12&#34;&gt;&lt;a href=&#34;#cb1-12&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;  }&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-13&#34;&gt;&lt;a href=&#34;#cb1-13&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;  &lt;span class=&#34;kw&#34;&gt;const&lt;/span&gt; pReq &lt;span class=&#34;op&#34;&gt;=&lt;/span&gt; http&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;request&lt;/span&gt;(options&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt; (pRes) &lt;span class=&#34;kw&#34;&gt;=&amp;gt;&lt;/span&gt; {&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-14&#34;&gt;&lt;a href=&#34;#cb1-14&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;    cRes&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;writeHead&lt;/span&gt;(pRes&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;at&#34;&gt;statusCode&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt; pRes&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;at&#34;&gt;headers&lt;/span&gt;)&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-15&#34;&gt;&lt;a href=&#34;#cb1-15&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;    pRes&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;pipe&lt;/span&gt;(cRes)&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-16&#34;&gt;&lt;a href=&#34;#cb1-16&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;  })&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;on&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;#39;error&amp;#39;&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt; (e) &lt;span class=&#34;kw&#34;&gt;=&amp;gt;&lt;/span&gt; {&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-17&#34;&gt;&lt;a href=&#34;#cb1-17&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;bu&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;error&lt;/span&gt;(e)&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-18&#34;&gt;&lt;a href=&#34;#cb1-18&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;    cRes&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;end&lt;/span&gt;()&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-19&#34;&gt;&lt;a href=&#34;#cb1-19&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;  })&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-20&#34;&gt;&lt;a href=&#34;#cb1-20&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;  cReq&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;pipe&lt;/span&gt;(pReq)&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-21&#34;&gt;&lt;a href=&#34;#cb1-21&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;}&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-22&#34;&gt;&lt;a href=&#34;#cb1-22&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;/span&gt;&#xA;&lt;span id=&#34;cb1-23&#34;&gt;&lt;a href=&#34;#cb1-23&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;http&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;createServer&lt;/span&gt;()&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;on&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;#39;request&amp;#39;&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt; request)&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;listen&lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;8888&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;#39;0.0.0.0&amp;#39;&lt;/span&gt;)&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;p&gt;以上代码简单挑明了一个 http&#xA;代理的基本原理，但是还不能趋于实用。它只能用于代理 http 网站，由于 https&#xA;是基于 SSL/TSL 的，在传输层上实现，所以单单进行应用层代理无法正确处理&#xA;https 网站。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>NodeJs 上的大文件问题</title>
       <link>https://bigshans.github.io/post/bigfile-problem-for-node/</link>
       <pubDate>Sun, 07 Aug 2022 20:42:17 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/bigfile-problem-for-node/</guid>
-      <description>大文件的读取与写入问题，一般使用流（stream）就可以很好的处理了。但大文件的问题并不单单是这样，如果仅仅是单纯的读取或写入，那么解决方案</description>
+      <description>&lt;p&gt;大文件的读取与写入问题，一般使用流（stream）就可以很好的处理了。但大文件的问题并不单单是这样，如果仅仅是单纯的读取或写入，那么解决方案到此为止确实也就可以了。一旦涉及到读写组合，大文件问题并不是一个简单的读取与写入的问题，其问题的更广泛形式，是生产者和消费者问题。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>NodeJs 启动代码解析（一）</title>
       <link>https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/</link>
       <pubDate>Fri, 06 May 2022 10:04:22 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/nodejs%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90-1/</guid>
-      <description>NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 WIN32 、 UNIX 、 LINUX 。我们主要分析 Linux 部分。 简化一下代码，我们得到 main 函数的主要代码。 int main(int argc, char* argv[]) { node::per_process::linux_at_secure = getauxval(AT_SECURE); // Disable stdio buffering, it interacts poorly with printf() //</description>
+      <description>&lt;p&gt;NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 &lt;code&gt;WIN32&lt;/code&gt; 、 &lt;code&gt;UNIX&lt;/code&gt; 、 &lt;code&gt;LINUX&lt;/code&gt; 。我们主要分析 Linux 部分。&lt;/p&gt;&#xA;&lt;p&gt;简化一下代码，我们得到 main 函数的主要代码。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;int main(int argc, char* argv[]) {&#xA;  node::per_process::linux_at_secure = getauxval(AT_SECURE);&#xA;  // Disable stdio buffering, it interacts poorly with printf()&#xA;  // calls elsewhere in the program (e.g., any logging from V8.)&#xA;  setvbuf(stdout, nullptr, _IONBF, 0);&#xA;  setvbuf(stderr, nullptr, _IONBF, 0);&#xA;  return node::Start(argc, argv);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;&lt;code&gt;node&lt;/code&gt; 是 NodeJs 部分的 namespace ，与 V8 的相区分。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>npm 打包指南</title>
       <link>https://bigshans.github.io/post/npm-pack-guide/</link>
       <pubDate>Sun, 21 Mar 2021 11:53:14 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/npm-pack-guide/</guid>
-      <description>最近在修改一些很长时间无人维护的包，估计包作者都不维护了，于是我重新搞了一份传到了 npm 上，有兴趣的可以看一下：log4js-rabbitmq-</description>
+      <description>&lt;p&gt;最近在修改一些很长时间无人维护的包，估计包作者都不维护了，于是我重新搞了一份传到了 npm 上，有兴趣的可以看一下：&lt;a href=&#34;https://www.npmjs.com/package/log4js-rabbitmq-appenders&#34;&gt;log4js-rabbitmq-appenders&lt;/a&gt; 。&lt;/p&gt;&#xA;&lt;p&gt;关于如何打包一个库，其实网上已经有很多教程了，核心其实就是两句命令：&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>使用 jest 和 supertest 进行接口测试</title>
       <link>https://bigshans.github.io/post/jest-api-test-supertest/</link>
       <pubDate>Sun, 28 Feb 2021 17:04:24 +0800</pubDate>
-      
       <guid>https://bigshans.github.io/post/jest-api-test-supertest/</guid>
-      <description>最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。 登录测试 有些</description>
+      <description>&lt;p&gt;最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。&lt;/p&gt;&#xA;&lt;h2 id=&#34;登录测试&#34;&gt;登录测试&lt;/h2&gt;&#xA;&lt;p&gt;有些接口需要登录测试，而这些登录测试往往需要前后一致的 session ，这里我们可以通过取 cookie 解决。当然，如果是 token 直接取 token 就行了。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>nodejs 的 import</title>
       <link>https://bigshans.github.io/post/nodejs-es6-import/</link>
       <pubDate>Sun, 26 Aug 2018 20:29:41 +0000</pubDate>
-      
       <guid>https://bigshans.github.io/post/nodejs-es6-import/</guid>
-      <description>&lt;p&gt;nodejs 对 es 6 的支持目前并不完全，直接使用 import 不行，exports 也不行，可以用 babel 之类的编译， nodejs 10 可以尝试加上 flag ： &amp;ndash;experimental-modules。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;node --experimental-modules my-app.mjs
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>&lt;p&gt;nodejs 对 es 6 的支持目前并不完全，直接使用 import 不行，exports 也不行，可以用 babel 之类的编译， nodejs 10 可以尝试加上 flag ： &amp;ndash;experimental-modules。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;node --experimental-modules my-app.mjs&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
   </channel>
 </rss>

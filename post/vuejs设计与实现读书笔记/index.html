@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="第二篇 响应系统 第四章 响应系统的作用与实现 设计完善的响应式系统 借助 Proxy ，我们实现一个基本的响应式系统。书中代码我改成可以在 Node 中运行的代码了。 const bucket" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="第二篇 响应系统 第四章 响应系统的作用与实现 设计完善的响应式系统 借助 Proxy ，我们实现一个基本的响应式系统。书中代码我改成可以在 Node 中运行的代码了。
+const bucket = new Set(); const data = { text: &#39;hello world&#39; }; const obj = new Proxy(data, { get(target, key) { bucket.add(effect); return target[key]; }, set(target, key, newVal) { target[key] = newVal; bucket.forEach(fn =&gt; fn()); return true; } }); function effect() { console.log(obj.text); } effect(); setTimeout(() =&gt; { obj.text = &#39;Hello Vue&#39;; }, 1000); // Output: // hello world // Hello Vue 这里是写死了 effect ，不过不用太过纠结。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/vuejs%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" />
@@ -46,19 +48,30 @@
 
 
 
-<meta property="og:title" content="《Vuejs设计与实现》读书笔记" />
-<meta property="og:description" content="第二篇 响应系统 第四章 响应系统的作用与实现 设计完善的响应式系统 借助 Proxy ，我们实现一个基本的响应式系统。书中代码我改成可以在 Node 中运行的代码了。 const bucket" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/vuejs%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-01-08T13:37:21+08:00" />
-<meta property="article:modified_time" content="2023-01-08T13:37:21+08:00" />
-<meta itemprop="name" content="《Vuejs设计与实现》读书笔记">
-<meta itemprop="description" content="第二篇 响应系统 第四章 响应系统的作用与实现 设计完善的响应式系统 借助 Proxy ，我们实现一个基本的响应式系统。书中代码我改成可以在 Node 中运行的代码了。 const bucket"><meta itemprop="datePublished" content="2023-01-08T13:37:21+08:00" />
-<meta itemprop="dateModified" content="2023-01-08T13:37:21+08:00" />
-<meta itemprop="wordCount" content="1472">
-<meta itemprop="keywords" content="笔记,Vue," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="《Vuejs设计与实现》读书笔记"/>
-<meta name="twitter:description" content="第二篇 响应系统 第四章 响应系统的作用与实现 设计完善的响应式系统 借助 Proxy ，我们实现一个基本的响应式系统。书中代码我改成可以在 Node 中运行的代码了。 const bucket"/>
+<meta property="og:url" content="https://bigshans.github.io/post/vuejs%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="《Vuejs设计与实现》读书笔记">
+  <meta property="og:description" content="第二篇 响应系统 第四章 响应系统的作用与实现 设计完善的响应式系统 借助 Proxy ，我们实现一个基本的响应式系统。书中代码我改成可以在 Node 中运行的代码了。
+const bucket = new Set(); const data = { text: &#39;hello world&#39; }; const obj = new Proxy(data, { get(target, key) { bucket.add(effect); return target[key]; }, set(target, key, newVal) { target[key] = newVal; bucket.forEach(fn =&gt; fn()); return true; } }); function effect() { console.log(obj.text); } effect(); setTimeout(() =&gt; { obj.text = &#39;Hello Vue&#39;; }, 1000); // Output: // hello world // Hello Vue 这里是写死了 effect ，不过不用太过纠结。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-01-08T13:37:21+08:00">
+    <meta property="article:modified_time" content="2023-01-08T13:37:21+08:00">
+    <meta property="article:tag" content="笔记">
+    <meta property="article:tag" content="Vue">
+
+  <meta itemprop="name" content="《Vuejs设计与实现》读书笔记">
+  <meta itemprop="description" content="第二篇 响应系统 第四章 响应系统的作用与实现 设计完善的响应式系统 借助 Proxy ，我们实现一个基本的响应式系统。书中代码我改成可以在 Node 中运行的代码了。
+const bucket = new Set(); const data = { text: &#39;hello world&#39; }; const obj = new Proxy(data, { get(target, key) { bucket.add(effect); return target[key]; }, set(target, key, newVal) { target[key] = newVal; bucket.forEach(fn =&gt; fn()); return true; } }); function effect() { console.log(obj.text); } effect(); setTimeout(() =&gt; { obj.text = &#39;Hello Vue&#39;; }, 1000); // Output: // hello world // Hello Vue 这里是写死了 effect ，不过不用太过纠结。">
+  <meta itemprop="datePublished" content="2023-01-08T13:37:21+08:00">
+  <meta itemprop="dateModified" content="2023-01-08T13:37:21+08:00">
+  <meta itemprop="wordCount" content="1472">
+  <meta itemprop="keywords" content="笔记,Vue">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="《Vuejs设计与实现》读书笔记">
+  <meta name="twitter:description" content="第二篇 响应系统 第四章 响应系统的作用与实现 设计完善的响应式系统 借助 Proxy ，我们实现一个基本的响应式系统。书中代码我改成可以在 Node 中运行的代码了。
+const bucket = new Set(); const data = { text: &#39;hello world&#39; }; const obj = new Proxy(data, { get(target, key) { bucket.add(effect); return target[key]; }, set(target, key, newVal) { target[key] = newVal; bucket.forEach(fn =&gt; fn()); return true; } }); function effect() { console.log(obj.text); } effect(); setTimeout(() =&gt; { obj.text = &#39;Hello Vue&#39;; }, 1000); // Output: // hello world // Hello Vue 这里是写死了 effect ，不过不用太过纠结。">
 
 
 
@@ -196,33 +209,18 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"><nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#第二篇-响应系统">第二篇
-响应系统</a>
-          <ul>
-            <li><a href="#第四章-响应系统的作用与实现">第四章
-响应系统的作用与实现</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
+  <div class="post-toc-content"></div>
 </div>
 
     <div class="post-content">
-      
-
-<h2 id="第二篇-响应系统">第二篇 响应系统</h2>
+      <h2 id="第二篇-响应系统">第二篇 响应系统</h2>
 <h3 id="第四章-响应系统的作用与实现">第四章 响应系统的作用与实现</h3>
 <h4 id="设计完善的响应式系统">设计完善的响应式系统</h4>
 <p>借助 <code>Proxy</code>
 ，我们实现一个基本的响应式系统。书中代码我改成可以在 Node
 中运行的代码了。</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> bucket <span class="op">=</span> <span class="kw">new</span> <span class="bu">Set</span>()<span class="op">;</span></span>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> bucket <span class="op">=</span> <span class="kw">new</span> <span class="bu">Set</span>()<span class="op">;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data <span class="op">=</span> { <span class="dt">text</span><span class="op">:</span> <span class="st">&#39;hello world&#39;</span> }<span class="op">;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -257,7 +255,8 @@
 <li>修改时，拦截写操作，执行副作用函数。</li>
 </ul>
 <p>由于我们的副作用函数是硬编码，使得我们的代码非常不好维护。为此，我们还需要一个依赖收集函数来收集副作用函数。</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> bucket <span class="op">=</span> <span class="kw">new</span> <span class="bu">Set</span>()<span class="op">;</span></span>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> bucket <span class="op">=</span> <span class="kw">new</span> <span class="bu">Set</span>()<span class="op">;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data <span class="op">=</span> { <span class="dt">text</span><span class="op">:</span> <span class="st">&#39;hello world&#39;</span> }<span class="op">;</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -293,9 +292,10 @@
 添加一个不存在的属性，我们会发现副作用方法仍然被执行了。而且，如果我们添加多个
 target ，只要任意一个 target
 被执行，就会引起所有的副作用函数被执行。因为我们并没有在副作用函数与数据字段之间建立起明确的关系，为此我们需要重新设计我们的数据结构。</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> bucket <span class="op">=</span> <span class="kw">new</span> <span class="bu">WeakMap</span>()<span class="op">;</span></span>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> bucket <span class="op">=</span> <span class="kw">new</span> <span class="bu">WeakMap</span>()<span class="op">;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data <span class="op">=</span> { <span class="dt">text</span><span class="op">:</span> <span class="st">&#34;hello world&#34;</span> }<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data <span class="op">=</span> { <span class="dt">text</span><span class="op">:</span> <span class="st">&quot;hello world&quot;</span> }<span class="op">;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> activeEffect<span class="op">;</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">effect</span>(fn) {</span>
@@ -331,7 +331,7 @@ target ，只要任意一个 target
 <span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
 <span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    obj<span class="op">.</span><span class="at">text</span> <span class="op">=</span> <span class="st">&#34;Hello Vue&#34;</span><span class="op">;</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    obj<span class="op">.</span><span class="at">text</span> <span class="op">=</span> <span class="st">&quot;Hello Vue&quot;</span><span class="op">;</span></span>
 <span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span> <span class="dv">1000</span>)<span class="op">;</span></span></code></pre></div>
 <p>首先，我们需要用 <code>WeakMap</code> 来收集 <code>target</code>
 ，确保对应的 <code>target</code> 变动只会影响与之有关的副作用函数。使用
@@ -339,9 +339,10 @@ target ，只要任意一个 target
 <p>其次，我们收集 <code>target</code> 对应的 <code>key</code>
 的副作用函数，这些函数将构成一个集合，在需要的时候被执行。</p>
 <p>我们简单重构一下代码：</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> bucket <span class="op">=</span> <span class="kw">new</span> <span class="bu">WeakMap</span>()<span class="op">;</span></span>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> bucket <span class="op">=</span> <span class="kw">new</span> <span class="bu">WeakMap</span>()<span class="op">;</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data <span class="op">=</span> { <span class="dt">text</span><span class="op">:</span> <span class="st">&#34;hello world&#34;</span> }<span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data <span class="op">=</span> { <span class="dt">text</span><span class="op">:</span> <span class="st">&quot;hello world&quot;</span> }<span class="op">;</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> activeEffect<span class="op">;</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">effect</span>(fn) {</span>
@@ -385,22 +386,24 @@ target ，只要任意一个 target
 <span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
 <span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>    obj<span class="op">.</span><span class="at">text</span> <span class="op">=</span> <span class="st">&#34;Hello Vue&#34;</span><span class="op">;</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>    obj<span class="op">.</span><span class="at">text</span> <span class="op">=</span> <span class="st">&quot;Hello Vue&quot;</span><span class="op">;</span></span>
 <span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span> <span class="dv">1000</span>)<span class="op">;</span></span></code></pre></div>
 <p>思考以下代码：</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data <span class="op">=</span> { <span class="dt">ok</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">text</span><span class="op">:</span> <span class="st">&#34;hello world&#34;</span> }<span class="op">;</span></span>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data <span class="op">=</span> { <span class="dt">ok</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">text</span><span class="op">:</span> <span class="st">&quot;hello world&quot;</span> }<span class="op">;</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">// 前略</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">effect</span>(() <span class="kw">=&gt;</span> {</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(obj<span class="op">.</span><span class="at">ok</span> <span class="op">?</span> obj<span class="op">.</span><span class="at">text</span> <span class="op">:</span> <span class="st">&#34;not&#34;</span>)<span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(obj<span class="op">.</span><span class="at">ok</span> <span class="op">?</span> obj<span class="op">.</span><span class="at">text</span> <span class="op">:</span> <span class="st">&quot;not&quot;</span>)<span class="op">;</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
 <p>当 <code>obj.ok</code> 为 <code>true</code> 时，依赖收集会为我们收集
 <code>ok</code> 和 <code>text</code> ，为 <code>false</code>
 时，会收集到 <code>ok</code> 字段。但 <code>obj.ok</code>
 是会变动的，而这种变动显然会引起依赖的变动，而目前我们的代码显然无法收集这种变动。这会引起依赖变动的缺失和冗余。为了解决这个问题，我们可以副作用函数执行时，重新绑定依赖。</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> bucket <span class="op">=</span> <span class="kw">new</span> <span class="bu">WeakMap</span>()<span class="op">;</span></span>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> bucket <span class="op">=</span> <span class="kw">new</span> <span class="bu">WeakMap</span>()<span class="op">;</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data <span class="op">=</span> { <span class="dt">text</span><span class="op">:</span> <span class="st">&#34;hello world&#34;</span> }<span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data <span class="op">=</span> { <span class="dt">text</span><span class="op">:</span> <span class="st">&quot;hello world&quot;</span> }<span class="op">;</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> activeEffect<span class="op">;</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">effect</span>(fn) {</span>
@@ -463,13 +466,14 @@ target ，只要任意一个 target
 <span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
 <span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a><span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
-<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>    obj<span class="op">.</span><span class="at">text</span> <span class="op">=</span> <span class="st">&#34;Hello Vue&#34;</span><span class="op">;</span></span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>    obj<span class="op">.</span><span class="at">text</span> <span class="op">=</span> <span class="st">&quot;Hello Vue&quot;</span><span class="op">;</span></span>
 <span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span> <span class="dv">1000</span>)<span class="op">;</span></span></code></pre></div>
 <h4 id="嵌套-effect">嵌套 effect</h4>
 <p>我们当前的实现并不支持嵌套 effect ，因为我们使用了全局变量
 <code>ativeEffect</code> 来注册 <code>effect</code> 函数，在 effect
 嵌套时，就会引起覆盖。</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data <span class="op">=</span> { <span class="dt">foo</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">bar</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">;</span></span>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data <span class="op">=</span> { <span class="dt">foo</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">bar</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> temp1<span class="op">,</span> temp2<span class="op">;</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">// 省略</span></span>
@@ -484,7 +488,7 @@ target ，只要任意一个 target
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
 <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    obj<span class="op">.</span><span class="at">foo</span> <span class="op">=</span> <span class="st">&#34;Hello Vue&#34;</span><span class="op">;</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    obj<span class="op">.</span><span class="at">foo</span> <span class="op">=</span> <span class="st">&quot;Hello Vue&quot;</span><span class="op">;</span></span>
 <span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span> <span class="dv">1000</span>)<span class="op">;</span></span>
 <span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co">// Output:</span></span>
@@ -492,7 +496,8 @@ target ，只要任意一个 target
 <span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co">// effectFn2 执行  </span></span>
 <span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co">// effectFn2 执行</span></span></code></pre></div>
 <p>我们需要一个 <code>effectStack</code> 来解决这个问题。</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> activeEffect<span class="op">;</span></span>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> activeEffect<span class="op">;</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> effectStack <span class="op">=</span> []<span class="op">;</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">effect</span>(fn) {</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> effectFn <span class="op">=</span> () <span class="kw">=&gt;</span> {</span>
@@ -512,7 +517,8 @@ target ，只要任意一个 target
 <h4 id="避免无限循环">避免无限循环</h4>
 <p>如果 trigger
 触发执行的副作用函数与当前正在执行的副作用函数相同，则不触发执行。</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data <span class="op">=</span> { <span class="dt">foo</span><span class="op">:</span> <span class="dv">1</span> }<span class="op">;</span></span>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> data <span class="op">=</span> { <span class="dt">foo</span><span class="op">:</span> <span class="dv">1</span> }<span class="op">;</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">// 省略</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -534,8 +540,6 @@ target ，只要任意一个 target
 <span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    obj<span class="op">.</span><span class="at">foo</span><span class="op">++;</span></span>
 <span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
 <p>未完待续。</p>
-
-
 
     </div>
 
@@ -592,7 +596,7 @@ target ，只要任意一个 target
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

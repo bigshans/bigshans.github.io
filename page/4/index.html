@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/" />
@@ -48,14 +48,20 @@
 
 
 
-<meta property="og:title" content="Bigshans&#39; Blog" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://bigshans.github.io/" />
-<meta itemprop="name" content="Bigshans&#39; Blog">
-<meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Bigshans&#39; Blog"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
+<meta property="og:url" content="https://bigshans.github.io/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="Bigshans&#39; Blog">
+  <meta property="og:description" content="Hugo theme even example site.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Bigshans&#39; Blog">
+  <meta itemprop="description" content="Hugo theme even example site.">
+  <meta itemprop="datePublished" content="2024-12-29T22:56:17+08:00">
+  <meta itemprop="dateModified" content="2024-12-29T22:56:17+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bigshans&#39; Blog">
+  <meta name="twitter:description" content="Hugo theme even example site.">
 
 
 
@@ -192,7 +198,9 @@
   <div class="post-content">
     <div class="post-summary">
     
-      算是私人页的一个 BUG ，之前没有注意到。使用 innerHTML 进行替换后，替换内容内所有的 script 都失效了，这是符合浏览器预期的，可见 MDN 。 Although this may look like a cross-site scripting attack, the result is harmless. HTML
+      算是私人页的一个 BUG ，之前没有注意到。使用 innerHTML 进行替换后，替换内容内所有的 script 都失效了，这是符合浏览器预期的，可见 MDN 。
+Although this may look like a cross-site scripting attack, the result is harmless. HTML specifies that a &lt;script&gt; tag inserted with innerHTML should not execute.
+
     
     </div>
     <div class="read-more">
@@ -217,7 +225,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      做了一些更新，现在把 private 单独放到一个路径下面，同时把私人也从 post 列表移除，从另一个地址进去。如此页面的观感就好多了。同时也对整个处理的过程进行了
+      做了一些更新，现在把 private 单独放到一个路径下面，同时把私人也从 post 列表移除，从另一个地址进去。如此页面的观感就好多了。同时也对整个处理的过程进行了大幅修改，重写了原来的 script 脚本，并用 Deno 实现了主要逻辑。Shell 脚本主要是用来协调 Deno 脚本的运行的。
+
     
     </div>
     <div class="read-more">
@@ -242,7 +251,9 @@
   <div class="post-content">
     <div class="post-summary">
     
-      看完 core-js 作者的长文后，有感而发，写一点文字。 core-js 面临的问题是，由大多数人共享的东西，得到越少人的照顾。我现在依旧可以看到一些言论，对于作者这样讨
+      看完 core-js 作者的长文后，有感而发，写一点文字。
+core-js 面临的问题是，由大多数人共享的东西，得到越少人的照顾。我现在依旧可以看到一些言论，对于作者这样讨钱，当初就不应该开源，或者协议选得不对。在 fakejs 的事件，我就试图反驳这样的言论，现在我想我应该能够更充分的反驳。
+
     
     </div>
     <div class="read-more">
@@ -267,7 +278,9 @@
   <div class="post-content">
     <div class="post-summary">
     
-      最近 RPA 用得比较多，我谈一下这个。 RPA 在办公室自动化方面应用极广，而对应的软件在 Windows 上也是遍地开花。为什么是在 Windows 上呢？原因也很好理解，因为 Windows 在办公
+      最近 RPA 用得比较多，我谈一下这个。
+RPA 在办公室自动化方面应用极广，而对应的软件在 Windows 上也是遍地开花。为什么是在 Windows 上呢？原因也很好理解，因为 Windows 在办公方面用得最多，一方面需求旺盛，另一方面对应的 API 和相关的控制微软也提供了很多。比如，微软自己就提供了一个 RPA 的软件，叫 Power Automate 。这些 RPA 基本都会给你一个图形化编程的界面，但底层仍然是一门具体的编程语言，比如 Power Automate 用得是 VB ，影刀用得是 Python 。但一些厂家并不会提供对应的脚本书写的地方，原因倒不在于，脚本编写会加深用户的使用难度，而是在于，这会缩窄 RPA 软件的盈利范围。不过微软倒是大气些，提供一个能写入脚本的地方，可惜太小了点，而且做得也不太好。
+
     
     </div>
     <div class="read-more">
@@ -292,7 +305,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去
+      JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去处理，这个总线就是事件循环。 ES 标准并没有规定事件循环应该如何编写，因为这很明显取决于运行时，所以各个 Runtime 之间的事件循环存在较大的差别，比如说，之前浏览器和 Node 的事件循环机制就存在较大的差别。最新版的 Node 在事件循环上的表现，基本与浏览器类似了。
+
     
     </div>
     <div class="read-more">
@@ -317,7 +331,8 @@
   <div class="post-content">
     <div class="post-summary">
     
-      一些大厂出来的人会一种错觉，以为自己离开了大厂仍能干一番事业。尤其是一些领导层，以为自己有一些人脉，似乎就可以登天。殊不知自己离开了大厂什么
+      一些大厂出来的人会一种错觉，以为自己离开了大厂仍能干一番事业。尤其是一些领导层，以为自己有一些人脉，似乎就可以登天。殊不知自己离开了大厂什么都不是。所谓的人脉，也不过是一些能够把自己当作工具出卖的机会。
+
     
     </div>
     <div class="read-more">
@@ -342,7 +357,10 @@
   <div class="post-content">
     <div class="post-summary">
     
-      起因是不知道什么时候，我打开 Plasma 的快捷键设置时，全局设置总是报错，但虽然报错，全局快捷键亦然很好使。 经过我一番努力的探索，我终于发现了问题所在
+      起因是不知道什么时候，我打开 Plasma 的快捷键设置时，全局设置总是报错，但虽然报错，全局快捷键亦然很好使。
+经过我一番努力的探索，我终于发现了问题所在。
+可以参考以下的帖子： https://forum.ubuntu.org.cn/viewtopic.php?t=491267 。
+
     
     </div>
     <div class="read-more">
@@ -367,7 +385,9 @@
   <div class="post-content">
     <div class="post-summary">
     
-      一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。 标准盒
+      一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。
+标准盒型 盒子模型示意图 每一个盒子都一块内容（content）区域，围绕内容从内向外分别是内边距、边框和外边距（padding 、 border 、 margin）。
+
     
     </div>
     <div class="read-more">
@@ -397,7 +417,9 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
+    <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">

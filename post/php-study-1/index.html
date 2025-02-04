@@ -17,7 +17,8 @@
 
 
 <meta name="author" content="bigshans" />
-<meta name="description" content="PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C&#43;&#43; 和" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="description" content="PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C&#43;&#43; 和 Java 的杂交，而且 PHP 虽然兼容，但如果尽量用上新特性的话，都觉得是两门语言。我并不打算学过去 PHP 5 那种语法，当初学得恶心，最新的 PHP 语法其实好很多。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.112.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.143.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/php-study-1/" />
@@ -46,19 +47,26 @@
 
 
 
-<meta property="og:title" content="PHP学习（一）—— 面向过程的 PHP" />
-<meta property="og:description" content="PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C&#43;&#43; 和" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigshans.github.io/post/php-study-1/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-01-12T11:51:08+08:00" />
-<meta property="article:modified_time" content="2022-01-12T11:51:08+08:00" />
-<meta itemprop="name" content="PHP学习（一）—— 面向过程的 PHP">
-<meta itemprop="description" content="PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C&#43;&#43; 和"><meta itemprop="datePublished" content="2022-01-12T11:51:08+08:00" />
-<meta itemprop="dateModified" content="2022-01-12T11:51:08+08:00" />
-<meta itemprop="wordCount" content="2790">
-<meta itemprop="keywords" content="PHP," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="PHP学习（一）—— 面向过程的 PHP"/>
-<meta name="twitter:description" content="PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C&#43;&#43; 和"/>
+<meta property="og:url" content="https://bigshans.github.io/post/php-study-1/">
+  <meta property="og:site_name" content="Bigshans&#39; Blog">
+  <meta property="og:title" content="PHP学习（一）—— 面向过程的 PHP">
+  <meta property="og:description" content="PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C&#43;&#43; 和 Java 的杂交，而且 PHP 虽然兼容，但如果尽量用上新特性的话，都觉得是两门语言。我并不打算学过去 PHP 5 那种语法，当初学得恶心，最新的 PHP 语法其实好很多。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-01-12T11:51:08+08:00">
+    <meta property="article:modified_time" content="2022-01-12T11:51:08+08:00">
+    <meta property="article:tag" content="PHP">
+
+  <meta itemprop="name" content="PHP学习（一）—— 面向过程的 PHP">
+  <meta itemprop="description" content="PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C&#43;&#43; 和 Java 的杂交，而且 PHP 虽然兼容，但如果尽量用上新特性的话，都觉得是两门语言。我并不打算学过去 PHP 5 那种语法，当初学得恶心，最新的 PHP 语法其实好很多。">
+  <meta itemprop="datePublished" content="2022-01-12T11:51:08+08:00">
+  <meta itemprop="dateModified" content="2022-01-12T11:51:08+08:00">
+  <meta itemprop="wordCount" content="2790">
+  <meta itemprop="keywords" content="PHP">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PHP学习（一）—— 面向过程的 PHP">
+  <meta name="twitter:description" content="PHP 其实很早之前就学过，但时间一长没有用，基本上是忘了。所以最近是重新捡起来。 PHP 很语法还是很缝合的，光看它面向过程的语法像 C ，但面向对象像 C&#43;&#43; 和 Java 的杂交，而且 PHP 虽然兼容，但如果尽量用上新特性的话，都觉得是两门语言。我并不打算学过去 PHP 5 那种语法，当初学得恶心，最新的 PHP 语法其实好很多。">
 
 
 
@@ -746,7 +754,7 @@ echo &quot;$n1 x $n2 = $product&quot; . PHP_EOL;
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/bigshans" class="iconfont icon-github" title="github"></a>
-  <a href="https://bigshans.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
