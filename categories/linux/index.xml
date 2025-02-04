@@ -14,7 +14,7 @@
       <link>https://bigshans.github.io/post/use-meta-only-for-plasma/</link>
       <pubDate>Fri, 03 May 2024 13:38:44 +0800</pubDate>
       <guid>https://bigshans.github.io/post/use-meta-only-for-plasma/</guid>
-      <description>&lt;p&gt;使用 &lt;code&gt;Meta&lt;/code&gt; 打开开始菜单是一个非常方便的功能，最早在&#xA;Plasma 上，可以使用 &lt;code&gt;ksuperkey&lt;/code&gt; 来实现。不过&#xA;&lt;code&gt;ksuperkey&lt;/code&gt; 仅支持 X11 ，在 Plasma on Wayland&#xA;就失去作用了。不过 Plasma 很早之前就将这个功能内置了，详见&lt;a&#xA;href=&#34;https://zren.github.io/kde/#windowsmeta-key&#34;&gt;此处&lt;/a&gt; 。&lt;/p&gt;</description>
+      <description>&lt;p&gt;使用 &lt;code&gt;Meta&lt;/code&gt; 打开开始菜单是一个非常方便的功能，最早在&#xA;Plasma 上，可以使用 &lt;code&gt;ksuperkey&lt;/code&gt; 来实现。不过&#xA;&lt;code&gt;ksuperkey&lt;/code&gt; 仅支持 X11 ，在 Plasma on Wayland&#xA;就失去作用了。不过 Plasma 很早之前就将这个功能内置了，详见&lt;a href=&#34;https://zren.github.io/kde/#windowsmeta-key&#34;&gt;此处&lt;/a&gt; 。&lt;/p&gt;</description>
     </item>
     <item>
       <title>重装 arch</title>

@@ -14,7 +14,7 @@
       <link>https://bigshans.github.io/post/d8%E7%BC%96%E8%AF%91%E8%A6%81%E7%82%B9/</link>
       <pubDate>Fri, 04 Aug 2023 09:06:08 +0800</pubDate>
       <guid>https://bigshans.github.io/post/d8%E7%BC%96%E8%AF%91%E8%A6%81%E7%82%B9/</guid>
-      <description>&lt;p&gt;d8 是 v8 提供的用以 debug v8 的 shell ，因为 v8&#xA;自身就是一个库，不提供 console 的实现。d8 会在编译 v8&#xA;时顺便实现，不过我只想编译 d8 。&lt;/p&gt;&#xA;&lt;p&gt;主要参考了 v8&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&#xA;role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; 文档和一篇博文&lt;a href=&#34;#fn2&#34;&#xA;class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&#xA;role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;h2 id=&#34;代理工具&#34;&gt;代理工具&lt;/h2&gt;&#xA;&lt;p&gt;使用 &lt;code&gt;tscoks&lt;/code&gt; 。&lt;/p&gt;</description>
+      <description>&lt;p&gt;d8 是 v8 提供的用以 debug v8 的 shell ，因为 v8&#xA;自身就是一个库，不提供 console 的实现。d8 会在编译 v8&#xA;时顺便实现，不过我只想编译 d8 。&lt;/p&gt;&#xA;&lt;p&gt;主要参考了 v8&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; 文档和一篇博文&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;h2 id=&#34;代理工具&#34;&gt;代理工具&lt;/h2&gt;&#xA;&lt;p&gt;使用 &lt;code&gt;tscoks&lt;/code&gt; 。&lt;/p&gt;</description>
     </item>
     <item>
       <title>await 的背后</title>

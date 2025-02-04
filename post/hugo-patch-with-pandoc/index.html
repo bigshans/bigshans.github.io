@@ -28,7 +28,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.143.0 with theme even" />
+<meta name="generator" content="Hugo 0.144.0-DEV with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/hugo-patch-with-pandoc/" />
@@ -209,11 +209,23 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"></div>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#缘起">缘起</a></li>
+        <li><a href="#编译安装">编译安装</a></li>
+        <li><a href="#结语">结语</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 </div>
 
     <div class="post-content">
-      <p>Hugo 可以使用不同的 markdown 引擎来解析 <code>md</code> ，pandoc
+      
+
+<p>Hugo 可以使用不同的 markdown 引擎来解析 <code>md</code> ，pandoc
 就是其中之一。不过问题在于，使用 pandoc 就不会有 TOC
 ，如果在意这个的话使用起来还是挺麻烦的。</p>
 <h2 id="缘起">缘起</h2>
@@ -238,6 +250,8 @@
 表示语言，但 Hugo 会加个 language
 的前缀，这些都需要对应代码的兼容，我个人主题都做了适配。其他的，只能说慢慢看有没有问题，至于官方最新的更新就不知道到什么时候了。</p>
 <p>最后，为了演示，本篇也是用 pandoc 渲染的。</p>
+
+
 
     </div>
 

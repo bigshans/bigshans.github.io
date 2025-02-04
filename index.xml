@@ -82,8 +82,7 @@
       <description>&lt;p&gt;心血来潮使用 &lt;code&gt;pnpm&lt;/code&gt; 将项目改为了 monorepo
 的结构。最重要的是 &lt;code&gt;pnpm-workspace.yaml&lt;/code&gt;
 文件，我们可以简单写一个放到根目录下面：&lt;/p&gt;
-&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre
-class=&#34;sourceCode yaml&#34;&gt;&lt;code class=&#34;sourceCode yaml&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;fu&#34;&gt;packages&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre class=&#34;sourceCode yaml&#34;&gt;&lt;code class=&#34;sourceCode yaml&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;fu&#34;&gt;packages&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;:&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&#34;cb1-2&#34;&gt;&lt;a href=&#34;#cb1-2&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;at&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;at&#34;&gt; packages/**&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;这代表在目录 &lt;code&gt;packages&lt;/code&gt;
 下寻找子仓库，且深度只有一层。如果你的包结构是多层嵌套的，那你需要将每个嵌套的父层级也写进去。比如说我的：&lt;/p&gt;</description>
@@ -102,8 +101,7 @@ class=&#34;sourceCode yaml&#34;&gt;&lt;code class=&#34;sourceCode yaml&#34;&gt;&
       <description>&lt;p&gt;使用 &lt;code&gt;Meta&lt;/code&gt; 打开开始菜单是一个非常方便的功能，最早在
 Plasma 上，可以使用 &lt;code&gt;ksuperkey&lt;/code&gt; 来实现。不过
 &lt;code&gt;ksuperkey&lt;/code&gt; 仅支持 X11 ，在 Plasma on Wayland
-就失去作用了。不过 Plasma 很早之前就将这个功能内置了，详见&lt;a
-href=&#34;https://zren.github.io/kde/#windowsmeta-key&#34;&gt;此处&lt;/a&gt; 。&lt;/p&gt;</description>
+就失去作用了。不过 Plasma 很早之前就将这个功能内置了，详见&lt;a href=&#34;https://zren.github.io/kde/#windowsmeta-key&#34;&gt;此处&lt;/a&gt; 。&lt;/p&gt;</description>
       
     </item>
     
@@ -152,8 +150,7 @@ FabricJs ，主要原因还是 FabricJs 的 SVG 到 Canvas 的操作非常舒服
       <description>&lt;p&gt;https://dl.google.com 是 Android Studio 下载 Android SDK
 的网站，国内有个镜像可以用。我们通过修改 hosts 文件让 Android Studio
 去镜像站下载。&lt;/p&gt;
-&lt;p&gt;首先是获取 IP ，可以在&lt;a
-href=&#34;https://ping.chinaz.com/dl.google.com&#34;&gt;这里&lt;/a&gt; IP
+&lt;p&gt;首先是获取 IP ，可以在&lt;a href=&#34;https://ping.chinaz.com/dl.google.com&#34;&gt;这里&lt;/a&gt; IP
 访问情况，根据地区择优选择。&lt;/p&gt;
 &lt;p&gt;然后在 &lt;code&gt;/etc/hosts&lt;/code&gt; 文件里追加即可。&lt;/p&gt;</description>
       
@@ -204,8 +201,7 @@ Betterfox 来优化个人的 Firefox 。&lt;/p&gt;</description>
       
       <description>&lt;p&gt;函数柯里化是一种可以将函数转换为另一个函数的技巧，通常是用来减少函数参数的。&lt;/p&gt;
 &lt;p&gt;用一个简单的例子以表示这种使用:&lt;/p&gt;
-&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre
-class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;fu&#34;&gt;sum&lt;/span&gt;(a&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt; b) {&lt;/span&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;fu&#34;&gt;sum&lt;/span&gt;(a&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt; b) {&lt;/span&gt;
 &lt;span id=&#34;cb1-2&#34;&gt;&lt;a href=&#34;#cb1-2&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;  &lt;span class=&#34;cf&#34;&gt;return&lt;/span&gt; a &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt; b&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&#34;cb1-3&#34;&gt;&lt;a href=&#34;#cb1-3&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;}&lt;/span&gt;
 &lt;span id=&#34;cb1-4&#34;&gt;&lt;a href=&#34;#cb1-4&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;/span&gt;
@@ -248,10 +244,7 @@ CSS 指定，不受 CSS 样式影响。&lt;/p&gt;</description>
       <description>&lt;p&gt;d8 是 v8 提供的用以 debug v8 的 shell ，因为 v8
 自身就是一个库，不提供 console 的实现。d8 会在编译 v8
 时顺便实现，不过我只想编译 d8 。&lt;/p&gt;
-&lt;p&gt;主要参考了 v8&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;
-role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; 文档和一篇博文&lt;a href=&#34;#fn2&#34;
-class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;
-role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;主要参考了 v8&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; 文档和一篇博文&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;代理工具&#34;&gt;代理工具&lt;/h2&gt;
 &lt;p&gt;使用 &lt;code&gt;tscoks&lt;/code&gt; 。&lt;/p&gt;</description>
       
@@ -273,8 +266,7 @@ role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;flag.txt 就放在根目录下面。&lt;/p&gt;
 &lt;h2 id=&#34;buucft&#34;&gt;BUUCFT&lt;/h2&gt;
 &lt;p&gt;打开页面，首先给了一段代码。&lt;/p&gt;
-&lt;div class=&#34;sourceCode&#34; id=&#34;cb2&#34;&gt;&lt;pre
-class=&#34;sourceCode php&#34;&gt;&lt;code class=&#34;sourceCode php&#34;&gt;&lt;span id=&#34;cb2-1&#34;&gt;&lt;a href=&#34;#cb2-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;/span&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb2&#34;&gt;&lt;pre class=&#34;sourceCode php&#34;&gt;&lt;code class=&#34;sourceCode php&#34;&gt;&lt;span id=&#34;cb2-1&#34;&gt;&lt;a href=&#34;#cb2-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&#34;cb2-2&#34;&gt;&lt;a href=&#34;#cb2-2&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;co&#34;&gt;/**&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&#34;cb2-3&#34;&gt;&lt;a href=&#34;#cb2-3&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;co&#34;&gt; * Created by PhpStorm.&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&#34;cb2-4&#34;&gt;&lt;a href=&#34;#cb2-4&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;co&#34;&gt; * User: jinzhao&lt;/span&gt;&lt;/span&gt;
@@ -600,9 +592,7 @@ https://forum.ubuntu.org.cn/viewtopic.php?t=491267 。&lt;/p&gt;</description>
 布局排版的基础。&lt;/p&gt;
 &lt;h2 id=&#34;标准盒型&#34;&gt;标准盒型&lt;/h2&gt;
 &lt;figure&gt;
-&lt;img
-src=&#34;https://www.w3.org/TR/2016/WD-CSS22-20160412/images/boxdim.png&#34;
-alt=&#34;盒子模型示意图&#34; /&gt;
+&lt;img src=&#34;https://www.w3.org/TR/2016/WD-CSS22-20160412/images/boxdim.png&#34; alt=&#34;盒子模型示意图&#34;/&gt;
 &lt;figcaption aria-hidden=&#34;true&#34;&gt;盒子模型示意图&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;每一个盒子都一块内容（content）区域，围绕内容从内向外分别是内边距、边框和外边距（padding
@@ -642,8 +632,7 @@ alt=&#34;盒子模型示意图&#34; /&gt;
 &lt;p&gt;借助 &lt;code&gt;Proxy&lt;/code&gt;
 ，我们实现一个基本的响应式系统。书中代码我改成可以在 Node
 中运行的代码了。&lt;/p&gt;
-&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre
-class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;const&lt;/span&gt; bucket &lt;span class=&#34;op&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;bu&#34;&gt;Set&lt;/span&gt;()&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;const&lt;/span&gt; bucket &lt;span class=&#34;op&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;bu&#34;&gt;Set&lt;/span&gt;()&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&#34;cb1-2&#34;&gt;&lt;a href=&#34;#cb1-2&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;/span&gt;
 &lt;span id=&#34;cb1-3&#34;&gt;&lt;a href=&#34;#cb1-3&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;const&lt;/span&gt; data &lt;span class=&#34;op&#34;&gt;=&lt;/span&gt; { &lt;span class=&#34;dt&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;#39;hello world&amp;#39;&lt;/span&gt; }&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&#34;cb1-4&#34;&gt;&lt;a href=&#34;#cb1-4&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;/span&gt;
@@ -724,15 +713,12 @@ class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascri
       <guid>https://bigshans.github.io/post/tagged-template-string/</guid>
       
       <description>&lt;p&gt;标签模板是个看起来很 Magic 的语法，写起来像是这样。&lt;/p&gt;
-&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre
-class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;bu&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;vs&#34;&gt;`Hello, World!`&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&#34;cb1-2&#34;&gt;&lt;a href=&#34;#cb1-2&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;co&#34;&gt;// Output: [&amp;quot;Hello, World!&amp;quot;]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;bu&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;vs&#34;&gt;`Hello, World!`&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb1-2&#34;&gt;&lt;a href=&#34;#cb1-2&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;co&#34;&gt;// Output: [&amp;#34;Hello, World!&amp;#34;]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;实际上，这里的模板标签被转换成这样的一句调用。&lt;/p&gt;
-&lt;div class=&#34;sourceCode&#34; id=&#34;cb2&#34;&gt;&lt;pre
-class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb2-1&#34;&gt;&lt;a href=&#34;#cb2-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;bu&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;call&lt;/span&gt;(&lt;span class=&#34;bu&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt; [&lt;span class=&#34;st&#34;&gt;&amp;#39;Hello, World!&amp;#39;&lt;/span&gt;])&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb2&#34;&gt;&lt;pre class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb2-1&#34;&gt;&lt;a href=&#34;#cb2-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;bu&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;call&lt;/span&gt;(&lt;span class=&#34;bu&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt; [&lt;span class=&#34;st&#34;&gt;&amp;#39;Hello, World!&amp;#39;&lt;/span&gt;])&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;如果我们有用变量的话，&lt;/p&gt;
-&lt;div class=&#34;sourceCode&#34; id=&#34;cb3&#34;&gt;&lt;pre
-class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb3-1&#34;&gt;&lt;a href=&#34;#cb3-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;const&lt;/span&gt; name &lt;span class=&#34;op&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;#39;world&amp;#39;&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb3&#34;&gt;&lt;pre class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb3-1&#34;&gt;&lt;a href=&#34;#cb3-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;const&lt;/span&gt; name &lt;span class=&#34;op&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;#39;world&amp;#39;&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&#34;cb3-2&#34;&gt;&lt;a href=&#34;#cb3-2&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;bu&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fu&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;vs&#34;&gt;`Hello, &lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;${&lt;/span&gt;name&lt;span class=&#34;sc&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;vs&#34;&gt;!`&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&#34;cb3-3&#34;&gt;&lt;a href=&#34;#cb3-3&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;co&#34;&gt;// Output: [ &amp;#39;Hello, &amp;#39;, &amp;#39;!&amp;#39; ] world&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;就会被转换成这样一句调用。&lt;/p&gt;</description>
@@ -768,8 +754,7 @@ class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascri
       <description>&lt;p&gt;http
 代理可分为两种，一种是普通的代理，作为中间人传递两边的信息；另一种则是隧道的方式。&lt;/p&gt;
 &lt;h2 id=&#34;普通代理&#34;&gt;普通代理&lt;/h2&gt;
-&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre
-class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;const&lt;/span&gt; http &lt;span class=&#34;op&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;pp&#34;&gt;require&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;#39;http&amp;#39;&lt;/span&gt;)&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre class=&#34;sourceCode javascript&#34;&gt;&lt;code class=&#34;sourceCode javascript&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;const&lt;/span&gt; http &lt;span class=&#34;op&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;pp&#34;&gt;require&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;#39;http&amp;#39;&lt;/span&gt;)&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&#34;cb1-2&#34;&gt;&lt;a href=&#34;#cb1-2&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;const&lt;/span&gt; url &lt;span class=&#34;op&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;pp&#34;&gt;require&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;)&lt;span class=&#34;op&#34;&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span id=&#34;cb1-3&#34;&gt;&lt;a href=&#34;#cb1-3&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;/span&gt;
 &lt;span id=&#34;cb1-4&#34;&gt;&lt;a href=&#34;#cb1-4&#34; aria-hidden=&#34;true&#34; tabindex=&#34;-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;fu&#34;&gt;request&lt;/span&gt;(cReq&lt;span class=&#34;op&#34;&gt;,&lt;/span&gt; cRes) {&lt;/span&gt;
@@ -810,17 +795,17 @@ https 网站。&lt;/p&gt;</description>
       
       <description>&lt;p&gt;一些无题诗。&lt;/p&gt;
 &lt;h2 id=&#34;一&#34;&gt;一&lt;/h2&gt;
-&lt;div class=&#34;line-block&#34;&gt;世界，把我杀了吧！&lt;br /&gt;
-把我的血&lt;br /&gt;
-我的内脏，还有骨骼&lt;br /&gt;
-哦，我的心，我的心哟！&lt;br /&gt;
-喂给尚还在腐烂的泥土&lt;br /&gt;
-喂给尚还在饥饿的蛆虫&lt;br /&gt;
-喂给尚已死去，已干净的生灵&lt;br /&gt;
-钟声已到，不要留恋&lt;br /&gt;
-天空已开，雨水降下&lt;br /&gt;
+&lt;div class=&#34;line-block&#34;&gt;世界，把我杀了吧！&lt;br/&gt;
+把我的血&lt;br/&gt;
+我的内脏，还有骨骼&lt;br/&gt;
+哦，我的心，我的心哟！&lt;br/&gt;
+喂给尚还在腐烂的泥土&lt;br/&gt;
+喂给尚还在饥饿的蛆虫&lt;br/&gt;
+喂给尚已死去，已干净的生灵&lt;br/&gt;
+钟声已到，不要留恋&lt;br/&gt;
+天空已开，雨水降下&lt;br/&gt;
 还要再下个一千年&lt;/div&gt;
-&lt;hr /&gt;
+&lt;hr/&gt;
 &lt;p&gt;作于 2022年11月20日。&lt;/p&gt;</description>
       
     </item>

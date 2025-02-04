@@ -28,7 +28,7 @@ packages: - packages/** 这代表在目录 packages 下寻找子仓库，且深�
 
 
 
-<meta name="generator" content="Hugo 0.143.0 with theme even" />
+<meta name="generator" content="Hugo 0.144.0-DEV with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/pnpm-with-monorepo/" />
@@ -208,20 +208,29 @@ packages: - packages/** 这代表在目录 packages 下寻找子仓库，且深�
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"></div>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#依赖安装">依赖安装</a></li>
+        <li><a href="#多包构建">多包构建</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 </div>
 
     <div class="post-content">
-      <p>心血来潮使用 <code>pnpm</code> 将项目改为了 monorepo
+      
+
+<p>心血来潮使用 <code>pnpm</code> 将项目改为了 monorepo
 的结构。最重要的是 <code>pnpm-workspace.yaml</code>
 文件，我们可以简单写一个放到根目录下面：</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packages</span><span class="kw">:</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packages</span><span class="kw">:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> packages/**</span></span></code></pre></div>
 <p>这代表在目录 <code>packages</code>
 下寻找子仓库，且深度只有一层。如果你的包结构是多层嵌套的，那你需要将每个嵌套的父层级也写进去。比如说我的：</p>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packages</span><span class="kw">:</span></span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packages</span><span class="kw">:</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> packages/**</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> packages/@shared/**</span></span></code></pre></div>
 <p>举个例子，目录结构为：</p>
@@ -242,10 +251,9 @@ class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="
 <p>如何在子包里引用其他包呢？举个例子，我需要在 <code>pkg1</code> 包添加
 <code>toolkit</code> 这个包，包名为 <code>@shared/toolkit</code>
 ，就需要到 <code>pkg1</code> 包下添加依赖：</p>
-<div class="sourceCode" id="cb5"><pre
-class="sourceCode json"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;dependencies&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;@shared/toolkit&quot;</span><span class="fu">:</span> <span class="st">&quot;workspace:*&quot;</span></span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&#34;dependencies&#34;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&#34;@shared/toolkit&#34;</span><span class="fu">:</span> <span class="st">&#34;workspace:*&#34;</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
 <p>然后 <code>pnpm install</code> 一下就好了。</p>
@@ -258,6 +266,8 @@ class="sourceCode json"><code class="sourceCode json"><span id="cb5-1"><a href="
 <code>pnpm -r --filter @shared/toolkit run build</code> 就是对包名为
 <code>@shared/toolkit</code> 的包执行 <code>pnpm run build</code>
 ，<code>--filter</code> 接受模糊匹配。</p>
+
+
 
     </div>
 

@@ -27,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.143.0 with theme even" />
+<meta name="generator" content="Hugo 0.144.0-DEV with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/await%E7%9A%84%E8%83%8C%E5%90%8E/" />
@@ -205,11 +205,22 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"></div>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#关于-bluebird">关于
+Bluebird</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 </div>
 
     <div class="post-content">
-      <p>我们一般会认为 <code>async/await</code> 是 <code>Promise</code>
+      
+
+<p>我们一般会认为 <code>async/await</code> 是 <code>Promise</code>
 的语法糖，实际上也没有错。但在 Node 10 的时候，一个 <code>await</code>
 会产生三个微任务，导致单个 <code>await</code> 的性能远不如
 <code>Promise</code> ，但在 Node 12 时， V8
@@ -221,15 +232,14 @@ resumable 的，意为可暂停的。 V8 首先会创建一个隐式的
 <code>Promise</code> ，等到执行到 <code>await</code> 时，将函数的
 handler 传递给等待执行的 <code>Promise</code> ，然后挂起函数。</p>
 <p>在 Node 10 时，代码执行大概是这样的。</p>
-<p><img
-src="https://v8.dev/_img/fast-async/await-under-the-hood.svg" /></p>
+<p><img src="https://v8.dev/_img/fast-async/await-under-the-hood.svg"/></p>
 <p>我们可以看到， V8 无论何时都会包装一边 v ，以确保 thenable 。在中间，
 V8 又创建 throwaway ，这个 <code>Promise</code> 纯粹是为了符合 ES 标准。
 V8 把函数的 handler 传入到了新生成的 <code>Promise</code> 的 then
 里面。最后挂起整个函数。等到前面的 <code>Promise</code>
 完成了执行，就会恢复执行隐式的 <code>Promise</code> 。</p>
 <p>首先，我们至少会多产生两个 <code>Promise</code> 和三个微任务。</p>
-<p><img src="https://v8.dev/_img/fast-async/await-overhead.svg" /></p>
+<p><img src="https://v8.dev/_img/fast-async/await-overhead.svg"/></p>
 <p>为什么呢？一个 <code>await</code> 至少会多产生两个
 <code>Promise</code> ，即 <code>promise</code> 和 <code>throwaway</code>
 。同时一个 <code>await</code> 会多产生三个微任务，即执行
@@ -240,24 +250,24 @@ V8 把函数的 handler 传入到了新生成的 <code>Promise</code> 的 then
 <p>显然，这里存在这许多优化空间。</p>
 <p>首先，对于已经是 <code>Promise</code> 的 <code>v</code>
 不必再进行一次封装，这是第一步。</p>
-<p><img
-src="https://v8.dev/_img/fast-async/await-code-comparison.svg" /></p>
+<p><img src="https://v8.dev/_img/fast-async/await-code-comparison.svg"/></p>
 <p>当我们对 <code>Promise</code> 进行 <code>await</code>
 时，只会增加一个 <code>Promise</code> ，和一个 <code>throwaway</code>
 。</p>
 <p>但 <code>throwaway</code> 我们完全不需要，只是 ES 强塞进来的。后面，
 ES 更改了这以规范，使得 <code>throwaway</code> 不再是必须的。</p>
 <p>最终我们得到了现在的优化。</p>
-<p><img
-src="https://v8.dev/_img/fast-async/node-10-vs-node-12.svg" /></p>
+<p><img src="https://v8.dev/_img/fast-async/node-10-vs-node-12.svg"/></p>
 <h2 id="关于-bluebird">关于 Bluebird</h2>
 <p>以前还有关于 Bluebird 还有 V8 哪个更优的争论，但现在， Bluebird
 官方更推荐在最新版的 Node 里使用原生 <code>Promise</code> 。
 <code>Promise</code> 经过几次优化，并历经几年考验之后，完全不输于
 Bluebird 。除非你有特殊情况，比如老版本的 Node ，等等。</p>
-<hr />
+<hr/>
 <p>参考： <a href="https://v8.dev/blog/fast-async">Faster async
 functions and promises</a></p>
+
+
 
     </div>
 

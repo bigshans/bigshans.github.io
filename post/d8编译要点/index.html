@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.143.0 with theme even" />
+<meta name="generator" content="Hugo 0.144.0-DEV with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/d8%E7%BC%96%E8%AF%91%E8%A6%81%E7%82%B9/" />
@@ -212,17 +212,28 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"></div>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#代理工具">代理工具</a></li>
+        <li><a href="#获取仓库">获取仓库</a></li>
+        <li><a href="#编译-d8">编译 d8</a></li>
+        <li><a href="#生成-compile_commands.json">生成
+<code>compile_commands.json</code></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 </div>
 
     <div class="post-content">
-      <p>d8 是 v8 提供的用以 debug v8 的 shell ，因为 v8
+      
+
+<p>d8 是 v8 提供的用以 debug v8 的 shell ，因为 v8
 自身就是一个库，不提供 console 的实现。d8 会在编译 v8
 时顺便实现，不过我只想编译 d8 。</p>
-<p>主要参考了 v8<a href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a> 文档和一篇博文<a href="#fn2"
-class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>。</p>
+<p>主要参考了 v8<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> 文档和一篇博文<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>。</p>
 <h2 id="代理工具">代理工具</h2>
 <p>使用 <code>tscoks</code> 。</p>
 <p>我平常喜欢用 <code>proxychains</code> ，但谷歌的工具在
@@ -250,29 +261,24 @@ role="doc-noteref"><sup>2</sup></a>。</p>
 <p>完成后，我们的 d8 在 <code>./out.gn/x64.debug</code> 下。</p>
 <h2 id="生成-compile_commands.json">生成
 <code>compile_commands.json</code></h2>
-<p>借助 <code>ninja</code> 完成。<a href="#fn3" class="footnote-ref"
-id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>借助 <code>ninja</code> 完成。<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ninja</span> <span class="at">-C</span> ./out.gn/x64.debug d8 <span class="at">-t</span> compdb <span class="op">&gt;</span> compile_commands.json</span></code></pre></div>
 <p><code>compile_commands.json</code> 主要是为了更方便阅读代码。C++ 的
 LSP 都支持这个。</p>
 <p>我个人建议使用 <code>clangd</code> 做 LS ，比 <code>ccls</code>
 好太多了。</p>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr/>
 <ol>
 <li id="fn1"><p><a href="https://v8.dev/docs/build#building-v8">Building
-V8 from source</a><a href="#fnref1" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p><a
-href="https://mem2019.github.io/jekyll/update/2019/07/18/V8-Env-Config.html">V8环境搭建，100%成功版</a><a
-href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p><a
-href="https://sarcasm.github.io/notes/dev/compilation-database.html#ninja">Compilation
-database</a><a href="#fnref3" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
+V8 from source</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="https://mem2019.github.io/jekyll/update/2019/07/18/V8-Env-Config.html">V8环境搭建，100%成功版</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><a href="https://sarcasm.github.io/notes/dev/compilation-database.html#ninja">Compilation
+database</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
+
+
 
     </div>
 

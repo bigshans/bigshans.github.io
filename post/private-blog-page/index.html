@@ -27,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.143.0 with theme even" />
+<meta name="generator" content="Hugo 0.144.0-DEV with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/private-blog-page/" />
@@ -206,11 +206,30 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"></div>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#对-markdown-和主题的处理">对 Markdown 和主题的处理</a></li>
+        <li><a href="#加密脚本">加密脚本</a>
+          <ul>
+            <li><a href="#加密-markdown">加密
+Markdown</a></li>
+            <li><a href="#加密-html">加密 HTML</a></li>
+          </ul>
+        </li>
+        <li><a href="#部署">部署</a></li>
+        <li><a href="#结语">结语</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 </div>
 
     <div class="post-content">
-      <p>做了一些更新，现在把 private 单独放到一个路径下面，同时把私人也从
+      
+
+<p>做了一些更新，现在把 private 单独放到一个路径下面，同时把私人也从
 post
 列表移除，从另一个地址进去。如此页面的观感就好多了。同时也对整个处理的过程进行了大幅修改，重写了原来的
 script 脚本，并用 Deno 实现了主要逻辑。Shell 脚本主要是用来协调 Deno
@@ -222,15 +241,14 @@ md 文件上传，同时 ignore 未加密的文件。每次会生成一个 hash
 <p>这里就是一个缓存的思路，如果不做缓存的话，逻辑是根本做不出来的。同时，用
 Shell 脚本写主逻辑实在是太累人了，用 Python ，用 Deno
 ，哪个都好，就是不要用 Shell 写。</p>
-<hr />
+<hr/>
 <p>之前我看过某位的博客，发现他的有些博文是前端加密处理的。简单来说，就是后端提前将页面加密好，由前端输入密码来进行解密，如果密码解开失败就会报错。缺点是显而易见的，加密算法基本是公开的，而且也不限制用户的解密次数，解开只是时间问题。但这个方法没有想象的那么糟，因为只要你对加密算法和密钥用点心，其实这个密文也不好破解。而且，对于静态博客页来说，成本低廉，便宜划算，这些密文也并非机密。</p>
 <p>我垂涎这个功能挺久了。我的博客是采用 Hugo 生成的，但 Hugo
 的源码并不支持这种操作。事实上，我也考虑过改 Hugo 源码，但这样需要改动
 Hugo
 的架构，最后还是放弃了。于是我尝试修改我原先的部署策略，并借助一套自动化的脚本来完成。</p>
 <p>首先要制定整体流程</p>
-<p><img
-src="https://raw.githubusercontent.com/bigshans/pictures/master/img/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E5%AF%86%E6%B5%81%E7%A8%8B.png" /></p>
+<p><img src="https://raw.githubusercontent.com/bigshans/pictures/master/img/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E5%AF%86%E6%B5%81%E7%A8%8B.png"/></p>
 <p>实际开发中其实还考虑到几个问题：</p>
 <ol type="1">
 <li>反复加密保证只加密一次。</li>
@@ -285,6 +303,8 @@ Python 和 crypto-js
 ，它比以前成熟许多了，个人感觉 Deno 比 Node 适合 SSR 。 Node
 现在也在逐渐与浏览器兼容，大前端是 Node 未来的方向。 winter
 协议还在孵化，但我估计是未来的趋势了。</p>
+
+
 
     </div>
 

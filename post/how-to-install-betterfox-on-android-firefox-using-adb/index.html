@@ -27,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.143.0 with theme even" />
+<meta name="generator" content="Hugo 0.144.0-DEV with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/how-to-install-betterfox-on-android-firefox-using-adb/" />
@@ -202,11 +202,22 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"></div>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#预先准备">预先准备</a></li>
+        <li><a href="#步骤">步骤</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 </div>
 
     <div class="post-content">
-      <p>最近使用了 Betterfox 优化了我的 Firefox
+      
+
+<p>最近使用了 Betterfox 优化了我的 Firefox
 效果相当不错。在性能上表现得比之前默认的配置好。在 Betterfox 的 issue
 里，有人提到了可以安装 Betterfox 到安卓手机的 Firefox
 上。我也尝试了，效果还不错，加载速度比之前快很多。在此我也是非常推荐用
@@ -219,37 +230,31 @@ Betterfox 来优化个人的 Firefox 。</p>
 ，有更多的修改空间。</p>
 <h2 id="步骤">步骤</h2>
 <ol type="1">
-<li><p>手机连接电脑，确认 adb 能够查找到设备。 <img
-src="https://voz.vn/attachments/1694683788719-png.2071759/" /></p></li>
-<li><p>在移动端启用 <code>Remote Debugging via USB</code> 。 <img
-src="https://voz.vn/attachments/screenshot_20230914_163138-jpg.2071795/" /></p></li>
+<li><p>手机连接电脑，确认 adb 能够查找到设备。 <img src="https://voz.vn/attachments/1694683788719-png.2071759/"/></p></li>
+<li><p>在移动端启用 <code>Remote Debugging via USB</code> 。 <img src="https://voz.vn/attachments/screenshot_20230914_163138-jpg.2071795/"/></p></li>
 <li><p>在 PC 端打开 <code>about:debugging</code>
-，找到你的安卓设备并连接。 <img
-src="https://voz.vn/attachments/1694684065957-png.2071772/" /></p></li>
-<li><p>在移动端打开 <code>about:support</code> 。 <img
-src="https://voz.vn/attachments/1694684157083-png.2071773/" /></p></li>
-<li><p>在 PC 端监听 <code>about:support</code> 页面。 <img
-src="https://voz.vn/attachments/1694684362128-png.2071779/" /></p></li>
+，找到你的安卓设备并连接。 <img src="https://voz.vn/attachments/1694684065957-png.2071772/"/></p></li>
+<li><p>在移动端打开 <code>about:support</code> 。 <img src="https://voz.vn/attachments/1694684157083-png.2071773/"/></p></li>
+<li><p>在 PC 端监听 <code>about:support</code> 页面。 <img src="https://voz.vn/attachments/1694684362128-png.2071779/"/></p></li>
 <li><p>粘贴如下代码到控制台里。</p></li>
 </ol>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> user_pref <span class="op">=</span> <span class="kw">function</span>(pref<span class="op">,</span> val){</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> user_pref <span class="op">=</span> <span class="kw">function</span>(pref<span class="op">,</span> val){</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">try</span> {</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="kw">typeof</span> val <span class="op">==</span> <span class="st">&quot;string&quot;</span>){</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="kw">typeof</span> val <span class="op">==</span> <span class="st">&#34;string&#34;</span>){</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>         Services<span class="op">.</span><span class="at">prefs</span><span class="op">.</span><span class="fu">setStringPref</span>(pref<span class="op">,</span> val)<span class="op">;</span>    </span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span>(<span class="kw">typeof</span> val <span class="op">==</span> <span class="st">&quot;number&quot;</span>){</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span>(<span class="kw">typeof</span> val <span class="op">==</span> <span class="st">&#34;number&#34;</span>){</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>         Services<span class="op">.</span><span class="at">prefs</span><span class="op">.</span><span class="fu">setIntPref</span>(pref<span class="op">,</span> val)<span class="op">;</span>    </span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span>(<span class="kw">typeof</span> val <span class="op">==</span> <span class="st">&quot;boolean&quot;</span>){</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span>(<span class="kw">typeof</span> val <span class="op">==</span> <span class="st">&#34;boolean&#34;</span>){</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>         Services<span class="op">.</span><span class="at">prefs</span><span class="op">.</span><span class="fu">setBoolPref</span>(pref<span class="op">,</span> val)<span class="op">;</span>    </span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">catch</span>(e){</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;pref:&quot;</span> <span class="op">+</span> pref <span class="op">+</span> <span class="st">&quot; val:&quot;</span> <span class="op">+</span> val <span class="op">+</span> <span class="st">&quot; e:&quot;</span> <span class="op">+</span> e)<span class="op">;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#34;pref:&#34;</span> <span class="op">+</span> pref <span class="op">+</span> <span class="st">&#34; val:&#34;</span> <span class="op">+</span> val <span class="op">+</span> <span class="st">&#34; e:&#34;</span> <span class="op">+</span> e)<span class="op">;</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">//paste your user.js file content here</span></span></code></pre></div>
@@ -260,6 +265,8 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-
 <p>然后检查 <code>about:config</code> 是否有修改即可。这里只推荐
 <code>Fasterfox</code>
 的配置，其他配置存在着不可知的问题，未必适配移动端。</p>
+
+
 
     </div>
 

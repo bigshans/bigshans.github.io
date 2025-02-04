@@ -27,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.143.0 with theme even" />
+<meta name="generator" content="Hugo 0.144.0-DEV with theme even" />
 
 
 <link rel="canonical" href="https://bigshans.github.io/post/tcp%E7%9A%84%E6%8F%A1%E6%89%8B%E5%92%8C%E6%8C%A5%E6%89%8B/" />
@@ -64,7 +64,7 @@
   <meta itemprop="description" content="TCP 的握手和挥手想必很多人都已经很熟悉了，“三次握手”和“四次挥手”在面试的时候几乎都是八股文了。光是背这个的话，着实了无趣味。我们可以通过 tcpdump 和 wireshark 来看整个过程。">
   <meta itemprop="datePublished" content="2023-02-23T10:46:04+08:00">
   <meta itemprop="dateModified" content="2023-02-23T10:46:04+08:00">
-  <meta itemprop="wordCount" content="1286">
+  <meta itemprop="wordCount" content="1282">
   <meta itemprop="keywords" content="Node,网络,TCP">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="TCP 的握手和挥手">
@@ -198,7 +198,7 @@
         <div class="post-category">
             <a href="/categories/%E7%BD%91%E7%BB%9C/"> 网络 </a>
             </div>
-          <span class="more-meta"> 约 1286 字 </span>
+          <span class="more-meta"> 约 1282 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         
       </div>
@@ -206,22 +206,33 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content"></div>
+  <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#获取包">获取包</a></li>
+        <li><a href="#三次握手">三次握手</a></li>
+        <li><a href="#三次挥手">三次挥手</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 </div>
 
     <div class="post-content">
-      <p>TCP
+      
+
+<p>TCP
 的握手和挥手想必很多人都已经很熟悉了，“三次握手”和“四次挥手”在面试的时候几乎都是八股文了。光是背这个的话，着实了无趣味。我们可以通过
 <code>tcpdump</code> 和 wireshark 来看整个过程。</p>
 <h2 id="获取包">获取包</h2>
 <p>我们首先写一个 client-server 的程序。我们用 Node 来简单写一个。</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> net <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;net&#39;</span>)<span class="op">;</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> net <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;net&#39;</span>)<span class="op">;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> server <span class="op">=</span> net<span class="op">.</span><span class="fu">createServer</span>(<span class="kw">function</span> (socket) {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;客户端已经连接&quot;</span>)<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#34;客户端已经连接&#34;</span>)<span class="op">;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    socket<span class="op">.</span><span class="fu">setEncoding</span>(<span class="st">&#39;utf8&#39;</span>)<span class="op">;</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    socket<span class="op">.</span><span class="fu">on</span>(<span class="st">&#39;data&#39;</span><span class="op">,</span> <span class="kw">function</span> (data) {</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;已接收客户端发送的数据:%s&quot;</span><span class="op">,</span> data)<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#34;已接收客户端发送的数据:%s&#34;</span><span class="op">,</span> data)<span class="op">;</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        socket<span class="op">.</span><span class="fu">write</span>(<span class="st">&#39;服务器:&#39;</span> <span class="op">+</span> data)<span class="op">;</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    })</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    socket<span class="op">.</span><span class="fu">on</span>(<span class="st">&#39;error&#39;</span><span class="op">,</span> <span class="kw">function</span> (err) {</span>
@@ -262,8 +273,7 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-
 <pre class="shell"><code>sudo tcpdump -n -v -i any tcp port 3001 -w ./file.cap</code></pre>
 <p>运行 <code>tcpdump</code> 需要 root 权限。</p>
 <p>之后我们用 wireshark 来进行分析。</p>
-<p><img
-src="https://raw.githubusercontent.com/bigshans/pictures/master/img/%E5%9B%BE%E7%89%87.png" /></p>
+<p><img src="https://raw.githubusercontent.com/bigshans/pictures/master/img/%E5%9B%BE%E7%89%87.png"/></p>
 <p>上面三个是三次握手，下面三个是三次挥手。</p>
 <h2 id="三次握手">三次握手</h2>
 <p>三次握手的前两条呈现灰色，是因为前两条不能携带数据，下面握手也是同样的意思。</p>
@@ -305,6 +315,8 @@ Seq 号 <code>903756352</code> ， Ack 号为 <code>2473815871</code> 。 Ack
 号。相当于收到的瞬间，确认并且关闭了连接。</p>
 <p>第三条由户端向服务端发送，Flag 为 <code>[ACK]</code> ，此时的 Ack
 号为 <code>903756353</code> ，即上一条的 Seq 号 + 1 。</p>
+
+
 
     </div>
 
